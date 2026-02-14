@@ -1,0 +1,41 @@
+{
+  "card_type": "crew_card",
+  "name": "Crawling Hex",
+  "associated_master": "Zoraida",
+  "associated_title": "Bog Witch",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Swampfiend models",
+      "abilities": [
+        {
+          "name": "Reading the Cards",
+          "defensive_type": null,
+          "text": "Once per activation. After resolving an attack action where an enemy model cheated fate in a duel with this model, this model may look at the top card of its fate deck and may discard that card."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Swampfiend models",
+      "abilities": [
+        {
+          "name": "Foreseen Doom",
+          "defensive_type": null,
+          "text": "After an enemy model fails an attack targeting this model, this model may drain a (t) to deal 2 irreducible damage to the attacker."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Swampfiend_Zoraida_Bog_Witch_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 317,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Crew_Swampfiend_Zoraida_Bog_Witch.pdf"
+}

@@ -1,0 +1,176 @@
+{
+  "card": {
+    "card_type": "stat_card",
+    "name": "ULIX TURNER",
+    "title": "HOGFATHER",
+    "faction": "Bayou",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 6,
+    "sz": 1,
+    "sp": 6,
+    "health": 14,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": null,
+    "totem": null,
+    "characteristics": [
+      "Master",
+      "Unique",
+      "Living",
+      "Sooey"
+    ],
+    "keywords": [
+      "Sturdy Critters",
+      "Penelope"
+    ],
+    "abilities": [
+      {
+        "name": "Corn-Fed",
+        "defensive_type": null,
+        "text": "When an ally within 6\" is dealt damage, this model may discard a card. If it does so, reduce the damage dealt to the target by 2."
+      },
+      {
+        "name": "Lost in the Slop",
+        "defensive_type": null,
+        "text": "After this model suffers damage from an enemy attack action, it may drain a (c). If it does so, the attacker is dealt 2 damage and gains an Adversary token."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Wrangler's Wallop",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This attack has a raise value of 3.",
+        "effects": null,
+        "triggers": [
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Conjecture",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Choose a suit. Target may discard a card of the chosen suit. If they do not, this model draws two cards.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      },
+      {
+        "name": "Hog-Tie Takedown",
+        "action_type": "magic",
+        "range": "(magic)6\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Sp",
+        "tn": 12,
+        "damage": null,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action may target friendly models.",
+        "effects": "Place this model into base contact with the target. Then, if the target is an enemy model, it gains Adversary and Slow tokens.",
+        "triggers": [
+          {
+            "name": "Overhead Slam",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Move the target 6\" in a straight line. If this movement is interrupted, deal 2 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Mangle",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target discards a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      },
+      {
+        "name": "Proper Care",
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Ally only. Once per activation.",
+        "effects": "Target heals 3.",
+        "triggers": [
+          {
+            "name": "Covered in Slop",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "An enemy model within 2\" of the target gains an Adversary token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Fattened Up",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Target gains a Glutted token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "tactical_actions",
+        "action_type": null
+      }
+    ],
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Ulix_Turner_Hogfather.pdf",
+    "merge_warnings": [
+      "Title mismatch: front='HOGFATHER' back='Hogfather'"
+    ],
+    "extraction_notes": [
+      "The 'Sooey' characteristic appears after 'Living' in the characteristics list",
+      "Keywords listed are 'Sturdy Critters' (bottom-left) and 'Penelope' (bottom-right)",
+      "Health bar shows numbered pips from 1 to 14"
+    ]
+  },
+  "validation": {
+    "card_name": "ULIX TURNER (HOGFATHER)",
+    "passed": false,
+    "needs_review": true,
+    "hard_violations": [
+      "Master missing totem"
+    ],
+    "soft_flags": [
+      "Master missing crew_card_name (populated post-processing)",
+      "Master with infuses_soulstone_on_death=false (unusual)"
+    ],
+    "hallucination_flags": [
+      "Merge warning: Title mismatch: front='HOGFATHER' back='Hogfather'"
+    ],
+    "info": [
+      "Extraction note: The 'Sooey' characteristic appears after 'Living' in the characteristics list",
+      "Extraction note: Keywords listed are 'Sturdy Critters' (bottom-left) and 'Penelope' (bottom-right)",
+      "Extraction note: Health bar shows numbered pips from 1 to 14"
+    ]
+  }
+}

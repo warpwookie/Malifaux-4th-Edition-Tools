@@ -175,6 +175,6 @@ if __name__ == "__main__":
     
     if args.json_manifest:
         import json
-        with open(args.json_manifest, "w") as f:
+        with open(args.json_manifest, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2)
         print(f"Manifest written to {args.json_manifest}")

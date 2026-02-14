@@ -1,0 +1,136 @@
+{
+  "card_type": "stat_card",
+  "name": "COOPER JONES",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Tri-Chi"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Bumper Barrels",
+      "defensive_type": null,
+      "text": "After this model ends a move outside of its activation, it may deal 1 damage to itself and all models in base contact with it."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Flame Blast",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target and models within (r)2\" of the target gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Accidental Roll Over",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way must pass a TN 10 Df duel or be dealt 1 damage and gain a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Big Boom",
+          "suit": "(r)(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the (r) of this action by 1\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Defensive Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target gains a Shielded token.",
+      "triggers": [
+        {
+          "name": "Sudden Inspiration",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Moonshine and a Barrel",
+      "range": "3\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Enemy only.",
+      "effects": "Remove a friendly Poison token from the target. Summon a Whiskey Gamin within 1\" of the target. Enemy models within (r)1\" of the summoned model gain a Distracted token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Cooper_Jones.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

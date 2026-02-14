@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "PENELOPE",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 7,
+  "wp": 4,
+  "sz": 1,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Sooey"
+  ],
+  "abilities": [
+    {
+      "name": "Nip at their Heels",
+      "defensive_type": null,
+      "text": "After this model resolves the Walk action, choose an unengaged ally within 6\" to move up to 2\" in any direction."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "warding",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bite",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grab On",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grease and Gristle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make an enemy Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Pointer Hound",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "Quick Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mental Trauma",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target must either discard a card or be dealt 3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Nudge 'Em On",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target is moved up to 3\". Then, the target gains a Glutted token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Penelope.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

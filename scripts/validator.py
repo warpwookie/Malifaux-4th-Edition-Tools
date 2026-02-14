@@ -22,7 +22,7 @@ REFERENCE_PATH = SCRIPT_DIR / "reference" / "reference_data.json"
 
 def load_reference() -> dict:
     """Load reference data for validation."""
-    with open(REFERENCE_PATH) as f:
+    with open(REFERENCE_PATH, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -160,7 +160,7 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
     station = card.get("station")
     if station == "Master":
         if not card.get("crew_card_name"):
-            result.hard_violations.append("Master missing crew_card_name")
+            result.soft_flags.append("Master missing crew_card_name (populated post-processing)")
         if not card.get("totem"):
             result.hard_violations.append("Master missing totem")
     
@@ -280,7 +280,7 @@ if __name__ == "__main__":
     all_results = []
     
     for input_file in args.input:
-        with open(input_file) as f:
+        with open(input_file, encoding="utf-8") as f:
             card = json.load(f)
         
         result = validate_card(card)
@@ -301,7 +301,7 @@ if __name__ == "__main__":
             "summary": {"total": len(all_results), "passed": passed, "failed": failed, "needs_review": review},
             "results": [r.to_dict() for r in all_results],
         }
-        with open(args.json_report, "w") as f:
+        with open(args.json_report, "w", encoding="utf-8") as f:
             json.dump(report, f, indent=2)
         print(f"Report written to {args.json_report}")
     

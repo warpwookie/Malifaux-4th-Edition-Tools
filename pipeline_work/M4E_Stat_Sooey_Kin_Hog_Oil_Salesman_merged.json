@@ -133,8 +133,8 @@
       "damage": null,
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "Friendly only. Move the target up to 4\", then make a Scheme marker in base contact with the target.",
-      "effects": null,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Move the target up to 4\", then make a Scheme marker in base contact with the target.",
       "triggers": [
         {
           "name": "Survival Skills",

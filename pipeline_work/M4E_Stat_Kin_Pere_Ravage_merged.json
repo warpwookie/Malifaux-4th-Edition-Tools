@@ -28,7 +28,7 @@
     {
       "name": "Demise (Explosive)",
       "defensive_type": null,
-      "text": "After this model is killed, deal 2 damage to models within (r)2\"."
+      "text": "After this model is killed, deal 2 damage to models within (r) 2\"."
     },
     {
       "name": "Pyromania",
@@ -49,8 +49,8 @@
       "damage": "2",
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "If the target has a Burning token, move the target up to 3\". Target gains a Burning token.",
-      "effects": null,
+      "costs_and_restrictions": null,
+      "effects": "If the target has a Burning token, move the target up to 3\". Target gains a Burning token.",
       "triggers": [
         {
           "name": "Critical Strike",
@@ -115,10 +115,12 @@
     },
     {
       "name": "Light Under Their Feet",
+      "action_type": "magic",
       "range": "(magic)10\"",
       "skill_value": 6,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": "Wp",
       "tn": 12,
       "damage": null,
       "is_signature": true,
@@ -126,11 +128,12 @@
       "costs_and_restrictions": "This action may target friendly models.",
       "effects": "Move the target up to its Sp. This model may remove a Burning token from the target to have it ignore models and terrain while moving.",
       "triggers": [],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "attack_actions"
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_Pere_Ravage.pdf",
-  "merge_warnings": [],
+  "merge_warnings": [
+    "Tactical action 'Light Under Their Feet' has resist='Wp' \u00e2\u20ac\u201d may be attack action under tactical header (layout exception). Reclassifying as attack_action."
+  ],
   "extraction_notes": []
 }

@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "ALPHONSE LeBLANC",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Wizz-Bang"
+  ],
+  "abilities": [
+    {
+      "name": "\"Ooo, Shiny...\"",
+      "defensive_type": null,
+      "text": "While this model has a Glowy token, increase this model's action limit by 1 (to a maximum of 3)."
+    },
+    {
+      "name": "Warning Growl",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks against allied models within 2\" do not deal additional damage due to raises."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Huge Fist",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Friend?",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. If the target has not yet activated this turn, it must be the next enemy model to activate, if able.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Overwhelmed",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Toss",
+      "action_type": "magic",
+      "range": "(magic)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This may target friendly models. Target a model of lower Sz than this model.",
+      "effects": "Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement.",
+      "triggers": [
+        {
+          "name": "Oops, Too Hard",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Friendly only. Kill the target. Deal 1 damage to all models within (t)1\" of the target and draw two cards.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fuuuuture!",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Target gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Careful Handling",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a Pyrotechnic marker within 2\".",
+      "effects": "Make a Pyrotechnic marker within range, then resolve its end of turn effects using a suit in this action's final duel total.",
+      "triggers": [
+        {
+          "name": "Watch and Learn",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Friendly models within (t)2\" of the made marker gain an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Stat_Wizz-Bang_Alphonse_LeBlanc.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

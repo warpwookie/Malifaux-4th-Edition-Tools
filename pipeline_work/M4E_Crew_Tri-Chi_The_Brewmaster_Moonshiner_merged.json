@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Flow Like Moonshine",
+  "associated_master": "The Brewmaster",
+  "associated_title": "Moonshiner",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Tri-Chi models",
+      "abilities": [
+        {
+          "name": "Tipsy Slide",
+          "defensive_type": null,
+          "text": "Once per activation. After this model suffers damage, it may move up to 3\". If this model has a friendly Poison token, it may remove it to increase the distance moved by +2\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Tri-Chi models",
+      "actions": [
+        {
+          "name": "Drunken Fist",
+          "category": "attack_actions",
+          "action_type": "melee",
+          "range": "2\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": null,
+          "damage": "3",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Remove a friendly Poison token from this model. This action treats all (r) flips as (c) flips. Place this model anywhere within 3\" of the target.",
+          "triggers": [
+            {
+              "name": "Tipsy Takedown",
+              "suit": "(c)",
+              "timing": null,
+              "text": "Move the target up to 4\". If it is dealt falling damage, increase that damage by +1.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The (r) and (c) suit symbols in the Drunken Fist action text refer to Rams and Crows respectively based on standard Malifaux iconography"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Tri-Chi_The_Brewmaster_Moonshiner_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 565,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Crew_Tri-Chi_The_Brewmaster_Moonshiner.pdf"
+}

@@ -1,5 +1,5 @@
 {
-  "card_type": "upgrade_card",
+  "card_type": "stat_card",
   "name": "Hair Trigger",
   "title": "Improvised Enhancement",
   "faction": "Bayou",
@@ -38,11 +38,12 @@
     "Title mismatch: front='Improvised Enhancement' back='None'"
   ],
   "extraction_notes": [
-    "This is an Upgrade card, not a model stat card - it has no DF/WP/SP/SZ stats, health, or characteristics/keywords visible in the standard locations",
-    "The card shows 'LIMITATIONS: Plentiful 2' at the bottom",
-    "The card displays 'Upgrade' text at the bottom",
-    "This appears to be a generic upgrade card back template with only decorative icons (stylized boar/pig faces) and the text 'MALIFAUX UPGRADE FOURTH EDITION'. No actual stat card data is present on this side.",
-    "No base size indicator found.",
-    "This is not a model stat card but rather an upgrade card template or placeholder."
+    "This is an Upgrade card, not a stat card, so standard stat fields (df, wp, sp, sz, health) are not applicable",
+    "Upgrade cards do not have characteristics or keywords in the normal sense",
+    "Card shows 'LIMITATIONS: Plentiful 2' at bottom",
+    "Card labeled as 'Upgrade' at bottom",
+    "This appears to be a generic upgrade card back template with only decorative imagery (two stylized boar/pig head designs)",
+    "No stat lines, actions, or game text visible on this card back",
+    "This is the reverse side of Malifaux upgrade cards, not a playable stat card"
   ]
 }

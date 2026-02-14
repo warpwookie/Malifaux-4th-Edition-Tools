@@ -1,0 +1,127 @@
+{
+  "card_type": "stat_card",
+  "name": "Will o' the Wisp",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Bloody Transformation",
+      "defensive_type": null,
+      "text": "After an enemy model within 3\" of this model is killed, this model may drain a (soulstone) to replace with an Adze and heal 3."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Shimmering Lights",
+      "defensive_type": null,
+      "text": "When performing opposed duels with enemy models with a Stunned token, this model receives a (+)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Poisonous Glow",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Poison token.",
+      "triggers": [
+        {
+          "name": "Hexed Gambit",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Stunned token. This model may discard and draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Gang Up",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage for each other ally the target is engaged with, to a maximum of +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lured Into a Bog",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to its Sp toward a piece of terrain in its LoS.",
+      "triggers": [
+        {
+          "name": "Foot in the Bog",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Bog marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Will_O_the_Wisp_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 from 'Minion (3)' characteristic"
+  ]
+}

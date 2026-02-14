@@ -64,7 +64,7 @@
       "triggers": [
         {
           "name": "Best Gun",
-          "suit": "(r)",
+          "suit": "(t)",
           "timing": "when_resolving",
           "text": "When resolving, deal +2 damage to the target, then end this model's activation.",
           "is_mandatory": false,
@@ -72,7 +72,7 @@
         },
         {
           "name": "Ricochet",
-          "suit": "(c)",
+          "suit": "(m)",
           "timing": "after_succeeding",
           "text": "Deal 1 damage to a different model within 3\" of the target.",
           "is_mandatory": false,
@@ -80,7 +80,7 @@
         },
         {
           "name": "Reposition",
-          "suit": "(m)",
+          "suit": "(r)",
           "timing": "after_succeeding",
           "text": "Move this model up to 3\".",
           "is_mandatory": false,
@@ -88,7 +88,7 @@
         },
         {
           "name": "Field Kit",
-          "suit": "(t)",
+          "suit": "(c)",
           "timing": "after_resolving",
           "text": "After resolving, one friendly model within 3\" of the target heals 1.",
           "is_mandatory": false,

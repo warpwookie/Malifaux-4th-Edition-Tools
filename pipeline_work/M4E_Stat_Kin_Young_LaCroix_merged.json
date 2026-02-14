@@ -84,7 +84,7 @@
       "triggers": [
         {
           "name": "Oooh! More Parts!",
-          "suit": "(t)",
+          "suit": "(c)",
           "timing": "after_succeeding",
           "text": "Attach an Improvised Enhancement upgrade to this model.",
           "is_mandatory": false,

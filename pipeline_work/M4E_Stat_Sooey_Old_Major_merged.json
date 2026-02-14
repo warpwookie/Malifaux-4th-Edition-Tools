@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "OLD MAJOR",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Sooey"
+  ],
+  "abilities": [
+    {
+      "name": "Chow Time",
+      "defensive_type": null,
+      "text": "After this model removes a Remains or enemy Scheme marker, it gains a Glutted token."
+    },
+    {
+      "name": "Thick Fat",
+      "defensive_type": "fortitude",
+      "text": "When this model is dealt damage, it may remove a Glutted token to reduce the damage dealt by 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Huge Tusks",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Crunch Down",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model either heals 2 or gains a Glutted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bloody Fate",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Draw a card. If the target was not killed, discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mauled to Slop",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "After killing, allies within (aura)2\" of this model heal 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Menacing Snort",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Adversary token and is moved 3\" away from this model.",
+      "triggers": [
+        {
+          "name": "Advance",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Wolf Down",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a Scheme marker within 2\". This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Incite a Stampede",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Non-leader ally only. Target declares the Charge action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Go Hog Wild",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. This model and the target gain a Glutted token and heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Old_Major.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

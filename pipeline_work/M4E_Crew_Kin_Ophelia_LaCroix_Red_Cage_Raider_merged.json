@@ -59,15 +59,17 @@
   "markers": [],
   "tokens": [],
   "extraction_notes": [
-    "Raid Remnant is marked with (signature) symbol indicating signature action",
-    "Unnatural Reflexes trigger uses (m) suit (ram/horns icon)",
-    "Vengeful trigger uses (c) suit (crow icon)"
+    "Card shows Ophelia LaCroix, Red Cage Raider as the associated master",
+    "Loaded for Later is a passive ability granted to all Friendly Kin models",
+    "Raid Remnant is a Tactical Action granted only to Friendly unique Kin models",
+    "Action has Signature icon (indicated by \u00b6 symbol)",
+    "Remains marker referenced but not defined on this card (likely defined elsewhere)"
   ],
   "_extraction_meta": {
     "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Kin_Ophelia_LaCroix_Red_Cage_Raider_front.png",
     "model_used": "claude-sonnet-4-5-20250929",
     "input_tokens": 1904,
-    "output_tokens": 613,
+    "output_tokens": 660,
     "attempt": 1
   },
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Crew_Kin_Ophelia_LaCroix_Red_Cage_Raider.pdf"

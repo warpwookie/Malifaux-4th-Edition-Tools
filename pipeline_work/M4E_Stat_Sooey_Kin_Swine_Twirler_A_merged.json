@@ -71,7 +71,7 @@
         },
         {
           "name": "Grease and Gristle",
-          "suit": "(t)",
+          "suit": "(c)",
           "timing": "after_succeeding",
           "text": "Make an enemy Remains marker in base contact with the target.",
           "is_mandatory": false,
@@ -97,7 +97,7 @@
       "triggers": [
         {
           "name": "Collateral Damage",
-          "suit": "(c)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Remove a marker or a destructible terrain piece within 2\" of the target.",
           "is_mandatory": false,
@@ -108,10 +108,12 @@
     },
     {
       "name": "Take by the Hand",
+      "action_type": "magic",
       "range": "(magic)6\"",
       "skill_value": 6,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": "Df",
       "tn": 12,
       "damage": null,
       "is_signature": false,
@@ -119,8 +121,7 @@
       "costs_and_restrictions": "This action may target friendly models.",
       "effects": "Move the target 3\". Then, move this model up to 3\" toward the target.",
       "triggers": [],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "attack_actions"
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Sooey_Kin_Swine_Twirler_A.pdf",

@@ -16,7 +16,7 @@
   "base_size": "30mm",
   "infuses_soulstone_on_death": false,
   "crew_card_name": null,
-  "totem": null,
+  "totem": "Young LaCroix",
   "characteristics": [
     "Master",
     "Unique",
@@ -24,8 +24,7 @@
     "Kin"
   ],
   "keywords": [
-    "Arms Race",
-    "Young LaCroix"
+    "Arms Race"
   ],
   "abilities": [
     {
@@ -73,7 +72,7 @@
         },
         {
           "name": "Fire!",
-          "suit": "(c)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Enemy models within (aura)2\" of the target gain a Burning token.",
           "is_mandatory": false,
@@ -97,7 +96,7 @@
       "triggers": [
         {
           "name": "Hey Young 'Un:",
-          "suit": "(r)",
+          "suit": "(c)",
           "timing": "when_resolving",
           "text": "When resolving, summon a Young LaCroix in base contact with the target.",
           "is_mandatory": false,
@@ -130,7 +129,7 @@
       "triggers": [
         {
           "name": "An' Improvise:",
-          "suit": "(r)",
+          "suit": "(c)",
           "timing": "after_succeeding",
           "text": "This model may attach an Improvised Enhancement upgrade.",
           "is_mandatory": false,
@@ -155,6 +154,6 @@
   ],
   "extraction_notes": [
     "Health bar shows numbered pips from 1 to 14, confirming health value of 14",
-    "Cost shows '-' indicating this is a Master with no hiring cost"
+    "Bottom-right shows 'Young LaCroix' which appears to be the totem for this Master"
   ]
 }

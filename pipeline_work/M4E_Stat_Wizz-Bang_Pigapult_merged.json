@@ -1,0 +1,128 @@
+{
+  "card_type": "stat_card",
+  "name": "Pigapult",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 4,
+  "sp": 5,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Wizz-Bang"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "warding",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Replacement Parts",
+      "defensive_type": null,
+      "text": "During the end phase, this model may discard a card to heal 2."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (U) abilities of other models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rain of Pork",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 13,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may select another friendly non-unique model within 2\" when this action is declared. If a friendly model was selected, this action deals +1 damage and the selected model is placed into base contact with the target, and is then dealt 1 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Here Piggy, Piggy...\"",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target friendly Sz 1 or 2 model. Place the target into base contact with this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"You'll Get a Tasty Treat...\"",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. The target heals 3.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "\"Heave Ho!\"",
+      "action_type": null,
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Remove a marker within 3\". Make a copy of the marker, controlled by the same player, within range.",
+      "triggers": [
+        {
+          "name": "\"Looks Edible?\"",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Stat_Wizz-Bang_Pigapult.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

@@ -28,7 +28,7 @@ def init_db(db_path: str) -> sqlite3.Connection:
     conn.execute("PRAGMA foreign_keys=ON")
     
     # Apply schema
-    with open(SCHEMA_PATH) as f:
+    with open(SCHEMA_PATH, encoding="utf-8") as f:
         conn.executescript(f.read())
     
     return conn
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     conn = init_db(args.db)
     
     for input_file in args.input:
-        with open(input_file) as f:
+        with open(input_file, encoding="utf-8") as f:
             card = json.load(f)
         
         card_type = card.get("card_type", "stat_card")

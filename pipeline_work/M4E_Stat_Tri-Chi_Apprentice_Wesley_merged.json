@@ -1,0 +1,144 @@
+{
+  "card_type": "stat_card",
+  "name": "Apprentice Wesley",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Tri-Chi"
+  ],
+  "abilities": [
+    {
+      "name": "Beer Goggles",
+      "defensive_type": "fortitude",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel if the attacking model has a friendly Poison token."
+    },
+    {
+      "name": "On the House",
+      "defensive_type": null,
+      "text": "After an enemy model within 6\" gains a Poison token, this model may deal 1 damage to it."
+    },
+    {
+      "name": "Tri-Chi Conclave",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain two (soulstone). If it does so, replace this model with The Brewmaster, Proof-Prophet. Then, the new model heals 3."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shove",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 4\". For each raise this action receives, move the target an additional +1\".",
+      "triggers": [
+        {
+          "name": "Drink Up",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Last Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 4\". If the target has a friendly Poison token, increase the distance moved by +2\".",
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drink Up",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Creep Along",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to its Sp toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Resupply",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Apprentice_Wesley.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

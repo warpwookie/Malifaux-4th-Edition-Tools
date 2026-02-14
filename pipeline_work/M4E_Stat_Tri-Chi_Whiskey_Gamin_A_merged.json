@@ -1,0 +1,109 @@
+{
+  "card_type": "stat_card",
+  "name": "Whiskey Gamin",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 4,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Construct"
+  ],
+  "keywords": [
+    "Tri-Chi"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Driving While a Drink",
+      "defensive_type": null,
+      "text": "While this model has a friendly Poison token, it receives +2 Sp, but suffers -1 Df and Wp."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Moonshine Dispenser",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, move the target up to 3\" directly away from this model.",
+      "triggers": [
+        {
+          "name": "Drink Up",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Froth Over",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Remains marker within range. Enemy models within (Y)2\" of the made marker must pass a TN 12 Df duel or gain Distracted and Poison tokens. Allies within (Y)2\" of the made marker may gain a Poison token. Then, remove the marker.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "A Shot of Genius",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target gains either a Poison or an Insight token.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Whiskey_Gamin_A.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Whiskey Gamin' back='Moonshine Dispenser'"
+  ],
+  "extraction_notes": [
+    "Froth Over uses (Y) symbol for aura range around the marker, rendered as (Y)2\"",
+    "Attack action 'Moonshine Dispenser' has TN listed as '-' (dash), interpreted as null"
+  ]
+}

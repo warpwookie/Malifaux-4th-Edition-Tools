@@ -1,0 +1,135 @@
+{
+  "card_type": "stat_card",
+  "name": "Gautraeux Bokor",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Wizz-Bang"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": null,
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Proper Motivation",
+      "defensive_type": null,
+      "text": "Once per turn. After resolving a friendly effect that damaged this model, this model may move up to 4\" and make a Scheme marker in base contact."
+    },
+    {
+      "name": "Swamp Lights",
+      "defensive_type": null,
+      "text": "This model may remove a Glowy token on it to reduce damage dealt to it by 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Swamp Spirits",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Models within (r)1\" of the target are dealt 1 damage. For each raise this action receives, increase the (r) by +2\".",
+      "triggers": [
+        {
+          "name": "Strike, My Pretties...",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Select a (melee) action on a friendly model within 6\". This model declares the selected action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "That's Normal",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Glowy token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Swirling Magic",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Place this model within range and give it a Glowy token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Swamp Wisdom",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Friendly models within (r)1\" gain an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Stage Prep",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Pyrotechnic marker within range.",
+      "triggers": [
+        {
+          "name": "Short Fuse",
+          "suit": "(c)",
+          "timing": "after_resolving",
+          "text": "Resolve the end of turn effects on the made marker using a suit in this action's final duel total.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Stat_Wizz-Bang_Gautraeux_Bokor_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3, extracted from 'Minion (3)' characteristic"
+  ]
+}

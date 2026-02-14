@@ -1,0 +1,74 @@
+{
+  "card_type": "crew_card",
+  "name": "Wise Words of Wisdom",
+  "associated_master": "Wong",
+  "associated_title": "The Enchanter",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Wizz-Bang models",
+      "abilities": [
+        {
+          "name": "Warming Glow",
+          "defensive_type": null,
+          "text": "When this model is dealt damage from a (m), it may drain a (soulstone) to heal that amount instead."
+        },
+        {
+          "name": "Zoom and Boom",
+          "defensive_type": null,
+          "text": "This model's Charge action may generate non-general tactical actions instead of (melee) actions. Any movement this model makes as a result of the generated action is ignored."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Wizz-Bang models",
+      "actions": [
+        {
+          "name": "The Ol' Switcheroo",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": 8,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Target a Pyrotechnic marker.",
+          "effects": "Make a Scheme marker in base contact with the target. Then deal 1 damage to models within (m)2\" of the target. Remove the target.",
+          "triggers": [
+            {
+              "name": "Porksplosions",
+              "suit": "(soulstone)",
+              "timing": "after",
+              "text": "Summon a Flying Piglet within range.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card features decorative border with boar motif at top",
+    "Image shows green-skinned character with horns and staff",
+    "Warming Glow uses (m) for missile suit and (soulstone) for soulstone icon",
+    "Zoom and Boom uses (melee) icon for melee actions",
+    "The Ol' Switcheroo uses (m) for melee range indicator",
+    "Porksplosions trigger uses (soulstone) suit symbol"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Wizz-Bang_Wong_Enchanter_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 683,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Crew_Wizz-Bang_Wong_Enchanter.pdf"
+}

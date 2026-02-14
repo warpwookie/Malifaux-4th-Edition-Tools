@@ -128,10 +128,6 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         print("  Step 3: Merging front + back...")
         merged = merge_stat_card(extraction["front"], extraction["back"], str(pdf_path))
         
-        # Tag upgrade cards for traceability
-        if card_type == "upgrade_card":
-            merged["card_type"] = "upgrade_card"
-        
     elif card_type == "crew_card":
         img = images[0]
         merged = extract_crew_card(client, img["image_path"])
@@ -145,7 +141,7 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     
     # Save merged JSON for traceability
     merged_path = work_dir / f"{stem}_merged.json"
-    with open(merged_path, "w") as f:
+    with open(merged_path, "w", encoding="utf-8") as f:
         json.dump(merged, f, indent=2)
     
     # Step 4: Validate
@@ -156,7 +152,7 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     if not validation.passed:
         # Save for manual review
         failed_path = work_dir / f"{stem}_FAILED.json"
-        with open(failed_path, "w") as f:
+        with open(failed_path, "w", encoding="utf-8") as f:
             json.dump({"card": merged, "validation": validation.to_dict()}, f, indent=2)
         
         return {"status": "validation_failed", "validation": validation.to_dict(),
@@ -174,7 +170,6 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         if card_type == "crew_card":
             load_result = load_crew_card(conn, merged, replace)
         else:
-            # stat_card and upgrade_card both use load_stat_card
             load_result = load_stat_card(conn, merged, replace)
         
         # Log the parse

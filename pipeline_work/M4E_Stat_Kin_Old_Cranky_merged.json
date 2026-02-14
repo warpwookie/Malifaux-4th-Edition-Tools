@@ -19,10 +19,11 @@
   "totem": null,
   "characteristics": [
     "Unique",
-    "Living",
+    "Living"
+  ],
+  "keywords": [
     "Kin"
   ],
-  "keywords": [],
   "abilities": [
     {
       "name": "Sage Advice",
@@ -32,7 +33,7 @@
     {
       "name": "\"That the Best Ya Got?\"",
       "defensive_type": null,
-      "text": "Enemy (melee) and (missile) actions that target allies within 6\" suffer -1 Skl."
+      "text": "Enemy (magic) and (missile) actions that target allies within 6\" suffer -1 Skl."
     }
   ],
   "actions": [

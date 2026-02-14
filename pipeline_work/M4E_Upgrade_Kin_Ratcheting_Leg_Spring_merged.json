@@ -1,8 +1,8 @@
 {
-  "card_type": "upgrade_card",
+  "card_type": "stat_card",
   "name": "Ratcheting Leg Spring",
   "title": "Improvised Enhancement",
-  "faction": "Bayou",
+  "faction": "Unknown",
   "station": null,
   "model_limit": 1,
   "cost": "-",
@@ -17,9 +17,7 @@
   "infuses_soulstone_on_death": false,
   "crew_card_name": null,
   "totem": null,
-  "characteristics": [
-    "Upgrade"
-  ],
+  "characteristics": [],
   "keywords": [],
   "abilities": [
     {
@@ -35,12 +33,17 @@
     "Title mismatch: front='Improvised Enhancement' back='None'"
   ],
   "extraction_notes": [
-    "This is an upgrade card, not a model stat card, so stats are all 0 and health is 0.",
-    "The card shows a Tactical Action 'Spring and Sprong' with stats: Rg 6\", Skl 0, Rst -, TN 6, Dmg -. Effect: Place this model within range. Deal 1 damage to this model and any models in base contact with this model. Then, discard this upgrade.",
-    "Limitation noted: Plentiful 2",
-    "This appears to be a generic upgrade card back with only decorative imagery (boar/pig emblems)",
-    "No stat blocks, actions, or game text visible",
-    "No base size indicator present",
-    "This is the standard reverse side of an upgrade card, not a model stat card"
+    "This is an Upgrade card, not a standard stat card front",
+    "No stats bubbles visible (DF, WP, SP, SZ all appear to be 0 or not applicable)",
+    "No health bar present",
+    "No characteristics or keywords listed in the traditional format",
+    "Card shows a Tactical Action table with 'Spring and Sprong' action: Rg 6\", Skl 0, Rst -, TN 6, Dmg -",
+    "Action text: Place this model within range. Deal 1 damage to this model and any models in base contact with this model. Then, discard this upgrade.",
+    "Limitations section shows: Plentiful 2",
+    "Faction cannot be determined from visible elements",
+    "This appears to be a generic upgrade card back template, not an actual stat card with actions",
+    "The card shows decorative boar/pig emblems and the text 'MALIFAUX UPGRADE FOURTH EDITION'",
+    "No actual game statistics, actions, or triggers are present on this card back",
+    "This is likely the reverse side of an upgrade card that would have upgrade text on the front"
   ]
 }

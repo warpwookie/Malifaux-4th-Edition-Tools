@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "The Brewmaster",
+  "title": "Proof-Prophet",
+  "faction": "Ten Thunders",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": "Apprentice Wesley",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Tri-Chi"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Devoted to the Brew",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Brotherhood of the Brew",
+      "defensive_type": null,
+      "text": "After this model is dealt damage, it may drain a (t). If it does so, place this model in base contact with an ally within 6\"."
+    },
+    {
+      "name": "Drunken Epiphany",
+      "defensive_type": null,
+      "text": "When this crew abandons a scheme, this model may search for and draw the red joker."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bathtub Hooch",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"1\" or +8\".",
+      "effects": "This model may remove a token from the target. The target gains a Poison token.",
+      "triggers": [
+        {
+          "name": "Sloshed",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Moonshine Mash",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly Poison token from the target. This action deals +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Last Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 4\". If the target has a friendly Poison token, increase the distance moved by +2\".",
+      "triggers": [
+        {
+          "name": "Drink Up",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "A Small Favor",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must have a friendly Poison token. Once per activation. Target declares an action chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drunken Clarity",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a model with a friendly Poison token.",
+      "effects": "Remove a friendly Poison token from the target. Target gains an Insight token and declares the Interact action, controlled by this model.",
+      "triggers": [
+        {
+          "name": "\"You're Drunk, Go Home\"",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "This action must have received a raise. Target places itself anywhere in its deployment zone.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quick Reflexes",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_The_Brewmaster_Proof-Prophet.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Keywords section appears empty after the diamond bullet.",
+    "Devoted to the Brew ability has no visible text on this card front."
+  ]
+}

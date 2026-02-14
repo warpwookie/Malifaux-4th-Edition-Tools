@@ -1,0 +1,152 @@
+{
+  "card_type": "stat_card",
+  "name": "ZORAIDA",
+  "title": "BOG WITCH",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Crawling Hex",
+  "totem": "Voodoo Doll",
+  "characteristics": [
+    "Master",
+    "Living"
+  ],
+  "keywords": [
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Bogbound",
+      "defensive_type": "fortitude",
+      "text": "When this model is dealt damage, it may deal 1 damage to an ally within 6\". If it does so, reduce the damage dealt to this model by 1."
+    },
+    {
+      "name": "Eyes in the Night",
+      "defensive_type": null,
+      "text": "This model may draw range and LoS for its attack actions from allies within 10\"."
+    },
+    {
+      "name": "Strands of Fate",
+      "defensive_type": null,
+      "text": "During the start phase, the opposing player must discard a card or play with their control hand revealed until the end phase."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fateweaver's Pull",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation. This action may target friendly models.",
+      "effects": "Target moves up to 2\" and declares an action chosen and controlled by this model.",
+      "triggers": [
+        {
+          "name": "Whispered Curses",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to a friendly totem, ignoring LoS.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Witch's Needle",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Attach the Voodoo upgrade to the target.",
+      "triggers": [
+        {
+          "name": "Ensorcel",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Target declares an action chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Poisoned Fate",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, the target must discard a card or this action deals +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stunning Strike",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bogstrider",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Place this model anywhere within 12\" of its current location. Then, this model gains a Craven token.",
+      "triggers": [
+        {
+          "name": "Stitched Effigy",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a marker within 3\" of this model. Summon a model with the Effigy characteristic within 3\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Zoraida_Bog_Witch.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='BOG WITCH' back='Bog Witch'"
+  ],
+  "extraction_notes": []
+}

@@ -28,7 +28,7 @@
     {
       "name": "Demise (Flashover)",
       "defensive_type": null,
-      "text": "After this model is killed, models within (r)1\" gain a Burning token."
+      "text": "After this model is killed, models within (t)1\" gain a Burning token."
     },
     {
       "name": "Flight",
@@ -44,8 +44,8 @@
   "actions": [
     {
       "name": "\"Up We Go!\"",
-      "action_type": "melee",
-      "range": "(melee)2\"",
+      "action_type": "magic",
+      "range": "(magic)2\"",
       "skill_value": 2,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
@@ -99,7 +99,7 @@
       "triggers": [
         {
           "name": "Hop, Friends!",
-          "suit": "(c)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Each ally within (aura)2\" of the target may gain either an Adaptable token or an Impact token.",
           "is_mandatory": false,

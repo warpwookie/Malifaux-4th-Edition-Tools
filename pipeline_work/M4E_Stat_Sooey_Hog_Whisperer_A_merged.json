@@ -1,0 +1,130 @@
+{
+  "card_type": "stat_card",
+  "name": "HOG WHISPERER",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living"
+  ],
+  "keywords": [
+    "Sooey"
+  ],
+  "abilities": [
+    {
+      "name": "Combat Finesse",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is targeted with a (melee) action, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "Swineherd",
+      "defensive_type": null,
+      "text": "When this model activates, it may remove a Remains or enemy Scheme marker within 2\". If it does so, allies within (y)2\" of this model gain a Glutted token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pig Sticker",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (-) if another ally is engaging the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grease and Gristle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make an enemy Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Herd 'Em",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. This model may remove a Glutted token from the target.",
+      "effects": "Move the target up to its Sp. If a Glutted token was removed, the target may declare a (melee) action.",
+      "triggers": [
+        {
+          "name": "Purification",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "\"Here Pig!\"",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Remains or Scheme marker.",
+      "effects": "Place an ally within 4\" of this model into base contact with the target, then the ally removes the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Hog_Whisperer_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The melee icon in Combat Finesse text is represented as (melee)",
+    "The (y) in Swineherd likely represents a range icon type - preserved as (y) for accuracy"
+  ]
+}

@@ -40,7 +40,7 @@ def load_prompt(prompt_name: str) -> str:
     prompt_path = PROMPTS_DIR / f"{prompt_name}.txt"
     if not prompt_path.exists():
         raise FileNotFoundError(f"Prompt not found: {prompt_path}")
-    return prompt_path.read_text(encoding="utf-8")
+    return prompt_path.read_text(encoding='utf-8')
 
 
 def image_to_base64(image_path: str) -> tuple[str, str]:
@@ -191,7 +191,7 @@ if __name__ == "__main__":
             sys.exit(1)
         result = extract_crew_card(client, args.images[0])
     
-    with open(args.output, "w") as f:
+    with open(args.output, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
     
     print(f"Output written to {args.output}")

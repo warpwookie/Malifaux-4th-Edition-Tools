@@ -49,7 +49,7 @@
       "damage": "2",
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or (gun)8\".",
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)8\".",
       "effects": null,
       "triggers": [
         {
@@ -107,7 +107,6 @@
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_LaCroix_Raider_A.pdf",
   "merge_warnings": [],
   "extraction_notes": [
-    "Minion (3) indicates model_limit: 3",
-    "Refurbished Shotgun has action_type 'variable' due to dynamic range choice between melee and missile range"
+    "Model limit is 3 from 'Minion (3)' characteristic"
   ]
 }

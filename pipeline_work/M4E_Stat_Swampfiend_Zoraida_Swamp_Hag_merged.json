@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "ZORAIDA",
+  "title": "Swamp Hag",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Marshborn Malice",
+  "totem": "Mirewing",
+  "characteristics": [
+    "Master",
+    "Living"
+  ],
+  "keywords": [
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Crooked Deal",
+      "defensive_type": "fortitude",
+      "text": "When an enemy model with a Stunned token targets this model with an attack action, the enemy's duel cannot be cheated."
+    },
+    {
+      "name": "Eyes in the Woods",
+      "defensive_type": null,
+      "text": "During the start phase of turn 1, this model may give up to three other allies a Craven token to place them anywhere on the friendly table half."
+    },
+    {
+      "name": "Moth Witch",
+      "defensive_type": null,
+      "text": "Once per turn. When this model declares a non-Charge general action, it may drain a (soulstone) to have another ally declare the same action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bumps and Boils",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Stunned token, look at the top two cards of either fate deck and place them back in any order. If this action received a raise, the target gains a Stunned token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Dumbfounded",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Craven token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Moth Swarm",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target must pass a TN 12 Wp duel or gain a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Poisoned Fate",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, the target must discard a card or this action deals +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hag's Gift",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Bog Spirit token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Off the Path",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Other ally only. Discard up to two cards. For each card discarded, draw a card and move the target up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Retrace Steps",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. This model may declare a non-Charge general action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Witch's Brew",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target heals 2 gains a Bolstered token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Zoraida_Swamp_Hag.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Witch's Brew costs_and_restrictions has minor grammatical issue in source: 'heals 2 gains a Bolstered token' (missing comma or 'and' between heal amount and gains)"
+  ]
+}

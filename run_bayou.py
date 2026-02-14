@@ -45,7 +45,7 @@ def load_existing_models() -> set:
         print(f"  Warning: {EXISTING_JSON} not found, starting fresh")
         return set()
     
-    with open(EXISTING_JSON) as f:
+    with open(EXISTING_JSON, encoding="utf-8") as f:
         cards = json.load(f)
     
     # Use (name, title) tuple as the key since some models have multiple titles
@@ -204,7 +204,7 @@ def seed_database(db_path: str, json_path: Path):
         print("  No existing JSON to seed from")
         return 0
     
-    with open(json_path) as f:
+    with open(json_path, encoding="utf-8") as f:
         cards = json.load(f)
     
     conn = init_db(db_path)
@@ -218,6 +218,7 @@ def seed_database(db_path: str, json_path: Path):
         except Exception as e:
             print(f"  Seed error for {card.get('name', '?')}: {e}")
     
+    conn.commit()
     conn.close()
     return loaded
 
@@ -325,7 +326,7 @@ def export_all_cards(db_path: str, output_path: Path):
     
     conn.close()
     
-    with open(output_path, "w") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(models, f, indent=2)
     
     print(f"  Exported {len(models)} models to {output_path}")
@@ -340,6 +341,8 @@ def main():
                         help="Extract and validate only, don't write to DB")
     parser.add_argument("--list-only", action="store_true",
                         help="Just list what would be processed, no API calls")
+    parser.add_argument("--include-upgrades", action="store_true",
+                        help="Include upgrade cards (skipped by default)")
     parser.add_argument("--delay", type=float, default=1.5,
                         help="Seconds between API calls (default: 1.5)")
     parser.add_argument("--db", default=str(DB_DIR / "m4e.db"),
@@ -392,6 +395,16 @@ def main():
     
     print(f"  Already parsed: {len(already_done)}")
     print(f"  New to process: {len(new_pdfs)}")
+    
+    # Filter out upgrades unless explicitly included
+    if not args.include_upgrades:
+        upgrade_pdfs = [p for p in new_pdfs if classify_card(p.stem) == "upgrade"]
+        if upgrade_pdfs:
+            new_pdfs = [p for p in new_pdfs if classify_card(p.stem) != "upgrade"]
+            print(f"\n  Skipping {len(upgrade_pdfs)} upgrade cards (use --include-upgrades to process)")
+            for up in upgrade_pdfs:
+                print(f"    - {up.name}")
+            print(f"  Adjusted to process: {len(new_pdfs)}")
     
     # Categorize what we're processing
     stat_count = sum(1 for p in new_pdfs if classify_card(p.stem) == "stat")

@@ -50,8 +50,8 @@
       "damage": null,
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "This action may target friendly models.",
-      "effects": "Move the target 2\" toward a model it considers an Ally. For each raise this action receives, move the target +2\"",
+      "costs_and_restrictions": "This action may target friendly models. Move the target 2\" toward a model it considers an Ally. For each raise this action receives, move the target +2\"",
+      "effects": null,
       "triggers": [
         {
           "name": "And Stay There!",
@@ -63,7 +63,7 @@
         },
         {
           "name": "Befuddled",
-          "suit": "(m)(m)",
+          "suit": "(m)",
           "timing": "after_succeeding",
           "text": "Target may discard a card. If it does not, it is dealt 2 damage.",
           "is_mandatory": false,
@@ -74,10 +74,12 @@
     },
     {
       "name": "A New Find",
+      "action_type": null,
       "range": "8\"",
       "skill_value": 0,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": null,
       "tn": 5,
       "damage": null,
       "is_signature": true,
@@ -85,21 +87,22 @@
       "costs_and_restrictions": "Ally only.",
       "effects": "Target attaches an Improvised Enhancement upgrade.",
       "triggers": [],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "tactical_actions"
     },
     {
       "name": "Cauldron",
+      "action_type": null,
       "range": "4\"",
       "skill_value": 0,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": null,
       "tn": 3,
       "damage": null,
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "Once per turn.",
-      "effects": "Move one model within range up to 4\". For each raise this action receives, this model may move an additional model.",
+      "costs_and_restrictions": "Once per turn. Move one model within range up to 4\". For each raise this action receives, this model may move an additional model.",
+      "effects": null,
       "triggers": [
         {
           "name": "Explosive Moss",
@@ -111,22 +114,23 @@
         },
         {
           "name": "To the Flame",
-          "suit": "(m)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Enemies moved gain a Burning token.",
           "is_mandatory": false,
           "soulstone_cost": 0
         }
       ],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "tactical_actions"
     },
     {
       "name": "Tap the Leyline",
+      "action_type": null,
       "range": null,
       "skill_value": null,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": null,
       "tn": null,
       "damage": null,
       "is_signature": false,
@@ -134,8 +138,7 @@
       "costs_and_restrictions": "Once per turn.",
       "effects": "Draw two cards and then discard one card.",
       "triggers": [],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "tactical_actions"
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_Sammy_LaCroix.pdf",

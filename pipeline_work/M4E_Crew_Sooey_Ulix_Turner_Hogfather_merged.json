@@ -1,0 +1,62 @@
+{
+  "card_type": "crew_card",
+  "name": "Sturdy Critters",
+  "associated_master": "Ulix Turner",
+  "associated_title": "Hogfather",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Sooey models",
+      "abilities": [
+        {
+          "name": "Demise (Delicious Bacon)",
+          "defensive_type": null,
+          "text": "After this model is killed, make a Scheme marker within 1\" of this model."
+        },
+        {
+          "name": "Gilded Hooves",
+          "defensive_type": null,
+          "text": "This model is unaffected by severe terrain."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Sooey models and Sooey models with the living characteristic",
+      "actions": [
+        {
+          "name": "\"Soo-ieeee!\"",
+          "category": "attack_actions",
+          "action_type": "missile",
+          "range": "(melee) 6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": null,
+          "damage": "-",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "Summon a Piglet with a Glutted token within 2\" of the target.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The card header displays 'STURDY CRITTERS' as the crew card name with 'Ulix Turner, Hogfather' as the associated master and title.",
+    "Two sections present: abilities for 'Friendly Sooey models' and an action for 'Friendly unique Sooey models and Sooey models with the living characteristic'.",
+    "The attack action has both melee and range 6\" indicated by the notation."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Sooey_Ulix_Turner_Hogfather_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 565,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Crew_Sooey_Ulix_Turner_Hogfather.pdf"
+}

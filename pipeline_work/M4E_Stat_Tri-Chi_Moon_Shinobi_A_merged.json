@@ -1,0 +1,126 @@
+{
+  "card_type": "stat_card",
+  "name": "MOON SHINOBI",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Tri-Chi"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "\u03a9 Feint",
+      "defensive_type": "unusual_defense",
+      "text": "After an enemy model fails a (magic) action targeting this model, deal 1 damage to the enemy."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Crooked Crane",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action treats all (minus) as (plus). Target gains a Poison token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drunken Dash",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 5\", ignoring models and terrain. Models moved through this way gain a Poison token.",
+      "triggers": [
+        {
+          "name": "Eyes Peeled",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "If this model is at elevation 2 or higher, it declares the Prepare action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "A Shot of Genius",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only. Target gains either a Poison or an Insight token.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Moon_Shinobi_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' characteristic"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "card": {
+    "card_type": "stat_card",
+    "name": "Ratcheting Leg Spring",
+    "title": "Improvised Enhancement",
+    "faction": "Unknown",
+    "station": null,
+    "model_limit": 1,
+    "cost": "-",
+    "df": 0,
+    "wp": 0,
+    "sz": 0,
+    "sp": 0,
+    "health": 0,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": null,
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": null,
+    "totem": null,
+    "characteristics": [],
+    "keywords": [],
+    "abilities": [
+      {
+        "name": "Plink!",
+        "defensive_type": null,
+        "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+      }
+    ],
+    "actions": [],
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Ratcheting_Leg_Spring.pdf",
+    "merge_warnings": [
+      "Name mismatch: front='Ratcheting Leg Spring' back='Upgrade'",
+      "Title mismatch: front='Improvised Enhancement' back='None'"
+    ],
+    "extraction_notes": [
+      "This is an Upgrade card, not a standard stat card front",
+      "No stats bubbles visible (DF, WP, SP, SZ all appear to be 0 or not applicable)",
+      "No health bar present",
+      "No characteristics or keywords listed in the traditional format",
+      "Card shows a Tactical Action table with 'Spring and Sprong' action: Rg 6\", Skl 0, Rst -, TN 6, Dmg -",
+      "Action text: Place this model within range. Deal 1 damage to this model and any models in base contact with this model. Then, discard this upgrade.",
+      "Limitations section shows: Plentiful 2",
+      "Faction cannot be determined from visible elements",
+      "This appears to be a generic upgrade card back template, not an actual stat card with actions",
+      "The card shows decorative boar/pig emblems and the text 'MALIFAUX UPGRADE FOURTH EDITION'",
+      "No actual game statistics, actions, or triggers are present on this card back",
+      "This is likely the reverse side of an upgrade card that would have upgrade text on the front"
+    ]
+  },
+  "validation": {
+    "card_name": "Ratcheting Leg Spring (Improvised Enhancement)",
+    "passed": false,
+    "needs_review": true,
+    "hard_violations": [
+      "Invalid faction: 'Unknown'",
+      "health=0 outside expected range 1-20"
+    ],
+    "soft_flags": [
+      "Card has no actions \u00e2\u20ac\u201d verify back was parsed"
+    ],
+    "hallucination_flags": [
+      "Merge warning: Name mismatch: front='Ratcheting Leg Spring' back='Upgrade'",
+      "Merge warning: Title mismatch: front='Improvised Enhancement' back='None'"
+    ],
+    "info": [
+      "Extraction note: This is an Upgrade card, not a standard stat card front",
+      "Extraction note: No stats bubbles visible (DF, WP, SP, SZ all appear to be 0 or not applicable)",
+      "Extraction note: No health bar present",
+      "Extraction note: No characteristics or keywords listed in the traditional format",
+      "Extraction note: Card shows a Tactical Action table with 'Spring and Sprong' action: Rg 6\", Skl 0, Rst -, TN 6, Dmg -",
+      "Extraction note: Action text: Place this model within range. Deal 1 damage to this model and any models in base contact with this model. Then, discard this upgrade.",
+      "Extraction note: Limitations section shows: Plentiful 2",
+      "Extraction note: Faction cannot be determined from visible elements",
+      "Extraction note: This appears to be a generic upgrade card back template, not an actual stat card with actions",
+      "Extraction note: The card shows decorative boar/pig emblems and the text 'MALIFAUX UPGRADE FOURTH EDITION'",
+      "Extraction note: No actual game statistics, actions, or triggers are present on this card back",
+      "Extraction note: This is likely the reverse side of an upgrade card that would have upgrade text on the front"
+    ]
+  }
+}

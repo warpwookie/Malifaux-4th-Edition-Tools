@@ -1,15 +1,15 @@
 {
-  "card_type": "upgrade_card",
+  "card_type": "stat_card",
   "name": "Flaming Sack",
   "title": "Improvised Enhancement",
-  "faction": "Unknown",
+  "faction": null,
   "station": null,
   "model_limit": 1,
   "cost": "-",
-  "df": 0,
-  "wp": 0,
-  "sz": 0,
-  "sp": 0,
+  "df": null,
+  "wp": null,
+  "sz": null,
+  "sp": null,
   "health": 0,
   "soulstone_cache": null,
   "shields": 0,
@@ -29,11 +29,6 @@
       "name": "Steady Blow",
       "defensive_type": null,
       "text": "When this model removes an Impact token, it deals +2 damage instead of +1."
-    },
-    {
-      "name": "Flame Splat",
-      "defensive_type": null,
-      "text": "If this action receives a raise, deal 1 damage to enemy models within (X)2\" of the target. Models damaged by this action gain a Burning token. Then, discard this upgrade."
     }
   ],
   "actions": [],
@@ -43,13 +38,15 @@
     "Title mismatch: front='Improvised Enhancement' back='None'"
   ],
   "extraction_notes": [
-    "This is an Upgrade card, not a model stat card - no faction icon, stats, health bar, or characteristics/keywords visible on this card",
-    "Card shows an attack action table with: Rg +6\", Skl 6, Rst Df, TN -, Dmg 2",
-    "Card shows LIMITATIONS section with 'Plentiful 2'",
-    "Card labeled as 'Upgrade' at bottom",
-    "This appears to be a generic Malifaux Upgrade card template/cover image, not an actual stat card back with game statistics",
-    "The image shows decorative artwork with the Malifaux logo and 'UPGRADE FOURTH EDITION' text",
-    "No actions, stats, or game mechanics are present to extract",
-    "No base size indicated"
+    "This is an Upgrade card, not a standard stat card - indicated by 'Upgrade' label at bottom",
+    "No stat bubbles visible - this is an upgrade enhancement card",
+    "Has an Attack Action table: Flame Splat - Rg: (melee) 6\", Skl: 6, Rst: Df, TN: -, Dmg: 2",
+    "Attack action text: If this action receives a raise, deal 1 damage to enemy models within (X)2\" of the target. Models damaged by this action gain a Burning token. Then, discard this upgrade.",
+    "Card has limitation: Plentiful 2",
+    "Category appears to be 'Improvised Enhancement' as shown in decorative header",
+    "This appears to be the back of an Upgrade card, not a Model stat card",
+    "Upgrade cards do not contain attack actions, tactical actions, or stat lines",
+    "The card shows only decorative artwork with the Malifaux logo and 'UPGRADE FOURTH EDITION' text",
+    "No base size is present as this is not a model card"
   ]
 }

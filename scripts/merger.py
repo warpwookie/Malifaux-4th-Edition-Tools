@@ -139,7 +139,7 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
 
 def merge_from_file(input_path: str, source_pdf: str = None) -> dict:
     """Load extraction JSON and merge."""
-    with open(input_path) as f:
+    with open(input_path, encoding="utf-8") as f:
         data = json.load(f)
     
     if "front" in data and "back" in data:
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     
     result = merge_from_file(args.input, args.source_pdf)
     
-    with open(args.output, "w") as f:
+    with open(args.output, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
     
     warnings = result.get("merge_warnings", [])

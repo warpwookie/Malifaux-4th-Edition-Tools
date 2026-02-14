@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "ADZE",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Shimmering Lights",
+      "defensive_type": null,
+      "text": "When performing opposed duels with enemy models with a Stunned token, this model receives a (+)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Venomous Strike",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Poison token.",
+      "triggers": [
+        {
+          "name": "Pouncing Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hexed Gambit",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Stunned token. This model may discard and draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Barricade",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Bolstered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lured Into a Bog",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to its Sp toward a piece of terrain in its LoS.",
+      "triggers": [
+        {
+          "name": "No Witnesses",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "If there are no different enemy models within 2\" of the target, deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [
+        {
+          "name": "Without Warning",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)1\" gain a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Adze.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

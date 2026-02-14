@@ -1,0 +1,69 @@
+{
+  "card_type": "crew_card",
+  "name": "Devoted to the Brew",
+  "associated_master": "The Brewmaster",
+  "associated_title": "Proof-Prophet",
+  "faction": "Tri-Chi",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Tri-Chi models",
+      "abilities": [
+        {
+          "name": "High Tolerance",
+          "defensive_type": null,
+          "text": "When this model would be dealt damage from a Poison token, it instead heals 1 and removes the Poison token."
+        },
+        {
+          "name": "Closing Time",
+          "defensive_type": null,
+          "text": "During the end phase, one model with this ability may remove a friendly Poison token from itself. If it does so, it makes a Scheme marker within 1\" of itself."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Tri-Chi models",
+      "actions": [
+        {
+          "name": "Liquid Courage",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": 5,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Ally only.",
+          "effects": "Target heals 2 and gains Poison and Bolstered tokens.",
+          "triggers": [
+            {
+              "name": "Draw Out Secrets",
+              "suit": "",
+              "timing": "after",
+              "text": "Make a Scheme marker in base contact with the target.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The trigger for Liquid Courage uses a book icon which typically indicates a general trigger that can be taken with any suit or mask suit"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\M4E_Crew_Tri-Chi_The_Brewmaster_Proof-Prophet_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 570,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Crew_Tri-Chi_The_Brewmaster_Proof-Prophet.pdf"
+}

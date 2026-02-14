@@ -1,0 +1,39 @@
+# ===========================================
+# M4E Parser - Git Ignore Rules
+# ===========================================
+
+# Source PDFs (binary files, stored locally only)
+source_pdfs/
+
+# Reference PDFs (large binary files)
+reference/*.pdf
+
+# SQLite database files (regenerated from scripts)
+db/*.db
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak

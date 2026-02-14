@@ -111,7 +111,7 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     # Step 2: Vision extraction
     print("  Step 2: Vision model extraction...")
     
-    if card_type == "stat_card" and len(images) == 2:
+    if card_type in ("stat_card", "upgrade_card") and len(images) == 2:
         front_img = next((i for i in images if i["side"] == "front"), None)
         back_img = next((i for i in images if i["side"] == "back"), None)
         
@@ -127,6 +127,10 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         # Step 3: Merge
         print("  Step 3: Merging front + back...")
         merged = merge_stat_card(extraction["front"], extraction["back"], str(pdf_path))
+        
+        # Tag upgrade cards for traceability
+        if card_type == "upgrade_card":
+            merged["card_type"] = "upgrade_card"
         
     elif card_type == "crew_card":
         img = images[0]
@@ -170,6 +174,7 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         if card_type == "crew_card":
             load_result = load_crew_card(conn, merged, replace)
         else:
+            # stat_card and upgrade_card both use load_stat_card
             load_result = load_stat_card(conn, merged, replace)
         
         # Log the parse

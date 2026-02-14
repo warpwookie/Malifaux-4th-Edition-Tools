@@ -19,7 +19,7 @@ from pathlib import Path
 
 
 SCRIPT_DIR = Path(__file__).parent.parent
-SCHEMA_PATH = SCRIPT_DIR / "db" / "schema.sql"
+SCHEMA_PATH = SCRIPT_DIR / "schema" / "schema.sql"
 
 
 def init_db(db_path: str) -> sqlite3.Connection:

@@ -1,0 +1,55 @@
+{
+  "card_type": "upgrade_card",
+  "name": "Flaming Sack",
+  "title": "Improvised Enhancement",
+  "faction": "Unknown",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 0,
+  "wp": 0,
+  "sz": 0,
+  "sp": 0,
+  "health": 0,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": null,
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Plink!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    },
+    {
+      "name": "Steady Blow",
+      "defensive_type": null,
+      "text": "When this model removes an Impact token, it deals +2 damage instead of +1."
+    },
+    {
+      "name": "Flame Splat",
+      "defensive_type": null,
+      "text": "If this action receives a raise, deal 1 damage to enemy models within (X)2\" of the target. Models damaged by this action gain a Burning token. Then, discard this upgrade."
+    }
+  ],
+  "actions": [],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Flaming_Sack.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Flaming Sack' back='Upgrade'",
+    "Title mismatch: front='Improvised Enhancement' back='None'"
+  ],
+  "extraction_notes": [
+    "This is an Upgrade card, not a model stat card - no faction icon, stats, health bar, or characteristics/keywords visible on this card",
+    "Card shows an attack action table with: Rg +6\", Skl 6, Rst Df, TN -, Dmg 2",
+    "Card shows LIMITATIONS section with 'Plentiful 2'",
+    "Card labeled as 'Upgrade' at bottom",
+    "This appears to be a generic Malifaux Upgrade card template/cover image, not an actual stat card back with game statistics",
+    "The image shows decorative artwork with the Malifaux logo and 'UPGRADE FOURTH EDITION' text",
+    "No actions, stats, or game mechanics are present to extract",
+    "No base size indicated"
+  ]
+}

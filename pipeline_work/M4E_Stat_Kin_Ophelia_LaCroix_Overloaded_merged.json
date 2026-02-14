@@ -1,0 +1,159 @@
+{
+  "card_type": "stat_card",
+  "name": "Ophelia LaCroix",
+  "title": "Overloaded",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 1,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Somethin's A'Foot",
+  "totem": "Sammy LaCroix",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Kin"
+  ],
+  "abilities": [
+    {
+      "name": "Duck and Weave",
+      "defensive_type": null,
+      "text": "When this model is targeted with an attack, it may drain two (soulstone) to place within 3\". If it is no longer a legal target, the attack fails."
+    },
+    {
+      "name": "\"Hold These\"",
+      "defensive_type": null,
+      "text": "When this model discards an upgrade, another friendly model within 10\" may attach it."
+    },
+    {
+      "name": "Raid Boss",
+      "defensive_type": null,
+      "text": "When this model is deployed, it attaches three Improvised Enhancement upgrades."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Heavy Firearm",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Strip Defenses",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "According to Plan",
+          "suit": "(m)",
+          "timing": "after_resolving",
+          "text": "After resolving, move the target up to 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "See the Trick",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another ally with LoS to the target gains an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Battlefield Salvage",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model attaches an Improvised Enhancement upgrade.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Clever Plannin'",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. Discard an Improvised Enhancement upgrade.",
+      "effects": "The target declares the Walk action controlled by this model. If it scales terrain during this action, draw a card.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Exhibition Shooting",
+      "range": "16\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. The TN of this action is equal to the distance in inches between this model and target Scheme marker.",
+      "effects": "Make a Scheme marker within 4\" of the target, then remove the target.",
+      "triggers": [
+        {
+          "name": "Needled",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (r)1\" of the made marker must pass a TN 14 Sp duel or gain a Perforated token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_Ophelia_LaCroix_Overloaded.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

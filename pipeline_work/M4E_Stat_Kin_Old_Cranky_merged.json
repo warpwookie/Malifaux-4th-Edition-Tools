@@ -1,0 +1,110 @@
+{
+  "card_type": "stat_card",
+  "name": "OLD CRANKY",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 6,
+  "sz": 1,
+  "sp": 4,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Kin"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Sage Advice",
+      "defensive_type": null,
+      "text": "When an ally within 6\" would gain an Adaptable token, that ally may gain an Impact token instead, or vice versa."
+    },
+    {
+      "name": "\"That the Best Ya Got?\"",
+      "defensive_type": null,
+      "text": "Enemy (melee) and (missile) actions that target allies within 6\" suffer -1 Skl."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Back in My Day...",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has at least one token, deal +1 damage to it.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Strip Defenses",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Get In There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A non-unique friendly model in LoS of the target may move up to 3\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mental Trauma",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must either discard a card or be dealt 3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Give Me a Hand, Kid\"",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target an ally that has not yet activated this turn. Target moves up to 4\". Then, place this model into base contact with the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "One o' the Good 'Uns",
+          "suit": "(c)",
+          "timing": "after_resolving",
+          "text": "After resolving, the target moves up to 4\" and gains an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_Old_Cranky.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

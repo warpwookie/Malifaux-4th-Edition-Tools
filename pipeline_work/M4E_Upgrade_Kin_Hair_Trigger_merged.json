@@ -1,0 +1,48 @@
+{
+  "card_type": "upgrade_card",
+  "name": "Hair Trigger",
+  "title": "Improvised Enhancement",
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 0,
+  "wp": 0,
+  "sz": 0,
+  "sp": 0,
+  "health": 0,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": null,
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Plink!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    },
+    {
+      "name": "Run and Gun",
+      "defensive_type": null,
+      "text": "This model's Charge action may generate (missile) actions instead of (melee) actions."
+    }
+  ],
+  "actions": [],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Hair_Trigger.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Hair Trigger' back='Upgrade'",
+    "Title mismatch: front='Improvised Enhancement' back='None'"
+  ],
+  "extraction_notes": [
+    "This is an Upgrade card, not a model stat card - it has no DF/WP/SP/SZ stats, health, or characteristics/keywords visible in the standard locations",
+    "The card shows 'LIMITATIONS: Plentiful 2' at the bottom",
+    "The card displays 'Upgrade' text at the bottom",
+    "This appears to be a generic upgrade card back template with only decorative icons (stylized boar/pig faces) and the text 'MALIFAUX UPGRADE FOURTH EDITION'. No actual stat card data is present on this side.",
+    "No base size indicator found.",
+    "This is not a model stat card but rather an upgrade card template or placeholder."
+  ]
+}

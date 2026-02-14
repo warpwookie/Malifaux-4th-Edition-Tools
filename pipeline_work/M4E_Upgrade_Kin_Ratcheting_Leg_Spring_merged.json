@@ -1,0 +1,46 @@
+{
+  "card_type": "upgrade_card",
+  "name": "Ratcheting Leg Spring",
+  "title": "Improvised Enhancement",
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 0,
+  "wp": 0,
+  "sz": 0,
+  "sp": 0,
+  "health": 0,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": null,
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Upgrade"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Plink!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    }
+  ],
+  "actions": [],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Ratcheting_Leg_Spring.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Ratcheting Leg Spring' back='Upgrade'",
+    "Title mismatch: front='Improvised Enhancement' back='None'"
+  ],
+  "extraction_notes": [
+    "This is an upgrade card, not a model stat card, so stats are all 0 and health is 0.",
+    "The card shows a Tactical Action 'Spring and Sprong' with stats: Rg 6\", Skl 0, Rst -, TN 6, Dmg -. Effect: Place this model within range. Deal 1 damage to this model and any models in base contact with this model. Then, discard this upgrade.",
+    "Limitation noted: Plentiful 2",
+    "This appears to be a generic upgrade card back with only decorative imagery (boar/pig emblems)",
+    "No stat blocks, actions, or game text visible",
+    "No base size indicator present",
+    "This is the standard reverse side of an upgrade card, not a model stat card"
+  ]
+}

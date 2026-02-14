@@ -1,0 +1,144 @@
+{
+  "card_type": "stat_card",
+  "name": "SAMMY LaCROIX",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 1,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Kin"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Piggy Market",
+      "defensive_type": null,
+      "text": "Once per activation. When an ally within 4\" removes an Adaptable token, it may gain an Impact token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "All the Way Home",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 10,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target 2\" toward a model it considers an Ally. For each raise this action receives, move the target +2\"",
+      "triggers": [
+        {
+          "name": "And Stay There!",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Perforated token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Befuddled",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target may discard a card. If it does not, it is dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "A New Find",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target attaches an Improvised Enhancement upgrade.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Cauldron",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Move one model within range up to 4\". For each raise this action receives, this model may move an additional model.",
+      "triggers": [
+        {
+          "name": "Explosive Moss",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Allies moved gain an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "To the Flame",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemies moved gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Stat_Kin_Sammy_LaCroix.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

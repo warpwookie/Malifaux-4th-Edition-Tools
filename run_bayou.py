@@ -212,6 +212,9 @@ def seed_database(db_path: str, json_path: Path):
     
     for card in cards:
         try:
+            # Ensure factions list exists (all seeded cards are Bayou-playable)
+            if "factions" not in card:
+                card["factions"] = list(set([card.get("faction", "Bayou"), "Bayou"]))
             result = load_stat_card(conn, card, replace=False)
             if result["status"] == "inserted":
                 loaded += 1
@@ -247,7 +250,8 @@ def run_pipeline(pdfs: list, db_path: str, work_dir: str,
         try:
             result = process_single_pdf(
                 str(pdf), db_path, client, work_dir, 
-                dry_run=dry_run, replace=False, skip_existing=False
+                dry_run=dry_run, replace=False, skip_existing=False,
+                source_faction="Bayou"
             )
             
             status = result.get("status", "unknown")
@@ -292,10 +296,9 @@ def export_all_cards(db_path: str, output_path: Path):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     
-    # Get all Bayou models
+    # Get all models (all are Bayou-playable, some are dual-faction)
     c.execute("""
         SELECT * FROM models 
-        WHERE faction = 'Bayou' 
         ORDER BY name, title
     """)
     models = [dict(row) for row in c.fetchall()]
@@ -306,6 +309,15 @@ def export_all_cards(db_path: str, output_path: Path):
         # Keywords
         c.execute("SELECT keyword FROM model_keywords WHERE model_id=?", (mid,))
         model["keywords"] = [r["keyword"] for r in c.fetchall()]
+        
+        # Factions (dual-faction support)
+        c.execute("SELECT faction FROM model_factions WHERE model_id=?", (mid,))
+        factions = [r["faction"] for r in c.fetchall()]
+        if factions:
+            model["factions"] = factions
+        else:
+            # Fallback for models without junction table entries
+            model["factions"] = [model.get("faction", "Unknown")]
         
         # Characteristics
         c.execute("SELECT characteristic FROM model_characteristics WHERE model_id=?", (mid,))

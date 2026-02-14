@@ -84,7 +84,7 @@ class PipelineStats:
 
 def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
                        work_dir: str, dry_run: bool = False, replace: bool = False,
-                       skip_existing: bool = False) -> dict:
+                       skip_existing: bool = False, source_faction: str = None) -> dict:
     """
     Process a single PDF through the full pipeline.
     
@@ -138,6 +138,13 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     else:
         return {"status": "error", "step": "classification", 
                 "error": f"Unexpected page count ({len(images)}) for {card_type}"}
+    
+    # Build factions list (detected + source faction for dual-faction support)
+    detected_faction = merged.get("faction", "Unknown")
+    factions = [detected_faction]
+    if source_faction and source_faction != detected_faction:
+        factions.append(source_faction)
+    merged["factions"] = factions
     
     # Save merged JSON for traceability
     merged_path = work_dir / f"{stem}_merged.json"

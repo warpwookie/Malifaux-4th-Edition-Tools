@@ -49,6 +49,13 @@ CREATE TABLE IF NOT EXISTS model_characteristics (
     UNIQUE(model_id, characteristic)
 );
 
+CREATE TABLE IF NOT EXISTS model_factions (
+    model_id    INTEGER NOT NULL,
+    faction     TEXT NOT NULL,
+    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE,
+    UNIQUE(model_id, faction)
+);
+
 CREATE TABLE IF NOT EXISTS abilities (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     model_id        INTEGER NOT NULL,
@@ -222,4 +229,5 @@ CREATE INDEX IF NOT EXISTS idx_model_keywords_keyword ON model_keywords(keyword)
 CREATE INDEX IF NOT EXISTS idx_actions_model ON actions(model_id);
 CREATE INDEX IF NOT EXISTS idx_triggers_action ON triggers(action_id);
 CREATE INDEX IF NOT EXISTS idx_abilities_model ON abilities(model_id);
+CREATE INDEX IF NOT EXISTS idx_model_factions_faction ON model_factions(faction);
 CREATE INDEX IF NOT EXISTS idx_parse_log_status ON parse_log(status);

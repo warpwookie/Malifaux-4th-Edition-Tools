@@ -1,5 +1,177 @@
 [
   {
+    "id": 58,
+    "name": "ADZE",
+    "title": null,
+    "faction": "Neverborn",
+    "station": null,
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Adze.pdf",
+    "parse_date": "2026-02-14T14:15:58.683279",
+    "parse_status": "auto",
+    "keywords": [
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Beast",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 137,
+        "model_id": 58,
+        "name": "Flight",
+        "defensive_type": null,
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "id": 138,
+        "model_id": 58,
+        "name": "Shimmering Lights",
+        "defensive_type": null,
+        "text": "When performing opposed duels with enemy models with a Stunned token, this model receives a (+)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 156,
+        "model_id": 58,
+        "name": "Venomous Strike",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Poison token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 237,
+            "action_id": 156,
+            "name": "Pouncing Strike",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 238,
+            "action_id": 156,
+            "name": "Hexed Gambit",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target must have a Stunned token. This model may discard and draw a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 239,
+            "action_id": 156,
+            "name": "Barricade",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Bolstered token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 157,
+        "model_id": 58,
+        "name": "Lured Into a Bog",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to its Sp toward a piece of terrain in its LoS.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 240,
+            "action_id": 157,
+            "name": "No Witnesses",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "If there are no different enemy models within 2\" of the target, deal 2 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 241,
+            "action_id": 157,
+            "name": "Premonition",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Look at the top card of your fate deck. This model may discard it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 158,
+        "model_id": 58,
+        "name": "Unnatural Speed",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 242,
+            "action_id": 158,
+            "name": "Without Warning",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (aura)1\" gain a Stunned token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 80,
     "name": "ALPHONSE LeBLANC",
     "title": null,
@@ -23,6 +195,9 @@
     "parse_status": "auto",
     "keywords": [
       "Wizz-Bang"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Henchman",
@@ -159,6 +334,365 @@
     ]
   },
   {
+    "id": 67,
+    "name": "Apprentice Wesley",
+    "title": null,
+    "faction": "Ten Thunders",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Apprentice_Wesley.pdf",
+    "parse_date": "2026-02-14T14:20:07.392849",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 160,
+        "model_id": 67,
+        "name": "Beer Goggles",
+        "defensive_type": "fortitude",
+        "text": "Enemy attack actions that target this model suffer a (-) to their duel if the attacking model has a friendly Poison token."
+      },
+      {
+        "id": 161,
+        "model_id": 67,
+        "name": "On the House",
+        "defensive_type": null,
+        "text": "After an enemy model within 6\" gains a Poison token, this model may deal 1 damage to it."
+      },
+      {
+        "id": 162,
+        "model_id": 67,
+        "name": "Tri-Chi Conclave",
+        "defensive_type": null,
+        "text": "When this model activates, it may drain two (soulstone). If it does so, replace this model with The Brewmaster, Proof-Prophet. Then, the new model heals 3."
+      }
+    ],
+    "actions": [
+      {
+        "id": 186,
+        "model_id": 67,
+        "name": "Shove",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "t",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 4\". For each raise this action receives, move the target an additional +1\".",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 287,
+            "action_id": 186,
+            "name": "Drink Up",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 187,
+        "model_id": 67,
+        "name": "Last Call",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": 12,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 4\". If the target has a friendly Poison token, increase the distance moved by +2\".",
+        "costs_and_restrictions": "This action may target friendly models.",
+        "triggers": [
+          {
+            "id": 288,
+            "action_id": 187,
+            "name": "Mend",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target heals 2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 289,
+            "action_id": 187,
+            "name": "Drink Up",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 188,
+        "model_id": 67,
+        "name": "Creep Along",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to its Sp toward a friendly model in its LoS.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      },
+      {
+        "id": 189,
+        "model_id": 67,
+        "name": "Resupply",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": null,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+        "costs_and_restrictions": "Once per turn.",
+        "triggers": []
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Bad Juju",
+    "title": null,
+    "faction": "Neverborn",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "10",
+    "df": 5,
+    "wp": 5,
+    "sz": 4,
+    "sp": 6,
+    "health": 13,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Bad_Juju.pdf",
+    "parse_date": "2026-02-14T14:16:29.017695",
+    "parse_status": "auto",
+    "keywords": [
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Elemental",
+      "Henchman",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 139,
+        "model_id": 59,
+        "name": "Demise (Eternal)",
+        "defensive_type": null,
+        "text": "Once per turn. After this model is killed, it may discard a card. If it does so, it heals 4."
+      },
+      {
+        "id": 140,
+        "model_id": 59,
+        "name": "Shifting Earth",
+        "defensive_type": null,
+        "text": "When this model activates, it may choose another ally within 3\" and place it anywhere within 3\" of this model."
+      }
+    ],
+    "actions": [
+      {
+        "id": 159,
+        "model_id": 59,
+        "name": "Uprooted Fists",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)3\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "If this attack receives a raise, this model may make a Bog marker within 3\" of this model.",
+        "triggers": [
+          {
+            "id": 243,
+            "action_id": 159,
+            "name": "Barricade",
+            "suit": "(m)(m)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Bolstered token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 244,
+            "action_id": 159,
+            "name": "Hexed Gambit",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target must have a Stunned token. This model may discard and draw a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 160,
+        "model_id": 59,
+        "name": "Mud Bomb",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "This model may remove a token from the target.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 245,
+            "action_id": 160,
+            "name": "Bog's Vitality",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Allies within (r)3\" of the target heal 2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 246,
+            "action_id": 160,
+            "name": "On Your Heels",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Place this model into base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 247,
+            "action_id": 160,
+            "name": "Premonition",
+            "suit": "(m)(m)",
+            "timing": "after_succeeding",
+            "text": "Look at the top card of your fate deck. This model may discard it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 248,
+            "action_id": 160,
+            "name": "Foot in the Bog",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Bog marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 161,
+        "model_id": 59,
+        "name": "The Woods Have Eyes",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Target gains Stunned and Poison tokens.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      },
+      {
+        "id": 162,
+        "model_id": 59,
+        "name": "Bayou Cursed",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Remove any number of Bog markers or Stunned tokens from models within range. This model heals 1 for each marker or token removed (to a maximum of 3).",
+        "costs_and_restrictions": null,
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 13,
     "name": "Barrelby",
     "title": null,
@@ -183,6 +717,9 @@
     "keywords": [
       "Jockey",
       "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -331,6 +868,9 @@
     "parse_status": "auto",
     "keywords": [
       "December"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -498,6 +1038,9 @@
     "keywords": [
       "Swampfiend"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Versatile"
     ],
@@ -584,6 +1127,9 @@
     "parse_status": "auto",
     "keywords": [
       "Big Hat"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -693,6 +1239,9 @@
     "parse_status": "auto",
     "keywords": [
       "Infamous"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -831,6 +1380,9 @@
     "keywords": [
       "Jockey",
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -980,6 +1532,9 @@
     "parse_status": "auto",
     "keywords": [
       "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -1139,6 +1694,9 @@
       "Big Hat",
       "Jockey"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Undead",
@@ -1284,6 +1842,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Henchman",
@@ -1484,6 +2045,9 @@
     "keywords": [
       "Tri-Chi"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Henchman",
       "Living",
@@ -1640,6 +2204,9 @@
       "Jockey",
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Living",
@@ -1758,6 +2325,9 @@
     "parse_status": "auto",
     "keywords": [
       "Wizz-Bang"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -1914,6 +2484,9 @@
     "keywords": [
       "Big Hat"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique"
@@ -2055,6 +2628,134 @@
     ]
   },
   {
+    "id": 46,
+    "name": "Giant Leech",
+    "title": null,
+    "faction": "Neverborn",
+    "station": "Minion",
+    "model_limit": 2,
+    "cost": "4",
+    "df": 4,
+    "wp": 4,
+    "sz": 2,
+    "sp": 6,
+    "health": 5,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Returned_Swampfiend_Giant_Leech_A.pdf",
+    "parse_date": "2026-02-14T14:10:23.669687",
+    "parse_status": "auto",
+    "keywords": [
+      "Returned",
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (2)"
+    ],
+    "abilities": [
+      {
+        "id": 108,
+        "model_id": 46,
+        "name": "Distended With Blood",
+        "defensive_type": null,
+        "text": "This model receives +1 Sz for each friendly non-Summon, non-Slow token on it, to a maximum of +2."
+      },
+      {
+        "id": 109,
+        "model_id": 46,
+        "name": "Latch On",
+        "defensive_type": null,
+        "text": "Enemy models in base contact with this model suffer -1 Df."
+      },
+      {
+        "id": 110,
+        "model_id": 46,
+        "name": "Stealth",
+        "defensive_type": null,
+        "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+      }
+    ],
+    "actions": [
+      {
+        "id": 122,
+        "model_id": 46,
+        "name": "Bloodsuck",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 4,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "This model heals 1.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 187,
+            "action_id": 122,
+            "name": "Paralyzed",
+            "suit": "(m)(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 123,
+        "model_id": 46,
+        "name": "Body Slam",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)4\"",
+        "skill_value": 4,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "X",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "X is equal to this model's Sz. Place this model in base contact with the target.",
+        "costs_and_restrictions": "Once per activation. If the target is at a lower elevation, this action receives a (+).",
+        "triggers": []
+      },
+      {
+        "id": 124,
+        "model_id": 46,
+        "name": "Where There's One",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "0\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 11,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Summon a Giant Leech in base contact with the target.",
+        "costs_and_restrictions": "Enemy only. If the target is at half its maximum health or below, this action receives +1 to its Skl.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 24,
     "name": "Gluttony",
     "title": null,
@@ -2078,6 +2779,9 @@
     "parse_status": "auto",
     "keywords": [
       "Crossroads"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Henchman",
@@ -2228,6 +2932,9 @@
     "keywords": [
       "Big Hat"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Minion (3)"
@@ -2372,6 +3079,9 @@
     "keywords": [
       "Big Hat"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Loyal",
@@ -2474,6 +3184,203 @@
     ]
   },
   {
+    "id": 60,
+    "name": "Grootslang",
+    "title": null,
+    "faction": "Neverborn",
+    "station": null,
+    "model_limit": 1,
+    "cost": "8",
+    "df": 5,
+    "wp": 6,
+    "sz": 4,
+    "sp": 6,
+    "health": 11,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Grootslang.pdf",
+    "parse_date": "2026-02-14T14:16:59.028348",
+    "parse_status": "auto",
+    "keywords": [
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Beast",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 141,
+        "model_id": 60,
+        "name": "Prepared Lairs",
+        "defensive_type": null,
+        "text": "During the start phase of turn 1, make two Bog markers anywhere on the friendly table half."
+      },
+      {
+        "id": 142,
+        "model_id": 60,
+        "name": "Resilient",
+        "defensive_type": "fortitude",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      },
+      {
+        "id": 143,
+        "model_id": 60,
+        "name": "Riddled with Tunnels",
+        "defensive_type": null,
+        "text": "When another ally activates within 2\" of this model, the ally may drain a (soulstone) and use its Walk action to declare this model's Lair to Lair action."
+      }
+    ],
+    "actions": [
+      {
+        "id": 163,
+        "model_id": 60,
+        "name": "Eyeless Swipes",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "If there are no different enemy models within 2\" of the target, this action receives a (+).",
+        "triggers": [
+          {
+            "id": 249,
+            "action_id": 163,
+            "name": "Tear Off a Bite",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model heals 2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 250,
+            "action_id": 163,
+            "name": "Slink Away",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Place this model in base contact with a marker within 6\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 251,
+            "action_id": 163,
+            "name": "Infect",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 252,
+            "action_id": 163,
+            "name": "Premonition",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Look at the top card of your face deck. This model may discard it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 164,
+        "model_id": 60,
+        "name": "Barbed Tongue",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Sp",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Stunned token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 253,
+            "action_id": 164,
+            "name": "Pull and Drag",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Move the target 3\" toward this model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 254,
+            "action_id": 164,
+            "name": "Hexed Gambit",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target must have a Stunned token. This model may discard and draw a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 165,
+        "model_id": 60,
+        "name": "Create Lair",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Make a Bog marker within range.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      },
+      {
+        "id": 166,
+        "model_id": 60,
+        "name": "Lair to Lair",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "12\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Place this model in base contact with the target, then remove the target. This model gains a Craven token.",
+        "costs_and_restrictions": "Target a Bog marker, ignoring LoS.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 5,
     "name": "Gupps",
     "title": null,
@@ -2496,6 +3403,9 @@
     "parse_date": "2026-02-14T13:26:07.501250",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Versatile"
@@ -2603,6 +3513,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -2752,6 +3665,9 @@
       "Big Hat",
       "Tricksy"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Construct"
     ],
@@ -2830,6 +3746,9 @@
     "keywords": [
       "Kin",
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -3011,6 +3930,9 @@
       "Tri-Chi",
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique"
@@ -3177,6 +4099,9 @@
       "Tri-Chi",
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique"
@@ -3323,6 +4248,9 @@
       "Big Hat",
       "Tricksy"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique"
@@ -3464,6 +4392,168 @@
     ]
   },
   {
+    "id": 47,
+    "name": "LEECH KING",
+    "title": null,
+    "faction": "Resurrectionists",
+    "station": null,
+    "model_limit": 1,
+    "cost": "9",
+    "df": 5,
+    "wp": 6,
+    "sz": 2,
+    "sp": 6,
+    "health": 13,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Returned_Swampfiend_Leech_King.pdf",
+    "parse_date": "2026-02-14T14:10:48.124563",
+    "parse_status": "auto",
+    "keywords": [
+      "Returned",
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Resurrectionists"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 111,
+        "model_id": 47,
+        "name": "Demise (I'll Have What They're Having)",
+        "defensive_type": null,
+        "text": "When this model is killed, it is replaced with a Giant Leech and heals 4."
+      },
+      {
+        "id": 112,
+        "model_id": 47,
+        "name": "Regeneration",
+        "defensive_type": null,
+        "text": "When this model activates, it heals 1."
+      }
+    ],
+    "actions": [
+      {
+        "id": 125,
+        "model_id": 47,
+        "name": "Blood Magic",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "If the target has half its maximum health or less, this action deals +1 damage.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 188,
+            "action_id": 125,
+            "name": "Drink Blood",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this model heals an amount equal to the damage suffered by the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 189,
+            "action_id": 125,
+            "name": "Coordinated Attack",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Another friendly model may declare a (melee) action targeting the same model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 190,
+            "action_id": 125,
+            "name": "Forgetful",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target discards a random card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "model_id": 47,
+        "name": "Bloodletting",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within (r)3\" of the target are dealt 1 damage.",
+        "costs_and_restrictions": "This action may target allies.",
+        "triggers": [
+          {
+            "id": 191,
+            "action_id": 126,
+            "name": "Strip Defenses",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model may remove a token from the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 192,
+            "action_id": 126,
+            "name": "Paralyzed",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 127,
+        "model_id": 47,
+        "name": "Clew of Leeches",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Summon a Giant Leech in base contact with the target.",
+        "costs_and_restrictions": "Enemy only.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 33,
     "name": "LaCROIX RAIDER",
     "title": null,
@@ -3487,6 +4577,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -3614,6 +4707,9 @@
     "parse_status": "auto",
     "keywords": [
       "Big Hat"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Henchman",
@@ -3759,6 +4855,9 @@
     "keywords": [
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Minion"
@@ -3891,6 +4990,9 @@
     "parse_date": "2026-02-14T13:26:07.517711",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Effigy",
       "Unique",
@@ -3997,6 +5099,9 @@
     "parse_date": "2026-02-14T13:26:07.517096",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Construct",
       "Unique",
@@ -4142,6 +5247,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -4308,6 +5416,9 @@
     "keywords": [
       "Swampfiend"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Totem",
@@ -4461,6 +5572,154 @@
     ]
   },
   {
+    "id": 70,
+    "name": "MOON SHINOBI",
+    "title": null,
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "5",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 6,
+    "health": 6,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Moon_Shinobi_A.pdf",
+    "parse_date": "2026-02-14T14:21:26.933532",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion"
+    ],
+    "abilities": [
+      {
+        "id": 168,
+        "model_id": 70,
+        "name": "Expert Climber",
+        "defensive_type": null,
+        "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+      },
+      {
+        "id": 169,
+        "model_id": 70,
+        "name": "\u03a9 Feint",
+        "defensive_type": "unusual_defense",
+        "text": "After an enemy model fails a (magic) action targeting this model, deal 1 damage to the enemy."
+      },
+      {
+        "id": 170,
+        "model_id": 70,
+        "name": "Stealth",
+        "defensive_type": null,
+        "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+      }
+    ],
+    "actions": [
+      {
+        "id": 197,
+        "model_id": 70,
+        "name": "Crooked Crane",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "This action treats all (minus) as (plus). Target gains a Poison token.",
+        "triggers": [
+          {
+            "id": 297,
+            "action_id": 197,
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 298,
+            "action_id": 197,
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 198,
+        "model_id": 70,
+        "name": "Drunken Dash",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to 5\", ignoring models and terrain. Models moved through this way gain a Poison token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 299,
+            "action_id": 198,
+            "name": "Eyes Peeled",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "If this model is at elevation 2 or higher, it declares the Prepare action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 199,
+        "model_id": 70,
+        "name": "A Shot of Genius",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "Friendly only. Target gains either a Poison or an Insight token.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 11,
     "name": "McTavish",
     "title": null,
@@ -4484,6 +5743,9 @@
     "parse_status": "auto",
     "keywords": [
       "Swampfiend"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -4647,6 +5909,353 @@
     ]
   },
   {
+    "id": 72,
+    "name": "NIA",
+    "title": "LIFE OF THE PARTY",
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Nia_Life_of_the_Party.pdf",
+    "parse_date": "2026-02-14T14:22:20.733069",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 174,
+        "model_id": 72,
+        "name": "Beer Goggles",
+        "defensive_type": "unusual_defense",
+        "text": "Enemy attack actions that target this model suffer a (-) to their duel if the attacking model has a friendly Poison token."
+      },
+      {
+        "id": 175,
+        "model_id": 72,
+        "name": "Hard to Kill",
+        "defensive_type": "fortitude",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "id": 176,
+        "model_id": 72,
+        "name": "The Hangover",
+        "defensive_type": null,
+        "text": "When this model activates, it may replace itself with Nia, Fractured Future and heal 2."
+      }
+    ],
+    "actions": [
+      {
+        "id": 203,
+        "model_id": 72,
+        "name": "Bottle Opener",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "A model within 2\" of this model gains a Poison token.",
+        "triggers": [
+          {
+            "id": 305,
+            "action_id": 203,
+            "name": "Moonshine Mash",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Remove a friendly Poison token from the target. This action deals +2 damage.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "model_id": 72,
+        "name": "It's 5 O'clock Somewhere",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "If this model has a friendly Poison token, it may add any one suit to its duel total.",
+        "triggers": [
+          {
+            "id": 306,
+            "action_id": 204,
+            "name": "Divergent Path",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model may declare an action printed on its other title.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 307,
+            "action_id": 204,
+            "name": "Sloshed",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Distracted token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 308,
+            "action_id": 204,
+            "name": "Blue Blazer",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (X)2\" of the target are dealt 1 damage and gain a Burning token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 309,
+            "action_id": 204,
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 205,
+        "model_id": 72,
+        "name": "Raise a Glass",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "(aura)3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move any number of enemy models within range up to 3\" directly toward this model.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 310,
+            "action_id": 205,
+            "name": "Vanish",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Place this model within 4\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Nia",
+    "title": "Fractured Future",
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Nia_Fractured_Future.pdf",
+    "parse_date": "2026-02-14T14:21:53.731831",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 171,
+        "model_id": 71,
+        "name": "Avoid Doom",
+        "defensive_type": null,
+        "text": "When this model flips the black joker, it may drain a (t) to discard it without effect and flip a new card."
+      },
+      {
+        "id": 172,
+        "model_id": 71,
+        "name": "Happy Hour",
+        "defensive_type": null,
+        "text": "When this model activates, it may replace itself with Nia, Life of the Party and heal 2."
+      },
+      {
+        "id": 173,
+        "model_id": 71,
+        "name": "Hard to Kill",
+        "defensive_type": "unusual_defense",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      }
+    ],
+    "actions": [
+      {
+        "id": 200,
+        "model_id": 71,
+        "name": "Wrist Blade",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "m",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "If the target is in base contact with this model this attack receives a (+).",
+        "triggers": [
+          {
+            "id": 300,
+            "action_id": 200,
+            "name": "Divergent Path",
+            "suit": "(fortitude)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model may declare an action printed on its other title.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 301,
+            "action_id": 200,
+            "name": "Draw Out Secrets",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 302,
+            "action_id": 200,
+            "name": "Pop In",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Place this model anywhere within 3\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 303,
+            "action_id": 200,
+            "name": "Execute",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "The target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 201,
+        "model_id": 71,
+        "name": "Dead Shot",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)12\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "The target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+        "costs_and_restrictions": "This action may not target the same model more than once per activation.",
+        "triggers": [
+          {
+            "id": 304,
+            "action_id": 201,
+            "name": "Sloshed",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Distracted token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "model_id": 71,
+        "name": "Adrenaline Rush",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": null,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "This model declares a general action. If it has half of its maximum health or less, the generated action ignores engagement and \"once per\" restrictions.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 35,
     "name": "OLD CRANKY",
     "title": null,
@@ -4670,6 +6279,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -4798,6 +6410,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -4966,6 +6581,9 @@
     "parse_date": "2026-02-14T13:28:44.107969",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Kin",
       "Living",
@@ -5153,6 +6771,9 @@
     "keywords": [
       "Arms Race"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Kin",
       "Living",
@@ -5333,6 +6954,9 @@
     "keywords": [
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Totem",
@@ -5479,6 +7103,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -5642,6 +7269,187 @@
     ]
   },
   {
+    "id": 50,
+    "name": "PENELOPE",
+    "title": null,
+    "faction": "Neverborn",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 7,
+    "wp": 4,
+    "sz": 1,
+    "sp": 7,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Penelope.pdf",
+    "parse_date": "2026-02-14T14:12:06.794111",
+    "parse_status": "auto",
+    "keywords": [
+      "Sooey"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Beast",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 117,
+        "model_id": 50,
+        "name": "Nip at their Heels",
+        "defensive_type": null,
+        "text": "After this model resolves the Walk action, choose an unengaged ally within 6\" to move up to 2\" in any direction."
+      },
+      {
+        "id": 118,
+        "model_id": 50,
+        "name": "Resilient",
+        "defensive_type": "warding",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 134,
+        "model_id": 50,
+        "name": "Bite",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 203,
+            "action_id": 134,
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 204,
+            "action_id": 134,
+            "name": "Grab On",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Slow token. End this model's activation.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 205,
+            "action_id": 134,
+            "name": "Grease and Gristle",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Make an enemy Remains marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "model_id": 50,
+        "name": "Pointer Hound",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "m",
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Target gains an Adversary token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 206,
+            "action_id": 135,
+            "name": "Quick Reflexes",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Declare this action again, targeting a different model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 207,
+            "action_id": 135,
+            "name": "Mental Trauma",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target must either discard a card or be dealt 3 damage.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 136,
+        "model_id": 50,
+        "name": "Nudge 'Em On",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target is moved up to 3\". Then, the target gains a Glutted token.",
+        "costs_and_restrictions": "Friendly only.",
+        "triggers": []
+      },
+      {
+        "id": 137,
+        "model_id": 50,
+        "name": "Resupply",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": null,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+        "costs_and_restrictions": "Once per turn.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 51,
     "name": "PIGLET",
     "title": null,
@@ -5665,6 +7473,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -5792,6 +7603,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -5950,6 +7764,9 @@
     "keywords": [
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique",
@@ -6094,6 +7911,9 @@
     "parse_date": "2026-02-14T14:22:45.836330",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Henchman",
       "Living",
@@ -6239,6 +8059,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -6399,6 +8222,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -6576,6 +8402,9 @@
       "Jockey",
       "Tricksy"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Living",
@@ -6694,6 +8523,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -6838,6 +8670,178 @@
     ]
   },
   {
+    "id": 74,
+    "name": "SH\u014cJ\u014c",
+    "title": null,
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 8,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Shojo.pdf",
+    "parse_date": "2026-02-14T14:23:11.677446",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Elemental",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 180,
+        "model_id": 74,
+        "name": "Incorporeal",
+        "defensive_type": "unusual_defense",
+        "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+      },
+      {
+        "id": 181,
+        "model_id": 74,
+        "name": "Inebriation",
+        "defensive_type": null,
+        "text": "Enemy models with a friendly Poison token within 6\" that declare a non-Walk action must pass a TN 10 Wp duel or the action fails."
+      }
+    ],
+    "actions": [
+      {
+        "id": 209,
+        "model_id": 74,
+        "name": "Spirit Slap",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "This action treats all (r) as (t).",
+        "triggers": [
+          {
+            "id": 314,
+            "action_id": 209,
+            "name": "Tips on the Table",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target must discard a card. If it does not, this model draws a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 315,
+            "action_id": 209,
+            "name": "Drink Up",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 316,
+            "action_id": 209,
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 210,
+        "model_id": 74,
+        "name": "Lure",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": 12,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move the target its Sp toward this model.",
+        "costs_and_restrictions": "This action may target friendly models.",
+        "triggers": [
+          {
+            "id": 317,
+            "action_id": 210,
+            "name": "Love Hurts",
+            "suit": "(t)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals 1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 318,
+            "action_id": 210,
+            "name": "Drink Up",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 211,
+        "model_id": 74,
+        "name": "False Claim",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Make two Scheme markers within range.",
+        "costs_and_restrictions": "This action cannot be declared while engaged.",
+        "triggers": [
+          {
+            "id": 319,
+            "action_id": 211,
+            "name": "Drinking Problem",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Another ally within 1\" of one of the made markers may declare an action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 52,
     "name": "SLOP HAULER",
     "title": null,
@@ -6861,6 +8865,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -6989,6 +8996,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -7121,6 +9131,9 @@
     "parse_date": "2026-02-14T13:26:07.518357",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Minion (3)",
@@ -7230,6 +9243,9 @@
     "parse_status": "auto",
     "keywords": [
       "Big Hat"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -7358,6 +9374,9 @@
     "parse_status": "auto",
     "keywords": [
       "Big Hat"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -7514,6 +9533,9 @@
     "parse_status": "auto",
     "keywords": [
       "Big Hat"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -7681,6 +9703,9 @@
     "parse_date": "2026-02-14T13:26:07.514601",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Unique",
@@ -7857,6 +9882,9 @@
     "keywords": [
       "Big Hat"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Totem",
@@ -8006,6 +10034,9 @@
       "Jockey",
       "Kin"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Unique",
@@ -8150,6 +10181,9 @@
     "parse_date": "2026-02-14T13:26:07.515272",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Peon (6)",
@@ -8252,6 +10286,9 @@
     "keywords": [
       "Jockey",
       "Swampfiend"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -8398,6 +10435,9 @@
     "keywords": [
       "Kin",
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -8546,6 +10586,9 @@
     "keywords": [
       "Wizz-Bang"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Minion"
@@ -8647,6 +10690,168 @@
     ]
   },
   {
+    "id": 75,
+    "name": "TANUKI",
+    "title": null,
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 6,
+    "health": 8,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Tanuki_A.pdf",
+    "parse_date": "2026-02-14T14:23:37.881157",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion"
+    ],
+    "abilities": [
+      {
+        "id": 182,
+        "model_id": 75,
+        "name": "Beer Goggles",
+        "defensive_type": "unusual_defense",
+        "text": "Enemy attack actions that target this model suffer a (-) to their duel if the attacking model has a friendly Poison token."
+      },
+      {
+        "id": 183,
+        "model_id": 75,
+        "name": "Not-So-Secret Sake",
+        "defensive_type": null,
+        "text": "Friendly Scheme markers within 6\" gain the hazardous (Poison) terrain trait."
+      }
+    ],
+    "actions": [
+      {
+        "id": 212,
+        "model_id": 75,
+        "name": "Jug Swing",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "If the target is within 6\" of a friendly Scheme marker, this action receives a (+).",
+        "triggers": [
+          {
+            "id": 320,
+            "action_id": 212,
+            "name": "\"I'm a Teapot!\"",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Place this model anywhere within 6\" in base contact with terrain.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 321,
+            "action_id": 212,
+            "name": "Drink Up",
+            "suit": "(m)(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 213,
+        "model_id": 75,
+        "name": "Laughing Footfalls",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)6\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "This model chooses either toward or away. Move the target up to 5\" in the chosen direction from this model.",
+        "triggers": [
+          {
+            "id": 322,
+            "action_id": 213,
+            "name": "\"I'm a Teapot!\"",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Place this model anywhere within 6\" in base contact with terrain.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 323,
+            "action_id": 213,
+            "name": "Liquid Illusion",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Enemy only. Once per activation. Make a Scheme marker anywhere in the area between this model and the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 214,
+        "model_id": 75,
+        "name": "Lifting Spirits",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "Ally only. Target heals 2. If this action receives a raise, the target may remove a token.",
+        "triggers": [
+          {
+            "id": 324,
+            "action_id": 214,
+            "name": "Sudden Inspiration",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Insight token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 54,
     "name": "THE SOW",
     "title": null,
@@ -8670,6 +10875,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -8832,6 +11040,9 @@
     "parse_date": "2026-02-14T13:26:07.506019",
     "parse_status": "auto",
     "keywords": [],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Living",
       "Versatile"
@@ -8965,6 +11176,364 @@
     ]
   },
   {
+    "id": 76,
+    "name": "The Brewmaster",
+    "title": "Moonshiner",
+    "faction": "Ten Thunders",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 5,
+    "sz": 2,
+    "sp": 7,
+    "health": 14,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": "Flow Like Moonshine",
+    "totem": "Cooper Jones",
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_The_Brewmaster_Moonshiner.pdf",
+    "parse_date": "2026-02-14T14:24:06.697993",
+    "parse_status": "auto",
+    "keywords": [],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Tri-Chi",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 184,
+        "model_id": 76,
+        "name": "Beer Goggles",
+        "defensive_type": "unusual_defense",
+        "text": "Enemy attack actions that target this model suffer a (-) to their duel if the attacking model has a friendly Poison token."
+      },
+      {
+        "id": 185,
+        "model_id": 76,
+        "name": "Extended Reach",
+        "defensive_type": null,
+        "text": "Enemy models within 2\" cannot take attack actions generated by the Charge action."
+      },
+      {
+        "id": 186,
+        "model_id": 76,
+        "name": "Pass the Jug",
+        "defensive_type": null,
+        "text": "The area within 2\" of this model is hazardous (Poison) terrain. Friendly models may choose to be unaffected by this terrain."
+      }
+    ],
+    "actions": [
+      {
+        "id": 215,
+        "model_id": 76,
+        "name": "Shiner's Staff",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "This action receives a (-) if the target is not engaged with this model.",
+        "triggers": [
+          {
+            "id": 325,
+            "action_id": 215,
+            "name": "Bar Room Brawl",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 5\", ignoring models. Models moved through this way gain a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 326,
+            "action_id": 215,
+            "name": "Feinting Strike",
+            "suit": "(m)",
+            "timing": "after_failing",
+            "text": "After failing, declare this action again, targeting a different model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 327,
+            "action_id": 215,
+            "name": "Drunken Confusion",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (aura)2\" of this model gain a Distracted token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 216,
+        "model_id": 76,
+        "name": "Open the Gourd",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains an Aura (Poison) token.",
+        "costs_and_restrictions": "Once per activation. Ally only.",
+        "triggers": [
+          {
+            "id": 328,
+            "action_id": 216,
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 329,
+            "action_id": 216,
+            "name": "Healing Brew",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target heals 2 and gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 217,
+        "model_id": 76,
+        "name": "Drunken Dash",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": null,
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to 5\", ignoring models and terrain. Models moved through this way gain a Poison token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 330,
+            "action_id": 217,
+            "name": "Sudden Strike",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model may declare a (melee) action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "The Brewmaster",
+    "title": "Proof-Prophet",
+    "faction": "Ten Thunders",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 6,
+    "sz": 2,
+    "sp": 6,
+    "health": 14,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": "Apprentice Wesley",
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_The_Brewmaster_Proof-Prophet.pdf",
+    "parse_date": "2026-02-14T14:24:37.902045",
+    "parse_status": "auto",
+    "keywords": [],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Tri-Chi",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 187,
+        "model_id": 77,
+        "name": "Devoted to the Brew",
+        "defensive_type": null,
+        "text": ""
+      },
+      {
+        "id": 188,
+        "model_id": 77,
+        "name": "Brotherhood of the Brew",
+        "defensive_type": null,
+        "text": "After this model is dealt damage, it may drain a (t). If it does so, place this model in base contact with an ally within 6\"."
+      },
+      {
+        "id": 189,
+        "model_id": 77,
+        "name": "Drunken Epiphany",
+        "defensive_type": null,
+        "text": "When this crew abandons a scheme, this model may search for and draw the red joker."
+      }
+    ],
+    "actions": [
+      {
+        "id": 218,
+        "model_id": 77,
+        "name": "Bathtub Hooch",
+        "category": "attack_actions",
+        "action_type": "variable",
+        "range": "*",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "This model may remove a token from the target. The target gains a Poison token.",
+        "costs_and_restrictions": "When this action is declared, choose if it has a range of \"1\" or +8\".",
+        "triggers": [
+          {
+            "id": 331,
+            "action_id": 218,
+            "name": "Sloshed",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Distracted token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 332,
+            "action_id": 218,
+            "name": "Moonshine Mash",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Remove a friendly Poison token from the target. This action deals +2 damage.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 219,
+        "model_id": 77,
+        "name": "Last Call",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": 12,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 4\". If the target has a friendly Poison token, increase the distance moved by +2\".",
+        "costs_and_restrictions": "This action may target friendly models.",
+        "triggers": [
+          {
+            "id": 333,
+            "action_id": 219,
+            "name": "Drink Up",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 334,
+            "action_id": 219,
+            "name": "A Small Favor",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target must have a friendly Poison token. Once per activation. Target declares an action chosen and controlled by this model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 220,
+        "model_id": 77,
+        "name": "Drunken Clarity",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Remove a friendly Poison token from the target. Target gains an Insight token and declares the Interact action, controlled by this model.",
+        "costs_and_restrictions": "Target a model with a friendly Poison token.",
+        "triggers": [
+          {
+            "id": 335,
+            "action_id": 220,
+            "name": "\"You're Drunk, Go Home\"",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "This action must have received a raise. Target places itself anywhere in its deployment zone.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 336,
+            "action_id": 220,
+            "name": "Quick Reflexes",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Declare this action again, targeting a different model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 28,
     "name": "Toast",
     "title": null,
@@ -8989,6 +11558,9 @@
     "keywords": [
       "Infamous",
       "Jockey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -9128,6 +11700,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -9316,6 +11891,9 @@
     "keywords": [
       "Swampfiend"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Effigy",
       "Totem",
@@ -9500,6 +12078,9 @@
     "keywords": [
       "Sooey"
     ],
+    "factions": [
+      "Bayou"
+    ],
     "characteristics": [
       "Beast",
       "Minion (2)"
@@ -9621,6 +12202,802 @@
     ]
   },
   {
+    "id": 79,
+    "name": "WHISKEY GOLEM",
+    "title": null,
+    "faction": "Outcasts",
+    "station": null,
+    "model_limit": 1,
+    "cost": "10",
+    "df": 6,
+    "wp": 6,
+    "sz": 4,
+    "sp": 6,
+    "health": 13,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Whiskey_Golem.pdf",
+    "parse_date": "2026-02-14T14:25:27.162588",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Construct",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 192,
+        "model_id": 79,
+        "name": "Armor",
+        "defensive_type": "unusual_defense",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "id": 193,
+        "model_id": 79,
+        "name": "Whiskey Burn",
+        "defensive_type": null,
+        "text": "After this model suffers damage from an enemy model, enemy models in base contact with this model are dealt 1 damage."
+      }
+    ],
+    "actions": [
+      {
+        "id": 224,
+        "model_id": 79,
+        "name": "Huge Fist",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 338,
+            "action_id": 224,
+            "name": "Frantic Attack",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model deals 1 irreducible damage to itself. Declare this action again.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 339,
+            "action_id": 224,
+            "name": "Moonshine Mash",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "Remove a friendly Poison token from the target. This action deals +2 damage.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 225,
+        "model_id": 79,
+        "name": "High Pressure Dispenser",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": "t",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "This attack has a raise value of 3. For every raise this attack receives, move the target up to 3\" directly away from this model.",
+        "triggers": [
+          {
+            "id": 340,
+            "action_id": 225,
+            "name": "A Hint of Root Beer",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Allies within (aura)3\" of the target heal 1 and gain an Insight token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 341,
+            "action_id": 225,
+            "name": "Sloshed",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Distracted token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 342,
+            "action_id": 225,
+            "name": "Drink Up",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 226,
+        "model_id": 79,
+        "name": "Hulking Leap",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range. Then, enemy models within (aura)1\" must pass a TN 13 Sp duel or be dealt 1 damage.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "WONG",
+    "title": "THE ENCHANTER",
+    "faction": "Ten Thunders",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 6,
+    "sz": 1,
+    "sp": 6,
+    "health": 14,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 1,
+    "crew_card_name": null,
+    "totem": "Flying Piglet (3)",
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Stat_Wizz-Bang_Wong_The_Enchanter.pdf",
+    "parse_date": "2026-02-14T14:29:59.625433",
+    "parse_status": "auto",
+    "keywords": [
+      "Wizz-Bang"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 216,
+        "model_id": 88,
+        "name": "Wise Words of Wisdom",
+        "defensive_type": null,
+        "text": "Cursed Warnings: Reduce the value of (c) cards by 2 that are flipped (not cheated) by enemies within 8\" with a Glowy token.\n\nIllusions: Attack actions of enemy models within 8\" without a TN gain a TN of 12.\n\nThe Card Is In Your Pocket: At the start and end of this model's activation, it may look at the top card of the opponent's deck and may discard it."
+      },
+      {
+        "id": 217,
+        "model_id": 88,
+        "name": "Flying Piglet (3)",
+        "defensive_type": null,
+        "text": ""
+      }
+    ],
+    "actions": [
+      {
+        "id": 250,
+        "model_id": 88,
+        "name": "Sparkle Bomb",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 7,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "The target gains a Glowy token. For each raise this action receives, this model may have another model within range gain a Glowy token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 372,
+            "action_id": 250,
+            "name": "Glitter Lungs",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Deal 1 damage to each model that gained a Glowy token from this action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 373,
+            "action_id": 250,
+            "name": "Overwhelmed",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Entranced token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 251,
+        "model_id": 88,
+        "name": "\"The Glow is Healthy!\"",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Remove up to three Glowy tokens from models within 8\" of the target. The target heals 2, +1 for each Glowy token removed. If this action receives a raise, place the target within 6\" of its current location.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 374,
+            "action_id": 251,
+            "name": "\"Fuuuuture!\"",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Insight token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 375,
+            "action_id": 251,
+            "name": "Set Charge",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Make a Pyrotechnic marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 252,
+        "model_id": 88,
+        "name": "Chain Fuse",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Make a Scheme marker within range. Models within (r)2\" of the made marker must pass a TN 13 Sp duel or be dealt 2 damage and gain a Glowy token. Then, if this action did not receive a raise, remove the marker.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 376,
+            "action_id": 252,
+            "name": "Extra Boom Powder",
+            "suit": "(t)",
+            "timing": "when_resolving",
+            "text": "Once per activation. When resolving, increase the TN by 2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "WONG",
+    "title": "THE WONDERFUL",
+    "faction": "Ten Thunders",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 6,
+    "sz": 1,
+    "sp": 6,
+    "health": 14,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 1,
+    "crew_card_name": "Fireworks Show",
+    "totem": "Olivia Bernard",
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Wizz-Bang\\M4E_Stat_Wizz-Bang_Wong_The_Wonderful.pdf",
+    "parse_date": "2026-02-14T14:30:32.903600",
+    "parse_status": "auto",
+    "keywords": [
+      "Wizz-Bang"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 218,
+        "model_id": 89,
+        "name": "Exit Stage",
+        "defensive_type": "fortitude",
+        "text": "After this model suffers damage caused by an enemy model, it may drain a (soulstone) to make a Pyrotechnic marker within 1\", then place within 6\"."
+      },
+      {
+        "id": 219,
+        "model_id": 89,
+        "name": "Nothing Up My Sleeve",
+        "defensive_type": null,
+        "text": "At the start and end of this model's activation, it may look at the top card of its deck and may discard it."
+      },
+      {
+        "id": 220,
+        "model_id": 89,
+        "name": "Three Demon Bag",
+        "defensive_type": null,
+        "text": "When a non-peon enemy is killed within 3\", infuse a (soulstone)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 253,
+        "model_id": 89,
+        "name": "Iron Fan of Tsu Li",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "The target gains a Glowy token. Move the target up to 2\" for each raise this action receives.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 377,
+            "action_id": 253,
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 254,
+        "model_id": 89,
+        "name": "Finale",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)10\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "This attack deals +1 damage for each Glowy token removed. If this action receives a raise, place the target within 6\" of its current location.",
+        "costs_and_restrictions": "Remove up to three Glowy tokens from models within 6\" of the target.",
+        "triggers": [
+          {
+            "id": 378,
+            "action_id": 254,
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 379,
+            "action_id": 254,
+            "name": "Overwhelmed",
+            "suit": null,
+            "timing": "after_succeeding",
+            "text": "Target gains an Entranced token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 255,
+        "model_id": 89,
+        "name": "Fzzzzap!",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "10\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 4,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Make a Pyrotechnic marker in range, then resolve its end of turn effects using a suit in this action's final duel total. Then, if this action did not receive a raise, remove the marker.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 380,
+            "action_id": 255,
+            "name": "Well-Prepared",
+            "suit": null,
+            "timing": "after_succeeding",
+            "text": "Immediately add one suit of this model's choice to its duel total.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 256,
+        "model_id": 89,
+        "name": "\"Clear the Stage!\"",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "10\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 4,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Allies within (a)2\" of the target may move up to 3\".",
+        "costs_and_restrictions": "Target friendly model.",
+        "triggers": [
+          {
+            "id": 381,
+            "action_id": 256,
+            "name": "\"Just. Hold. Still.\"",
+            "suit": null,
+            "timing": "after_succeeding",
+            "text": "Once per activation. The target gains a Glowy token and draws two cards.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 382,
+            "action_id": 256,
+            "name": "\"Fuuuuture!\"",
+            "suit": null,
+            "timing": "after_succeeding",
+            "text": "Target gains an Insight token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Waldgeist",
+    "title": null,
+    "faction": "Neverborn",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 7,
+    "health": 8,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Waldegeist_A.pdf",
+    "parse_date": "2026-02-14T14:18:14.918107",
+    "parse_status": "auto",
+    "keywords": [
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "id": 149,
+        "model_id": 63,
+        "name": "Armor",
+        "defensive_type": null,
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "id": 150,
+        "model_id": 63,
+        "name": "Unimpeded",
+        "defensive_type": null,
+        "text": "This model is unaffected by severe and hazardous terrain."
+      }
+    ],
+    "actions": [
+      {
+        "id": 175,
+        "model_id": 63,
+        "name": "Tangling Roots",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "While this model is in severe terrain, increase this action's Rg by +3\".",
+        "triggers": [
+          {
+            "id": 265,
+            "action_id": 175,
+            "name": "Heave",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Place the target anywhere within 3\" of this model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 266,
+            "action_id": 175,
+            "name": "Hexed Gambit",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target must have a Stunned token. This model may discard and draw a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 267,
+            "action_id": 175,
+            "name": "Choking Hollow",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Bog marker in base contact with this model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 268,
+            "action_id": 175,
+            "name": "Pick the Bones",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "After killing, this model may declare the Interact action after resolving the current action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 176,
+        "model_id": 63,
+        "name": "The Woods Have Eyes",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Target gains Stunned and Poison tokens.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 269,
+            "action_id": 176,
+            "name": "Foot in the Bog",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Bog marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 270,
+            "action_id": 176,
+            "name": "Premonition",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Look at the top card of your face deck. This model may discard it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Whiskey Gamin",
+    "title": null,
+    "faction": "Ten Thunders",
+    "station": null,
+    "model_limit": 1,
+    "cost": "3",
+    "df": 4,
+    "wp": 4,
+    "sz": 1,
+    "sp": 6,
+    "health": 4,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tri-Chi\\M4E_Stat_Tri-Chi_Whiskey_Gamin_A.pdf",
+    "parse_date": "2026-02-14T14:25:01.161982",
+    "parse_status": "auto",
+    "keywords": [
+      "Tri-Chi"
+    ],
+    "factions": [
+      "Bayou",
+      "Ten Thunders"
+    ],
+    "characteristics": [
+      "Construct",
+      "Minion"
+    ],
+    "abilities": [
+      {
+        "id": 190,
+        "model_id": 78,
+        "name": "Armor",
+        "defensive_type": null,
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "id": 191,
+        "model_id": 78,
+        "name": "Driving While a Drink",
+        "defensive_type": null,
+        "text": "While this model has a friendly Poison token, it receives +2 Sp, but suffers -1 Df and Wp."
+      }
+    ],
+    "actions": [
+      {
+        "id": 221,
+        "model_id": 78,
+        "name": "Moonshine Dispenser",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)8\"",
+        "skill_value": 4,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "If this attack receives a raise, move the target up to 3\" directly away from this model.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 337,
+            "action_id": 221,
+            "name": "Drink Up",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Poison token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 222,
+        "model_id": 78,
+        "name": "Froth Over",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 7,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Make a Remains marker within range. Enemy models within (Y)2\" of the made marker must pass a TN 12 Df duel or gain Distracted and Poison tokens. Allies within (Y)2\" of the made marker may gain a Poison token. Then, remove the marker.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      },
+      {
+        "id": 223,
+        "model_id": 78,
+        "name": "A Shot of Genius",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains either a Poison or an Insight token.",
+        "costs_and_restrictions": "Friendly only.",
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 57,
     "name": "Wild Boar",
     "title": null,
@@ -9644,6 +13021,9 @@
     "parse_status": "auto",
     "keywords": [
       "Sooey"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Beast",
@@ -9749,6 +13129,154 @@
     ]
   },
   {
+    "id": 64,
+    "name": "Will o' the Wisp",
+    "title": null,
+    "faction": "Neverborn",
+    "station": null,
+    "model_limit": 1,
+    "cost": "4",
+    "df": 5,
+    "wp": 4,
+    "sz": 2,
+    "sp": 5,
+    "health": 5,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 1,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Stat_Swampfiend_Will_O_the_Wisp_A.pdf",
+    "parse_date": "2026-02-14T14:18:39.357468",
+    "parse_status": "auto",
+    "keywords": [
+      "Swampfiend"
+    ],
+    "factions": [
+      "Bayou",
+      "Neverborn"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion"
+    ],
+    "abilities": [
+      {
+        "id": 151,
+        "model_id": 64,
+        "name": "Bloody Transformation",
+        "defensive_type": null,
+        "text": "After an enemy model within 3\" of this model is killed, this model may drain a (soulstone) to replace with an Adze and heal 3."
+      },
+      {
+        "id": 152,
+        "model_id": 64,
+        "name": "Flight",
+        "defensive_type": null,
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "id": 153,
+        "model_id": 64,
+        "name": "Shimmering Lights",
+        "defensive_type": null,
+        "text": "When performing opposed duels with enemy models with a Stunned token, this model receives a (+)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 177,
+        "model_id": 64,
+        "name": "Poisonous Glow",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 4,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Poison token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 271,
+            "action_id": 177,
+            "name": "Hexed Gambit",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target must have a Stunned token. This model may discard and draw a card.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 272,
+            "action_id": 177,
+            "name": "Gang Up",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage for each other ally the target is engaged with, to a maximum of +2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 178,
+        "model_id": 64,
+        "name": "Lured Into a Bog",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to its Sp toward a piece of terrain in its LoS.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 273,
+            "action_id": 178,
+            "name": "Foot in the Bog",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Make a Bog marker in base contact with the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 179,
+        "model_id": 64,
+        "name": "Unnatural Speed",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 7,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 41,
     "name": "YOUNG LaCROIX",
     "title": null,
@@ -9772,6 +13300,9 @@
     "parse_status": "auto",
     "keywords": [
       "Kin"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -9907,6 +13438,9 @@
     "parse_status": "auto",
     "keywords": [
       "Swampfiend"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",
@@ -10082,6 +13616,9 @@
     "parse_status": "auto",
     "keywords": [
       "Swampfiend"
+    ],
+    "factions": [
+      "Bayou"
     ],
     "characteristics": [
       "Living",

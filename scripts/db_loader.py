@@ -58,6 +58,7 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         # Delete existing data for clean replace
         c.execute("DELETE FROM model_keywords WHERE model_id=?", (model_id,))
         c.execute("DELETE FROM model_characteristics WHERE model_id=?", (model_id,))
+        c.execute("DELETE FROM model_factions WHERE model_id=?", (model_id,))
         # Cascading deletes handle abilities, actions, triggers
         c.execute("DELETE FROM abilities WHERE model_id=?", (model_id,))
         # Get action IDs for trigger cleanup
@@ -103,6 +104,11 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
     # Characteristics
     for ch in card.get("characteristics", []):
         c.execute("INSERT OR IGNORE INTO model_characteristics VALUES (?,?)", (model_id, ch))
+    
+    # Factions (junction table for dual-faction models)
+    factions = card.get("factions", [card.get("faction", "Unknown")])
+    for fac in factions:
+        c.execute("INSERT OR IGNORE INTO model_factions VALUES (?,?)", (model_id, fac))
     
     # Abilities
     for ab in card.get("abilities", []):

@@ -162,7 +162,7 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
         if not card.get("crew_card_name"):
             result.soft_flags.append("Master missing crew_card_name (populated post-processing)")
         if not card.get("totem"):
-            result.hard_violations.append("Master missing totem")
+            result.soft_flags.append("Master missing totem (populated post-processing)")
     
     # ============================================================
     # SOFT RULES â€” Flag for review

@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Ella Mae Chesterfield",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "Bandit",
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Sturdy Saddlebags",
+      "defensive_type": null,
+      "text": "Once per turn. Before this model moves, it may remove a marker within 2\". If it does, after resolving the move, it may make a Scheme marker within 1\"."
+    },
+    {
+      "name": "Trick Shot",
+      "defensive_type": null,
+      "text": "Once per activation. After this model resolves an attack action targeting an enemy which received at least one raise, this model draws a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Metal Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "A' Clatter",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 2\". If the target has a Staggered token, move the target +2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quick Shot",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare a (gun) action, even if engaged.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Collateral Damage",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a marker or a destructible terrain piece within 2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Chesterfield 1879",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Bloody Legacy",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Staggered token, then this model and allies within (aura)2\" gain an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drop It!",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Ride With Me",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may target another friendly model of lower Sz.",
+      "effects": "Move this model up to 5\". Then, if this action targeted another friendly model, place the friendly model into base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Ella_Mae_Chesterfield.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "card_type": "stat_card",
+  "name": "KARINA",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 4,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Obliteration"
+  ],
+  "abilities": [
+    {
+      "name": "Last Gasp",
+      "defensive_type": null,
+      "text": "After an ally within 8\" is killed, this model may discard a card. If it does so, enemies within (X)1\" of the killed model are dealt 2 damage."
+    },
+    {
+      "name": "Manipulative",
+      "defensive_type": "unusual_defense",
+      "text": "If this model has not yet activated this turn, enemy models may not cheat fate in opposed duels with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Arcane Shot",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Bashed with a Rock",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "Once per activation. Target must be within 1\" of this model. When resolving, this action deals +3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Catch a Glimpse",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Look at the top two cards of your fate deck, then place them back in the same order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Stutter Time",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "r",
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains a Backtrack token. If this action receives a raise, place the target anywhere within 2\" of its current location.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Timewarp",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Reveal the top three cards of this model's fate deck. Draw one of the revealed cards. Shuffle this model's fate deck and discard pile, then place the remaining revealed cards on top of this model's fate deck in any order.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Obliteration\\M4E_Stat_Obliteration_Karina.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The (X) in Last Gasp ability text appears to be a variable value indicator, preserved as written"
+  ],
+  "factions": [
+    "Outcasts"
+  ]
+}

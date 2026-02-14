@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "Hamelin",
+  "title": "The Piper",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Eyes in the Walls",
+  "totem": "Benny Wolcomb",
+  "characteristics": [
+    "Master",
+    "Unique"
+  ],
+  "keywords": [
+    "Plague"
+  ],
+  "abilities": [
+    {
+      "name": "Follow My Tune",
+      "defensive_type": null,
+      "text": "When this model activates, any number of friendly Malifaux Rats in play may declare the Walk action."
+    },
+    {
+      "name": "Nihilism",
+      "defensive_type": null,
+      "text": "When this model would gain a token, it may discard a card instead."
+    },
+    {
+      "name": "\"Protect Me, Lovelies\"",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is dealt damage, it may drain a (soulstone) to reduce the damage by an amount equal to the number of friendly Malifaux Rats within 6\" (maximum 4)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Haunting Pipes",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 14,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation. This action may target friendly models.",
+      "effects": "Target declares an action chosen and controlled by this model. If this action receives a raise, the target gains an Aura (Hazardous) token.",
+      "triggers": [
+        {
+          "name": "Taint",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Blight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "A Dance of Tiny Feet",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": "For each raise this attack receives, summon a Malifaux Rat into base contact with the target.",
+      "triggers": [
+        {
+          "name": "Gnawed Ankle",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Kill a friendly vermin model within 3\" of the target. Move the target 6\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fever Bloom",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a Blight token from the target. The target is dealt 1 damage and gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "A Song for the Sewers",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Summon a Malifaux Rat within range. For each raise this action receives, summon one additional Malifaux Rat within range.",
+      "triggers": [
+        {
+          "name": "Scamper",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The summoned models declare the Walk action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Piper's Dance",
+      "range": "(aura)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Friendly models within range move up to 3\".",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Stat_Plague_Hamelin_The_Piper.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

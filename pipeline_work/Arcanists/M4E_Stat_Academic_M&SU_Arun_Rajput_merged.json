@@ -1,0 +1,151 @@
+{
+  "card_type": "stat_card",
+  "name": "Arun Rajput",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Academic"
+  ],
+  "keywords": [
+    "M&SU"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": null,
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "\"I Didn't Hear a Bell\"",
+      "defensive_type": null,
+      "text": "Once per activation. After an attack targeting this model is resolved, this model may drain a (soulstone) to heal 2 and deal 2 damage to the attacker."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fist of Unmaking",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "resist": "X",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model chooses whether this action is resisted by Df, Wp, or Sp.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Buffeted by Wind",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drain Magic",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Inside Fighting",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. This action cannot target the same model more than once per activation. Target declares an attack action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Good Fundamentals",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target declares the Prepare action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tag Team",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with the target. Then, this model may declare a (melee) action against a model engaging the target, which receives a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "I've Got Your Back!",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Engaged ally only. Target is placed in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Academic_M&SU_Arun_Rajput.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Fist of Unmaking has 'X' as resist value, which is unusual but correct per card text stating the model chooses Df, Wp, or Sp"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

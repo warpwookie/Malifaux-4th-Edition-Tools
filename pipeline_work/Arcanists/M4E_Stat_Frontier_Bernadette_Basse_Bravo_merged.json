@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "Bernadette Basse",
+  "title": "Bravo",
+  "faction": "Explorer's Society",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Frontier"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Seek Advantage",
+      "defensive_type": null,
+      "text": "Enemy models with Staggered tokens cannot cheat in opposed duels with this model."
+    },
+    {
+      "name": "Warrants",
+      "defensive_type": null,
+      "text": "After an enemy model within 10\" declares the Interact action or successfully attacks a friendly model, that enemy gains a Bounty token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Small-Gauge Revolver",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)10\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Stagger",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Spread Your Name",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Bounty token.",
+      "triggers": [
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Biting Jaws",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Summon a Clockwork Trap into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Rope, Ho!\"",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model must be on terrain of Ht 2 or greater.",
+      "effects": "Target ally is placed into base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Gifted Deck",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top three cards of your deck, draw up to two of these cards with a value of 5 or less, then put any remaining cards back in any order.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Frontier\\M4E_Stat_Frontier_Bernadette_Basse_Bravo.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

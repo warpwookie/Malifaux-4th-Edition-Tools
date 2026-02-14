@@ -1,0 +1,57 @@
+{
+  "card_type": "crew_card",
+  "name": "Coordinated Effort",
+  "associated_master": "Viktoria Chambers",
+  "associated_title": "Twin Blades",
+  "faction": "Mercenary",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Mercenary models",
+      "abilities": [
+        {
+          "name": "Battle Tempo",
+          "defensive_type": null,
+          "text": "When this model activates, it may drain a (soulstone) to move up to 5\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Mercenary models",
+      "actions": [
+        {
+          "name": "Combat Maneuver",
+          "category": "attack_actions",
+          "action_type": "melee",
+          "range": "1\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": 12,
+          "damage": "-",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "This action may target allies. This model may drain a (soulstone) to treat this action as a (+) action.",
+          "effects": "Place the target anywhere within 6\" of this model.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Mercenary_Viktoria_Chambers_Twin_Blades_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 406,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Crew_Mercenary_Viktoria_Chambers_Twin_Blades.pdf",
+  "factions": [
+    "Mercenary",
+    "Outcasts"
+  ]
+}

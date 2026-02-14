@@ -1,0 +1,148 @@
+{
+  "card_type": "stat_card",
+  "name": "Taelor",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, increase the distance this model moves by up to +2\"."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (unusual_defense) abilities of other models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Relic Hammer",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may not be controlled by an enemy model. If the target is a master, this action receives a (fortitude).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Welcome to Malifaux",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must have the Insignificant ability or a Summon token. Kill the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bring It!",
+      "range": "12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target moves its Sp toward this model. Then, the target must declare a (melee) action targeting this model, if able. This (melee) action cannot declare triggers or generate raises.",
+      "triggers": [
+        {
+          "name": "Anticipation",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Fast token and an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sudden Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Unnatural Vigor",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Taelor.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Ruthless ability mentions ignoring abilities with a defensive icon - rendered as (unusual_defense) placeholder since specific icon unclear",
+    "Bring It! has resist Wp shown in stat line but as tactical action should have resist: null - parsed as null per tactical action rules"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Outcasts"
+  ]
+}

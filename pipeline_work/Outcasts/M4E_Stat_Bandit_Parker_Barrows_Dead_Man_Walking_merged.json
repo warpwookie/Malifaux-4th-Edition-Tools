@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "Parker Barrows",
+  "title": "Dead Man Walking",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Shadow of the Noose",
+  "totem": "Ashen Echo",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Bandit"
+  ],
+  "abilities": [
+    {
+      "name": "Ashen Spoils",
+      "defensive_type": null,
+      "text": "Once per activation. When an enemy model within 6\" discards one or more cards, this model may draw a card."
+    },
+    {
+      "name": "Demise (Perdition)",
+      "defensive_type": null,
+      "text": "Once per game. When this model is killed by an enemy model, it may drain a (soulstone) to heal 4 and place in base contact with that enemy. Then, deal 2 damage to that enemy model."
+    },
+    {
+      "name": "\"You Can Run...\"",
+      "defensive_type": null,
+      "text": "When this model declares an action, if the target has a Staggered token, the action receives +1 Skl."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ashen Rifle",
+      "action_type": "missile",
+      "range": "(gun)14\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action was empowered, it may add any suit to its duel total.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Guns Blazing",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Gain an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blaze",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Burn Them All",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Drain up to two (fortitude). Deal +1 damage for each (fortitude) drained.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Chaos in the Badlands",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a marker.",
+      "effects": "Enemy models within (aura)1\" of the target gain a Staggered token.",
+      "triggers": [
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Stare Down",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Target an enemy. Place a card from your control hand face down.",
+      "effects": "Starting with the card this model placed as a cost, this model and the target take turns placing cards face down in front of them until one of them chooses not to. Then flip all cards face up and add their values. The model with the highest total wins, moves up to 6\", and infuses a (fortitude) (this model wins ties). The losing model is dealt 2 damage. All cards played this way are discarded.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Parker_Barrows_Dead_Man_Walking.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "SILENT ONE",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "December"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ice Blast",
+      "action_type": "magic",
+      "range": "(magic)14\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, the target gains a Staggered token.",
+      "triggers": [
+        {
+          "name": "Stumble",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Ice Pillars",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make an Ice Pillar marker anywhere within range.",
+      "triggers": [
+        {
+          "name": "Mummified in Ice",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker within 1\" of the Ice Pillar marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Healing Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "Fortify",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Stat_December_Silent_One_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 10 appears below the character artwork, meaning unclear in this context",
+    "Model limit is 2, parsed from 'Minion (2)' characteristic"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

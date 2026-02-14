@@ -1,0 +1,171 @@
+{
+  "card_type": "stat_card",
+  "name": "Dorian Crowe",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 5,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique"
+  ],
+  "keywords": [
+    "Performer"
+  ],
+  "abilities": [
+    {
+      "name": "Celebrity",
+      "defensive_type": null,
+      "text": "After this model resolves the Interact action, it may choose an enemy model within 6\" to gain an Entranced token."
+    },
+    {
+      "name": "Fueled by the Crowd",
+      "defensive_type": null,
+      "text": "When this model declares an action, it may remove an Entranced token from a model within 2\". If it does so, the action receives a (+)."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Cigarette Holder",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning and an Entranced token.",
+      "triggers": [
+        {
+          "name": "Staged",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Backtrack token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bored by Monotony",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Discard a card. This model heals 3 and ends its activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Mocking Laugh",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Entranced token, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Ennui",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "An ally within 2\" of this model may either heal 1 or remove a token from itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Carried Off",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target declares the Walk action, controlled by this model. If the target scales terrain during this action, this model may draw a card and then discard a card.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Losing Interest",
+      "action_type": null,
+      "range": "(aura)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action may draw range and LoS from a Decoy marker within 6\". Allies within range may each move up to 2\".",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Dorian_Crowe.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild",
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "card_type": "stat_card",
+  "name": "Trained Raptor",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "3",
+  "df": 4,
+  "wp": 4,
+  "sz": 1,
+  "sp": 7,
+  "health": 3,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living",
+    "Beast"
+  ],
+  "keywords": [
+    "Frontier"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Raking Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Staggered token, this action receives +1 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Fly Away Home",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Stoop",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target an enemy Scheme marker.",
+      "effects": "Place this model in base contact with the target, then remove the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Frontier\\M4E_Stat_Frontier_Trained_Raptor_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "card_type": "stat_card",
+  "name": "Showgirl",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Performer"
+  ],
+  "abilities": [
+    {
+      "name": "Celebrity",
+      "defensive_type": null,
+      "text": "After this model resolves the Interact action, it may choose an enemy model within 6\" to gain an Entranced token."
+    },
+    {
+      "name": "Demise (Chorus Line)",
+      "defensive_type": null,
+      "text": "Once per turn. When this model is killed, it may remove a Decoy marker within 6\". If it does so, it heals 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Dismissive Wave",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Beckoning Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to its Sp toward a friendly model in its LoS.",
+      "triggers": [
+        {
+          "name": "Rushed Backstage",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, the target may move through models. Deal 1 damage to enemy models moved through this way.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Take a Bow",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Close-Up Magic",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Decoy marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Curtain Call",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may declare the Interact action, ignoring engagement.",
+      "effects": "This Interact action may target a marker with one or more enemies in base contact.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Showgirl_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (3) characteristic indicates model_limit of 3"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

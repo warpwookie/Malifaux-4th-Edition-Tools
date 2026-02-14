@@ -1,0 +1,129 @@
+{
+  "card_type": "stat_card",
+  "name": "Carlos Vasquez",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Performer"
+  ],
+  "abilities": [
+    {
+      "name": "Butterfly Jump",
+      "defensive_type": "unusual_defense",
+      "text": "After resolving an enemy attack action targeting this model, this model may move up to 3\"."
+    },
+    {
+      "name": "Celebrity",
+      "defensive_type": null,
+      "text": "After this model resolves the Interact action, it may choose an enemy model within 6\" to gain an Entranced token."
+    },
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Flaming Fist of the Amazing Carlos Vasquez",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Burning token, this action receives a (+).",
+      "effects": "If this action receives a raise, this model may move up to 2\".",
+      "triggers": [
+        {
+          "name": "Whirlwind Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models within (t)2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blaze",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Breath of Fire",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Up In Flames",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove all Scheme markers within (t)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Dance of Flame",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may move up to 5\", ignoring vertical distance. Then, enemy models within (t)2\" of this model must pass a TN 14 Df duel or gain a Burning token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Carlos_Vasquez.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

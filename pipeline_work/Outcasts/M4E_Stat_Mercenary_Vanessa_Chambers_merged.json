@@ -1,0 +1,160 @@
+{
+  "card_type": "stat_card",
+  "name": "Vanessa Chambers",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Loyal",
+    "Sister"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Adaptable Shield",
+      "defensive_type": null,
+      "text": "While this model has an Aetheric Surge token, reduce all damage dealt to it by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Channel the Leyline",
+      "defensive_type": null,
+      "text": "After this model moves through the centerline, it gains an Aetheric Surge token. When this model ends its activation, if it is not on the centerline, it removes an Aetheric Surge token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Daito",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Into the Fray",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "After killing, all friendly sister models heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Arcane Staff",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Arc",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Surge",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Healing Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "\"I've Got Your Back!\"",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Engaged ally only. Target is placed in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Enchant",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Intuition",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top three cards of your fate deck and then return them in any order.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Vanessa_Chambers.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Outcasts"
+  ]
+}

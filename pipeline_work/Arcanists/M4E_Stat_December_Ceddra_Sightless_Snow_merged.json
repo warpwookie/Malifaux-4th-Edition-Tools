@@ -1,0 +1,130 @@
+{
+  "card_type": "stat_card",
+  "name": "Ceddra",
+  "title": "Sightless Snow",
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Chimera",
+    "December"
+  ],
+  "abilities": [
+    {
+      "name": "Fast Cast",
+      "defensive_type": null,
+      "text": "This model's Charge action may generate (+) actions instead of (////) actions."
+    },
+    {
+      "name": "Shapechange (White Stag)",
+      "defensive_type": null,
+      "text": "When this model activates, it may replace itself with Ceddra, White Stag and heal 2."
+    },
+    {
+      "name": "U Threatening Demeanor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Breath of Frost",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Staggered token.",
+      "triggers": [
+        {
+          "name": "Dismember",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Call of the Wild",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly beast only. Move the target up to its Sp.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Flames of Change",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "Target discards a Mutation upgrade. Attach a Mutation upgrade to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Swallow You Whole",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only. Kill the target. This model heals X, where X is equal to the target's current health.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Untamable Hunger",
+          "suit": "(soulstone)",
+          "timing": "after_succeeding",
+          "text": "Replace this model with Ceddra, White Stag.",
+          "is_mandatory": false,
+          "soulstone_cost": 1
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Stat_December_Ceddra_Sightless_Snow.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "card_type": "stat_card",
+  "name": "Bayou Smuggler",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Infamous"
+  ],
+  "abilities": [
+    {
+      "name": "Drag Behind",
+      "defensive_type": null,
+      "text": "Once per turn. Before this model moves, it may remove a marker within 2\" of it. After resolving the move, make a marker of the same type into base contact with this model."
+    },
+    {
+      "name": "Threatening Demeanor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Paddle",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model has more cards in its control hand than the target, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pilfer",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target must drain a (t). If it does so, infuse a (t).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Know the Land",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target gains a Hastened token.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Earth's Bounty",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Choose a Remains or Scheme marker in LoS.",
+      "effects": "Move this model up to 5\" toward the chosen marker. If this model ends the move within 1\" of the chosen marker, remove the chosen marker.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Infamous\\M4E_Stat_Byu-Versatile_Infamous_Bayou_Smuggler_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Station value shows (2) after Minion but card cost is 5"
+  ],
+  "factions": [
+    "Bayou",
+    "Outcasts"
+  ]
+}

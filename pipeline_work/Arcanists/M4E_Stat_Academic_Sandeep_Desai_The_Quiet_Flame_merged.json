@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "Sandeep Desai",
+  "title": "The Quiet Flame",
+  "faction": "Arcanists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "The Formless Mantra",
+  "totem": "Banasuva",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Academic"
+  ],
+  "keywords": [
+    "Banasuva"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Mantra of Rage",
+      "defensive_type": null,
+      "text": "Once per activation. When this model declares the Prepare action, enemies within (n)2\" must pass a TN 15 Df duel or be dealt 2 damage."
+    },
+    {
+      "name": "Mind's Eye",
+      "defensive_type": null,
+      "text": "When this model is targeted with an attack action, if this model has an Insight token, the attacking model's duel cannot be cheated"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Heavenly Gada",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may lower the Dmg of this action by 1. If this model chose to lower its Dmg, an ally in LoS gains an Insight token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Query the Aether",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. This model draws a card for each scheme the opponent has revealed (to a maximum of 2 cards).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "From the Heavens",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drain Magic",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shraap",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3. The target gains one of the following tokens, plus one for each raise this action receives: Staggered, Burning, Injured, or Slow.",
+      "effects": null,
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Arcane Storm",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy models within (aura)2\" of the target must pass a TN 13 Wp duel or be dealt 2 damage. If this action receives a raise, enemy models that fail this duel gain a Slow token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Mass Hysteria",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Arc",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Academic_Sandeep_Desai_The_Quiet_Flame.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

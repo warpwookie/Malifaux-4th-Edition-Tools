@@ -1,0 +1,151 @@
+{
+  "card": {
+    "card_type": "stat_card",
+    "name": "MECHANICAL DOVE",
+    "title": null,
+    "faction": "Arcanists",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 3,
+    "sz": 1,
+    "sp": 8,
+    "health": 2,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": null,
+    "totem": null,
+    "characteristics": [
+      "Totem",
+      "Minion (3)",
+      "Construct"
+    ],
+    "keywords": [
+      "Performer"
+    ],
+    "abilities": [
+      {
+        "name": "Arcane Reservoir",
+        "defensive_type": null,
+        "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
+      },
+      {
+        "name": "Flight",
+        "defensive_type": null,
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "name": "Insignificant",
+        "defensive_type": null,
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 4,
+        "skill_built_in_suit": "m",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": null,
+        "effects": null,
+        "triggers": [
+          {
+            "name": "Ember",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Overheat",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (x)2\" are dealt 1 damage. Then, kill this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      },
+      {
+        "name": "Brief Interlude",
+        "range": "6\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Ally only.",
+        "effects": "Target heals 1. For each raise this action receives, the target heals an additional +1. Then, kill this model.",
+        "triggers": [
+          {
+            "name": "Choreographed",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "The target gains a Backtrack token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "tactical_actions",
+        "action_type": null
+      },
+      {
+        "name": "Suddenly Doves",
+        "range": "2\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "tn": 7,
+        "damage": null,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Target an enemy Scheme marker.",
+        "effects": "Summon a Mechanical Dove in base contact with the target. Then, remove the target.",
+        "triggers": [],
+        "category": "tactical_actions",
+        "action_type": null
+      }
+    ],
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Mechanical_Dove_A.pdf",
+    "merge_warnings": [],
+    "extraction_notes": [],
+    "factions": [
+      "Arcanists"
+    ]
+  },
+  "validation": {
+    "card_name": "MECHANICAL DOVE",
+    "passed": false,
+    "needs_review": true,
+    "hard_violations": [
+      "Minion(3) but model_limit=1"
+    ],
+    "soft_flags": [
+      "Totem with infuses_soulstone_on_death=false (unusual)"
+    ],
+    "hallucination_flags": [],
+    "info": []
+  }
+}

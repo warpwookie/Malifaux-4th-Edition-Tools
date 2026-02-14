@@ -1,0 +1,157 @@
+{
+  "card_type": "stat_card",
+  "name": "Angelica Durand",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Performer"
+  ],
+  "abilities": [
+    {
+      "name": "Get Off the Stage",
+      "defensive_type": null,
+      "text": "After resolving an attack action that targeted this model, this model may drain a (soulstone). If it does so, place the attacking model in base contact with a Decoy marker within 6\"."
+    },
+    {
+      "name": "Manipulative",
+      "defensive_type": "unusual_defense",
+      "text": "If this model has not yet activated this turn, enemy models may not cheat fate in opposed duels with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fancy Cane",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"Next Act!\"",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Place the target in base contact with a Decoy marker within 6\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hat Trick",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Decoy marker within range.",
+      "triggers": [
+        {
+          "name": "Magician's Secret",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Encore! Encore!",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Move the target up to 6\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Take a Bow",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Choreographed",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Backtrack token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "Once per turn. Draw up to two cards from this model's discard pile with values of 1-5.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Angelica_Durand.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

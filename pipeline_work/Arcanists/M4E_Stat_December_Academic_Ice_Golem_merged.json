@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "ICE GOLEM",
+  "title": null,
+  "faction": "Arcanists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 5,
+  "sz": 4,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Elemental",
+    "Golem",
+    "Versatile"
+  ],
+  "keywords": [
+    "December",
+    "Academic"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Behemoth",
+      "defensive_type": null,
+      "text": "This model cannot be placed by other models. When it would be moved by another model, halve the distance it moves."
+    },
+    {
+      "name": "Demise (Reform From Ice)",
+      "defensive_type": null,
+      "text": "Once per turn. When this model is killed, it may place into base contact with a friendly Ice Pillar or Scheme marker within 6\". If it does so, it may remove that marker to heal 5."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Frozen Smash",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may remove a friendly token from the target to increase this action's Dmg by 1.",
+      "triggers": [
+        {
+          "name": "Heave",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place the target anywhere within 3\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mutilate",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Slow token, deal +1 damage. Otherwise, it gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Frozen Creation",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. This model deals 3 irreducible damage to itself.",
+      "effects": "Summon an Ice Gamin in base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Stinging Cold",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (t)3\" of the target must pass a TN 13 Sp duel or gain a Slow token.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Stat_December_Academic_Ice_Golem.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

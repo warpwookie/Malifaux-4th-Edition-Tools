@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "ETERNAL FLAME",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Construct",
+    "Elemental"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    },
+    {
+      "name": "Stoke the Boiler",
+      "defensive_type": null,
+      "text": "Once per activation. When an ally within 8\" gains a friendly Burning token, it also gains a Hastened token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Flame Blast",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target and models within (pulse)2\" of the target gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Wreathed in Flame",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Aura (Fire) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Backdraft",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "All enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or move 3\" toward the target.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Spawn Steam Arachnid",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Deal 2 irreducible damage to this model. Summon a Steam Arachnid within 1\" of this model.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Eternal_Flame.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

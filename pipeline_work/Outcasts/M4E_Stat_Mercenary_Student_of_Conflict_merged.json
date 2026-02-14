@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "STUDENT OF CONFLICT",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 4,
+  "wp": 5,
+  "sz": 1,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living",
+    "Sister"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Adaptable Force",
+      "defensive_type": null,
+      "text": "When declaring an action, this model may remove an Adaptable token to ignore one (fortitude) or (warding) ability during the action."
+    },
+    {
+      "name": "Quick Hands",
+      "defensive_type": null,
+      "text": "After this model is placed by an ally, it may drain a (t) to declare the Interact action."
+    },
+    {
+      "name": "Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, increase the distance this model moves by up to +2\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Whirlwind of Tiny Blades",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals damage twice.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Into the Fray",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "After killing, all friendly sister models heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Covetous Cravings",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Remove a Scheme or Remains marker within 6\" of target ally.",
+      "effects": "Target gains a Fast token.",
+      "triggers": [
+        {
+          "name": "Planning Ahead",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"I've Got Your Back!\"",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Engaged ally only. Target is placed in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Student_of_Conflict.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Outcasts"
+  ]
+}

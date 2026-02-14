@@ -1,0 +1,97 @@
+{
+  "card_type": "stat_card",
+  "name": "FIRE GAMIN",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "3",
+  "df": 4,
+  "wp": 3,
+  "sz": 1,
+  "sp": 6,
+  "health": 3,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion(3)",
+    "Elemental",
+    "Gamin",
+    "Versatile"
+  ],
+  "keywords": [
+    "Wildfire",
+    "Academic"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Flashover)",
+      "defensive_type": null,
+      "text": "After this model is killed, models within (r)1\" gain a Burning token."
+    },
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    },
+    {
+      "name": "Searing Pulse",
+      "defensive_type": null,
+      "text": "When this model activates, a model within 3\" gains a Burning token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Spout Flames",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target and models within (1)2\" of the target gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Big Boom",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the (1) of this action by 1\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fire-Eater",
+      "range": "3\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a Burning token from the target.",
+      "effects": "This model heals 2 and gains a Burning token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Wildfire_Fire_Gamin_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

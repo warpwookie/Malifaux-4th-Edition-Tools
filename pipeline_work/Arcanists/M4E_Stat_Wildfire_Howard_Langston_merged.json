@@ -1,0 +1,124 @@
+{
+  "card_type": "stat_card",
+  "name": "Howard Langston",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Executioner Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, the target may either discard a card or drain a (c). If it does neither, it is killed.",
+      "triggers": [
+        {
+          "name": "Kindle",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Burning token. Deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Like the Wind",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring enemy models.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Command Construct",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Construct only. This action may target friendly models. This action cannot target the same model more than once per activation.",
+      "effects": "Target declares an action, chosen and controlled by this model.",
+      "triggers": [
+        {
+          "name": "Arcanist Cache",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Summon a Steam Arachnid within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Monster You Made",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Remove any number of enemy tokens from this model. This model declares the Charge action, ignoring restrictions, increasing the Skl of the generated action by the number of tokens removed.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Howard_Langston.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

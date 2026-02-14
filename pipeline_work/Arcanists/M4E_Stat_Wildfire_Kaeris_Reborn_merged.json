@@ -1,0 +1,167 @@
+{
+  "card_type": "stat_card",
+  "name": "KAERIS",
+  "title": "REBORN",
+  "faction": "Arcanists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Burning Man's Prayer",
+  "totem": "Herbie",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Cult"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Burning Man's Gift",
+      "defensive_type": null,
+      "text": "Once per activation. After an ally within 8\" with a Burning token declares an action, it may add a suit to its duel total. If it does so, it resolves its Burning token after resolving the action."
+    },
+    {
+      "name": "Flame is Promised to Me",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, this model may remove a Burning token from a model within 2\" to reduce the damage by 2."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hand of Immolation",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "While this model has a Burning token, this attack has a raise value of 3.",
+      "effects": "Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Touch of Madness",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a random card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Accelerant",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Resolve the effect of the target's Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Rampage",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move this model 5\", ignoring enemy models. Models moved through this way must pass a TN 13 Sp duel or be dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Leap of Burning Faith",
+      "action_type": null,
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target an ally with a Burning token.",
+      "effects": "Place the target anywhere within 8\" of its current location.",
+      "triggers": [
+        {
+          "name": "Explosive Entrance",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target must pass a TN 11 Df duel or be dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Phoenix's Touch",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target heals 2 and may gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Heat Transfer",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models within (aura)2\" of the target gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Wings of Fire",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 6\" in a straight line. Models moved through this way gain a Burning token.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Kaeris_Reborn.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='REBORN' back='Reborn'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

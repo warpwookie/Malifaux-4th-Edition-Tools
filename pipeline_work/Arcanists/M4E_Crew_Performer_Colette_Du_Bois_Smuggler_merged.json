@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Smuggler's Path",
+  "associated_master": "Colette Du Bois",
+  "associated_title": "Smuggler",
+  "faction": "Arcanists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Performer minions",
+      "abilities": [
+        {
+          "name": "Smuggled Soulstones",
+          "defensive_type": null,
+          "text": "Once per activation. After this model declares the Interact action while on the enemy table half, if this crew has fewer than five (soulstone), infuse one (soulstone)."
+        },
+        {
+          "name": "Bribery",
+          "defensive_type": null,
+          "text": "When this model activates, it may drain any number of (soulstone) and heal 1 for each (soulstone) drained."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Performer models",
+      "actions": [
+        {
+          "name": "Divert Attention",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 1,
+          "costs_and_restrictions": null,
+          "effects": "Make a Decoy marker in base contact with this model. Then, this model heals 2 and is placed within 4\".",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Soulstone and infuse icons represented as (soulstone) in text",
+    "1 soulstone cost indicated by icon before Divert Attention action name"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_Performer_Colette_Du_Bois_Smuggler_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 523,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Crew_Performer_Colette_Du_Bois_Smuggler.pdf",
+  "factions": [
+    "Arcanists"
+  ]
+}

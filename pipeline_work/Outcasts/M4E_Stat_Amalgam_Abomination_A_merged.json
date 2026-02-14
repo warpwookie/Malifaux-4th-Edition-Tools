@@ -1,0 +1,106 @@
+{
+  "card_type": "stat_card",
+  "name": "ABOMINATION",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Minion",
+  "model_limit": 4,
+  "cost": "4",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (4)",
+    "Construct",
+    "Undead"
+  ],
+  "keywords": [
+    "Amalgam"
+  ],
+  "abilities": [
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (fortitude) abilities of other models."
+    },
+    {
+      "name": "Unmade",
+      "defensive_type": null,
+      "text": "When this model ends its activation, enemy models within (r)3\" with an Injured token are dealt 1 damage."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Strange Appendages",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If the target is not a peon and is killed, this model may summon an Abomination within 1\" of it.",
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Severe Injury",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has an Injured token, deal +1 damage to it. Otherwise, it gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Concentrated Deformation",
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target two other friendly Abominations. Kill this model and the targets.",
+      "effects": "Before removing this model, summon a Desolation Engine with 8 health within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Amalgam_Abomination_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 6 notation visible below creature image"
+  ],
+  "factions": [
+    "Resurrectionists",
+    "Outcasts"
+  ]
+}

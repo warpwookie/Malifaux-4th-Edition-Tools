@@ -1,0 +1,134 @@
+{
+  "card_type": "stat_card",
+  "name": "Coryphee",
+  "title": null,
+  "faction": "Arcanists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Puppet",
+    "Construct",
+    "Performer"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Take the Hit",
+      "defensive_type": null,
+      "text": "Once per activation. After another friendly model within 2\" is dealt damage, this model may be dealt the same amount of damage to reduce the amount dealt to the other model to 0."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bladed Hands",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Eye-Catching Display",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token. If this action receives a raise, make a Decoy marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Backup Dancer",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. Place this model within 2\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Purification",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Coryphee_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion(2) characteristic indicates model_limit of 2"
+  ],
+  "factions": [
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "card_type": "stat_card",
+  "name": "Wendigo",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 4,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "December"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Frozen Heart)",
+      "defensive_type": null,
+      "text": "After this model is killed, it may make an Ice Pillar or Scheme marker within 1\"."
+    },
+    {
+      "name": "Punish the Gluttonous",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" with friendly Hunger tokens cannot draw cards."
+    },
+    {
+      "name": "Tundra Hunter",
+      "defensive_type": null,
+      "text": "While within 2\" of a friendly Ice Pillar marker, this model receives a (+) to all duels."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gnawing Emptiness",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a friendly Hunger token, it suffers a (-) to resist this attack.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Devastating Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, reduce this action's raise value to 3.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Desperation",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target must discard a card or gain a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Starving Advance",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a marker.",
+      "effects": "Place this model in base contact with the target, then remove the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Stat_December_Wendigo.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

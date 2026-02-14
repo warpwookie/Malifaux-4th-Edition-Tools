@@ -1,0 +1,129 @@
+{
+  "card_type": "stat_card",
+  "name": "RAT CATCHER",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Plague"
+  ],
+  "abilities": [
+    {
+      "name": "Covered in Rats",
+      "defensive_type": null,
+      "text": "Once per activation. When this model is dealt damage, it may kill a friendly Malifaux Rat within 3\" to reduce the damage by 2."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Sack O' Rats",
+      "defensive_type": null,
+      "text": "Once per activation. After this model suffers damage from an enemy model, summon a Malifaux Rat into base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rusty Trap",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, the target gains a Slow token.",
+      "triggers": [
+        {
+          "name": "Fever Bloom",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a Blight token from the target. The target is dealt 1 damage and gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sacrifice the Scurried",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "Kill another friendly vermin model within 3\" of this model. This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Infested Building",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 2,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a piece of terrain.",
+      "effects": "Summon a Malifaux Rat within 1\" of the target. For each raise this action receives, summon one additional Malifaux Rat within 1\" of the target.",
+      "triggers": [
+        {
+          "name": "Scamper",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The summoned models declare the Walk action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Scare Them Out",
+      "range": "(aura)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Friendly Malifaux Rats within range may declare the Walk action.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Stat_Plague_Rat_Catcher_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 2, parsed from 'Minion (2)' characteristic"
+  ],
+  "factions": [
+    "Outcasts"
+  ]
+}

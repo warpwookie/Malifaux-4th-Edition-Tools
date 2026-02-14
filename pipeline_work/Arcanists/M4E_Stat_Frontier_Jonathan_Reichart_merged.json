@@ -1,0 +1,150 @@
+{
+  "card_type": "stat_card",
+  "name": "Jonathan Reichart",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Frontier"
+  ],
+  "abilities": [
+    {
+      "name": "Favorable Terrain",
+      "defensive_type": "fortitude",
+      "text": "If this model has cover or concealment, it has both."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "warding",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ex-executioner Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, the target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+      "triggers": [
+        {
+          "name": "I've Got This",
+          "suit": "(fortitude)",
+          "timing": "after_succeeding",
+          "text": "This model heals 3 and another ally in LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(warding)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "I Know All the Hideouts",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies.",
+      "effects": "Target gains an Exposed or Hidden token and is moved up to 4\".",
+      "triggers": [
+        {
+          "name": "Sudden Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Together!",
+          "suit": "(warding)",
+          "timing": "after_succeeding",
+          "text": "Another ally may declare an attack action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hunker Down",
+          "suit": "(warding)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Hidden token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Endure It",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +1.",
+      "triggers": [
+        {
+          "name": "Lay Low",
+          "suit": "(warding)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hidden token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Frontier\\M4E_Stat_Frontier_Jonathan_Reichart.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

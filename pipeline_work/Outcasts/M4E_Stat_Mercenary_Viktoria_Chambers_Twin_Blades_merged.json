@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "Viktoria Chambers",
+  "title": "Twin Blades",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Coordinated Effort",
+  "totem": "Student of Conflict",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Sister"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Blade Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, this model may move through enemy models. Deal 1 damage to enemy models moved through this way."
+    },
+    {
+      "name": "Combat Finesse",
+      "defensive_type": "fortitude",
+      "text": "When this model is targeted with a (melee) action, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "Storm of Steel",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is hazardous terrain. Friendly models are unaffected by this terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Whirlwind of Blades",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals damage twice.",
+      "triggers": [
+        {
+          "name": "Into the Fray",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "After killing, all friendly sister models heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Whirlwind Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models within (melee)2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Like the Wind",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring enemy models.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Changing Tactics",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. Move the target up to 3\" and give it an Adaptable token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Unorthodox Style",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action affects all allies within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fire at Will",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may declare a (missile) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Sabotage Their Plans",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Target an enemy Scheme marker.",
+      "effects": "Make a Scheme marker in base contact with the target, then remove the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Viktoria_Chambers_Twin_Blades.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

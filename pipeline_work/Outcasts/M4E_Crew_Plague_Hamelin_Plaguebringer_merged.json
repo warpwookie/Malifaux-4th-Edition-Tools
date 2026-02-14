@@ -1,0 +1,54 @@
+{
+  "card_type": "crew_card",
+  "name": "Contagion's Kiss",
+  "associated_master": "Hamelin",
+  "associated_title": "Plaguebringer",
+  "faction": "Outcasts",
+  "keyword_abilities": [],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Plague models",
+      "actions": [
+        {
+          "name": "Diseased Embrace",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "1\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "(double) Enemy only.",
+          "effects": "The target gains a Blight token and this model heals 2. If this crew's pox bar was not increased this turn, increase it by 1.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Blight",
+      "text": "The following cumulative effects apply based on the level of this crew's pox bar:\n\n1 Pox: Enemy models with a friendly Blight token suffer -1 Sp during enemy activations.\n\n2 Pox: During the end phase, before resolving Blight tokens, enemy models with a friendly Blight token are dealt 1 damage.\n\n3 Pox: Enemy models with a friendly Blight token must discard a card to declare the Interact action."
+    }
+  ],
+  "extraction_notes": [
+    "The crew card includes a pox bar visual indicator showing levels 1, 2, and 3.",
+    "The Blight token effects are cumulative based on the crew's pox bar level.",
+    "Sp in '1 Pox' effect refers to Speed stat."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Plague_Hamelin_Plaguebringer_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 526,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Crew_Plague_Hamelin_Plaguebringer.pdf",
+  "factions": [
+    "Outcasts"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "card_type": "stat_card",
+  "name": "BIG JAKE",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Unexpected Return)",
+      "defensive_type": null,
+      "text": "Once per game. When this model is killed, it heals 4 and is placed within 1\" of any table edge."
+    },
+    {
+      "name": "Don't Mind Me",
+      "defensive_type": null,
+      "text": "The following do not restrict this model from declaring the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+    },
+    {
+      "name": "Quick Hands",
+      "defensive_type": null,
+      "text": "After this model is placed by an ally, it may drain a (t) to declare the Interact action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tomahawk",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)8\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Consult the Ancestors",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Declare the Intuition action, ignoring \"once per\" restrictions.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Intuition",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top three cards of your fate deck and then return them in any order.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Big_Jake.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Bayou",
+    "Outcasts"
+  ]
+}

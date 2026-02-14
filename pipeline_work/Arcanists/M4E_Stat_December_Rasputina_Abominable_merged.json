@@ -1,0 +1,132 @@
+{
+  "card_type": "stat_card",
+  "name": "Rasputina",
+  "title": "Abominable",
+  "faction": "Arcanists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Winter's Wrath",
+  "totem": "Mara",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "December"
+  ],
+  "abilities": [
+    {
+      "name": "Absolute Zero",
+      "defensive_type": "unusual_defense",
+      "text": "After an enemy model resolves a (missile) action targeting this model, this model may drain a (soulstone) to end the attacker's activation."
+    },
+    {
+      "name": "Creeping Ice",
+      "defensive_type": null,
+      "text": "Enemy models in base contact with a friendly Ice Pillar marker within 6\" may only move with the Walk action, or from an effect controlled by this crew."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Freezing Strikes",
+      "action_type": "melee",
+      "range": "(melee)*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(melee)6\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Stumble",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then, the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Entomb in Ice",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make an Ice Pillar marker within 1\" of the target. This model may drain a (c). If it does so, make up to two additional markers within 3\" of the first.",
+      "triggers": [
+        {
+          "name": "Harsh Winter",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)1\" of any of the made markers gain Staggered and Hunger tokens.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "My Loyal Servant",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model within 3\" of the target heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Form From Ice",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "Once per turn. Target a friendly Ice Pillar marker completely on the enemy table half.",
+      "effects": "Summon an allied minion in base contact with the target, then remove the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Stat_December_Rasputina_Abominable.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

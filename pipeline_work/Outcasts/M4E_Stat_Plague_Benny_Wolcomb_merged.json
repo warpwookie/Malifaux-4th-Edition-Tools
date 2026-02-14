@@ -1,0 +1,151 @@
+{
+  "card_type": "stat_card",
+  "name": "BENNY WOLCOMB",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Plague"
+  ],
+  "abilities": [
+    {
+      "name": "Covered in Rats",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. When this model is dealt damage, it may kill a friendly Malifaux Rat within 3\" to reduce the damage by 2."
+    },
+    {
+      "name": "Sack O' Rats",
+      "defensive_type": null,
+      "text": "Once per activation. After this model suffers damage from an enemy model, summon a Malifaux Rat into base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Infected Blade",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains a Blight token.",
+      "triggers": [
+        {
+          "name": "Quarantine",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model and the target gain an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Mocking Miasma",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, enemy models within 1\" of the target gain a Blight token.",
+      "triggers": [
+        {
+          "name": "Rat Bomb!",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Summon a Malifaux Rat into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sacrifice the Scurried",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Kill another friendly vermin model within 3\" of this model. This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "A Song for the Sewers",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Summon a Malifaux Rat within range. For each raise this action receives, summon one additional Malifaux Rat within range.",
+      "triggers": [
+        {
+          "name": "Loyal Rats with Tiny Hats",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose a Malifaux Rat in LoS. Make a Scheme marker in base contact with the chosen model, then kill the chosen model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Resupply",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Stat_Plague_Benny_Wolcomb.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

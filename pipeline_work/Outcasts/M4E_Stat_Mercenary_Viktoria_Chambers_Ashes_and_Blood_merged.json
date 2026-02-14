@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "Viktoria Chambers",
+  "title": "Ashes and Blood",
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Bounty Hunt",
+  "totem": null,
+  "characteristics": [
+    "Master (2)",
+    "Living",
+    "Sister"
+  ],
+  "keywords": [
+    "Mercenary"
+  ],
+  "abilities": [
+    {
+      "name": "Bulletproof",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce all damage dealt to this model by (missile) actions by 1."
+    },
+    {
+      "name": "Demise (Unbalanced)",
+      "defensive_type": null,
+      "text": "After this model is killed, another friendly sister model may heal 3 and gain an Aetheric Surge token."
+    },
+    {
+      "name": "Parry",
+      "defensive_type": null,
+      "text": "When this model is targeted by an attack, it may drain a (soulstone) to have that attack suffer -2 Skl."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shared Steel",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is engaged by another friendly sister, this action receives +1 Skl. This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Into the Fray",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "After killing, all friendly sister models heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"Together!\"",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another ally may declare an attack action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Surge",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Custom Firearm",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Advanced Tactics",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 6\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Command the Slaughter",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model within LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Take the High Ground",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. Place the target within 3\". If the target is a sister, place it within 6\" instead. If the target is placed on a higher elevation than where it started, draw a card.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Viktoria_Chambers_Ashes_and_Blood.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

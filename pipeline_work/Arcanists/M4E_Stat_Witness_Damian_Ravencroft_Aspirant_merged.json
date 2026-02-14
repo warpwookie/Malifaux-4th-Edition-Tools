@@ -1,0 +1,163 @@
+{
+  "card_type": "stat_card",
+  "name": "Damian Ravencroft",
+  "title": "Aspirant",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Pursuit of Knowledge",
+  "totem": "The Puzzle Box, Unsolved",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Witness"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Memories of the Yellow Crypt",
+      "defensive_type": null,
+      "text": "After an ally within 8\" gains an Adaptable token during a friendly activation, this model may move it up to 3\"."
+    },
+    {
+      "name": "The Deep Dark Forest Where 2+2=5",
+      "defensive_type": null,
+      "text": "After this model suffers damage from an enemy attack, it may drain a (soulstone). If it does, it then heals an amount equal to the number of (soulstone) this crew has remaining."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Witch Killer",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model removed an Adaptable token to add a suit, this attack receives an (t).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Siphon Essence",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "After killing, infuse a (t).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Zwischenzug",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. Move the target up to 4\". Allies ignore any damage dealt by this action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "All My Pawns",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy only. A different enemy model within range is dealt 2 damage and moved up to 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Vanish",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Prioritize",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Draw a card of value 3 or less from your discard pile.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Confiscated Lore",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Look at the top five cards of the opposing player's fate deck and discard any number of them, putting the rest back in any order.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knight to E5",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "An ally in LoS gains an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Witness\\M4E_Stat_Witness_Damian_Ravencroft_Aspirant.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

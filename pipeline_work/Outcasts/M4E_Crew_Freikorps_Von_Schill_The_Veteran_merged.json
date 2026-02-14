@@ -1,0 +1,56 @@
+{
+  "card_type": "crew_card",
+  "name": "Freikorps Tactics",
+  "associated_master": "Von Schill",
+  "associated_title": "The Veteran",
+  "faction": "Outcasts",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Freikorps models",
+      "abilities": [
+        {
+          "name": "Freikorps Suit",
+          "defensive_type": null,
+          "text": "Once per activation. This model may reduce the raises of an attack targeting it by 1 (to a minimum of 0)."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Freikorps models",
+      "actions": [
+        {
+          "name": "Adaptive Tactics",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Ally only",
+          "effects": "This model declares one of the target's tactical actions as if it were printed on this model's stat card.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Freikorps_Von_Schill_The_Veteran_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 399,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Crew_Freikorps_Von_Schill_The_Veteran.pdf",
+  "factions": [
+    "Outcasts"
+  ]
+}

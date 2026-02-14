@@ -1,0 +1,147 @@
+{
+  "card_type": "stat_card",
+  "name": "THE NOTHING BEAST",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 7,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique"
+  ],
+  "keywords": [
+    "Obliteration"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Stolen Moments)",
+      "defensive_type": null,
+      "text": "When this model is killed, enemy models within (r)2\" of this model must pass a TN 12 Wp duel or gain a Slow token."
+    },
+    {
+      "name": "Half in the Void",
+      "defensive_type": null,
+      "text": "If this model has a Flicker token, reduce damage this model deals by 1."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Obliterate",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is within 1\" of an Echo marker, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shove Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Move the target 4\". Then, this model moves up to 4\" and may declare a (melee) action targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Accelerate Time",
+      "range": "3\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Allies within range may place within 3\" of their current locations.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Stutter Time",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Backtrack token. If this action receives a raise, place the target anywhere within 2\" of its current location.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blurred Motion",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Aura (Concealment) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Obliteration\\M4E_Stat_Obliteration_The_Nothing_Beast.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 13 appears below the artwork",
+    "Incorporeal has unusual defense icon (\u03a8) before ability name"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Outcasts"
+  ]
+}

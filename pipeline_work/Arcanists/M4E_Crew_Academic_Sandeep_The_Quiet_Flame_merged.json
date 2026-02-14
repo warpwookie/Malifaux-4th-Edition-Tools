@@ -1,0 +1,98 @@
+{
+  "card_type": "crew_card",
+  "name": "The Formless Mantra",
+  "associated_master": "Sandeep Desai",
+  "associated_title": "The Quiet Flame",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Academic models",
+      "abilities": [
+        {
+          "name": "Mindful",
+          "defensive_type": null,
+          "text": "When this model declares the Prepare action, it may gain an Insight token instead of other tokens."
+        },
+        {
+          "name": "Elemental Shielding",
+          "defensive_type": null,
+          "text": "Once per activation. After this model suffers damage while within 6\" of another friendly elemental model, it gains an Insight token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-gamin Academic models",
+      "actions": [
+        {
+          "name": "Mantra of Fury",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(r)3\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Remove an Insight token. Enemy models within range gain a Burning or an Injured token.",
+          "triggers": []
+        },
+        {
+          "name": "Mantra of Rebuke",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(r)3\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Remove an Insight token. Enemy models within range must discard a card or be moved up to 3\".",
+          "triggers": []
+        },
+        {
+          "name": "Mantra of Travel",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Remove an Insight token. Move this model up to 4\".",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "All three Mantra actions show dashes for Skl, Rst, TN, and Dmg columns in the table",
+    "Range shows '(r)3\"' for Mantra of Fury and Mantra of Rebuke, and dash for Mantra of Travel",
+    "All actions are marked with signature symbol (\u00b6) in the source"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_Academic_Sandeep_The_Quiet_Flame_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 852,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Crew_Academic_Sandeep_The_Quiet_Flame.pdf",
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

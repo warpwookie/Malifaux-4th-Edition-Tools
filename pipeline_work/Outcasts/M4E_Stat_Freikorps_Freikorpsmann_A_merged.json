@@ -1,0 +1,130 @@
+{
+  "card_type": "stat_card",
+  "name": "Freikorpsmann",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Freikorps"
+  ],
+  "abilities": [
+    {
+      "name": "Covered Advance",
+      "defensive_type": null,
+      "text": "After resolving an action in which a friendly model in LoS discarded a friendly upgrade, this model may move up to 3\"."
+    },
+    {
+      "name": "Promotion",
+      "defensive_type": null,
+      "text": "After receiving a raise in an opposed duel, this model may drain a (soulstone) to replace itself with a non-unique Freikorps model after resolving the action."
+    },
+    {
+      "name": "Upgrade Aptitude",
+      "defensive_type": null,
+      "text": "This model may treat actions on its attached upgrades as (t) actions."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Combat Knife",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Bond of Blood",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. If there is an ally within 3\", draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Clockwork Revolver",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Buddy System",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Once per turn. Another ally with the same name as this model within range may make a Scheme marker within 3\" of itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Camaraderie",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Bolstered token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Stat_Freikorps_Freikorpsmann_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (3) indicates model_limit of 3"
+  ],
+  "factions": [
+    "Outcasts"
+  ]
+}

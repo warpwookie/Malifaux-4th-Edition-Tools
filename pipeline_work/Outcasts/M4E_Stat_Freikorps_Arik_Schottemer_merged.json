@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "Arik Sch\u00f6ttemer",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Construct",
+    "Living"
+  ],
+  "keywords": [
+    "Freikorps"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Honorable",
+      "defensive_type": null,
+      "text": "Models ignore all (+) and (-) during opposed duels with this model."
+    },
+    {
+      "name": "Kinetic Amplifier",
+      "defensive_type": null,
+      "text": "Once per activation. When this model is dealt damage, it may drain a (soulstone) to reduce that damage by 2 and then move up to 2\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Crater Impact",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model is at a higher elevation than the target, it may place into base contact with the target to deal +1 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Get in There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A non-unique friendly model in LoS of the target may move up to 3\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Their Attention",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "A friendly model in this model's LoS may discard a card to declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Heroic Intervention",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy engaged with another friendly model only.",
+      "effects": "Move all friendly models engaged with the target 5\" away from the target. Then, place this model in base contact with the target. This model may declare a (melee) targeting the target.",
+      "triggers": [
+        {
+          "name": "Inspire Valor",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Instead of this model declaring an action, an ally moved by this action may declare any action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Feather Drop",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, models moved by this action are not dealt falling damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "To the Rooftops",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target blocking terrain.",
+      "effects": "Place this model within 4\" of its current location on top of the chosen piece of terrain.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Stat_Freikorps_Arik_Schottemer.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists",
+    "Outcasts"
+  ]
+}

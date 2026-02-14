@@ -1,0 +1,123 @@
+{
+  "card_type": "stat_card",
+  "name": "Dabbler",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Witness"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "warding",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1.",
+      "trigger_type": "once_per_activation"
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Twisting Magic",
+      "defensive_type": null,
+      "text": "When this model activates, flip a card which may not be cheated. On a (t) or (c), this model heals 2 and draws a card and considers its Flight ability blank for the remainder of the activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Elemental Bolt",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Forethought",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Loss for Words",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Aetheric Passage",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 4\". This model may remove an Adaptable token to increase the distance it moves by +2\".",
+      "triggers": [
+        {
+          "name": "Wash Away",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove any number of markers this model moved through with this action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Witness\\M4E_Stat_Witness_Dabbler_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 as indicated by 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

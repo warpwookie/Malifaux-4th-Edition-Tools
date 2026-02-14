@@ -1,0 +1,81 @@
+{
+  "card_type": "crew_card",
+  "name": "Shadow of the Noose",
+  "associated_master": "Parker Barrows",
+  "associated_title": "Dead Man Walking",
+  "faction": "Outcasts",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Bandit models",
+      "abilities": [
+        {
+          "name": "Run And Gun",
+          "defensive_type": null,
+          "text": "This model's Charge action may generate (missile) actions instead of (melee) actions."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Bandit models",
+      "actions": [
+        {
+          "name": "Broken Man's Lasso",
+          "category": "attack_actions",
+          "action_type": "missile",
+          "range": "10\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Sp",
+          "tn": 12,
+          "damage": "0",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
+          "triggers": [
+            {
+              "name": "Debt Owed to Darkness",
+              "suit": "(c)",
+              "timing": "When resolving",
+              "text": "move the target up to +4\", ignoring Staggered tokens.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "Stumble",
+              "suit": "(m)",
+              "timing": "When resolving",
+              "text": "if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "Execute",
+              "suit": "(t)",
+              "timing": null,
+              "text": "The target may either discard a card or drain a (c). If it does neither, it is killed.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Bandit_Parker_Barrows_Dead_Man_Walking_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 652,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Crew_Bandit_Parker_Barrows_Dead_Man_Walking.pdf",
+  "factions": [
+    "Outcasts"
+  ]
+}

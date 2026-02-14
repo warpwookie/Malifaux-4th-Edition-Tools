@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "The Firestarter",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Cult"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Pyromania",
+      "defensive_type": null,
+      "text": "After this model receives a raise, give a Burning token to a model within 6\"."
+    },
+    {
+      "name": "Reckless",
+      "defensive_type": null,
+      "text": "Once per activation. When this model declares an action, it may deal 1 irreducible damage to itself to treat that action as a (+) action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Conflagration",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (+) if the target has a Burning token.",
+      "effects": "Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Kindle",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Burning token. Deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Twirl the Gas Can",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "This trigger must be declared, if able. When resolving, this action deals +1 damage to the target. Then, deal 1 damage to another friendly model within range.",
+          "is_mandatory": true,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Light Under Their Feet",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to its Sp. This model may remove a Burning token from the target to have it ignore models and terrain while moving.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Blast to Bits",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a Scheme marker.",
+      "effects": "Models within (r)2\" of the target must pass a TN 12 Sp duel or be dealt 2 damage. Then, remove the target.",
+      "triggers": [
+        {
+          "name": "Blaze",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Arcanist Cache",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Summon a Steam Arachnid within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_The_Firestarter.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "card_type": "stat_card",
+  "name": "MAD DOG BRACKETT",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Bandit"
+  ],
+  "abilities": [
+    {
+      "name": "Grit",
+      "defensive_type": null,
+      "text": "While this model has half of its maximum health or less, its attack actions receive a (+)."
+    },
+    {
+      "name": "Pass the Bag",
+      "defensive_type": null,
+      "text": "When this model would gain a token, it may drain a (t) to give a friendly copy of that token to an ally within 6\"."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Burning Cigar",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "0",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning token and a Staggered token.",
+      "triggers": [
+        {
+          "name": "\"AHHH, MY EYE!\"",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage and move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Chesterfield Shotgun",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "For each raise this action receives, deal +1 damage to enemy models within (r)1\" of the target.",
+      "triggers": [
+        {
+          "name": "Blow It to Hell",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove all markers and destructible terrain within (r)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spreader Load",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the size of this action's (r) to 3\" and receive an additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drop It!",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Clustered Rounds",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action does not receive raises and damage from this action ignores the target's (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Life of Crime",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove target enemy Scheme marker.",
+      "effects": "Gain a Fast token.",
+      "triggers": [
+        {
+          "name": "Swift Action",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Mad_Dog_Brackett.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "card_type": "stat_card",
+  "name": "Sandeep Desai",
+  "title": "Font of Magic",
+  "faction": "Arcanists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Breathe the Aether",
+  "totem": "Essence of Power",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Academic"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "warding",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Demise (Upheaval)",
+      "defensive_type": null,
+      "text": "After this model is killed, this model may summon a golem Academic model with 5 health in base contact with this model."
+    },
+    {
+      "name": "Student of All",
+      "defensive_type": null,
+      "text": "This model may declare attack actions printed on the stat cards of elemental allies within 10\" as if they were printed on this model's stat card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Elemental Creation",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 7,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "0",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation.",
+      "effects": "Summon a gamin Academic model within 2\" of the target.",
+      "triggers": [
+        {
+          "name": "Elemental Chaos",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Deal +2 damage to the target for each friendly gamin within 10\" of it with a different name (maximum 6).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bound to Form",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Attach an Elemental Binds upgrade to the summoned model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Revelation",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Gathering Storm",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally with a Summon token only. This action cannot target the same model more than once per activation.",
+      "effects": "The target moves up to 6\", then declares an action.",
+      "triggers": [
+        {
+          "name": "Unshackled Elements",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "While resolving the generated action, the target ignores its Summon token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Sparks of Insight",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only.",
+      "effects": "Move the target up to 5\".",
+      "triggers": [
+        {
+          "name": "Mantra of Binding",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Attach an Elemental Binds upgrade to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Elemental Detonation",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Elemental only. Enemies within (p)2\" of the target must pass a TN 15 Df duel or be dealt 2 damage. Then, kill the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Academic_Sandeep_Desai_Font_of_Magic.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

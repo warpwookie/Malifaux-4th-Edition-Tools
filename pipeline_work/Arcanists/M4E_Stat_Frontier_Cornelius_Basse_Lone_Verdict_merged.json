@@ -1,0 +1,157 @@
+{
+  "card_type": "stat_card",
+  "name": "Cornelius Basse",
+  "title": "Lone Verdict",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Dustbound Oath",
+  "totem": "Bernadette, Furtive",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Frontier"
+  ],
+  "abilities": [
+    {
+      "name": "Beneath the Leaves",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain."
+    },
+    {
+      "name": "Fade into the Hills",
+      "defensive_type": null,
+      "text": "When an ally within 6\" suffers damage from an enemy attack, this model may drain a (soulstone) to place that model within 4\". Then, the placed model gains a Hidden token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gifted Gun",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)12\". The target gains an Exposed token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Among the Willows",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Choose a marker within 3\" of the target. Deal 1 damage to enemy models within (X)1\" of the chosen marker, then remove the chosen marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Caught in Quicksand",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token and moves 2\", unaffected by severe terrain.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Into Action",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Other ally only. Place the target within 3\" of its current location, then it gains a Badge token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Recruit",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A different ally within range gains a Badge token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lay Low",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hidden token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Bounty Paid",
+      "range": "(X)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model and allies within range with a Badge token heal 2.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Vanish",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Inner Peace",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model may declare the Prepare action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Frontier\\M4E_Stat_Frontier_Cornelius_Basse_Lone_Verdict.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "card_type": "crew_card",
+  "name": "Take the Stage",
+  "associated_master": "Colette Du Bois",
+  "associated_title": "Star of the Show",
+  "faction": "Arcanists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Performer models",
+      "abilities": [
+        {
+          "name": "Dress Rehearsal",
+          "defensive_type": null,
+          "text": "When this model resolves the Interact action while it is on the enemy table half, it gains a Backtrack token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Performer models",
+      "actions": [
+        {
+          "name": "Showstopper",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(magic) 6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": 6,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Friendly Scheme or Decoy marker only.",
+          "effects": "Place this model in base contact with the target. Then this model may declare the Interact action. The following do not restrict this model from declaring this Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The Showstopper action has an unusual icon (\u271d) before the '@' symbol for Showstopper which appears to be a Signature action marker based on context"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_Performer_Colette_Du_Bois_Star_of_the_Show_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 481,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Crew_Performer_Colette_Du_Bois_Star_of_the_Show.pdf",
+  "factions": [
+    "Arcanists"
+  ]
+}

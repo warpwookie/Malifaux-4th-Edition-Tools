@@ -1,0 +1,65 @@
+{
+  "card_type": "crew_card",
+  "name": "Breathe the Aether",
+  "associated_master": "Sandeep Desai",
+  "associated_title": "Font of Magic",
+  "faction": "Arcanists",
+  "keyword_abilities": [],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly living Academic models",
+      "actions": [
+        {
+          "name": "Exhaled Into Being",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "(+)6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": "3",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation",
+          "effects": "If this action kills the target, summon a gamin Academic model in base contact with the killed model.",
+          "triggers": []
+        },
+        {
+          "name": "\u25c6\u25c6 Summon Golem",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Kill two friendly elemental minions within range; do not infuse any \u25c6 when they are killed. Summon a golem Academic model with 6 health in base contact with this model.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The card grants actions to 'Friendly living Academic models'",
+    "Exhaled Into Being has a range of +(+)6\" indicating it can be used within 6\" range",
+    "Summon Golem uses the symbol \u25c6 which appears to be a diamond icon representing elemental minions"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_Academic_Sandeep_Font_of_Magic_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 572,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Crew_Academic_Sandeep_Font_of_Magic.pdf",
+  "factions": [
+    "Arcanists"
+  ]
+}

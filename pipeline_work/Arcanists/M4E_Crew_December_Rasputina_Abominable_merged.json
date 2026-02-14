@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Winter's Wrath",
+  "associated_master": "Rasputina",
+  "associated_title": "Abominable",
+  "faction": "Arcanists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly December models",
+      "abilities": [
+        {
+          "name": "Ice Mirror",
+          "defensive_type": null,
+          "text": "When this model declares a (+) action, it may target any model within 2\" of a friendly Ice Pillar marker, ignoring range and LoS."
+        },
+        {
+          "name": "Sacrifice to December",
+          "defensive_type": null,
+          "text": "After killing an enemy non-peon, this model may remove an Ice Pillar marker within 2\" of the killed model to infuse a (0)."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly December models",
+      "actions": [
+        {
+          "name": "Frigid Gust",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Sp",
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "Move the target up to 5\". If this action receives a raise, the target gains a Staggered token.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Ice Pillar markers are referenced but not defined on this card - likely defined elsewhere",
+    "Infuse mechanic referenced in Sacrifice to December ability"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_December_Rasputina_Abominable_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 510,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\December\\M4E_Crew_December_Rasputina_Abominable.pdf",
+  "factions": [
+    "Arcanists"
+  ]
+}

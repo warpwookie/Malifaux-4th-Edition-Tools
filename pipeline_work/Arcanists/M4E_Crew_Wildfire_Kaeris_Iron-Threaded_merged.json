@@ -1,0 +1,76 @@
+{
+  "card_type": "crew_card",
+  "name": "Limit Test",
+  "associated_master": "Kaeris",
+  "associated_title": "Iron-Threaded",
+  "faction": "Wildfire",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Wildfire constructs",
+      "abilities": [
+        {
+          "name": "Redline",
+          "defensive_type": null,
+          "text": "When this model activates, it may drain a (c) and gain a Burning token to declare the Walk action."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Wildfire models",
+      "actions": [
+        {
+          "name": "Frantic Triage",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 5,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Friendly only.",
+          "effects": "Remove a token from the target to summon a Steam Arachnid within 1\" of the target.",
+          "triggers": []
+        },
+        {
+          "name": "Burst the Core",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 5,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Friendly Steam Arachnid only.",
+          "effects": "Enemy models within ((pulse))3\" of the target gain a Burning token and are dealt 1 damage. Then, kill the target.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The (pulse) symbol was used to represent the pulse range indicator in Burst the Core",
+    "Card shows friendly model restrictions clearly defined for each action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_Wildfire_Kaeris_Iron-Threaded_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 610,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Crew_Wildfire_Kaeris_Iron-Threaded.pdf",
+  "factions": [
+    "Wildfire",
+    "Arcanists"
+  ]
+}

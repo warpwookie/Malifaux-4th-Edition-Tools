@@ -1,0 +1,166 @@
+{
+  "card_type": "stat_card",
+  "name": "Captain Zipp",
+  "title": "Dread Pirate",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 1,
+  "sp": 5,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Cheese It!",
+  "totem": "Mancha Roja",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Infamous"
+  ],
+  "abilities": [
+    {
+      "name": "\"Fine! Have it Back!\"",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is dealt damage, it may remove a Loot upgrade to reduce the damage by 2 (to a minimum of 0)."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Swing From the Rigging",
+      "defensive_type": null,
+      "text": "At the start and end of this model's activation, it may move up to 3\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Cutthroat Cutlass",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Taunt",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Challenged token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Fire the Cannons!\"",
+      "action_type": "missile",
+      "range": "(gun)4\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "4",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This action may draw range and LoS from any allied model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Scatter",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Allies within (aura)4\" of the target may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Your Money or Your Life... or Maybe Your Hat.\"",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target chooses a Loot upgrade and this model attaches the chosen upgrade.",
+      "triggers": [
+        {
+          "name": "\"Your Life it Is!\"",
+          "suit": "(t)",
+          "timing": "after_failing",
+          "text": "After failing, this model declares the Fire the Cannons action against the target, ignoring range and once per activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "For Gold and Glory",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. The target moves up to its Sp toward an enemy marker. If it ends the move in base contact with the marker, remove it to draw a card from your discard pile with a value of 1-5.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Cut Them Down",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Infamous\\M4E_Stat_Infamous_Captain_Zipp_Dread_Pirate.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Bayou",
+    "Outcasts"
+  ]
+}

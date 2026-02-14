@@ -1,0 +1,171 @@
+{
+  "card_type": "stat_card",
+  "name": "Kaeris",
+  "title": "Iron-Threaded",
+  "faction": "Arcanists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 7,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": null,
+  "totem": "Eternal Flame",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Construct",
+    "Living"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Limit Test",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Extra Parts",
+      "defensive_type": null,
+      "text": "Once per activation. After this model kills a model, it may make a Scheme or Remains marker within 1\" of the killed model."
+    },
+    {
+      "name": "Fast Cast",
+      "defensive_type": null,
+      "text": "This model's Charge action may generate (+) actions instead of (////) actions."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "\"Up We Go!\"",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sz",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place the target anywhere within 3\" of its current location.",
+      "triggers": [
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Grand Conflagration",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": "+",
+      "resist": "Sp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (-) if the target has a Burning token.",
+      "effects": "Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Kindle",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Burning token. Deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blast",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal this action's damage to a different enemy model within 2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blazing Barrier",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Aura (Fire) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Overclock",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another allied construct only. This action cannot target the same model more than once per activation.",
+      "effects": "Target gains a Hastened token, then declares an action.",
+      "triggers": [
+        {
+          "name": "To the Limit",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. If the target has not activated this turn, it may do so after this model ends its activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Summon the Swarm",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy only.",
+      "effects": "Summon a Steam Arachnid within 1\" of the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Kaeris_Iron-Threaded.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Limit Test ability appears to have no text visible on this card front",
+    "Totem 'Eternal Flame' shown in bottom-right corner"
+  ],
+  "factions": [
+    "Arcanists"
+  ]
+}

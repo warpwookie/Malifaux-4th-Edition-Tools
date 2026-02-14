@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Hamelin",
+  "title": "Plaguebringer",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Contagion's Kiss",
+  "totem": "Obedient Wretch",
+  "characteristics": [
+    "Master",
+    "Unique"
+  ],
+  "keywords": [
+    "Plague"
+  ],
+  "abilities": [
+    {
+      "name": "Nihilism",
+      "defensive_type": null,
+      "text": "When this model would gain a token, it may discard a card instead."
+    },
+    {
+      "name": "Plagueborn",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is dealt damage, it may drain a (soulstone) to reduce the damage by an amount equal to the number of friendly Blight tokens on models within 6\" (maximum 4)."
+    },
+    {
+      "name": "Source of the Contagion",
+      "defensive_type": null,
+      "text": "Enemy models that activate within 6\" gain a Blight token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Black Staff",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains a Stunned token and a Blight token.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lure",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to its Sp toward this model.",
+      "triggers": [
+        {
+          "name": "Quarantine",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model and the target gain an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Taint",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Blight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bleeding Disease",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may remove a Blight token from the target to deal +1 damage.",
+      "triggers": [
+        {
+          "name": "A New Outbreak",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again, targeting a different model with a Blight token within 10\" of the target, ignoring range and LoS.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Pustulent Tumors",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only.",
+      "effects": "Enemies within (aura)3\" of the target must pass a TN 13 Wp duel or gain a Blight token. Models that would gain a Blight token from this action, but already have one, are dealt 2 damage.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Stat_Plague_Hamelin_Plaguebringer.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

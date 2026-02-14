@@ -1,0 +1,171 @@
+{
+  "card_type": "stat_card",
+  "name": "Four Winds Golem",
+  "title": null,
+  "faction": "Arcanists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 5,
+  "sz": 4,
+  "sp": 7,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Golem",
+    "Elemental"
+  ],
+  "keywords": [
+    "Academic"
+  ],
+  "abilities": [
+    {
+      "name": "Butterfly Jump",
+      "defensive_type": null,
+      "text": "After resolving an enemy attack action targeting this model, this model may move up to 3\"."
+    },
+    {
+      "name": "Demise (Wind Shear)",
+      "defensive_type": null,
+      "text": "After this model is killed, either summon two Wind Gamin into base contact with it or make two Scheme markers into base contact with it."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Up We Go!",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 3,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sz",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place the target anywhere within 3\" of its current location.",
+      "triggers": [
+        {
+          "name": "Collision",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The target and enemy models within (r)1\" of it are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pouncing Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Wind Gust",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": 10,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 6\".",
+      "triggers": [
+        {
+          "name": "Collision",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The target and enemy models within (r)1\" of it are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Crushing Winds",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (r)2\" of the target are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Winds Manifestation",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. This model deals 3 irreducible damage to itself.",
+      "effects": "Summon a Wind Gamin in base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Leap",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Place this model anywhere within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Academic_Four_Winds_Golem.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists"
+  ]
+}

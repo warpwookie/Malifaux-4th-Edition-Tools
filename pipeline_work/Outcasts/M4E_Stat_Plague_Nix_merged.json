@@ -1,0 +1,147 @@
+{
+  "card_type": "stat_card",
+  "name": "NIX",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Loyal"
+  ],
+  "keywords": [
+    "Plague"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "Loose Bowels",
+      "defensive_type": null,
+      "text": "Once per activation. When an enemy model within 3\" declares an action, this model may remove a Blight token from the enemy to make the action fail."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mouthful of Misery",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may remove a Blight token from the target to deal +2 damage.",
+      "triggers": [
+        {
+          "name": "Pouncing Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Red Death",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains a Blight token.",
+      "triggers": [
+        {
+          "name": "One by One Dropped the Revelers",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Enemy models within (aura)3\" of the target gain a Blight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fever Bloom",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a Blight token from the target. The target is dealt 1 damage and gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quarantine",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model and the target gain an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drink Spirit",
+      "action_type": null,
+      "range": "(aura)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "This model heals 1 for each enemy model within range with a Blight token.",
+      "triggers": [
+        {
+          "name": "Sacrifice the Scurried",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Kill another friendly vermin model within 3\" of this model. This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Plague\\M4E_Stat_Plague_Nix.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

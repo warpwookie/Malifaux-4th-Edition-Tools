@@ -1,0 +1,163 @@
+{
+  "card_type": "stat_card",
+  "name": "Captain Zipp",
+  "title": "Cloudchaser",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 1,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Drop the Pianos!",
+  "totem": "Earl Burns",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Infamous"
+  ],
+  "abilities": [
+    {
+      "name": "Chatty",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" must each discard a card to declare the Interact action."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Showboating",
+      "defensive_type": null,
+      "text": "When this model ends its activation, if it cheated fate from its control hand during its activation, it may draw a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Monologue",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 3\" and it gains an Entranced token.",
+      "triggers": [
+        {
+          "name": "Dumbfounded",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Craven token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Zipp Zapper",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (aura)1\" of the target are dealt 1 damage. Then, move models damaged by this action up to 2\".",
+      "triggers": [
+        {
+          "name": "Burst Damage",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the (aura) of this action by 1\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Full Speed Ahead",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Move the target 5\", ignoring models and terrain. Then, the target gains a Hastened token.",
+      "triggers": [
+        {
+          "name": "Choice Insult",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "An enemy within 6\" of the target moves 6\" directly toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Caught in the Rigging",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Choose a marker within 2\" of the target. Make a friendly copy of the chosen marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grand Display",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Piano marker within 2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Infamous\\M4E_Stat_Infamous_Captain_Zipp_Cloudchaser.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Bayou",
+    "Outcasts"
+  ]
+}

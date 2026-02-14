@@ -1,0 +1,133 @@
+{
+  "card_type": "stat_card",
+  "name": "IRON WING",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 7,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Infamous"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Sputtering Exhaust",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sky Hook",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target gains an Entranced token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pull and Drag",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target 3\" toward this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Barrel Roll!",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Move this model up to 5\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"Bet You're Too Scared to Ride...\"",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose an enemy within 2\". Place the chosen model in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Afterburner",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this model may move through enemy models. Enemy models moved through this way gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hop On",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Choose an ally within 2\". Place the chosen model in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Free Loot",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a Scheme marker within 2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Infamous\\M4E_Stat_Infamous_Iron_Wing_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit from 'Minion (3)' = 3"
+  ],
+  "factions": [
+    "Bayou",
+    "Outcasts"
+  ]
+}

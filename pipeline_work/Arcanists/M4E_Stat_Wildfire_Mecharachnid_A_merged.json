@@ -1,0 +1,121 @@
+{
+  "card_type": "stat_card",
+  "name": "MECHARACHNID",
+  "title": null,
+  "faction": "Arcanists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 6,
+  "wp": 4,
+  "sz": 2,
+  "sp": 7,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Construct"
+  ],
+  "keywords": [
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Extra Parts",
+      "defensive_type": null,
+      "text": "Once per activation. After this model kills a model, it may make a Scheme or Remains marker within 1\" of the killed model."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Circular Saw-Blade",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action has a (r), it ignores all (warding) abilities on the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Kindle",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Burning token. Deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mangle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dismantle",
+      "range": "(aura)2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Choose up to two markers within range. Make a Remains marker within 1\" of each of the chosen markers. Then, remove one of the chosen markers.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Shooting Sparks",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models within (aura)1\" resolve their Burning tokens.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Mecharachnid_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 2, derived from Minion (2) characteristic"
+  ],
+  "factions": [
+    "Arcanists"
+  ]
+}

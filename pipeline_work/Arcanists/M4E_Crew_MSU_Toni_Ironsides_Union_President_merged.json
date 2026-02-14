@@ -1,0 +1,59 @@
+{
+  "card_type": "crew_card",
+  "name": "Aggressive Legislation",
+  "associated_master": "Toni Ironsides",
+  "associated_title": "Union President",
+  "faction": "M&SU",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly M&SU models",
+      "abilities": [
+        {
+          "name": "Union Turf",
+          "defensive_type": null,
+          "text": "While this model has half of its maximum health or less, friendly Scheme markers within 3\" may not be removed by enemy effects."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique M&SU models",
+      "actions": [
+        {
+          "name": "Safety Inspection",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": null,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Deal 2 damage to target engaged ally.",
+          "effects": "Summon an M&SU minion into base contact with the target. The summoned model has 4 health.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The icon before 'Safety Inspection' appears to be a special marker indicating signature action or once-per-activation action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Arcanists\\M4E_Crew_MSU_Toni_Ironsides_Union_President_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 442,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\M&SU\\M4E_Crew_MSU_Toni_Ironsides_Union_President.pdf",
+  "factions": [
+    "M&SU",
+    "Arcanists"
+  ]
+}

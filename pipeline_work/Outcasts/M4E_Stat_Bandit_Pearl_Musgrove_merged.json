@@ -1,0 +1,132 @@
+{
+  "card_type": "stat_card",
+  "name": "Pearl Musgrove",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Bandit"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Relapsed",
+      "defensive_type": null,
+      "text": "Once per turn. After a marker within 6\" is removed, draw a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sawed-off Shotgun",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 5,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of (melee)1\" or (gun)8\".",
+      "effects": "If this action receives a raise, deal 1 damage to enemy models within (aura)1\" of the target.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Make a Distraction",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Enemy models within (aura)3\" of the target must pass a TN 12 Wp duel or gain a Staggered token, and this model may move them up to 4\".",
+      "triggers": [
+        {
+          "name": "All Goin' as Planned",
+          "suit": "(m)",
+          "timing": "after_resolving",
+          "text": "After resolving, move the target up to 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Vengeful",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Contraband",
+      "range": "5\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Make a Scheme marker within range.",
+      "triggers": [
+        {
+          "name": "Brushfire",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Models within (aura)1\" of the made marker must move 3\" away from it or gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Pearl_Musgrove.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts"
+  ]
+}

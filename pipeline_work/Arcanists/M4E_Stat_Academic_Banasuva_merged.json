@@ -1,0 +1,156 @@
+{
+  "card_type": "stat_card",
+  "name": "BANASUVA",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Elemental"
+  ],
+  "keywords": [
+    "Academic"
+  ],
+  "abilities": [
+    {
+      "name": "Brutal Fire Lord",
+      "defensive_type": null,
+      "text": "After resolving an attack action that targeted this model, this model may either deal 1 damage to the target or have the target gain a Burning token."
+    },
+    {
+      "name": "Demise (Elemental Breakdown)",
+      "defensive_type": null,
+      "text": "After this model is killed, enemy models within (t) 4\" of this model are dealt 1 damage and gain a Burning token."
+    },
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Thousand Arms of Justice",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of this model.",
+      "triggers": [
+        {
+          "name": "Ember",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Revelation",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Toss",
+      "action_type": "magic",
+      "range": "(magic)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 11,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This may target friendly models. Target a model of lower Sz than this model.",
+      "effects": "Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement.",
+      "triggers": [
+        {
+          "name": "Ember",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The target gains a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Flaming Aura",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Flame's Embrace",
+      "action_type": null,
+      "range": "(aura)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Enemies within range must pass a TN 13 Df duel or be dealt 2 damage and gain a Burning token. Models with a Burning token suffer a (-) to this duel.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Stat_Academic_Banasuva.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Arcanists"
+  ]
+}

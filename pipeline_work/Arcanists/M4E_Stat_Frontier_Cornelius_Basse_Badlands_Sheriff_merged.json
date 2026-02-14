@@ -1,0 +1,173 @@
+{
+  "card_type": "stat_card",
+  "name": "Cornelius Basse",
+  "title": "Badlands Sheriff",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Law's Reach",
+  "totem": "Bernadette, Bravo",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Frontier"
+  ],
+  "abilities": [
+    {
+      "name": "Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, increase the distance this model moves by up to +2\"."
+    },
+    {
+      "name": "U Tangled in Briars",
+      "defensive_type": "unusual_defense",
+      "text": "After resolving an action that targeted and damaged this model, this model may drain a (soulstone) to place the attacker within 4\" of its current location and have it gain an Exposed token."
+    },
+    {
+      "name": "Warrants",
+      "defensive_type": null,
+      "text": "After an enemy model within 10\" declares the Interact action or successfully attacks a friendly model, that enemy gains a Bounty token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shackles",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Staggered token. Move the target up to 2\", then move this model up to 2\".",
+      "triggers": [
+        {
+          "name": "Tough as Nails",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. This model heals 4, +2 if this action received a raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Biting Jaws",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Summon a Clockwork Trap in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Runed Shotgun",
+      "action_type": "missile",
+      "range": "(gun)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, deal 1 damage to enemy models within (x)2\" of the target. Models damaged by this action gain a Staggered token.",
+      "triggers": [
+        {
+          "name": "Maneuver",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Another ally within LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Wanted",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Bounty token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "On the Trail",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a model with a Bounty token.",
+      "effects": "Move this model up to its Sp toward the target.",
+      "triggers": [
+        {
+          "name": "Spring Trap",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "A Clockwork Trap within 6\" may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Set Trap",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Summon a Clockwork Trap in range.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Frontier\\M4E_Stat_Frontier_Cornelius_Basse_Badlands_Sheriff.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Arcanists"
+  ]
+}

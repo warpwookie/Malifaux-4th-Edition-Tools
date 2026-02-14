@@ -1,0 +1,149 @@
+{
+  "card_type": "stat_card",
+  "name": "HERBIE",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Cult",
+    "Wildfire"
+  ],
+  "abilities": [
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "The Madness Engine",
+      "defensive_type": null,
+      "text": "After an enemy model with a Burning token within 6\" is killed, this model infuses a (soulstone)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Thermite Injection",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Burning token, this action has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Onslaught",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Breath of Fire",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Like the Wind",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring enemy models.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Living Spark",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "X is equal to 2 plus the level of this crew's fervor bar.",
+      "effects": "All models within (Y)X\" of the target must pass a TN 13 Wp duel or resolve their Burning tokens.",
+      "triggers": [
+        {
+          "name": "Collapsing Star",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Choose toward or away. Move all models that failed this duel up to 4\" in the chosen direction from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Wildfire\\M4E_Stat_Wildfire_Herbie.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Living Spark uses (Y) symbol before X\" in the effects text - interpreted as pulse range indicator based on context"
+  ],
+  "factions": [
+    "Arcanists"
+  ]
+}

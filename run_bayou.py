@@ -75,7 +75,34 @@ def collect_pdfs(keywords: list, source_dir: Path) -> list:
     Deduplicates across folders and filters art variants (keeps _A only).
     Returns list of Path objects.
     """
-    seen_bases = {}  # base_name -> (path, variant, keyword_folder)
+    # Known filename typos/inconsistencies -> canonical form
+    FILENAME_FIXES = {
+        "Lighting_Bug": "Lightning_Bug",   # Typo in Wizz-Bang folder
+        "Hog-Whisperer": "Hog_Whisperer",  # Hyphen vs underscore inconsistency
+    }
+    
+    seen_bases = {}  # normalized_base -> (path, variant, keyword_folder)
+    
+    def normalize_base(base_name: str) -> str:
+        """Normalize a base name for dedup comparison."""
+        n = base_name
+        # Apply known filename typo fixes
+        for wrong, right in FILENAME_FIXES.items():
+            n = n.replace(wrong, right)
+        # Strip secondary keyword tags that differ between folders
+        # e.g., "M4E_Stat_Sooey_Kin_Swine_Twirler" vs "M4E_Stat_Sooey_Swine_Twirler"
+        # Remove keyword segments embedded in the name
+        keyword_tags = ['_Kin_', '_Sooey_', '_Swampfiend_', '_Tri-Chi_', '_Wizz-Bang_',
+                        '_Infamous_', '_Tricksy_', '_Returned_']
+        for tag in keyword_tags:
+            # Only strip if it appears AFTER the card type prefix
+            prefix_end = n.find('_', n.find('Stat_') + 5) if 'Stat_' in n else -1
+            if prefix_end > 0 and tag in n[prefix_end:]:
+                n = n.replace(tag, '_', 1)
+                # Clean up double underscores
+                while '__' in n:
+                    n = n.replace('__', '_')
+        return n
     
     for keyword in keywords:
         keyword_dir = source_dir / keyword
@@ -85,36 +112,31 @@ def collect_pdfs(keywords: list, source_dir: Path) -> list:
         
         for pdf in sorted(keyword_dir.glob("*.pdf")):
             base, variant = detect_art_variant(pdf.stem)
+            norm_base = normalize_base(base)
             
-            if base not in seen_bases:
-                # First time seeing this card — keep it
-                seen_bases[base] = (pdf, variant, keyword)
+            if norm_base not in seen_bases:
+                seen_bases[norm_base] = (pdf, variant, keyword)
             else:
-                existing_path, existing_variant, existing_kw = seen_bases[base]
-                # If this is a lower variant letter (e.g., A < B), prefer it
-                if variant and existing_variant and variant < existing_variant:
-                    seen_bases[base] = (pdf, variant, keyword)
-                # If existing has no variant but this one does, keep existing
-                # If this is a duplicate from another folder, skip it
-                if existing_kw != keyword:
-                    pass  # Already tracked, cross-folder dupe handled
+                existing_path, existing_variant, existing_kw = seen_bases[norm_base]
+                # Prefer variant A over B/C, or no-suffix over any suffix
+                if variant == "" and existing_variant != "":
+                    seen_bases[norm_base] = (pdf, variant, keyword)
+                elif variant == "A" and existing_variant not in ("", "A"):
+                    seen_bases[norm_base] = (pdf, variant, keyword)
+                elif variant and existing_variant and variant < existing_variant:
+                    seen_bases[norm_base] = (pdf, variant, keyword)
     
     # Filter: only keep primary variants (A or no suffix)
     result = []
     skipped_variants = []
-    for base, (pdf, variant, keyword) in sorted(seen_bases.items()):
+    for norm_base, (pdf, variant, keyword) in sorted(seen_bases.items()):
         if variant == "" or variant == "A":
             result.append(pdf)
         else:
-            # Only a B/C/etc. exists with no A — still process it
-            # Check if A exists in the seen_bases
-            a_base = base  # The base is already without the variant suffix
-            has_primary = any(
-                v == "A" or v == "" 
-                for b, (_, v, _) in seen_bases.items() 
-                if b == a_base
-            )
+            # Check if this base has an A or no-suffix version
+            has_primary = (variant == "A" or variant == "")
             if not has_primary:
+                # No A exists for this card, use whatever we have
                 result.append(pdf)
             else:
                 skipped_variants.append(f"{pdf.name} (variant {variant}, using A instead)")
@@ -139,33 +161,39 @@ def guess_model_name(stem: str) -> str:
     Make a rough guess at the model name from the filename.
     Used for pre-filtering only — not for actual data extraction.
     """
-    # Remove prefix pattern: M4E_Stat_Keyword_ or M4E_Crew_Keyword_ etc.
-    # Also handle: M4E_Stat_Byu-Versatile_Keyword_Name
     s = stem
     # Remove M4E prefix
     s = re.sub(r'^M4E_(Stat|Crew|Upgrade)_', '', s)
-    # Remove Byu-Versatile prefix
+    # Remove Byu-Versatile prefix (with or without hyphen)
     s = re.sub(r'^Byu-?Versatile_', '', s)
-    # Remove keyword prefix (first segment before underscore if it matches a known keyword)
-    known_kw = ['BigHat', 'Big_Hat', 'Kin', 'Sooey', 'Tri-Chi', 'Wizz-Bang', 
-                'Swampfiend', 'Infamous', 'Tricksy', 'Returned', 'Crossroads',
-                'December', 'Lucky_Fate']
-    for kw in known_kw:
-        if s.startswith(kw + '_'):
-            s = s[len(kw)+1:]
-            break
-    # Remove second keyword if present (e.g., Sooey_Kin_Name -> Name after Kin removed)
-    for kw in known_kw:
-        if s.startswith(kw + '_'):
-            s = s[len(kw)+1:]
-            break
+    # Known keyword prefixes to strip (order matters — longer/compound first)
+    known_kw = ['Big_Hat', 'BigHat', 'Tri-Chi', 'Wizz-Bang', 'Lucky_Fate',
+                'Kin', 'Sooey', 'Swampfiend', 'Infamous', 'Tricksy', 
+                'Returned', 'Crossroads', 'December', 'Jockey']
+    # Strip up to three keyword prefixes (e.g., Byu-Versatile_Sooey_Jockey_Name)
+    for _ in range(3):
+        for kw in known_kw:
+            if s.startswith(kw + '_'):
+                s = s[len(kw)+1:]
+                break
     # Remove art variant suffix
     base, variant = detect_art_variant(s)
     if variant:
         s = base
     # Convert underscores to spaces
     s = s.replace('_', ' ')
+    # Normalize hyphens to spaces too
+    s = s.replace('-', ' ')
     return s
+
+
+def normalize_for_comparison(name: str) -> str:
+    """Normalize a model name for fuzzy matching."""
+    return (name.lower()
+            .replace("'", "")
+            .replace("-", " ")
+            .replace("  ", " ")
+            .strip())
 
 
 def seed_database(db_path: str, json_path: Path):
@@ -283,15 +311,15 @@ def export_all_cards(db_path: str, output_path: Path):
         model["characteristics"] = [r["characteristic"] for r in c.fetchall()]
         
         # Abilities
-        c.execute("SELECT * FROM abilities WHERE model_id=? ORDER BY sort_order", (mid,))
+        c.execute("SELECT * FROM abilities WHERE model_id=? ORDER BY id", (mid,))
         model["abilities"] = [dict(r) for r in c.fetchall()]
         
         # Actions
-        c.execute("SELECT * FROM actions WHERE model_id=? ORDER BY sort_order", (mid,))
+        c.execute("SELECT * FROM actions WHERE model_id=? ORDER BY id", (mid,))
         actions = [dict(r) for r in c.fetchall()]
         for action in actions:
             aid = action["id"]
-            c.execute("SELECT * FROM triggers WHERE action_id=? ORDER BY sort_order", (aid,))
+            c.execute("SELECT * FROM triggers WHERE action_id=? ORDER BY id", (aid,))
             action["triggers"] = [dict(r) for r in c.fetchall()]
         model["actions"] = actions
     
@@ -350,11 +378,12 @@ def main():
     
     for pdf in pdfs:
         guessed_name = guess_model_name(pdf.stem)
+        guessed_norm = normalize_for_comparison(guessed_name)
         # Check if any existing model name is close enough
         is_known = False
         for (name, title) in existing:
-            if name.lower().replace("'", "").replace(" ", "") == \
-               guessed_name.lower().replace("'", "").replace(" ", ""):
+            existing_norm = normalize_for_comparison(name)
+            if existing_norm == guessed_norm:
                 is_known = True
                 already_done.append(f"{pdf.name} -> {name}")
                 break

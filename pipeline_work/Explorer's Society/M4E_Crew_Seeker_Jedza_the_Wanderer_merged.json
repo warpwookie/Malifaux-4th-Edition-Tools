@@ -1,0 +1,71 @@
+{
+  "card_type": "crew_card",
+  "name": "Eternal Pilgrimage",
+  "associated_master": "Jedza",
+  "associated_title": "The Wanderer",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Seeker models",
+      "abilities": [
+        {
+          "name": "Surplus of Life",
+          "defensive_type": null,
+          "text": "When this model heals, it may reduce the amount healed to 0. If it does so, this model gains a Life token."
+        },
+        {
+          "name": "Cursed to Wander",
+          "defensive_type": null,
+          "text": "When this model heals in excess of its maximum health, it may move up to 2\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Seeker models",
+      "actions": [
+        {
+          "name": "Unclaimed Soul",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Target a friendly Lamp marker. Name a friendly non-master model killed this game.",
+          "effects": "Summon the named model with 4 health in base contact with the target, then remove the target.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Life",
+      "text": "When this model heals, it may reduce the amount healed to 0. If it does so, this model gains a Life token."
+    }
+  ],
+  "extraction_notes": [
+    "Life token definition inferred from Surplus of Life ability text",
+    "Faction not explicitly stated on card",
+    "Unclaimed Soul uses diamond-diamond icon for signature action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_Seeker_Jedza_the_Wanderer_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 560,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Crew_Seeker_Jedza_the_Wanderer.pdf",
+  "factions": [
+    "Unknown",
+    "Explorer's Society"
+  ]
+}

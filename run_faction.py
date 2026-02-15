@@ -34,7 +34,7 @@ DB_DIR = REPO_ROOT / "db"
 # Valid factions
 VALID_FACTIONS = [
     "Guild", "Arcanists", "Neverborn", "Bayou",
-    "Outcasts", "Resurrectionists", "Ten Thunders", "Explorers Society"
+    "Outcasts", "Resurrectionists", "Ten Thunders", "Explorer's Society"
 ]
 
 # Add scripts to path so pipeline can import its siblings
@@ -405,16 +405,25 @@ Examples:
     
     # Validate faction
     faction = args.faction
+    # Common aliases (avoid needing apostrophes on command line)
+    FACTION_ALIASES = {
+        "explorers society": "Explorer's Society",
+        "explorers": "Explorer's Society",
+    }
     if faction not in VALID_FACTIONS:
-        # Try case-insensitive match
-        for vf in VALID_FACTIONS:
-            if vf.lower() == faction.lower():
-                faction = vf
-                break
+        # Try alias first
+        if faction.lower() in FACTION_ALIASES:
+            faction = FACTION_ALIASES[faction.lower()]
         else:
-            print(f"ERROR: Unknown faction '{faction}'")
-            print(f"Valid factions: {', '.join(VALID_FACTIONS)}")
-            sys.exit(1)
+            # Try case-insensitive match
+            for vf in VALID_FACTIONS:
+                if vf.lower() == faction.lower():
+                    faction = vf
+                    break
+            else:
+                print(f"ERROR: Unknown faction '{faction}'")
+                print(f"Valid factions: {', '.join(VALID_FACTIONS)}")
+                sys.exit(1)
     
     # Resolve faction-specific paths
     source_dir = faction_source_dir(faction)

@@ -1,0 +1,158 @@
+{
+  "card_type": "stat_card",
+  "name": "Harata Ngaatoro",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "EVS"
+  ],
+  "abilities": [
+    {
+      "name": "Combat Finesse",
+      "defensive_type": "fortitude",
+      "text": "When this model is targeted with a (melee) action, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "Echoes of the Ocean",
+      "defensive_type": null,
+      "text": "Once per turn. When a friendly Scheme marker is removed within 6\", this model may drain a (soulstone) or remove a Voyage token. If it does so, it may make a Scheme marker within 6\" of itself."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Carved Taiaha",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a Voyage token. If it does so, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Claimed by the Sea",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a Scheme marker.",
+      "effects": "Enemy models within (X)2\" of the target must pass a TN 13 Sp duel or gain a Staggered token and be dealt 2 damage. Then, remove the target.",
+      "triggers": [
+        {
+          "name": "Calm Waters",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Voyage token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mass Hysteria",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Haka",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may declare the Prepare action. Then, apply one of the following effects:",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "P\u014dwhiri",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Friendly models within 3\" heal 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Peruperu",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Enemy models within 3\" must pass a TN 13 Wp duel or gain a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Ngeri",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Another ally within 3\" declares the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\EVS\\M4E_Stat_EVS_Harata_Ngaatoro.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Haka action has three options (P\u014dwhiri, Peruperu, Ngeri) listed as trigger-like entries without suit icons. These appear to be choices for the action rather than true triggers, but are formatted similarly to triggers with bold names and colons."
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

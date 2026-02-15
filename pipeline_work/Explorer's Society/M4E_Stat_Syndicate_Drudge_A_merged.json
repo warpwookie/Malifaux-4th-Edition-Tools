@@ -1,0 +1,77 @@
+{
+  "card_type": "stat_card",
+  "name": "Drudge",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "2",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon",
+    "Living"
+  ],
+  "keywords": [
+    "Syndicate"
+  ],
+  "abilities": [
+    {
+      "name": "Dependable",
+      "defensive_type": null,
+      "text": "Enemy models within 3\" may not declare the Interact action."
+    },
+    {
+      "name": "Put Your Back Into It",
+      "defensive_type": null,
+      "text": "Once per turn. Before this model moves, it may discard a card to remove a marker within 2\" of it. If it does, after resolving the move, make a marker of the same type into base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Target a Scheme marker",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Scheme marker within 4\" of the target. Then if the target was friendly, remove the target. If the target was enemy and this action received a raise, remove the target.",
+      "triggers": [
+        {
+          "name": "Glory of Ridley",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Draw a card of value 1-3 from your discard pile.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Syndicate\\M4E_Stat_Syndicate_Drudge_A.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Drudge' back='Goon Squad'"
+  ],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Peon (3)' characteristic"
+  ],
+  "factions": [
+    "Outcasts",
+    "Explorer's Society"
+  ]
+}

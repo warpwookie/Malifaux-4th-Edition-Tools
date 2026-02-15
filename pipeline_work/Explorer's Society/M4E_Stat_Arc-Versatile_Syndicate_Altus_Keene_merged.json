@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "Altus Keene",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Syndicate"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Which One is Real?",
+      "defensive_type": null,
+      "text": "When this model activates, the opposing player must discard a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shatter Illusions",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly token from the target to receive a (-).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Arc",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Healing Energy",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "Have You Seen My Sister?",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with a friendly Irena Keene within 6\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Revitalize",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Remove a token from the target. If this action receives a raise, remove any number of tokens from the target.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Syndicate\\M4E_Stat_Arc-Versatile_Syndicate_Altus_Keene.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "card": {
+    "card_type": "stat_card",
+    "name": "Empyrean Eagle",
+    "title": null,
+    "faction": "Explorer's Society",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 4,
+    "sz": 2,
+    "sp": 7,
+    "health": 5,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": null,
+    "totem": null,
+    "characteristics": [
+      "Totem",
+      "Minion (2)",
+      "Living",
+      "Beast"
+    ],
+    "keywords": [
+      "Apex"
+    ],
+    "abilities": [
+      {
+        "name": "Flash of Feathers",
+        "defensive_type": null,
+        "text": "When another friendly model targets a model engaged by this model with an attack action, it receives +1 Skl."
+      },
+      {
+        "name": "Flight",
+        "defensive_type": null,
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "name": "King of the Skies",
+        "defensive_type": null,
+        "text": "When this model declares the Charge action, if it is at elevation 2 or higher, its generated attack receives +1 Skl and +1 Dmg."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Trained Stoop",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": null,
+        "effects": null,
+        "triggers": [
+          {
+            "name": "Majesty Incarnate",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Another ally in this model's LoS may gain a Reload token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\"AHHH, MY EYE!\"",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage and move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      },
+      {
+        "name": "Aerial Strike",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "1",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action ignores LoS.",
+        "effects": "Place this model into base contact with the target.",
+        "triggers": [
+          {
+            "name": "Prey Spotted",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model may draw two cards and then discard one card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      }
+    ],
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Apex\\M4E_Stat_Apex_Empyrean_Eagle_A.pdf",
+    "merge_warnings": [],
+    "extraction_notes": [],
+    "factions": [
+      "Explorer's Society"
+    ]
+  },
+  "validation": {
+    "card_name": "Empyrean Eagle",
+    "passed": false,
+    "needs_review": true,
+    "hard_violations": [
+      "Minion(2) but model_limit=1"
+    ],
+    "soft_flags": [
+      "Totem with infuses_soulstone_on_death=false (unusual)"
+    ],
+    "hallucination_flags": [],
+    "info": []
+  }
+}

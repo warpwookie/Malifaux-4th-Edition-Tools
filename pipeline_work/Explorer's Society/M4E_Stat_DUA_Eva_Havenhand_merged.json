@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "EVA HAVENHAND",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "DUA"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Mind Me",
+      "defensive_type": null,
+      "text": "The following do not restrict this model from taking the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+    },
+    {
+      "name": "Elusive",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Electric Whip",
+      "action_type": "melee",
+      "range": "(melee)4\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Entranced token, move the target up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Sweeping Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then, the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Veiled Derringer",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly Entranced token from the target.",
+      "effects": "When resolving, if a token was removed, this model adds a suit of its choice to the final duel total.",
+      "triggers": [
+        {
+          "name": "Foiled Plans",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must remove an enemy Scheme marker from anywhere in play. If it cannot, it is dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Secret Passage",
+      "action_type": null,
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may only be declared if this model is within 1\" of blocking terrain.",
+      "effects": "Place this model anywhere within range within 1\" of blocking terrain.",
+      "triggers": [
+        {
+          "name": "Soundrel",
+          "suit": "(t)",
+          "timing": "after_resolving",
+          "text": "Once per turn. Look at the top three cards of the opposing player's face deck and place them back in any order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\DUA\\M4E_Stat_DUA_Eva_Havenhand.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

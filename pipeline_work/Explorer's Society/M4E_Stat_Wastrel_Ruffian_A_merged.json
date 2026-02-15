@@ -1,0 +1,144 @@
+{
+  "card_type": "stat_card",
+  "name": "RUFFIAN",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Wastrel"
+  ],
+  "abilities": [
+    {
+      "name": "\"Everything Must Go!\"",
+      "defensive_type": null,
+      "text": "When this model declares an action printed on its stat card it may discard an Artifact upgrade from itself. If it does so, the action receives a (+)."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gang Weapons",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "The target may not drain (fortitude) while this action is resolving.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Derringer",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Imitated Art",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "An ally within 3\" of this model gains a Replica token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hand of Greed",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Remains marker. Place this model in base contact with the target. Then, draw a card and remove the target.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Chain Gang",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another friendly model only. Once per turn. Move the target up to 3\". Then, this model may move up to 3\", which must end within 3\" of the target.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Wastrel\\M4E_Stat_Wastrel_Ruffian_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Outcasts",
+    "Explorer's Society"
+  ]
+}

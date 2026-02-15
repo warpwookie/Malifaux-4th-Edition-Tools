@@ -1,0 +1,110 @@
+{
+  "card_type": "stat_card",
+  "name": "Runaway",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Minion (3)",
+    "Living"
+  ],
+  "keywords": [
+    "Apex"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Hunted)",
+      "defensive_type": null,
+      "text": "After this model is killed, if it was killed by a friendly Lord Cooper, draw two cards."
+    },
+    {
+      "name": "Head Start",
+      "defensive_type": null,
+      "text": "This model must be deployed on the centerline."
+    },
+    {
+      "name": "Insignificant",
+      "defensive_type": null,
+      "text": "This model cannot declare the Interact action and is ignored for strategies and schemes."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Just Let Me By",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Desperate Duck: Place this model anywhere within 2\".",
+      "effects": null,
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Call for Help",
+      "action_type": "magic",
+      "range": "(magic)4\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Distracted token. After resolving this action, a friendly Lord Cooper must declare a (melee) action targeting this model, if able.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Escape",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot be declared by non-Runaway models. This model must be within 4\" of a table corner and in the opposing player's deployment zone.",
+      "effects": "This model may draw 3 cards and make a Scheme marker anywhere on the table. Then, remove this model from the game (it is not killed).",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Apex\\M4E_Stat_Apex_Runaway_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Explorer's Society"
+  ]
+}

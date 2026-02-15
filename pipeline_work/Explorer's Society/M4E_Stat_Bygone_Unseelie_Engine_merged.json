@@ -1,0 +1,167 @@
+{
+  "card_type": "stat_card",
+  "name": "Unseelie Engine",
+  "title": null,
+  "faction": "Arcanists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 4,
+  "sz": 4,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Bygone"
+  ],
+  "abilities": [
+    {
+      "name": "Ancient Technology",
+      "defensive_type": null,
+      "text": "Once per activation. When this model is placed, this model may have allies within (t)2\" gain a Shielded token."
+    },
+    {
+      "name": "Take the Hit",
+      "defensive_type": null,
+      "text": "Once per activation. After another friendly model within 2\" is dealt damage, this model may be dealt the same amount of damage to reduce the amount dealt to the other model to 0."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Atlas Strike",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (melee)2\" of the target are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Falter",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Scars of Cherufe",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "Deal 1 irreducible damage to this model. When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Survival Skills",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Power the Engine",
+      "action_type": null,
+      "range": "(aura)4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within range must pass a TN 12 Wp duel or be dealt 2 damage.",
+      "triggers": [
+        {
+          "name": "Lost Icon",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with a Lost Technology marker within 8\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mass Hysteria",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Ritual of Cleansing",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Allies within range may remove a token from themselves.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Defensive Energy",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target gains a Shielded token.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Bygone\\M4E_Stat_Bygone_Unseelie_Engine.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Arcanists",
+    "Explorer's Society"
+  ]
+}

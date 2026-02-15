@@ -1,0 +1,115 @@
+{
+  "card_type": "stat_card",
+  "name": "Crypsis Corps",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Apex"
+  ],
+  "abilities": [
+    {
+      "name": "Beneath the Leaves",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain."
+    },
+    {
+      "name": "Sniper",
+      "defensive_type": null,
+      "text": "While this model is at elevation 2 or higher, it increases the Rg of its (missile) actions by +6\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Crypsis Rifle",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If the target has any tokens, deal +1 damage.",
+      "triggers": [
+        {
+          "name": "Foiled Plans",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must remove an enemy Scheme marker from anywhere in play. If it cannot, it is dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tracer Rounds",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Focus Attention",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Aura (Concealment) token.",
+      "triggers": [
+        {
+          "name": "Patient Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Reload token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Unearthed Secrets",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Apex\\M4E_Stat_Apex_Crypsis_Corps.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

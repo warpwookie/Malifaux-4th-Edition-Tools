@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "KIYA MANIMI",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "EVS"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (unusual_defense) abilities of other models."
+    },
+    {
+      "name": "Technophile",
+      "defensive_type": null,
+      "text": "Once per activation. After a model empowers a duel within 6\" of this model, this model gains a Voyage token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Charged Spear",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly token from itself. If a token was removed, damage from this attack is irreducible.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then, the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Discus Grenade",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (x)2\" of the target are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Convulsions",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then, the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Amped Up",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Discard a card or remove a friendly token from this model.",
+      "effects": "This model heals 2 and enemy models within (x)2\" are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Overclocked Reflex",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 2\" of this model gains a Fast token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\EVS\\M4E_Stat_EVS_Kiya_Manimi.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The shield icon in the Armor ability text is rendered as (unusual_defense) based on defensive_type context",
+    "The shield icon in the Ruthless ability text refers to defensive abilities generally"
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

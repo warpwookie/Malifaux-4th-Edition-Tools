@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Inevitability of Death",
+  "associated_master": "Jedza",
+  "associated_title": "Everlasting",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Seeker models",
+      "abilities": [
+        {
+          "name": "A Line of Graves",
+          "defensive_type": null,
+          "text": "After this model kills a non-peon enemy model, this model gains a Death token."
+        },
+        {
+          "name": "Font of the Everlasting",
+          "defensive_type": null,
+          "text": "When this model ends its activation, it may remove a Death token from itself to heal 2."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Seeker models",
+      "actions": [
+        {
+          "name": "Dredge Up",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Target a friendly Lamp marker within range. This model may drain a (t).",
+          "effects": "This model declares a /// action drawing range and LoS from the target. If this model drained a (t), the generated action receives a (crow) and a suit of this model's choice.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Death token mentioned in abilities but no explicit token definition provided on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_Seeker_Jedza_Everlasting_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 501,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Crew_Seeker_Jedza_Everlasting.pdf",
+  "factions": [
+    "Resurrectionists",
+    "Explorer's Society"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "card_type": "stat_card",
+  "name": "Calypso Mk II",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 4,
+  "sz": 4,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct",
+    "Loyal"
+  ],
+  "keywords": [
+    "EVS"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Demise (Ejection Seat)",
+      "defensive_type": null,
+      "text": "When this model is killed, it is replaced with Dr. Beebe and heals 5. Put any markers on this model's stat card onto the new models stat card."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mining Tools",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "The target may not drain (fortitude) during this action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mass of Tentacles",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Move enemy models within (aura)2\" of this model 2\". Deal 1 damage to models moved this way.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Deep Sea Discovery",
+      "range": "4\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a type of enemy marker not on this model's stat card.",
+      "effects": "Place this model in base contact with the target, then remove the target and put it onto this model's card. If this model has two markers on its card, remove them all and draw two cards.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Onward",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may declare the Walk action.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\EVS\\M4E_Stat_EVS_Calypso_Mk_II.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

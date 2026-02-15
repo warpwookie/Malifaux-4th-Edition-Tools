@@ -1,0 +1,144 @@
+{
+  "card_type": "stat_card",
+  "name": "Grave Goo",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique"
+  ],
+  "keywords": [
+    "Seeker"
+  ],
+  "abilities": [
+    {
+      "name": "Latch On",
+      "defensive_type": null,
+      "text": "Enemy models in base contact with this model suffer -1 DF."
+    },
+    {
+      "name": "Through the Muck",
+      "defensive_type": null,
+      "text": "If this model ends its activation within 2\" of a piece of terrain or Lamp marker, it heals 1."
+    },
+    {
+      "name": "Trail of Slime",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sludge Strike",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of (melee)2\" or (gun)8\". If the target is in base contact with this model, this action receives a (c).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Slurping Maw",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again, drawing range and LoS from a model with a friendly Consumed upgrade.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Burst of Speed",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Acidic Touch",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly token from this model. When resolving, damage from this action is irreducible.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Ingested",
+      "action_type": "melee",
+      "range": "(melee)4\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Place this model in base contact with the target. Then, attach the Consumed upgrade to the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Last Light",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Death token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Horrible Filling",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "The target is dealt 1 irreducible damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rapid Digestion",
+      "range": "4\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove target Remains or Lamp marker. This model heals 2. If this action removed a Lamp marker, this model gains a Life token.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Stat_Seeker_Grave_Goo.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Explorer's Society"
+  ]
+}

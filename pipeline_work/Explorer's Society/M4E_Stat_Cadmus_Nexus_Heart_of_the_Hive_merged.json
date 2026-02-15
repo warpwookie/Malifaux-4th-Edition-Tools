@@ -1,0 +1,162 @@
+{
+  "card_type": "stat_card",
+  "name": "Nexus",
+  "title": "Heart of the Hive",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 7,
+  "sz": 3,
+  "sp": 5,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Hivemind",
+  "totem": "Shambling Nest (2)",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Cadmus"
+  ],
+  "abilities": [
+    {
+      "name": "Connected Consciousness",
+      "defensive_type": null,
+      "text": "When declaring non-general actions, this model may draw range and LoS from an ally or model with Parasite token within 12\" that was not used for this ability this turn."
+    },
+    {
+      "name": "Siphon Power",
+      "defensive_type": null,
+      "text": "When this model declares an action, it may deal 1 damage to a friendly model within 4\" to add a suit of its choice to the duel."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hive Strike",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Parasite token, this action has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tag",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Parasite token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spin Web",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Web marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Will of Cadmus",
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "Target a model with a Parasite token or an ally. Target declares an action chosen and controlled by this model. The generated action ignores engagement.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Citizens of Malifaux",
+      "range": "(aura)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "X is equal to the turn number. Choose up to X+1 Remains or Web markers within range. Summon an Eyes and Ears in base contact with the chosen markers, then remove those markers.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Surge",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Whispers in the Web",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Web marker. Make a Web marker in base contact with each enemy Scheme marker within (aura)3\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Crawler's Report",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove all enemy Scheme markers within (aura)3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Cadmus\\M4E_Stat_Cadmus_Nexus_Heart_of_the_Hive.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn",
+    "Explorer's Society"
+  ]
+}

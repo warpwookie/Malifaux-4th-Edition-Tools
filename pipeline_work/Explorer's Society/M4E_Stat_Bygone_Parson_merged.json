@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "PARSON",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Bygone"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Reflective Glass",
+      "defensive_type": null,
+      "text": "When this model removes a Shielded token, it may have an enemy model within 2\" gain a Distracted token."
+    },
+    {
+      "name": "The Old-Fashioned Way",
+      "defensive_type": null,
+      "text": "If this model has a Shielded token, enemy attack actions that target this model cannot cheat their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Relic Hammer",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may not be controlled by the enemy crew. If the target is a master, this action receives a (fate modifier).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "From the Heavens",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Broken Focus",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "The Nomad's Path",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded and Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Auan Forgemaster",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Up to two allies in LoS gain a Shielded token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Fresh from the Forge",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Remove any number of tokens from the target. If this action receives a raise, the target heals 2.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Fortify",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Bygone\\M4E_Stat_Bygone_Parson.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The costs_and_restrictions text for Relic Hammer contains an icon that appears to be a fate modifier (boost). I've rendered it as (fate modifier) but the exact icon is unclear.",
+    "The text mentions '(warding) abilities' which I've preserved as (warding) to indicate the icon."
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

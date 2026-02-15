@@ -1,0 +1,122 @@
+{
+  "card_type": "stat_card",
+  "name": "Moorwraith",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion"
+  ],
+  "keywords": [
+    "Seeker"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Demise (Earth's Remedy)",
+      "defensive_type": null,
+      "text": "After this model is killed, allies within (m)2\" of this model heal 1."
+    },
+    {
+      "name": "Through the Muck",
+      "defensive_type": null,
+      "text": "If this model ends its activation within 2\" of a piece of terrain or Lamp marker, it heals 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rolling Stone",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may deal up to 2 damage to itself.",
+      "effects": "This action deals +1 damage to the target per damage suffered when declaring this action.",
+      "triggers": [
+        {
+          "name": "Bowled Over",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target 4\" away, then move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grab On",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dirt Nap",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 1 and gains a Slow token.",
+      "triggers": [
+        {
+          "name": "Sinking Tomb",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, instead of healing, the target is dealt 1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Healing Burst",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models within (pulse)2\" of the target heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Stat_Seeker_Moorwraith_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 from 'Minion (3)' characteristic",
+    "STN: 8 visible on card (likely station value)"
+  ],
+  "factions": [
+    "Bayou",
+    "Explorer's Society"
+  ]
+}

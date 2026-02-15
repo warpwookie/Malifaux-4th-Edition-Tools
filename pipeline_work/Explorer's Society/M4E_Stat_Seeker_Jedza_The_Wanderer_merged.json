@@ -1,0 +1,181 @@
+{
+  "card_type": "stat_card",
+  "name": "JEDZA",
+  "title": "THE WANDERER",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": "Sophie",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Undead"
+  ],
+  "keywords": [
+    "Seeker"
+  ],
+  "abilities": [
+    {
+      "name": "Eternal Pilgrimage",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Cradle the Spark",
+      "defensive_type": "unusual_defense",
+      "text": "While this model has a Life token, enemy attack actions that target this model suffer a (-) to their duel."
+    },
+    {
+      "name": "Fragility of Life",
+      "defensive_type": null,
+      "text": "When a model is killed within LoS of this model, this model may drain a (soulstone). If it does so, an ally within 6\" of this model may heal 2."
+    },
+    {
+      "name": "Midnight Crossing",
+      "defensive_type": null,
+      "text": "When declaring non-general actions, this model may remove a Life token. If it does so, increase the Rg of the action by +10\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "In Death's Shadow",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. If the target is an ally, instead of being dealt damage, the target heals 2.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pulse of Renewal",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "Once per turn. When resolving, allies within (aura)4\" of the target heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Gift of Days",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Enemy only. When resolving, this model and the target heal 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "A Weary Road",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Other friendly model only. Move the target up to 3\", then make a Scheme marker in base contact with it.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Wayward Soul",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a Life token from the target. The target declares a general action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Ancient Lamps",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Lamp marker within range. An ally within 2\" of the made marker may heal 1.",
+      "triggers": [
+        {
+          "name": "Refresh",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Models within (aura)2\" of the made marker heal 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Magician's Secret",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stay a While and Listen",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the made marker must pass a TN 13 Wp duel or gain a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Stat_Seeker_Jedza_The_Wanderer.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='THE WANDERER' back='The Wanderer'"
+  ],
+  "extraction_notes": [
+    "Eternal Pilgrimage ability name is visible but ability text is not shown on this card front",
+    "Health bar shows numbered pips from 0-12, total health is 12"
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

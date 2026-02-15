@@ -1,0 +1,112 @@
+{
+  "card_type": "stat_card",
+  "name": "Botanist",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Cumbersome",
+      "defensive_type": null,
+      "text": "This model may not scale terrain."
+    },
+    {
+      "name": "Feed Me!",
+      "defensive_type": null,
+      "text": "When this model activates, it may remove a marker within 2\" of itself to gain a Bolstered token."
+    },
+    {
+      "name": "Planted Roots",
+      "defensive_type": null,
+      "text": "When this model would be moved by an enemy effect, the enemy must drain a (c) or the move is ignored."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Trapping Jaws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Staggered token.",
+      "triggers": [
+        {
+          "name": "Tasty Snack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Bolstered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"AHHH, MY EYE!\"",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage and move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Earth's Bounty",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Choose a Remains or Scheme marker in LoS.",
+      "effects": "Move this model up to 5\" toward the chosen marker. If this model ends the move within 1\" of the chosen marker, remove the chosen marker.",
+      "triggers": [
+        {
+          "name": "Botanic Overdrive",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a Bolstered token from this model. Immediately increase the Skl on this action by +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Botanist_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion characteristic shows (3), indicating model_limit: 3"
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

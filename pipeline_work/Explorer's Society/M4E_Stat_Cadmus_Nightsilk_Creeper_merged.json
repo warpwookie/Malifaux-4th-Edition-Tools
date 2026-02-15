@@ -1,0 +1,149 @@
+{
+  "card_type": "stat_card",
+  "name": "Nightsilk Creeper",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 4,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Cadmus"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Strand to Strand",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain a (soulstone) to place itself in base contact with a Web marker within 12\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Chelicerae",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is in base contact with a Web marker, this action receives +2 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Drink Blood",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this model heals an amount equal to the damage suffered by the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Infect",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pick the Bones",
+          "suit": "(m)",
+          "timing": "after_resolving",
+          "text": "After killing, this model may declare the Interact action after resolving the current action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Seize Prey",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Models in base contact with a Web marker suffer a (-) to resist this duel. Place the target in base contact with an ally within 6\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Vanish",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spin Web",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Web marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dust and Cobwebs",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Web marker within range.",
+      "triggers": [
+        {
+          "name": "Said the Spider to the Fly",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "An enemy model with a Parasite token within 1\" of the made marker is placed into base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Cadmus\\M4E_Stat_Cadmus_Nightsilk_Creeper.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn",
+    "Explorer's Society"
+  ]
+}

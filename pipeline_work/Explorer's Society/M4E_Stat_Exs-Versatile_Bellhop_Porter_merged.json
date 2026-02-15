@@ -1,0 +1,156 @@
+{
+  "card_type": "stat_card",
+  "name": "Bellhop Porter",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Give 'Em a Lift",
+      "defensive_type": null,
+      "text": "During their activation, other friendly models within 2\" may be treated as +1 Sz."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Baggage Handlers",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Suitcase Toss",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": "If this action receives a raise, choose a friendly non-Scheme marker in play. Make a marker of the same type within 1\" of the target.",
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Your Bags, Sir",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. If a marker was made, place this model into base contact with the made marker and draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Daze",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Revitalize",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Remove a token from the target. If this action receives a raise, remove any number of tokens from the target.",
+      "triggers": [
+        {
+          "name": "This Will Numb the Pain",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Assistance Incoming",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Engaged friendly only. Target is placed in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Bellhop_Porter.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

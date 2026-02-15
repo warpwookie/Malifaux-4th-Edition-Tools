@@ -1,0 +1,147 @@
+{
+  "card_type": "stat_card",
+  "name": "Lord Cooper",
+  "title": "Huntmaster",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Hunter's Guile",
+  "totem": "Empyrean Eagle (2)",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Apex"
+  ],
+  "abilities": [
+    {
+      "name": "Camouflaged",
+      "defensive_type": null,
+      "text": "While this model is within 1\" of blocking terrain, it has cover."
+    },
+    {
+      "name": "Rewarding Kill",
+      "defensive_type": null,
+      "text": "After an ally in LoS kills an enemy model, this model may drain a (soulstone) to have that ally heal 3."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hunter's Bow",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this attack is declared, choose if it has a range of (melee)1\" or (gun)12\".",
+      "effects": "If this attack receives at least one raise, the target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "Onslaught",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Clever Shot",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Herd Prey",
+      "action_type": "magic",
+      "range": "(magic)14\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a Distracted token from the target.",
+      "effects": "Move the target up to 3\". If a Distracted token was removed, move the target up to an additional 4\", ignoring vertical distance and terrain.",
+      "triggers": [
+        {
+          "name": "Slither Closer",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose a piece of terrain in base contact with the target. An ally within 1\" of chosen terrain may place in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hunter's Hide",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Aura (Concealment) token.",
+      "triggers": [
+        {
+          "name": "Hunting Call",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target must pass a TN 12 Wp duel or gain a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Apex\\M4E_Stat_Apex_Lord_Cooper_Huntmaster.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

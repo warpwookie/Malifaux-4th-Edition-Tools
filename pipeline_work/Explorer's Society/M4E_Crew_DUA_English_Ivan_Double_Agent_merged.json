@@ -1,0 +1,69 @@
+{
+  "card_type": "crew_card",
+  "name": "Shadow of Doubt",
+  "associated_master": "English Ivan",
+  "associated_title": "Double Agent",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly DUA models",
+      "abilities": [
+        {
+          "name": "Reports of My Death are Exaggerated",
+          "defensive_type": null,
+          "text": "When this model is killed, if an ally hasn't used this ability this turn, it may drain two (soulstone). If it does so, it heals 4 and is placed in base contact with a Shadow Door marker within 6\" of itself, if able."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique DUA models",
+      "actions": [
+        {
+          "name": "Turncoat",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "(magic)8\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": 12,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Target declares an action chosen and controlled by this model.",
+          "effects": null,
+          "triggers": [
+            {
+              "name": "Unseen Footsteps",
+              "suit": "(soulstone)",
+              "timing": "When resolving",
+              "text": "First place the target anywhere within 6\" of its current location.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction not explicitly stated on card",
+    "Shadow Door marker referenced in ability but not defined on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_DUA_English_Ivan_Double_Agent_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 528,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\DUA\\M4E_Crew_DUA_English_Ivan_Double_Agent.pdf",
+  "factions": [
+    "Unknown",
+    "Explorer's Society"
+  ]
+}

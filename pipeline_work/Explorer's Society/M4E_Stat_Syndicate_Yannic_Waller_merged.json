@@ -1,0 +1,158 @@
+{
+  "card_type": "stat_card",
+  "name": "Yannic Waller",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "Syndicate"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Ingenuity",
+      "defensive_type": null,
+      "text": "Once per activation. After an ally within 6\" empowers a duel, it may remove a friendly Scheme marker within 2\" of itself. If it does so, it may draw the card used to empower."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shove",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 7,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 4\". For each raise this action receives, move the target an additional +1\".",
+      "triggers": [
+        {
+          "name": "Disperse the Crowd",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 2\" moves up to 4\" and gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Solberg Shotgun",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (X)1\" of the target.",
+      "triggers": [
+        {
+          "name": "Coordinated Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Glory of Ridley",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Draw a card of value 1-3 from your discard pile.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Daze",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Democratic Election",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Choose any number of models within range to heal 1. Then, deal 1 damage to the same number of models within range.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Expanding Influence",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly minion only.",
+      "effects": "Move the target up to 4\" toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Syndicate\\M4E_Stat_Syndicate_Yannic_Waller.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Explorer's Society"
+  ]
+}

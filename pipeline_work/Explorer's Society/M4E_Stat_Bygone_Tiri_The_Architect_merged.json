@@ -1,0 +1,172 @@
+{
+  "card_type": "stat_card",
+  "name": "TIRI",
+  "title": "THE ARCHITECT",
+  "faction": "Explorer's Society",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Construct"
+  ],
+  "keywords": [
+    "Bygone"
+  ],
+  "abilities": [
+    {
+      "name": "Embrace Technology",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Unseelie Engine",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Core Resonance",
+      "defensive_type": null,
+      "text": "Once per activation. When this model declares an action, it may draw range and LoS from a Lost Technology marker within 8\"."
+    },
+    {
+      "name": "Weight of Lost Souls",
+      "defensive_type": "fortitude",
+      "text": "If this model is within 2\" of another allied construct model, reduce damage dealt to this model by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Deconstruct",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action received a raise, damage from this action ignores (warding) abilities.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sluggish Steps",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Arc",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Pull of the Cage",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. Choose either toward or away. Move the target up to 6\" in the chosen direction from a Lost Technology marker in its LoS.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Restorative Current",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains this model's choice of either a Shielded or Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Relics of the Old War",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Lost Technology marker within range.",
+      "triggers": [
+        {
+          "name": "Monument to Our Time",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Summon an Unseelie Engine with 4 health anywhere within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Cruelty",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Bygone\\M4E_Stat_Bygone_Tiri_The_Architect.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='THE ARCHITECT' back='The Architect'"
+  ],
+  "extraction_notes": [
+    "Embrace Technology and Unseelie Engine abilities have no text visible on this card front - likely continued on back or reference other cards"
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

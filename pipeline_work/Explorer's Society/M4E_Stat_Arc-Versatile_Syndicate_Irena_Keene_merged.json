@@ -1,0 +1,137 @@
+{
+  "card_type": "stat_card",
+  "name": "IRENA KEENE",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 5,
+  "sz": 3,
+  "sp": 7,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Construct",
+    "Versatile"
+  ],
+  "keywords": [
+    "Syndicate"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Steamborg Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly marker within 2\" to receive a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Lethal Aura",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Precise Strike",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Finality",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (fortitude) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fade Into Memory",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a marker.",
+      "effects": "Enemy models within (aura)2\" of the target must pass a TN 12 Df duel or be dealt 2 damage. Then, remove the target.",
+      "triggers": [
+        {
+          "name": "Blade in the Dark",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. This model may declare a (melee) action, which receives a (+).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Have You Seen My Brother?",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with a friendly Altus Keene within 6\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Syndicate\\M4E_Stat_Arc-Versatile_Syndicate_Irena_Keene.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

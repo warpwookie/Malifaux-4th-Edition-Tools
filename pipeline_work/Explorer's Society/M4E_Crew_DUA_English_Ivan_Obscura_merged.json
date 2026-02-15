@@ -1,0 +1,76 @@
+{
+  "card_type": "crew_card",
+  "name": "Smother the Light",
+  "associated_master": "English Ivan",
+  "associated_title": "Obscura",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly DUA models",
+      "abilities": [
+        {
+          "name": "A Passing Shade",
+          "defensive_type": null,
+          "text": "Enemy models this model moves through gain an Entranced token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique DUA models",
+      "actions": [
+        {
+          "name": "Umbral Flare",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 6,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Ally only.",
+          "effects": "Enemy models within (t)3\" of the target must pass a TN 13 Df duel or be dealt 3 damage. Enemy models with an Entranced token suffer a (-) to this duel.",
+          "triggers": []
+        },
+        {
+          "name": "I Love it When a Plan Comes Together",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "2\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Target a Strategy marker.",
+          "effects": "Place the target within 6\" of its current location, not in base contact with any model(s).",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Umbral Flare has three cost icons shown in the image",
+    "I Love it When a Plan Comes Together has three cost icons shown in the image"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_DUA_English_Ivan_Obscura_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 608,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\DUA\\M4E_Crew_DUA_English_Ivan_Obscura.pdf",
+  "factions": [
+    "Guild",
+    "Explorer's Society"
+  ]
+}

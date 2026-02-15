@@ -1,0 +1,172 @@
+{
+  "card_type": "stat_card",
+  "name": "Sidir Alchibal",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Wastrel"
+  ],
+  "abilities": [
+    {
+      "name": "Fortune Favors the Bold",
+      "defensive_type": null,
+      "text": "After this model discards a friendly upgrade, it may move up to 2\"."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (unusual_defense) abilities of other models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Balanced Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Inspiration",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bloody Fate",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Draw a card. If the target was not killed, discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Machine Gun",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quick Reflexes",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Clustered Rounds",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action does not receive raises, and damage from this action ignores the target's (fortitude) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Mortar Strike",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Remains marker within range, then remove either a piece of destructible terrain or a marker within 2\" of the made marker.",
+      "triggers": [
+        {
+          "name": "Cleanup Duty",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (gun) action targeting an enemy model within 2\" of the made marker, which receives a (+).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maneuver",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another ally within LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Wastrel\\M4E_Stat_Wastrel_Sidir_Alchibal.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The shield icon mentioned in Ruthless is rendered as (unusual_defense) as it represents the defensive ability type"
+  ],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

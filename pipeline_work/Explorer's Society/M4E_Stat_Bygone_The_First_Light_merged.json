@@ -1,0 +1,128 @@
+{
+  "card_type": "stat_card",
+  "name": "THE FIRST LIGHT",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 4,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Construct"
+  ],
+  "keywords": [
+    "Bygone"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Beacon)",
+      "defensive_type": null,
+      "text": "After this model is killed, all allies gain a Shielded token."
+    },
+    {
+      "name": "Drag Behind",
+      "defensive_type": null,
+      "text": "Once per turn. Before this model moves, it may remove a marker within 2\" of it. After resolving the move, make a marker of the same type into base contact with this model."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Radiant Flare",
+      "action_type": "magic",
+      "range": "(magic)14\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains a Distracted token.",
+      "triggers": [
+        {
+          "name": "Scorched Retina",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (X)2\" of the target gain a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Illuminated Path",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move an ally with LoS to the target up to 3\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Their Attention",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A friendly model in this model's LoS may discard a card to declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Winds of Change",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top two cards of your fate deck and discard any number of them. Place the remaining cards on top of your fate deck in any order.",
+      "triggers": [
+        {
+          "name": "Trust Their Guidance",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, look at three additional cards from this model's fate deck.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Forge a New Path",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, for each card discarded, an ally in LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Bygone\\M4E_Stat_Bygone_The_First_Light.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

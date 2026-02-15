@@ -1,0 +1,65 @@
+{
+  "card_type": "crew_card",
+  "name": "Follow Tradition",
+  "associated_master": "Tiri",
+  "associated_title": "The Nomad",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Bygone models",
+      "abilities": [
+        {
+          "name": "Memory Fragments",
+          "defensive_type": null,
+          "text": "When this model declares an action, if it has a Shielded token, it may add +(m) to its duel total."
+        },
+        {
+          "name": "Let Bygones be Bygones",
+          "defensive_type": null,
+          "text": "Once per activation. When this model would gain a Shielded token (even if it already has one), it may instead heal 2."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Bygone models",
+      "actions": [
+        {
+          "name": "Foreboding Wards",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Ally only.",
+          "effects": "Any number of allies within 2\" of the target may gain a Shielded token.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction cannot be determined from this card alone",
+    "Stats table shows only Range (6\") with all other columns (Skl, Rst, TN, Dmg) marked with dashes"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_Bygone_Tiri_The_Nomad_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 507,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Bygone\\M4E_Crew_Bygone_Tiri_The_Nomad.pdf",
+  "factions": [
+    "Unknown",
+    "Explorer's Society"
+  ]
+}

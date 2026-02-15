@@ -1,0 +1,71 @@
+{
+  "card_type": "crew_card",
+  "name": "Age of Inspiration",
+  "associated_master": "Maxine Agassiz",
+  "associated_title": "The Renowned",
+  "faction": "Explorer's Society",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly EVS models",
+      "abilities": [
+        {
+          "name": "Deep Discovery",
+          "defensive_type": null,
+          "text": "This model may use any card to empower a duel."
+        },
+        {
+          "name": "Tag and Catalog",
+          "defensive_type": null,
+          "text": "Once per activation. After resolving the Interact action within 1\" of a piece of terrain, increase this crew's research bar by 1."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique EVS models",
+      "actions": [
+        {
+          "name": "Patterns in Portals",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Reduce this crew's research bar by any amount. For each point this bar was reduced, choose another ally within range. The chosen models are placed within 6\" of this model. Then, one model moved by this action may declare the Interact action.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Research Bar",
+      "text": "This crew has a research bar with three slots numbered 1, 2, and 3. The research bar starts empty and fills from left to right (1, then 2, then 3)."
+    }
+  ],
+  "extraction_notes": [
+    "Research bar visual shown with three numbered circles (1, 2, 3)",
+    "Card includes image of Maxine Agassiz character",
+    "EVS likely stands for Explorer's Society keyword",
+    "Patterns in Portals has a spade symbol before the name indicating some requirement or classification"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_EVS_Maxine_Agassiz_The_Renowned_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 609,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\EVS\\M4E_Crew_EVS_Maxine_Agassiz_The_Renowned.pdf",
+  "factions": [
+    "Explorer's Society"
+  ]
+}

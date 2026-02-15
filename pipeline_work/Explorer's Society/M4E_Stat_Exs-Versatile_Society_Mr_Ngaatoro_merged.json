@@ -1,0 +1,134 @@
+{
+  "card_type": "stat_card",
+  "name": "Mr. Ngaatoro",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Society"
+  ],
+  "abilities": [
+    {
+      "name": "Serene Countenance",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model cannot cheat their duel."
+    },
+    {
+      "name": "Society Honors",
+      "defensive_type": null,
+      "text": "Friendly models within 6\" of this model receive +1 to their Skl when targeting a different friendly model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Infectious Words",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, the target gains a Poison token.",
+      "triggers": [
+        {
+          "name": "Society Backup",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose a friendly Society model within range. Place the chosen model in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Poisoned Fate",
+          "suit": "(r)(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, the target must discard a card or this action deals +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Voice of the Society",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target heals 2.",
+      "triggers": [
+        {
+          "name": "Necessary Preparations",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target may declare the Prepare action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Expanding Influence",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly minion only.",
+      "effects": "Move the target up to 4\" toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Society_Mr_Ngaatoro.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

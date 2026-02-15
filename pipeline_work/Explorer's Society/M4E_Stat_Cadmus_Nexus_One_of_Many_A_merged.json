@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "Nexus",
+  "title": "One of Many",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Whim of the Hive",
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Living"
+  ],
+  "keywords": [
+    "Cadmus"
+  ],
+  "abilities": [
+    {
+      "name": "Coddled",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy models may not cheat fate when targeting this model if it is within 2\" of another ally."
+    },
+    {
+      "name": "Tummy Full of Screams",
+      "defensive_type": null,
+      "text": "After this model suffers damage from an enemy attack, the enemy model gains a Parasite token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Embrace of the Spinneret",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is in base contact with a Web marker, this action receives +2 Skl. This model heals 2. If this attack receives a raise, this model heals an additional +1.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Leech Magic",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Parasite token. Once per turn. Draw two cards.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Subsume Will",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Parasite token. Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tag",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Parasite token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Infect",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spin Web",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Web marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Take Over for Me",
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Replace the target with a Nexus, One of Many. Then, the new model heals 2 and gains a Summon token.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Snug in the Swarm",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a Web marker. Summon an Eyes and Ears in base contact with the target. Then, remove the target.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Cadmus\\M4E_Stat_Cadmus_Nexus_One_of_Many_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Master characteristic shows as 'Master (3)' which may indicate model limit of 3, but this is unusual for a Master",
+    "Totem field shows '.' which may be a placeholder or artifact"
+  ],
+  "factions": [
+    "Neverborn",
+    "Explorer's Society"
+  ]
+}

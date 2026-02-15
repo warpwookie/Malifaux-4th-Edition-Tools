@@ -1,0 +1,68 @@
+{
+  "card_type": "crew_card",
+  "name": "Whim of the Hive",
+  "associated_master": "Nexus",
+  "associated_title": "One of Many",
+  "faction": "Neverborn",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Cadmus models",
+      "abilities": [
+        {
+          "name": "Forced Reaction",
+          "defensive_type": null,
+          "text": "After an enemy model with a Parasite token cheats fate (or declines to), one model with this ability may drain a (soulstone) to reduce that enemy model's final duel total by 2."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Cadmus models",
+      "actions": [
+        {
+          "name": "Soul Shock",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(r)3\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation",
+          "effects": "Enemy models within range must pass a TN 12 Wp duel or gain a Parasite token and be dealt 1 damage. Summon an Eyes and Ears in base contact with models killed by this action.",
+          "triggers": [
+            {
+              "name": "Unfair Play",
+              "suit": "(soulstone)",
+              "timing": null,
+              "text": "One enemy model within range gains a Parasite token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The Parasite token is referenced in abilities but not defined on this crew card - likely defined elsewhere in the rules or on another card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_Cadmus_Nexus_One_of_Many_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 548,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Cadmus\\M4E_Crew_Cadmus_Nexus_One_of_Many.pdf",
+  "factions": [
+    "Neverborn",
+    "Explorer's Society"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "card_type": "crew_card",
+  "name": "Footnotes of Madness",
+  "associated_master": "Maxine Agassiz",
+  "associated_title": "Monomaniacal",
+  "faction": "Arcanists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly EVS models",
+      "abilities": [
+        {
+          "name": "Deep Discovery",
+          "defensive_type": null,
+          "text": "This model may use any card to empower a duel."
+        },
+        {
+          "name": "Audit Reality",
+          "defensive_type": null,
+          "text": "Once per activation. After this model cheats fate or empowers a duel with a card in its fieldwork objectives, mark the objective with the value of the card used to cheat or empower as complete."
+        },
+        {
+          "name": "Contaminated Theories",
+          "defensive_type": null,
+          "text": "Once per activation. When an enemy model cheats fate in a duel with this model, with a card in this model's completed fieldwork objectives, this model may drain a \u2666 and mark the objective with the value of the cheated card as uncompleted. If it does so, the cheated card's value is set to 0."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card includes fieldwork objectives numbered 8-13 (checkboxes) but these appear to be tracking elements rather than rules content"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Explorer's Society\\M4E_Crew_EVS_Maxine_Agassiz_Monomaniacal_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 405,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\EVS\\M4E_Crew_EVS_Maxine_Agassiz_Monomaniacal.pdf",
+  "factions": [
+    "Arcanists",
+    "Explorer's Society"
+  ]
+}

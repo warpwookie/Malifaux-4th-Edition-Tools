@@ -1,0 +1,113 @@
+{
+  "card_type": "stat_card",
+  "name": "Alpinist",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Horns",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives +2 Skl if this model is on terrain of Ht 2 or greater.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lover's Leap",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 4\". If it is dealt falling damage, increase that damage by +1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "50ft of Silk Rope",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model must be on terrain of Ht 2 or greater. Friendly only.",
+      "effects": "Target is placed into base contact with this model.",
+      "triggers": [
+        {
+          "name": "Quick Reflexes",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Alpinist.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

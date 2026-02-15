@@ -1,0 +1,150 @@
+{
+  "card_type": "stat_card",
+  "name": "Jin Baccara",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "DUA"
+  ],
+  "abilities": [
+    {
+      "name": "Elusive",
+      "defensive_type": null,
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    },
+    {
+      "name": "Sinister Whisper",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain a (soulstone) and choose a Shadow Door within 6\" of itself. If it does so, enemy models within (aura)1\" of the chosen marker gain an Entranced token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shade Bet",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Entranced token, this action receives a (+).",
+      "effects": "This model may look at the top card of the target's fate deck and may choose to discard it.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Watch the Hand",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Immediately, increase this action's duel total by +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Keeping Tabs",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Randomly reveal three cards from the target's hand. For each raise this action receives, discard one of the revealed cards.",
+      "triggers": [
+        {
+          "name": "Blow Your Mind",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lingering Shadow",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Shadow Door marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fall into Darkness",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place the target in base contact with a Shadow Door marker within 6\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shadow Stride",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Remove a Scheme or Shadow Door marker within range.",
+      "effects": "This model moves up to 6\", ignoring models.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\DUA\\M4E_Stat_DUA_Jin_Baccara.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Explorer's Society"
+  ]
+}

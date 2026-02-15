@@ -1,0 +1,106 @@
+{
+  "card_type": "stat_card",
+  "name": "HOPEFUL PROSPECT",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "3",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 3,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Society"
+  ],
+  "abilities": [
+    {
+      "name": "Blissful Ignorance",
+      "defensive_type": null,
+      "text": "When this model activates, it must discard a card if able. Then, if it did, it draws a card."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Trusty Rifle",
+      "action_type": "missile",
+      "range": "(gun)14\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Drawn to the Unknown",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move a friendly model within range up to 3\" toward a marker in its LoS.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "I Meant to Do That!",
+          "suit": "(t)(t)",
+          "timing": "after_failing",
+          "text": "After failing, the next action this model declares this activation receives +2 Skl.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Infect",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Safety Precautions",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Remove a token from the target. For each raise this action receives, this model may remove an additional token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Society_Hopeful_Prospect_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society"
+  ]
+}

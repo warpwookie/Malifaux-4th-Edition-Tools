@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "Poltergeist",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique"
+  ],
+  "keywords": [
+    "Woe"
+  ],
+  "abilities": [
+    {
+      "name": "Dark Whispers",
+      "defensive_type": null,
+      "text": "Once per activation. After an enemy model within 3\" makes a Scheme marker, deal 2 damage to it."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (t) actions may not be reduced this way."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Agonizing Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This attack deals +2 damage if the target has a Paranoia token.",
+      "triggers": [
+        {
+          "name": "Touch of Madness",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a random card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drawn to Insanity",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action does not require LoS. The target must have a Paranoia token.",
+      "effects": "Place this model into base contact with the target.",
+      "triggers": [
+        {
+          "name": "Sudden Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Telekinesis",
+      "action_type": null,
+      "range": "(pulse)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Remove all enemy markers within range. Then, enemy models within range must pass a TN 13 Sp duel or be dealt 1 damage for each marker removed (maximum 3).",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Woe\\M4E_Stat_Woe_Poltergeist.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

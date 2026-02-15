@@ -1,0 +1,136 @@
+{
+  "card_type": "stat_card",
+  "name": "NEIL HENRY",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Foundry"
+  ],
+  "abilities": [
+    {
+      "name": "Nail Down",
+      "defensive_type": null,
+      "text": "When this model is within 2\" of a Scrap marker, it receives a (+) to its actions."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, increase the distance this model moves by up to +2\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Steel Driver",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reinforce Plate",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A friendly model within 1\" of the target gains either a Bolstered or Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stunning Strike",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Gandy Dancer",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. The target declares the Walk action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Forewarned",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Bolstered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Foundry\\M4E_Stat_Foundry_Neil_Henry.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

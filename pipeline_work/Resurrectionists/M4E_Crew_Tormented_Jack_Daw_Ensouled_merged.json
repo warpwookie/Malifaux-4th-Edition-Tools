@@ -1,0 +1,69 @@
+{
+  "card_type": "crew_card",
+  "name": "Wailing Doom",
+  "associated_master": "Jack Daw",
+  "associated_title": "Ensouled",
+  "faction": "Outcasts",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Tormented models",
+      "abilities": [
+        {
+          "name": "Dragged Down With Me",
+          "defensive_type": null,
+          "text": "When an enemy within 2\" of this model would discard a friendly upgrade, this model may deal 1 damage to itself. If it does so, the upgrade is not discarded."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Tormented models",
+      "actions": [
+        {
+          "name": "Flood of Guilt",
+          "category": "attack_actions",
+          "action_type": "melee",
+          "range": "(melee) 6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Place the target in base contact with this model.",
+          "triggers": [
+            {
+              "name": "Bloody Foam",
+              "suit": "(t)",
+              "timing": "after_succeeding",
+              "text": "Attach a Waterlogged upgrade to the target.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The Flood of Guilt action has Rst 'Wp' with no TN or Damage values listed, only placement effect",
+    "Dragged Down With Me is a passive ability with a conditional trigger effect"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Tormented_Jack_Daw_Ensouled_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 532,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Crew_Tormented_Jack_Daw_Ensouled.pdf",
+  "factions": [
+    "Outcasts",
+    "Resurrectionists"
+  ]
+}

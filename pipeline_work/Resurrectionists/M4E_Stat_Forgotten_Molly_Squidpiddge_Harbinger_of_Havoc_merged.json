@@ -1,0 +1,140 @@
+{
+  "card_type": "stat_card",
+  "name": "Molly Squidpiddge",
+  "title": "Harbinger of Havoc",
+  "faction": "Resurrectionists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Take Back the Night",
+  "totem": "Necrotic Machine",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Undead",
+    "Forgotten"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Serene Countenance",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model cannot cheat their duel."
+    },
+    {
+      "name": "The Lost Speak",
+      "defensive_type": null,
+      "text": "This model may draw range and LoS for its + actions from models with an Abandoned token within 8\"."
+    },
+    {
+      "name": "Thorough Investigation",
+      "defensive_type": null,
+      "text": "Once per activation. After an enemy model within 8\" empowers a duel or drains a (-), this model may make a Scheme marker within 1\" of that enemy."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Disturbing Story",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (c) if an ally is within 2\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "All the Pieces Come Together",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Once per turn. When resolving, the target is dealt +1 damage for each scheme its crew has revealed this game.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Muwahahaha",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "An enemy model within 2\" of the target gains an Abandoned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Misfit Press",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives an additional raise if the target has an Abandoned token.",
+      "effects": "Choose and apply one of the following effects, plus an additional effect for each raise, in an order of your choosing:\n\nThe Creeping Dread: Target gains a Distracted and a Slow token.\n\nThe Mind Unravels: Target declares the Interact action controlled by this model.\n\nThe Thing in the Fog: Move the target up to 4\".",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Jinkies! A Clue!\"",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Make a Scheme marker within range.",
+      "triggers": [
+        {
+          "name": "Lost and Found",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "An ally within range may move 2\" and declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "On the Case",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Allies within (1)2\" of the made marker gain a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Stat_Forgotten_Molly_Squidpiddge_Harbinger_of_Havoc.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Molly Squidpiddge' back='Molly Squidpidge'"
+  ],
+  "extraction_notes": [
+    "The '(1)2\"' notation in 'On the Case' trigger is preserved as written - appears to be an aura range indicator followed by 2\" distance"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

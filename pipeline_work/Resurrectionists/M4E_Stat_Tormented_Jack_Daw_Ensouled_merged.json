@@ -1,0 +1,166 @@
+{
+  "card_type": "stat_card",
+  "name": "JACK DAW",
+  "title": "ENSOULED",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": "Jaakuna Ubume",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Tormented"
+  ],
+  "keywords": [
+    "Wailing Doom"
+  ],
+  "abilities": [
+    {
+      "name": "Betrayal's Current",
+      "defensive_type": null,
+      "text": "When this model activates, it moves up to 4\" towards an enemy model."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Repressed Aggression",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a friendly upgrade attached, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Undertow",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Burst of Speed",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drowning Dream",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Attach a Waterlogged upgrade to the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Quick Reflexes",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Execute",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fury of the Phantom",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Move this model up to its Sp, ignoring models. Enemy models moved through this way are dealt 1 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Dragged Under",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Attach a Waterlogged upgrade to an enemy model within 2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lethal Aura",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Jack_Daw_Ensouled.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='ENSOULED' back='Ensouled'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Resurrectionists"
+  ]
+}

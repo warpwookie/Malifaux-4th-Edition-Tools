@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "KANG",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 5,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Construct"
+  ],
+  "keywords": [
+    "Foundry"
+  ],
+  "abilities": [
+    {
+      "name": "Juggernaut",
+      "defensive_type": null,
+      "text": "This model reduces all damage dealt to it to 3 (if more than 3)."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    },
+    {
+      "name": "Ready to Work",
+      "defensive_type": null,
+      "text": "While this model has a Shielded token, it receives a (+) to all duels."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sledgehammer",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 2\".",
+      "triggers": [
+        {
+          "name": "Focused Cleansing",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2 and may remove a token from itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Daze",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fresh From the Forge",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Remove any number of tokens from the target. If this action receives a raise, the target heals 2",
+      "triggers": [
+        {
+          "name": "Reinforce Plate",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A friendly model within 1\" of the target gains either a Bolstered or Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drive Out Slag",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scrap marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Workers Rise Up",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Allied minion only.",
+      "effects": "The target gains a Bolstered token and may move up to 3\". Then, the target may declare this action targeting a model that was not targeted by the Workers Rise Up action this activation. This may continue until this action fails or there are no more targets.",
+      "triggers": [
+        {
+          "name": "Stronger Together",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2 and gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Foundry\\M4E_Stat_Foundry_Kang.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

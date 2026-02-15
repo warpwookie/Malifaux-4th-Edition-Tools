@@ -1,0 +1,59 @@
+{
+  "card_type": "crew_card",
+  "name": "Hunger's Reach",
+  "associated_master": "Asami Tanaka",
+  "associated_title": "Oni Mother",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Oni models",
+      "abilities": [
+        {
+          "name": "Violation of Reality",
+          "defensive_type": null,
+          "text": "Once per activation. When declaring a (///) action, this model may choose a friendly Rift marker within 8\". The action draws LoS and range from the chosen marker. After resolving the action, remove the chosen marker."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Oni models",
+      "actions": [
+        {
+          "name": "Rally the Beyond",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Choose a friendly Oni model within 8\" and place it into base contact with this model.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The ability Violation of Reality uses (///) to indicate the '////' action type symbol",
+    "Rally the Beyond is marked as a signature action with the double diamond symbol"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Oni_Asami_Tanaka_Oni_Mother_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 451,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Oni\\M4E_Crew_Oni_Asami_Tanaka_Oni_Mother.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

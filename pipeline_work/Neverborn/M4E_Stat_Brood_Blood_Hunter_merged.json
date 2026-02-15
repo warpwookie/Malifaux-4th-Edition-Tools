@@ -1,0 +1,123 @@
+{
+  "card_type": "stat_card",
+  "name": "Blood Hunter",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Brood"
+  ],
+  "abilities": [
+    {
+      "name": "Eat Your Fill",
+      "defensive_type": null,
+      "text": "After killing an enemy model with a (melee) action, this model heals 2."
+    },
+    {
+      "name": "Stampede",
+      "defensive_type": null,
+      "text": "After this model ends a Charge action in base contact with any other models, it may deal 1 damage to itself. If it does so, deal 1 damage to all other models in base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bloody Teeth",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Accursed Blood",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Remove a Glutted token. When resolving, deal +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Crash Through",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 5\" in a straight line, ignoring models. Deal 1 damage to models moved through this way. Then deal 1 damage to this model.",
+      "triggers": [
+        {
+          "name": "Bloody Trophy",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Glutted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Brood_Blood_Hunter.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

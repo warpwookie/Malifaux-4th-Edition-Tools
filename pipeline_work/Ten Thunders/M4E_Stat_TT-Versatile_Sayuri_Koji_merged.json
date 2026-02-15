@@ -1,0 +1,151 @@
+{
+  "card_type": "stat_card",
+  "name": "KOJI",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Sayuri"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": null,
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Protection Money",
+      "defensive_type": null,
+      "text": "Once per activation. When an enemy Scheme marker is made within 6\" of this model, this model may draw a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Taker's Bane",
+      "action_type": "missile",
+      "range": "(gun)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, the target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "Street Smarts",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another friendly Sayuri model in LoS moves up to 3\" and then makes a Scheme marker into base contact with itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maim",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Healing Energy",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Expanding Influence",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly minion only.",
+      "effects": "Move the target up to 4\" toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Stat_TT-Versatile_Sayuri_Koji.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

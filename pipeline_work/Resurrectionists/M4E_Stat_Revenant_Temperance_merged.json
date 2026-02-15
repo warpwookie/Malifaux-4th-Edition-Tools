@@ -1,0 +1,135 @@
+{
+  "card_type": "stat_card",
+  "name": "Temperance",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Revenant"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Early Grave",
+      "defensive_type": null,
+      "text": "When this model is summoned, it does not gain Summon or Slow tokens."
+    },
+    {
+      "name": "I Hear it Still",
+      "defensive_type": null,
+      "text": "Once per turn. If this model is on this crew's crew card, when a unique ally activates, it may declare an action printed on this model's stat card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Join Me...",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 4\". If the target ends this move in base contact with a Pyre marker, deal +2 damage to it.",
+      "triggers": [
+        {
+          "name": "Listen to Reason",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Convert token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Twist the Truth",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 1\" of the target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Creep Along",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to its Sp toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Healing Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Revenant\\M4E_Stat_Revenant_Temperance.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

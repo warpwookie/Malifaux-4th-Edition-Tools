@@ -1,0 +1,76 @@
+{
+  "card_type": "crew_card",
+  "name": "Smoke and Shadows",
+  "associated_master": "Misaki Katanaka",
+  "associated_title": "Oyabun",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Last Blossom models",
+      "abilities": [
+        {
+          "name": "Into Shadow",
+          "defensive_type": null,
+          "text": "Once per activation. After this model ends a move in base contact with a Shadow marker, it may place in base contact with any Shadow marker within 6\" of that Shadow marker. Then, remove a Shadow marker in base contact."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Last Blossom models",
+      "actions": [
+        {
+          "name": "Smokebomb",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 6,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Make a Shadow marker within range. Enemies within (m)2\" of the marker must pass a TN 10 Wp duel or gain a Stunned token.",
+          "triggers": [
+            {
+              "name": "Out of Sight",
+              "suit": "(t)",
+              "timing": null,
+              "text": "Allies within range of the (m) may move up to 3\".",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "Oyabun's Wisdom",
+              "suit": "(book icon)",
+              "timing": "When resolving",
+              "text": "allies within range of the (m) gain an Adaptable token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The Oyabun's Wisdom trigger uses a book icon which I've noted as '(book icon)' - this may represent a specific suit or symbol in the game system",
+    "The (m) symbol appears to reference the Shadow marker created by the Smokebomb action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Last-Blossom_Misaki_Katanaka_Oyabun_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 660,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Last Blossom\\M4E_Crew_Last-Blossom_Misaki_Katanaka_Oyabun.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

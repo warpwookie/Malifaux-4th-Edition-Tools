@@ -1,0 +1,90 @@
+{
+  "card_type": "stat_card",
+  "name": "Bisection",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "-",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Undead",
+    "Construct"
+  ],
+  "keywords": [
+    "Experimental Transports"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Quartered)",
+      "defensive_type": null,
+      "text": "After this model is killed, it heals 2 and is replaced with two Last Bites."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Faces in the Ooze",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this model and the target have any matching suits in their final duel totals, this action receives a raise.",
+      "triggers": [
+        {
+          "name": "Final Nibble",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to an enemy model within 1\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Oozing Mass",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Move this model 6\" in any direction, ignoring models and terrain. Enemy models moved through this way gain a Poison token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Stat_Experimental_Transmortis_Bisection_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

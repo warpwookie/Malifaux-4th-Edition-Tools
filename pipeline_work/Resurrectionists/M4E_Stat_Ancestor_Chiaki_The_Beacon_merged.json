@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "CHIAKI",
+  "title": "THE BEACON",
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "Ancestor"
+  ],
+  "abilities": [
+    {
+      "name": "Nefarious Pact",
+      "defensive_type": null,
+      "text": "When this model ends its activation, it may draw a card."
+    },
+    {
+      "name": "Serene Countenance",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model cannot cheat their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Purify",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Remove a token from the target.",
+      "triggers": [
+        {
+          "name": "Duality",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy only. This model must choose: both players draw a card or both players discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Ancestral Curse",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Beckoning Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target its Sp toward a friendly model in its LoS.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Spirit Flute",
+      "range": "(aura)4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Allies within range may move up to 3\".",
+      "triggers": [
+        {
+          "name": "Burdened Soul",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "A model moved this way may declare a (c) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Split the Soul",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Attach a Reliquary upgrade to an ally in range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Purity",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within range must pass a TN 11 Wp duel or be moved up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Stat_Ancestor_Chiaki_The_Beacon.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='THE BEACON' back='The Beacon'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Resurrectionists"
+  ]
+}

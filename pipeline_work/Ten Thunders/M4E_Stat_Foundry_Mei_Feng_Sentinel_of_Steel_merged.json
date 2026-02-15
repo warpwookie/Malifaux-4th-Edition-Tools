@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "MEI FENG",
+  "title": "SENTINEL OF STEEL",
+  "faction": "Ten Thunders",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Foundry"
+  ],
+  "keywords": [
+    "Loyalty Revitalized",
+    "Forgeling"
+  ],
+  "abilities": [
+    {
+      "name": "Constant Motion",
+      "defensive_type": null,
+      "text": "When this model declares a trigger, it may move up to 2\"."
+    },
+    {
+      "name": "Railroaded",
+      "defensive_type": null,
+      "text": "When an attack action is declared targeting this model, this model may drain two (soulstone) to make the action fail."
+    },
+    {
+      "name": "Refine",
+      "defensive_type": null,
+      "text": "When a Scrap marker is made or removed within 4\", a friendly model within 4\" may gain a Bolstered token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Razor Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Before declaring triggers, this model may drain a (fortitude) to declare up to two different triggers on this action, regardless of suits.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reactive Chemicals",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "A different model within 2\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Rounding Kick",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models within (aura)1\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Daze",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Keep to Schedule",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally. Target declares the Ride the Rails action, which receives +2 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tiger Strike",
+          "suit": "(fortitude)",
+          "timing": "after_resolving",
+          "text": "Once per turn. After resolving the generated action, place this model in base contact with the made marker. Then, this model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Forged of Steel",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains a Bolstered token",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Fortify",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Foundry\\M4E_Stat_Foundry_Mei_Feng_Sentinel_of_Steel.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='SENTINEL OF STEEL' back='Sentinel of Steel'"
+  ],
+  "extraction_notes": [
+    "Keywords section shows 'Loyalty Revitalized' on left and 'Forgeling' on right - both treated as keywords",
+    "Health bar shows numbered pips 1-14, counting to 14 health",
+    "Tiger Strike trigger uses (fortitude) icon instead of standard suit symbol"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

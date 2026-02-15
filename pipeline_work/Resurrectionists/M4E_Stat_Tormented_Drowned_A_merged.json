@@ -1,0 +1,96 @@
+{
+  "card_type": "stat_card",
+  "name": "Drowned",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Undead",
+    "Zombie",
+    "Tormented"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Riptide",
+      "defensive_type": null,
+      "text": "Enemy models with a Staggered token may not cheat fate in opposed duels with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Anchor",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Wailing Wave",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (X)1\" of the target. Models damaged by this action are moved up to 2\" away from this model.",
+      "triggers": [
+        {
+          "name": "Undertow",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Drowned_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Characteristics show 'Minion (3)' indicating model_limit of 3"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

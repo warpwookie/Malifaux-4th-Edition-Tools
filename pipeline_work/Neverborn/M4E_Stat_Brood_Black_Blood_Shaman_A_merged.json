@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "Black Blood Shaman",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Brood"
+  ],
+  "abilities": [
+    {
+      "name": "Ancient Ritual",
+      "defensive_type": null,
+      "text": "Once per activation. After this model moves, it may remove a Glutted token from itself or a Remains marker within 1\". If it does so, an ally within 2\" may gain either a Focused or Glutted token."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ritual Knife",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is killed by this action, infuse a (c).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Blood Spray",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "An ally within 2\" of the target gains a Glutted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Blood Clot",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target heals 1 and allies within (aura)1\" of the target heal 1. For each raise this action receives, each model healed this way heals an additional 1.",
+      "triggers": [
+        {
+          "name": "Meat for the Young",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "An ally within 6\" gains a Glutted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Black Blood Pustule",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a friendly model with Black Blood.",
+      "effects": "Resolve the target's Black Blood ability as if it had just suffered damage, and increase the (aura) it generates by +1\".",
+      "triggers": [
+        {
+          "name": "Purification",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Life from Blood",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Broodling token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Brood_Black_Blood_Shaman_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

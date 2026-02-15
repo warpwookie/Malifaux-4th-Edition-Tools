@@ -1,0 +1,150 @@
+{
+  "card_type": "stat_card",
+  "name": "Chiyo Hamasaki",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Last Act)",
+      "defensive_type": null,
+      "text": "After this model is killed, it may make a Scheme marker in base contact with itself."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Wit",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token.",
+      "triggers": [
+        {
+          "name": "Like the Wind",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring enemy models.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pilfer",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must drain a (fortitude). If it does so, infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Invitation",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 2\", then make a Scheme marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coercion",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target reveals its control hand and discards a card of this model's choice. Then, the target draws a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shared Secret",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Focused token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Qi and Gong\\M4E_Stat_Qi-and-Gong_Chiyo_Hamasaki.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model has STN: 7 displayed on the card, likely representing Stamina or similar stat"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

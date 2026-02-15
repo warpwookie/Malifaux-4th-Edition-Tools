@@ -1,0 +1,132 @@
+{
+  "card_type": "stat_card",
+  "name": "KAMAITACHI",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 8,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Oni"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Demise (To the Sky)",
+      "defensive_type": null,
+      "text": "After this model is killed, an ally within 6\" may place anywhere within 4\" of itself."
+    },
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dust Devil",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models and receives +1 (soulstone) to its Skl if the target is at a lower elevation.",
+      "effects": "Move the target up to 4\", ignoring vertical distance.",
+      "triggers": [
+        {
+          "name": "Gateway to the Beyond",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Ally only. Make a Rift marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blow Your Mind",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stunning Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rejuvenate Oni",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. If the target is within 1\" of a Rift marker, this action receives a (fortitude).",
+      "effects": "Target heals 2.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Oni\\M4E_Stat_Oni_Kamaitachi.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 8 appears below the artwork, likely a Soulstone number or reference code",
+    "Health bar shows numbers 0-7, confirming 7 health total"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

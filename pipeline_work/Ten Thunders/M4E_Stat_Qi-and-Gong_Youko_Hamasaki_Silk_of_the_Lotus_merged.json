@@ -1,0 +1,163 @@
+{
+  "card_type": "stat_card",
+  "name": "Youko Hamasaki",
+  "title": "Silk of the Lotus",
+  "faction": "Ten Thunders",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Silent Control",
+  "totem": "Chiyo Hamasaki",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Eyes Everywhere",
+      "defensive_type": null,
+      "text": "If this crew's leverage bar is full, the opponent must play with their control hand revealed."
+    },
+    {
+      "name": "Power of Secrets",
+      "defensive_type": null,
+      "text": "When an attack targeting this model deals damage, this model may lower its leverage bar by up to 2 to reduce the damage by the same amount (to a minimum of 0)."
+    },
+    {
+      "name": "Unseen Manipulator",
+      "defensive_type": null,
+      "text": "The opposing player's maximum hand size is reduced by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Cutting Words",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Entranced token.",
+      "triggers": [
+        {
+          "name": "Good for a Laugh",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Draw two cards, then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Covert Agent",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Entranced token. Then, make a Scheme marker within 3\" the target.",
+      "triggers": [
+        {
+          "name": "Favors Owed",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Target declares an action, chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Double Cross",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 6\" toward a marker. If it ends the move within 1\" of the marker, this model may remove it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Backroom Dealings",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Look at the top two cards of the target's deck and put them back in any order.",
+      "triggers": [
+        {
+          "name": "Queen's Gambit",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Up to two allies in LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Information Network",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target an enemy model with an Entranced token.",
+      "effects": "Summon a Qi and Gong model in base contact with the target. Then, remove the Entranced token from the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Qi and Gong\\M4E_Stat_Qi-and-Gong_Youko_Hamasaki_Silk_of_the_Lotus.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

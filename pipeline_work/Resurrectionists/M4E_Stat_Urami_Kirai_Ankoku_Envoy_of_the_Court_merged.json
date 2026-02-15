@@ -1,0 +1,172 @@
+{
+  "card_type": "stat_card",
+  "name": "KIRAI ANKOKU",
+  "title": "ENVOY OF THE COURT",
+  "faction": "Resurrectionists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Ikiryo, The Heart that Left",
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Urami"
+  ],
+  "abilities": [
+    {
+      "name": "Spiritual Anchor",
+      "defensive_type": null,
+      "text": ""
+    },
+    {
+      "name": "Prison of Guilt",
+      "defensive_type": null,
+      "text": "When this model declares an action, it may remove a Spiritual Chains token from a model within 6\" to add one suit of its choice to its duel total."
+    },
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Soul Siphon",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" with an Adversary token suffer a (-) to Df and Wp duels."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sundering",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "For each raise this action receives, one ally engaged with the target may declare an attack action (to a maximum of 2).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Gang Up",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"You...\"",
+      "action_type": "melee",
+      "range": "(melee)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Pain",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a Spiritual Chains token from the target. Deal 2 damage to the target and draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Pour Out Your Hate",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Remove a Spiritual Chains token from target enemy.",
+      "effects": "Summon a Urami minion in base contact with this model or the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Wings of Vengeance",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only.",
+      "effects": "Target declares the Charge action.",
+      "triggers": [
+        {
+          "name": "Into Mist",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "While resolving the generated action, the target may move through enemy models and is unaffected by terrain.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Preparations",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Stat_Urami_Kirai_Ankoku_Envoy_of_the_Court.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='ENVOY OF THE COURT' back='Envoy of the Court'"
+  ],
+  "extraction_notes": [
+    "The 'Spiritual Anchor' ability has no visible text on the card front - appears to be a header or section marker only",
+    "Pour Out Your Hate has TN marked with asterisk (*) in original, transcribed as null since no numeric value present"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

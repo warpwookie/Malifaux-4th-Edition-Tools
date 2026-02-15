@@ -1,0 +1,118 @@
+{
+  "card_type": "stat_card",
+  "name": "UNDERGRADUATE",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "4",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Construct",
+    "Undead",
+    "Student"
+  ],
+  "keywords": [
+    "Transmortis"
+  ],
+  "abilities": [
+    {
+      "name": "By Your Side",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to place itself in base contact with a unique ally within 12\"."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ponder Existance",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model has no cards in its control hand, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stunning Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Impassioned Defense",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Shielded token.",
+      "triggers": [
+        {
+          "name": "Senior Thesis",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Name a Transmortis student model. This model declares an attack printed on the named model's stat card. If it succeeds, this model may replace itself with the named model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Study Opponent",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains either a Focused or Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Stat_Transmortis_Undergraduate_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Action name 'Ponder Existance' appears to be misspelled (should likely be 'Existence'), but preserved as printed on card"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

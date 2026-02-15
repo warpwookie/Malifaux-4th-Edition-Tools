@@ -1,0 +1,136 @@
+{
+  "card_type": "stat_card",
+  "name": "ZHENG",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Counterattack",
+      "defensive_type": null,
+      "text": "After resolving a (melee) action targeting this model, this model may drain a (t) to deal 3 damage to the attacking model."
+    },
+    {
+      "name": "Powerful Guardian",
+      "defensive_type": null,
+      "text": "When this model activates, it may either attach a Petrified Sentinel upgrade to itself or remove a Petrified Sentinel upgrade from itself."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Eviscerating Bite",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If there are no different enemy models within 4\" of the target, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pouncing Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Their Attention",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "A friendly model in this model's LoS may discard a card to declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Intimidating Roar",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target 6\" away from this model.",
+      "triggers": [
+        {
+          "name": "Ancient Protector",
+          "suit": "(t)",
+          "timing": "after_resolving",
+          "text": "After resolving, this model heals 3 and may attach a Petrified Sentinel upgrade to itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Five-Tailed Fan",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target is dealt 1 damage and is moved up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Onward",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may declare the Walk action.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Stat_TT-Versatile_Zheng.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

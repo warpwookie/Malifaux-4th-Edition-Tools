@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "Leech King",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Returned",
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (I'll Have What They're Having)",
+      "defensive_type": null,
+      "text": "When this model is killed, it is replaced with a Giant Leech and heals 4."
+    },
+    {
+      "name": "Regeneration",
+      "defensive_type": null,
+      "text": "When this model activates, it heals 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Blood Magic",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If the target has half its maximum health or less, this action deals +1 damage.",
+      "triggers": [
+        {
+          "name": "Drink Blood",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this model heals an amount equal to the damage suffered by the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Forgetful",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a random card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bloodletting",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies.",
+      "effects": "Enemy models within (aura)3\" of the target are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Strip Defenses",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Paralyzed",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Clew of Leeches",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy only.",
+      "effects": "Summon a Giant Leech in base contact with the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Swampfiend_Leech_King.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

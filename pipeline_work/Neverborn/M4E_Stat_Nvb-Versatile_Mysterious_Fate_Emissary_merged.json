@@ -1,0 +1,126 @@
+{
+  "card_type": "stat_card",
+  "name": "Mysterious Fate",
+  "title": "Emissary",
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Branches and Brambles",
+      "defensive_type": null,
+      "text": "Friendly models within 2\" have cover."
+    },
+    {
+      "name": "Quick Study",
+      "defensive_type": null,
+      "text": "This model gains the keywords of the friendly leader."
+    },
+    {
+      "name": "Tempting Fate",
+      "defensive_type": null,
+      "text": "Once per game. When a friendly master is killed, this model may drain two (soulstone). If it does so, deal 4 irreducible damage to this model, then the friendly master heals 4."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Wrath of the Woods",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (-) if the target is more than 4\" from this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Drink Blood",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this model heals an amount equal to the damage suffered by the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quicksand",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target must each pass a TN 13 Sp duel or gain a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Quaking Soil",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only. Place the target anywhere within 3\" of its current location.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Malifaux Born",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shifted",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Choose an enemy model within range. The chosen model must pass a TN 13 Sp duel or this model may place it anywhere within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Versatile - Neverborn\\M4E_Stat_Nvb-Versatile_Mysterious_Fate_Emissary.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

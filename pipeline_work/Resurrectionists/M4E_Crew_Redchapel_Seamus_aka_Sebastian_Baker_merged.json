@@ -1,0 +1,44 @@
+{
+  "card_type": "crew_card",
+  "name": "Urban Legend",
+  "associated_master": "Seamus",
+  "associated_title": "Sebastian Baker",
+  "faction": "Redchapel",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Redchapel models",
+      "abilities": [
+        {
+          "name": "Vicious Mockery",
+          "defensive_type": null,
+          "text": "When this model targets an enemy with an Entranced token, it may remove the token from the enemy model. If it does so, the target receives a (fortitude) to resist the duel."
+        },
+        {
+          "name": "Pounce",
+          "defensive_type": null,
+          "text": "When an enemy model ends its activation, one model with this ability and engaged with the enemy may drain a (soulstone) to declare a (melee) action targeting the enemy."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The card shows abilities granted to 'Friendly Redchapel models'",
+    "Vicious Mockery provides a penalty (fortitude) to resist when removing Entranced tokens",
+    "Pounce allows reactive melee actions at the cost of draining a soulstone"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Redchapel_Seamus_aka_Sebastian_Baker_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 356,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Redchapel\\M4E_Crew_Redchapel_Seamus_aka_Sebastian_Baker.pdf",
+  "factions": [
+    "Redchapel",
+    "Resurrectionists"
+  ]
+}

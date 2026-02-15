@@ -1,0 +1,163 @@
+{
+  "card_type": "stat_card",
+  "name": "Marcus",
+  "title": "Monstermaker",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Guided Evolution",
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Chimera"
+  ],
+  "keywords": [
+    "Jackalope"
+  ],
+  "abilities": [
+    {
+      "name": "Accomplice",
+      "defensive_type": null,
+      "text": "When this model ends its activation, a friendly model within 6\" that has not activated this turn may discard a card to do so."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    },
+    {
+      "name": "Wilds of Malifaux",
+      "defensive_type": null,
+      "text": "The area within 6\" of this model is severe and concealing terrain. Friendly models may choose to be unaffected by this terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Knotted Staff",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (+) if the target is not engaged with this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "This is My Mountain",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model anywhere within 6\", at a higher elevation. Allies within (aura)4\" gain a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Sense Weakness",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Adversary token. If this action receives a raise, a friendly beast may declare a (melee) action targeting the same model.",
+      "triggers": [
+        {
+          "name": "Stagger",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Call of the Wild",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly beast only. Move the target up to its Sp.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Hunter's Call",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, instead of moving, the target declares the Charge action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Caudal Lure",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Scheme marker anywhere within range. Enemy models within (aura)3\" of the marker must pass a TN 13 Wp duel or be moved 3\" directly toward the marker.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Stat_Chimera_Marcus_Monstermaker.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

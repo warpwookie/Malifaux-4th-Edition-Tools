@@ -1,0 +1,159 @@
+{
+  "card_type": "stat_card",
+  "name": "Jakob Lynch",
+  "title": "Wildcard",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 5,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Roll the Dice",
+  "totem": "Hungering Darkness, Beneath the Bets",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Honeypot"
+  ],
+  "abilities": [
+    {
+      "name": "Aces High",
+      "defensive_type": null,
+      "text": "Cards with value of 1 this model flips (not cheats) are considered value 13."
+    },
+    {
+      "name": "Don't Bite the Hand",
+      "defensive_type": "unusual_defense",
+      "text": "When attacking this model, enemies with a friendly Brilliance token may not cheat."
+    },
+    {
+      "name": "Hold 'Em",
+      "defensive_type": null,
+      "text": "After an enemy model cheats fate within 8\", it gains a Brilliance token."
+    },
+    {
+      "name": "None for Me",
+      "defensive_type": null,
+      "text": "When this model would gain a Brilliance token, it may instead have a model within 2\" gain a Brilliance token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ante Up!",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Brilliance token.",
+      "triggers": [
+        {
+          "name": "No Turning Back",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly Brilliance token from the target. Deal 2 damage to the target. If this kills the target, infuse a (soulstone).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Preoccupied",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gain a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Compulsive Gambler",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token. Then, make a Scheme marker within 1\" of the target.",
+      "triggers": [
+        {
+          "name": "Mulligan",
+          "suit": "(soulstone)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Discard up to 3 cards. The target is dealt damage equal to the number of cards discarded. Then draw cards equal to the number discarded +1.",
+          "is_mandatory": false,
+          "soulstone_cost": 1
+        },
+        {
+          "name": "Blow Your Mind",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "This Round's On Me",
+      "range": "(aura)4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "All models within range must each pass a TN 14 Wp duel or gain a Brilliance token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Jakob_Lynch_Wildcard.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Ten Thunders"
+  ]
+}

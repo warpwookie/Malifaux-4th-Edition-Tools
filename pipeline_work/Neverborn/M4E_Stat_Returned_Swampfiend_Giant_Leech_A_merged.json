@@ -1,0 +1,112 @@
+{
+  "card_type": "stat_card",
+  "name": "Giant Leech",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "4",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion(2)",
+    "Living"
+  ],
+  "keywords": [
+    "Returned",
+    "Swampfiend"
+  ],
+  "abilities": [
+    {
+      "name": "Distended With Blood",
+      "defensive_type": null,
+      "text": "This model receives +1 Sz for each friendly non-Summon, non-Slow token on it, to a maximum of +2."
+    },
+    {
+      "name": "Latch On",
+      "defensive_type": null,
+      "text": "Enemy models in base contact with this model suffer -1 Df."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bloodsuck",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model heals 1.",
+      "triggers": [
+        {
+          "name": "Paralyzed",
+          "suit": "(m)(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Body Slam",
+      "action_type": "magic",
+      "range": "(magic)4\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "X",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. If the target is at a lower elevation, this action receives a (+).",
+      "effects": "X is equal to this model's Sz. Place this model in base contact with the target.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Where There's One",
+      "range": "0\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 11,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy only. If the target is at half its maximum health or below, this action receives +1 to its Skl.",
+      "effects": "Summon a Giant Leech in base contact with the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Swampfiend_Giant_Leech_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

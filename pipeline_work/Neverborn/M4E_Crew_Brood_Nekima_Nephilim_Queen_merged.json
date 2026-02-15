@@ -1,0 +1,63 @@
+{
+  "card_type": "crew_card",
+  "name": "Teach Them Fear",
+  "associated_master": "Nekima",
+  "associated_title": "Nephilim Queen",
+  "faction": "Neverborn",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Brood models",
+      "abilities": [
+        {
+          "name": "Black Blood",
+          "defensive_type": null,
+          "text": "After this model suffers damage, enemy models within (t)1\" gain an Injured token."
+        },
+        {
+          "name": "Cruel Teachings",
+          "defensive_type": null,
+          "text": "After this model fails a duel during its activation, it may deal 1 damage to itself."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Brood models",
+      "actions": [
+        {
+          "name": "Sever Artery",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(t)8\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Deal 1 damage to allies within range. This model heals 1 for each ally damaged. When Black Blood occurs due to this action, any enemies that would gain an Injured token but cannot because they already have one are dealt 1 damage.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Black Blood ability has specific interaction with Sever Artery action regarding Injured tokens"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Brood_Nekima_Nephilim_Queen_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 495,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Crew_Brood_Nekima_Nephilim_Queen.pdf",
+  "factions": [
+    "Neverborn"
+  ]
+}

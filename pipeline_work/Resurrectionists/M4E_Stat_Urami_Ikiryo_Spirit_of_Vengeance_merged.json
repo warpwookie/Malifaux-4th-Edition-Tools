@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "IKIRYO",
+  "title": "SPIRIT OF VENGEANCE",
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 3,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique"
+  ],
+  "keywords": [
+    "Urami"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Death Touch",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Damage from this attack is irreducible. If the target is killed, this model and the crew's leader heal 2.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Onslaught",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Execute",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (soulstone). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shatter Soul",
+      "action_type": "missile",
+      "range": "(gun)10\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Summon a Seishin in base contact with the target.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mark Soul",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Death Curse",
+      "range": "(aura)2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemies within range gain an Adversary token. Then, kill this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Stat_Urami_Ikiryo_Spirit_of_Vengeance.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='SPIRIT OF VENGEANCE' back='Spirit of Vengeance'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

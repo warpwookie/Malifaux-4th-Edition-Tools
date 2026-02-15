@@ -1,0 +1,77 @@
+{
+  "card_type": "crew_card",
+  "name": "Spiritual Anchor",
+  "associated_master": "Kirai Ankoku",
+  "associated_title": "Envoy of the Court",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Urami models",
+      "abilities": [
+        {
+          "name": "Vengeance",
+          "defensive_type": null,
+          "text": "Once per activation. After resolving an attack action that damaged this model, this model may drain a (soulstone) to deal 2 irreducible damage to the attacking model."
+        },
+        {
+          "name": "Chained Spirit",
+          "defensive_type": null,
+          "text": "After this model moves, any enemy models it moved through gain a Spiritual Chains token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Urami models",
+      "actions": [
+        {
+          "name": "Swirling Spirits",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": "(c)",
+          "resist": "-",
+          "tn": 4,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Another ally only. Move this model up to 6\" toward the target, ignoring models. Then, move the target up to 6\", ignoring models.",
+          "effects": null,
+          "triggers": [
+            {
+              "name": "Essence Drain",
+              "suit": "(c)",
+              "timing": "after",
+              "text": "Kill a friendly Seishin within range. This model heals 3.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Spiritual Chains",
+      "text": "Not explicitly defined on this card - referenced by Chained Spirit ability"
+    }
+  ],
+  "extraction_notes": [
+    "Spiritual Chains token is referenced but its rules are not provided on this crew card fragment"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Urami_Kirai_Ankoku_Envoy_of_the_Court_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 619,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Crew_Urami_Kirai_Ankoku_Envoy_of_the_Court.pdf",
+  "factions": [
+    "Resurrectionists"
+  ]
+}

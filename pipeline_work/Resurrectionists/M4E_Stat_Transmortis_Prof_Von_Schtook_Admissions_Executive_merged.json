@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "Prof. Von Schtook",
+  "title": "Admissions Executive",
+  "faction": "Resurrectionists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Entrance Examination",
+  "totem": "Research Assistant",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Transmortis"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Academic Superiority",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" ignore all text on the front of their crew card."
+    },
+    {
+      "name": "Chatty",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" must each discard a card to declare the Interact action."
+    },
+    {
+      "name": "Disarming",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 2 if the attacker did not declare a trigger."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gruesome Lecture",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a Remains marker within 3\" to add +(c) to its Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Study Opponent",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains either a Focused or Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mental Trauma",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target must either discard a card or be dealt 3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Daze",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Administrative Review",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models. Remove up to one token on the target. Then, have it gain a non-Summon token listed on this model's crew card.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"B...Minus\"",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to the target and remove up to one marker within 2\" of it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Academic Broadcast",
+      "range": "(aura)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Up to two other friendly models within range move up to 3\", then declare the Prepare action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "University Radio",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action affects all friendly models within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Careful Study",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a Remains or Scheme marker. Draw a card, then remove the target.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Stat_Transmortis_Prof_Von_Schtook_Admissions_Executive.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "card_type": "stat_card",
+  "name": "Daydream",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Peon",
+  "model_limit": 3,
+  "cost": "2",
+  "df": 4,
+  "wp": 4,
+  "sz": 1,
+  "sp": 8,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon (3)"
+  ],
+  "keywords": [
+    "Nightmare"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Blink)",
+      "defensive_type": null,
+      "text": "After this model is killed, it may remove a friendly Scheme marker in LoS. If it does so, this model makes a Scheme marker in base contact with itself."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bend Reality",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "X",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model chooses whether this action is resisted by Df or Wp.",
+      "effects": "For each raise this action receives, choose and apply one of the following effects in an order of your choosing (max 3):\n\"Where Am I?!\": Place the target into base contact with this model.\n\"Get Away!\": Deal 1 damage to enemies within (\u2020)2\" of the target.\n\"I'm a Bird...\": Place the target within 2\" of itself.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lead Nightmare",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target may move up to 3\".",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Nightmare_Daydream_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Resist value shows 'X' for Bend Reality, which is unusual. The italic text clarifies the model chooses between Df or Wp.",
+    "Symbol in 'Get Away!' effect appears to be a crossed swords/daggers icon, rendered as (\u2020)"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

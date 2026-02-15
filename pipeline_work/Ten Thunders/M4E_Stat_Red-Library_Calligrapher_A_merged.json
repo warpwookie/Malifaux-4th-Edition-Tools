@@ -1,0 +1,88 @@
+{
+  "card_type": "stat_card",
+  "name": "Calligrapher",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Red Library"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Flexible Interpretation",
+      "defensive_type": null,
+      "text": "When an ally within 6\" declares an action, it may drain a (soulstone) to have that action ignore enemy (c), (r), or (t) abilities."
+    },
+    {
+      "name": "Organization",
+      "defensive_type": null,
+      "text": "After this model is deployed, make a Scheme marker anywhere completely on the friendly table half."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Papercuts",
+      "action_type": "melee",
+      "range": "(melee)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, this model may remove one Scheme marker in the area between this model and the target.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Scripts of Power",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. The target declares the Walk action. After resolving, it may discard a card to declare the Interact action.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Red Library\\M4E_Stat_Red-Library_Calligrapher_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (3) characteristic indicates model_limit of 3"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "K.O.T.O.",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 5,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Honeypot",
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Reading the Room",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to have friendly models within (r)2\" gain an Insight token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Drain Life",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model heals 1. If this action receives a raise, this model heals an additional +1.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Chill",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mangle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Music Swells",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Enemy models within (aura)4\" of the target must each pass a TN 13 Wp duel or they are dealt 2 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Inspiration",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Nervous Energy",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Allies within (aura)4\" of the target gain an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Harmonize",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Choose a friendly token on this model. The target gains the same token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Qi_and_Gong_KOTO.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

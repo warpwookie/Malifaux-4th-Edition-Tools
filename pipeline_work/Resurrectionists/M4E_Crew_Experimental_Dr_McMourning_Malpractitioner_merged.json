@@ -1,0 +1,73 @@
+{
+  "card_type": "crew_card",
+  "name": "Mortuary Access",
+  "associated_master": "Dr. McMourning",
+  "associated_title": "Malpractitioner",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Experimental models",
+      "abilities": [
+        {
+          "name": "Bloated Stench",
+          "defensive_type": "unusual_defense",
+          "text": "Once per activation. When this model is dealt damage it may reduce the damage by 1 and enemy models within (aura)1\" gain a Poison token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Experimental models",
+      "actions": [
+        {
+          "name": "Lightning Rod",
+          "category": "attack_actions",
+          "action_type": "missile",
+          "range": "8\"",
+          "skill_value": 7,
+          "skill_built_in_suit": null,
+          "resist": "Sp",
+          "tn": 14,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "This action may target other allies. Once per activation. Move the target up to 4\".",
+          "effects": null,
+          "triggers": [
+            {
+              "name": "IT'S ALIVE!",
+              "suit": "(c)",
+              "timing": "Ally only",
+              "text": "Deal 2 irreducible damage to the target. Remove a Summon token from the target.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "Staple This On",
+              "suit": "(c)(c)",
+              "timing": "Ally only",
+              "text": "Deal 2 irreducible damage to the target. The target gains an Interesting Parts token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Experimental_Dr_McMourning_Malpractitioner_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 576,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Crew_Experimental_Dr_McMourning_Malpractitioner.pdf",
+  "factions": [
+    "Resurrectionists"
+  ]
+}

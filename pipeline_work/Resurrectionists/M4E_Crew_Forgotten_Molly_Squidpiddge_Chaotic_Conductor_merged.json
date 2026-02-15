@@ -1,0 +1,51 @@
+{
+  "card_type": "crew_card",
+  "name": "Parade of the Dead",
+  "associated_master": "Molly Squidpiddge",
+  "associated_title": "Chaotic Conductor",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Forgotten models",
+      "abilities": [
+        {
+          "name": "Treading on Graves",
+          "defensive_type": null,
+          "text": "When this model activates, it may discard a card to move up to 4\". If it does, after moving, it may remove a Remains marker within 1\" to draw a card."
+        },
+        {
+          "name": "Left Out of the Parade",
+          "defensive_type": null,
+          "text": "When this model receives a raise while attacking, the target gains an Abandoned token."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Forgotten models",
+      "abilities": [
+        {
+          "name": "Walk with Pride",
+          "defensive_type": null,
+          "text": "After this model declares a non-Charge general action, it may drain a (+) to have another ally within 3\" declare the same action."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The card shows 'Abandoned' as a token type granted by the Left Out of the Parade ability, but no definition is provided on this card."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Forgotten_Molly_Squidpiddge_Chaotic_Conductor_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 405,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Crew_Forgotten_Molly_Squidpiddge_Chaotic_Conductor.pdf",
+  "factions": [
+    "Resurrectionists"
+  ]
+}

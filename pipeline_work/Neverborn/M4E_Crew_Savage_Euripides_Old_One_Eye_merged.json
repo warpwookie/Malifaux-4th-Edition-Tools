@@ -1,0 +1,83 @@
+{
+  "card_type": "crew_card",
+  "name": "The Offering Endures",
+  "associated_master": "Old One-Eye",
+  "associated_title": null,
+  "faction": "Savage",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Savage models of Sz 3 or greater",
+      "abilities": [
+        {
+          "name": "Giant's Skin",
+          "defensive_type": null,
+          "text": "Once per activation. Reduce damage from an enemy (missile) or (magic) action by 1."
+        },
+        {
+          "name": "Cold Comes Walking",
+          "defensive_type": null,
+          "text": "When this model activates, it may drain a (c) to give a model engaging it a Numb token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Savage models",
+      "actions": [
+        {
+          "name": "Ancient Winds",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Sp",
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Move the target up to 5\". If this action receives a raise, the target gains a Frozen Solid token.",
+          "triggers": []
+        },
+        {
+          "name": "Hepatomancy",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "3\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Target an enemy Remains marker. The opposing player tells you the name of their currently selected scheme.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Ancient Winds has a triple-icon Signature marker (three diamonds)",
+    "Hepatomancy has a triple-icon Signature marker (three diamonds)",
+    "Giant's Skin and Cold Comes Walking are granted to models of Sz 3 or greater",
+    "Ancient Winds and Hepatomancy are granted to all Friendly Savage models"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Savage_Euripides_Old_One_Eye_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 687,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Savage\\M4E_Crew_Savage_Euripides_Old_One_Eye.pdf",
+  "factions": [
+    "Savage",
+    "Neverborn"
+  ]
+}

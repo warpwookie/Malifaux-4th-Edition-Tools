@@ -1,0 +1,137 @@
+{
+  "card_type": "stat_card",
+  "name": "Sen",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Honeypot",
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Reading the Room",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to have friendly models within (aura)2\" gain an Insight token."
+    },
+    {
+      "name": "Serene Countenance",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model cannot cheat their duel."
+    },
+    {
+      "name": "Siren Song",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" with a friendly token suffer -1 to their Wp."
+    }
+  ],
+  "actions": [
+    {
+      "name": "This Song's About You",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "*",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target may discard up to two cards. Deal 1 irreducible damage to the target for each card it does not discard.",
+      "triggers": [
+        {
+          "name": "Shrug Off",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Wink and Whisper",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model may drain a (soulstone) to draw a card for each card the target discarded.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Beckoning Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target its Sp toward a friendly model in its LoS.",
+      "triggers": [
+        {
+          "name": "Cut Them Down",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Love Hurts",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Backup Band",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Move the target up to its Sp toward this model. If the target is K.O.T.O., this model and the target both heal 2.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Qi_and_Gong_Sen.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

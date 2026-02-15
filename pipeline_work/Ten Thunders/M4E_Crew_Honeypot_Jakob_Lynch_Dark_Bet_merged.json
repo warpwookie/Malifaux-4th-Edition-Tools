@@ -1,0 +1,71 @@
+{
+  "card_type": "crew_card",
+  "name": "House Always Wins",
+  "associated_master": "Jakob Lynch",
+  "associated_title": "Dark Bet",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Honeypot models",
+      "abilities": [
+        {
+          "name": "Deal Me In",
+          "defensive_type": null,
+          "text": "When this model declares the Prepare action, it may gain a Brilliance token instead of other tokens."
+        },
+        {
+          "name": "\"I'll Raise\"",
+          "defensive_type": null,
+          "text": "When this model declares an attack action, it may remove a Brilliance token from itself. If it does so and succeeds, it receives an additional raise."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Honeypot models",
+      "actions": [
+        {
+          "name": "A Debt Called In",
+          "category": "attack_actions",
+          "action_type": "variable",
+          "range": "(magic) 6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": "2",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "Damage from this action is irreducible. Look at the top three cards of the target's deck and put them back in any order.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Brilliance",
+      "text": "Referenced in abilities Deal Me In and \"I'll Raise\" but full token rules not provided on this card."
+    }
+  ],
+  "extraction_notes": [
+    "Card shows Brilliance token referenced in multiple abilities",
+    "Attack action symbols appear to be (sig) for signature and (magic) for attack type based on visual layout",
+    "Faction cannot be determined from this card image alone"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Honeypot_Jakob_Lynch_Dark_Bet_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 569,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Crew_Honeypot_Jakob_Lynch_Dark_Bet.pdf",
+  "factions": [
+    "Unknown",
+    "Ten Thunders"
+  ]
+}

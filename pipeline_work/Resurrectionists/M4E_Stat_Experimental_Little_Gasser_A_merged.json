@@ -1,0 +1,112 @@
+{
+  "card_type": "stat_card",
+  "name": "Little Gasser",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Peon",
+  "model_limit": 3,
+  "cost": "2",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 7,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon (3)",
+    "Undead"
+  ],
+  "keywords": [
+    "Experimental"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Worst Pi\u00f1ata Ever)",
+      "defensive_type": null,
+      "text": "After this model is killed, enemy models and other Little Gassers within (r)2\" are dealt 1 damage and gain a Poison token."
+    },
+    {
+      "name": "Drag Behind",
+      "defensive_type": null,
+      "text": "Once per turn. Before this model moves, it may remove a marker within 2\" of it. After resolving the move, make a marker of the same type into base contact with this model."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Corpse Bloat",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Remains marker. Enemy models within (aura)1\" of the target must pass a TN 10 Df duel or be dealt 2 damage. Then, remove the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Evil Winds",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Models that fail this duel gain a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Pull My Finger",
+      "range": "(aura)2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within range must pass a TN 10 Wp duel or be dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stopped Up",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Kill this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Stat_Experimental_Little_Gasser_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 4 appears below the artwork - appears to be a station number or similar identifier"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "Noxious Nephilim",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Undead"
+  ],
+  "keywords": [
+    "Forgotten"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Ragged Hope",
+      "defensive_type": null,
+      "text": "After this model suffers damage from an action or trigger, enemy models within (melee)1\" gain an Abandoned token."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Playful Frenzy",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Abandoned token, increase this action's Dmg by +1.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Rampage",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model 5\", ignoring enemy models. Models moved through this way must pass a TN 13 Sp duel or be dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Lonely Call",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target is moved up to 5\" toward this model. If the target has an Abandoned token, increase the distance moved by up to +2\".",
+      "triggers": [
+        {
+          "name": "Misunderstood Monster",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target must either discard a card or gain an Abandoned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fly With Me",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may target a friendly model within 2\".",
+      "effects": "Place this model within range. If this action received a raise, place the target (if any) in base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Stat_Forgotten_Noxious_Nephilim.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn",
+    "Resurrectionists"
+  ]
+}

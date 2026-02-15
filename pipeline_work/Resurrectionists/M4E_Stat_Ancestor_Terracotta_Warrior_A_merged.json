@@ -1,0 +1,101 @@
+{
+  "card_type": "stat_card",
+  "name": "Terracotta Warrior",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 2,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Construct",
+    "Versatile"
+  ],
+  "keywords": [
+    "Ancestor"
+  ],
+  "abilities": [
+    {
+      "name": "Crumbling Apart",
+      "defensive_type": null,
+      "text": "This model cannot be healed by other models. When this model suffers damage, the damage this model suffers is changed to 1 irreducible damage."
+    },
+    {
+      "name": "Numbskull",
+      "defensive_type": null,
+      "text": "This model cannot gain tokens."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Clay Fist",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning token.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Detoxifying Clay",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Remove a token from the target. This model heals 1.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Stat_Ancestor_Terracotta_Warrior_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion characteristic includes (3), indicating model_limit of 3"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Resurrectionists"
+  ]
+}

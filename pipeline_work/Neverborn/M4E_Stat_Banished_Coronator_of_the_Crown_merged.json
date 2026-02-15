@@ -1,0 +1,135 @@
+{
+  "card_type": "stat_card",
+  "name": "Coronator of the Crown",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Banished"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Scatter 3)",
+      "defensive_type": null,
+      "text": "After this model is killed, summon up to three Gift of Thorns within 1\"."
+    },
+    {
+      "name": "Slither Off",
+      "defensive_type": null,
+      "text": "When this model ends its activation on turn 1, summon up to three Gift of Thorns within 1\" of it."
+    },
+    {
+      "name": "Under One Crown",
+      "defensive_type": null,
+      "text": "When an enemy model within 3\" with a Wreathed upgrade cheats fate or empowers, deal 1 damage to it."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Royal Treatment",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Offerings",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Discard a Wreathed upgrade from the target. Make up to two Scheme markers in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "A Generous Gift...",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Summon a Gift of Thorns into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Heavy is the Crown",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Summon up to two Gift of Thorns in base contact with this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Lost to the Depths",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "Ally only. The target heals 2 and may remove one token. For each raise this action receives, the target heals an additional +1.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "We Sense Their Wake",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target moves up to its Sp toward a model with an attached Wreathed upgrade.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Our Brethren Call",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "The target may declare an attack targeting a model with an attached Wreathed upgrade.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Stat_Banished_Coronator_of_the_Crown.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

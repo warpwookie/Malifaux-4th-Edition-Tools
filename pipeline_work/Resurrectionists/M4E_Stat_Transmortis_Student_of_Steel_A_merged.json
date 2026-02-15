@@ -1,0 +1,107 @@
+{
+  "card_type": "stat_card",
+  "name": "Student of Steel",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Undead",
+    "Construct",
+    "Student"
+  ],
+  "keywords": [
+    "Transmortis"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Construct Savant",
+      "defensive_type": null,
+      "text": "This model receives a (+) when it targets a construct model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Whirlwind Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models within (melee)2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Quick Reflexes",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Piercing",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Overload Shields",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a Shielded token from the target to increase the range of this action's (t) by 2\".",
+      "effects": "Enemy models within (melee)1\" of the target must pass a TN 12 Df duel or be dealt 2 damage.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Stat_Transmortis_Student_of_Steel_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

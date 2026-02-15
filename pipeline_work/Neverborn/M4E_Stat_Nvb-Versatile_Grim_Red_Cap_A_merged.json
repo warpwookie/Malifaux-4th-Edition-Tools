@@ -1,0 +1,110 @@
+{
+  "card_type": "stat_card",
+  "name": "RED CAP",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "3",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 7,
+  "health": 3,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Versatile"
+  ],
+  "keywords": [
+    "Grim"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    },
+    {
+      "name": "Twisted ((r))",
+      "defensive_type": null,
+      "text": "Once per activation. When this model targets an enemy with one or more tokens, it may receive +(r) to its final duel total."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Huge Sickle",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Swirling Blade",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (melee)1\" of this model, other than the target, are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "I Meant to Do That!",
+          "suit": "(m)",
+          "timing": "after_failing",
+          "text": "After failing, the next action this model declares this activation receives +2 Skl.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Murderous Intent",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Impact token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Versatile - Neverborn\\M4E_Stat_Nvb-Versatile_Grim_Red_Cap_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

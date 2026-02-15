@@ -1,0 +1,105 @@
+{
+  "card_type": "stat_card",
+  "name": "GAKI",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 3,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 2,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Undead"
+  ],
+  "keywords": [
+    "Urami"
+  ],
+  "abilities": [
+    {
+      "name": "Ravenous Wraith",
+      "defensive_type": null,
+      "text": "When this model is summoned, it may discard a card to summon another Gaki within 1\" of it."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (+) actions may not be reduced this way."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Gang Up",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage for each other ally the target is engaged with, to a maximum of +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Soul Fracture",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "After killing, infuse one (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Obscene Feast",
+      "range": "(magic)1\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Remove all enemy markers within range. This model heals 1 for each marker removed in this way.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Stat_Urami_Gaki_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3, derived from 'Minion (3)' characteristic",
+    "STN: 5 visible below the artwork, likely indicating Stone Number or similar game mechanic"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

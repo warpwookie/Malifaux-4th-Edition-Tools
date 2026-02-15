@@ -1,0 +1,126 @@
+{
+  "card_type": "stat_card",
+  "name": "Lord Chompy Bits",
+  "title": "Lurking Lullaby",
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 4,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Totem"
+  ],
+  "keywords": [
+    "Nightmare"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Uneasy)",
+      "defensive_type": null,
+      "text": "After this model is killed, an enemy model within 1\" gains a Fright token."
+    },
+    {
+      "name": "Monster in the Dark",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce all damage dealt to this model from models with Fright tokens by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Dream Eater",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Fright token, this action receives a (+).",
+      "effects": "This model heals 1.",
+      "triggers": [
+        {
+          "name": "Execute",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (c). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fear Made Flesh",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Fright token and moves up to 3\". For each raise this action receives, this model may declare a (melee) action.",
+      "triggers": [
+        {
+          "name": "Fueled By Fear",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Draw two cards and then discard one card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Nytemare's Mark",
+      "action_type": null,
+      "range": "(aura)2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within range must pass a TN 11 Wp duel or gain a Fright token.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Nightmare_Lord_Chompy_Bits_Lurking_Lullaby.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 11 visible near bottom of card"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

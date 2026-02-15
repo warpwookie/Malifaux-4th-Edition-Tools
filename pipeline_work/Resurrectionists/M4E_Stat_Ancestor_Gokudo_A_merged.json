@@ -1,0 +1,128 @@
+{
+  "card_type": "stat_card",
+  "name": "GOKUDO",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living",
+    "Ancestor"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Demise (Ancient Bloodline)",
+      "defensive_type": null,
+      "text": "When this model is killed, it may discard a Reliquary upgrade. If it does, replace it with an Ancestor model with a different name and cost 8 or less and it heals 2."
+    },
+    {
+      "name": "Diversion",
+      "defensive_type": null,
+      "text": "Enemy models within 4\" count all (-) symbols on their cards as blank."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Blazing Palm Strike",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, the target gains a Burning token.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Twin Stars",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, make a Scheme marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Catch a Glimpse",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top two cards of your fate deck, then place them back in the same order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Ancestral Curse",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Ashen Rebirth",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model gains an Aura (Fire) token.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Stat_Ancestor_Gokudo_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Resurrectionists"
+  ]
+}

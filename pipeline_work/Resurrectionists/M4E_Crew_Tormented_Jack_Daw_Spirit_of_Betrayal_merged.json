@@ -1,0 +1,50 @@
+{
+  "card_type": "crew_card",
+  "name": "Sins Unforgiven",
+  "associated_master": "Jack Daw",
+  "associated_title": "Spirit of Betrayal",
+  "faction": "Outcasts",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Tormented models",
+      "abilities": [
+        {
+          "name": "Unfinished Business",
+          "defensive_type": null,
+          "text": "When this model declares the Walk action, it may leave the engagement range of models with an Injustice upgrade without halving its Sp, and is not prevented from declaring the Interact action."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Tormented models",
+      "abilities": [
+        {
+          "name": "Sins Reflected",
+          "defensive_type": null,
+          "text": "When this model ends its activation, it may drain a (soulstone). If it does so, attach an Injustice upgrade to an enemy model within 4\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card shows a raven icon at the top center",
+    "Background image shows a tormented figure in green lighting",
+    "The ability 'Unfinished Business' specifically references Sp (Speed) stat",
+    "The ability 'Sins Reflected' uses soulstone drain mechanic"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Tormented_Jack_Daw_Spirit_of_Betrayal_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 389,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Crew_Tormented_Jack_Daw_Spirit_of_Betrayal.pdf",
+  "factions": [
+    "Outcasts",
+    "Resurrectionists"
+  ]
+}

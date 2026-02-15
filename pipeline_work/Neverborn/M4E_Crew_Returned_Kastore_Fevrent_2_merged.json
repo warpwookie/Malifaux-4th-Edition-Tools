@@ -1,0 +1,49 @@
+{
+  "card_type": "crew_card",
+  "name": "Feasting Tirade",
+  "associated_master": "Kastore",
+  "associated_title": "Fervent",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Returned models",
+      "abilities": [
+        {
+          "name": "Sanguine Slumber",
+          "defensive_type": null,
+          "text": "After a friendly, unique, Returned model is killed, a model with this ability may drain a (t). If it does not, replace this crew card with Starving Tirade."
+        },
+        {
+          "name": "Feast on the Faithful",
+          "defensive_type": null,
+          "text": "After a Hunger token is removed from this model, this model heals 2."
+        },
+        {
+          "name": "Blinded by Hunger",
+          "defensive_type": null,
+          "text": "When this model declares the Walk or Charge action, it may gain a Hunger token to treat that action as a (t) action, ignoring the once per activation restriction."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction is not specified on this crew card",
+    "The (t) symbol represents a skull suit icon",
+    "Hunger token is referenced but not defined on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Returned_Kastore_Fevrent_2_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 379,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Crew_Returned_Kastore_Fevrent_2.pdf",
+  "factions": [
+    "Unknown",
+    "Neverborn"
+  ]
+}

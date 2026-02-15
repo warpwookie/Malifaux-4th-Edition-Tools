@@ -1,0 +1,162 @@
+{
+  "card_type": "stat_card",
+  "name": "Izamu",
+  "title": "The Armor",
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 4,
+  "wp": 5,
+  "sz": 3,
+  "sp": 5,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Undead"
+  ],
+  "keywords": [
+    "Ancestor"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Eternal",
+      "defensive_type": null,
+      "text": "During the end phase, this model heals 4."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (unusual_defense) abilities of other models."
+    },
+    {
+      "name": "Unyielding",
+      "defensive_type": null,
+      "text": "When this model would be moved or controlled by another model, its owner may drain a (soulstone) to ignore that effect."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Nagamaki",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Sp of 7 or greater, this action receives +1 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Piercing",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (shielded) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Ancestral Curse",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Phantom Flames",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "Grisly Visage",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Place this model into base contact with the target and declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Heroic Intervention",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy engaged with another friendly model only.",
+      "effects": "Move all friendly models engaged with the target 5\" away from the target. Then, place this model in base contact with the target. This model may declare a (melee) targeting the target.",
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Stat_Ancestor_Izamu_The_Armor.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The Ruthless ability references an unusual defense icon which I've rendered as (unusual_defense)"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

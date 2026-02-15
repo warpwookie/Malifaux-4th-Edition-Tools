@@ -1,0 +1,82 @@
+{
+  "card_type": "crew_card",
+  "name": "Spirit Ascendant",
+  "associated_master": "Yan Lo",
+  "associated_title": "The Spirit Walker",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Ancestor models",
+      "abilities": [
+        {
+          "name": "Partial Possession",
+          "defensive_type": null,
+          "text": "After attaching a friendly upgrade, this model may declare a (///) action that cannot declare triggers."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Ancestor models",
+      "actions": [
+        {
+          "name": "Memory Shard",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "10\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": null,
+          "damage": "2",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Enemy models within (r)2\" of the target gain an Adversary token.",
+          "triggers": []
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Ancestor models",
+      "actions": [
+        {
+          "name": "A Curse on the Bones of Your Ancestors!",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "This action may only be declared while in the enemy deployment zone.",
+          "effects": "Select any scheme. The next time the opponent chooses a Next Available Scheme, they must choose it from the section on the scheme you chose.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Memory Shard effect is 'Enemy models within (r)2\" of the target gain an Adversary token.'",
+    "The unique action targeting restriction 'This action may only be declared while in the enemy deployment zone' applies to the tactical action.",
+    "Memory Shard uses (r) for range measurement to enemies around the target."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Ancestor_Yan_Lo_The_Spirit_Walker_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 673,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Crew_Ancestor_Yan_Lo_The_Spirit_Walker.pdf",
+  "factions": [
+    "Ten Thunders",
+    "Resurrectionists"
+  ]
+}

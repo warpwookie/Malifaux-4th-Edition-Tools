@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Pandora",
+  "title": "Despair's Desire",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Dark Thoughts",
+  "totem": "Poltergeist",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Woe"
+  ],
+  "abilities": [
+    {
+      "name": "A Word In Your Ear",
+      "defensive_type": null,
+      "text": "After resolving an attack action targeting this model, this model may drain a (soulstone) or discard a card to give the attacker a Paranoia token."
+    },
+    {
+      "name": "Life Leech",
+      "defensive_type": null,
+      "text": "When an enemy model activates within 2\" of this model, deal +1 damage to it for each model with this ability within 2\" of it."
+    },
+    {
+      "name": "(unusual_defense) Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fears Given Form",
+      "action_type": "melee",
+      "range": "(melee)6\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Paranoia token. If this attack receives a raise, this model may make a Scheme marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Exploit Apathy",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another ally within 3\" of the target may declare a non-Charge action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Self Loathing",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "X",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Choose one of the target's actions. X is equal to the Dmg of the chosen action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "They Laugh At You...",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Fragile Ego token and declares an attack action chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Box Opens",
+      "range": "(pulse)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Enemy models within range must pass a TN 13 Wp duel or be dealt 2 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Spreading Fear",
+          "suit": "(r)",
+          "timing": "after_resolving",
+          "text": "Deal 2 damage to enemies with a Paranoia token that fail this duel.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mass Delusion",
+          "suit": "(m)",
+          "timing": "after_resolving",
+          "text": "Move enemy models that fail this duel up to 3\" and give them a Paranoia token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Woe\\M4E_Stat_Woe_Pandora_Despair's_Desire.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

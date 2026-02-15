@@ -1,0 +1,141 @@
+{
+  "card_type": "stat_card",
+  "name": "Abyssal Anchor",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 7,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living",
+    "Banished"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Anchor",
+      "defensive_type": null,
+      "text": "When an ally targets a model with a Wreathed upgrade, it may draw range and LoS from this model."
+    },
+    {
+      "name": "Scuttle",
+      "defensive_type": null,
+      "text": "Once per turn. After an attack fails against this model, it may declare the Walk action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals +2 damage for each raise instead of +1.",
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Void Tide",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "For each raise this action receives, this model infuses one (fortitude).",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dark Bargain",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only.",
+      "effects": "Deal 1 irreducible damage to the target, then the target may declare the Interact action.",
+      "triggers": [
+        {
+          "name": "Fortify",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hasten",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hastened token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Tap the Leyline",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Stat_Banished_Abyssal_Anchor.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

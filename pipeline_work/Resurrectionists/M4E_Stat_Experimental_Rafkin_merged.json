@@ -1,0 +1,142 @@
+{
+  "card_type": "stat_card",
+  "name": "RAFKIN",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Experimental"
+  ],
+  "abilities": [
+    {
+      "name": "Cloud of Fumes",
+      "defensive_type": null,
+      "text": "Enemy models with a friendly Poison token treat the area within 3\" of this model as hazardous and concealing."
+    },
+    {
+      "name": "\"I Cheated In Medical School.\"",
+      "defensive_type": null,
+      "text": "Once per game. When this model ends its activation, it may remove an enemy Remains marker within 1\". If it does, your opponent must show you any unrevealed schemes they have (anything they wrote down about the scheme is still secret)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Lab Assistant",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. Target gains a Poison token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Via! Delivery",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, target gains a Focused token instead.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Medical Procedure",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 9,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may remove a token from an ally within range. If a token was removed, the ally heals an amount equal to the damage the target suffered.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "All Fixed Up!",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "If an ally was healed, it may declare a non-Charge action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Found the Tumor",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Summon a Little Gasser in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Laughing Gas?",
+      "action_type": null,
+      "range": "(aura)8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains an Aura (Fumes) token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Found the Tumor",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Summon a Little Gasser in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Stat_Experimental_Rafkin.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

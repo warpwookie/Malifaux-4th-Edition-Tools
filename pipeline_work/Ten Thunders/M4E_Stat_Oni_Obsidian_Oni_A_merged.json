@@ -1,0 +1,140 @@
+{
+  "card_type": "stat_card",
+  "name": "Obsidian Oni",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "3"
+  ],
+  "keywords": [
+    "Oni"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the unusual_defense abilities of other models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Exotic Weapons",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Brawling",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Obsidian Gaze",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (aura)1\" of the target. The target gains a Stunned token.",
+      "triggers": [
+        {
+          "name": "The Strong Become Stronger",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Allies within (aura)1\" of the target heal 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Flames from Beyond",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rifts in Reality",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": null,
+      "effects": "Make a Rift marker anywhere within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Oni\\M4E_Stat_Oni_Obsidian_Oni_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 10 shown below character portrait",
+    "Armor ability has unusual_defense icon but reads 'Once per activation'",
+    "Ruthless text contains unusual_defense icon rendered as bold icon in original"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

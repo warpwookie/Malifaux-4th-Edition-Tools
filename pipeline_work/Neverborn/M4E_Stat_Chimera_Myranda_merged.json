@@ -1,0 +1,170 @@
+{
+  "card_type": "stat_card",
+  "name": "MYRANDA",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Chimera"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Aspects of the Wild)",
+      "defensive_type": null,
+      "text": "When this model is killed, it may be replaced with another Chimera model without a title, heal 4 and attach a Bestial Form upgrade."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    },
+    {
+      "name": "Watchful Eye",
+      "defensive_type": null,
+      "text": "Allies within 6\" receive a (+) to Df duels."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Flurry of Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals +2 damage for each raise instead of +1.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Act on Instinct",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Instinct token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Healing Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "Flames of Change",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a Mutation upgrade. Attach a Mutation upgrade to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Shaped by the Wild",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Once per activation.",
+      "effects": "Attach a Mutation upgrade to the target.",
+      "triggers": [
+        {
+          "name": "Keen Instincts",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Instinct token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Call of the Wild",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly beast only.",
+      "effects": "Move the target up to its Sp.",
+      "triggers": [
+        {
+          "name": "Hunter's Call",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, instead of moving, the target declares the Charge action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Keen Instincts",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Instinct token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Stat_Chimera_Myranda.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Jack Daw",
+  "title": "Spirit of Betrayal",
+  "faction": "Outcasts",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Sins Unforgiven",
+  "totem": "Lady Ligeia",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Undead",
+    "Tormented"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Ghost of Malifaux",
+      "defensive_type": null,
+      "text": "When a model with an attached Injustice upgrade is killed within 8\" this model may attach an Injustice upgrade to a different enemy model within 4\" of the killed model."
+    },
+    {
+      "name": "Ruthless",
+      "defensive_type": null,
+      "text": "This model ignores the (warding) abilities of other models."
+    },
+    {
+      "name": "Undying",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by enemy models with attached Injustice upgrades by 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Head in the Noose",
+      "action_type": "melee",
+      "range": "(melee)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 4\" toward this model.",
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bound",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Aura (Binding) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dead Man's Collar",
+      "action_type": "melee",
+      "range": "(melee)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Injustice upgrade. If this action receives a raise, the target gains an Aura (Binding) token.",
+      "triggers": [
+        {
+          "name": "Advance",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Execute",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (t). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drawn to Betrayal",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Move the target up to 6\" toward an ally or a model with an Injustice upgrade in its LoS.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Denial",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (r)2\" of the target with attached Injustice upgrades are dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bound",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Aura (Binding) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Jack_Daw_Spirit_of_Betrayal.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Resurrectionists"
+  ]
+}

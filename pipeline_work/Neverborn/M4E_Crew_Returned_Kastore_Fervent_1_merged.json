@@ -1,0 +1,53 @@
+{
+  "card_type": "crew_card",
+  "name": "Starving Tirade",
+  "associated_master": "Kastore",
+  "associated_title": "Fervent",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Returned models",
+      "abilities": [
+        {
+          "name": "Gruesome Feast",
+          "defensive_type": null,
+          "text": "After this model kills an enemy model, it may drain a (t) or discard a card to replace this crew card with Feasting Tirade."
+        },
+        {
+          "name": "Feed on the Faithful",
+          "defensive_type": null,
+          "text": "After a Hunger token is removed from this model, this model heals 1."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Returned models",
+      "abilities": [
+        {
+          "name": "Hungry March",
+          "defensive_type": null,
+          "text": "When this model declares the Walk action, it may gain a Hunger token to treat that action as a (t) action."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction not clearly visible on this crew card",
+    "Starving Tirade appears to be part of a multi-state crew card system that can be replaced with 'Feasting Tirade'"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Returned_Kastore_Fervent_1_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 391,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Crew_Returned_Kastore_Fervent_1.pdf",
+  "factions": [
+    "Unknown",
+    "Neverborn"
+  ]
+}

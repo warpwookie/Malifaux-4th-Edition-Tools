@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Loyalty Revitalized",
+  "associated_master": "Mei Feng",
+  "associated_title": "Sentinel of Steel",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Foundry models",
+      "actions": [
+        {
+          "name": "Ride the Rails",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": 6,
+          "damage": "-",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Place this model into base contact with a Scrap marker within range, then make a Scrap marker within 6\" and not in base contact with an enemy.",
+          "triggers": [
+            {
+              "name": "Defend the Line",
+              "suit": "(c)",
+              "timing": "after",
+              "text": "This model declares an attack action, which receives a (t).",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "Scrap",
+      "size": null,
+      "height": null,
+      "terrain_traits": [],
+      "text": "During the start phase of turn 1, make a Scrap marker anywhere on the table, not in base contact with an enemy model."
+    }
+  ],
+  "tokens": [],
+  "extraction_notes": [
+    "Card includes initial setup instruction for Scrap marker placement at start of turn 1"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Foundry_Mei_Feng_Sentinel_of_Steel_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 488,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Foundry\\M4E_Crew_Foundry_Mei_Feng_Sentinel_of_Steel.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

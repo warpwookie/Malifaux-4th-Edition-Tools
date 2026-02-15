@@ -1,0 +1,128 @@
+{
+  "card_type": "stat_card",
+  "name": "Lost Love",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 3,
+  "sz": 2,
+  "sp": 5,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "Urami"
+  ],
+  "abilities": [
+    {
+      "name": "By Your Side",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to place itself in base contact with a unique ally within 12\"."
+    },
+    {
+      "name": "Carried on the Winds",
+      "defensive_type": null,
+      "text": "After an enemy deals damage to this model, this model may drain a (c). If it does, it may be placed into base contact with an ally within 6\"."
+    },
+    {
+      "name": "Demise (Haunt)",
+      "defensive_type": null,
+      "text": "After this model is killed, enemy models within (t)1' gain an Adversary token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Frantic Cries",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models. Move the target 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Mark Soul",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hateful Spirits",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a Seishin in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Soothe Spirit",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only. Remove up to one token from the target and heal it 2.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Erase Their Legacy",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove all enemy Scheme markers within (aura)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Draw two cards and then discard one card.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Stat_Urami_Lost_Love.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

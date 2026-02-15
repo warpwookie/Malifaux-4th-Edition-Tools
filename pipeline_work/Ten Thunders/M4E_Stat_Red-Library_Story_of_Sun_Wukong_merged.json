@@ -1,0 +1,151 @@
+{
+  "card_type": "stat_card",
+  "name": "Story of Sun Wukong",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Story"
+  ],
+  "keywords": [
+    "Red Library"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Seven Means of Immortality",
+      "defensive_type": null,
+      "text": "During the start phase of turn 4, if this model was hired into this crew and it is not in play because it was killed, summon this model within 3\" of any friendly model. It does not gain a Slow token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ruyi Jingu Bang",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may place anywhere within 3\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Whirlwind Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to enemy models within (melee)2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Swift Action",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Biting Insult",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, make a Scheme marker in base contact with the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pilfer",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must drain a (fortitude). If it does so, infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Leap",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Place this model anywhere within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Journey to the West",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose an ally within 2\". Place the chosen model in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Speed of a Meteor",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Immediately, increase the Rg of this action by +2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "I Can Dig It",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Red Library\\M4E_Stat_Red-Library_Story_of_Sun_Wukong.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Story of Sun Wukong' back='Sun Wukong'",
+    "Title mismatch: front='None' back='Story of Sun Wukong'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

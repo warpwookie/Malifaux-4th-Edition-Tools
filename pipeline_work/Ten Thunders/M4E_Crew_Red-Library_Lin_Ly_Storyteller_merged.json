@@ -1,0 +1,70 @@
+{
+  "card_type": "crew_card",
+  "name": "Legendary Figures",
+  "associated_master": "Linh Ly",
+  "associated_title": "Storyteller",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly story Red Library models",
+      "abilities": [
+        {
+          "name": "Demise (The Story Goes On)",
+          "defensive_type": "unusual_defense",
+          "text": "Once per turn. When this model is killed, it may discard a card to heal 3."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Red Library models without a Summon token",
+      "actions": [
+        {
+          "name": "Mightier than the Sword",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "(magic)6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": "2",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "If this action kills the target, summon a Bookkeeper with 3 health in base contact with the killed model.",
+          "triggers": [
+            {
+              "name": "Gift of Knowledge",
+              "suit": "(m)(m)",
+              "timing": "after resolution",
+              "text": "An ally within 3\" gains an Insight token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card includes decorative Asian-inspired border artwork",
+    "Features illustration of character with flowing black hair in turquoise clothing",
+    "Attack action has signature icon (sword symbol)",
+    "The 'Demise' ability is specifically for 'story Red Library models' which appears to be a subset of Red Library models"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Red-Library_Lin_Ly_Storyteller_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 564,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Red Library\\M4E_Crew_Red-Library_Lin_Ly_Storyteller.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

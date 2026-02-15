@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "WHITE EYES",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Returned"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Made to Kill",
+      "defensive_type": null,
+      "text": "Once per activation. After this model is placed, it may declare a (magic) action after resolving the current action."
+    },
+    {
+      "name": "Nowhere to Hide",
+      "defensive_type": null,
+      "text": "When this model activates, if it has a Hunger token, its attack actions have a raise value of 3 until the end of its activation."
+    },
+    {
+      "name": "Unformed",
+      "defensive_type": "unusual_defense",
+      "text": "While this model is within 2\" of blocking terrain, it has cover."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shuddering Shape",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Erase Their Legacy",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove all enemy Scheme markers within (aura)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bloody Tithe",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model may either heal 2 or remove a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Terrorize",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to its Sp away from this model.",
+      "triggers": [
+        {
+          "name": "Daze",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token and this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shared Cravings",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [
+        {
+          "name": "Racked with Spasms",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)4\" of this model are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_White_Eyes.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

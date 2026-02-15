@@ -1,0 +1,121 @@
+{
+  "card_type": "stat_card",
+  "name": "Shadow Fate",
+  "title": "Emissary",
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 7,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Aspect of the Dragon",
+      "defensive_type": null,
+      "text": "During the start phase of the first turn, attach an Aspect upgrade to this model."
+    },
+    {
+      "name": "Quick Study",
+      "defensive_type": null,
+      "text": "This model gains the keywords of the friendly leader."
+    },
+    {
+      "name": "Tempting Fate",
+      "defensive_type": null,
+      "text": "Once per game. When a friendly master is killed, this model may drain two (soulstone). If it does so, deal 4 irreducible damage to this model, then the friendly master heals 4."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Dragon's Maw",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives a (+) if this model is on Ht 2 or higher terrain.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bowled Over",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target 4\" away, then move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maim",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rising Dragon",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Place this model anywhere within range. If this model changes elevation in this way, it gains a Bolstered token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Dragon's Fire",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of this model must pass a TN 14 Sp duel or this model may move them up to 2\" and deal 1 damage to them.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Stat_TT-Versatile_Shadow_Fate_Emissary.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Shadow Fate' back='Emissary'",
+    "Title mismatch: front='Emissary' back='Shadow Fate'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

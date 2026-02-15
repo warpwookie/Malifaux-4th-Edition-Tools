@@ -1,0 +1,150 @@
+{
+  "card_type": "stat_card",
+  "name": "Carnivorous Wyrdwood",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 5,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Plant"
+  ],
+  "keywords": [
+    "Brood",
+    "Fae"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Cumbersome",
+      "defensive_type": null,
+      "text": "This model may not scale terrain."
+    },
+    {
+      "name": "From Shadow",
+      "defensive_type": null,
+      "text": "This model is deployed during the start phase of turn 1 anywhere on the table, not within 2\" of a Strategy marker or enemy deployment zone."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Wyrdwood Branches",
+      "action_type": "melee",
+      "range": "(melee)4\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target 3\", unaffected by severe terrain, toward this model.",
+      "triggers": [
+        {
+          "name": "Cruelty",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Writhing Roots",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a Remains or Underbrush marker within 6\". This action deals +1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pick the Bones",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "After killing, this model may declare the Interact action after resolving the current action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Roots from Below",
+      "range": "(pulse)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This action ignores LoS.",
+      "effects": "Enemy models within range must pass a TN 12 Df duel or be dealt 2 damage. Models that do not have LoS to this model suffer a (-) to their duel.",
+      "triggers": [
+        {
+          "name": "Claim Territory",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Choose an enemy Scheme marker within range. Make a Scheme marker into base contact with the chosen marker, then remove the chosen marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sudden Move",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Place this model anywhere within 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tenacity",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Discard a card.",
+      "effects": "This model heals 2.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Fae_Brood_Carnivorous_Wyrdwood.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

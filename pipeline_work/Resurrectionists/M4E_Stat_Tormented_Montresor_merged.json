@@ -1,0 +1,149 @@
+{
+  "card_type": "stat_card",
+  "name": "Montresor",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Undead"
+  ],
+  "keywords": [
+    "Tormented"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Eternal)",
+      "defensive_type": null,
+      "text": "Once per turn. When this model is killed, it may discard a card. If it does so, it heals 4."
+    },
+    {
+      "name": "Suffocating",
+      "defensive_type": null,
+      "text": "When an enemy model with a friendly upgrade attached activates within 6\" of this model, it must discard a card or gain a Slow token."
+    },
+    {
+      "name": "U Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Noose Tightens",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a friendly upgrade attached, this model receives +(c) to its final duel total.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Devastating Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, reduce this action's raise value to 3.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Falter",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Catch a Glimpse",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Look at the top two cards of your fate deck, then place them back in the same order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Execute",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Toss the Noose",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token. For each raise this action receives, move the target up to 2\" toward this model.",
+      "triggers": [
+        {
+          "name": "Pull and Drag",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target 3\" toward this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Cursed to Watch",
+      "action_type": null,
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Non-master ally only. This action cannot target the same model more than once per activation.",
+      "effects": "Target declares an action.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Montresor.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Catch a Glimpse trigger has a book icon but no specific suit symbol visible - marked as null",
+    "Execute trigger appears to have a crow suit icon but is partially obscured - marked as null to be safe"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

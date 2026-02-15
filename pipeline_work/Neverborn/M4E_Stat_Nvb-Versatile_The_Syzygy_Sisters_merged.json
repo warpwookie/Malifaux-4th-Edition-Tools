@@ -1,0 +1,113 @@
+{
+  "card_type": "stat_card",
+  "name": "The Syzygy Sisters",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Entwined Destiny",
+      "defensive_type": null,
+      "text": "When this model activates, discard all Phases of the Moon upgrades attached to it. Then, this model may attach a Phases of the Moon upgrade."
+    },
+    {
+      "name": "Perfected Form",
+      "defensive_type": null,
+      "text": "This model may declare any action printed on its stat card or attached upgrades as a 1 action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Lure",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target its Sp toward this model.",
+      "triggers": [
+        {
+          "name": "Wax and Wane",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains this model's choice of either a Focused or Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fallow Night",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Scheme marker within range. Enemy models within (X)1\" of the made marker must pass a TN 12 Wp duel or be dealt 2 damage.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Moon's Protection",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target is moved up to 4\" and gains a Focused token.",
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Versatile - Neverborn\\M4E_Stat_Nvb-Versatile_The_Syzygy_Sisters.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

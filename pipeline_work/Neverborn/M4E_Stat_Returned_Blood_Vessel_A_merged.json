@@ -1,0 +1,125 @@
+{
+  "card_type": "stat_card",
+  "name": "Blood Vessel",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Returned"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Ready to Serve",
+      "defensive_type": null,
+      "text": "While this model has a friendly Hunger token, it receives +2 to its Df and Wp."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rend the Flesh",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target allies. If the target is an ally, it is dealt no damage, heals 1, and may remove a Hunger token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Catch a Glimpse",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Look at the top two cards of your fate deck, then place them back in the same order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Sacred Duty",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only. This action does not require LoS. Place this model in base contact with the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Sudden Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "On Guard",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Immediately, increase this action's duel total by +2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Rite of Sacrifice",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model gains a Hunger token. Declare the Interact action.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Blood_Vessel_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit parsed from 'Minion (3)' on card: 3",
+    "Keywords section is empty after the diamond bullet separator"
+  ],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

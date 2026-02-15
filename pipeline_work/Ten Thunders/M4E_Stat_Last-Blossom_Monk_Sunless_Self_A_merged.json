@@ -1,0 +1,101 @@
+{
+  "card_type": "stat_card",
+  "name": "SUNLESS SELF",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Peon",
+  "model_limit": 3,
+  "cost": "2",
+  "df": 6,
+  "wp": 3,
+  "sz": 2,
+  "sp": 9,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon (3)",
+    "Last Blossom",
+    "Monk"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Demise (Claimed by the Darkness)",
+      "defensive_type": null,
+      "text": "After this model is killed, this model may remove a marker within 1\" of itself."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shadow Strike",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model is in concealing terrain, this action receives +1 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grab On",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tactical Advantage",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Declare a tactical action printed on this model's stat card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shadow Shove",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Move the target up to 3\".",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Last Blossom\\M4E_Stat_Last-Blossom_Monk_Sunless_Self_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Characteristics listed as 'Peon (3) \u2022 Last Blossom, Monk' - parsing 'Peon (3)' as characteristic with model_limit=3, and 'Last Blossom' and 'Monk' as characteristics since they appear before any bullet separator for keywords"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

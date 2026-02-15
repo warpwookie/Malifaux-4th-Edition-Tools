@@ -1,0 +1,106 @@
+{
+  "card_type": "stat_card",
+  "name": "ALP",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)"
+  ],
+  "keywords": [
+    "Nightmare"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Uneasy)",
+      "defensive_type": null,
+      "text": "After this model is killed, an enemy model within 1\" gains a Fright token."
+    },
+    {
+      "name": "Made to Kill",
+      "defensive_type": null,
+      "text": "Once per activation. After this model is placed, it may declare a (missile) action after resolving the current action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Imaginary Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a Fright token, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Grab On",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Siphon Essence",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "After killing, infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Nightmare_Alp_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 9 appears below the artwork, likely indicating Stunned value or similar stat"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

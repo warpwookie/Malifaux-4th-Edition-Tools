@@ -1,0 +1,104 @@
+{
+  "card_type": "stat_card",
+  "name": "Restless Spirit",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Revenant"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "On the Other Side",
+      "defensive_type": null,
+      "text": "When this model is on your crew card, when a friendly model ends its activation, it may remove this model from the crew card to declare an action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fling Tombstone",
+      "action_type": "magic",
+      "range": "(magic)",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or (magic)8\".",
+      "effects": "If the target has a Stunned token, this model may move the target up to 2\".",
+      "triggers": [
+        {
+          "name": "Display Their Dead",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (melee)2\" of the target must pass a TN 12 Wp duel or gain a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Grave Mist",
+      "range": "(melee)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Allies within range gain a Shielded token.",
+      "triggers": [
+        {
+          "name": "Shimmer",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Other allies within range may move up to 2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pass Through",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Revenant\\M4E_Stat_Revenant_Restless_Spirit.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

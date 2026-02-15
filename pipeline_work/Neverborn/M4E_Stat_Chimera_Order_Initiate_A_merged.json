@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "ORDER INITIATE",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Beast",
+    "Living"
+  ],
+  "keywords": [
+    "Chimera"
+  ],
+  "abilities": [
+    {
+      "name": "Aspect of the Beast",
+      "defensive_type": null,
+      "text": "After this model is deployed, attach a Mutation upgrade to it."
+    },
+    {
+      "name": "Stampede",
+      "defensive_type": null,
+      "text": "After this model ends a Charge action in base contact with any other models, it may deal 1 damage to itself. If it does so, deal 1 damage to all other models in base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pack Mentality",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly beast within range may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Aspects of the Wild",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Discard a Mutation upgrade, if able.",
+      "effects": "Attach a Mutation upgrade to this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Call of the Wild",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally or friendly beast only.",
+      "effects": "Move the target up to its Sp.",
+      "triggers": [
+        {
+          "name": "Fortify",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Prioritize",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Draw a card of value 3 or less from your discard pile.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Stat_Chimera_Order_Initiate_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

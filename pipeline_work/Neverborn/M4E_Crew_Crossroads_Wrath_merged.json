@@ -1,0 +1,65 @@
+{
+  "card_type": "crew_card",
+  "name": "On Tour",
+  "associated_master": "Wrath",
+  "associated_title": "Master",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Crossroads models",
+      "abilities": [
+        {
+          "name": "Thunderous Performance",
+          "defensive_type": null,
+          "text": "While performing an opposed duel with an enemy that has a Craven token, this model receives +1 to its duel total."
+        },
+        {
+          "name": "Consumed by Sin",
+          "defensive_type": null,
+          "text": "When this model receives a raise in an opposed duel with an enemy model, the enemy model gains a Sin token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Crossroads models",
+      "actions": [
+        {
+          "name": "Destructive Performance",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(magic) 14\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS.",
+          "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction not specified on card",
+    "Destructive Performance has three skulls indicating it is a signature action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Crossroads_Wrath_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 531,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Versatile - Neverborn\\M4E_Crew_Crossroads_Wrath.pdf",
+  "factions": [
+    "Unknown",
+    "Neverborn"
+  ]
+}

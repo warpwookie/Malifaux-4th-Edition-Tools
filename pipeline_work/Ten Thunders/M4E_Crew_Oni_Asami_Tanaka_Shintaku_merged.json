@@ -1,0 +1,68 @@
+{
+  "card_type": "crew_card",
+  "name": "Entangled Spirits",
+  "associated_master": "Asami Tanaka",
+  "associated_title": "Shintaku",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Oni models",
+      "abilities": [
+        {
+          "name": "Healing Void",
+          "defensive_type": null,
+          "text": "Once per activation. After this model resolves an action where it ended a move within 1\" of a Rift marker, it may choose to remove that marker to heal 3."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Oni models",
+      "actions": [
+        {
+          "name": "Beyond's Invasion",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": 3,
+          "damage": "0",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Make one Rift marker within range, plus one more for each raise this action receives.",
+          "triggers": [
+            {
+              "name": "Realms Where Death Means Nothing",
+              "suit": "(t)(t)(t)",
+              "timing": "after",
+              "text": "If a friendly master was killed this game, summon it with 7 health into base contact with a made marker.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card shows decorative border and character art of a female character with blue/purple face markings and a serpentine headdress",
+    "Healing Void is specified as 'Once per activation' which is a timing restriction on the ability"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Oni_Asami_Tanaka_Shintaku_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 556,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Oni\\M4E_Crew_Oni_Asami_Tanaka_Shintaku.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

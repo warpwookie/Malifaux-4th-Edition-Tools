@@ -1,0 +1,157 @@
+{
+  "card_type": "stat_card",
+  "name": "Dynast Bram",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Banished"
+  ],
+  "abilities": [
+    {
+      "name": "Cloak of Spines",
+      "defensive_type": null,
+      "text": "Once per activation. After an attack targeting this model fails, the attacker gains an Injured token."
+    },
+    {
+      "name": "Regal Swordsman",
+      "defensive_type": null,
+      "text": "When this model declares an attack, it may remove a Shielded token to receive a (t) and a suit of its choice to its Skl."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ancestral Blade",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "A Generous Gift...",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Summon a Gift of Thorns into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maim",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Biting Insult",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 7,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, make a Scheme marker in base contact with the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "On Your Heels",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "A Generous Gift...",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Summon a Gift of Thorns into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Weak, All of You",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Engaged ally only. Deal 1 damage to the target. Place this model into base contact with a model engaging the target. Then, this model may declare a (melee) attack, which receives a (-).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Show You How It's Done",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Increase the Dmg of all of this model's attacks by +1 until the end of the current activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Stat_Banished_Dynast_Bram.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Dynast Bram' back='Dynasty Bram'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

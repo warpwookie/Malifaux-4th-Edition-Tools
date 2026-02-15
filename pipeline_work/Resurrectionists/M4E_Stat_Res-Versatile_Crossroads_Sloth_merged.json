@@ -1,0 +1,125 @@
+{
+  "card_type": "stat_card",
+  "name": "SLOTH",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Undead",
+    "Versatile"
+  ],
+  "keywords": [
+    "Crossroads"
+  ],
+  "abilities": [
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Take It Easy",
+      "defensive_type": null,
+      "text": "Enemy models that activate within 6\" suffer -2 Sp until the end of their activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bass Bash",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Rest in Peace",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Craven or Summon token. When resolving, this action deals +3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Siphon Life",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resting in the Blues",
+      "action_type": "magic",
+      "range": "(magic)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Target gains a Slow token and heals 3. For each raise this action receives, increase or decrease the amount healed by 1.",
+      "triggers": [
+        {
+          "name": "\"Don't Worry About Nothin'\"",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Craven token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Long Slow Solo",
+      "range": "(aura)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Enemy models within range must pass a TN 13 Wp duel or gain a Slow token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Versatile - Resurrectionists\\M4E_Stat_Res-Versatile_Crossroads_Sloth.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

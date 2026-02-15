@@ -1,0 +1,136 @@
+{
+  "card_type": "stat_card",
+  "name": "Hungering Darkness",
+  "title": "Eclipse",
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 4,
+  "wp": 4,
+  "sz": 3,
+  "sp": 7,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Totem"
+  ],
+  "keywords": [
+    "Honeypot"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Bad Influence)",
+      "defensive_type": null,
+      "text": "After this model is killed, models within (r) 4\" gain a Brilliance token."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shred",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "The Light Inside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model or the target gains a Brilliance token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Thrash",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove all markers and destructible terrain within (x)1\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shimmerlungs",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target and models within (x)2\" of the target gain a Brilliance token.",
+      "triggers": [
+        {
+          "name": "Brilliance Unfolding",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Draw a number of cards equal to the number of models that gained a Brilliance token from this action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "All In",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "This model may deal up to 2 irreducible damage to itself. When resolving, deal +1 damage to the target per damage suffered when declaring this trigger.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hole in the World",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place the target within 6\" of its current location.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Hungering_Darkness_Eclipse.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

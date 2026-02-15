@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "WHITE RABBIT CO.",
+  "title": null,
+  "faction": "Explorer's Society",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Redchapel"
+  ],
+  "abilities": [
+    {
+      "name": "Chatty",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" must each discard a card to declare the Interact action."
+    },
+    {
+      "name": "Dashing Fit",
+      "defensive_type": null,
+      "text": "When a unique enemy model within 4\" activates, this model may drain a (soulstone) to make a Scheme marker in base contact with it."
+    },
+    {
+      "name": "Marvelous Wares",
+      "defensive_type": null,
+      "text": "When this model ends its activation, enemies within (t) 4\" gain an Entranced token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Stitch Up",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token.",
+      "triggers": [
+        {
+          "name": "Execute",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (fortitude). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bespoke Headwear",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 1,
+      "costs_and_restrictions": "This action may target allies.",
+      "effects": "Move the target up to 3\". For each raise this action receives, move the target +2\".",
+      "triggers": [
+        {
+          "name": "Stetson",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a Scheme marker within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fedora",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "An enemy model within 3\" of the target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Fez",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stovepipe",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "A friendly Seamus may move 3\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Redchapel\\M4E_Stat_Redchapel_White_Rabbit_Co.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Explorer's Society",
+    "Resurrectionists"
+  ]
+}

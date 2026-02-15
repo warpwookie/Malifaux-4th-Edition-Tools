@@ -1,0 +1,110 @@
+{
+  "card_type": "stat_card",
+  "name": "BUNRAKU",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Puppet"
+  ],
+  "keywords": [
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tanto",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If there are no different enemy models within 2\" of the target, this action receives a (r).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pop In",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model anywhere within 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Beautiful Clothes",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Onward",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may declare the Walk action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Of the Same String",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Immediately, another friendly Bunraku within 6\" declares the Walk action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Qi and Gong\\M4E_Stat_Qi-and-Gong_Bunraku_A.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='BUNRAKU' back='Tanto'"
+  ],
+  "extraction_notes": [
+    "STN: 8 appears below the artwork but not parsed as ability or stat - appears to be a station designation"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

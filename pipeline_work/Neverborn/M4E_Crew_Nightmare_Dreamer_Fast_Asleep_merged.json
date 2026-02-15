@@ -1,0 +1,68 @@
+{
+  "card_type": "crew_card",
+  "name": "Lucid Dreaming",
+  "associated_master": "The Dreamer",
+  "associated_title": "Fast Asleep",
+  "faction": "Neverborn",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Nightmare models",
+      "abilities": [
+        {
+          "name": "Feed on Fear",
+          "defensive_type": null,
+          "text": "This model receives a (t) when targeting a model with a Fright token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Nightmare models",
+      "actions": [
+        {
+          "name": "Dreadful Dream",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "(r) 4\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "Enemy models within range must pass a TN 12 Wp duel or gain a Fright token.",
+          "triggers": [
+            {
+              "name": "I Can't Wake Up!",
+              "suit": "",
+              "timing": "Once per activation",
+              "text": "One minion or peon model that failed this duel gains a Flicker token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The trigger for 'Dreadful Dream' does not have a visible suit marker in the image",
+    "The action appears to be a signature action (indicated by the marker before the name)"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Nightmare_Dreamer_Fast_Asleep_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 518,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Crew_Nightmare_Dreamer_Fast_Asleep.pdf",
+  "factions": [
+    "Neverborn"
+  ]
+}

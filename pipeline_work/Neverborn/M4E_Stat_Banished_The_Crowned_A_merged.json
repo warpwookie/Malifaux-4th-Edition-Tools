@@ -1,0 +1,129 @@
+{
+  "card_type": "stat_card",
+  "name": "The Crowned",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Banished"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Scatter 1)",
+      "defensive_type": null,
+      "text": "After this model is killed, summon up to one Gift of Thorns within 3\"."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Under One Crown",
+      "defensive_type": null,
+      "text": "When an enemy model within 3\" with a Wreathed upgrade cheats fate or empowers, deal 1 damage to it."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Eldertide",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "A Generous Gift...",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Summon a Gift of Thorns into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maim",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "To the Pools, At Last",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Deal 1 damage to this model. Place this model within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Hidden Cache",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Stat_Banished_The_Crowned_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (3) indicates model_limit: 3"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

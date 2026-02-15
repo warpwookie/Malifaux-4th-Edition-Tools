@@ -1,0 +1,68 @@
+{
+  "card_type": "crew_card",
+  "name": "Dark Thoughts",
+  "associated_master": "Pandora",
+  "associated_title": "Despair's Desire",
+  "faction": "Neverborn",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Woe models",
+      "abilities": [
+        {
+          "name": "Opportunist",
+          "defensive_type": null,
+          "text": "Once per activation. Before performing an opposed duel, this model may remove a friendly token from the target. If it does so, this model receives a (fortitude) and adds a suit of its choice to its duel total."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Woe models",
+      "actions": [
+        {
+          "name": "Hateful Rumors",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "(magic) 6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Move the target up to 6\" and it gains a Fragile Ego token.",
+          "triggers": [
+            {
+              "name": "\"They're After You...\"",
+              "suit": "(m)",
+              "timing": "after_resolution",
+              "text": "If the target has a Paranoia token, it gains a Slow token. Otherwise, it gains a Paranoia token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Paranoia and Fragile Ego tokens are referenced but not defined on this card",
+    "Slow token is also referenced but not defined on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Woe_Pandora_Despair's_Desire_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 548,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Woe\\M4E_Crew_Woe_Pandora_Despair's_Desire.pdf",
+  "factions": [
+    "Neverborn"
+  ]
+}

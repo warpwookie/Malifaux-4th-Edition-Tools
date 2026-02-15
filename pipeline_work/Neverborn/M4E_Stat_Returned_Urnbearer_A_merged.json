@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "Urnbearer",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Returned"
+  ],
+  "abilities": [
+    {
+      "name": "Arcane Reservoir",
+      "defensive_type": null,
+      "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
+    },
+    {
+      "name": "Pools of Blood",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Exsanguinate",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "An ally within 4\" heals 1.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Faith in the Flesh",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "An ally within 4\" gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Death's Door",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Incurable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lure",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target its Sp toward this model.",
+      "triggers": [
+        {
+          "name": "Drink Deeply",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target removes a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Dark Benediction",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Hunger token. If it does so, it may gain this model's choice of an Insight or Adaptable token.",
+      "triggers": [
+        {
+          "name": "Advance",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Urnbearer_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Neverborn"
+  ]
+}

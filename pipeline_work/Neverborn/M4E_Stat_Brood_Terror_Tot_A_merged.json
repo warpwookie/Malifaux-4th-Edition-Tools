@@ -1,0 +1,93 @@
+{
+  "card_type": "stat_card",
+  "name": "Terror Tot",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "3",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 5,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living"
+  ],
+  "keywords": [
+    "Brood"
+  ],
+  "abilities": [
+    {
+      "name": "Relish in Blood (Young Nephilim)",
+      "defensive_type": null,
+      "text": "After resolving an attack action that damaged a model, this model may remove a Glutted token to replace itself with a Young Nephilim and heal 4. If it does not have a Glutted token, it instead gains a Glutted token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Place this model anywhere within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Blood for Blood",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to this model. Any enemy models within range of the Black Blood (1) that cannot gain an Injured token because they already have one are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Brood_Terror_Tot_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

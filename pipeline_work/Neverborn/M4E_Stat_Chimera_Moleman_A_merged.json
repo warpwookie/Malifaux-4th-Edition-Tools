@@ -1,0 +1,103 @@
+{
+  "card_type": "stat_card",
+  "name": "Moleman",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 4,
+  "wp": 4,
+  "sz": 1,
+  "sp": 5,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Beast"
+  ],
+  "keywords": [
+    "Chimera"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Mind Me",
+      "defensive_type": null,
+      "text": "The following do not restrict this model from taking the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sharp Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Rake the Eyes",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Choose a suit. The target must reveal the top three cards of its fate deck and discard any of the chosen suit. Place the rest back on top of the deck in any order.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Tunneling",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a marker, ignoring LoS. This model may drain a (fortitude) to target a Strategy marker.",
+      "effects": "Place this model within 1\" of the target.",
+      "triggers": [
+        {
+          "name": "Undermine",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove an enemy Scheme marker within 2\". Draw a card or infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "I Can Dig It",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Stat_Chimera_Moleman_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 from 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

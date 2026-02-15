@@ -1,0 +1,155 @@
+{
+  "card_type": "stat_card",
+  "name": "Barbaros",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Loyal",
+    "Returned"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "By Need Alone",
+      "defensive_type": null,
+      "text": "When this model activates, if it has a Hunger token, it may move up to 3\"."
+    },
+    {
+      "name": "Caught in the Ring",
+      "defensive_type": null,
+      "text": "Models engaged by this model cannot target other models with attack actions."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Macuahuitl",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may gain a Hunger token. If it does so, this action deals +1 damage.",
+      "triggers": [
+        {
+          "name": "Faith in the Flesh",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "An ally within 4\" gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shared Cravings",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mangle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lure",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target its Sp toward this model.",
+      "triggers": [
+        {
+          "name": "Bloody Tithe",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model may either heal 2 or remove a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "To the Slaughter",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to its Sp toward an enemy model in LoS. Then, this model may declare a (melee) action.",
+      "triggers": [
+        {
+          "name": "Blood Price",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of this model are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Clarity",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Barbaros.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

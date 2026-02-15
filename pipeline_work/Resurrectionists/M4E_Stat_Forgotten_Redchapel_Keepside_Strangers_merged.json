@@ -1,0 +1,159 @@
+{
+  "card_type": "stat_card",
+  "name": "Keepside Strangers",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Loyal"
+  ],
+  "keywords": [
+    "Forgotten",
+    "Redchapel"
+  ],
+  "abilities": [
+    {
+      "name": "Followers",
+      "defensive_type": null,
+      "text": "After this model ends its activation, a friendly leader may activate if it has not yet activated this turn."
+    },
+    {
+      "name": "Skeleton in the Closet",
+      "defensive_type": null,
+      "text": "When this model activates, it may make a Remains marker within 6\". Enemy models within (y)1\" of the made marker gain an Entranced token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shadowy Numbers",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model has half its maximum health or more, this attack has a raise value of 3. This action deals +1 damage if it is not this model's activation.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Handful of Snakes",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (aura)2\" of the target.",
+      "triggers": [
+        {
+          "name": "Mass Hysteria",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Overwhelmed",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Take by the Hand",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target 3\". Then move this model up to 3\" toward the target.",
+      "triggers": [
+        {
+          "name": "Cruelty of Strangers",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly token from the target. Deal 2 damage to the target. If this kills the target, infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hear the Whispers",
+      "range": "(aura)2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw a card for each enemy within range with an Entranced token (maximum 2).",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Stat_Forgotten_Redchapel_Keepside_Strangers.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

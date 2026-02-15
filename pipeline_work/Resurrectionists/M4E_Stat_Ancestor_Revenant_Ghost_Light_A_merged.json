@@ -1,0 +1,93 @@
+{
+  "card_type": "stat_card",
+  "name": "GHOST LIGHT",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Peon",
+  "model_limit": 3,
+  "cost": "2",
+  "df": 3,
+  "wp": 3,
+  "sz": 1,
+  "sp": 7,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon (3)",
+    "Ancestor",
+    "Revenant"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Consume Soul",
+      "defensive_type": null,
+      "text": "When another ally within 3\" of this model drains a (soulstone), this model may infuse a (soulstone). If it does so, kill this model, ignoring Demise abilities."
+    },
+    {
+      "name": "Demise (Enlighten)",
+      "defensive_type": null,
+      "text": "After this model is killed, an ally within 3\" either heals 1 or gains a Shielded token."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ghostly Sparks",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning token.",
+      "triggers": [
+        {
+          "name": "Overheat",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (x)2\" are dealt 1 damage. Then, kill this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Path of Ashes",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Move the target up to 3\".",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Stat_Ancestor_Revenant_Ghost_Light_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

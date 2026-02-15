@@ -1,0 +1,119 @@
+{
+  "card_type": "stat_card",
+  "name": "CRUMB",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living",
+    "Brood"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Manipulative",
+      "defensive_type": "unusual_defense",
+      "text": "If this model has not yet activated this turn, enemy models may not cheat fate in opposed duels with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Probing Question",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, an enemy model within 1\" of the target gains an Entranced token.",
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Accursed Blood",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Remove a Glutted token. When resolving, deal +2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Wild Rampage",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Once per activation.",
+      "effects": "Move the target up to 5\" in a straight line, ignoring models. Deal 1 damage to models moved through this way. Then, deal 1 damage to the target.",
+      "triggers": [
+        {
+          "name": "I Meant to Do That!",
+          "suit": "(m)",
+          "timing": "after_failing",
+          "text": "After failing, the next action this model declares this activation receives +2 Skl.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Brood_Crumb.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Health bar shows numbered pips from 0-9, indicating 9 health total"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

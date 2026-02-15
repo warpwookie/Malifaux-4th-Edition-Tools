@@ -1,0 +1,115 @@
+{
+  "card_type": "stat_card",
+  "name": "Gravedigger",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Corpse Collector",
+      "defensive_type": null,
+      "text": "After a Remains marker is made within 6\", this model may move 4\" toward it."
+    },
+    {
+      "name": "Field of Corpses",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. While within 2\" of a Remains marker, this model may reduce damage dealt to it by 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rusty Shovel",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, make a Remains marker within 2\" of this model.",
+      "triggers": [
+        {
+          "name": "Accidental Roll Over",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way must pass a TN 10 Df duel or be dealt 1 damage and gain a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Battlefield Dressing",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2.",
+      "triggers": [
+        {
+          "name": "Preparations",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Onward",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may declare the Walk action.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Versatile - Resurrectionists\\M4E_Stat_Res-Versatile_Gravedigger_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Station type parsed from characteristics: Minion (2) indicates model_limit of 2"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

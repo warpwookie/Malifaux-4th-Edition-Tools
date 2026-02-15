@@ -1,0 +1,179 @@
+{
+  "card_type": "stat_card",
+  "name": "Euripides",
+  "title": "Old One-Eye",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 4,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "The Offering Endures",
+  "totem": "Stryx",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Savage"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Ossuary Rite",
+      "defensive_type": null,
+      "text": "After an enemy model ends its activation within 4\" of this model, it gains a Numb token."
+    },
+    {
+      "name": "The Old Ways",
+      "defensive_type": null,
+      "text": "After killing an enemy model, this model may look at the top two cards of its deck, draw one, and choose to discard the other or place it back on top."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tundra's Wrath",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "4",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a Numb token from the target to receive a (fortitude).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sweeping Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A different model within 1\" of the target is dealt the same damage -1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mangle",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Shatter the Weak",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Numb token.",
+      "triggers": [
+        {
+          "name": "Crack the Marrow",
+          "suit": "(m)",
+          "timing": "when_declaring",
+          "text": "This model declares an attack action; if the attack kills a model, make a Scheme marker within 1\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Force of Forgotten Kings",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (X)2\" of the target must pass a TN 13 Wp duel or gain a Numb token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Avalanche",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move models within 2\" of the target up to 4\", +2\" per raise this attack receives.",
+      "triggers": [
+        {
+          "name": "Ice Sheet",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "All enemy models moved this way gain a Frozen Solid token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Intuition",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top three cards of your fate deck and then return them in any order.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Savage\\M4E_Stat_Savage_Euripides_Old_One-Eye.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

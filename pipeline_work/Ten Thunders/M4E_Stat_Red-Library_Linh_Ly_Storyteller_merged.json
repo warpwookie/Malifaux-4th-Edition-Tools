@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "Linh Ly",
+  "title": "Storyteller",
+  "faction": "Ten Thunders",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Legendary",
+    "Figures",
+    "Master",
+    "Unique",
+    "Living",
+    "Story"
+  ],
+  "keywords": [
+    "Red Library",
+    "Paper Tiger"
+  ],
+  "abilities": [
+    {
+      "name": "A Different Ending",
+      "defensive_type": null,
+      "text": "When this model is dealt damage equal to or greater than its current health, it may drain two (soulstone) to reduce that damage to 0 and deal the same amount of damage to the attacking model."
+    },
+    {
+      "name": "Head in the Clouds",
+      "defensive_type": null,
+      "text": "Friendly models within 6\" receive a (+) to Wp duels."
+    },
+    {
+      "name": "Spellbreaker",
+      "defensive_type": null,
+      "text": "This model ignores the (magic) abilities of other models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Stories Unleashed",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may choose a (melee) action on an allied story model within 6\". This action gains the text of the chosen action, if any.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Killer Late Fees",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores Demise and (fortitude) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Storycraft",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Make a Scheme marker within 3\" of the target.",
+      "triggers": [
+        {
+          "name": "Gift of Knowledge",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 3\" gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Jump Off the Page",
+      "action_type": null,
+      "range": "(magic)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Allies within range move up to 3\". This model may drain a (fortitude) to have an ally moved by this action declare the Interact action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Restricted Section",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Models moved by this action may gain an Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Red Library\\M4E_Stat_Red-Library_Linh_Ly_Storyteller.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Health bar shows numbered pips from 1 to 14, confirming 14 health total"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

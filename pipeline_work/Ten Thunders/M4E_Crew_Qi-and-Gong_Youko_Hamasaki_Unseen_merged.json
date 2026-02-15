@@ -1,0 +1,59 @@
+{
+  "card_type": "crew_card",
+  "name": "Cunning Patience",
+  "associated_master": "Youko Hamasaki",
+  "associated_title": "Unseen",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Qi and Gong models",
+      "abilities": [
+        {
+          "name": "Whispered Lies",
+          "defensive_type": null,
+          "text": "After resolving an attack against this model in which an Entranced token was removed from the attacker, this model may move the attacker up to 4\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Qi and Gong models",
+      "actions": [
+        {
+          "name": "Information Broker",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation.",
+          "effects": "Look at the top two cards of the target's fate deck. Discard any number of them and place the rest back on top of the target's deck in any order. Then, draw a card.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The Information Broker action is marked with signature icons (two eye symbols) indicating it is a signature action.",
+    "The Entranced token referenced in Whispered Lies is not defined on this card - likely defined elsewhere."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Qi-and-Gong_Youko_Hamasaki_Unseen_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 482,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Qi and Gong\\M4E_Crew_Qi-and-Gong_Youko_Hamasaki_Unseen.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

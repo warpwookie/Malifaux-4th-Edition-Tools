@@ -1,0 +1,47 @@
+{
+  "card_type": "crew_card",
+  "name": "MISERY BUSINESS",
+  "associated_master": "Pandora",
+  "associated_title": "Tyrant-Torn",
+  "faction": "Neverborn",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Woe models",
+      "abilities": [
+        {
+          "name": "Cruel Whispers",
+          "defensive_type": "unusual_defense",
+          "text": "After resolving an enemy attack action that targeted this model, this model may drain a (+) to move the enemy up to 3\" and have it gain a Paranoia token."
+        },
+        {
+          "name": "They're Plotting Against You",
+          "defensive_type": null,
+          "text": "Enemy models with a Paranoia token may not declare triggers during opposed duels with this model."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [
+    {
+      "name": "Paranoia",
+      "text": "Referenced by Cruel Whispers ability - gained by enemy models"
+    }
+  ],
+  "extraction_notes": [
+    "Card shows decorative border elements and character artwork",
+    "Paranoia token is referenced in abilities but full rules text not provided on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Woe_Pandora_Tyrant_Torn_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 346,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Woe\\M4E_Crew_Woe_Pandora_Tyrant_Torn.pdf",
+  "factions": [
+    "Neverborn"
+  ]
+}

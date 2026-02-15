@@ -1,0 +1,91 @@
+{
+  "card_type": "crew_card",
+  "name": "Stolen Lab Equipment",
+  "associated_master": "Dr. McMourning",
+  "associated_title": "Insanitary",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Experimental models",
+      "abilities": [
+        {
+          "name": "Leaking Fumes",
+          "defensive_type": null,
+          "text": "Once per activation. When an enemy model gains a friendly Poison token during this model's activation, this model may have a different enemy within 3\" of that enemy also gain a Poison token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly models",
+      "actions": [
+        {
+          "name": "Explosive Ventilation",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "5\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Remove a Graft token.",
+          "effects": "Place this model within range. Then all models within (t)1\" gain a Poison token.",
+          "triggers": []
+        },
+        {
+          "name": "Sepsis",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "1\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Remove a Graft token from this model. Remove a friendly Poison token from the target.",
+          "effects": "Deal 3 damage to the target.",
+          "triggers": []
+        },
+        {
+          "name": "\"New Arms!\"",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Remove a Graft token.",
+          "effects": "This model declares the Interact action and increases its Rg to 4\".",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card includes an image of a character with goggles and red hair",
+    "All three actions have the signature symbol (\u00b6) indicating they are signature actions"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Experimental_Dr_McMourning_Insanitary_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 764,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Crew_Experimental_Dr_McMourning_Insanitary.pdf",
+  "factions": [
+    "Resurrectionists"
+  ]
+}

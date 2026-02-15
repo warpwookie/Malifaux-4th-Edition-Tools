@@ -1,0 +1,44 @@
+{
+  "card_type": "crew_card",
+  "name": "Entrance Examination",
+  "associated_master": "Prof. Von Schtook",
+  "associated_title": "Admissions Executive",
+  "faction": "Resurrectionists",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Transmortis models",
+      "abilities": [
+        {
+          "name": "Research Project",
+          "defensive_type": null,
+          "text": "Once per activation. After resolving an action in which this model empowered a duel, it may move up to 2\"."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Transmortis models",
+      "abilities": [
+        {
+          "name": "Recruitment Drive",
+          "defensive_type": null,
+          "text": "After this model kills an enemy model, it may drain a (+) to summon an Undergraduate with 4 health within 1\" of the killed model."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Resurrectionists\\M4E_Crew_Transmortis_Prof_Von_Schtook_Admissions_Executive_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 301,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Crew_Transmortis_Prof_Von_Schtook_Admissions_Executive.pdf",
+  "factions": [
+    "Resurrectionists"
+  ]
+}

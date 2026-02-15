@@ -1,0 +1,63 @@
+{
+  "card_type": "crew_card",
+  "name": "Repeat Until Perfect",
+  "associated_master": "Shenlong",
+  "associated_title": "The Teacher",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Monk models",
+      "abilities": [
+        {
+          "name": "Harness Chi",
+          "defensive_type": null,
+          "text": "When this model declares the Prepare action, it may gain a Chi token instead of other tokens."
+        },
+        {
+          "name": "Enlightened Teachings",
+          "defensive_type": null,
+          "text": "After this model is deployed, it gains a Chi token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Monk models",
+      "actions": [
+        {
+          "name": "Test of Worth",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": null,
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Select three allies, ignoring range and LoS. They must each be within 14\" of another selected ally, ignoring LoS. The chosen models may each remove a Chi token. All enemy models within the area formed by the three models must pass a TN 13 (fortitude) duel or be dealt 1 damage, +1 for each token removed.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Two symbol (\u2666\u2666) appears before 'Test of Worth' indicating a two-action cost"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Monk_Shenlong_The_Teacher_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 511,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Monk\\M4E_Crew_Monk_Shenlong_The_Teacher.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

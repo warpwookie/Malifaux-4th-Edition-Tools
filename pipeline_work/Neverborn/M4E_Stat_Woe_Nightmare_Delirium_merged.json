@@ -1,0 +1,155 @@
+{
+  "card_type": "stat_card",
+  "name": "Delirium",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "9",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique"
+  ],
+  "keywords": [
+    "Nightmare",
+    "Woe"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (+) actions may not be reduced this way."
+    },
+    {
+      "name": "Rush",
+      "defensive_type": null,
+      "text": "While resolving the Charge action, increase the distance this model moves by up to +2\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mirrored Malice",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "X",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Choose one of the target's actions. X is equal to the Dmg of the chosen action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Spiderwebbed Fractures",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (r)2\" of the target are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Touch of Madness",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a random card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Psychotic Influence",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack receives an additional raise if the target has a Paranoia token.",
+      "effects": "Choose and apply one of the following effects, plus an additional effect for each raise, in an order of your choosing:",
+      "triggers": [
+        {
+          "name": "Acrophobia",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Place the target within 2\" of its current location. If this caused it to increase its elevation, it is dealt 2 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Agoraphobia",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Move the target up to 4\" toward its deployment zone.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Monophobia",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "Move an enemy model in LoS of the target up to 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "House of Mirrors",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Enemy only.",
+      "effects": "Summon a Delirious Thrall in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Fractured Souls",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, ignoring \"once per\" restrictions.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Woe_Nightmare_Delirium.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Psychotic Influence lists three sub-effects (Acrophobia, Agoraphobia, Monophobia) which are not traditional triggers with suit requirements but rather selectable effects as part of the action resolution. I've formatted them as triggers with null suits to capture their structure, though they function as choices rather than suit-triggered effects."
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "card_type": "stat_card",
+  "name": "Mr. Tannen",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Honeypot"
+  ],
+  "abilities": [
+    {
+      "name": "Brilliant Guide",
+      "defensive_type": null,
+      "text": "Once per activation. After a model within 6\" gains a friendly Brilliance token, this model may move it up to 2\". Then, this model may remove the Brilliance token to move it an additional 2\"."
+    },
+    {
+      "name": "Don't Bite the Hand",
+      "defensive_type": "unusual_defense",
+      "text": "When attacking this model, enemies with a friendly Brilliance token may not cheat."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Despicable Promise",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Brilliance token. If this action receives a raise, make a Scheme marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Come Play at My Table",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place the target in base contact with an ally within 6\" of itself.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Chill",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Models damaged by this action gain a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Inner Glow",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Allies within 4\" of this model heal 1 and may gain a Brilliance token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Invisible Hand",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Target a marker.",
+      "effects": "Make a Scheme marker in base contact with the target, then remove the target.",
+      "triggers": [
+        {
+          "name": "Inner Glow",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Allies within 4\" of this model heal 1 and may gain a Brilliance token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Mr_Tannen.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Ten Thunders"
+  ]
+}

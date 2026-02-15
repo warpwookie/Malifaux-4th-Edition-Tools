@@ -1,0 +1,164 @@
+{
+  "card_type": "stat_card",
+  "name": "Pandora",
+  "title": "Tyrant-Torn",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Misery Business",
+  "totem": "Iggy",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Woe"
+  ],
+  "abilities": [
+    {
+      "name": "Luck Thief",
+      "defensive_type": null,
+      "text": "When performing opposed duels against this model, enemy models treat all (+) as if they were (-)."
+    },
+    {
+      "name": "Toxic Family",
+      "defensive_type": null,
+      "text": "When this model ends its activation, other allied models within (aura) 8\" heal 1."
+    },
+    {
+      "name": "Unstable",
+      "defensive_type": null,
+      "text": "Enemy models within 8\" that are dealt damage from hazardous terrain are dealt +1 damage."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Horrible Lies and Worse Truths",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "For each raise this action receives, the target discards a random card.",
+      "triggers": [
+        {
+          "name": "Interrogate",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target may discard a card. If it does not, this model draws a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Perilous Ground",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "No Shelter Here",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 4\", ignoring models. Then the target gains an Aura (Hazardous) token.",
+      "triggers": [
+        {
+          "name": "Nothing Sacred",
+          "suit": "(fortitude)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. The target must drain a (fortitude), if able. Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mental Trauma",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target must either discard a card or be dealt 3 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Anhedonia",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy only. Once per activation. Remove a friendly token from the target.",
+      "effects": "Summon a Woe minion into base contact with this model or the target.",
+      "triggers": [
+        {
+          "name": "\"What Did I Do...\"",
+          "suit": "(fortitude)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Aura (Negligent) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Weight of Despair",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a friendly token from the target.",
+      "effects": "Deal 2 damage to the target.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Woe\\M4E_Stat_Woe_Pandora_Tyrant-Torn.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "card_type": "stat_card",
+  "name": "Slate Ridge Mauler",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Beast"
+  ],
+  "keywords": [
+    "Chimera"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    },
+    {
+      "name": "Warning Growl",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting friendly models within 2\" do not deal additional damage due to raises."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Blood-Soaked Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Adversary token, this attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Bear Hug",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove any number of tokens from the target, place it anywhere within 2\" of this model, then give it a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tear Off a Bite",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "You're Comin' With Me",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\", then place this model into base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Tenacity",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Discard a card.",
+      "effects": "This model heals 2.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Stat_Chimera_Slate_Ridge_Mauler.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "card_type": "stat_card",
+  "name": "Backup Assistant",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living",
+    "Transmortis"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Amateur Astrologer",
+      "defensive_type": null,
+      "text": "Once per turn. After failing a duel, this model may write the suit and value of its card into your star chart."
+    },
+    {
+      "name": "Demise (Expendable)",
+      "defensive_type": null,
+      "text": "After this model is killed, either draw a card or make a Scheme marker in base contact with this model."
+    },
+    {
+      "name": "Evasive",
+      "defensive_type": "unusual_defense",
+      "text": "This model may ignore (X) effects which did not target it."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Dynamite Punch",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Enemy models within (melee)2\" of the target are dealt 1 damage.",
+      "triggers": [
+        {
+          "name": "Big Boom",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the (melee) of this action by 1\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Horrible Luck",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target its Sp away from this model. Deal 1 damage to it for every piece of terrain it comes into base contact with. If it is dealt falling damage during this action, increase that damage by 1.",
+      "triggers": [
+        {
+          "name": "Mangled Valuables",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove one marker the target moved through.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Clumsy Assistance",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This trigger must be declared, if able. Draw two cards, then discard a random card.",
+          "is_mandatory": true,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Stat_Transmortis_Backup_Assistant.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Bayou",
+    "Resurrectionists"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "card_type": "stat_card",
+  "name": "THE FERRYMAN",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct",
+    "Undead",
+    "Tormented"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Pulled in My Wake",
+      "defensive_type": null,
+      "text": "Once per activation. After this model declares the Charge action, it may drain a (soulstone) to choose an ally within 2\" of itself. After completing the Charge, place the chosen model in base contact with this model."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Ferryman's Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, this model may move up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Whirlpool",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within 1\" of the target are placed within 3\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Critical Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lost in the Fog",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "0",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target either gains a Staggered token, or this model may move it up to 4\".",
+      "triggers": [
+        {
+          "name": "Undertow",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Hazardous) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Weigh Down",
+          "suit": "(t)(t)",
+          "timing": "when_resolving",
+          "text": "Target must have a friendly upgrade attached. When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Ghostly Ram",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This model declares the Charge action, ignoring the once per activation restriction.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_The_Ferryman.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

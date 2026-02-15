@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "LOTUS EATER",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living",
+    "Monk"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Sacred Ink",
+      "defensive_type": null,
+      "text": "When this model would gain an enemy token, it may remove a Chi token instead."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hurricane Punch",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 2\". For each raise this action receives, move the target up to +2\".",
+      "triggers": [
+        {
+          "name": "Always Eating",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a marker within 2\" of the target. Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Aggressive Chi",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "Remove a Chi token. When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Stance Change",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target gains a Chi token.",
+      "triggers": [
+        {
+          "name": "Slip By",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Hastened token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Path of the Lotus",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Move this model up to its Sp toward a marker in its LoS. If this model ends this move within 2\" of the marker, it may remove that marker to gain a Chi token.",
+      "triggers": [
+        {
+          "name": "Vanish",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model within 4\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Monk\\M4E_Stat_Monk_Lotus_Eater_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

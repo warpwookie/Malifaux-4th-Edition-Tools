@@ -1,0 +1,77 @@
+{
+  "card_type": "crew_card",
+  "name": "Guided Evolution",
+  "associated_master": "Marcus",
+  "associated_title": "Monstermaker",
+  "faction": "unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Chimera models",
+      "abilities": [
+        {
+          "name": "Shed Skin",
+          "defensive_type": null,
+          "text": "After resolving an action in which a Mutation upgrade was discarded from this model, it may drain a (t). If it does, it may remove a token from itself and may make a Scheme marker within 1\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly living Chimera models",
+      "actions": [
+        {
+          "name": "Chimeramancy",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": "-",
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per turn. Ally only. X is equal to the number of Mutation upgrades attached to the target. Attach a Mutation upgrade to the target.",
+          "effects": "4+X",
+          "triggers": [
+            {
+              "name": "Mend",
+              "suit": "(r)",
+              "timing": "after",
+              "text": "Target heals 2.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "Unnatural Reflexes",
+              "suit": "(m)",
+              "timing": "after",
+              "text": "Declare this action again, targeting a different model, ignoring \"once per\" restrictions.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction not specified on card",
+    "TN column shows '4+X' which appears to represent the target number for the Chimeramancy action"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Chimera_Marcus_Monstermaker_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 607,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Crew_Chimera_Marcus_Monstermaker.pdf",
+  "factions": [
+    "unknown",
+    "Neverborn"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "card_type": "crew_card",
+  "name": "Scorch the Heavens",
+  "associated_master": "Shenlong",
+  "associated_title": "Dragon's Breath",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Monk models",
+      "abilities": [
+        {
+          "name": "Harness Chi",
+          "defensive_type": null,
+          "text": "When this model declares the Prepare action, it may gain a Chi token instead of other tokens."
+        },
+        {
+          "name": "The Training Ground",
+          "defensive_type": null,
+          "text": "After succeeding in an action that is not printed on an upgrade and that received a raise, this model may gain a Chi token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Monk models",
+      "actions": [
+        {
+          "name": "Chi Blast",
+          "category": "attack_actions",
+          "action_type": "missile",
+          "range": "(magic)10\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Wp",
+          "tn": null,
+          "damage": "2",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "If this model used a Chi token during this action, this action deals +1 damage and ignores (fortitude) abilities.",
+          "effects": null,
+          "triggers": [
+            {
+              "name": "Self Reflection",
+              "suit": "(c)",
+              "timing": "after",
+              "text": "This model gains a Chi token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Monk_Shenlong_Dragon's_Breath_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 522,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Monk\\M4E_Crew_Monk_Shenlong_Dragon's_Breath.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

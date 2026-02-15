@@ -1,0 +1,152 @@
+{
+  "card_type": "stat_card",
+  "name": "Athorak",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Returned"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Bloody Rites",
+      "defensive_type": null,
+      "text": "When this model activates, if it has a Hunger token, another ally within 3\" may gain an Insight token."
+    },
+    {
+      "name": "Eta Kithae",
+      "defensive_type": null,
+      "text": "Other allies within 3\" of this model may choose not to resolve Hunger tokens when they end their activation."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Combat Staff",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Shared Cravings",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pick the Bones",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "After killing, this model may declare the Interact action after resolving the current action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Still the Heart",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model has a Hunger token, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Astral Slash",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action targeting the same model, ignoring LoS and range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drawn to Sacrifice",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 4\" toward an ally in its LoS.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Premonition",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Look at the top card of your fate deck. This model may discard it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Willing Sacrifice",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Move the target up to 6\" toward an ally in its LoS.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Bloody Tithe",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model may either heal 2 or remove a Hunger token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Athorak.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

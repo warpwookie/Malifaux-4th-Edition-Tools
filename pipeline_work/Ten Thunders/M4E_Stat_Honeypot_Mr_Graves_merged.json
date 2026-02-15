@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "Mr. Graves",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "9",
+  "df": 6,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Honeypot"
+  ],
+  "abilities": [
+    {
+      "name": "Bloody Brilliant",
+      "defensive_type": null,
+      "text": "Once per activation. After this model suffers damage from an action or trigger, models within (r)2\" gain a Brilliance token."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Show 'Em the Door",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly token from itself. If it does so, this action receives a (fortitude).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "And Stay Out",
+          "suit": "(fortitude)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of this model are dealt 1 damage and gain a Distracted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sharpened Brilliance",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Discard a friendly Brilliance token from either this model or the target. When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "The Light Inside",
+          "suit": "(warding)",
+          "timing": "after_succeeding",
+          "text": "This model or the target gains a Brilliance token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Interrogate",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target may discard a card. If it does not, this model draws a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lead the Way",
+      "action_type": "magic",
+      "range": "(magic)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models and cannot target the same model more than once per activation.",
+      "effects": "The target is moved 3\", then move this model up to 3\" toward the target.",
+      "triggers": [
+        {
+          "name": "No Turning Back",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly Brilliance token from the target. Deal 2 damage to the target. If this kills the target, infuse a (fortitude).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Honeypot\\M4E_Stat_Honeypot_Mr_Graves.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Card has (fortitude) and (warding) icons. Rendered as (fortitude) and (warding) per text rendering rules."
+  ],
+  "factions": [
+    "Guild",
+    "Ten Thunders"
+  ]
+}

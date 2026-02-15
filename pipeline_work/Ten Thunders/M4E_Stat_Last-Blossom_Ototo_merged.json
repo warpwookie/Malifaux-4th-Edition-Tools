@@ -1,0 +1,131 @@
+{
+  "card_type": "stat_card",
+  "name": "OTOTO",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Last Blossom"
+  ],
+  "abilities": [
+    {
+      "name": "Juggernaut",
+      "defensive_type": "unusual_defense",
+      "text": "This model reduces all damage dealt to it to 3 (if more than 3)."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Massive Tetsubo",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If an Adaptable token was removed during this action, this attack's raise value is 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Cruelty",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Assassinate",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "After killing, gain a Fast token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Storm is Coming",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Shadow marker within range. Allies within (t)2\" of the marker gain an Adaptable token.",
+      "triggers": [
+        {
+          "name": "Unexpected Smoke Bomb",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model in base contact with the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Unyielding Resolve",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "This model heals 4.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Last Blossom\\M4E_Stat_Last-Blossom_Ototo.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

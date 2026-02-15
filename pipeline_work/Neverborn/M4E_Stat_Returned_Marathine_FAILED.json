@@ -1,0 +1,133 @@
+{
+  "card": {
+    "card_type": "stat_card",
+    "name": "MARATHINE",
+    "title": null,
+    "faction": "Neverborn",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 3,
+    "wp": 3,
+    "sz": 1,
+    "sp": 8,
+    "health": 0,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": null,
+    "totem": null,
+    "characteristics": [
+      "Peon",
+      "Unique",
+      "Totem"
+    ],
+    "keywords": [
+      "Returned"
+    ],
+    "abilities": [
+      {
+        "name": "Blade Rush",
+        "defensive_type": null,
+        "text": "While resolving the Charge action, this model may move through enemy models. Deal 1 damage to enemy models moved through this way."
+      },
+      {
+        "name": "Carve the Air",
+        "defensive_type": null,
+        "text": "This model can move through other models."
+      },
+      {
+        "name": "Living Blade",
+        "defensive_type": null,
+        "text": "This model does not have health and cannot be damaged or be killed. After a friendly Kastore is killed, remove this model from the game."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Living Weapon",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action ignores (warding) abilities. A friendly Kastore heals 1.",
+        "effects": null,
+        "triggers": [
+          {
+            "name": "Puncture",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this attack receives one additional raise.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Quick Reflexes",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Declare this action again, targeting a different model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Shared Cravings",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Hunger token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ],
+        "category": "attack_actions"
+      },
+      {
+        "name": "Remove Their Claim",
+        "action_type": null,
+        "range": "2\"",
+        "skill_value": null,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": null,
+        "damage": null,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Target an enemy Scheme marker.",
+        "effects": "Remove the target and draw a card.",
+        "triggers": [],
+        "category": "tactical_actions"
+      }
+    ],
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Returned\\M4E_Stat_Returned_Marathine.pdf",
+    "merge_warnings": [],
+    "extraction_notes": [
+      "Health bar appears to be absent or this model has 0 health as stated in Living Blade ability",
+      "Peon characteristic without visible number - defaulting to standard interpretation"
+    ],
+    "factions": [
+      "Neverborn"
+    ]
+  },
+  "validation": {
+    "card_name": "MARATHINE",
+    "passed": false,
+    "needs_review": true,
+    "hard_violations": [
+      "health=0 outside expected range 1-20"
+    ],
+    "soft_flags": [
+      "Totem with infuses_soulstone_on_death=false (unusual)"
+    ],
+    "hallucination_flags": [],
+    "info": [
+      "Extraction note: Health bar appears to be absent or this model has 0 health as stated in Living Blade ability",
+      "Extraction note: Peon characteristic without visible number - defaulting to standard interpretation"
+    ]
+  }
+}

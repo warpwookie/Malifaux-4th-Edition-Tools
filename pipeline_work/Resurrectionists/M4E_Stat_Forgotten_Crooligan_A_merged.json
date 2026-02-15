@@ -1,0 +1,109 @@
+{
+  "card_type": "stat_card",
+  "name": "Crooligan",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 5,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Undead"
+  ],
+  "keywords": [
+    "Forgotten"
+  ],
+  "abilities": [
+    {
+      "name": "By Your Side",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to place itself in base contact with a unique ally within 12\"."
+    },
+    {
+      "name": "Coddled",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy models may not cheat fate when targeting this model if it is within 2\" of another ally."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pattycake",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Abandoned token.",
+      "triggers": [
+        {
+          "name": "Pilfer",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Target must drain a (t). If it does so, infuse a (t).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hide and Shriek",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action receives an additional raise if the target has an Abandoned token.",
+      "effects": "Choose and apply one of the following effects, plus an additional effect for each raise, in an order of your choosing:\n\"Got You!\": Place the target into base contact with another ally within 6\".\nTerrible Taunting: Target gains either a Distracted or Abandoned token.\nUnsettling Laughter: An ally within 2\" of this model gains a Focused token.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Forage",
+      "action_type": null,
+      "range": "2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Remove target enemy Scheme marker.",
+      "effects": "Draw the top card of this model's discard pile.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Stat_Forgotten_Crooligan_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

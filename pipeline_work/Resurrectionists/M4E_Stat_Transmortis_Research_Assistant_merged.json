@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "Research Assistant",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living",
+    "Transmortis"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Accomplice",
+      "defensive_type": null,
+      "text": "When this model ends its activation, a friendly model within 6\" that has not activated this turn may discard a card to do so."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Well-Provisioned (10(soulstone))",
+      "defensive_type": null,
+      "text": "This crew starts the game with the 10(soulstone) in its hand."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Frantic Flailing",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Study Opponent",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "This model gains either a Focused or Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Alchemical Vial",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (aura)2\" of the target.",
+      "triggers": [
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Jury Rig",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Discard a card.",
+      "effects": "Draw a non-joker card in this model's discard pile with a value equal to or less than the value of the discarded card +1.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Transmortis\\M4E_Stat_Transmortis_Research_Assistant.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Keywords section appears empty after the diamond bullet separator"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

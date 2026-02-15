@@ -1,0 +1,159 @@
+{
+  "card_type": "stat_card",
+  "name": "M\u1eacP MAP",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Red Library"
+  ],
+  "abilities": [
+    {
+      "name": "Guardian of Knowledge",
+      "defensive_type": null,
+      "text": "This model receives a (+) to Df duels while it has an Insight token."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    },
+    {
+      "name": "Library Escort",
+      "defensive_type": null,
+      "text": "During the end phase, this model may move up to 4\" toward a non-Story Red Library model in LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bored to Death",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If the target has no cards in its control hand, this action deals +1 damage.",
+      "triggers": [
+        {
+          "name": "Clarity",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Duality",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy only. This model must choose: both players draw a card or both players discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lie Down and Nap",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "This model heals 1, draws a card, and ends its activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Reshelve This",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Allied minion only. Target declares an action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Lie Down and Nap",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "This model heals 1, draws a card, and ends its activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Helped by Booklights",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Remove a token from the target. This model gains an Insight token.",
+      "triggers": [
+        {
+          "name": "Booklight Glow",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Friendly models within (t) 4\" gain a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Thorough Research",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains either an Insight or Adaptable token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Red Library\\M4E_Stat_Red-Library_Map_Map.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='M\u1eacP MAP' back='M\u00e2p M\u00e2p'"
+  ],
+  "extraction_notes": [
+    "Name contains special character '\u1eac' - preserved as shown on card"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

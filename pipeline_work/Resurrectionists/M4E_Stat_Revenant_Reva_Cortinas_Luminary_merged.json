@@ -1,0 +1,164 @@
+{
+  "card_type": "stat_card",
+  "name": "Reva Cortinas",
+  "title": "Luminary",
+  "faction": "Resurrectionists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Revenant"
+  ],
+  "keywords": [
+    "Flickering Grasp",
+    "Temperance"
+  ],
+  "abilities": [
+    {
+      "name": "Ghost Lanterns",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is dealt damage, it may remove a friendly Pyre marker within 6\" to reduce that damage by 4."
+    },
+    {
+      "name": "Into the Garden",
+      "defensive_type": null,
+      "text": "When another non-peon ally is killed, place it on this crew's crew card."
+    },
+    {
+      "name": "Tear Back the Veil",
+      "defensive_type": null,
+      "text": "When this model ends its activation, allies within (f)3\" gain a Shielded token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Willed Flame",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning token. An ally within 2\" of the target may gain a Shielded token.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Loss for Words",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Call on the Faithful",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a Convert token from target enemy.",
+      "effects": "The target declares an action chosen and controlled by this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Rally",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target non-unique ally.",
+      "effects": "Move the target up to its Sp.",
+      "triggers": [
+        {
+          "name": "Called to the Garden",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Target gains a Flicker token. If the target has already activated this turn, it no longer counts as having activated.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Erase Their Legacy",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove all enemy Scheme markers within (aura)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Open the Door",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a model from this crew's crew card.",
+      "effects": "Summon the removed model within range. Set its health to 3, +3 for each raise this action receives.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Revenant\\M4E_Stat_Revenant_Reva_Cortinas_Luminary.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "The (f) symbol in 'Tear Back the Veil' appears to be a measurement indicator, likely (aura) based on context"
+  ],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

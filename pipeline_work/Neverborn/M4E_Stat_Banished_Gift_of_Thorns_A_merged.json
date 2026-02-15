@@ -1,0 +1,71 @@
+{
+  "card_type": "stat_card",
+  "name": "Gift of Thorns",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "-",
+  "df": 3,
+  "wp": 3,
+  "sz": 1,
+  "sp": 8,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon",
+    "Living"
+  ],
+  "keywords": [
+    "Banished"
+  ],
+  "abilities": [
+    {
+      "name": "Made to Kill",
+      "defensive_type": null,
+      "text": "Once per activation. After this model is placed, it may declare a /// action after resolving the current action."
+    },
+    {
+      "name": "Undeserving Land Dwellers",
+      "defensive_type": null,
+      "text": "This model may only be summoned if this crew's leader has the Banished keyword."
+    },
+    {
+      "name": "Unimpeded",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain."
+    }
+  ],
+  "actions": [
+    {
+      "name": "The Joining",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Attach a Wreathed upgrade to the target, then kill this model.",
+      "triggers": [],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Stat_Banished_Gift_of_Thorns_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Characteristics listed as 'Peon (3), Living' - the (3) indicates model_limit of 3 for the Peon characteristic"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

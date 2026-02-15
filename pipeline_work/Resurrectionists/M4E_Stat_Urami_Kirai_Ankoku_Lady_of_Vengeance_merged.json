@@ -1,0 +1,158 @@
+{
+  "card_type": "stat_card",
+  "name": "Kirai Ankoku",
+  "title": "Lady of Vengeance",
+  "faction": "Resurrectionists",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": "Ikiryo, Spirit of Vengeance",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Urami"
+  ],
+  "keywords": [
+    "Vengeful Spirits"
+  ],
+  "abilities": [
+    {
+      "name": "Carried on the Winds",
+      "defensive_type": null,
+      "text": "After an enemy deals damage to this model, this model may drain a (soulstone). If it does, it may be placed into base contact with an ally within 6\"."
+    },
+    {
+      "name": "Ghostly Presence",
+      "defensive_type": null,
+      "text": "When this model declares an action, it may kill a friendly Seishin within 6\" to add one suit of its choice to its duel total."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Spirit Barrage",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "An ally with Los to the target may move up to 3\" toward the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Shears",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +2 damage to the target if it is in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mark Soul",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hateful Spirits",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a Seishin in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Blood and Wind",
+      "action_type": null,
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target a friendly Seishin within 3\" of an enemy.",
+      "effects": "Summon a Urami minion in base contact with this model or the target, then kill the target.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Soothe Spirit",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only.",
+      "effects": "Remove up to one token from the target and heal it 2.",
+      "triggers": [
+        {
+          "name": "Guidance",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "The target may declare a non-Charge action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "To My Side",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place the target in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Preparations",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Urami\\M4E_Stat_Urami_Kirai_Ankoku_Lady_of_Vengeance.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "card_type": "stat_card",
+  "name": "Kunoichi",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Minion (3)",
+    "Living"
+  ],
+  "keywords": [
+    "Qi and Gong"
+  ],
+  "abilities": [
+    {
+      "name": "Arcane Reservoir",
+      "defensive_type": null,
+      "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
+    },
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Lookout",
+      "defensive_type": null,
+      "text": "After an enemy model resolves an attack action that targeted an ally at a lower elevation and in this model's LoS, this model may drain a (soulstone) to place the ally within 6\" of its current location."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hidden Shuriken",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this model is on a higher elevation than the target, this model may move up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "To the Rooftops",
+      "range": "2\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target blocking terrain. Place this model within 4\" of its current location on top of the chosen piece of terrain.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Clarity",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Insight token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Qi and Gong\\M4E_Stat_Qi-and-Gong_Kunoichi_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Cost shown as '-' indicating this is likely a Totem with no hiring cost"
+  ],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

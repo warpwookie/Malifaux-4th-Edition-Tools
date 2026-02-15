@@ -1,0 +1,147 @@
+{
+  "card_type": "stat_card",
+  "name": "The Strange Lady",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Forgotten",
+    "Redchapel"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Mesmerizing",
+      "defensive_type": null,
+      "text": "Enemy models may not declare triggers during duels with this model."
+    },
+    {
+      "name": "Terrifying Gaze",
+      "defensive_type": null,
+      "text": "After a model within 6\" declares an action outside its own activation, this model may drain a (soulstone) to have that action immediately fail."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gorgon's Kiss",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is in base contact with this model, the target gains a Slow token. Then, move the target up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Finisher",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage for each token on the target (to a maximum of +2).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Onslaught",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Whispers in the Dark",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation. This action may target friendly models. Target declares an action, chosen and controlled by this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Kiss of Death",
+          "suit": "(t)",
+          "timing": "after_resolving",
+          "text": "After resolving the generated action, this model may declare a Gorgon's Kiss action targeting the same model, ignoring LoS and range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mutilate",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Slow token, deal +1 damage. Otherwise, it gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Healing Dark",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals an amount equal to the difference in the number of cards in its control hand and maximum hand size (to a maximum of 3).",
+      "triggers": [
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Forgotten\\M4E_Stat_Forgotten_Redchapel_The_Strange_Lady.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

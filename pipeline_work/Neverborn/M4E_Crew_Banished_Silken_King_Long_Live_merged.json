@@ -1,0 +1,60 @@
+{
+  "card_type": "crew_card",
+  "name": "Rising Tide",
+  "associated_master": "Silken King",
+  "associated_title": "Long Live",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Banished models",
+      "abilities": [
+        {
+          "name": "Undertow",
+          "defensive_type": null,
+          "text": "When this model declares an attack, it may remove a friendly Scheme marker within 2\" to have the target suffer a El. This model may drain a (s) when using this ability to remove an enemy Scheme marker within 2\" instead."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Banished models",
+      "actions": [
+        {
+          "name": "Swept Away",
+          "category": "attack_actions",
+          "action_type": "melee",
+          "range": "(melee)8\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": null,
+          "damage": "3",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "(s)(s)",
+          "effects": "For each raise this attack receives, move the target up to 2\". Then, this model may be placed into base contact with the target.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The symbol 'El' in the Undertow ability appears to be a special symbol that may represent damage or an effect type, but its exact meaning is unclear from this card alone.",
+    "The (s) symbol appears to represent a resource drain or cost (possibly soulstones or another token type)."
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Neverborn\\M4E_Crew_Banished_Silken_King_Long_Live_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 496,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Banished\\M4E_Crew_Banished_Silken_King_Long_Live.pdf",
+  "factions": [
+    "Unknown",
+    "Neverborn"
+  ]
+}

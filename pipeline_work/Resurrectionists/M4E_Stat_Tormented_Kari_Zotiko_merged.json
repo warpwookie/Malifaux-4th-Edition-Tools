@@ -1,0 +1,148 @@
+{
+  "card_type": "stat_card",
+  "name": "Kari Zotiko",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique"
+  ],
+  "keywords": [
+    "Tormented"
+  ],
+  "abilities": [
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "Uneasy Waves",
+      "defensive_type": null,
+      "text": "Enemy models with a Staggered token within 6\" of this model cannot declare the Interact action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Stygian Hook",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has a friendly upgrade attached, this model receives +(heart) to its final duel total.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Falter",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Erase Their Legacy",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove all enemy Scheme markers within (pulse)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "You're Comin' With Me",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\", then place this model into base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Weigh Down",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "Target must have a friendly upgrade attached. When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Toll",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 3\" and it gains a Staggered token.",
+      "triggers": [
+        {
+          "name": "Screams of the Lost",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Summon a Drowned in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Turbulent Waters",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target heals 2 and gains an Aura (Hazardous) token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "The Silver Whistle",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target declares a general action chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Kari_Zotiko.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

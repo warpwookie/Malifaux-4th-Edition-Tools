@@ -1,0 +1,115 @@
+{
+  "card_type": "stat_card",
+  "name": "Zombie Chihuahua",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Totem",
+    "Undead",
+    "Beast"
+  ],
+  "keywords": [
+    "Experimental"
+  ],
+  "abilities": [
+    {
+      "name": "Horrific Odor",
+      "defensive_type": null,
+      "text": "When this model ends its activation, this model may have enemy models within (1) 2\" gain a Poison token."
+    },
+    {
+      "name": "Nose for Decay",
+      "defensive_type": null,
+      "text": "After a Remains marker is made within 6\", this model may move up to 6\" toward the marker."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Gnashing Bite",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Poison token.",
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Rigor Mortis Chomp",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal 3 damage to the target, then kill this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rancid Smell",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 3,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model gains an Aura (Fumes) token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Spare Parts",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may not be declared if this model has a Slow token. Kill this model.",
+      "effects": "Draw two cards and then discard one. Enemy models within (aura)4\" gain a Poison token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Stat_Experimental_Zombie_Chihuahua.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

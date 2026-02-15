@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "Nekima",
+  "title": "Broodmother",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Pitborne",
+  "totem": "Crumb",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Brood"
+  ],
+  "abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    },
+    {
+      "name": "Potency",
+      "defensive_type": null,
+      "text": "When an enemy would gain an Injured token due to this model's Black Blood ability but cannot because it already has an Injured token, it is dealt 1 damage."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Vital Strike",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "An ally within 2\" of the target gains a Glutted token.",
+      "triggers": [
+        {
+          "name": "Battle Rush",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Choose an ally within 2\" of the target. The chosen model is dealt 1 damage and gains a Focused token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Overwhelmed",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Life from Blood",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Broodling token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Strong Survive",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may not target the same model more than once per activation.",
+      "effects": "The target may declare an attack action. After resolving, if the target is on the enemy table half, it may resolve its Relish in Blood ability as if it had attacked and damaged an enemy.",
+      "triggers": [
+        {
+          "name": "Bloody Vigor",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Allies within (aura)4\" of the target heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "On Dark Wings",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place the target within 3\" of its current location.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Dark Bargain",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only.",
+      "effects": "Deal 1 irreducible damage to the target, then the target may declare the Interact action.",
+      "triggers": [
+        {
+          "name": "Meat for the Young",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "An ally within 6\" gains a Glutted token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Brood\\M4E_Stat_Brood_Nekima_Broodmother.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

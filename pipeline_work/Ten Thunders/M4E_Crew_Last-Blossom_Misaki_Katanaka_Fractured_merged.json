@@ -1,0 +1,88 @@
+{
+  "card_type": "crew_card",
+  "name": "Wilting Tsubaki",
+  "associated_master": "Misaki Katanaka",
+  "associated_title": "Fractured",
+  "faction": "Ten Thunders",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Shadow markers",
+      "abilities": [
+        {
+          "name": "Hazardous (Burning)",
+          "defensive_type": null,
+          "text": "Friendly Shadow markers gain the Hazardous (Burning) terrain trait."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly Last Blossom models",
+      "abilities": [
+        {
+          "name": "Hit and Run",
+          "defensive_type": null,
+          "text": "When this model ends its activation, it may drain a (c) to declare the Walk action, ignoring engagement."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly non-peon Last Blossom models",
+      "actions": [
+        {
+          "name": "Drag Into Shadow",
+          "category": "attack_actions",
+          "action_type": "magic",
+          "range": "(magic) 6\"",
+          "skill_value": 7,
+          "skill_built_in_suit": null,
+          "resist": "Sp",
+          "tn": null,
+          "damage": "1",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Move the target up to 5\" toward a Shadow marker in its LoS. While moving, the target may move through allies.",
+          "triggers": [
+            {
+              "name": "Smolder",
+              "suit": "(t)",
+              "timing": "after resolving",
+              "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "Shadow",
+      "size": null,
+      "height": null,
+      "terrain_traits": [],
+      "text": "During the start phase of turn 1, make up to five Shadow markers anywhere on the table, not in the enemy deployment zone."
+    }
+  ],
+  "tokens": [],
+  "extraction_notes": [
+    "Shadow markers are created during start phase of turn 1, with placement restrictions",
+    "Hazardous (Burning) is a terrain trait applied to Shadow markers",
+    "Hit and Run ability applies to peon Last Blossom models as well (all friendly Last Blossom models)",
+    "Drag Into Shadow is a signature attack action (indicated by the signature icon before the action name)"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Ten Thunders\\M4E_Crew_Last-Blossom_Misaki_Katanaka_Fractured_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 745,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Last Blossom\\M4E_Crew_Last-Blossom_Misaki_Katanaka_Fractured.pdf",
+  "factions": [
+    "Ten Thunders"
+  ]
+}

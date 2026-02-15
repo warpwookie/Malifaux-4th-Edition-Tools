@@ -1,0 +1,133 @@
+{
+  "card_type": "stat_card",
+  "name": "Widow Weaver",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique"
+  ],
+  "keywords": [
+    "Nightmare"
+  ],
+  "abilities": [
+    {
+      "name": "Monster in the Dark",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce all damage dealt to this model from models with Fright tokens by 1."
+    },
+    {
+      "name": "Terrifying",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model suffer a (-) to their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Into the Dream Web",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, this model may place the target in base contact with a Shadow Lair marker within 6\" of itself.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"AHHH, MY EYE!\"",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage and move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Endless Nightmare",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": "0",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation. This action may target allies or models with a Fright token.",
+      "effects": "Target declares an action, chosen and controlled by this model. Then, remove a Fright token from the target, if able.",
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Burrow Into Dreams",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Shadow Lair marker within 1\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Nightmare Webbing",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Shadow Lair marker within range.",
+      "triggers": [
+        {
+          "name": "Homing Thread",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 1\" of this model may place into base contact with the made marker. If the placed model is a Bandersnatch, it may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Nightmare_Widow_Weaver.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

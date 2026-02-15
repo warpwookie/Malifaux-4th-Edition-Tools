@@ -1,0 +1,120 @@
+{
+  "card_type": "stat_card",
+  "name": "Leftovers",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 4,
+  "wp": 5,
+  "sz": 3,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Undead",
+    "Construct"
+  ],
+  "keywords": [
+    "Experimental",
+    "Transmortis"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Bisected)",
+      "defensive_type": null,
+      "text": "After this model is killed, it heals 4 and is replaced with two Bisections."
+    },
+    {
+      "name": "Futile Struggle",
+      "defensive_type": null,
+      "text": "Enemy models engaged with this model may not move from effects other than the Walk action."
+    },
+    {
+      "name": "Vomit Up Parts",
+      "defensive_type": null,
+      "text": "When this model ends its activation on turn 4, this model may make up to four Scheme markers and up to one Strategy marker within 3\". If it does, this model is killed."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Many Mouths",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may deal this action's Dmg to a different model within 1\".",
+      "triggers": [
+        {
+          "name": "Final Nibble",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to an enemy model within 1\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Accidental Roll Over",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way must pass a TN 10 Df duel or be dealt 1 damage and gain a Poison token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Tasty Morsel",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a friendly token from the target. This model draws a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Dismember",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker into base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Oozing Mass",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Move this model 6\" in any direction, ignoring models and terrain. Enemy models moved through this way gain a Poison token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Experimental\\M4E_Stat_Experimental_Transmortis_Leftovers.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "card_type": "stat_card",
+  "name": "Wrath",
+  "title": null,
+  "faction": "Neverborn",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Crossroads"
+  ],
+  "abilities": [
+    {
+      "name": "Jam Session",
+      "defensive_type": null,
+      "text": "This model may be chosen as a leader in any faction. If it is, it gains the master characteristic and this crew must be comprised of exactly all seven Crossroads models and a soulstone pool of 6."
+    },
+    {
+      "name": "Mosh Pit",
+      "defensive_type": null,
+      "text": "When an enemy model activates within 6\", this model may drain a (soulstone). If it does, the enemy must drain a (soulstone), discard a card or declare the Charge action controlled by this model, ignoring engagement."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Burst Eardrum",
+      "action_type": "melee",
+      "range": "(melee)3\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3. The target gains a Craven token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Encore",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rush the Stage",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target moves its Sp toward this model. Then, the target must declare a (melee) action targeting this model, if able. Then, this model declares a (melee) action against the target, if able.",
+      "effects": null,
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Antagonize the Crowd",
+      "range": "(aura)3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This model heals 2 for each non-peon enemy within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Crowd Surfing",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with an enemy within range. Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Versatile - Neverborn\\M4E_Stat_Nvb-Versatile_Crossroads_Wrath.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Card shows 'On Tour' text in bottom left corner"
+  ],
+  "factions": [
+    "Neverborn"
+  ]
+}

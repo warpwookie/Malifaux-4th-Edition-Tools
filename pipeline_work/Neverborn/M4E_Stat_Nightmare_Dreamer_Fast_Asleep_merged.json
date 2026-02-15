@@ -1,0 +1,165 @@
+{
+  "card_type": "stat_card",
+  "name": "The Dreamer",
+  "title": "Fast Asleep",
+  "faction": "Neverborn",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Lord Chompy Bits, Dreamlord",
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Nightmare"
+  ],
+  "keywords": [
+    "Lucid Dreaming"
+  ],
+  "abilities": [
+    {
+      "name": "Diversion",
+      "defensive_type": null,
+      "text": "Enemy models within 4\" count all (-) symbols on their cards as blank."
+    },
+    {
+      "name": "Incorporeal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+    },
+    {
+      "name": "Just a Dream",
+      "defensive_type": null,
+      "text": "After this model is dealt damage from an attack, it may drain two (soulstone). If it does, it may not be attacked for the remainder of the activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Cricket Bat",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
+      "triggers": [
+        {
+          "name": "Next at Bat!",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. After failing, another ally may declare a (melee) action against the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Twist Reality",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "X",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model chooses whether this action is resisted by Df or Wp.",
+      "effects": "For each raise this action receives, summon one Daydream in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Frighten",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Fright token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hallucinate",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target must reveal their control hand.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Bad Dreams",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Fright token.",
+      "triggers": [
+        {
+          "name": "Nightstalker",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a friendly Lord Chompy Bits, Dreamlord in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Peer Into Dreams",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": "0",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make an Under Your Bed marker within range.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Nightmare\\M4E_Stat_Nightmare_Dreamer_Fast_Asleep.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Neverborn"
+  ]
+}

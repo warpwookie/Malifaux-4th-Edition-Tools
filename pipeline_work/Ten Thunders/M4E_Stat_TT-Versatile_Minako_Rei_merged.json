@@ -1,0 +1,162 @@
+{
+  "card_type": "stat_card",
+  "name": "MINAKO REI",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Karmic Ties",
+      "defensive_type": null,
+      "text": "After this model suffers damage from an enemy model, an enemy model with a Karmic Fate upgrade attached is dealt an equal amount of damage."
+    },
+    {
+      "name": "Laugh Off",
+      "defensive_type": null,
+      "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tekk\u014d-Kagi",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an attached Karmic Fate upgrade, damage from this action is irreducible.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Paper in the Wind",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a Katashiro in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Marked",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "The target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mangle",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Revitalize",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "r",
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only. Remove a token from the target. If this action receives a raise, remove any number of tokens from the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Caged Curse",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "If an enemy token was removed, summon a Katashiro in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Unraveled Ward",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Kill a Katashiro within range. This model heals 3.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Unnatural Speed",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [
+        {
+          "name": "Bound by Karma",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Attach a Karmic Fate upgrade to an enemy model within 2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Paper in the Wind",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a Katashiro in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Stat_TT-Versatile_Minako_Rei.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders"
+  ]
+}

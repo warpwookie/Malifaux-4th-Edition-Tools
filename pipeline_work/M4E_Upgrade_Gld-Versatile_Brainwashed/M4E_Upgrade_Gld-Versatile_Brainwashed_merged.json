@@ -1,0 +1,34 @@
+{
+  "card_type": "upgrade",
+  "name": "Brainwashed",
+  "upgrade_type": null,
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:\n\nKnock Some Sense Into Ya: Another friendly model may target this model with the Interact action to remove this upgrade.\n\nThis model gains the following trigger on all its attack actions:",
+  "granted_abilities": [
+    {
+      "name": "Knock Some Sense Into Ya",
+      "defensive_type": null,
+      "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "granted_triggers": [
+    {
+      "name": "Fumble Around in Confusion",
+      "suit": "c",
+      "timing": "when_declaring",
+      "text": "This trigger must be declared, if able. Immediately, this action fails. Deal 2 damage to this model.",
+      "is_mandatory": true,
+      "soulstone_cost": 0,
+      "applies_to": "all attack actions"
+    }
+  ],
+  "extraction_notes": [
+    "This upgrade grants a trigger to all attack actions rather than a specific action. The trigger is placed in a separate 'granted_triggers' field to indicate it applies universally to all the model's attack actions.",
+    "The trigger has 'This trigger must be declared, if able' which indicates it is mandatory.",
+    "The timing 'This trigger must be declared' occurs during the declaration phase, mapped to 'when_declaring'."
+  ],
+  "faction": "Guild",
+  "keyword": "Versatile - Guild",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Versatile - Guild\\M4E_Upgrade_Gld-Versatile_Brainwashed.pdf"
+}

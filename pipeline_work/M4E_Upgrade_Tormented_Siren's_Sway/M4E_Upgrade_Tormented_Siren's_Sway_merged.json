@@ -1,0 +1,20 @@
+{
+  "card_type": "upgrade",
+  "name": "Siren's Sway",
+  "upgrade_type": null,
+  "limitations": null,
+  "description": "This model gains the following trigger on all actions printed on its stat card:",
+  "granted_abilities": [],
+  "granted_actions": [],
+  "extraction_notes": [
+    "This upgrade grants a universal trigger to all actions on the model's stat card. The trigger details are:",
+    "Name: Lament of the Cursed",
+    "Suit: (c) Crow",
+    "Timing: This trigger must be declared, if able",
+    "Effect: Immediately, this action fails. This model declares an action chosen and controlled by the opposing player. This model may discard a card to discard this upgrade.",
+    "Note: This trigger is not a standard granted action but rather modifies existing actions on the equipped model's stat card. The format doesn't perfectly capture this universal trigger mechanic."
+  ],
+  "faction": "Resurrectionists",
+  "keyword": "Tormented",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Upgrade_Tormented_Siren's_Sway.pdf"
+}

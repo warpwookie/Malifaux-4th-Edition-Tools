@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "Silver Tongue",
+  "upgrade_type": "Mimicry",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Paper Trail",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade. If it does so, reduce the damage dealt by 1 and make a Scheme marker in base contact with this model."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Guild",
+  "keyword": "Elite",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Upgrade_Elite_Silver_Tongue.pdf"
+}

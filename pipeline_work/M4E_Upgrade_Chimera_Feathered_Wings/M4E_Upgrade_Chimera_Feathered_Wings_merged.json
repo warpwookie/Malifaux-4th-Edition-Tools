@@ -1,0 +1,24 @@
+{
+  "card_type": "upgrade",
+  "name": "Feathered Wings",
+  "upgrade_type": "Mutation",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Adapt and Overcome",
+      "defensive_type": null,
+      "text": "When this model declares a non-general action, it may choose one friendly attached upgrade to receive a (c) and one suit to that action's Skl. After resolving the action, discard the chosen upgrade."
+    },
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Neverborn",
+  "keyword": "Chimera",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Neverborn\\Chimera\\M4E_Upgrade_Chimera_Feathered_Wings.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "card_type": "upgrade",
+  "name": "Imposing Pressure",
+  "upgrade_type": "Luxury Asset",
+  "limitations": "-",
+  "description": "This upgrade can only be attached once per game.\n\nThis model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Shattered Asset",
+      "defensive_type": null,
+      "text": "When this model is dealt 2 or more damage, this model must discard an upgrade with this ability. Then, reduce damage dealt by 2 (to a minimum of 0)."
+    },
+    {
+      "name": "Towering Figure",
+      "defensive_type": null,
+      "text": "This model is unaffected by severe and hazardous terrain and may move through other models."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The LIMITATIONS section shows a single dash '-', indicating no limitations",
+    "The description text includes the attachment restriction and precedes the granted abilities",
+    "Two abilities are granted: Shattered Asset and Towering Figure"
+  ],
+  "faction": "Explorer's Society",
+  "keyword": "Versatile - Explorer's Society",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Upgrade_Exs-Versatile_Imposing_Pressure.pdf"
+}

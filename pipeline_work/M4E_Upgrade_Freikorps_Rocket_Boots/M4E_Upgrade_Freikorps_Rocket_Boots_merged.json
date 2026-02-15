@@ -1,0 +1,45 @@
+{
+  "card_type": "upgrade",
+  "name": "Rocket Boots",
+  "upgrade_type": "Equipment",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following action:",
+  "granted_abilities": [
+    {
+      "name": "Survival Skills",
+      "defensive_type": null,
+      "text": "This model heals 1."
+    },
+    {
+      "name": "\"I'm Out!\"",
+      "defensive_type": null,
+      "text": "This trigger must be declared if able. Discard this upgrade."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Leap",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 8,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Place this model anywhere within range.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "Survival Skills is listed as a book/rules icon ability.",
+    "\"I'm Out!\" is listed with a phoenix/bird icon, appears to be a trigger-related ability that must be declared if able."
+  ],
+  "faction": "Outcasts",
+  "keyword": "Freikorps",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Upgrade_Freikorps_Rocket_Boots.pdf"
+}

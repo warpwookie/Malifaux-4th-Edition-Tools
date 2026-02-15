@@ -1,0 +1,50 @@
+{
+  "card_type": "upgrade",
+  "name": "Soaring Dragon",
+  "upgrade_type": "Aspect",
+  "limitations": "-",
+  "description": null,
+  "granted_abilities": [
+    {
+      "name": "Flight",
+      "defensive_type": null,
+      "text": "This model ignores terrain and other models while moving."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Lightning Strike",
+      "category": "attack_actions",
+      "action_type": "magic",
+      "range": "6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action ignores LoS. This action cannot target the same model more than once per activation. Models on terrain Ht 2 or higher suffer a (-) to resist this action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "The Limitations section shows a single dash '-', indicating no limitations apply to this upgrade.",
+    "The Lightning Strike action is marked as signature (indicated by the sig icon in the original).",
+    "The action description contains multiple restriction clauses that are part of the costs_and_restrictions field."
+  ],
+  "faction": "Ten Thunders",
+  "keyword": "Versatile - Ten Thunders",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Upgrade_TT-Versatile_Soaring_Dragon.pdf"
+}

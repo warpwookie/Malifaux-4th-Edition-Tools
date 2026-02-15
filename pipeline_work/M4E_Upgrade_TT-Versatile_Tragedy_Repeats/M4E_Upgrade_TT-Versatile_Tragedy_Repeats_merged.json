@@ -1,0 +1,41 @@
+{
+  "card_type": "upgrade",
+  "name": "Tragedy Repeats",
+  "upgrade_type": "Petal and Blood",
+  "limitations": "-",
+  "description": null,
+  "granted_abilities": [
+    {
+      "name": "Ashen Ovation",
+      "defensive_type": null,
+      "text": "For each raise this model's attack actions receive, an enemy model within 3\" of this model gains an Entranced token."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Painted Fury",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Place this model anywhere within range. Then, this model may declare a (melee) action.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The limitations line shows a dash (-) indicating no limitations.",
+    "The Painted Fury action has a TN of 5, making it a tactical action.",
+    "The action icons (double swords) before 'Painted Fury' indicate a general tactical action."
+  ],
+  "faction": "Ten Thunders",
+  "keyword": "Versatile - Ten Thunders",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Upgrade_TT-Versatile_Tragedy_Repeats.pdf"
+}

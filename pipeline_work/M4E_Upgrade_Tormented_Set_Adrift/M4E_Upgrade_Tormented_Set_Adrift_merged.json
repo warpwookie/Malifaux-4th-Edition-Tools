@@ -1,0 +1,23 @@
+{
+  "card_type": "upgrade",
+  "name": "Set Adrift",
+  "upgrade_type": null,
+  "limitations": "-",
+  "description": "This model gains the following trigger on all actions printed on its stat card:",
+  "granted_abilities": [
+    {
+      "name": "Scream of the Lost",
+      "defensive_type": null,
+      "text": "This trigger must be declared, if able. Immediately, this action fails. This model must drain a (fortitude) or be killed. This model may discard a card to discard this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The ability 'Scream of the Lost' is a special trigger that applies to all actions on the model's stat card.",
+    "The trigger has a mandatory declaration requirement and causes the action to fail immediately.",
+    "The model must then drain a fortitude or be killed, but may discard a card to discard the upgrade instead."
+  ],
+  "faction": "Resurrectionists",
+  "keyword": "Tormented",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Upgrade_Tormented_Set_Adrift.pdf"
+}

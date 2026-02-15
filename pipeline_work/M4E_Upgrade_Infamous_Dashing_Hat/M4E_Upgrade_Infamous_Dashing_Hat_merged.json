@@ -1,0 +1,33 @@
+{
+  "card_type": "upgrade",
+  "name": "Dashing Hat",
+  "upgrade_type": "Loot",
+  "limitations": "-",
+  "description": "This model gains the following action:",
+  "granted_abilities": [],
+  "granted_actions": [
+    {
+      "name": "Better Listen Now!",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "-",
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Other ally only. Once per activation.",
+      "effects": "The target declares an attack action that deals +1 damage.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The Limitations section shows a dash '-' indicating no special limitations beyond standard upgrade restrictions"
+  ],
+  "faction": "Outcasts",
+  "keyword": "Infamous",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Infamous\\M4E_Upgrade_Infamous_Dashing_Hat.pdf"
+}

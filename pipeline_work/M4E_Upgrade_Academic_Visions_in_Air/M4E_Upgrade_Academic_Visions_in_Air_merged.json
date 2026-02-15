@@ -1,0 +1,34 @@
+{
+  "card_type": "upgrade",
+  "name": "Visions in Air",
+  "upgrade_type": "Elemental Binds",
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Gifts From the Sky",
+      "defensive_type": null,
+      "text": "Once per activation. After this model resolves a Walk action, make a Scheme marker within 1\" of this model."
+    },
+    {
+      "name": "Chains of Air",
+      "defensive_type": null,
+      "text": "Reduce the Dmg of all of this model's attacks by 1."
+    },
+    {
+      "name": "Throw Off Shackles",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "Card shows decorative wind swirl elements at top and ornamental divider below title",
+    "Large watermarked symbol appears in center of card",
+    "Limitations section shows single dash/hyphen, interpreted as no limitations",
+    "Card is labeled as 'Upgrade' at bottom"
+  ],
+  "faction": "Arcanists",
+  "keyword": "Academic",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Upgrade_Academic_Visions_in_Air.pdf"
+}

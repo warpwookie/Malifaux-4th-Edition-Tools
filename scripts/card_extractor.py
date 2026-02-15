@@ -195,3 +195,51 @@ if __name__ == "__main__":
         json.dump(result, f, indent=2)
     
     print(f"Output written to {args.output}")
+
+
+def extract_upgrade_card(client: anthropic.Anthropic, image_path: str) -> dict:
+    """
+    Extract an upgrade card from a single image.
+    Returns parsed JSON dict or {"error": str}.
+    """
+    prompt = load_prompt("upgrade_prompt")
+    print(f"  Extracting upgrade card: {Path(image_path).name}")
+    
+    img_data, media_type = image_to_base64(image_path)
+    
+    for attempt in range(RETRY_ATTEMPTS):
+        try:
+            response = client.messages.create(
+                model=MODEL,
+                max_tokens=MAX_TOKENS,
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_data}},
+                        {"type": "text", "text": prompt}
+                    ]
+                }]
+            )
+            
+            text = response.content[0].text
+            if "```json" in text:
+                text = text.split("```json")[1].split("```")[0]
+            elif "```" in text:
+                text = text.split("```")[1].split("```")[0]
+            
+            return json.loads(text.strip())
+        
+        except json.JSONDecodeError as e:
+            if attempt < RETRY_ATTEMPTS - 1:
+                print(f"    JSON parse error, retrying ({attempt+1}/{RETRY_ATTEMPTS})...")
+                time.sleep(RETRY_DELAY)
+            else:
+                return {"error": f"JSON parse failed after {RETRY_ATTEMPTS} attempts: {e}"}
+        
+        except Exception as e:
+            if attempt < RETRY_ATTEMPTS - 1:
+                print(f"    API error, retrying ({attempt+1}/{RETRY_ATTEMPTS})...")
+                time.sleep(RETRY_DELAY)
+            else:
+                return {"error": f"API call failed: {e}"}
+

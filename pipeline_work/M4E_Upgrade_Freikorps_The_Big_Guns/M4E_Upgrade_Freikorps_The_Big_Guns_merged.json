@@ -1,0 +1,44 @@
+{
+  "card_type": "upgrade",
+  "name": "The Big Guns",
+  "upgrade_type": "Equipment",
+  "limitations": "-",
+  "description": "This model gains the following action:",
+  "granted_abilities": [],
+  "granted_actions": [
+    {
+      "name": "Rocket Launcher",
+      "category": "attack_actions",
+      "action_type": "missile",
+      "range": "10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This action does not deal extra damage from raises.",
+      "effects": "Models within (M)1\" of the target must pass a TN 13 Sp duel or be dealt 2 damage. Increase this (M) by +2\" for each raise this action receives.",
+      "triggers": [
+        {
+          "name": "\"I'm Out!\"",
+          "suit": null,
+          "timing": "after_succeeding",
+          "text": "This trigger must be declared if able. Discard this upgrade.",
+          "is_mandatory": true,
+          "soulstone_cost": 0
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "The 'I'm Out!' trigger has a skull icon indicating mandatory status.",
+    "The (M) notation in the effects text refers to (melee) range type, indicating area of effect measurement.",
+    "The limitations section shows a dash, indicating no special limitations apply to this upgrade."
+  ],
+  "faction": "Outcasts",
+  "keyword": "Freikorps",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Upgrade_Freikorps_The_Big_Guns.pdf"
+}

@@ -1,0 +1,68 @@
+{
+  "card_type": "upgrade",
+  "name": "Wandering River Style",
+  "upgrade_type": "Fighting Style",
+  "limitations": null,
+  "description": "This model gains the following actions:",
+  "granted_abilities": [],
+  "granted_actions": [
+    {
+      "name": "Four Winds Punch",
+      "category": "attack_actions",
+      "action_type": "melee",
+      "range": "8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "t",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "11",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "If a Chi token was used during this action, it has a raise value of 3. Move the target up to 4\", +4\" for each raise (maximum 12\"). If this model is not a master and this action did not receive a raise, discard this upgrade after resolving this action.",
+      "triggers": [
+        {
+          "name": "Collision",
+          "suit": "c",
+          "timing": "after_succeeding",
+          "text": "The target and enemy models within (X)1\" of it are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Self-Reflection",
+          "suit": "m",
+          "timing": "after_succeeding",
+          "text": "This model gains a Chi token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    },
+    {
+      "name": "Enlightened Leap",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "If a Chi token was used during this action, it has a raise value of 3. Place this model anywhere within range. If this model is not a master and this action did not receive a raise, discard this upgrade after resolving this action.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The card footer shows 'LIMITATIONS' as a header with a dash below it, indicating no limitations apply.",
+    "Both actions share similar mechanics around Chi tokens having raise value of 3 and being discarded if the model is not a master and no raise is received."
+  ],
+  "faction": "Ten Thunders",
+  "keyword": "Monk",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Monk\\M4E_Upgrade_Monk_Wandering_River_Style.pdf"
+}

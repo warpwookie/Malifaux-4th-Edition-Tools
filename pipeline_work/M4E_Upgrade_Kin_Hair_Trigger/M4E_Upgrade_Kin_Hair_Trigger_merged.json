@@ -1,0 +1,24 @@
+{
+  "card_type": "upgrade",
+  "name": "Hair Trigger",
+  "upgrade_type": "Improvised Enhancement",
+  "limitations": "Plentiful 2",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Plink!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    },
+    {
+      "name": "Run and Gun",
+      "defensive_type": null,
+      "text": "This model's Charge action may generate (gun) actions instead of (melee) actions."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Bayou",
+  "keyword": "Kin",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Hair_Trigger.pdf"
+}

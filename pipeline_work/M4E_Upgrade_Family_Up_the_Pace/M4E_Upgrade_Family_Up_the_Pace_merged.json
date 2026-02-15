@@ -1,0 +1,34 @@
+{
+  "card_type": "upgrade",
+  "name": "Up the Pace",
+  "upgrade_type": "Upgrade",
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Breakneck Pace",
+      "defensive_type": null,
+      "text": "During this model's activation, increase its Sp by +2, and it is unaffected by severe terrain."
+    },
+    {
+      "name": "Through Fire and Lead",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a Familia token. If it does so, another ally within 6\" may move up to 2\"."
+    },
+    {
+      "name": "Call It a Day",
+      "defensive_type": null,
+      "text": "When this model ends its activation, it must either drain a (soulstone) or discard a Hermanos de Armas upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The upgrade header shows 'Hermanos de Armas' faction affiliation",
+    "Limitations section shows a single dash '-', indicating no limitations",
+    "This upgrade grants three passive abilities and no actions",
+    "The Familia token reference uses a special icon that appears as a bullet point in the original text"
+  ],
+  "faction": "Guild",
+  "keyword": "Family",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Upgrade_Family_Up_the_Pace.pdf"
+}

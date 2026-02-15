@@ -1,0 +1,24 @@
+{
+  "card_type": "upgrade",
+  "name": "White Whale",
+  "upgrade_type": null,
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "From Hell's Heart I Poke Ya!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage by Aunty Mel, it is dealt +1 damage."
+    },
+    {
+      "name": "A Gold Doubloon For Ya!",
+      "defensive_type": null,
+      "text": "Enemy models that initiate an opposed duel targeting this model and receive one or more raises may draw a single card instead of dealing additional damage or any other raise effect."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Bayou",
+  "keyword": "Angler",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Angler\\M4E_Upgrade_Angler_White_Whale.pdf"
+}

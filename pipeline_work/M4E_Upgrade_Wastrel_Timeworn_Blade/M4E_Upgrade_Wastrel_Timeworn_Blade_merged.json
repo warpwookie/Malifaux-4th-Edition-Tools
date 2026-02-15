@@ -1,0 +1,57 @@
+{
+  "card_type": "upgrade",
+  "name": "Timeworn Blade",
+  "upgrade_type": "Artifact",
+  "limitations": "Plentiful (2)",
+  "description": null,
+  "granted_abilities": [
+    {
+      "name": "Strong Guard",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 2."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Blade Storm",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal either 2 damage to enemy models within (melee)2\" or deal 1 damage to enemy models within (melee)4\" of this model. Damage from this action ignores (fortitude) abilities. Discard this upgrade.",
+      "triggers": []
+    },
+    {
+      "name": "\"Take This!\"",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Choose an Artifact upgrade attached to this model. Ally only.",
+      "effects": "Attach the chosen upgrade to the target.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "Blade Storm action has an asterisk (*) in the Rg column, interpreted as variable range with two damage options based on melee range",
+    "The fortitude icon in 'ignores (fortitude) abilities' rendered as (fortitude)"
+  ],
+  "faction": "Explorer's Society",
+  "keyword": "Wastrel",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Wastrel\\M4E_Upgrade_Wastrel_Timeworn_Blade.pdf"
+}

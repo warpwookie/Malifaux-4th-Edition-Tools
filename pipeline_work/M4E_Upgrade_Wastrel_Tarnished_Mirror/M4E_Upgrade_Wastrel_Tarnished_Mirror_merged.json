@@ -1,0 +1,59 @@
+{
+  "card_type": "upgrade",
+  "name": "Tarnished Mirror",
+  "upgrade_type": "Artifact",
+  "limitations": "Plentiful (2)",
+  "description": null,
+  "granted_abilities": [
+    {
+      "name": "Rebounding Curse",
+      "defensive_type": null,
+      "text": "After this model suffers damage, it may discard this upgrade to deal an equal amount of damage to the attacking model."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Flash of Light",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a piece of terrain.",
+      "effects": "Either place this model anywhere within range in base contact with the target, or move all allies within 2\" of this model up to 3\" toward the target. Discard this upgrade.",
+      "triggers": []
+    },
+    {
+      "name": "\"Take This!\"",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Choose an Artifact upgrade attached to this model. Ally only.",
+      "effects": "Attach the chosen upgrade to the target.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The 'Flash of Light' action has a symbol before it that appears to be a general action marker.",
+    "The '\"Take This!\"' action also has a similar action marker symbol before it.",
+    "Skill value for 'Flash of Light' appears to be 0 (no skill check needed, only TN check).",
+    "'\"Take This!\"' has no stat line (no skill, TN, or other values), just targeting and effect text."
+  ],
+  "faction": "Explorer's Society",
+  "keyword": "Wastrel",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Wastrel\\M4E_Upgrade_Wastrel_Tarnished_Mirror.pdf"
+}

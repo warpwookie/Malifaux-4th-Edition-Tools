@@ -1,0 +1,17 @@
+{
+  "card_type": "upgrade",
+  "name": "Unjustly Accused",
+  "upgrade_type": "Injustice",
+  "limitations": "Plentiful (4)",
+  "description": "This model gains the following triggers on all actions printed on its stat card:",
+  "granted_abilities": [],
+  "granted_actions": [],
+  "extraction_notes": [
+    "This upgrade grants two triggers to all actions printed on the model's stat card rather than granting new actions or abilities",
+    "Set Free trigger: Discard this upgrade",
+    "Bound and Tied trigger: This trigger must be declared, if able. Immediately, this action fails."
+  ],
+  "faction": "Resurrectionists",
+  "keyword": "Tormented",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Upgrade_Tormented_Unjustly_Accused.pdf"
+}

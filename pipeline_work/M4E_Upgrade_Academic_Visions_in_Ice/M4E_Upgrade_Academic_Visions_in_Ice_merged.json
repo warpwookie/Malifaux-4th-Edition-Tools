@@ -1,0 +1,33 @@
+{
+  "card_type": "upgrade",
+  "name": "Visions in Ice",
+  "upgrade_type": "Elemental Binds",
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Rime-Touched",
+      "defensive_type": null,
+      "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain."
+    },
+    {
+      "name": "Chains of Ice",
+      "defensive_type": null,
+      "text": "This model lowers its Sp to 0."
+    },
+    {
+      "name": "Throw Off Shackles",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "Limitations section shows a single dash '-', indicating no limitations",
+    "The description introduces the three abilities that follow",
+    "All three abilities are passive/triggered abilities, not actions"
+  ],
+  "faction": "Arcanists",
+  "keyword": "Academic",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Academic\\M4E_Upgrade_Academic_Visions_in_Ice.pdf"
+}

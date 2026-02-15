@@ -1,0 +1,46 @@
+{
+  "card_type": "upgrade",
+  "name": "Flaming Sack",
+  "upgrade_type": "Improvised Enhancement",
+  "limitations": "Plentiful 2",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Plink!",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    },
+    {
+      "name": "Steady Blow",
+      "defensive_type": null,
+      "text": "When this model removes an Impact token, it deals +2 damage instead of +1."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Flame Splat",
+      "category": "attack_actions",
+      "action_type": "magic",
+      "range": "6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, deal 1 damage to enemy models within (x)2\" of the target. Models damaged by this action gain a Burning token. Then, discard this upgrade.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The action icon shows (magic) symbol indicating a magic attack action",
+    "The 'x' in '(x)2\"' represents a pulse icon",
+    "The action type symbol before Flame Splat is (sig) indicating a signature action marker, but the standard indicates sig represents an (f) icon which typically denotes general action. Based on the symbol (upward arrow), this appears to be a general action marker."
+  ],
+  "faction": "Bayou",
+  "keyword": "Kin",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Kin\\M4E_Upgrade_Kin_Flaming_Sack.pdf"
+}

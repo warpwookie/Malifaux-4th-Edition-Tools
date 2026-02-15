@@ -1,0 +1,43 @@
+{
+  "card_type": "upgrade",
+  "name": "Flaming Blade",
+  "upgrade_type": null,
+  "limitations": "Plentiful (3)",
+  "description": "This model gains the following action:",
+  "granted_abilities": [],
+  "granted_actions": [
+    {
+      "name": "Flaming Sword",
+      "category": "attack_actions",
+      "action_type": "melee",
+      "range": "1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals +2 damage for each raise instead of +1. The target gains a Suppressed token and a Burning token. Discard this upgrade.",
+      "triggers": [
+        {
+          "name": "Enthralled",
+          "suit": "c",
+          "timing": "after_succeeding",
+          "text": "After killing, summon a Witchling Stalker with 4 health in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "The signature action symbol (f) is indicated in the card with a special icon before 'Flaming Sword'",
+    "The trigger timing is inferred as 'after_succeeding' based on the 'After killing' language, which occurs after a successful kill"
+  ],
+  "faction": "Guild",
+  "keyword": "Witch Hunter",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Upgrade_Witch-Hunter_Flaming_Blade.pdf"
+}

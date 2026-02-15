@@ -1,0 +1,50 @@
+{
+  "card_type": "upgrade",
+  "name": "Support Shield",
+  "upgrade_type": null,
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Overcharge Shield",
+      "defensive_type": null,
+      "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+    },
+    {
+      "name": "Defensive Reflexes",
+      "defensive_type": null,
+      "text": "This model gains a Shielded token."
+    },
+    {
+      "name": "\"I'm Out!\"",
+      "defensive_type": null,
+      "text": "This trigger must be declared if able. Discard this upgrade."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Shield Generator",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Shielded token.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "The section header reads 'This model gains the following action:' before the action table",
+    "The abilities Defensive Reflexes and \"I'm Out!\" are presented with special icons (shield and bird) and appear to be part of the action's conditional effects or triggers, but are formatted as separate ability entries in the card text"
+  ],
+  "faction": "Outcasts",
+  "keyword": "Freikorps",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Freikorps\\M4E_Upgrade_Freikorps_Support_Shield.pdf"
+}

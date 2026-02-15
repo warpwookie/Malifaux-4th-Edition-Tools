@@ -1,0 +1,28 @@
+{
+  "card_type": "upgrade",
+  "name": "Consumed",
+  "upgrade_type": null,
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Viscous Grip",
+      "defensive_type": null,
+      "text": "When this model activates, it must pass a TN 14 Sp duel or gain a Slow token."
+    },
+    {
+      "name": "\"GetItOffGetItOffGetItOff!\"",
+      "defensive_type": null,
+      "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The limitations section shows a single dash '-', indicating no specific limitations beyond those implied by the upgrade type.",
+    "This upgrade appears to be a negative/debuff effect that can be applied to models during play.",
+    "The upgrade grants two abilities with negative effects that hinder the model but can be removed by allies."
+  ],
+  "faction": "Explorer's Society",
+  "keyword": "Seeker",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Seeker\\M4E_Upgrade_Seeker_Consumed.pdf"
+}

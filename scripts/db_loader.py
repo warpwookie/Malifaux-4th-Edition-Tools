@@ -312,6 +312,8 @@ if __name__ == "__main__":
         
         if card_type == "crew_card":
             result = load_crew_card(conn, card, args.replace)
+        elif card_type == "upgrade":
+            result = load_upgrade_card(conn, card, args.replace)
         else:
             result = load_stat_card(conn, card, args.replace)
         
@@ -326,3 +328,68 @@ if __name__ == "__main__":
     print(f"          {c.fetchone()[0]} crew cards total")
     
     conn.close()
+
+
+def load_upgrade_card(conn: sqlite3.Connection, card: dict, replace: bool = False) -> dict:
+    """Insert or update an upgrade card."""
+    c = conn.cursor()
+    name = card["name"]
+    
+    c.execute("SELECT id FROM upgrades WHERE name=?", (name,))
+    existing = c.fetchone()
+    
+    if existing and not replace:
+        return {"status": "skipped", "reason": "Already exists", "name": name}
+    
+    if existing:
+        upgrade_id = existing[0]
+        c.execute("DELETE FROM upgrade_abilities WHERE upgrade_id=?", (upgrade_id,))
+        c.execute("SELECT id FROM upgrade_actions WHERE upgrade_id=?", (upgrade_id,))
+        for (aid,) in c.fetchall():
+            c.execute("DELETE FROM upgrade_action_triggers WHERE action_id=?", (aid,))
+        c.execute("DELETE FROM upgrade_actions WHERE upgrade_id=?", (upgrade_id,))
+        
+        c.execute("""UPDATE upgrades SET upgrade_type=?, keyword=?, faction=?, limitations=?,
+            description=?, source_pdf=?, parse_date=?, parse_status=? WHERE id=?""",
+            (card.get("upgrade_type"), card.get("keyword"), card.get("faction"),
+             card.get("limitations"), card.get("description"),
+             card.get("source_pdf"), datetime.now().isoformat(), "auto", upgrade_id))
+        status = "updated"
+    else:
+        c.execute("""INSERT INTO upgrades (name, upgrade_type, keyword, faction, limitations,
+            description, source_pdf, parse_date, parse_status)
+            VALUES (?,?,?,?,?,?,?,?,?)""",
+            (name, card.get("upgrade_type"), card.get("keyword"), card.get("faction"),
+             card.get("limitations"), card.get("description"),
+             card.get("source_pdf"), datetime.now().isoformat(), "auto"))
+        upgrade_id = c.lastrowid
+        status = "inserted"
+    
+    for ab in card.get("granted_abilities", []):
+        c.execute("""INSERT INTO upgrade_abilities (upgrade_id, name, defensive_type, text)
+            VALUES (?,?,?,?)""",
+            (upgrade_id, ab["name"], ab.get("defensive_type"), ab["text"]))
+    
+    for act in card.get("granted_actions", []):
+        c.execute("""INSERT INTO upgrade_actions 
+            (upgrade_id, name, category, action_type, range, skill_value,
+             skill_built_in_suit, skill_fate_modifier, resist, tn, damage,
+             is_signature, soulstone_cost, effects, costs_and_restrictions)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (upgrade_id, act["name"], act.get("category", "tactical_actions"),
+             act.get("action_type"), act.get("range"), act.get("skill_value"),
+             act.get("skill_built_in_suit"), act.get("skill_fate_modifier"),
+             act.get("resist"), act.get("tn"), act.get("damage"),
+             act.get("is_signature", False), act.get("soulstone_cost", 0),
+             act.get("effects"), act.get("costs_and_restrictions")))
+        action_id = c.lastrowid
+        for trig in act.get("triggers", []):
+            c.execute("""INSERT INTO upgrade_action_triggers
+                (action_id, name, suit, timing, text, is_mandatory, soulstone_cost)
+                VALUES (?,?,?,?,?,?,?)""",
+                (action_id, trig["name"], trig.get("suit"), trig.get("timing"),
+                 trig["text"], trig.get("is_mandatory", False), trig.get("soulstone_cost", 0)))
+    
+    conn.commit()
+    return {"status": status, "upgrade_id": upgrade_id, "name": name}
+

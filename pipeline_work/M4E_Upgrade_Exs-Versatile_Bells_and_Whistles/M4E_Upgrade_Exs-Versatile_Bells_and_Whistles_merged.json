@@ -1,0 +1,101 @@
+{
+  "card_type": "upgrade",
+  "name": "Bells and Whistles",
+  "upgrade_type": "Luxury Asset",
+  "limitations": "-",
+  "description": "This upgrade can only be attached once per game.",
+  "granted_abilities": [
+    {
+      "name": "Shattered Asset",
+      "defensive_type": null,
+      "text": "When this model is dealt 2 or more damage, this model must discard an upgrade with this ability. Then, reduce damage dealt by 2 (to a minimum of 0)."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Blitz Strike",
+      "category": "attack_actions",
+      "action_type": "variable",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Blitz Strike",
+          "suit": "(c)",
+          "timing": "when_declaring",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    },
+    {
+      "name": "Puncture",
+      "category": "attack_actions",
+      "action_type": "variable",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    },
+    {
+      "name": "Knock Aside",
+      "category": "attack_actions",
+      "action_type": "variable",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "This upgrade grants triggers to 'this model's attack actions' rather than defining new complete actions. The three triggers (Blitz Strike, Puncture, Knock Aside) are presented as attack action triggers with different suits and timings.",
+    "The card text states 'This model's attack actions gain the following triggers:' before listing them."
+  ],
+  "faction": "Explorer's Society",
+  "keyword": "Versatile - Explorer's Society",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Upgrade_Exs-Versatile_Bells_and_Whistles.pdf"
+}

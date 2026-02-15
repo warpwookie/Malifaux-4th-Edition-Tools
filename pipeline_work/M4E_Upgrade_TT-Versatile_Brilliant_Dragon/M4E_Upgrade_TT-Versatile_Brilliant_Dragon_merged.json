@@ -1,0 +1,41 @@
+{
+  "card_type": "upgrade",
+  "name": "Brilliant Dragon",
+  "upgrade_type": "Aspect",
+  "limitations": "-",
+  "description": null,
+  "granted_abilities": [
+    {
+      "name": "Butterfly Jump",
+      "defensive_type": null,
+      "text": "After resolving an enemy attack action targeting this model, this model may move up to 3\"."
+    }
+  ],
+  "granted_actions": [
+    {
+      "name": "Intuition",
+      "category": "tactical_actions",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Look at the top three cards of your fate deck and then return them in any order.",
+      "triggers": []
+    }
+  ],
+  "extraction_notes": [
+    "Limitations shows '-' which indicates no limitations apply",
+    "Butterfly Jump has a shield icon indicating it's a defensive ability",
+    "Intuition action has all dashes in the stat line columns (Rg, Skl, Rst, TN, Dmg), indicating it's a tactical action with no stat requirements"
+  ],
+  "faction": "Ten Thunders",
+  "keyword": "Versatile - Ten Thunders",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Upgrade_TT-Versatile_Brilliant_Dragon.pdf"
+}

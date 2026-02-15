@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "The Path of Spirit",
+  "upgrade_type": "Reliquary",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Walker of Worlds",
+      "defensive_type": null,
+      "text": "When this model declares the Walk or Charge action, it may discard this upgrade. If it does so, it may increase its Sp by 2 and ignore models and terrain during this action."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Resurrectionists",
+  "keyword": "Ancestor",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Upgrade_Ancestor_The_Path_of_Spirit.pdf"
+}

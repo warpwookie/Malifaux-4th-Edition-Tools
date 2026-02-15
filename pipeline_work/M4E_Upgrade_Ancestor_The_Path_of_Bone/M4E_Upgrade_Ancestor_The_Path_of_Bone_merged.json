@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "The Path of Bone",
+  "upgrade_type": "Reliquary",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Grasping Viscera",
+      "defensive_type": null,
+      "text": "When an enemy engaged with this model is affected by movement that would cause it to leave engagement, this model may discard this upgrade to reduce that movement to 0\" and draw a card."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Resurrectionists",
+  "keyword": "Ancestor",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Ancestor\\M4E_Upgrade_Ancestor_The_Path_of_Bone.pdf"
+}

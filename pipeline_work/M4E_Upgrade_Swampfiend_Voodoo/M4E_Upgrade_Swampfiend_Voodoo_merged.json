@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "Voodoo",
+  "upgrade_type": "Upgrade",
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "That Doesn't Look Like Me",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain a (soulstone) or discard two cards to discard this upgrade."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Bayou",
+  "keyword": "Swampfiend",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Swampfiend\\M4E_Upgrade_Swampfiend_Voodoo.pdf"
+}

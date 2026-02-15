@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "Pretty Floral Bonnet",
+  "upgrade_type": "Trinket",
+  "limitations": "-",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Don't Mind Me",
+      "defensive_type": null,
+      "text": "The following do not restrict this model from declaring the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [],
+  "faction": "Outcasts",
+  "keyword": "Versatile - Outcasts",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Upgrade_Out-Versatile_Pretty_Floral_Bonnet.pdf"
+}

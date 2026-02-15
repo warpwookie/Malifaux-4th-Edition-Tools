@@ -1,0 +1,28 @@
+{
+  "card_type": "upgrade",
+  "name": "Karmic Fate",
+  "upgrade_type": null,
+  "limitations": "-",
+  "description": "This model gains the following abilities:",
+  "granted_abilities": [
+    {
+      "name": "Atonement",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard two cards or drain a (soulstone). If it does so, an enemy Minako Rei model heals 2, then discard this upgrade."
+    },
+    {
+      "name": "Demise (Final Reward)",
+      "defensive_type": null,
+      "text": "After this model is killed, the opposing player may summon a Katashiro in base contact with this model."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The limitations section shows a single dash '-', indicating no limitations apply to this upgrade.",
+    "This is an upgrade card marked as 'Upgrade' at the bottom of the card.",
+    "Both abilities are passive triggered abilities (Atonement triggers on activation, Demise triggers on death)."
+  ],
+  "faction": "Ten Thunders",
+  "keyword": "Versatile - Ten Thunders",
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Ten Thunders\\Versatile - Ten Thunders\\M4E_Upgrade_TT-Versatile_Karmic_Fate.pdf"
+}

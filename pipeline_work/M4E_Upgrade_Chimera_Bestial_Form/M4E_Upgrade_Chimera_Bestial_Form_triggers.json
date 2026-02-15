@@ -1,0 +1,19 @@
+{
+  "card_type": "upgrade",
+  "name": "Bestial Form",
+  "upgrade_type": null,
+  "limitations": "-",
+  "description": "This model gains the following trigger on all of its attack actions:",
+  "granted_triggers": [
+    {
+      "name": "Surprise Reformation",
+      "suit": "(m)",
+      "timing": "after_succeeding",
+      "text": "Enemy only. Replace this model with Myranda and it heals 2.",
+      "is_mandatory": false,
+      "soulstone_cost": 0,
+      "applies_to": "all of its attack actions"
+    }
+  ],
+  "extraction_notes": []
+}

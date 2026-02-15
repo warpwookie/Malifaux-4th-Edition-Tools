@@ -1,0 +1,23 @@
+{
+  "card_type": "upgrade",
+  "name": "Shipwrecked",
+  "upgrade_type": "Waterlogged",
+  "limitations": "-",
+  "description": "This model gains the following trigger on all actions printed on its stat card:",
+  "granted_triggers": [
+    {
+      "name": "Drowning Tide",
+      "suit": "(r)",
+      "timing": "when_declaring",
+      "text": "This trigger must be declared, if able. Immediately, this action fails. This model gains an enemy Aura (Hazardous) token. This model may discard a card to discard this upgrade.",
+      "is_mandatory": true,
+      "soulstone_cost": 0,
+      "applies_to": "all actions printed on its stat card"
+    }
+  ],
+  "extraction_notes": [
+    "Trigger has asterisk (*) indicating it is mandatory",
+    "Timing is 'When Declaring' based on 'This trigger must be declared, if able'",
+    "The action fails immediately upon declaring this trigger"
+  ]
+}

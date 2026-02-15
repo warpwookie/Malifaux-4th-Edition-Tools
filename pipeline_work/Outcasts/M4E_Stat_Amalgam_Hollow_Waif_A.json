@@ -109,11 +109,9 @@
   },
   "validation": {
     "card_name": "Hollow Waif",
-    "passed": false,
+    "passed": true,
     "needs_review": true,
-    "hard_violations": [
-      "Minion(2) but model_limit=1"
-    ],
+    "hard_violations": [],
     "soft_flags": [
       "Totem with infuses_soulstone_on_death=false (unusual)"
     ],

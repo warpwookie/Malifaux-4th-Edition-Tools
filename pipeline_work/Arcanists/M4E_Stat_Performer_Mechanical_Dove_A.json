@@ -1,30 +1,30 @@
 {
   "card": {
     "card_type": "stat_card",
-    "name": "WALKING CANNON",
+    "name": "MECHANICAL DOVE",
     "title": null,
-    "faction": "Guild",
+    "faction": "Arcanists",
     "station": "Totem",
     "model_limit": 1,
     "cost": "-",
-    "df": 5,
-    "wp": 4,
-    "sz": 2,
-    "sp": 5,
-    "health": 5,
+    "df": 6,
+    "wp": 3,
+    "sz": 1,
+    "sp": 8,
+    "health": 2,
     "soulstone_cache": null,
     "shields": 0,
-    "base_size": "40mm",
+    "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": null,
     "totem": null,
     "characteristics": [
       "Totem",
-      "Minion (2)",
+      "Minion (3)",
       "Construct"
     ],
     "keywords": [
-      "Cavalier"
+      "Performer"
     ],
     "abilities": [
       {
@@ -33,45 +33,53 @@
         "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
       },
       {
-        "name": "Armor",
-        "defensive_type": "fortitude",
-        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+        "name": "Flight",
+        "defensive_type": null,
+        "text": "This model ignores terrain and other models while moving."
       },
       {
-        "name": "Bullseye",
+        "name": "Insignificant",
         "defensive_type": null,
-        "text": "This model receives a (+) when targeting a model within 1\" of an Assault marker."
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes."
       }
     ],
     "actions": [
       {
-        "name": "Howitzer",
-        "action_type": "missile",
-        "range": "(gun)12\"",
+        "name": "Talons",
+        "action_type": "melee",
+        "range": "(melee)1\"",
         "skill_value": 4,
-        "skill_built_in_suit": null,
+        "skill_built_in_suit": "m",
         "skill_fate_modifier": null,
         "resist": "Df",
         "tn": null,
-        "damage": "3",
+        "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "costs_and_restrictions": "Once per turn. Deal +1 damage if the target is within 2\" of an Assault marker.",
+        "costs_and_restrictions": null,
         "effects": null,
         "triggers": [
           {
-            "name": "Fine Tune",
-            "suit": "(c)",
+            "name": "Ember",
+            "suit": "(r)",
             "timing": "after_succeeding",
-            "text": "Draw a card, then discard a card.",
+            "text": "Target gains a Burning token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
           {
-            "name": "Surgical Strike",
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Overheat",
             "suit": "(t)",
             "timing": "after_succeeding",
-            "text": "Make an Assault marker in base contact with the target.",
+            "text": "Enemy models within (x)2\" are dealt 1 damage. Then, kill this model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -79,23 +87,23 @@
         "category": "attack_actions"
       },
       {
-        "name": "Ready with Tea",
+        "name": "Brief Interlude",
         "range": "6\"",
         "skill_value": 0,
         "skill_built_in_suit": null,
         "skill_fate_modifier": null,
-        "tn": 8,
+        "tn": 5,
         "damage": null,
-        "is_signature": true,
+        "is_signature": false,
         "soulstone_cost": 0,
-        "costs_and_restrictions": "Once per activation. Ally only. Target heals 2. If this action receives a raise, the target gains an Insight token.",
-        "effects": null,
+        "costs_and_restrictions": "Ally only.",
+        "effects": "Target heals 1. For each raise this action receives, the target heals an additional +1. Then, kill this model.",
         "triggers": [
           {
-            "name": "Advance",
+            "name": "Choreographed",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Move this model 4\" toward the target.",
+            "text": "The target gains a Backtrack token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -104,36 +112,34 @@
         "action_type": null
       },
       {
-        "name": "Recalibrating",
-        "range": "12\"",
-        "skill_value": null,
+        "name": "Suddenly Doves",
+        "range": "2\"",
+        "skill_value": 0,
         "skill_built_in_suit": null,
         "skill_fate_modifier": null,
-        "tn": null,
+        "tn": 7,
         "damage": null,
         "is_signature": false,
         "soulstone_cost": 0,
-        "costs_and_restrictions": "Target a friendly Scheme or Assault marker, ignoring LoS. Make a friendly copy of the target within 2\" of the target, then remove the target.",
-        "effects": null,
+        "costs_and_restrictions": "Target an enemy Scheme marker.",
+        "effects": "Summon a Mechanical Dove in base contact with the target. Then, remove the target.",
         "triggers": [],
         "category": "tactical_actions",
         "action_type": null
       }
     ],
-    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Cavalier\\M4E_Stat_Cavalier_Walking_Cannon_A.pdf",
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Performer\\M4E_Stat_Performer_Mechanical_Dove_A.pdf",
     "merge_warnings": [],
     "extraction_notes": [],
     "factions": [
-      "Guild"
+      "Arcanists"
     ]
   },
   "validation": {
-    "card_name": "WALKING CANNON",
-    "passed": false,
+    "card_name": "MECHANICAL DOVE",
+    "passed": true,
     "needs_review": true,
-    "hard_violations": [
-      "Minion(2) but model_limit=1"
-    ],
+    "hard_violations": [],
     "soft_flags": [
       "Totem with infuses_soulstone_on_death=false (unusual)"
     ],

@@ -2,8 +2,8 @@
   "card": {
     "card_type": "crew_card",
     "name": "The Offering Endures",
-    "associated_master": "Old One-Eye",
-    "associated_title": null,
+    "associated_master": "Euripides",
+    "associated_title": "Old One-Eye",
     "faction": "Savage",
     "keyword_abilities": [
       {
@@ -84,11 +84,9 @@
   },
   "validation": {
     "card_name": "[Crew] The Offering Endures",
-    "passed": false,
+    "passed": true,
     "needs_review": false,
-    "hard_violations": [
-      "Missing associated_title"
-    ],
+    "hard_violations": [],
     "soft_flags": [],
     "hallucination_flags": [],
     "info": []

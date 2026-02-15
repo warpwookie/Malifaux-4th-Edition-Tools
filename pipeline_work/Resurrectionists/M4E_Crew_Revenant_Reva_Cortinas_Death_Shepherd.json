@@ -23,8 +23,8 @@
         "actions": [
           {
             "name": "Flaming Rush",
-            "category": "attack_actions",
-            "action_type": "variable",
+            "category": "tactical_actions",
+            "action_type": null,
             "range": null,
             "skill_value": null,
             "skill_built_in_suit": null,
@@ -60,11 +60,9 @@
   },
   "validation": {
     "card_name": "[Crew] Fire Shield the Faithful",
-    "passed": false,
+    "passed": true,
     "needs_review": false,
-    "hard_violations": [
-      "Granted attack 'Flaming Rush' missing resist"
-    ],
+    "hard_violations": [],
     "soft_flags": [],
     "hallucination_flags": [],
     "info": []

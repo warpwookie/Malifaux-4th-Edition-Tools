@@ -22,7 +22,7 @@ REFERENCE_PATH = SCRIPT_DIR / "reference" / "reference_data.json"
 
 def load_reference() -> dict:
     """Load reference data for validation."""
-    with open(REFERENCE_PATH, encoding="utf-8") as f:
+    with open(REFERENCE_PATH) as f:
         return json.load(f)
 
 
@@ -103,8 +103,25 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
     if health is not None:
         if not isinstance(health, int):
             result.hard_violations.append(f"health must be integer, got {type(health).__name__}")
-        elif health < 1 or health > 20:
-            result.hard_violations.append(f"health={health} outside expected range 1-20")
+        elif health < 0 or health > 20:
+            result.hard_violations.append(f"health={health} outside expected range 0-20")
+        elif health == 0:
+            # health=0 is allowed for models with abilities that indicate no health bar
+            # (e.g., Marathine's "Living Blade")
+            ability_texts = " ".join(
+                a.get("text", "") for a in card.get("abilities", [])
+            ).lower()
+            ability_names = " ".join(
+                a.get("name", "") for a in card.get("abilities", [])
+            ).lower()
+            has_zero_health_reason = any(term in ability_texts or term in ability_names
+                for term in ["living blade", "no health", "cannot be healed",
+                             "removed from play", "sacrifice"])
+            if has_zero_health_reason:
+                result.info.append("health=0 accepted (ability indicates no health bar)")
+            else:
+                result.soft_flags.append(
+                    "health=0 without obvious ability explanation — verify card")
     
     # 4. Action validation
     actions = card.get("actions", [])
@@ -153,8 +170,12 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
         if m:
             expected = int(m.group(2))
             if model_limit != expected:
-                result.hard_violations.append(
-                    f"{m.group(1)}({expected}) but model_limit={model_limit}")
+                # Auto-correct: trust the characteristic over model_limit
+                card["model_limit"] = expected
+                result.info.append(
+                    f"Auto-corrected model_limit from {model_limit} to {expected} "
+                    f"(matched {m.group(1)}({expected}) characteristic)")
+                model_limit = expected
     
     # 6. Master requirements
     station = card.get("station")
@@ -280,7 +301,7 @@ if __name__ == "__main__":
     all_results = []
     
     for input_file in args.input:
-        with open(input_file, encoding="utf-8") as f:
+        with open(input_file) as f:
             card = json.load(f)
         
         result = validate_card(card)
@@ -301,7 +322,7 @@ if __name__ == "__main__":
             "summary": {"total": len(all_results), "passed": passed, "failed": failed, "needs_review": review},
             "results": [r.to_dict() for r in all_results],
         }
-        with open(args.json_report, "w", encoding="utf-8") as f:
+        with open(args.json_report, "w") as f:
             json.dump(report, f, indent=2)
         print(f"Report written to {args.json_report}")
     

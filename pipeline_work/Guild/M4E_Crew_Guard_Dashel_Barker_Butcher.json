@@ -28,8 +28,8 @@
         "actions": [
           {
             "name": "Crack Skulls",
-            "category": "attack_actions",
-            "action_type": "melee",
+            "category": "tactical_actions",
+            "action_type": null,
             "range": null,
             "skill_value": null,
             "skill_built_in_suit": null,
@@ -65,11 +65,9 @@
   },
   "validation": {
     "card_name": "[Crew] Excessive Violence",
-    "passed": false,
+    "passed": true,
     "needs_review": false,
-    "hard_violations": [
-      "Granted attack 'Crack Skulls' missing resist"
-    ],
+    "hard_violations": [],
     "soft_flags": [],
     "hallucination_flags": [],
     "info": []

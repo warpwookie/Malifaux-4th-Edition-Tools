@@ -111,7 +111,7 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     # Step 2: Vision extraction
     print("  Step 2: Vision model extraction...")
     
-    if card_type in ("stat_card", "upgrade_card") and len(images) == 2:
+    if card_type == "stat_card" and len(images) == 2:
         front_img = next((i for i in images if i["side"] == "front"), None)
         back_img = next((i for i in images if i["side"] == "back"), None)
         
@@ -139,13 +139,6 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         return {"status": "error", "step": "classification", 
                 "error": f"Unexpected page count ({len(images)}) for {card_type}"}
     
-    # Build factions list (detected + source faction for dual-faction support)
-    detected_faction = merged.get("faction", "Unknown")
-    factions = [detected_faction]
-    if source_faction and source_faction != detected_faction:
-        factions.append(source_faction)
-    merged["factions"] = factions
-    
     # Save merged JSON for traceability
     merged_path = work_dir / f"{stem}_merged.json"
     with open(merged_path, "w", encoding="utf-8") as f:
@@ -169,6 +162,14 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
     if dry_run:
         print("  Step 5: [DRY RUN] Skipping database load")
         return {"status": "dry_run_pass", "validation": validation.to_dict()}
+    
+    # Apply source faction if provided
+    if source_faction:
+        detected = merged.get("faction", source_faction)
+        factions = list(set([detected, source_faction]))
+        merged["factions"] = factions
+        if not merged.get("faction") or merged["faction"] == "Unknown":
+            merged["faction"] = source_faction
     
     print("  Step 5: Loading to database...")
     conn = init_db(db_path)

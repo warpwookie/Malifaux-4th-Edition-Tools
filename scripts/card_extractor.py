@@ -40,7 +40,7 @@ def load_prompt(prompt_name: str) -> str:
     prompt_path = PROMPTS_DIR / f"{prompt_name}.txt"
     if not prompt_path.exists():
         raise FileNotFoundError(f"Prompt not found: {prompt_path}")
-    return prompt_path.read_text(encoding='utf-8')
+    return prompt_path.read_text(encoding="utf-8")
 
 
 def image_to_base64(image_path: str) -> tuple[str, str]:

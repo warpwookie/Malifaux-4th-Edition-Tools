@@ -1,4 +1,4 @@
-You are a precise data extraction engine for Malifaux 4th Edition stat cards. You will be shown the BACK of a stat card. Extract ALL actions and triggers into the JSON structure below. Be exact â€” do not infer, guess, or hallucinate any values.
+You are a precise data extraction engine for Malifaux 4th Edition stat cards. You will be shown the BACK of a stat card. Extract ALL actions and triggers into the JSON structure below. Be exact — do not infer, guess, or hallucinate any values.
 
 ## CARD BACK LAYOUT
 - Top: MODEL NAME (and TITLE if applicable)
@@ -77,14 +77,14 @@ Respond with ONLY this JSON, no other text:
 ```json
 {
   "card_type": "stat_card_back",
-  "name": "string â€” must match front exactly",
+  "name": "string — must match front exactly",
   "title": "string or null",
-  "base_size": "string â€” e.g., '30mm', '40mm', '50mm'",
+  "base_size": "string — e.g., '30mm', '40mm', '50mm'",
   "attack_actions": [
     {
       "name": "string",
       "action_type": "melee|missile|magic|variable",
-      "range": "string â€” e.g., '(melee)2\"', '(gun)10\"'",
+      "range": "string — e.g., '(melee)2\"', '(gun)10\"'",
       "skill_value": "integer or null",
       "skill_built_in_suit": "r|m|t|c|null",
       "skill_fate_modifier": "+|-|null",
@@ -93,14 +93,14 @@ Respond with ONLY this JSON, no other text:
       "damage": "string or null",
       "is_signature": boolean,
       "soulstone_cost": integer,
-      "costs_and_restrictions": "string or null â€” italic text",
-      "effects": "string or null â€” normal text",
+      "costs_and_restrictions": "string or null — italic text",
+      "effects": "string or null — normal text",
       "triggers": [
         {
           "name": "string",
-          "suit": "string â€” e.g., '(r)', '(c)(c)', '(m)'",
+          "suit": "string — e.g., '(r)', '(c)(c)', '(m)'",
           "timing": "when_resolving|after_succeeding|after_failing|after_damaging|when_declaring|after_resolving",
-          "text": "string â€” full trigger text",
+          "text": "string — full trigger text",
           "is_mandatory": boolean,
           "soulstone_cost": integer
         }
@@ -123,7 +123,7 @@ Respond with ONLY this JSON, no other text:
       "triggers": [...]
     }
   ],
-  "extraction_notes": ["array of strings â€” any uncertainties"]
+  "extraction_notes": ["array of strings — any uncertainties"]
 }
 ```
 

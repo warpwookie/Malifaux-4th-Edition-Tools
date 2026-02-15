@@ -1,0 +1,114 @@
+{
+  "card_type": "stat_card",
+  "name": "Slop Hauler",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 5,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Sooey"
+  ],
+  "abilities": [
+    {
+      "name": "Hitch a Ride",
+      "defensive_type": null,
+      "text": "After an ally within 2\" declares the Walk action, this model may place itself into base contact with the ally after the action is resolved."
+    },
+    {
+      "name": "Slippery with Slop",
+      "defensive_type": null,
+      "text": "After resolving an enemy attack action targeting this model, this model may drain a (soulstone) to move up to 3\" and gain a Glutted token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tossed Slop",
+      "action_type": "magic",
+      "range": "(magic)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, the target gains an Adversary token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Heavenly Aroma",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Allies within (aura)2\" of the target heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spread It Around",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target gain an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Their Attention",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "A friendly model in this model's LoS may discard a card to declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Feed the Piggies",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. Then, the target gains a Glutted token.",
+      "triggers": [
+        {
+          "name": "Purification",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Sooey\\M4E_Stat_Sooey_Slop_Hauler_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Health bar shows numbered pips from 0 to 7, confirming health value of 7",
+    "Characteristics shows 'Minion (2)' indicating model limit of 2"
+  ]
+}

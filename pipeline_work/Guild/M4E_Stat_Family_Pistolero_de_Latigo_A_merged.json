@@ -1,0 +1,129 @@
+{
+  "card_type": "stat_card",
+  "name": "Pistolero de Latigo",
+  "title": null,
+  "faction": "Outcasts",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (New Recruits)",
+      "defensive_type": null,
+      "text": "After this model is killed, it may drain a (soulstone) instead of infusing one. If it does so, summon a model of the same name anywhere in this crew's deployment zone."
+    },
+    {
+      "name": "Fierce Kinship",
+      "defensive_type": null,
+      "text": "When this model has a Familia token, it receives a (+) to Df duels."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rusty Pistol",
+      "action_type": "missile",
+      "range": "(gun)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Adversary token.",
+      "triggers": [
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Bravado",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Familia token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Reinforce the Front",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Another ally only.",
+      "effects": "Target gains a Familia token and moves up to 2\".",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Stat_Family_Pistolero_de_Latigo_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 from 'Minion (3)'",
+    "Soulstone icon rendered as (soulstone) in Demise ability text",
+    "Positive flip icon rendered as (+) in Fierce Kinship ability text"
+  ],
+  "factions": [
+    "Outcasts",
+    "Guild"
+  ]
+}

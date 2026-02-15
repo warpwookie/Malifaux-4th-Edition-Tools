@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Tempered Steel",
+  "associated_master": "Charles Hoffman",
+  "associated_title": "Steel Sculptor",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Augmented models",
+      "abilities": [
+        {
+          "name": "Shock Absorption",
+          "defensive_type": null,
+          "text": "Once per activation. After suffering damage, this model may drain a (shielded) to move up to 3\" and gain a Shielded token."
+        },
+        {
+          "name": "Optimized System",
+          "defensive_type": null,
+          "text": "While this model has a Shielded token, it it receives a (c) to its tactical actions."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Augmented models",
+      "actions": [
+        {
+          "name": "Dual Power Source",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 5,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Ally only.",
+          "effects": "This model and the target gain a Shielded token.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The icon for Shielded is represented as (shielded) in the transcription",
+    "The icon in Optimized System appears to be a modifier icon, transcribed as (c)"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Augmented_Charles_Hoffman_Steel_Sculptor_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 489,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Augmented\\M4E_Crew_Augmented_Charles_Hoffman_Steel_Sculptor.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

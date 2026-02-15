@@ -1,0 +1,148 @@
+{
+  "card_type": "stat_card",
+  "name": "ASSET 17",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 3,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Undead",
+    "Totem"
+  ],
+  "keywords": [
+    "Marshal"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Stampede",
+      "defensive_type": null,
+      "text": "After this model ends a Charge action in base contact with any other models, it may deal 1 damage to itself. If it does so, deal 1 damage to all other models in base contact with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Putrid Fist",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action deals +2 damage for each raise instead of +1.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Maim",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Repulsive Odor",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 5\".",
+      "triggers": [
+        {
+          "name": "\"What Was That Thing?! Gonna Be Sick\"",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "The target must have a Craven token. Deal 2 damage to the target and make a Scheme marker in base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Resupply",
+      "action_type": null,
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "The Ground Shakes",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Place this model within range. Then, enemy models within (x)2\" must pass a TN 13 Sp duel or be dealt 1 damage and move 2\" away from this model.",
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Marshal\\M4E_Stat_Marshal_Asset_17.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Resurrectionists",
+    "Guild"
+  ]
+}

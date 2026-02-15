@@ -1,0 +1,126 @@
+{
+  "card_type": "stat_card",
+  "name": "Ni\u00f1o Ortega",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Advanced Sights",
+      "defensive_type": null,
+      "text": "This model receives a (+) when targeting models at a lower elevation."
+    },
+    {
+      "name": "Eyes on Every Angle",
+      "defensive_type": null,
+      "text": "Familia tokens on this model ignore range (but not LoS)."
+    },
+    {
+      "name": "From Shadow",
+      "defensive_type": null,
+      "text": "This model is deployed during the start phase of turn 1 anywhere on the table, not within 2\" of a Strategy marker or enemy deployment zone."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Repeating Rifle",
+      "action_type": "missile",
+      "range": "(gun)14\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If there are no different enemy models within 4\" of the target, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Line Up the Shot",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, drawing range and LoS from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Critical Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spotter",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Another ally in LoS may move up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Vantage Point",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Enemy only. Make a Scheme marker anywhere in the area between this model and the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Their Attention",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "A friendly model in this model's LoS may discard a card to declare the Interact action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Drawn to Family",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model gains a Familia token and moves up to 2\" toward an ally in LoS.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Stat_Family_Nino_Ortega.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

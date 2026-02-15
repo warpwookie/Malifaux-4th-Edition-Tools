@@ -1,0 +1,130 @@
+{
+  "card_type": "stat_card",
+  "name": "Guild Hound",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 4,
+  "wp": 3,
+  "sz": 1,
+  "sp": 7,
+  "health": 4,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Beast"
+  ],
+  "keywords": [
+    "Guard"
+  ],
+  "abilities": [
+    {
+      "name": "Call the Pack",
+      "defensive_type": null,
+      "text": "When this model is chosen to be summoned, the Stn may be increased by 4. If it does so, after summoning, summon an additional model with the same name in base contact with the summoned model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Snapping Jaws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Annoying",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Entranced token.",
+      "triggers": [
+        {
+          "name": "Grab On",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token. End this model's activation.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Loyal to the Badge",
+      "range": "2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains a Promoted token. Kill this model.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Sniffed Out",
+      "range": "2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make a Scheme marker within range. Kill this model.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Guard\\M4E_Stat_Guard_Guild_Hound_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Health bar shows 4 numbered pips (0, 1, 2, 3, 4)",
+    "Characteristics notation shows 'Minion (4)' which indicates model_limit of 4",
+    "STN: 4 is shown below the model image indicating base Soulstone cost for summoning"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

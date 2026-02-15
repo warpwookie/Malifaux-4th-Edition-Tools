@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Charles Hoffman",
+  "title": "Inventor",
+  "faction": "Guild",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Ultimate Creation",
+  "totem": "Edie Clark",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Construct",
+    "Living",
+    "Augmented"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Amplify Power",
+      "defensive_type": null,
+      "text": "When this model empowers a duel, it receives +1 to its duel total."
+    },
+    {
+      "name": "Arcing Current",
+      "defensive_type": null,
+      "text": "Once per turn. After a friendly Pylon marker is made on the enemy table half by another model, this model may declare its Electrical Beam action, drawing range and LoS from the made marker."
+    },
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Construction Claw",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place the target anywhere within 3\" of its current location.",
+      "triggers": [
+        {
+          "name": "Strip Defenses",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Electrical Beam",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action ignores (warding) abilities.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Siphon Life",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage and this model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stagger",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Arc",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Convulsions",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\". Then, the target must either discard a card or this model may move it up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lay the Foundation",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Make a Pylon marker within range, not within 6\" of this model's deployment zone or another friendly Pylon marker. Then, enemies within (aura)2\" of the made marker must pass a TN 12 Wp duel or gain a Stunned token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "On Site",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Augmented\\M4E_Stat_Augmented_Charles_Hoffman_Inventor.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

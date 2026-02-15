@@ -1,0 +1,156 @@
+{
+  "card_type": "stat_card",
+  "name": "Investigator",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Elite"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Expert Climber",
+      "defensive_type": null,
+      "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+    },
+    {
+      "name": "Legal Rhetoric",
+      "defensive_type": null,
+      "text": "After this model suffers damage, it gains an Adaptable token."
+    },
+    {
+      "name": "U Threatening Demeanor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Verbal Harassment",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "You're Comin' With Me",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\", then place this model into base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Forgetful",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a random card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lead the Witness",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 10,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 6\" toward a Scheme marker in LoS.",
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "It's Evidence",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Remove a marker in base contact with the target. If you do so, draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "action_type": null,
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model anywhere within range.",
+      "triggers": [
+        {
+          "name": "Sudden Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_Investigator_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (2) indicates model_limit of 2",
+    "Health bar shows numbered pips 1-9, total health is 9"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

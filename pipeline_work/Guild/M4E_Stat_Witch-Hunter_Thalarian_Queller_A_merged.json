@@ -1,0 +1,138 @@
+{
+  "card_type": "stat_card",
+  "name": "Thalarian Queller",
+  "title": null,
+  "faction": "Guild",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "6",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Witch Hunter"
+  ],
+  "abilities": [
+    {
+      "name": "Follow the Flames",
+      "defensive_type": null,
+      "text": "When this model declares an attack action, if the target has a Burning token, this model's action receives a (+)."
+    },
+    {
+      "name": "Suppress Magic",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" must discard a card to drain (soulstone)."
+    },
+    {
+      "name": "Thalarian Doctrine",
+      "defensive_type": null,
+      "text": "When an ally within 6\" removes a Shielded token to reduce damage, it reduces 1 additional damage."
+    }
+  ],
+  "actions": [
+    {
+      "name": "War Staff",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(magic)8\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Smolder",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Anti-Magic Burst",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 12,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Remove all tokens from the target. If this action removes at least two tokens, this model may make a Scheme marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Dark Remedy",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model or the target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Twist the Truth",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "An ally within 1\" of the target gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Quell Magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target gains a Suppressed token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Stat_Witch-Hunter_Thalarian_Queller_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 9 value visible at bottom of portrait"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

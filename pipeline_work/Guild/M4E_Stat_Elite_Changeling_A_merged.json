@@ -1,0 +1,88 @@
+{
+  "card_type": "stat_card",
+  "name": "CHANGELING",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "3",
+  "df": 4,
+  "wp": 4,
+  "sz": 1,
+  "sp": 7,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Elite"
+  ],
+  "abilities": [
+    {
+      "name": "Stealth",
+      "defensive_type": null,
+      "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Take by the Hand",
+      "action_type": "melee",
+      "range": "(melee)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target 3\". Then, move this model up to 3\" toward the target.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Blend In",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Place this model into base contact with the target.",
+      "triggers": [
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_Changeling_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model has 'Minion (3)' as a characteristic indicating model_limit of 3"
+  ],
+  "factions": [
+    "Neverborn",
+    "Guild"
+  ]
+}

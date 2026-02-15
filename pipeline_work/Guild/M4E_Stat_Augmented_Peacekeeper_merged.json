@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "Peacekeeper",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 6,
+  "sz": 4,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Augmented"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Behemoth",
+      "defensive_type": null,
+      "text": "This model cannot be placed by other models. When it would be moved by another model, halve the distance it moves."
+    },
+    {
+      "name": "Impenetrable",
+      "defensive_type": null,
+      "text": "This model's Shielded tokens reduce damage by 2, instead of 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Heavy Claws",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Peace, by Any Means",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "Once per activation. When resolving, this attack deals +1 damage and the target gains a Stunned token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Piercing",
+          "suit": "(r)(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Execute",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may either discard a card or drain a (c). If it does neither, it is killed.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Harpoon Gun",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "r",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Move the target up to 3\" toward this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pull and Drag",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target 3\" toward this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Redirect Power",
+          "suit": "(r)(r)",
+          "timing": "when_resolving",
+          "text": "Remove a Shielded token from this model. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Wrecking Ball",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model declares the Charge action, even if engaged, ignoring terrain, and may move up to an additional +2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Symbol of the Guild",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Allies moved through this way gain a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Augmented\\M4E_Stat_Augmented_Peacekeeper.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

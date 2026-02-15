@@ -1,0 +1,65 @@
+{
+  "card_type": "crew_card",
+  "name": "Bound by Blood",
+  "associated_master": "Perdita Ortega",
+  "associated_title": "La Diabla",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Family models",
+      "abilities": [
+        {
+          "name": "Family Values",
+          "defensive_type": null,
+          "text": "When this model declares the Prepare action, it may gain a Familia token instead of other tokens."
+        },
+        {
+          "name": "Armed and Ready",
+          "defensive_type": null,
+          "text": "After this model resolves the Prepare action, it may move up to 3\"."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Family models",
+      "actions": [
+        {
+          "name": "\"\u00a1A por \u00c9l!\"",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Once per activation. Another ally only.",
+          "effects": "Target declares a (missile) action printed on their stat card.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "The action name uses Spanish punctuation (\u00a1...!)",
+    "The action icon (missile) appears in the effects text",
+    "The signature icon appears before the action name in the table"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Family_Perdita_Ortega_La_Diabla_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 477,
+    "attempt": 2
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Crew_Family_Perdita_Ortega_La_Diabla.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

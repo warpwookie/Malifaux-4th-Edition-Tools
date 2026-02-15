@@ -1,0 +1,134 @@
+{
+  "card_type": "stat_card",
+  "name": "Crookskin",
+  "title": null,
+  "faction": "Neverborn",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Elite",
+    "Savage"
+  ],
+  "abilities": [
+    {
+      "name": "Camouflaged",
+      "defensive_type": "unusual_defense",
+      "text": "While this model is within 1\" of blocking terrain, it has cover."
+    },
+    {
+      "name": "Unruly",
+      "defensive_type": null,
+      "text": "After a (m) action is resolved against this model, this model may discard a card to either deal 1 damage to the attacking model or move 1\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Agony",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pick the Bones",
+          "suit": "(c)",
+          "timing": "after_resolving",
+          "text": "After killing, this model may declare the Interact action after resolving the current action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hasty Imitation",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model heals 1.",
+      "triggers": [
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sneak Away",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. This model must be within 1\" of blocking terrain. Place this model anywhere within 8\" of its current position and within 1\" of blocking terrain.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Hidden Cache",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Backlash",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move enemy models within (aura)2\" of this model up to 2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_Crookskin_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (2) indicates model_limit of 2"
+  ],
+  "factions": [
+    "Neverborn",
+    "Guild"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "card_type": "stat_card",
+  "name": "Mariya Dyatlov",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Cavalier"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "It's All in the Reflexes",
+      "defensive_type": null,
+      "text": "After a (missile) action is resolved against this model, this model may drain (soulstone) to deal 2 damage to the attacking model."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Run and Gun",
+      "defensive_type": null,
+      "text": "This model's Charge action may generate (missile) actions instead of (melee) actions."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Rocket Blast",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may remove a friendly Assault marker within range to increase this action's Dmg by +1.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Fine Tune",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Draw a card, then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Surgical Strike",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make an Assault marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Deadly Intentions",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Impact token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Concussion Rounds",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 5\". For each raise this action receives, the target moves an additional +2\".",
+      "triggers": [
+        {
+          "name": "Taunt",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Challenged token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Advance",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model 4\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Artillery Strike",
+      "action_type": null,
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Make an Assault marker within range. Enemy models within (t)2\" of the made marker must pass a TN 13 Sp duel or be dealt 2 damage.",
+      "triggers": [
+        {
+          "name": "Deliver Payload",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Allies within (t)2\" of the made marker heal 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Cavalier\\M4E_Stat_Cavalier_Mariya_Dyatlov.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

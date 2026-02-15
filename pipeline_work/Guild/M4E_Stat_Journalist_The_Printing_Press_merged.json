@@ -1,0 +1,148 @@
+{
+  "card_type": "stat_card",
+  "name": "THE PRINTING PRESS",
+  "title": null,
+  "faction": "Guild",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Construct"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "You Can't Escape the Truth",
+      "defensive_type": null,
+      "text": "When this model ends its activation, it may decrease its crew's scandal bar by 1 to deal 1 damage to an enemy model within 2\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Propaganda Machine",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may decrease this crew's scandal bar by 1. If it does so, this action deals +1 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Slander",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Increase this crew's scandal bar by 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Spreading the Good News",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Reveal the top three cards of the target's fate deck. For each (t) revealed this way, move the target up to 2\". Then, discard all the revealed cards.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hot Off the Presses",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": 10,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to 4\".",
+      "triggers": [
+        {
+          "name": "Evening Special",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Increase the distance moved by +2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Purification",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Remove a token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Gossip Column",
+      "range": "(aura)6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may decrease this crew's scandal bar by any amount.",
+      "effects": "For each point the scandal bar was decreased, a different ally within range heals 1.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_The_Printing_Press.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

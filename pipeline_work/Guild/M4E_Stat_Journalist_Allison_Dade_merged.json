@@ -1,0 +1,142 @@
+{
+  "card_type": "stat_card",
+  "name": "Allison Dade",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Public Outcry",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is targeted by an attack action, if this crew's scandal bar is half full or more, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "\"The Plot is Afoot!\"",
+      "defensive_type": null,
+      "text": "After the opposing player reveals a scheme, this model may drain a (soulstone) to gain a Fast token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Blackmail",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target must either discard a (soulstone) or this model may draw a card and increase this crew's scandal bar by 1.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Expos\u00e9",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token. This model may decrease this crew's scandal bar by 2 to deal +2 damage.",
+      "triggers": [
+        {
+          "name": "Hot-Headed",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target declares an attack action chosen and controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Investigative Journalism",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target reveals a card in its control hand. If it is 6 or less, they are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "On the Scene",
+          "suit": "(soulstone)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Interact action, controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 1
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Healing Energy",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+      "triggers": [
+        {
+          "name": "\"I've Got Your Back!\"",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Engaged ally only. Target is placed in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_Allison_Dade.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Guild"
+  ]
+}

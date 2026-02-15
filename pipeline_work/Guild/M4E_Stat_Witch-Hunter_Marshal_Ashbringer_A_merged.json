@@ -1,0 +1,119 @@
+{
+  "card_type": "stat_card",
+  "name": "Ashbringer",
+  "title": null,
+  "faction": "Guild",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "5",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Witch Hunter",
+    "Marshal"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "One Foot in the Grave",
+      "defensive_type": null,
+      "text": "When this model declares the Walk action, it may remove a Remains marker within 1\". If it does so, it may treat the Walk action as a (r)."
+    },
+    {
+      "name": "Trail of Embers",
+      "defensive_type": "unusual_defense",
+      "text": "After resolving an action that targeted and damaged this model, the attacking model gains a Burning token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Scorching Embers",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mass Hysteria",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move models damaged by this action up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Carry the Flame",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only.",
+      "effects": "Move the target up to 2\", then make a Remains or Inferno marker in base contact with the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Dispose of Evidence",
+      "range": "2\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Remove target enemy marker. Draw a card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Marshal\\M4E_Stat_Witch-Hunter_Marshal_Ashbringer_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

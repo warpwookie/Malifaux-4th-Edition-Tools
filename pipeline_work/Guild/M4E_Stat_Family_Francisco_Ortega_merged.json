@@ -1,0 +1,154 @@
+{
+  "card_type": "stat_card",
+  "name": "Francisco Ortega",
+  "title": null,
+  "faction": "Guild",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Companion",
+      "defensive_type": null,
+      "text": "After a friendly model within 6\" ends its activation, if this model has not activated this turn, it may discard a card to do so."
+    },
+    {
+      "name": "Riposte",
+      "defensive_type": "fortitude",
+      "text": "After an enemy model fails a (melee) action against this model, deal 1 damage to the enemy."
+    },
+    {
+      "name": "Threatening Demeanor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Balanced Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Onslaught",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Dead Before You Draw",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has an Adversary token, deal +1 damage. Otherwise it gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Peacebringer",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Ricochet",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to a different model within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Piercing",
+          "suit": null,
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Heroic Intervention",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy engaged with another friendly model only.",
+      "effects": "Move all friendly models engaged with the target 5\" away from the target. Then, place this model in base contact with the target. This model may declare a (melee) targeting the target.",
+      "triggers": [
+        {
+          "name": "The Family's Protector",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model moved by this action heals 4.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Stagger",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Stat_Family_Francisco_Ortega.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

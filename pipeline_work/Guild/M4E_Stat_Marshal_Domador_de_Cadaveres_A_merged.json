@@ -1,0 +1,118 @@
+{
+  "card_type": "stat_card",
+  "name": "Domador de Cad\u00e1veres",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Marshal"
+  ],
+  "abilities": [
+    {
+      "name": "Death's Reach",
+      "defensive_type": null,
+      "text": "This model may draw range and LoS for its attack actions from any Remains marker within 8\"."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Decay",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (r)1\" of the target. Models damaged by this action gain an Injured token.",
+      "triggers": [
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (/) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Vile Reclamation",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Another ally within range heals 2, +1 for each raise this action receives.",
+      "triggers": [
+        {
+          "name": "Dismember",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Command Corpse",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Remains marker. Select an action printed on an ally within 3\" of the target.",
+      "effects": "This model declares the selected action, drawing range and LoS from the target. Then, remove the target.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Marshal\\M4E_Stat_Marshal_Domador_de_Cadaveres_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (2) indicates model_limit of 2"
+  ],
+  "factions": [
+    "Resurrectionists",
+    "Guild"
+  ]
+}

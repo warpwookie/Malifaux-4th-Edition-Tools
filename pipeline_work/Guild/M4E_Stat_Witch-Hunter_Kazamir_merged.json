@@ -1,0 +1,152 @@
+{
+  "card_type": "stat_card",
+  "name": "Kazamir",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 4,
+  "wp": 4,
+  "sz": 2,
+  "sp": 5,
+  "health": 12,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique"
+  ],
+  "keywords": [
+    "Witch Hunter"
+  ],
+  "abilities": [
+    {
+      "name": "Drawn to Pain",
+      "defensive_type": null,
+      "text": "After this model suffers damage, move it up to 3\" toward the model that damaged it."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pound",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "You're Comin' With Me",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\" in any direction, then place this model into base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Cleansing Flame",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make an Inferno marker in base contact with the target and remove up to one token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Firestrike",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this action receives a raise, make an Inferno marker in base contact with the target.",
+      "triggers": [
+        {
+          "name": "Drain Magic",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Steel From Flesh",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Attach a Flaming Blade upgrade to target ally.",
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Stat_Witch-Hunter_Kazamir.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Ten Thunders",
+    "Guild"
+  ]
+}

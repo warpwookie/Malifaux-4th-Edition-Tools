@@ -1,0 +1,83 @@
+{
+  "card_type": "crew_card",
+  "name": "Mobilize the Watch",
+  "associated_master": "Dashel Barker",
+  "associated_title": "The Old Guard",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Guard models",
+      "abilities": [
+        {
+          "name": "Bloody Promotion",
+          "defensive_type": null,
+          "text": "After this model kills an enemy model, it may gain a Promoted token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Guard models and friendly Guard models with a Promoted token",
+      "actions": [
+        {
+          "name": "Restraint",
+          "category": "attack_actions",
+          "action_type": "melee",
+          "range": "6\"",
+          "skill_value": 6,
+          "skill_built_in_suit": null,
+          "resist": "Df",
+          "tn": null,
+          "damage": "2",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "This model may remove a Promoted token to add a suit to this action's duel total.",
+          "effects": null,
+          "triggers": [
+            {
+              "name": "Delay",
+              "suit": "(m)",
+              "timing": "after",
+              "text": "Target gains a Slow token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        },
+        {
+          "name": "At Attention!",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 5,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Ally only.",
+          "effects": "Target moves up to 3\" and declares the Prepare action.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Promoted token is mentioned and gained through Bloody Promotion ability and referenced in Restraint action but full token rules are not defined on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Guard_Dashel_Barker_The_Old_Guard_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 640,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Guard\\M4E_Crew_Guard_Dashel_Barker_The_Old_Guard.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "card_type": "stat_card",
+  "name": "BATTERING RAM",
+  "title": null,
+  "faction": "Guild",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "3",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 3,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living",
+    "Versatile"
+  ],
+  "keywords": [
+    "Vanguard"
+  ],
+  "abilities": [
+    {
+      "name": "Among the Rubble",
+      "defensive_type": null,
+      "text": "Once per activation. When this model is dealt damage, it may remove either a piece of destructible terrain or a non-Scheme marker within 1\" of itself to reduce the damage by 2."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Twin Knives",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"I Meant to Do That!\"",
+          "suit": "(m)",
+          "timing": "after_failing",
+          "text": "After failing, the next action this model declares this activation receives +2 Skl.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knife Throw",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal this action's damage to a different model within 6\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Take the Fight to Them",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Friendly only.",
+      "effects": "Target gains a Hastened token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Versatile - Guild\\M4E_Stat_Gld-Versatile_Vanguard_Battering_Ram_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

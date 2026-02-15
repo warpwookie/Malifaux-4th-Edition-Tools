@@ -1,0 +1,134 @@
+{
+  "card_type": "stat_card",
+  "name": "Monster Hunter",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 6,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Never Back Down From a Fight",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. If the attacking model is unique, this model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "\"Who Is That Masked Man?\"",
+      "defensive_type": null,
+      "text": "After this model kills an enemy model of equal or greater cost, it may drain a (soulstone) to replace itself with a unique Family model of 8 cost or less. Then it heals 2."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pistol Whip",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 3\".",
+      "triggers": [
+        {
+          "name": "Falter",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Staggered token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Giant's Bane",
+      "action_type": "missile",
+      "range": "(gun)10\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target is a unique model, this action receives (t).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Light 'Em Up",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Another ally may declare a (gun) or (magic) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Marked",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Adversary token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Explosive Rounds",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within (aura)2\" of the target are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Creep Along",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to its Sp toward a friendly model in its LoS.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Stat_Family_Monster_Hunter_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (2) indicates model_limit of 2"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Guild"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "card_type": "stat_card",
+  "name": "Director Rodriguez",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "10",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Witch Hunter",
+    "Marshal"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Burning Slam",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target gains a Burning token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Cleansing Flame",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make an Inferno marker in base contact with the target and remove up to one token from the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Breath of Fire",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal this action's damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Flaming Leap",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal this action's damage to an enemy model within 2\" of the target that was not damaged by this action. Then, this model may be placed into base contact with a model that was damaged by this attack.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Kindle",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target must have a Burning token. Deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hovering Flame",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 5\", ignoring other models. Models moved through this way gain a Burning token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Marshal\\M4E_Stat_Witch-Hunter_Marshal_Director_Rodriguez.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

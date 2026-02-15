@@ -1,0 +1,171 @@
+{
+  "card_type": "stat_card",
+  "name": "Nellie Cochrane",
+  "title": "The Tattler",
+  "faction": "Guild",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Morning Edition",
+  "totem": "The Printing Press",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Never Miss a Deadline",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain a (soulstone) to heal 4."
+    },
+    {
+      "name": "Public Outcry",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is targeted by an attack action, if this crew's scandal bar is half full or more, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "The Pen is Mightier",
+      "defensive_type": null,
+      "text": "Once per activation. After an enemy model within 8\" resolves the Interact action, it is dealt 1 damage."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Expos\u00e9",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target gains a Slow token. This model may decrease this crew's scandal bar by 2 to deal +2 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Blow Your Mind",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Confusing Feelings",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "On the Scene",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Interact action, controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Journalistic Integrity",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. This model may decrease this crew's scandal bar by 2 to receive a raise.",
+      "effects": "Choose and apply one of the following effects, plus an additional effect for each raise, in an order of your choosing.",
+      "triggers": [
+        {
+          "name": "Anonymous Source",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Concealment) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Chasing a Story",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Allies within 2\" of the target may move up to 2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Dogged Pursuit",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Interact action, ignoring engagement.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Public Sympathy",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Slow News Day",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy models within 3\" of the target must pass a TN 13 Wp duel or gain a Slow token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Scooped",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Fast token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_Nellie_Cochrane_The_Tattler.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Journalistic Integrity has multiple text blocks describing its effect structure, which are all part of the effects text: the base effects are defined as a choice system with scaling based on raises."
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

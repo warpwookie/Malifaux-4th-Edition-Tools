@@ -1,0 +1,171 @@
+{
+  "card_type": "stat_card",
+  "name": "Taggart Queeg",
+  "title": null,
+  "faction": "Guild",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 6,
+  "sz": 2,
+  "sp": 5,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Guard"
+  ],
+  "abilities": [
+    {
+      "name": "Prison Superintendent",
+      "defensive_type": null,
+      "text": "Non-unique allies that activate within 4\" of this model may move up to 3\"."
+    },
+    {
+      "name": "Taskmaster",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to place itself in base contact with a non-unique ally within 12\"."
+    },
+    {
+      "name": "U Threatening Demeanor",
+      "defensive_type": "unusual_defense",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bleeder Lash",
+      "action_type": "melee",
+      "range": "(melee)4\"",
+      "skill_value": 6,
+      "skill_built_in_suit": "m",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has half of its maximum health or less, this action receives a (+). If this attack receives a raise, the target gains an Entranced token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Coordinated Attack",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model may declare a (melee) action targeting the same model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Siphon Essence",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "After killing, infuse a (soulstone).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Peacebringer",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Ricochet",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to a different model within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Piercing",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action ignores (warding) abilities.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Camaraderie",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains a Bolstered token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Sabotage Their Plans",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Target an enemy Scheme marker. Make a Scheme marker in base contact with the target, then remove the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Cordon Sweep",
+          "suit": "(soulstone)",
+          "timing": "after_succeeding",
+          "text": "Place an ally within 6\" of the made marker in base contact with the made marker. Then, it may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 1
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Guard\\M4E_Stat_Guard_Taggart_Queeg.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

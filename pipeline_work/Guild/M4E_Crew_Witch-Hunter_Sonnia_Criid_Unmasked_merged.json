@@ -1,0 +1,69 @@
+{
+  "card_type": "crew_card",
+  "name": "Empowering Tome",
+  "associated_master": "Sonnia Criid",
+  "associated_title": "Unmasked",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Witch Hunter models",
+      "abilities": [
+        {
+          "name": "Charred Soul",
+          "defensive_type": null,
+          "text": "This model may treat Inferno markers as hazardous (Shielded) instead of any other hazardous effects."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Witch Hunter models",
+      "actions": [
+        {
+          "name": "Cinder's Grasp",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "8\"",
+          "skill_value": 0,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": 6,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Make an Inferno marker within range. Enemies within (Y)3\" of the made marker must pass a TN 13 Sp duel or be moved 3\" toward it.",
+          "triggers": [
+            {
+              "name": "Burn Over",
+              "suit": "",
+              "timing": "Once per activation",
+              "text": "Enemy models with a friendly Burning token within (Y)3\" of the made marker are dealt 2 damage.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Cinder's Grasp has a filled diamond symbol indicating it's a Signature Action",
+    "Burn Over trigger has no suit listed, indicated by empty string for suit field",
+    "Burn Over is marked as 'Once per activation' in timing"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Witch-Hunter_Sonnia_Criid_Unmasked_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 563,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Crew_Witch-Hunter_Sonnia_Criid_Unmasked.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

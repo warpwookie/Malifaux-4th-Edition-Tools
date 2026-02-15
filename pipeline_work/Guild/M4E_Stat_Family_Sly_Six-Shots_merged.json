@@ -1,0 +1,140 @@
+{
+  "card_type": "stat_card",
+  "name": "Sly \"Six-Shots\"",
+  "title": null,
+  "faction": "Outcasts",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 10,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Arms Dealer",
+      "defensive_type": null,
+      "text": "After a friendly upgrade is discarded from another model within 6\" this model may attach it."
+    },
+    {
+      "name": "Escape Plan",
+      "defensive_type": null,
+      "text": "When this model activates, if it is within 2\" of a table edge or impassable terrain, it may move up to 2\"."
+    },
+    {
+      "name": "Manipulative",
+      "defensive_type": "unusual_defense",
+      "text": "If this model has not yet activated this turn, enemy models may not cheat fate in opposed duels with this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Black Market Pistols",
+      "action_type": "variable",
+      "range": "*",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)12\". For each raise this action receives, make a Scheme marker in base contact with the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Puncture",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this attack receives one additional raise.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Gunrunner",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This model may discard an upgrade attached to itself and attach it to the target. Then, the target moves up to 2\".",
+      "triggers": [
+        {
+          "name": "Mend",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Sneak Away",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. This model must be within 1\" of blocking terrain. Place this model anywhere within 8\" of its current location within 1\" of blocking terrain.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Stat_Family_Sly_Six-Shots.pdf",
+  "merge_warnings": [
+    "Name mismatch: front='Sly \"Six-Shots\"' back='Sly'",
+    "Title mismatch: front='None' back='Six-Shots'"
+  ],
+  "extraction_notes": [],
+  "factions": [
+    "Outcasts",
+    "Guild"
+  ]
+}

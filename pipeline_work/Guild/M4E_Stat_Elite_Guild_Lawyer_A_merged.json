@@ -1,0 +1,150 @@
+{
+  "card_type": "stat_card",
+  "name": "Guild Lawyer",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "5",
+  "df": 4,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Elite"
+  ],
+  "abilities": [
+    {
+      "name": "Balancing the Scales",
+      "defensive_type": null,
+      "text": "Once per activation. When resolving an attack targeting this model, if this model suffers damage, this model may drain a (soulstone) to deal an equal amount of damage to the attacking model."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Clerical Command",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot target the same model more than once per activation. Target declares an action, chosen and controlled by this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Overruled and Misled",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Aura (Negligent) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Barrister's Barrage",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drain Magic",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Quick Thinking",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Target gains an Adaptable token.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Swift Action",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_Guild_Lawyer_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "card_type": "stat_card",
+  "name": "Nellie Cochrane",
+  "title": "Voice of Disorder",
+  "faction": "Guild",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Tabloid Press",
+  "totem": "Auguste Hart",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Gather 'round!",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain a (soulstone) to heal 2 on itself and allies within (r) 4\"."
+    },
+    {
+      "name": "Public Outcry",
+      "defensive_type": "unusual_defense",
+      "text": "When this model is targeted by an attack action, if this crew's scandal bar is half full or more, the attacking model's duel cannot be cheated."
+    },
+    {
+      "name": "Spread the Word",
+      "defensive_type": null,
+      "text": "Once per activation. After an enemy model within 8\" resolves the Interact action, it gains an Entranced token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Spew Nonsense",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If the target has an Entranced token, this action receives a (+).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"Could this be... Betrayal?\"",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target declares the Charge action, ignoring engagement, controlled by this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blow Your Mind",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Sow Chaos",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 10,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may decrease this crew's scandal bar by 2 to receive a raise.",
+      "effects": "Choose and apply one of the following effects, plus an additional effect for each raise, in an order of your choosing.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Lunacy",
+      "range": "(aura)4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Draw a number of cards equal to enemy models within range with an Entranced token (to a maximum of 2).",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_Nellie_Cochrane_Voice_of_Disorder.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Sow Chaos has sub-effects listed: 'Evil Thoughts: Move the target 5\". Hard-Hitting Journalism: Enemy models within (aura)2\" of the target are dealt 1 damage. Mob Rules: An ally engaged with the target may declare a (m) action. Stuttering: Target gains either an Entranced or Slow token.' These are part of the effects text and represent choices within the action resolution."
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

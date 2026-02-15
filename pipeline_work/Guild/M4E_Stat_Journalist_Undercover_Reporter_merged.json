@@ -1,0 +1,145 @@
+{
+  "card_type": "stat_card",
+  "name": "Undercover Reporter",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "By Your Side",
+      "defensive_type": null,
+      "text": "When this model activates, it may discard a card to place itself in base contact with a unique ally within 12\"."
+    },
+    {
+      "name": "Don't Mind Me",
+      "defensive_type": null,
+      "text": "The following do not restrict this model from declaring the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hidden Blade",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack ignores (warding) abilities.",
+      "effects": "Pop In: Place this model anywhere within 3\".",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Smile, You're On Camera",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 11,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models. Target declares the Interact action controlled by this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Blow Your Mind",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Confusing Feelings",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Entranced token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Firebomb",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Scheme marker. Models within (aura)2\" of the target must pass a TN 12 Sp duel or be dealt 2 damage.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Follow a Lead",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Either remove a Scheme marker within 6\" or decrease this crew's scandal bar by 2. This model moves up to 6\".",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_Undercover_Reporter.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Bayou",
+    "Guild"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "card_type": "stat_card",
+  "name": "Lucius Mattheson",
+  "title": "Dishonorable",
+  "faction": "Guild",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 7,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Jane Doe",
+  "totem": null,
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Elite"
+  ],
+  "keywords": [
+    "Vigilante Justice"
+  ],
+  "abilities": [
+    {
+      "name": "A Fistful of Scrip",
+      "defensive_type": null,
+      "text": "After this model kills an enemy model, it may make a Scheme marker in base contact with the killed model."
+    },
+    {
+      "name": "Inhuman Reflexes",
+      "defensive_type": null,
+      "text": "After this model discards a friendly upgrade, it heals 2."
+    },
+    {
+      "name": "Lying Low",
+      "defensive_type": null,
+      "text": "After an enemy deals damage to this model, this model may drain a (-). If it does, it may be placed into base contact with blocking terrain within 6\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Backstab",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pop In",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model anywhere within 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Mutilate",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, if the target has a Slow token, deal +1 damage. Otherwise it gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Down the Wrong Path",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": 9,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may target friendly models.",
+      "effects": "Move the target up to its Sp.",
+      "triggers": [
+        {
+          "name": "The Last Thing You See",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Place this model anywhere within 6\". Then, this model may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Secret Passage",
+      "range": "12\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action may only be declared if this model is within 1\" of blocking terrain.",
+      "effects": "Place this model anywhere within range within 1\" of blocking terrain.",
+      "triggers": [
+        {
+          "name": "Under the Mask",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Attach a Mimicry upgrade to this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Peak Efficiency",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Attach a Mimicry upgrade to the target.",
+      "triggers": [
+        {
+          "name": "Cut Them Down",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may declare a (melee) action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_Lucius_Mattheson_Dishonorable.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "card_type": "stat_card",
+  "name": "SONNIA CRIID",
+  "title": "UNRELENTING",
+  "faction": "Guild",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 6,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": true,
+  "crew_card_name": "Engulfing Flames",
+  "totem": "Purifying Flame",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Witch Hunter"
+  ],
+  "abilities": [
+    {
+      "name": "Aegis",
+      "defensive_type": "fortitude",
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Burning Brilliance",
+      "defensive_type": null,
+      "text": "When this model succeeds in an action, it may remove a Shielded token to receive one additional raise."
+    },
+    {
+      "name": "Ignite",
+      "defensive_type": "unusual_defense",
+      "text": "After this model is dealt damage by an attack, it may drain a (soulstone) to give the attacker a Burning token and move it 4\" directly away from this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Witch Bane",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 7,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "For each raise this action receives, this model may declare one additional different trigger, ignoring suits. This attack ignores (fortitude) abilities.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Smolder",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pulled Here and There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move either this model or the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drain Magic",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Sapping Flames",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a friendly Burning token from the target. For each raise this action receives, draw a card.",
+      "effects": null,
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "The Yellow Crypt",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Remove a friendly Burning token from the target. Enemy only: Summon a Witch Hunter model in base contact with either the target or this model.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Through the Smoke",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move up to three unengaged allies within range up to 4\". If this action received a raise, one moved model gains an Aura (Concealment) token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Stat_Witch-Hunter_Sonnia_Criid_Unrelenting.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='UNRELENTING' back='Unrelenting'"
+  ],
+  "extraction_notes": [
+    "The Yellow Crypt has a special symbol (*) in the TN column which typically indicates variable TN or special conditions; represented as null in this extraction."
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

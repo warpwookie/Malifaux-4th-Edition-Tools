@@ -1,0 +1,161 @@
+{
+  "card_type": "stat_card",
+  "name": "Purifying Flame",
+  "title": null,
+  "faction": "Ten Thunders",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 3,
+  "sz": 2,
+  "sp": 7,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique"
+  ],
+  "keywords": [
+    "Witch Hunter"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Flashover)",
+      "defensive_type": null,
+      "text": "After this model is killed, models within (r)1\" gain a Burning token."
+    },
+    {
+      "name": "Flameborn",
+      "defensive_type": null,
+      "text": "When this model would suffer damage from a Burning token, it instead heals that amount."
+    },
+    {
+      "name": "Node",
+      "defensive_type": null,
+      "text": "Friendly models within 8\" may draw range and LoS for (magic) actions from this model."
+    },
+    {
+      "name": "Set Ablaze",
+      "defensive_type": null,
+      "text": "When an enemy model within 8\" resolves a Burning token, it damages enemy models within (r)4\" instead of base contact."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Burning Touch",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Burning token.",
+      "triggers": [
+        {
+          "name": "Controlled Burn",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Choose an Inferno marker within 2\" of the target. Deal 1 damage to enemy models within (aura)2\" of the chosen marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Flame Blast",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "The target and models within (aura)2\" of the target gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Big Boom",
+          "suit": "(t)(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, increase the (aura) of this action by 1\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hovering Flame",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move this model up to 5\", ignoring other models. Models moved through this way gain a Burning token.",
+      "triggers": [
+        {
+          "name": "Drag Along",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Choose a marker within 2\". Make a copy of the chosen marker into base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Flaming Shield",
+          "suit": "(t)(t)",
+          "timing": "after_succeeding",
+          "text": "Friendly models moved through this way gain a Shielded token instead of a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Stat_Witch-Hunter_Purifying_Flame.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 10 appears below the artwork - likely a reference number or strength value not part of standard stat card structure"
+  ],
+  "factions": [
+    "Ten Thunders",
+    "Guild"
+  ]
+}

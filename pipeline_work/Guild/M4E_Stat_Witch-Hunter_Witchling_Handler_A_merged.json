@@ -1,0 +1,140 @@
+{
+  "card_type": "stat_card",
+  "name": "Witchling Handler",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Witch Hunter"
+  ],
+  "abilities": [
+    {
+      "name": "Counterspell",
+      "defensive_type": null,
+      "text": "Enemy models within 6\" must each discard a card to declare triggers during opposed duels."
+    },
+    {
+      "name": "Drawn to Power",
+      "defensive_type": null,
+      "text": "After resolving an attack against this model, it may drain a (soulstone). If it does, place it into base contact with a Strategy marker within 6\"."
+    },
+    {
+      "name": "Goad Witchling",
+      "defensive_type": null,
+      "text": "When an allied minion activates within 6\", move it up to 4\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Witched Blade",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "For each raise this action receives, this model may declare one additional different trigger, ignoring suits.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Draw Out Secrets",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Drain Magic",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target discards a card. This model may draw a card and then discard a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Immolate",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 9,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, this model may remove a Burning token from the target to deal +3 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Reposition",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Break the Seal",
+      "action_type": null,
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a friendly engaged Witchling Stalker. Replace the target with a Witchling Thrall. It heals 3.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Witch Hunter\\M4E_Stat_Witch-Hunter_Witchling_Handler_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Minion (2) indicates model limit of 2",
+    "STN: 10 visible in artwork area"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

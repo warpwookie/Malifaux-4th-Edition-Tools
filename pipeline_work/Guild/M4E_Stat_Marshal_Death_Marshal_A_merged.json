@@ -1,0 +1,139 @@
+{
+  "card_type": "stat_card",
+  "name": "Death Marshal",
+  "title": null,
+  "faction": "Resurrectionists",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 4,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Undead"
+  ],
+  "keywords": [
+    "Marshal"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "fortitude",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pine Box",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 2\". If this attack receives a raise, this model may have the target gain a Craven token.",
+      "triggers": [
+        {
+          "name": "Keep it Buried",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a marker within 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Unnatural Vigor",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "This model heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Dismember",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Peacebringer",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Shrug Off",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove one token from this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Dismember",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Marshal\\M4E_Stat_Marshal_Death_Marshal_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 from 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Resurrectionists",
+    "Guild"
+  ]
+}

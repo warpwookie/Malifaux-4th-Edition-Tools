@@ -1,0 +1,64 @@
+{
+  "card_type": "crew_card",
+  "name": "Hand Signals",
+  "associated_master": "Harold Tull",
+  "associated_title": "Dead Silent",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Cavalier models",
+      "abilities": [
+        {
+          "name": "Battlefield Awareness",
+          "defensive_type": null,
+          "text": "When this model activates, if there are three or more friendly Assault markers in play, replace this crew card with Boosted Hand Signals."
+        },
+        {
+          "name": "Improvised Attack",
+          "defensive_type": null,
+          "text": "Once per activation. When this model declares an action, if it is within 2\" of a friendly Assault marker, it may remove the marker to add any one suit to its duel."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Cavalier models",
+      "actions": [
+        {
+          "name": "Battlefront",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": null,
+          "effects": "Make an Assault marker within range. Then, place this model in base contact with the made marker.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card references 'Assault markers' which are defined elsewhere",
+    "Card references 'Boosted Hand Signals' crew card as a replacement"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Cavalier_Harold_Tull_Dead_Silent_1_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 494,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Cavalier\\M4E_Crew_Cavalier_Harold_Tull_Dead_Silent_1.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

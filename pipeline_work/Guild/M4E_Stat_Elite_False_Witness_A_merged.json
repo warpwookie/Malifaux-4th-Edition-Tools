@@ -1,0 +1,86 @@
+{
+  "card_type": "stat_card",
+  "name": "False Witness",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Elite"
+  ],
+  "abilities": [
+    {
+      "name": "First to Speak",
+      "defensive_type": "unusual_defense",
+      "text": "If this model has already activated this turn, enemy attack actions that target this model cannot cheat their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "J'Accuse!",
+      "action_type": "magic",
+      "range": "(magic)6\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Aura (Negligent) token.",
+      "triggers": [
+        {
+          "name": "Debt of Gratitude",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target must remove a Scheme marker friendly to its crew from anywhere in play. If it cannot, deal 2 damage to it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "False Claim",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action cannot be declared while engaged.",
+      "effects": "Make two Scheme markers within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Elite\\M4E_Stat_Elite_False_Witness_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' designation"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

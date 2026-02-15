@@ -1,0 +1,107 @@
+{
+  "card_type": "stat_card",
+  "name": "Newsie",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "4",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Living"
+  ],
+  "keywords": [
+    "Journalist"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Unfair Bargain)",
+      "defensive_type": null,
+      "text": "After this model is killed by an enemy model, the opponent must discard a card, then this model draws two cards."
+    },
+    {
+      "name": "\"Read All About It!\"",
+      "defensive_type": null,
+      "text": "After an enemy model within 8\" gains an Entranced token, one model with this ability may discard a card to draw a card."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Thrown Newspaper",
+      "action_type": "missile",
+      "range": "(missile)8\"",
+      "skill_value": 4,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action receives a raise, draw a card.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Quick Reflexes",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Delay",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Slow token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Innocent Face",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "This model gains an Aura (Concealment) token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Taken to the Grave",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Target a Remains marker. Place this model in base contact with the target and remove the target. Then, increase this crew's scandal bar by 2.",
+      "effects": null,
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Journalist\\M4E_Stat_Journalist_Newsie_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "Model limit is 3 based on 'Minion (3)' characteristic"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

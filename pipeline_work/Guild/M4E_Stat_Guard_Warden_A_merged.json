@@ -1,0 +1,118 @@
+{
+  "card_type": "stat_card",
+  "name": "Warden",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "6",
+  "df": 5,
+  "wp": 4,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion",
+    "Construct"
+  ],
+  "keywords": [
+    "Guard"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Charge-Up",
+      "defensive_type": null,
+      "text": "When declaring an action, this model may remove a Remains marker within 2\". If it does so, it receives either a (t) or a suit of its choice."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Dispersing Punch",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this attack receives a raise, move models within 1\" of this model up to 2\".",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Junk Slam",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to the target, then make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Restraining Claw",
+      "action_type": "magic",
+      "range": "(magic)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Sp",
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Slow token.",
+      "triggers": [
+        {
+          "name": "Pull and Drag",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Move the target 3\" toward this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Junk Slam",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to the target, then make a Remains marker in base contact with the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Guard\\M4E_Stat_Guard_Warden_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [
+    "STN: 9 value visible below character portrait",
+    "Model limit is 2 from 'Minion (2)'"
+  ],
+  "factions": [
+    "Guild"
+  ]
+}

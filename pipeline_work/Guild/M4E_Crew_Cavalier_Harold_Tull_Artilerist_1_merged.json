@@ -1,0 +1,67 @@
+{
+  "card_type": "crew_card",
+  "name": "Heavy Salvo",
+  "associated_master": "Harold Tull",
+  "associated_title": "Artillerist",
+  "faction": "Unknown",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Cavalier models",
+      "abilities": [
+        {
+          "name": "Combat Distinction",
+          "defensive_type": null,
+          "text": "After this model kills an enemy model, replace this crew card with Boosted Heavy Salvo."
+        },
+        {
+          "name": "Supply Crate",
+          "defensive_type": null,
+          "text": "When this model ends its activation, if it is within 2\" of a friendly Assault marker, it may remove the marker to heal 1."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Cavalier models",
+      "actions": [
+        {
+          "name": "Bombardment",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "10\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "(arrow)(diamond)",
+          "effects": "Make an Assault marker within range. Enemy models within (marker)2\" of the made marker must pass a TN 12 Sp or be dealt 2 damage.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Faction is not visible on this card",
+    "Bombardment action uses (arrow)(diamond) icon which represents standard action costs",
+    "Assault marker referenced but not defined on this card (likely defined elsewhere)",
+    "Reference to 'Boosted Heavy Salvo' crew card variant"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Cavalier_Harold_Tull_Artilerist_1_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 531,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Cavalier\\M4E_Crew_Cavalier_Harold_Tull_Artilerist_1.pdf",
+  "factions": [
+    "Unknown",
+    "Guild"
+  ]
+}

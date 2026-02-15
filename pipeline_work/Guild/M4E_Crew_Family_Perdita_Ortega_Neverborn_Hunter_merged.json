@@ -1,0 +1,61 @@
+{
+  "card_type": "crew_card",
+  "name": "The Last Sunrise",
+  "associated_master": "Perdita Ortega",
+  "associated_title": "Neverborn Hunter",
+  "faction": "Guild",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Family models",
+      "abilities": [
+        {
+          "name": "Family Values",
+          "defensive_type": null,
+          "text": "The Prepare action may give this model a Familia token."
+        },
+        {
+          "name": "Steady Hands",
+          "defensive_type": null,
+          "text": "When this model declares an action, it may discard a Hermanos de Armas upgrade attached to itself. If it does so, it receives a (+) and a suit of its choice to its final duel total."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly Family models",
+      "actions": [
+        {
+          "name": "On the Job Training",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "6\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "costs_and_restrictions": "Another ally only.",
+          "effects": "The target gains a Familia token and may attach a Hermanos de Armas upgrade.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Guild\\M4E_Crew_Family_Perdita_Ortega_Neverborn_Hunter_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 447,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Family\\M4E_Crew_Family_Perdita_Ortega_Neverborn_Hunter.pdf",
+  "factions": [
+    "Guild"
+  ]
+}

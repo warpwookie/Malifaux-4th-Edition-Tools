@@ -1,0 +1,146 @@
+{
+  "card_type": "stat_card",
+  "name": "Hunter",
+  "title": null,
+  "faction": "Guild",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Construct",
+    "Loyal"
+  ],
+  "keywords": [
+    "Augmented"
+  ],
+  "abilities": [
+    {
+      "name": "Armor",
+      "defensive_type": null,
+      "text": "Once per activation. This model may reduce damage dealt to it by 1."
+    },
+    {
+      "name": "Deadly Pursuit",
+      "defensive_type": null,
+      "text": "During the end phase, this model may move up to 4\"."
+    },
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Metal Claws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pouncing Strike",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Assassinate",
+          "suit": "(m)(m)",
+          "timing": "after_succeeding",
+          "text": "After killing, gain a Fast token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Harpoon Gun",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Move the target up to 3\" toward this model.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Like the Wind",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move this model up to 5\", ignoring enemy models.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Unnatural Speed",
+      "range": "3\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Place this model anywhere within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Augmented\\M4E_Stat_Augmented_Hunter_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

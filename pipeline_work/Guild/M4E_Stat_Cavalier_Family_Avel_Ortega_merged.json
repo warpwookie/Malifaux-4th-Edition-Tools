@@ -1,0 +1,148 @@
+{
+  "card_type": "stat_card",
+  "name": "AVEL ORTEGA",
+  "title": null,
+  "faction": "Guild",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living",
+    "Cavalier"
+  ],
+  "keywords": [
+    "Family"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": null,
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Partners in Crime (Domingo Montoya)",
+      "defensive_type": null,
+      "text": "When this model activates, another ally within 6\" may move up to 3\". If the moved model is Domingo Montoya, this model may move up to 3\"."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Black Powder Blues",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "If this attack receives a raise, move the target up to 2\".",
+      "triggers": [
+        {
+          "name": "Critical Strike",
+          "suit": "(r)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Reckless Aim",
+          "suit": "(c)",
+          "timing": "after_failing",
+          "text": "After failing, draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Blues Traveler",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Move the target up to 5\" in any direction.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Flail",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Enemy Models within (aura)2\" of the target must pass a TN 12 Df duel or be dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Take Five",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "The target may declare the Prepare action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Fire in the Hole",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Enemy models within (aura)2\" of the target must pass a TN 13 Df duel or be dealt 2 damage.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"That's Our Song\"",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Another ally in LoS may declare the Fire in the Hole action, which receives a (+).",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Blow it to Hell",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove all destructible terrain and markers within (aura)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Cavalier\\M4E_Stat_Cavalier_Family_Avel_Ortega.pdf",
+  "merge_warnings": [],
+  "extraction_notes": [],
+  "factions": [
+    "Guild"
+  ]
+}

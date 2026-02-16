@@ -1,6 +1,6 @@
 {
   "card_type": "stat_card",
-  "name": "Convict Gunslinger",
+  "name": "CONVICT GUNSLINGER",
   "title": null,
   "faction": "Outcasts",
   "station": null,
@@ -112,7 +112,7 @@
           "name": "Improvised Missile",
           "suit": "(r)",
           "timing": "after_succeeding",
-          "text": "Deal 1 damage to enemies within (X)1\" of the made marker.",
+          "text": "Deal 1 damage to enemies within (x)1\" of the made marker.",
           "is_mandatory": false,
           "soulstone_cost": 0
         },
@@ -130,10 +130,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Convict_Gunslinger_A.pdf",
   "merge_warnings": [],
-  "extraction_notes": [
-    "Model limit is 2, indicated by 'Minion (2)' in characteristics line"
-  ],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

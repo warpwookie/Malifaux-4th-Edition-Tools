@@ -101,7 +101,7 @@
         },
         {
           "name": "Drop It!",
-          "suit": "(m)(m)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
           "is_mandatory": false,
@@ -125,7 +125,7 @@
       "triggers": [
         {
           "name": "Bring Your Guns to Town",
-          "suit": "(t)",
+          "suit": "(c)",
           "timing": "after_succeeding",
           "text": "Target gains an Impact token, then declares a (gun) action.",
           "is_mandatory": false,
@@ -141,7 +141,7 @@
         },
         {
           "name": "Clear Away",
-          "suit": "(m)(m)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "This model may remove a token from the target.",
           "is_mandatory": false,
@@ -154,8 +154,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Sue.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

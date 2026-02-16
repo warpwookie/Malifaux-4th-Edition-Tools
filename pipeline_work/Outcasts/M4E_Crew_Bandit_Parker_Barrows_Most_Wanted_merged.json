@@ -24,7 +24,7 @@
           "name": "Stick Up",
           "category": "attack_actions",
           "action_type": "missile",
-          "range": "(melee) 6\"",
+          "range": "(missile) 6\"",
           "skill_value": 6,
           "skill_built_in_suit": null,
           "resist": "Wp",
@@ -42,21 +42,16 @@
   "markers": [],
   "tokens": [],
   "extraction_notes": [
-    "Card shows decorative header with emblem and ornamental borders",
-    "Character art shows Parker Barrows in western attire with goggles and red bandana",
-    "Quick Getaway uses soulstone drain mechanic",
-    "Stick Up is a unique attack where target chooses between damage or giving benefits to attacker"
+    "The damage column shows '*' for Stick Up, indicating damage is conditional based on target's choice",
+    "Quick Getaway uses the (soulstone) icon for draining",
+    "Stick Up is marked as signature with the '!' icon"
   ],
   "_extraction_meta": {
     "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Bandit_Parker_Barrows_Most_Wanted_front.png",
     "model_used": "claude-sonnet-4-5-20250929",
     "input_tokens": 1904,
-    "output_tokens": 490,
+    "output_tokens": 471,
     "attempt": 1
   },
-  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Crew_Bandit_Parker_Barrows_Most_Wanted.pdf",
-  "factions": [
-    "Outcast",
-    "Outcasts"
-  ]
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Crew_Bandit_Parker_Barrows_Most_Wanted.pdf"
 }

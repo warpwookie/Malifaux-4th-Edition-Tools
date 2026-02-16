@@ -3,8 +3,8 @@
   "name": "Bandido",
   "title": null,
   "faction": "Outcasts",
-  "station": null,
-  "model_limit": 1,
+  "station": "Minion",
+  "model_limit": 3,
   "cost": "5",
   "df": 5,
   "wp": 5,
@@ -18,7 +18,7 @@
   "crew_card_name": null,
   "totem": null,
   "characteristics": [
-    "Minion",
+    "Minion (3)",
     "Living"
   ],
   "keywords": [
@@ -32,7 +32,7 @@
     },
     {
       "name": "Hard to Kill",
-      "defensive_type": "warding",
+      "defensive_type": "unusual_defense",
       "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
     }
   ],
@@ -71,7 +71,7 @@
       "triggers": [
         {
           "name": "Reposition",
-          "suit": "(c)",
+          "suit": "(r)",
           "timing": "after_succeeding",
           "text": "Move this model up to 3\".",
           "is_mandatory": false,
@@ -79,7 +79,7 @@
         },
         {
           "name": "Drop It!",
-          "suit": "(m)(m)",
+          "suit": "(c)(c)",
           "timing": "after_succeeding",
           "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
           "is_mandatory": false,
@@ -107,10 +107,12 @@
     },
     {
       "name": "Onward",
+      "action_type": null,
       "range": null,
       "skill_value": 0,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
+      "resist": null,
       "tn": 7,
       "damage": null,
       "is_signature": true,
@@ -118,16 +120,10 @@
       "costs_and_restrictions": null,
       "effects": "This model may declare the Walk action.",
       "triggers": [],
-      "category": "tactical_actions",
-      "action_type": null
+      "category": "tactical_actions"
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Bandido_A.pdf",
   "merge_warnings": [],
-  "extraction_notes": [
-    "Minion (3) indicates model_limit of 3"
-  ],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

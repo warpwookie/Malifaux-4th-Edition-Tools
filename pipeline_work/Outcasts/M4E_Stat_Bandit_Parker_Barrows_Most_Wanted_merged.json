@@ -48,7 +48,7 @@
       "action_type": "variable",
       "range": "*",
       "skill_value": 6,
-      "skill_built_in_suit": "r",
+      "skill_built_in_suit": "t",
       "skill_fate_modifier": null,
       "resist": "Df",
       "tn": null,
@@ -60,7 +60,7 @@
       "triggers": [
         {
           "name": "Reposition",
-          "suit": "(r)",
+          "suit": "(m)",
           "timing": "after_succeeding",
           "text": "Move this model up to 3\".",
           "is_mandatory": false,
@@ -68,7 +68,7 @@
         },
         {
           "name": "Drop It!",
-          "suit": "(m)(m)",
+          "suit": "(c)(c)",
           "timing": "after_succeeding",
           "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
           "is_mandatory": false,
@@ -126,7 +126,7 @@
       "skill_fate_modifier": null,
       "tn": 6,
       "damage": null,
-      "is_signature": false,
+      "is_signature": true,
       "soulstone_cost": 0,
       "costs_and_restrictions": "Target a Scheme marker. An ally within 10\" of the target may declare the Interact action, ignoring engagement. Then, remove the target.",
       "effects": null,
@@ -137,8 +137,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Parker_Barrows_Most_Wanted.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

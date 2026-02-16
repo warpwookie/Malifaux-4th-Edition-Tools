@@ -1,5 +1,116 @@
 [
   {
+    "id": 792,
+    "name": "ASHEN ECHO",
+    "title": null,
+    "faction": "Outcasts",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Ashen_Echo.pdf",
+    "parse_date": "2026-02-15T15:59:34.499196",
+    "parse_status": "auto",
+    "keywords": [
+      "Bandit"
+    ],
+    "factions": [
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Totem",
+      "Undead",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 2029,
+        "model_id": 792,
+        "name": "Aegis",
+        "defensive_type": "fortitude",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "id": 2030,
+        "model_id": 792,
+        "name": "The Good, The Bad...",
+        "defensive_type": null,
+        "text": "When this model activates, deal 1 damage to all enemy models within (m)6\" that have a Staggered token."
+      }
+    ],
+    "actions": [
+      {
+        "id": 2318,
+        "model_id": 792,
+        "name": "Mouth Full o' Embers",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 3358,
+            "action_id": 2318,
+            "name": "Rage",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Burning token and moves 3\" away from this model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3359,
+            "action_id": 2318,
+            "name": "Stumble",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2319,
+        "model_id": 792,
+        "name": "Vengeful Curse",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)6\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 4\". Target gains this model's choice of a Staggered or Burning token. If this attack receives a raise, models within (t)2\" of the target gain the same token.",
+        "costs_and_restrictions": null,
+        "triggers": []
+      }
+    ]
+  },
+  {
     "id": 102,
     "name": "Abomination",
     "title": null,
@@ -641,7 +752,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Half-Blood_Angel_Eyes.pdf",
     "parse_date": "2026-02-14T15:50:04.003040",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts",
       "Ten Thunders"
@@ -1934,7 +2047,7 @@
     "name": "Bloodwretch",
     "title": null,
     "faction": "Resurrectionists",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "3",
     "df": 4,
@@ -2012,7 +2125,7 @@
             "id": 726,
             "action_id": 515,
             "name": "\"I Meant to Do That!\"",
-            "suit": null,
+            "suit": "(t)",
             "timing": "after_failing",
             "text": "After failing, the next action this model declares this activation receives +2 Skl.",
             "is_mandatory": 0,
@@ -2057,7 +2170,7 @@
     "name": "Brutal Fate",
     "title": "Effigy",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Totem",
     "model_limit": 1,
     "cost": "2",
     "df": 4,
@@ -2074,7 +2187,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Guild\\Versatile - Guild\\M4E_Stat_Gld-Versatile_Brutal_Fate_Effigy.pdf",
     "parse_date": "2026-02-14T18:32:58.071843",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Guild",
       "Outcasts"
@@ -2451,6 +2566,163 @@
         "effects": "This model may declare the Walk action. (book) Survival Skills: This model heals 1.",
         "costs_and_restrictions": null,
         "triggers": []
+      }
+    ]
+  },
+  {
+    "id": 793,
+    "name": "CONVICT GUNSLINGER",
+    "title": null,
+    "faction": "Outcasts",
+    "station": null,
+    "model_limit": 1,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 8,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Convict_Gunslinger_A.pdf",
+    "parse_date": "2026-02-15T16:00:20.313370",
+    "parse_status": "auto",
+    "keywords": [
+      "Bandit"
+    ],
+    "factions": [
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion"
+    ],
+    "abilities": [
+      {
+        "id": 2031,
+        "model_id": 793,
+        "name": "Don't Turn Your Back",
+        "defensive_type": null,
+        "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+      },
+      {
+        "id": 2032,
+        "model_id": 793,
+        "name": "Nose for Loot",
+        "defensive_type": null,
+        "text": "Once per activation. After this model removes a marker, draw a card."
+      },
+      {
+        "id": 2033,
+        "model_id": 793,
+        "name": "Resilient",
+        "defensive_type": "fortitude",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 2320,
+        "model_id": 793,
+        "name": "Pistol Whip",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 3\".",
+        "costs_and_restrictions": null,
+        "triggers": []
+      },
+      {
+        "id": 2321,
+        "model_id": 793,
+        "name": "W&S Pistol",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)12\"",
+        "skill_value": 5,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 3360,
+            "action_id": 2321,
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3361,
+            "action_id": 2321,
+            "name": "Onslaught",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Declare this action again, targeting the same model.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2322,
+        "model_id": 793,
+        "name": "Bar Brawl Instincts",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "2\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 4,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Make a marker of the same type anywhere within 6\" of its current location, then remove the target.",
+        "costs_and_restrictions": "Once per activation. Target a Scheme or Remains marker.",
+        "triggers": [
+          {
+            "id": 3362,
+            "action_id": 2322,
+            "name": "Improvised Missile",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Deal 1 damage to enemies within (x)1\" of the made marker.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3363,
+            "action_id": 2322,
+            "name": "Crossbreeze",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "An enemy model within 3\" of the made marker gains a Staggered token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -2839,7 +3111,7 @@
     "name": "Carrion Fate",
     "title": "Effigy",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Totem",
     "model_limit": 1,
     "cost": "2",
     "df": 4,
@@ -2856,7 +3128,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Versatile - Resurrectionists\\M4E_Stat_Res-Versatile_Carrion_Fate_Effigy.pdf",
     "parse_date": "2026-02-14T22:31:53.976173",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts",
       "Resurrectionists"
@@ -2949,7 +3223,7 @@
     "name": "Carrion Fate",
     "title": "Emissary",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "8",
     "df": 5,
@@ -2966,7 +3240,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Versatile - Resurrectionists\\M4E_Stat_Res-Versatile_Carrion_Fate_Emissary.pdf",
     "parse_date": "2026-02-14T22:32:18.646031",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts",
       "Resurrectionists"
@@ -3396,7 +3672,7 @@
             "id": 471,
             "action_id": 327,
             "name": "Arm Up",
-            "suit": null,
+            "suit": "(t)",
             "timing": "after_succeeding",
             "text": "A friendly model within 2\" of the made marker gains an Impact token.",
             "is_mandatory": 0,
@@ -3591,7 +3867,7 @@
     "name": "Convict Gunslinger",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -4019,7 +4295,7 @@
     "name": "Dead Rider",
     "title": null,
     "faction": "Resurrectionists",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "11",
     "df": 6,
@@ -4036,7 +4312,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Res-Versatile_Horseman_Dead_Rider.pdf",
     "parse_date": "2026-02-14T15:58:47.288137",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Amalgam"
+    ],
     "factions": [
       "Outcasts",
       "Resurrectionists"
@@ -4508,7 +4786,7 @@
     "name": "Desperate Mercenary",
     "title": null,
     "faction": "Explorer's Society",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "4",
     "df": 4,
@@ -4897,7 +5175,7 @@
     "name": "Drudge",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Peon",
     "model_limit": 1,
     "cost": "2",
     "df": 4,
@@ -5740,7 +6018,7 @@
     "name": "Freikorps Engineer",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -5890,7 +6168,7 @@
     "name": "Freikorps Scout",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -6062,7 +6340,7 @@
     "name": "Freikorpsmann",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 5,
@@ -6175,7 +6453,7 @@
             "id": 533,
             "action_id": 378,
             "name": "Buddy System",
-            "suit": null,
+            "suit": "(t)",
             "timing": "after_succeeding",
             "text": "Once per turn. Another ally with the same name as this model within range may make a Scheme marker within 3\" of itself.",
             "is_mandatory": 0,
@@ -7343,7 +7621,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Hans.pdf",
     "parse_date": "2026-02-14T15:51:41.587461",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts"
     ],
@@ -7603,7 +7883,7 @@
     "name": "Hodgepodge Fate",
     "title": "Effigy",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Totem",
     "model_limit": 1,
     "cost": "2",
     "df": 4,
@@ -7620,7 +7900,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Hodgepodge_Fate_Effigy.pdf",
     "parse_date": "2026-02-14T15:52:03.878055",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts"
     ],
@@ -7712,7 +7994,7 @@
     "name": "Hodgepodge Fate",
     "title": "Emissary",
     "faction": "Bayou",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "8",
     "df": 5,
@@ -7729,7 +8011,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Hodgepodge_Fate_Emissary.pdf",
     "parse_date": "2026-02-14T15:52:28.396027",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Bayou",
       "Outcasts"
@@ -7993,7 +8277,7 @@
     "name": "Hooded Rider",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "11",
     "df": 6,
@@ -8010,7 +8294,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Nvb-Versatile_Horseman_Hooded_Rider.pdf",
     "parse_date": "2026-02-14T15:44:39.420252",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Amalgam"
+    ],
     "factions": [
       "Neverborn",
       "Outcasts"
@@ -8149,7 +8435,7 @@
     "name": "Host Ducat",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "7",
     "df": 5,
@@ -8321,7 +8607,7 @@
     "name": "Huckster",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "4",
     "df": 5,
@@ -8443,7 +8729,7 @@
     "name": "Intrepid Fate",
     "title": "Effigy",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Totem",
     "model_limit": 1,
     "cost": "2",
     "df": 4,
@@ -8460,7 +8746,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Intrepid_Fate_Efifgy.pdf",
     "parse_date": "2026-02-15T09:06:50.408368",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Explorer's Society",
       "Outcasts"
@@ -8553,7 +8841,7 @@
     "name": "Intrepid Fate",
     "title": "Emissary",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "8",
     "df": 6,
@@ -8570,7 +8858,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Explorer's Society\\Versatile - Explorer's Society\\M4E_Stat_Exs-Versatile_Intrepid_Fate_Emissary.pdf",
     "parse_date": "2026-02-15T09:07:14.563264",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Explorer's Society",
       "Outcasts"
@@ -8691,7 +8981,7 @@
     "name": "Iron Wing",
     "title": null,
     "faction": "Bayou",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -8855,7 +9145,7 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": 0,
-    "crew_card_name": null,
+    "crew_card_name": "Wailing Doom",
     "totem": "Jaakuna Ubume",
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Jack_Daw_Ensouled.pdf",
     "parse_date": "2026-02-14T22:43:20.529608",
@@ -9050,7 +9340,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Stat_Tormented_Jack_Daw_Spirit_of_Betrayal.pdf",
     "parse_date": "2026-02-14T22:43:47.109377",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Tormented"
+    ],
     "factions": [
       "Outcasts",
       "Resurrectionists"
@@ -9415,7 +9707,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Johan_Creedy.pdf",
     "parse_date": "2026-02-14T15:52:51.364623",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Guild",
       "Outcasts"
@@ -10348,6 +10642,186 @@
     ]
   },
   {
+    "id": 794,
+    "name": "Mad Dog Brackett",
+    "title": null,
+    "faction": "Explorer's Society",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "8",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 11,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Mad_Dog_Brackett.pdf",
+    "parse_date": "2026-02-15T16:02:01.969670",
+    "parse_status": "auto",
+    "keywords": [
+      "Bandit"
+    ],
+    "factions": [
+      "Explorer's Society",
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 2034,
+        "model_id": 794,
+        "name": "Grit",
+        "defensive_type": null,
+        "text": "While this model has half of its maximum health or less, its attack actions receive a (+)."
+      },
+      {
+        "id": 2035,
+        "model_id": 794,
+        "name": "Pass the Bag",
+        "defensive_type": null,
+        "text": "When this model would gain a token, it may drain a (t) to give a friendly copy of that token to an ally within 6\"."
+      },
+      {
+        "id": 2036,
+        "model_id": 794,
+        "name": "Resilient",
+        "defensive_type": "fortitude",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 2323,
+        "model_id": 794,
+        "name": "Burning Cigar",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "skill_built_in_suit": "m",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "0",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Burning token and a Staggered token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 3364,
+            "action_id": 2323,
+            "name": "\"AHHH, MY EYE!\"",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage and move the target up to 3\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2324,
+        "model_id": 794,
+        "name": "Chesterfield Shotgun",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "3",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "For each raise this action receives, deal +1 damage to enemy models within (r)1\" of the target.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 3365,
+            "action_id": 2324,
+            "name": "Blow It to Hell",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Remove all markers and destructible terrain within (r)2\" of the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3366,
+            "action_id": 2324,
+            "name": "Spreader Load",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, increase the size of this action's (r) to 3\" and receive an additional raise.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3367,
+            "action_id": 2324,
+            "name": "Drop It!",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3368,
+            "action_id": 2324,
+            "name": "Clustered Rounds",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action does not receive raises and damage from this action ignores the target's (warding) abilities.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2325,
+        "model_id": 794,
+        "name": "Life of Crime",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "3\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 4,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Gain a Fast token.",
+        "costs_and_restrictions": "Remove target enemy Scheme marker.",
+        "triggers": [
+          {
+            "id": 3369,
+            "action_id": 2325,
+            "name": "Swift Action",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Declare this action again.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 190,
     "name": "Malifaux Rat",
     "title": null,
@@ -10756,7 +11230,7 @@
     "name": "Maurice",
     "title": null,
     "faction": "Resurrectionists",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "8",
     "df": 6,
@@ -10915,7 +11389,7 @@
     "name": "Mechanical Misfit",
     "title": null,
     "faction": "Arcanists",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 5,
@@ -11050,7 +11524,7 @@
     "name": "Mechanical Rider",
     "title": null,
     "faction": "Guild",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "11",
     "df": 6,
@@ -11067,7 +11541,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Arcanists\\Versatile - Arcanists\\M4E_Stat_Arc-Versatile_Horseman_Mechanical_Rider.pdf",
     "parse_date": "2026-02-14T17:05:37.837770",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Arcanists",
       "Guild",
@@ -12307,7 +12783,7 @@
     "name": "Pale Rider",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "11",
     "df": 6,
@@ -12324,7 +12800,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Gld-Versatile_Horseman_Pale_Rider.pdf",
     "parse_date": "2026-02-14T15:35:18.542576",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Amalgam"
+    ],
     "factions": [
       "Outcasts"
     ],
@@ -12462,7 +12940,7 @@
     "name": "Parker Barrows",
     "title": "Dead Man Walking",
     "faction": "Outcasts",
-    "station": "Master",
+    "station": null,
     "model_limit": 1,
     "cost": "-",
     "df": 6,
@@ -12620,7 +13098,7 @@
     "name": "Parker Barrows",
     "title": "Most Wanted",
     "faction": "Outcasts",
-    "station": "Master",
+    "station": null,
     "model_limit": 1,
     "cost": "-",
     "df": 6,
@@ -12937,11 +13415,163 @@
     ]
   },
   {
+    "id": 795,
+    "name": "Pearl Musgrove",
+    "title": null,
+    "faction": "Outcasts",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 9,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Pearl_Musgrove.pdf",
+    "parse_date": "2026-02-15T16:03:23.056822",
+    "parse_status": "auto",
+    "keywords": [
+      "Bandit"
+    ],
+    "factions": [
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 2037,
+        "model_id": 795,
+        "name": "Hard to Kill",
+        "defensive_type": "unusual_defense",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "id": 2038,
+        "model_id": 795,
+        "name": "Relapsed",
+        "defensive_type": null,
+        "text": "Once per turn. After a marker within 6\" is removed, draw a card."
+      }
+    ],
+    "actions": [
+      {
+        "id": 2326,
+        "model_id": 795,
+        "name": "Sawed-off Shotgun",
+        "category": "attack_actions",
+        "action_type": "variable",
+        "range": "*",
+        "skill_value": 5,
+        "skill_built_in_suit": "t",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "If this action receives a raise, deal 1 damage to enemy models within (aura)1\" of the target.",
+        "costs_and_restrictions": "When this action is declared, choose if it has a range of (melee)1\" or (gun)8\".",
+        "triggers": [
+          {
+            "id": 3370,
+            "action_id": 2326,
+            "name": "Critical Strike",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2327,
+        "model_id": 795,
+        "name": "Make a Distraction",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 5,
+        "damage": null,
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within (aura)3\" of the target must pass a TN 12 Wp duel or gain a Staggered token, and this model may move them up to 4\".",
+        "costs_and_restrictions": "Friendly only.",
+        "triggers": [
+          {
+            "id": 3371,
+            "action_id": 2327,
+            "name": "All Goin' as Planned",
+            "suit": "(m)",
+            "timing": "after_resolving",
+            "text": "After resolving, move the target up to 4\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3372,
+            "action_id": 2327,
+            "name": "Vengeful",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Impact token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2328,
+        "model_id": 795,
+        "name": "Contraband",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "5\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 7,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Make a Scheme marker within range.",
+        "costs_and_restrictions": "Once per turn.",
+        "triggers": [
+          {
+            "id": 3373,
+            "action_id": 2328,
+            "name": "Brushfire",
+            "suit": "(r)(r)",
+            "timing": "after_succeeding",
+            "text": "Models within (aura)1\" of the made marker must move 3\" away from it or gain a Burning token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 335,
     "name": "Pistolero de Latigo",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 5,
@@ -13235,7 +13865,7 @@
     "name": "Prospector",
     "title": null,
     "faction": "Explorer's Society",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 5,
@@ -13252,7 +13882,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_Prospector_A.pdf",
     "parse_date": "2026-02-14T15:53:41.554056",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Explorer's Society",
       "Outcasts"
@@ -13375,7 +14007,7 @@
     "name": "Rat Catcher",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -13522,7 +14154,7 @@
     "name": "Rat King",
     "title": null,
     "faction": "Resurrectionists",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "7",
     "df": 6,
@@ -13682,7 +14314,7 @@
     "name": "Ronin",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -13820,7 +14452,7 @@
     "name": "Ruffian",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 5,
@@ -14116,8 +14748,8 @@
     "shields": 0,
     "base_size": "50mm",
     "infuses_soulstone_on_death": 1,
-    "crew_card_name": null,
-    "totem": null,
+    "crew_card_name": "RUST-EATEN FATE",
+    "totem": "Soul Battery",
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Amalgam_Rusty_Alyce_Rider_Remade.pdf",
     "parse_date": "2026-02-14T15:16:06.514167",
     "parse_status": "auto",
@@ -14444,11 +15076,199 @@
     ]
   },
   {
+    "id": 796,
+    "name": "SUE",
+    "title": null,
+    "faction": "Outcasts",
+    "station": null,
+    "model_limit": 1,
+    "cost": "9",
+    "df": 5,
+    "wp": 6,
+    "sz": 2,
+    "sp": 6,
+    "health": 13,
+    "soulstone_cache": null,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": 0,
+    "crew_card_name": null,
+    "totem": null,
+    "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Sue.pdf",
+    "parse_date": "2026-02-15T16:04:17.086271",
+    "parse_status": "auto",
+    "keywords": [
+      "Bandit"
+    ],
+    "factions": [
+      "Outcasts"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "id": 2039,
+        "model_id": 796,
+        "name": "Hard to Kill",
+        "defensive_type": "fortitude",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "id": 2040,
+        "model_id": 796,
+        "name": "Hurt",
+        "defensive_type": null,
+        "text": "When this model activates, it may deal 2 irreducible damage to itself to move up to 3\" and make a Scheme marker in base contact."
+      },
+      {
+        "id": 2041,
+        "model_id": 796,
+        "name": "Resilient",
+        "defensive_type": "fortitude",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      }
+    ],
+    "actions": [
+      {
+        "id": 2329,
+        "model_id": 796,
+        "name": "Speed Shooter",
+        "category": "attack_actions",
+        "action_type": "variable",
+        "range": "*",
+        "skill_value": 6,
+        "skill_built_in_suit": "m",
+        "skill_fate_modifier": null,
+        "resist": "Df",
+        "tn": null,
+        "damage": "2",
+        "is_signature": 0,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)10\".",
+        "triggers": [
+          {
+            "id": 3374,
+            "action_id": 2329,
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3375,
+            "action_id": 2329,
+            "name": "Knock Aside",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\".",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2330,
+        "model_id": 796,
+        "name": "The Man in Black",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": "Wp",
+        "tn": null,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Staggered token.",
+        "costs_and_restrictions": null,
+        "triggers": [
+          {
+            "id": 3376,
+            "action_id": 2330,
+            "name": "Ring of Fire",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (aura)3\" of the target gain a Burning token.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3377,
+            "action_id": 2330,
+            "name": "Drop It!",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target may discard a card. If it does not, make a Scheme marker in base contact with it.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "id": 2331,
+        "model_id": 796,
+        "name": "Walk the Line",
+        "category": "tactical_actions",
+        "action_type": null,
+        "range": "8\"",
+        "skill_value": 0,
+        "skill_built_in_suit": null,
+        "skill_fate_modifier": null,
+        "resist": null,
+        "tn": 6,
+        "damage": null,
+        "is_signature": 1,
+        "soulstone_cost": 0,
+        "effects": null,
+        "costs_and_restrictions": "Ally only. Move the target up to 6\" toward a marker in its LoS.",
+        "triggers": [
+          {
+            "id": 3378,
+            "action_id": 2331,
+            "name": "Bring Your Guns to Town",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Impact token, then declares a (gun) action.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3379,
+            "action_id": 2331,
+            "name": "Dark Remedy",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model or the target heals 2.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          },
+          {
+            "id": 3380,
+            "action_id": 2331,
+            "name": "Clear Away",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "This model may remove a token from the target.",
+            "is_mandatory": 0,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 110,
     "name": "Scavenger",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -15573,7 +16393,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Amalgam\\M4E_Stat_Amalgam_Soul_Battery.pdf",
     "parse_date": "2026-02-14T15:17:35.279169",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Amalgam"
+    ],
     "factions": [
       "Outcasts",
       "Ten Thunders"
@@ -16332,7 +17154,7 @@
     "name": "Sue",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Henchman",
     "model_limit": 1,
     "cost": "9",
     "df": 5,
@@ -17321,7 +18143,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_The_Bad_Omen.pdf",
     "parse_date": "2026-02-14T15:54:08.489126",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts",
       "Ten Thunders"
@@ -18519,7 +19343,9 @@
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Versatile - Outcasts\\M4E_Stat_Out-Versatile_The_Midnight_Stalker.pdf",
     "parse_date": "2026-02-14T15:54:34.109258",
     "parse_status": "auto",
-    "keywords": [],
+    "keywords": [
+      "Versatile"
+    ],
     "factions": [
       "Outcasts"
     ],
@@ -19264,7 +20090,7 @@
     "name": "Tunnel Rats",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "4",
     "df": 4,
@@ -19732,7 +20558,7 @@
     "name": "Viktoria Chambers",
     "title": "Ashes and Blood",
     "faction": "Outcasts",
-    "station": null,
+    "station": "Master",
     "model_limit": 1,
     "cost": "-",
     "df": 6,
@@ -19745,7 +20571,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": 0,
     "crew_card_name": "Bounty Hunt",
-    "totem": null,
+    "totem": "Student of Conflict",
     "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Mercenary\\M4E_Stat_Mercenary_Viktoria_Chambers_Ashes_and_Blood.pdf",
     "parse_date": "2026-02-14T15:43:47.726877",
     "parse_status": "auto",
@@ -20099,7 +20925,7 @@
     "name": "Void Hunter",
     "title": null,
     "faction": "Neverborn",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "6",
     "df": 5,
@@ -20237,7 +21063,7 @@
     "name": "Void Wretch",
     "title": null,
     "faction": "Outcasts",
-    "station": null,
+    "station": "Minion",
     "model_limit": 1,
     "cost": "5",
     "df": 4,

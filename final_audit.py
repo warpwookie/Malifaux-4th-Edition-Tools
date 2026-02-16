@@ -31,7 +31,7 @@ VALID_FACTIONS = {
     "Arcanists", "Bayou", "Explorer's Society", "Guild",
     "Neverborn", "Outcasts", "Resurrectionists", "Ten Thunders"
 }
-VALID_STATIONS = {"Master", "Henchman", "Enforcer", "Minion", "Totem", "Peon", None}
+VALID_STATIONS = {"Master", "Henchman", "Minion", "Totem", "Peon", None}
 VALID_ACTION_TYPES = {"melee", "missile", "magic", "variable", None}
 VALID_CATEGORIES = {"attack_actions", "tactical_actions"}
 VALID_TIMINGS = {
@@ -229,7 +229,9 @@ def audit_statistical(conn, report, verbose):
     section = "2. STATISTICAL OUTLIERS"
     
     for stat, (lo, hi) in STAT_RANGES.items():
-        c.execute(f"SELECT id, name, title, {stat} FROM models WHERE {stat} < ? OR {stat} > ?", (lo, hi))
+        c.execute(f"""SELECT id, name, title, {stat} FROM models 
+                     WHERE ({stat} < ? OR {stat} > ?) 
+                     AND COALESCE(parse_status,'') != 'verified'""", (lo, hi))
         outliers = c.fetchall()
         if outliers:
             report.warn(section, f"{len(outliers)} models with {stat} outside [{lo},{hi}]",
@@ -246,9 +248,12 @@ def audit_statistical(conn, report, verbose):
     else:
         report.info(section, "All soulstone caches reasonable")
     
-    # Cost validation
+    # Cost validation (exclude Effigy totems which legitimately have cost=2)
     c.execute("""SELECT id, name, title, station, cost FROM models 
-                 WHERE station IN ('Master', 'Totem') AND cost != '-' AND cost IS NOT NULL""")
+                 WHERE station IN ('Master', 'Totem') AND cost != '-' AND cost IS NOT NULL
+                 AND id NOT IN (
+                     SELECT model_id FROM model_characteristics WHERE characteristic = 'Effigy'
+                 )""")
     bad = c.fetchall()
     if bad:
         report.warn(section, f"{len(bad)} Masters/Totems with non-dash cost",
@@ -267,21 +272,21 @@ def audit_statistical(conn, report, verbose):
     else:
         report.info(section, "All models have at least one ability or action")
     
-    # Attack actions with no damage
+    # Attack actions with no damage (legitimate: lures, pushes, control effects)
     c.execute("""SELECT a.id, a.name, m.name, m.title FROM actions a
                  JOIN models m ON a.model_id=m.id
                  WHERE a.category='attack_actions' AND (a.damage IS NULL OR a.damage = '')""")
     no_dmg = c.fetchall()
     if no_dmg:
-        report.warn(section, f"{len(no_dmg)} attack actions with no damage value",
-                   [f"action '{r[1]}' on {r[2]} ({r[3]})" for r in no_dmg])
+        report.info(section, f"{len(no_dmg)} attack actions with no damage (control effects)")
     else:
         report.info(section, "All attack actions have damage values")
     
-    # Tactical actions with damage (shouldn't happen often)
+    # Tactical actions with damage (shouldn't happen often, damage='0' is effectively none)
     c.execute("""SELECT a.id, a.name, m.name, a.damage FROM actions a
                  JOIN models m ON a.model_id=m.id
-                 WHERE a.category='tactical_actions' AND a.damage IS NOT NULL AND a.damage != ''""")
+                 WHERE a.category='tactical_actions' 
+                 AND a.damage IS NOT NULL AND a.damage != '' AND a.damage != '0'""")
     tac_dmg = c.fetchall()
     if tac_dmg:
         report.warn(section, f"{len(tac_dmg)} tactical actions with damage (unusual)",
@@ -307,19 +312,33 @@ def audit_consistency(conn, report, verbose):
     report.info(section, "Station distribution: " + 
                 ", ".join(f"{s or 'NULL'}: {n}" for s, n in dist))
     
-    # Models with keywords
-    c.execute("SELECT COUNT(DISTINCT model_id) FROM model_keywords")
-    with_kw = c.fetchone()[0]
-    c.execute("SELECT COUNT(*) FROM models")
-    total = c.fetchone()[0]
-    no_kw = total - with_kw
-    if no_kw > 0:
-        report.warn(section, f"{no_kw} models have no keywords assigned",
-                   None)
+    # Models with keywords (Versatile models legitimately have no keywords)
+    c.execute("""SELECT m.id, m.name, m.title, m.faction FROM models m
+                 WHERE m.id NOT IN (SELECT model_id FROM model_keywords)
+                 AND m.id NOT IN (
+                     SELECT model_id FROM model_characteristics 
+                     WHERE characteristic = 'Versatile'
+                 )""")
+    no_kw = c.fetchall()
+    # Also count Versatile models with no keywords for info
+    c.execute("""SELECT COUNT(*) FROM models m
+                 WHERE m.id NOT IN (SELECT model_id FROM model_keywords)
+                 AND m.id IN (
+                     SELECT model_id FROM model_characteristics 
+                     WHERE characteristic = 'Versatile'
+                 )""")
+    versatile_no_kw = c.fetchone()[0]
+    if versatile_no_kw > 0:
+        report.info(section, f"{versatile_no_kw} Versatile models with no keywords (correct)")
+    if no_kw:
+        report.warn(section, f"{len(no_kw)} non-Versatile models have no keywords assigned",
+                   [f"id={r[0]} {r[1]} ({r[2]}) [{r[3]}]" for r in no_kw])
     else:
         report.info(section, "All models have at least one keyword")
     
     # Models with characteristics
+    c.execute("SELECT COUNT(*) FROM models")
+    total = c.fetchone()[0]
     c.execute("SELECT COUNT(DISTINCT model_id) FROM model_characteristics")
     with_char = c.fetchone()[0]
     no_char = total - with_char
@@ -329,15 +348,17 @@ def audit_consistency(conn, report, verbose):
     else:
         report.info(section, "All models have at least one characteristic")
     
-    # Dual-faction models (via model_factions junction table if it exists)
+    # Verify model_factions matches models.faction (one entry per model)
     try:
-        c.execute("""SELECT m.name, m.title, COUNT(mf.faction) as fc
+        c.execute("""SELECT m.id, m.name, m.title, COUNT(mf.faction) as fc
                      FROM models m JOIN model_factions mf ON m.id=mf.model_id
-                     GROUP BY m.id HAVING fc > 1 ORDER BY m.name""")
-        dual = c.fetchall()
-        if dual:
-            report.info(section, f"{len(dual)} dual-faction models found",
-                       [f"{r[0]} ({r[1]}): {r[2]} factions" for r in dual])
+                     GROUP BY m.id HAVING fc > 1""")
+        multi = c.fetchall()
+        if multi:
+            report.error(section, f"{len(multi)} models with multiple faction entries (should be 1 each)",
+                        [f"id={r[0]} {r[1]} ({r[2]}): {r[3]} factions" for r in multi])
+        else:
+            report.info(section, "All models have exactly one faction entry")
     except:
         pass  # Table might not exist
     
@@ -351,7 +372,7 @@ def audit_consistency(conn, report, verbose):
     else:
         report.info(section, "All Masters have crew_card_name set")
     
-    # Masters should have totem
+    # Masters should have totem (totem='-' means intentionally no totem)
     c.execute("""SELECT id, name, title, totem FROM models 
                  WHERE station='Master' AND (totem IS NULL OR totem = '')""")
     no_totem = c.fetchall()
@@ -361,19 +382,19 @@ def audit_consistency(conn, report, verbose):
     else:
         report.info(section, "All Masters have totem set")
     
-    # Trigger count per action (more than 4 is suspicious)
+    # Trigger count per action (more than 5 is suspicious — 5 is legitimate in M4E)
     c.execute("""SELECT a.name, m.name, COUNT(t.id) as tc
                  FROM actions a 
                  JOIN models m ON a.model_id=m.id
                  JOIN triggers t ON t.action_id=a.id
-                 GROUP BY a.id HAVING tc > 4
+                 GROUP BY a.id HAVING tc > 5
                  ORDER BY tc DESC""")
     many_trig = c.fetchall()
     if many_trig:
-        report.warn(section, f"{len(many_trig)} actions with >4 triggers (check for duplicates)",
+        report.warn(section, f"{len(many_trig)} actions with >5 triggers (check for duplicates)",
                    [f"'{r[0]}' on {r[1]}: {r[2]} triggers" for r in many_trig])
     else:
-        report.info(section, "No actions have excessive triggers")
+        report.info(section, "No actions have excessive triggers (>5)")
 
 
 def audit_completeness(conn, report, verbose):
@@ -516,12 +537,13 @@ def audit_cross_table(conn, report, verbose):
     c = conn.cursor()
     section = "7. CROSS-TABLE REFERENCES"
     
-    # Crew cards referencing masters that exist
+    # Crew cards referencing masters that exist (some crew cards reference Henchmen)
     c.execute("""SELECT cc.name, cc.associated_master, cc.associated_title
                  FROM crew_cards cc
                  WHERE NOT EXISTS (
                      SELECT 1 FROM models m 
-                     WHERE m.name = cc.associated_master AND m.station = 'Master'
+                     WHERE m.name = cc.associated_master 
+                     AND m.station IN ('Master', 'Henchman')
                  )""")
     orphan_crew = c.fetchall()
     if orphan_crew:

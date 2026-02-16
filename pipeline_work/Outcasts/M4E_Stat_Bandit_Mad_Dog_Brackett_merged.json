@@ -1,8 +1,8 @@
 {
   "card_type": "stat_card",
-  "name": "MAD DOG BRACKETT",
+  "name": "Mad Dog Brackett",
   "title": null,
-  "faction": "Outcasts",
+  "faction": "Explorer's Society",
   "station": "Henchman",
   "model_limit": 1,
   "cost": "8",
@@ -110,7 +110,7 @@
         },
         {
           "name": "Clustered Rounds",
-          "suit": "(m)",
+          "suit": "(c)",
           "timing": "when_resolving",
           "text": "When resolving, this action does not receive raises and damage from this action ignores the target's (warding) abilities.",
           "is_mandatory": false,
@@ -148,8 +148,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Mad_Dog_Brackett.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

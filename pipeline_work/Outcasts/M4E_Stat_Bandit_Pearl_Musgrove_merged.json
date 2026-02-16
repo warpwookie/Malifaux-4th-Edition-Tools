@@ -28,7 +28,7 @@
   "abilities": [
     {
       "name": "Hard to Kill",
-      "defensive_type": "fortitude",
+      "defensive_type": "unusual_defense",
       "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
     },
     {
@@ -43,7 +43,7 @@
       "action_type": "variable",
       "range": "*",
       "skill_value": 5,
-      "skill_built_in_suit": "c",
+      "skill_built_in_suit": "t",
       "skill_fate_modifier": null,
       "resist": "Df",
       "tn": null,
@@ -55,7 +55,7 @@
       "triggers": [
         {
           "name": "Critical Strike",
-          "suit": "(r)",
+          "suit": "(c)",
           "timing": "when_resolving",
           "text": "When resolving, this action deals +1 damage to the target.",
           "is_mandatory": false,
@@ -87,7 +87,7 @@
         },
         {
           "name": "Vengeful",
-          "suit": "(c)",
+          "suit": "(t)",
           "timing": "after_succeeding",
           "text": "Target gains an Impact token.",
           "is_mandatory": false,
@@ -112,7 +112,7 @@
       "triggers": [
         {
           "name": "Brushfire",
-          "suit": "(t)(t)",
+          "suit": "(r)(r)",
           "timing": "after_succeeding",
           "text": "Models within (aura)1\" of the made marker must move 3\" away from it or gain a Burning token.",
           "is_mandatory": false,
@@ -125,8 +125,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Pearl_Musgrove.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

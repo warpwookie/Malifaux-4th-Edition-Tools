@@ -87,18 +87,16 @@
     },
     {
       "name": "Chaos in the Badlands",
-      "action_type": null,
       "range": "10\"",
       "skill_value": 0,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
-      "resist": null,
       "tn": 5,
       "damage": null,
       "is_signature": true,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "Target a marker.",
-      "effects": "Enemy models within (aura)1\" of the target gain a Staggered token.",
+      "costs_and_restrictions": "Target a marker. Enemy models within (aura)1\" of the target gain a Staggered token.",
+      "effects": null,
       "triggers": [
         {
           "name": "Draw Out Secrets",
@@ -109,16 +107,15 @@
           "soulstone_cost": 0
         }
       ],
-      "category": "tactical_actions"
+      "category": "tactical_actions",
+      "action_type": null
     },
     {
       "name": "Stare Down",
-      "action_type": null,
       "range": "6\"",
       "skill_value": null,
       "skill_built_in_suit": null,
       "skill_fate_modifier": null,
-      "resist": null,
       "tn": null,
       "damage": null,
       "is_signature": true,
@@ -126,13 +123,11 @@
       "costs_and_restrictions": "Once per turn. Target an enemy. Place a card from your control hand face down.",
       "effects": "Starting with the card this model placed as a cost, this model and the target take turns placing cards face down in front of them until one of them chooses not to. Then flip all cards face up and add their values. The model with the highest total wins, moves up to 6\", and infuses a (fortitude) (this model wins ties). The losing model is dealt 2 damage. All cards played this way are discarded.",
       "triggers": [],
-      "category": "tactical_actions"
+      "category": "tactical_actions",
+      "action_type": null
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Parker_Barrows_Dead_Man_Walking.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

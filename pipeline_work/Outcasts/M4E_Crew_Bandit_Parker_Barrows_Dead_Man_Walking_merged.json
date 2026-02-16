@@ -32,8 +32,8 @@
           "damage": "0",
           "is_signature": false,
           "soulstone_cost": 0,
-          "costs_and_restrictions": null,
-          "effects": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
+          "costs_and_restrictions": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
+          "effects": null,
           "triggers": [
             {
               "name": "Debt Owed to Darkness",
@@ -66,16 +66,18 @@
   ],
   "markers": [],
   "tokens": [],
-  "extraction_notes": [],
+  "extraction_notes": [
+    "Card shows Parker Barrows character art but focuses on crew-wide keyword abilities",
+    "Run And Gun ability modifies Charge action for all Friendly Bandit models",
+    "Broken Man's Lasso is granted only to unique Bandit models",
+    "Execute trigger references draining a (c) which represents a Crow suit"
+  ],
   "_extraction_meta": {
     "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Outcasts\\M4E_Crew_Bandit_Parker_Barrows_Dead_Man_Walking_front.png",
     "model_used": "claude-sonnet-4-5-20250929",
     "input_tokens": 1904,
-    "output_tokens": 652,
+    "output_tokens": 735,
     "attempt": 1
   },
-  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Crew_Bandit_Parker_Barrows_Dead_Man_Walking.pdf",
-  "factions": [
-    "Outcasts"
-  ]
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Crew_Bandit_Parker_Barrows_Dead_Man_Walking.pdf"
 }

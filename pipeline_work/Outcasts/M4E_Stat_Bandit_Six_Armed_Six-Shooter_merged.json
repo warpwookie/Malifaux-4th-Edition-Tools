@@ -43,19 +43,19 @@
       "action_type": "missile",
       "range": "(gun)12\"",
       "skill_value": 5,
-      "skill_built_in_suit": "c",
+      "skill_built_in_suit": "m",
       "skill_fate_modifier": null,
       "resist": "Df",
       "tn": null,
       "damage": "2",
       "is_signature": false,
       "soulstone_cost": 0,
-      "costs_and_restrictions": "If this action receives a raise, deal 1 damage to enemy models within (X)2\" of the target.",
+      "costs_and_restrictions": "If this action receives a raise, deal 1 damage to enemy models within (r)2\" of the target.",
       "effects": null,
       "triggers": [
         {
           "name": "Ricochet",
-          "suit": "(m)",
+          "suit": "(r)",
           "timing": "after_succeeding",
           "text": "Deal 1 damage to a different model within 3\" of the target.",
           "is_mandatory": false,
@@ -63,7 +63,7 @@
         },
         {
           "name": "Quick Reflexes",
-          "suit": "(c)",
+          "suit": "(m)",
           "timing": "after_succeeding",
           "text": "Declare this action again, targeting a different model.",
           "is_mandatory": false,
@@ -95,7 +95,7 @@
       "triggers": [
         {
           "name": "Showin' Off",
-          "suit": "(m)",
+          "suit": "(r)",
           "timing": "after_succeeding",
           "text": "This model gains a Fast token.",
           "is_mandatory": false,
@@ -103,7 +103,7 @@
         },
         {
           "name": "Shot to Pieces",
-          "suit": "(c)",
+          "suit": "(m)",
           "timing": "after_succeeding",
           "text": "If the target is an enemy marker, draw a card.",
           "is_mandatory": false,
@@ -116,8 +116,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Six_Armed_Six-Shooter.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

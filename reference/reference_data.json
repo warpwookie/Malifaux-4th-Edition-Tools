@@ -2,10 +2,9 @@
   "_description": "M4E reference data for validation. Sourced from rulebook + parsed cards.",
   "_version": "2.0",
   "_last_updated": "2026-02-14",
-
   "factions": [
     "Guild",
-    "Arcanists", 
+    "Arcanists",
     "Neverborn",
     "Bayou",
     "Outcasts",
@@ -13,7 +12,6 @@
     "Ten Thunders",
     "Explorer's Society"
   ],
-
   "stations": [
     "Master",
     "Henchman",
@@ -21,25 +19,46 @@
     "Totem",
     "Peon"
   ],
-
-  "base_sizes": ["30mm", "40mm", "50mm"],
-
+  "base_sizes": [
+    "30mm",
+    "40mm",
+    "50mm"
+  ],
   "characteristics": {
-    "station_types": ["Master", "Henchman", "Minion", "Totem", "Peon"],
+    "station_types": [
+      "Master",
+      "Henchman",
+      "Minion",
+      "Totem",
+      "Peon"
+    ],
     "common": [
-      "Unique", "Living", "Undead", "Construct", "Beast",
-      "Versatile", "Loyal", "Effigy"
+      "Unique",
+      "Living",
+      "Undead",
+      "Construct",
+      "Beast",
+      "Versatile",
+      "Loyal",
+      "Effigy"
     ],
     "_note": "This list is not exhaustive. New characteristics may appear on unseen cards."
   },
-
   "action_types": {
-    "attack": ["melee", "missile", "magic", "variable"],
+    "attack": [
+      "melee",
+      "missile",
+      "magic",
+      "variable"
+    ],
     "tactical": null
   },
-
-  "resist_stats": ["Df", "Wp", "Sz", "Sp"],
-
+  "resist_stats": [
+    "Df",
+    "Wp",
+    "Sz",
+    "Sp"
+  ],
   "trigger_timings": [
     "when_resolving",
     "after_succeeding",
@@ -48,51 +67,130 @@
     "when_declaring",
     "after_resolving"
   ],
-
-  "defensive_types": ["fortitude", "warding", "unusual_defense"],
-
+  "defensive_types": [
+    "fortitude",
+    "warding",
+    "unusual_defense"
+  ],
   "suits": {
     "r": "Ram",
     "m": "Mask",
     "t": "Tome",
     "c": "Crow"
   },
-
   "tokens": {
     "basic": {
-      "Adversary":  {"type": "debuff",  "timing": "end_phase",      "cancels": null},
-      "Bolstered":  {"type": "buff",    "timing": "end_phase",      "cancels": null},
-      "Burning":    {"type": "debuff",  "timing": "end_phase",      "cancels": null,  "note": "deals damage equal to value, then reduces by 1"},
-      "Craven":     {"type": "debuff",  "timing": "end_activation", "cancels": null},
-      "Distracted": {"type": "debuff",  "timing": "end_activation", "cancels": null},
-      "Fast":       {"type": "buff",    "timing": "end_activation", "cancels": "Slow"},
-      "Focused":    {"type": "buff",    "timing": "on_use",         "cancels": null},
-      "Hastened":   {"type": "buff",    "timing": "end_activation", "cancels": null},
-      "Impact":     {"type": "buff",    "timing": "on_use",         "cancels": null},
-      "Injured":    {"type": "debuff",  "timing": "end_phase",      "cancels": null},
-      "Poison":     {"type": "debuff",  "timing": "never",          "cancels": null,  "note": "deals damage equal to value, then reduces by 1; does NOT self-remove"},
-      "Shielded":   {"type": "buff",    "timing": "on_use",         "cancels": null,  "note": "prevents damage"},
-      "Slow":       {"type": "debuff",  "timing": "end_activation", "cancels": "Fast"},
-      "Staggered":  {"type": "debuff",  "timing": "end_activation", "cancels": null},
-      "Stunned":    {"type": "debuff",  "timing": "end_activation", "cancels": null},
-      "Summon":     {"type": "penalty", "timing": "permanent",      "cancels": null}
+      "Adversary": {
+        "type": "debuff",
+        "timing": "end_phase",
+        "cancels": null
+      },
+      "Bolstered": {
+        "type": "buff",
+        "timing": "end_phase",
+        "cancels": null
+      },
+      "Burning": {
+        "type": "debuff",
+        "timing": "end_phase",
+        "cancels": null,
+        "note": "deals damage equal to value, then reduces by 1"
+      },
+      "Craven": {
+        "type": "debuff",
+        "timing": "end_activation",
+        "cancels": null
+      },
+      "Distracted": {
+        "type": "debuff",
+        "timing": "end_activation",
+        "cancels": null
+      },
+      "Fast": {
+        "type": "buff",
+        "timing": "end_activation",
+        "cancels": "Slow"
+      },
+      "Focused": {
+        "type": "buff",
+        "timing": "on_use",
+        "cancels": null
+      },
+      "Hastened": {
+        "type": "buff",
+        "timing": "end_activation",
+        "cancels": null
+      },
+      "Impact": {
+        "type": "buff",
+        "timing": "on_use",
+        "cancels": null
+      },
+      "Injured": {
+        "type": "debuff",
+        "timing": "end_phase",
+        "cancels": null
+      },
+      "Poison": {
+        "type": "debuff",
+        "timing": "never",
+        "cancels": null,
+        "note": "deals damage equal to value, then reduces by 1; does NOT self-remove"
+      },
+      "Shielded": {
+        "type": "buff",
+        "timing": "on_use",
+        "cancels": null,
+        "note": "prevents damage"
+      },
+      "Slow": {
+        "type": "debuff",
+        "timing": "end_activation",
+        "cancels": "Fast"
+      },
+      "Staggered": {
+        "type": "debuff",
+        "timing": "end_activation",
+        "cancels": null
+      },
+      "Stunned": {
+        "type": "debuff",
+        "timing": "end_activation",
+        "cancels": null
+      },
+      "Summon": {
+        "type": "penalty",
+        "timing": "permanent",
+        "cancels": null
+      }
     },
     "cancellation_pairs": [
-      ["Fast", "Slow"],
-      ["Focused", "Stunned"]
+      [
+        "Fast",
+        "Slow"
+      ],
+      [
+        "Focused",
+        "Stunned"
+      ]
     ],
     "_note": "Crew-specific tokens (e.g., Drift, Aura) are defined on crew cards and not listed here."
   },
-
   "icon_map": {
     "suits": {
-      "r": "(r)", "m": "(m)", "t": "(t)", "c": "(c)"
+      "r": "(r)",
+      "m": "(m)",
+      "t": "(t)",
+      "c": "(c)"
     },
     "action_types": {
-      "melee": "(melee)", "missile": "(gun)", "magic": "(magic)"
+      "melee": "(melee)",
+      "missile": "(gun)",
+      "magic": "(magic)"
     },
     "range_prefixes": {
-      "pulse": "(pulse)", "aura": "(aura)"
+      "pulse": "(pulse)",
+      "aura": "(aura)"
     },
     "other": {
       "soulstone": "(soulstone)",
@@ -102,7 +200,6 @@
       "warding": "(warding)"
     }
   },
-
   "validation_rules": {
     "hard_rules": [
       "Every attack_action MUST have resist != null",
@@ -121,7 +218,7 @@
       "soulstone_cost > 0 should have soulstone icon prefix on card"
     ],
     "hallucination_patterns": [
-      "WP/SP swap â€” bottom-left vs top-right confusion",
+      "WP/SP swap \u00e2\u20ac\u201d bottom-left vs top-right confusion",
       "Health count off-by-one on high-HP models (14+)",
       "Missing last trigger on an action",
       "Stat copy errors between titles of the same model",
@@ -130,7 +227,6 @@
       "Fabricating abilities from similar models or older editions"
     ]
   },
-
   "pdf_filename_patterns": {
     "stat_card": "M4E_Stat_{Faction}_{Keyword}_{ModelName}.pdf",
     "crew_card": "M4E_Crew_{Keyword}_{MasterName}_{Title}.pdf",

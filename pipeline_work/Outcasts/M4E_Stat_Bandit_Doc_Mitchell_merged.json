@@ -1,6 +1,6 @@
 {
   "card_type": "stat_card",
-  "name": "DOC MITCHELL",
+  "name": "Doc Mitchell",
   "title": null,
   "faction": "Outcasts",
   "station": "Totem",
@@ -81,7 +81,7 @@
       "tn": 3,
       "damage": null,
       "is_signature": true,
-      "soulstone_cost": 0,
+      "soulstone_cost": 1,
       "costs_and_restrictions": null,
       "effects": "Remove up to one token from the target and the target heals 2. The target heals an additional 2 for each raise this action receives.",
       "triggers": [
@@ -108,8 +108,5 @@
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Doc_Mitchell.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

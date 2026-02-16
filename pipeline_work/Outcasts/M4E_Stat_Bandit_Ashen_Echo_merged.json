@@ -34,7 +34,7 @@
     {
       "name": "The Good, The Bad...",
       "defensive_type": null,
-      "text": "When this model activates, deal 1 damage to all enemy models within (missile)6\" that have a Staggered token."
+      "text": "When this model activates, deal 1 damage to all enemy models within (m)6\" that have a Staggered token."
     }
   ],
   "actions": [
@@ -85,15 +85,12 @@
       "is_signature": true,
       "soulstone_cost": 0,
       "costs_and_restrictions": null,
-      "effects": "Move the target up to 4\". Target gains this model's choice of a Staggered or Burning token. If this attack receives a raise, models within (X)2\" of the target gain the same token.",
+      "effects": "Move the target up to 4\". Target gains this model's choice of a Staggered or Burning token. If this attack receives a raise, models within (t)2\" of the target gain the same token.",
       "triggers": [],
       "category": "attack_actions"
     }
   ],
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Outcasts\\Bandit\\M4E_Stat_Bandit_Ashen_Echo.pdf",
   "merge_warnings": [],
-  "extraction_notes": [],
-  "factions": [
-    "Outcasts"
-  ]
+  "extraction_notes": []
 }

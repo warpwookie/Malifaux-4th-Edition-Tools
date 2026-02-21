@@ -74,3 +74,4 @@ Respond with ONLY this JSON, no other text:
 4. If you cannot read a value clearly, put it in extraction_notes rather than guessing.
 5. model_limit: Parse from "Minion (3)" = 3, "Peon (7)" = 7. "Unique" = 1. No number = 1.
 6. Preserve exact spelling of all names, abilities, and keywords.
+7. The totem name is NOT a keyword. Do NOT include the totem value in the keywords array. The totem field (bottom-right near artwork) and keywords (after the diamond bullet) are completely separate data. This is a known error pattern.

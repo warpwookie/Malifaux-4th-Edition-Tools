@@ -400,9 +400,7 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Hunger's Reach",
     "totem": "Amanjaku",
-    "keywords": [
-      "Amanjaku"
-    ],
+    "keywords": [],
     "characteristics": [
       "Living",
       "Master",
@@ -542,7 +540,6 @@
     "crew_card_name": "Entangled Spirits",
     "totem": "Ama No Zako",
     "keywords": [
-      "Ama No Zako",
       "Entangled Spirits"
     ],
     "characteristics": [
@@ -4410,7 +4407,6 @@
     "crew_card_name": "Legendary Figures",
     "totem": "Paper Tiger",
     "keywords": [
-      "Paper Tiger",
       "Red Library"
     ],
     "characteristics": [
@@ -4898,7 +4894,6 @@
     "crew_card_name": "Close Oversight",
     "totem": "Forgeling",
     "keywords": [
-      "Forgeling",
       "Loyalty Revitalized"
     ],
     "characteristics": [
@@ -5225,7 +5220,7 @@
     ],
     "attack_actions": [
       {
-        "name": "Tekk\u014d-Kagi",
+        "name": "Tekkō-Kagi",
         "category": "attack_actions",
         "action_type": "melee",
         "range": "(melee)1\"",
@@ -5467,9 +5462,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Smoke and Shadows",
     "totem": "Shang",
-    "keywords": [
-      "Shang"
-    ],
+    "keywords": [],
     "characteristics": [
       "Last Blossom",
       "Living",
@@ -6015,7 +6008,7 @@
     ]
   },
   {
-    "name": "M\u1eadp Map",
+    "name": "Mập Map",
     "faction": "Ten Thunders",
     "station": "Henchman",
     "model_limit": 1,
@@ -6734,7 +6727,7 @@
         "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
       },
       {
-        "name": "\u054d Threatening Demeanor",
+        "name": "Ս Threatening Demeanor",
         "defensive_type": "unusual_defense",
         "text": "Once per activation. This model may reduce damage dealt to it by 1."
       }
@@ -7492,9 +7485,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Scorch the Heavens",
     "totem": "Aspiring Student",
-    "keywords": [
-      "Aspiring Student"
-    ],
+    "keywords": [],
     "characteristics": [
       "Living",
       "Master",
@@ -7623,9 +7614,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Repeat Until Perfect",
     "totem": "Mu Long",
-    "keywords": [
-      "Mu Long"
-    ],
+    "keywords": [],
     "characteristics": [
       "Living",
       "Master",
@@ -8160,7 +8149,7 @@
     ]
   },
   {
-    "name": "Story of Th\u00e1nh Giong",
+    "name": "Story of Thánh Giong",
     "faction": "Ten Thunders",
     "station": "Henchman",
     "model_limit": 1,

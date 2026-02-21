@@ -97,8 +97,12 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         model_id = c.lastrowid
         status = "inserted"
     
-    # Keywords
+    # Keywords (filter out totem name — known ingestion error where vision AI
+    # puts the totem name into the keywords array)
+    totem_name = card.get("totem")
     for kw in card.get("keywords", []):
+        if totem_name and kw == totem_name:
+            continue
         c.execute("INSERT OR IGNORE INTO model_keywords VALUES (?,?)", (model_id, kw))
     
     # Characteristics

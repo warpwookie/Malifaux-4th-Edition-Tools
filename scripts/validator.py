@@ -177,7 +177,15 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
                     f"(matched {m.group(1)}({expected}) characteristic)")
                 model_limit = expected
     
-    # 6. Master requirements
+    # 6. Totem name appearing as keyword (known ingestion error)
+    totem_val = card.get("totem")
+    keywords = card.get("keywords", [])
+    if totem_val and totem_val in keywords:
+        result.hard_violations.append(
+            f"Totem name '{totem_val}' found in keywords — "
+            f"totem is not a keyword, remove it from keywords list")
+
+    # 7. Master requirements
     station = card.get("station")
     if station == "Master":
         if not card.get("crew_card_name"):

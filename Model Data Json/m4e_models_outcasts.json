@@ -308,7 +308,7 @@
     ]
   },
   {
-    "name": "Arik Sch\u00f6ttemer",
+    "name": "Arik Schöttemer",
     "faction": "Outcasts",
     "station": "Henchman",
     "model_limit": 1,
@@ -7176,9 +7176,7 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "RUST-EATEN FATE",
     "totem": "Soul Battery",
-    "keywords": [
-      "Soul Battery"
-    ],
+    "keywords": [],
     "characteristics": [
       "Amalgam",
       "Construct",
@@ -10878,7 +10876,7 @@
         "text": "When this model uses an Impact token, reduce the raise value of that action to 3."
       },
       {
-        "name": "S\u00f6ldnerkapit\u00e4n",
+        "name": "Söldnerkapitän",
         "text": "After this model receives one or more raises, it may attach an Equipment upgrade to an ally within 6\" after resolving the current action."
       }
     ],

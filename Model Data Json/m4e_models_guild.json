@@ -142,7 +142,7 @@
       },
       {
         "name": "Ruthless",
-        "text": "This model ignores the \u03a8 abilities of other models."
+        "text": "This model ignores the Ψ abilities of other models."
       }
     ],
     "attack_actions": [
@@ -410,7 +410,7 @@
         ]
       },
       {
-        "name": "Expos\u00e9",
+        "name": "Exposé",
         "category": "attack_actions",
         "action_type": "magic",
         "range": "(magic)8\"",
@@ -1599,7 +1599,6 @@
     "crew_card_name": "Ultimate Creation",
     "totem": "Mechanical Attendant",
     "keywords": [
-      "Mechanical Attendant",
       "Tempered Steel"
     ],
     "characteristics": [
@@ -2078,7 +2077,6 @@
     "crew_card_name": "Mobilize the Watch",
     "totem": "Disease Containment Unit",
     "keywords": [
-      "Disease Containment Unit",
       "Excessive Violence"
     ],
     "characteristics": [
@@ -2678,7 +2676,7 @@
     ]
   },
   {
-    "name": "Domador de Cad\u00e1veres",
+    "name": "Domador de Cadáveres",
     "faction": "Guild",
     "station": "Minion",
     "model_limit": 1,
@@ -6059,9 +6057,7 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Courtroom Drama",
     "totem": "The Scribe",
-    "keywords": [
-      "The Scribe"
-    ],
+    "keywords": [],
     "characteristics": [
       "Elite",
       "Living",
@@ -6794,7 +6790,7 @@
     ],
     "attack_actions": [
       {
-        "name": "Expos\u00e9",
+        "name": "Exposé",
         "category": "attack_actions",
         "action_type": "magic",
         "range": "(magic)8\"",
@@ -7216,7 +7212,7 @@
     ]
   },
   {
-    "name": "Ni\u00f1o Ortega",
+    "name": "Niño Ortega",
     "faction": "Guild",
     "model_limit": 1,
     "cost": "7",
@@ -7318,7 +7314,7 @@
     ]
   },
   {
-    "name": "Pap\u00e1 Loco",
+    "name": "Papá Loco",
     "faction": "Guild",
     "station": "Totem",
     "model_limit": 1,
@@ -8781,7 +8777,7 @@
         "text": "During the end phase, this model may move up to 4\"."
       },
       {
-        "name": "Demise (\"\u00bfEso es todo?\")",
+        "name": "Demise (\"¿Eso es todo?\")",
         "text": "Once per turn. When this model is killed, it may discard a card. If it does so, it heals 4 and gains a Familia token."
       },
       {
@@ -8860,7 +8856,7 @@
     ],
     "tactical_actions": [
       {
-        "name": "\u00a1Reacciona!",
+        "name": "¡Reacciona!",
         "category": "tactical_actions",
         "range": "(aura)12\"",
         "skill_value": 0,

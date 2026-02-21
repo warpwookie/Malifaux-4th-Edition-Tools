@@ -6057,7 +6057,9 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Courtroom Drama",
     "totem": "The Scribe",
-    "keywords": [],
+    "keywords": [
+      "Elite"
+    ],
     "characteristics": [
       "Elite",
       "Living",

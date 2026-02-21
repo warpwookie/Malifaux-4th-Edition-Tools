@@ -7176,7 +7176,9 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "RUST-EATEN FATE",
     "totem": "Soul Battery",
-    "keywords": [],
+    "keywords": [
+      "Amalgam"
+    ],
     "characteristics": [
       "Amalgam",
       "Construct",

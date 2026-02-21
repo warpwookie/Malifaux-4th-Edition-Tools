@@ -8681,7 +8681,9 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "The Formless Mantra",
     "totem": "Banasuva",
-    "keywords": [],
+    "keywords": [
+      "Academic"
+    ],
     "characteristics": [
       "Academic",
       "Living",

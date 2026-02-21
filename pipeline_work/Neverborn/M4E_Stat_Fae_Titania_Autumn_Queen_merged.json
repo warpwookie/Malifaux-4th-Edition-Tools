@@ -23,7 +23,9 @@
     "Undead",
     "Fae"
   ],
-  "keywords": [],
+  "keywords": [
+    "Fae"
+  ],
   "abilities": [
     {
       "name": "Flight",

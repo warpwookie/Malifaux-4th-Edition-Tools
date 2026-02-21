@@ -400,7 +400,9 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Hunger's Reach",
     "totem": "Amanjaku",
-    "keywords": [],
+    "keywords": [
+      "Oni"
+    ],
     "characteristics": [
       "Living",
       "Master",
@@ -5462,7 +5464,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Smoke and Shadows",
     "totem": "Shang",
-    "keywords": [],
+    "keywords": [
+      "Last Blossom"
+    ],
     "characteristics": [
       "Last Blossom",
       "Living",
@@ -7485,7 +7489,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Scorch the Heavens",
     "totem": "Aspiring Student",
-    "keywords": [],
+    "keywords": [
+      "Monk"
+    ],
     "characteristics": [
       "Living",
       "Master",
@@ -7614,7 +7620,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Repeat Until Perfect",
     "totem": "Mu Long",
-    "keywords": [],
+    "keywords": [
+      "Monk"
+    ],
     "characteristics": [
       "Living",
       "Master",

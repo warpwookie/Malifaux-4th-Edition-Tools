@@ -6059,7 +6059,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Antique Dealer",
     "totem": "Luna",
-    "keywords": [],
+    "keywords": [
+      "Wastrel"
+    ],
     "characteristics": [
       "Living",
       "Master",

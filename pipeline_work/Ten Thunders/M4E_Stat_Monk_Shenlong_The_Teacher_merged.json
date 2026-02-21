@@ -23,7 +23,9 @@
     "Living",
     "Monk"
   ],
-  "keywords": [],
+  "keywords": [
+    "Monk"
+  ],
   "abilities": [
     {
       "name": "Expert Educator",

@@ -23,7 +23,9 @@
     "Living",
     "Returned"
   ],
-  "keywords": [],
+  "keywords": [
+    "Returned"
+  ],
   "abilities": [
     {
       "name": "Final Preparations",

@@ -23,7 +23,9 @@
     "Living",
     "Academic"
   ],
-  "keywords": [],
+  "keywords": [
+    "Academic"
+  ],
   "abilities": [
     {
       "name": "Aegis",

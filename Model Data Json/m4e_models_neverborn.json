@@ -4307,7 +4307,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Clouded Mind",
     "totem": "Marathine",
-    "keywords": [],
+    "keywords": [
+      "Returned"
+    ],
     "characteristics": [
       "Living",
       "Master",
@@ -5652,7 +5654,9 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Guided Evolution",
     "totem": "Jackalope",
-    "keywords": [],
+    "keywords": [
+      "Chimera"
+    ],
     "characteristics": [
       "Chimera",
       "Living",
@@ -6445,7 +6449,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Teach Them Fear",
     "totem": "Blood Hunter",
-    "keywords": [],
+    "keywords": [
+      "Brood"
+    ],
     "characteristics": [
       "Brood",
       "Living",
@@ -7851,7 +7857,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Coronation",
     "totem": "Abyssal Anchor",
-    "keywords": [],
+    "keywords": [
+      "Banished"
+    ],
     "characteristics": [
       "Banished",
       "Living",
@@ -9425,7 +9433,9 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Stifling Thicket",
     "totem": "Erymanthian Boar",
-    "keywords": [],
+    "keywords": [
+      "Fae"
+    ],
     "characteristics": [
       "Fae",
       "Master",

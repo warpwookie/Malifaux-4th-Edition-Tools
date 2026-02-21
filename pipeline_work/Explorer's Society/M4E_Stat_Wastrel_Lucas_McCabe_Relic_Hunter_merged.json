@@ -23,7 +23,9 @@
     "Living",
     "Wastrel"
   ],
-  "keywords": [],
+  "keywords": [
+    "Wastrel"
+  ],
   "abilities": [
     {
       "name": "Cumbersome",

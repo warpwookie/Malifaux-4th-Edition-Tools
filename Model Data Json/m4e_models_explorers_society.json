@@ -860,7 +860,7 @@
       },
       {
         "name": "Nimble",
-        "text": "This model may treat the Walk action as a \u219f action."
+        "text": "This model may treat the Walk action as a ↟ action."
       }
     ],
     "attack_actions": [
@@ -4054,7 +4054,7 @@
         "costs_and_restrictions": "This model may declare the Prepare action. Then, apply one of the following effects:",
         "triggers": [
           {
-            "name": "P\u014dwhiri",
+            "name": "Pōwhiri",
             "suit": "(r)",
             "timing": "after_succeeding",
             "text": "Friendly models within 3\" heal 1.",
@@ -6059,9 +6059,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Antique Dealer",
     "totem": "Luna",
-    "keywords": [
-      "Luna"
-    ],
+    "keywords": [],
     "characteristics": [
       "Living",
       "Master",
@@ -10347,8 +10345,7 @@
     "crew_card_name": "Follow Tradition",
     "totem": "Oro Boro",
     "keywords": [
-      "Bygone",
-      "Oro Boro"
+      "Bygone"
     ],
     "characteristics": [
       "Construct",

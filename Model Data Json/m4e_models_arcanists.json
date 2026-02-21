@@ -4139,7 +4139,7 @@
       {
         "name": "U Incorporeal",
         "defensive_type": "unusual_defense",
-        "text": "Reduce damage dealt to this model by 1. Damage from \u271d actions may not be reduced this way."
+        "text": "Reduce damage dealt to this model by 1. Damage from ✝ actions may not be reduced this way."
       }
     ],
     "attack_actions": [
@@ -8681,9 +8681,7 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "The Formless Mantra",
     "totem": "Banasuva",
-    "keywords": [
-      "Banasuva"
-    ],
+    "keywords": [],
     "characteristics": [
       "Academic",
       "Living",
@@ -10110,8 +10108,7 @@
     "crew_card_name": "Union Dues",
     "totem": "Mouse",
     "keywords": [
-      "M&SU",
-      "Mouse"
+      "M&SU"
     ],
     "characteristics": [
       "Living",

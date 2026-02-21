@@ -818,7 +818,7 @@
     ]
   },
   {
-    "name": "B\u00eate Noire",
+    "name": "Bête Noire",
     "faction": "Resurrectionists",
     "model_limit": 1,
     "cost": "8",
@@ -2138,7 +2138,6 @@
     "crew_card_name": "Stolen Lab Equipment",
     "totem": "Corpse Curator",
     "keywords": [
-      "Corpse Curator",
       "Stolen Lab Equipment"
     ],
     "characteristics": [
@@ -2289,8 +2288,7 @@
     "crew_card_name": "Stolen Lab Equipment",
     "totem": "Zombie Chihuahua",
     "keywords": [
-      "Mortuary Access",
-      "Zombie Chihuahua"
+      "Mortuary Access"
     ],
     "characteristics": [
       "Experimental",
@@ -5734,7 +5732,7 @@
     ],
     "abilities": [
       {
-        "name": "Demise (Worst Pi\u00f1ata Ever)",
+        "name": "Demise (Worst Piñata Ever)",
         "text": "After this model is killed, enemy models and other Little Gassers within (r)2\" are dealt 1 damage and gain a Poison token."
       },
       {
@@ -6200,7 +6198,6 @@
     "crew_card_name": "Parade of the Dead",
     "totem": "Noxious Nephilim",
     "keywords": [
-      "Noxious Nephilim",
       "Parade of the Dead"
     ],
     "characteristics": [
@@ -8484,8 +8481,7 @@
     "crew_card_name": "Flickering Grasp",
     "totem": "Temperance",
     "keywords": [
-      "Flickering Grasp",
-      "Temperance"
+      "Flickering Grasp"
     ],
     "characteristics": [
       "Living",
@@ -11065,8 +11061,7 @@
     "crew_card_name": "Guardian Spirit",
     "totem": "Soul Porter",
     "keywords": [
-      "Guardian Spirit",
-      "Soul Porter"
+      "Guardian Spirit"
     ],
     "characteristics": [
       "Ancestor",

@@ -2410,7 +2410,7 @@
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "For each raise this action receives, choose and apply one of the following effects in an order of your choosing (max 3):\n\"Where Am I?!\": Place the target into base contact with this model.\n\"Get Away!\": Deal 1 damage to enemies within (\u2020)2\" of the target.\n\"I'm a Bird...\": Place the target within 2\" of itself.",
+        "effects": "For each raise this action receives, choose and apply one of the following effects in an order of your choosing (max 3):\n\"Where Am I?!\": Place the target into base contact with this model.\n\"Get Away!\": Deal 1 damage to enemies within (†)2\" of the target.\n\"I'm a Bird...\": Place the target within 2\" of itself.",
         "costs_and_restrictions": "This model chooses whether this action is resisted by Df or Wp."
       }
     ],
@@ -2882,8 +2882,7 @@
     "crew_card_name": "Frostbitten Prophecy",
     "totem": "Primordial Magic",
     "keywords": [
-      "Frostbitten Prophecy",
-      "Primordial Magic"
+      "Frostbitten Prophecy"
     ],
     "characteristics": [
       "Living",
@@ -4308,9 +4307,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Clouded Mind",
     "totem": "Marathine",
-    "keywords": [
-      "Marathine"
-    ],
+    "keywords": [],
     "characteristics": [
       "Living",
       "Master",
@@ -5523,8 +5520,7 @@
     "crew_card_name": "Guided Evolution",
     "totem": "Razorspine Rattler",
     "keywords": [
-      "Adaptive Evolution",
-      "Razorspine Rattler"
+      "Adaptive Evolution"
     ],
     "characteristics": [
       "Beast",
@@ -5656,9 +5652,7 @@
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Guided Evolution",
     "totem": "Jackalope",
-    "keywords": [
-      "Jackalope"
-    ],
+    "keywords": [],
     "characteristics": [
       "Chimera",
       "Living",
@@ -6451,9 +6445,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Teach Them Fear",
     "totem": "Blood Hunter",
-    "keywords": [
-      "Blood Hunter"
-    ],
+    "keywords": [],
     "characteristics": [
       "Brood",
       "Living",
@@ -7859,9 +7851,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Coronation",
     "totem": "Abyssal Anchor",
-    "keywords": [
-      "Abyssal Anchor"
-    ],
+    "keywords": [],
     "characteristics": [
       "Banished",
       "Living",
@@ -8004,8 +7994,7 @@
     "crew_card_name": "Coronation",
     "totem": "Urchin",
     "keywords": [
-      "Rising Tide",
-      "Urchin"
+      "Rising Tide"
     ],
     "characteristics": [
       "Banished",
@@ -9093,7 +9082,6 @@
     "crew_card_name": "Lucid Dreaming",
     "totem": "Lord Chompy Bits",
     "keywords": [
-      "Lord Chompy Bits",
       "Lurking Lullaby",
       "Oneirophobia"
     ],
@@ -9437,9 +9425,7 @@
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Stifling Thicket",
     "totem": "Erymanthian Boar",
-    "keywords": [
-      "Erymanthian Boar"
-    ],
+    "keywords": [],
     "characteristics": [
       "Fae",
       "Master",

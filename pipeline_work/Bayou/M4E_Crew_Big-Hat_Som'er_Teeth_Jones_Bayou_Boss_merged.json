@@ -1,0 +1,56 @@
+{
+  "card_type": "crew_card",
+  "name": "Bigger Hat Than You",
+  "associated_master": "Som'er Teeth Jones",
+  "associated_title": "Bayou Boss",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Big Hat models",
+      "abilities": [
+        {
+          "name": "Behold My Big Hat!",
+          "defensive_type": null,
+          "text": "When this model ends its activation, it may discard a card or drain a (soulstone) to have an enemy within 6\" gain a Staggered token."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [
+    {
+      "granted_to": "Friendly unique Big Hat models",
+      "actions": [
+        {
+          "name": "(soulstone) Disappointed Backhand",
+          "category": "tactical_actions",
+          "action_type": null,
+          "range": "4\"",
+          "skill_value": null,
+          "skill_built_in_suit": null,
+          "resist": null,
+          "tn": null,
+          "damage": null,
+          "is_signature": false,
+          "soulstone_cost": 1,
+          "costs_and_restrictions": null,
+          "effects": "Deal 1 damage to target ally. This model moves up to 4\" and gains an Impact token.",
+          "triggers": []
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card shows Som'er Teeth Jones character artwork",
+    "Disappointed Backhand has soulstone cost indicated by icon in action name"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Bayou\\M4E_Crew_Big-Hat_Som'er_Teeth_Jones_Bayou_Boss_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 444,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Big Hat\\M4E_Crew_Big-Hat_Som'er_Teeth_Jones_Bayou_Boss.pdf"
+}

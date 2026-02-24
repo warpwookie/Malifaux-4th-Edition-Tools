@@ -6,11 +6,25 @@
   "description": "This model gains the following triggers on all actions printed on its stat card:",
   "granted_abilities": [],
   "granted_actions": [],
-  "extraction_notes": [
-    "This upgrade grants two triggers to all actions printed on the model's stat card rather than granting new actions or abilities",
-    "Set Free trigger: Discard this upgrade",
-    "Bound and Tied trigger: This trigger must be declared, if able. Immediately, this action fails."
+  "universal_triggers": [
+    {
+      "name": "Set Free",
+      "suit": "(r)",
+      "timing": "after_succeeding",
+      "text": "Discard this upgrade.",
+      "is_mandatory": false,
+      "soulstone_cost": 0
+    },
+    {
+      "name": "Bound and Tied",
+      "suit": "(c)",
+      "timing": "after_succeeding",
+      "text": "This trigger must be declared, if able. Immediately, this action fails.",
+      "is_mandatory": true,
+      "soulstone_cost": 0
+    }
   ],
+  "extraction_notes": [],
   "faction": "Resurrectionists",
   "keyword": "Tormented",
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Upgrade_Tormented_Unjustly_Accused.pdf"

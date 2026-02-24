@@ -118,7 +118,7 @@
     ]
   },
   {
-    "name": "REPAIR BAY",
+    "name": "Repair Bay",
     "associated_master": "Clockwork Queen",
     "associated_title": "Matriarch of the Machine",
     "faction": "Arcanists",
@@ -274,19 +274,125 @@
         "triggers": [
           {
             "name": "Unnatural Reflexes",
-            "suit": "(c)",
+            "suit": "(m)",
             "text": "Declare this action again, targeting a different model, ignoring \"once per\" restrictions.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
           {
             "name": "Vengeful",
-            "suit": "(m)",
+            "suit": "(c)",
             "text": "Target gains an Impact token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Bigger Hat Than You",
+    "associated_master": "Som'er Teeth Jones",
+    "associated_title": "Bayou Boss",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Big Hat models",
+        "name": "Behold My Big Hat!",
+        "text": "When this model ends its activation, it may discard a card or drain a (soulstone) to have an enemy within 6\" gain a Staggered token."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Big Hat models",
+        "name": "(soulstone) Disappointed Backhand",
+        "category": "tactical_actions",
+        "range": "4\"",
+        "is_signature": false,
+        "soulstone_cost": 1,
+        "effects": "Deal 1 damage to target ally. This model moves up to 4\" and gains an Impact token."
+      }
+    ]
+  },
+  {
+    "name": "Brackish Bully",
+    "associated_master": "The Clampetts",
+    "associated_title": "Fisherfolk",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Angler models",
+        "name": "Fishin' Holes",
+        "text": "When this model succeeds in an attack action which deals damage, it may remove a friendly Tide marker within 1\" of itself to deal +1 damage."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Angler models",
+        "name": "Nautical Nonsense",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Make a Tide marker within range.",
+        "triggers": [
+          {
+            "name": "Bestest Boy",
+            "suit": "(t)",
+            "timing": "after",
+            "text": "Summon a Bruce in base contact with the made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "granted_to": "Friendly unique Angler models",
+        "name": "\"Caught a Big 'Un.\"",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Declare an attack drawing range and LoS from the target. If the attack succeeds, draw a card and remove the target.",
+        "costs_and_restrictions": "Target a friendly Tide marker."
+      }
+    ]
+  },
+  {
+    "name": "Carefully Laid Plans",
+    "associated_master": "Mah Tucket",
+    "associated_title": "Metal Magpie",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Tricksy models",
+        "name": "Escape Vectors",
+        "text": "After resolving an enemy attack that targeted this model, this model may discard a card to move up to 4\" and, if this model received a raise in the duel, draw a card."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Tricksy models",
+        "name": "Unnecessary Tinkerin'",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 7,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "The target gains an Injured token."
+      },
+      {
+        "granted_to": "Friendly unique Tricksy models",
+        "name": "It's Sabotage!",
+        "category": "tactical_actions",
+        "range": "(+)1\"",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Target an enemy leader with an Analyzed or Injured token. The opponent must tell you the name of their currently selected scheme.",
+        "costs_and_restrictions": "(t)(t)"
       }
     ]
   },
@@ -408,13 +514,12 @@
       {
         "granted_to": "Friendly Wizz-Bang models",
         "name": "Pick a Card",
-        "defensive_type": "unusual_defense",
-        "text": "(defense) After resolving an attack against this model, it may drain a (t) to flip a card which may not be cheated and apply the following:\n(c) or (m): This model gains a Glowy token and draws a card.\n(r) or (t): The attacker gains an Entranced token. This model makes a Pyrotechnic marker within 3\" of the attacker."
+        "text": "After resolving an attack against this model, it may drain a (t) to flip a card which may not be cheated and apply the following:\n(c) or (m): This model gains a Glowy token and draws a card.\n(r) or (t): The attacker gains an Entranced token. This model makes a Pyrotechnic marker within 3\" of the attacker."
       },
       {
         "granted_to": "Friendly Wizz-Bang models",
         "name": "Fast Cast",
-        "text": "This model's Charge action may generate (+) actions instead of (melee) actions."
+        "text": "This model's Charge action may generate (magic) actions instead of (melee) actions."
       }
     ],
     "keyword_actions": [
@@ -476,7 +581,7 @@
     ]
   },
   {
-    "name": "HIVEMIND",
+    "name": "Hivemind",
     "associated_master": "Nexus",
     "associated_title": "Heart of the Hive",
     "faction": "Bayou",
@@ -506,6 +611,29 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This action may target friendly models. If the target has a Parasite token, increase this action's Skl by +2. Place this model in base contact with the target. Then, place the target in base contact with an ally within 6\" of it."
+      }
+    ]
+  },
+  {
+    "name": "Looted Parts",
+    "associated_master": "Mah Tucket",
+    "associated_title": "Mecha-Meemaw",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Tricksy models",
+        "name": "\"I Saw That\"",
+        "text": "After succeeding in an attack action that received a raise, this model may give the opposing model an Analyzed token."
+      },
+      {
+        "granted_to": "Friendly Tricksy models",
+        "name": "Stolen Blueprints",
+        "text": "This model may declare actions printed on the stat cards of enemy models with an Analyzed token within 6\". After resolving an enemy model's action in this way, remove an Analyzed token from that enemy."
+      },
+      {
+        "granted_to": "Friendly unique Tricksy models",
+        "name": "Power Up",
+        "text": "When this model ends its activation, it may drain a (soulstone) or discard a card to gain a Shielded token and heal 2."
       }
     ]
   },
@@ -552,6 +680,27 @@
     "keyword_actions": [
       {
         "granted_to": "Friendly unique Sooey models and Sooey models with the beast characteristic",
+        "name": "Mad Dash",
+        "category": "tactical_actions",
+        "skill_value": 0,
+        "tn": 2,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to its Sp +2 in a straight line, ignoring other models. Enemy models moved through this way are dealt 1 damage.",
+        "costs_and_restrictions": "Once per activation.",
+        "triggers": [
+          {
+            "name": "Trailing After",
+            "suit": "(c)",
+            "timing": "after",
+            "text": "Summon a Piglet with a Burning token in base contact with an enemy model that suffered damage from this action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "granted_to": "Friendly unique Sooey models and Sooey models with the beast characteristic",
         "name": "(t) Mad Dash",
         "category": "tactical_actions",
         "skill_value": 0,
@@ -566,6 +715,45 @@
             "suit": "(c)",
             "timing": "after",
             "text": "Summon a Piglet with a Burning token in base contact with an enemy model that suffered damage from this action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snatch 'N Run",
+    "associated_master": "Som'er Teeth Jones",
+    "associated_title": "Loot Monger",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Big Hat models",
+        "name": "Bayou Two Card",
+        "text": "Once per activation. During actions this model declared, it may cheat fate with the top card of its fate deck. If it does so, it must declare triggers if able."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Big Hat models",
+        "name": "Seize the Opportunity",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "resist": "-",
+        "tn": 7,
+        "damage": "-",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Target an enemy marker. Place this model in base contact with the target. If the target is a Scheme marker, this model gains an Impact token. Then, remove the target.",
+        "costs_and_restrictions": "Once per activation.",
+        "triggers": [
+          {
+            "name": "Good Haul",
+            "suit": "(c)",
+            "timing": "after",
+            "text": "Draw a card.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -592,7 +780,6 @@
         "category": "tactical_actions",
         "range": "6\"",
         "skill_value": 0,
-        "resist": "-",
         "tn": 5,
         "is_signature": true,
         "soulstone_cost": 0,
@@ -600,7 +787,7 @@
         "triggers": [
           {
             "name": "Swig o' Shine",
-            "suit": "m",
+            "suit": "(t)",
             "timing": "Once per activation",
             "text": "This model heals 3.",
             "is_mandatory": false,
@@ -639,14 +826,55 @@
         "name": "\"Soo-ieeee!\"",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(melee) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
-        "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Summon a Piglet with a Glutted token within 2\" of the target.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ]
+  },
+  {
+    "name": "Tides of Meridion",
+    "associated_master": "The Clampetts",
+    "associated_title": "Bally-Hoo Bucket",
+    "faction": "Bayou",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Angler models",
+        "name": "Submerged",
+        "text": "After succeeding in an attack action targeting an enemy model, this model may remove a Drift token from itself to place the target anywhere within 5\" of its current location in base contact with a Tide marker."
+      },
+      {
+        "granted_to": "Friendly Angler models",
+        "name": "Strong Current",
+        "text": "After this model resolves the Walk or Charge action, it may discard a card or drain a (soulstone) to make a Tide marker within 3\"."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly Angler models",
+        "name": "Oh No! Ogopogo!",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within (missile)2\" of the target must pass a TN 13 Df duel or be dealt 2 damage.",
+        "costs_and_restrictions": "Target a friendly Tide marker.",
+        "triggers": [
+          {
+            "name": "Low Tide",
+            "suit": "(soulstone)",
+            "timing": "after",
+            "text": "Enemies within range of the (missile) gain a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -693,7 +921,7 @@
       {
         "granted_to": "Friendly Wizz-Bang models",
         "name": "Warming Glow",
-        "text": "When this model is dealt damage from a (m), it may drain a (soulstone) to heal that amount instead."
+        "text": "When this model is dealt damage from a (M), it may drain a (soulstone) to heal that amount instead."
       },
       {
         "granted_to": "Friendly Wizz-Bang models",
@@ -713,13 +941,12 @@
         "damage": "-",
         "is_signature": true,
         "soulstone_cost": 0,
-        "effects": "Make a Scheme marker in base contact with the target. Then deal 1 damage to models within (m)2\" of the target. Remove the target.",
+        "effects": "Make a Scheme marker in base contact with the target. Then deal 1 damage to models within (M)2\" of the target. Remove the target.",
         "costs_and_restrictions": "Target a Pyrotechnic marker.",
         "triggers": [
           {
             "name": "Porksplosions",
             "suit": "(soulstone)",
-            "timing": "after",
             "text": "Summon a Flying Piglet within range.",
             "is_mandatory": false,
             "soulstone_cost": 0
@@ -1058,7 +1285,8 @@
       {
         "granted_to": "Friendly unique Guard models and friendly Guard models with a Promoted token",
         "name": "Crack Skulls",
-        "category": "tactical_actions",
+        "category": "attack_actions",
+        "action_type": "melee",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model gains an Injured token and may declare this action again, increasing the Dmg by +2.",
@@ -1897,7 +2125,7 @@
     ]
   },
   {
-    "name": "MISERY BUSINESS",
+    "name": "Misery Business",
     "associated_master": "Pandora",
     "associated_title": "Tyrant-Torn",
     "faction": "Neverborn",
@@ -1922,40 +2150,7 @@
     ]
   },
   {
-    "name": "Nekima, Broodmother",
-    "associated_master": "Nekima",
-    "associated_title": "Broodmother",
-    "faction": "Neverborn",
-    "keyword_abilities": [
-      {
-        "granted_to": "Friendly Brood models",
-        "name": "Black Blood",
-        "text": "After this model suffers damage, enemy models within (melee)1\" gain an Injured token."
-      },
-      {
-        "granted_to": "Friendly Brood models",
-        "name": "Birthright",
-        "text": "While this model has a Glutted token it may declare the Interact action while engaged or if it left engagement with a Walk action. After ignoring either restriction in this way, remove a Glutted token from this model."
-      }
-    ],
-    "keyword_actions": [
-      {
-        "granted_to": "Friendly unique Brood models",
-        "name": "From the Pits",
-        "category": "attack_actions",
-        "action_type": "missile",
-        "range": "(t)8\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "damage": "1",
-        "is_signature": true,
-        "soulstone_cost": 0,
-        "effects": "Summon a Terror Tot into base contact with the target."
-      }
-    ]
-  },
-  {
-    "name": "ONEIROPHOBIA",
+    "name": "Oneirophobia",
     "associated_master": "The Dreamer",
     "associated_title": "Insomniac",
     "faction": "Neverborn",
@@ -1992,32 +2187,35 @@
     ]
   },
   {
-    "name": "On Tour",
-    "associated_master": "Wrath",
-    "associated_title": "Henchman",
+    "name": "Pitborne",
+    "associated_master": "Nekima",
+    "associated_title": "Broodmother",
     "faction": "Neverborn",
     "keyword_abilities": [
       {
-        "granted_to": "Friendly Crossroads models",
-        "name": "Thunderous Performance",
-        "text": "While performing an opposed duel with an enemy that has a Craven token, this model receives +1 to its duel total."
+        "granted_to": "Friendly Brood models",
+        "name": "Black Blood",
+        "text": "After this model suffers damage, enemy models within (melee)1\" gain an Injured token."
       },
       {
-        "granted_to": "Friendly Crossroads models",
-        "name": "Consumed by Sin",
-        "text": "When this model receives a raise in an opposed duel with an enemy model, the enemy model gains a Sin token."
+        "granted_to": "Friendly Brood models",
+        "name": "Birthright",
+        "text": "While this model has a Glutted token it may declare the Interact action while engaged or if it left engagement with a Walk action. After ignoring either restriction in this way, remove a Glutted token from this model."
       }
     ],
     "keyword_actions": [
       {
-        "granted_to": "Friendly Crossroads models",
-        "name": "Destructive Performance",
-        "category": "tactical_actions",
-        "range": "(magic) 14\"",
+        "granted_to": "Friendly unique Brood models",
+        "name": "From the Pits",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(t)8\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "1",
         "is_signature": true,
         "soulstone_cost": 0,
-        "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
-        "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS."
+        "effects": "Summon a Terror Tot into base contact with the target."
       }
     ]
   },
@@ -2107,60 +2305,6 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Target another ally. Place the target in base contact with an engaged enemy within range."
-      }
-    ]
-  },
-  {
-    "name": "Shadow of the Noose",
-    "associated_master": "Parker Barrows",
-    "associated_title": "Dead Man Walking",
-    "faction": "Outcast",
-    "keyword_abilities": [
-      {
-        "granted_to": "Friendly Bandit models",
-        "name": "Run And Gun",
-        "text": "This model's Charge action may generate (missile) actions instead of (melee) actions."
-      }
-    ],
-    "keyword_actions": [
-      {
-        "granted_to": "Friendly unique Bandit models",
-        "name": "Broken Man's Lasso",
-        "category": "attack_actions",
-        "action_type": "missile",
-        "range": "10\"",
-        "skill_value": 6,
-        "resist": "Sp",
-        "tn": 12,
-        "damage": "0",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "costs_and_restrictions": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
-        "triggers": [
-          {
-            "name": "Debt Owed to Darkness",
-            "suit": "(c)",
-            "timing": "When resolving",
-            "text": "move the target up to +4\", ignoring Staggered tokens.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Stumble",
-            "suit": "(t)",
-            "timing": "When resolving",
-            "text": "if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Execute",
-            "suit": "(m)",
-            "text": "The target may either discard a card or drain a (c). If it does neither, it is killed.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
       }
     ]
   },
@@ -2385,7 +2529,36 @@
     ]
   },
   {
-    "name": "RUST-EATEN FATE",
+    "name": "Riders of Fate",
+    "associated_master": "Rusty Alyce",
+    "associated_title": "Rider Remade",
+    "faction": "Outcasts",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly unique Amalgam models",
+        "name": "Ride for the Setting Sun",
+        "text": "When this model activates, it may discard a card or drain a (soulstone) to heal an amount equal to the turn number."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly Amalgam models",
+        "name": "Embrace Fate",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(r) 6\"",
+        "skill_value": 6,
+        "resist": "*",
+        "damage": "X",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "X is equal to the turn number. If this action kills the target, infuse two (soulstone).",
+        "costs_and_restrictions": "Non-peon only. This model chooses whether this action is resisted by (fortitude) or (warding)."
+      }
+    ]
+  },
+  {
+    "name": "Rust-Eaten Fate",
     "associated_master": "Rusty Alyce",
     "associated_title": "Rider Remade",
     "faction": "Outcasts",
@@ -2427,35 +2600,6 @@
     ]
   },
   {
-    "name": "Riders of Fate",
-    "associated_master": "Rusty Alyce",
-    "associated_title": "Rider Remade",
-    "faction": "Outcasts",
-    "keyword_abilities": [
-      {
-        "granted_to": "Friendly unique Amalgam models",
-        "name": "Ride for the Setting Sun",
-        "text": "When this model activates, it may discard a card or drain a (soulstone) to heal an amount equal to the turn number."
-      }
-    ],
-    "keyword_actions": [
-      {
-        "granted_to": "Friendly Amalgam models",
-        "name": "Embrace Fate",
-        "category": "attack_actions",
-        "action_type": "missile",
-        "range": "(r) 6\"",
-        "skill_value": 6,
-        "resist": "*",
-        "damage": "X",
-        "is_signature": true,
-        "soulstone_cost": 0,
-        "effects": "X is equal to the turn number. If this action kills the target, infuse two (soulstone).",
-        "costs_and_restrictions": "Non-peon only. This model chooses whether this action is resisted by (fortitude) or (warding)."
-      }
-    ]
-  },
-  {
     "name": "Salvage & Logistics",
     "associated_master": "Rusty Alyce",
     "associated_title": "Trigger Happy",
@@ -2479,6 +2623,60 @@
         "soulstone_cost": 0,
         "effects": "Remove the target to infuse a (r).",
         "costs_and_restrictions": "Once per activation. Cannot be declared while engaged. Target an enemy Scheme marker or enemy Remains marker."
+      }
+    ]
+  },
+  {
+    "name": "Shadow of the Noose",
+    "associated_master": "Parker Barrows",
+    "associated_title": "Dead Man Walking",
+    "faction": "Outcasts",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Bandit models",
+        "name": "Run And Gun",
+        "text": "This model's Charge action may generate (missile) actions instead of (melee) actions."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Bandit models",
+        "name": "Broken Man's Lasso",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "10\"",
+        "skill_value": 6,
+        "resist": "Sp",
+        "tn": 12,
+        "damage": "0",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
+        "triggers": [
+          {
+            "name": "Debt Owed to Darkness",
+            "suit": "(c)",
+            "timing": "When resolving",
+            "text": "move the target up to +4\", ignoring Staggered tokens.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Stumble",
+            "suit": "(m)",
+            "timing": "When resolving",
+            "text": "if the target has a Staggered token, deal +1 damage to it. Otherwise, it gains a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Execute",
+            "suit": "(t)",
+            "text": "The target may either discard a card or drain a (c). If it does neither, it is killed.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -2589,7 +2787,8 @@
       {
         "granted_to": "Friendly unique Revenant models",
         "name": "Flaming Rush",
-        "category": "tactical_actions",
+        "category": "attack_actions",
+        "action_type": "variable",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make a Pyre marker in base contact with this model or the target, then declare the Charge action, ignoring restrictions.",
@@ -3264,31 +3463,6 @@
     ]
   },
   {
-    "name": "SILENT CONTROL",
-    "associated_master": "Youko Hamasaki",
-    "associated_title": "Silk of the Lotus",
-    "faction": "Ten Thunders",
-    "keyword_abilities": [
-      {
-        "granted_to": "Friendly Qi and Gong models",
-        "name": "Spreading Confusion",
-        "text": "When this model causes an enemy model to gain an Entranced token, increase this crew's leverage bar by 1. Then, this model may look at the top card of its fate deck and may discard it."
-      }
-    ],
-    "keyword_actions": [
-      {
-        "granted_to": "Friendly unique Qi and Gong models",
-        "name": "We Own You",
-        "category": "tactical_actions",
-        "range": "8\"",
-        "is_signature": true,
-        "soulstone_cost": 0,
-        "effects": "Target declares an action, chosen and controlled by this model.",
-        "costs_and_restrictions": "Reduce this crew's leverage bar by 4."
-      }
-    ]
-  },
-  {
     "name": "Scorch the Heavens",
     "associated_master": "Shenlong",
     "associated_title": "Dragon's Breath",
@@ -3358,6 +3532,31 @@
         "soulstone_cost": 0,
         "effects": "Make a Scheme marker within range. If this action receives a raise, draw a card.",
         "costs_and_restrictions": "Once per activation. This action cannot be declared while engaged."
+      }
+    ]
+  },
+  {
+    "name": "Silent Control",
+    "associated_master": "Youko Hamasaki",
+    "associated_title": "Silk of the Lotus",
+    "faction": "Ten Thunders",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Qi and Gong models",
+        "name": "Spreading Confusion",
+        "text": "When this model causes an enemy model to gain an Entranced token, increase this crew's leverage bar by 1. Then, this model may look at the top card of its fate deck and may discard it."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly unique Qi and Gong models",
+        "name": "We Own You",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Target declares an action, chosen and controlled by this model.",
+        "costs_and_restrictions": "Reduce this crew's leverage bar by 4."
       }
     ]
   },
@@ -3926,6 +4125,36 @@
     ]
   },
   {
+    "name": "On Tour",
+    "associated_master": "Wrath",
+    "associated_title": "Master",
+    "faction": "Unknown",
+    "keyword_abilities": [
+      {
+        "granted_to": "Friendly Crossroads models",
+        "name": "Thunderous Performance",
+        "text": "While performing an opposed duel with an enemy that has a Craven token, this model receives +1 to its duel total."
+      },
+      {
+        "granted_to": "Friendly Crossroads models",
+        "name": "Consumed by Sin",
+        "text": "When this model receives a raise in an opposed duel with an enemy model, the enemy model gains a Sin token."
+      }
+    ],
+    "keyword_actions": [
+      {
+        "granted_to": "Friendly Crossroads models",
+        "name": "Destructive Performance",
+        "category": "tactical_actions",
+        "range": "(magic) 14\"",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
+        "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS."
+      }
+    ]
+  },
+  {
     "name": "Rising Tide",
     "associated_master": "Silken King",
     "associated_title": "Long Live",
@@ -4093,7 +4322,8 @@
       {
         "granted_to": "Friendly Chimera models",
         "name": "Chimera Strike",
-        "category": "tactical_actions",
+        "category": "attack_actions",
+        "action_type": "variable",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "When resolving, this action deals +1 damage for every two friendly Mutation upgrades attached to models within 3\" of this model."

@@ -1,0 +1,20 @@
+{
+  "card_type": "upgrade",
+  "name": "Intentional Decay",
+  "upgrade_type": null,
+  "limitations": "Plentiful (2)",
+  "description": "This model gains the following ability:",
+  "granted_abilities": [
+    {
+      "name": "Poor Design",
+      "defensive_type": null,
+      "text": "When this model declares an attack action, increase this card's breaking down bar by one. When this model ends its activation, it may drain any number of (c) to lower this power bar by one for each (c) drained. Then, if the bar is full, this model is killed."
+    }
+  ],
+  "granted_actions": [],
+  "extraction_notes": [
+    "The card shows a 'BREAKING DOWN' bar with 3 circles numbered 1, 2, 3",
+    "The ability references draining Crow suit symbols to lower the power bar"
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Upgrade_Tricksy_Intentional_Decay.pdf"
+}

@@ -549,14 +549,14 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": false,
     "keywords": [
-      "Fungal",
-      "Zombie"
+      "Fungal"
     ],
     "characteristics": [
       "Henchman",
       "Undead",
       "Unique",
-      "Versatile"
+      "Versatile",
+      "Zombie"
     ],
     "abilities": [
       {
@@ -818,7 +818,7 @@
     ]
   },
   {
-    "name": "Bête Noire",
+    "name": "B\u00eate Noire",
     "faction": "Resurrectionists",
     "model_limit": 1,
     "cost": "8",
@@ -2138,7 +2138,7 @@
     "crew_card_name": "Stolen Lab Equipment",
     "totem": "Corpse Curator",
     "keywords": [
-      "Stolen Lab Equipment"
+      "Experimental"
     ],
     "characteristics": [
       "Experimental",
@@ -2288,7 +2288,7 @@
     "crew_card_name": "Stolen Lab Equipment",
     "totem": "Zombie Chihuahua",
     "keywords": [
-      "Mortuary Access"
+      "Experimental"
     ],
     "characteristics": [
       "Experimental",
@@ -4353,7 +4353,7 @@
     "crew_card_name": "Wailing Doom",
     "totem": "Jaakuna Ubume",
     "keywords": [
-      "Wailing Doom"
+      "Tormented"
     ],
     "characteristics": [
       "Master",
@@ -4968,7 +4968,7 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
-    "crew_card_name": "Ikiryo, The Heart that Left",
+    "crew_card_name": "Spiritual Anchor",
     "totem": "Ikiryo",
     "keywords": [
       "Urami"
@@ -5107,10 +5107,10 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
-    "crew_card_name": "Spiritual Anchor",
-    "totem": "Ikiryo, Spirit of Vengeance",
+    "crew_card_name": "Vengeful Spirits",
+    "totem": "Ikiryo",
     "keywords": [
-      "Vengeful Spirits"
+      "Urami"
     ],
     "characteristics": [
       "Living",
@@ -5732,7 +5732,7 @@
     ],
     "abilities": [
       {
-        "name": "Demise (Worst Piñata Ever)",
+        "name": "Demise (Worst Pi\u00f1ata Ever)",
         "text": "After this model is killed, enemy models and other Little Gassers within (r)2\" are dealt 1 damage and gain a Poison token."
       },
       {
@@ -6198,7 +6198,7 @@
     "crew_card_name": "Parade of the Dead",
     "totem": "Noxious Nephilim",
     "keywords": [
-      "Parade of the Dead"
+      "Forgotten"
     ],
     "characteristics": [
       "Forgotten",
@@ -6815,7 +6815,7 @@
     "infuses_soulstone_on_death": false,
     "keywords": [
       "Amalgam",
-      "Transports"
+      "Transmortis"
     ],
     "characteristics": [
       "Construct",
@@ -8346,7 +8346,7 @@
     "base_size": "50mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Fire Shield the Faithful",
-    "totem": "Corpse Candle (2)",
+    "totem": "Corpse Candle",
     "keywords": [
       "Revenant"
     ],
@@ -8481,7 +8481,7 @@
     "crew_card_name": "Flickering Grasp",
     "totem": "Temperance",
     "keywords": [
-      "Flickering Grasp"
+      "Revenant"
     ],
     "characteristics": [
       "Living",
@@ -11061,7 +11061,7 @@
     "crew_card_name": "Guardian Spirit",
     "totem": "Soul Porter",
     "keywords": [
-      "Guardian Spirit"
+      "Ancestor"
     ],
     "characteristics": [
       "Ancestor",
@@ -11197,7 +11197,7 @@
     "crew_card_name": "Guardian Spirit",
     "totem": "Yin",
     "keywords": [
-      "Yin, the Penangalan"
+      "Ancestor"
     ],
     "characteristics": [
       "Ancestor",

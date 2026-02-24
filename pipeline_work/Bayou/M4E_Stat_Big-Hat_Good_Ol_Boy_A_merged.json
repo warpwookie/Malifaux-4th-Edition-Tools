@@ -1,0 +1,125 @@
+{
+  "card_type": "stat_card",
+  "name": "Good Ol' Boy",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 8,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living"
+  ],
+  "keywords": [
+    "Big Hat"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "fortitude",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    },
+    {
+      "name": "Seasoned Looter",
+      "defensive_type": null,
+      "text": "When this model activates, it may remove a marker within 2\" to gain an Impact token."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Broken Bottle",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Frantic Attack",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model deals 1 irreducible damage to itself. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Wildly Flailing",
+          "suit": "(m)(m)",
+          "timing": "after_failing",
+          "text": "After failing, deal 1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Compact Shotgun",
+      "action_type": "missile",
+      "range": "(gun)8\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Deal 1 damage to enemy models within (X)1\" of the target.",
+      "triggers": [
+        {
+          "name": "Ricochet",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Deal 1 damage to a different model within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Rollin Up My Sleeves",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "This model gains either a Bolstered or Impact token.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Big Hat\\M4E_Stat_Big-Hat_Good_Ol_Boy_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

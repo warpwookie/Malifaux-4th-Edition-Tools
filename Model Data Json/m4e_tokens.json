@@ -1,188 +1,381 @@
 [
   {
-    "name": "Abandoned"
+    "name": "Abandoned",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Prevents declaring triggers during duels. Keyword: Redchapel."
   },
   {
-    "name": "Adaptable"
+    "name": "Adaptable",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Removed to modify duel totals. May grant movement after use. Keyword: various Arcanists."
   },
   {
-    "name": "Adversary"
+    "name": "Adversary",
+    "type": "debuff",
+    "timing": "end_phase"
   },
   {
-    "name": "Backtrack"
+    "name": "Analyzed"
   },
   {
-    "name": "Badge"
+    "name": "Backtrack",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Forces model to return to a previous position. Keyword: Bandit/Outcasts."
   },
   {
-    "name": "Balm"
+    "name": "Badge",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants benefits to the holding model. Keyword: Arcanists."
   },
   {
-    "name": "Blight"
+    "name": "Balm",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Consumed to heal. Low River Style: heals additional +1 when resolved. Keyword: Monk."
   },
   {
-    "name": "Blood"
+    "name": "Blight",
+    "type": "damage",
+    "timing": "permanent",
+    "rules_text": "Tracks disease level on Pox bar. Higher levels increase damage and debuffs. Keyword: Plague."
   },
   {
-    "name": "Bolstered"
+    "name": "Blood",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Grants benefits to friendly Family models. Keyword: Family."
   },
   {
-    "name": "Bounty"
+    "name": "Bolstered",
+    "type": "buff",
+    "timing": "end_phase"
   },
   {
-    "name": "Brilliance"
+    "name": "Bounty",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Gained when enemy models interact or attack friendlies. Keyword: Frontier."
   },
   {
-    "name": "Broodling"
+    "name": "Brilliance",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Prevents cheating when attacking models with friendly Brilliance. Keyword: Honeypot."
   },
   {
-    "name": "Burning"
+    "name": "Broodling",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Used by Nephilim models for summoning or growth effects. Keyword: Nephilim."
   },
   {
-    "name": "Chains"
+    "name": "Burning",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "deals damage equal to value, then reduces by 1"
   },
   {
-    "name": "Challenged"
+    "name": "Chains",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Spiritual Chains token. Removed to generate bonus actions. Keyword: Tormented."
   },
   {
-    "name": "Chi"
+    "name": "Challenged",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Restricts target model's action choices. Keyword: Guard."
   },
   {
-    "name": "Convert"
+    "name": "Chi",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Removed to increase duel totals by additional +1. Core resource for Monk keyword. Keyword: Monk."
   },
   {
-    "name": "Craven"
+    "name": "Convert",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Marks target for conversion effects. Keyword: Resurrectionists."
   },
   {
-    "name": "Death"
+    "name": "Craven",
+    "type": "debuff",
+    "timing": "end_activation"
   },
   {
-    "name": "Distracted"
+    "name": "Death",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Curse of the Dancing Forest: enemy attacks targeting this model suffer penalties. Keyword: Explorer's Society."
   },
   {
-    "name": "Ego"
+    "name": "Distracted",
+    "type": "debuff",
+    "timing": "end_activation"
   },
   {
-    "name": "Entranced"
+    "name": "Drift"
   },
   {
-    "name": "Exposed"
+    "name": "Ego",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Fragile Ego token. Forces model to declare attacks. Keyword: Woe."
   },
   {
-    "name": "Familia"
+    "name": "Entranced",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Debuffs enemy models, often forces them toward the Entrancing model. Keyword: Performer."
   },
   {
-    "name": "Fast"
+    "name": "Exposed",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Increases damage taken by the model. Keyword: Arcanists."
   },
   {
-    "name": "Flicker"
+    "name": "Familia",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants coordination bonuses. Ignores range for certain effects. Keyword: Family."
   },
   {
-    "name": "Focused"
+    "name": "Fast",
+    "type": "buff",
+    "timing": "end_activation",
+    "cancels": "Slow"
   },
   {
-    "name": "Fright"
+    "name": "Flicker",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Reduces damage dealt by the model by 1. Keyword: Outcasts."
   },
   {
-    "name": "Glowy"
+    "name": "Focused",
+    "type": "buff",
+    "timing": "on_use"
   },
   {
-    "name": "Glutted"
+    "name": "Fright",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Imposes penalties on the frightened model. Keyword: Nightmare/Neverborn."
   },
   {
-    "name": "Graft"
+    "name": "Glowy",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Increases action limit by 1 (to max 3). Also modifies Wong's attacks. Keyword: Tricksy."
   },
   {
-    "name": "Greedy"
+    "name": "Glutted",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Gained by consuming markers. Used as a resource for various effects. Keyword: Big Hat."
   },
   {
-    "name": "Hastened"
+    "name": "Graft",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants benefits to unique allies. Keyword: Experimental."
   },
   {
-    "name": "Hidden"
+    "name": "Greedy",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Marks a model as greedy, restricting certain actions. Keyword: Resurrectionists."
   },
   {
-    "name": "Hunger"
+    "name": "Hastened",
+    "type": "buff",
+    "timing": "end_activation"
   },
   {
-    "name": "Impact"
+    "name": "Hidden",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants concealment-like benefits during Walk actions. Keyword: Arcanists."
   },
   {
-    "name": "Incurable"
+    "name": "Hunger",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Enemy models with friendly Hunger tokens cannot draw cards within 6\". Keyword: Arcanists."
   },
   {
-    "name": "Injured"
+    "name": "Impact",
+    "type": "buff",
+    "timing": "on_use"
   },
   {
-    "name": "Insight"
+    "name": "Incurable",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Prevents or restricts healing on the affected model. Keyword: various."
   },
   {
-    "name": "Instinct"
+    "name": "Injured",
+    "type": "debuff",
+    "timing": "end_phase"
   },
   {
-    "name": "Life"
+    "name": "Insight",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Consumed when declaring an action to draw a card. Keyword: Academic."
   },
   {
-    "name": "Numb"
+    "name": "Instinct",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Used by Chimera models for transformation and bonus effects. Keyword: Chimera."
   },
   {
-    "name": "Paranoia"
+    "name": "Life",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Enemy attacks targeting this model suffer (-). Gained by forgoing healing. Keyword: Pilgrim."
   },
   {
-    "name": "Parasite"
+    "name": "Numb",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Enemy models with Numb tokens suffer -1 Skl when targeting allies within 6\". Keyword: Woe."
   },
   {
-    "name": "Part"
+    "name": "Paranoia",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Debuffs enemy models, restricting their actions. Keyword: Woe/Neverborn."
   },
   {
-    "name": "Parts"
+    "name": "Parasite",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Allows drawing range and LoS from models with Parasite tokens. Keyword: Explorer's Society."
   },
   {
-    "name": "Perforated"
+    "name": "Part",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Improvised Part token. Used to fuel Amalgam model abilities. Keyword: Amalgam."
   },
   {
-    "name": "Poison"
+    "name": "Perforated",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Marks target for additional effects. Keyword: Journalist/Guild."
   },
   {
-    "name": "Promoted"
+    "name": "Poison",
+    "type": "debuff",
+    "timing": "never",
+    "rules_text": "deals damage equal to value, then reduces by 1; does NOT self-remove"
   },
   {
-    "name": "Reload"
+    "name": "Promoted",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants benefits to the promoted model. Keyword: Guard."
   },
   {
-    "name": "Replica"
+    "name": "Reload",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Consumed to generate attack actions. Allies using Reload tokens get (+). Keyword: Explorer's Society."
   },
   {
-    "name": "Shame"
+    "name": "Replica",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Grants benefits related to Huckster/Wastrel mechanics. Keyword: Wastrel."
   },
   {
-    "name": "Shielded"
+    "name": "Research Bar",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Crew-level bar with 3 slots. Fills from left to right, granting cumulative bonuses. Keyword: Seeker."
   },
   {
-    "name": "Slow"
+    "name": "Shame",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Debuffs the model. Can be removed for damage effects. Keyword: Syndicate."
   },
   {
-    "name": "Solid"
+    "name": "Shielded",
+    "type": "buff",
+    "timing": "on_use",
+    "rules_text": "prevents damage"
   },
   {
-    "name": "Spirit"
+    "name": "Sin",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Marks enemy models for Crossroads/Sin-themed effects. Keyword: Bayou."
   },
   {
-    "name": "Staggered"
+    "name": "Slow",
+    "type": "debuff",
+    "timing": "end_activation",
+    "cancels": "Fast"
   },
   {
-    "name": "Stunned"
+    "name": "Solid",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Frozen Solid token. Restricts the frozen model's movement and actions. Keyword: December."
   },
   {
-    "name": "Summon"
+    "name": "Spirit",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Used by Ancestor/Spirit models for spiritual effects. Keyword: Ancestor."
   },
   {
-    "name": "Suppressed"
+    "name": "Spiritual Chains",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "Removed to generate bonus actions. Used by Tormented crew. Keyword: Tormented."
   },
   {
-    "name": "Surge"
+    "name": "Staggered",
+    "type": "debuff",
+    "timing": "end_activation"
   },
   {
-    "name": "Voyage"
+    "name": "Stunned",
+    "type": "debuff",
+    "timing": "end_activation"
+  },
+  {
+    "name": "Summon",
+    "type": "penalty",
+    "timing": "permanent"
+  },
+  {
+    "name": "Suppressed",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "Restricts the suppressed model's actions. Keyword: Guard."
+  },
+  {
+    "name": "Surge",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "Aetheric Surge token. Reduces all damage dealt to model by 1 (min 0). Keyword: Outcasts."
+  },
+  {
+    "name": "Voyage",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "Gained when friendly Scheme markers are removed. Used for Wayfarer crew effects. Keyword: Wayfarer."
   }
 ]

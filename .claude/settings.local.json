@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(comm:*)",
+      "Bash(find:*)",
+      "Bash(python3:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python:*)",
+      "Bash(sqlite3:*)",
+      "Bash(for file in m4e_upgrades.json)",
+      "Bash(do python3:*)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(__NEW_LINE_ca7a58c54e636964__ echo \"\")",
+      "Bash(__NEW_LINE_f70b606129ef7a8a__ cd \"C:\\\\Users\\\\mbeck\\\\Documents\\\\GitHub\\\\Malifaux-4th-Edition-Tools\")",
+      "Bash(__NEW_LINE_8fcc33902ff3a689__ python3:*)",
+      "Bash(__NEW_LINE_8fc0b1a1d9b6da33__ python3:*)",
+      "Bash(__NEW_LINE_2e06bdd6ddef7ab6__ python3:*)",
+      "Bash(__NEW_LINE_d7d3846bef27b601__ python3:*)",
+      "Bash(__NEW_LINE_44552b33700ecb35__ python3:*)",
+      "Bash(__NEW_LINE_b8139e9bdbeee7e1__ python3:*)",
+      "Bash(xargs:*)",
+      "Bash(powershell.exe -Command \"[Environment]::GetEnvironmentVariable\\(''ANTHROPIC_API_KEY'', ''User''\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "card_type": "stat_card",
+  "name": "BRUCE",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 4,
+  "sz": 1,
+  "sp": 6,
+  "health": 6,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Angler"
+  ],
+  "abilities": [
+    {
+      "name": "Accomplice",
+      "defensive_type": null,
+      "text": "When this model ends its activation, a friendly model within 6\" that has not activated this turn may discard a card to do so."
+    },
+    {
+      "name": "Latch On",
+      "defensive_type": null,
+      "text": "Enemy models in base contact with this model suffer -1 Df."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Trapping Jaws",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": "c",
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains a Staggered token.",
+      "triggers": [
+        {
+          "name": "You're Comin' With Me",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\", then place this model into base contact with it.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Family Pet",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Ally only.",
+      "effects": "Place this model into base contact with the target, then the target heals 3 and gains a Drift token.",
+      "triggers": [
+        {
+          "name": "Gone Fishin'",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Make a Tide marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Resupply",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Angler\\M4E_Stat_Angler_Bruce.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

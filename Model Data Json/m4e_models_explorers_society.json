@@ -860,7 +860,7 @@
       },
       {
         "name": "Nimble",
-        "text": "This model may treat the Walk action as a ↟ action."
+        "text": "This model may treat the Walk action as a \u219f action."
       }
     ],
     "attack_actions": [
@@ -3209,7 +3209,7 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Shadow of Doubt",
-    "totem": "Mr. Mordrake, Bump in the Night",
+    "totem": "Mr. Mordrake",
     "keywords": [
       "DUA"
     ],
@@ -3326,7 +3326,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Smother the Light",
-    "totem": "Mr. Mordrake, Silent Witness",
+    "totem": "Mr. Mordrake",
     "keywords": [
       "DUA"
     ],
@@ -4054,7 +4054,7 @@
         "costs_and_restrictions": "This model may declare the Prepare action. Then, apply one of the following effects:",
         "triggers": [
           {
-            "name": "Pōwhiri",
+            "name": "P\u014dwhiri",
             "suit": "(r)",
             "timing": "after_succeeding",
             "text": "Friendly models within 3\" heal 1.",
@@ -5654,7 +5654,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Hunter's Guile",
-    "totem": "Empyrean Eagle (2)",
+    "totem": "Empyrean Eagle",
     "keywords": [
       "Apex"
     ],
@@ -6189,7 +6189,7 @@
     "crew_card_name": "Cursed Relics",
     "totem": "Cryptologist",
     "keywords": [
-      "Cryptologist (2)"
+      "Wastrel"
     ],
     "characteristics": [
       "Living",
@@ -7427,7 +7427,7 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Hivemind",
-    "totem": "Shambling Nest (2)",
+    "totem": "Shambling Nest",
     "keywords": [
       "Cadmus"
     ],
@@ -8828,7 +8828,8 @@
     "base_size": "50mm",
     "infuses_soulstone_on_death": true,
     "keywords": [
-      "Bygone EVS"
+      "Bygone",
+      "EVS"
     ],
     "characteristics": [
       "Construct",

@@ -1,6 +1,6 @@
 {
   "card_type": "crew_card",
-  "name": "SILENT CONTROL",
+  "name": "Silent Control",
   "associated_master": "Youko Hamasaki",
   "associated_title": "Silk of the Lotus",
   "faction": "Ten Thunders",
@@ -44,7 +44,7 @@
   "extraction_notes": [
     "Crew card shows a leverage bar with positions 1, 2, 3, 4",
     "Spreading Confusion ability applies to non-unique Qi and Gong models based on scope description",
-    "We Own You is a signature action (indicated by \u2021 symbol)",
+    "We Own You is a signature action (indicated by ‡ symbol)",
     "Leverage bar mechanic is central to this crew's gameplay"
   ],
   "_extraction_meta": {

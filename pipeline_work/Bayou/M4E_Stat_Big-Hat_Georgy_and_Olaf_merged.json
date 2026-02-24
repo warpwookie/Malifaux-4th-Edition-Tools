@@ -1,0 +1,143 @@
+{
+  "card_type": "stat_card",
+  "name": "Georgy and Olaf",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "8",
+  "df": 5,
+  "wp": 6,
+  "sz": 3,
+  "sp": 6,
+  "health": 11,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Big Hat"
+  ],
+  "abilities": [
+    {
+      "name": "Borrowed Oomph",
+      "defensive_type": null,
+      "text": "When this model would deal damage to an enemy, it may remove an Impact token from an ally within 6\" to deal +1 damage."
+    },
+    {
+      "name": "Demise (I'm Done With This)",
+      "defensive_type": null,
+      "text": "After this model is killed, it may summon a Bayou Gremlin into base contact with this model."
+    },
+    {
+      "name": "Two Heads is Better",
+      "defensive_type": null,
+      "text": "Once per turn. After this model resolves the Walk action, it may discard a card to declare the Interact action."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Huge Fists",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Fix it!",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "An ally within 2\" of the target heals 2.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Pouncing Strike",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Place this model into base contact with a different enemy model within 5\". Then, declare this action again, targeting that enemy model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Custom Firearm",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Get in There",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "A non-unique friendly model in LoS of the target may move up to 3\" toward the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "\"Who Runs Gremlin-Town?\"",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Other ally only.",
+      "effects": "The target gains a Bolstered or Impact token.",
+      "triggers": [
+        {
+          "name": "\"I DO!\"",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. If the target is a friendly master, deal 1 irreducible damage to this model. The target may declare an action.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Break Stuff",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove a Scheme marker within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Big Hat\\M4E_Stat_Big-Hat_Georgy_and_Olaf.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

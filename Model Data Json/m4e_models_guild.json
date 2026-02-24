@@ -142,7 +142,7 @@
       },
       {
         "name": "Ruthless",
-        "text": "This model ignores the Ψ abilities of other models."
+        "text": "This model ignores the \u03a8 abilities of other models."
       }
     ],
     "attack_actions": [
@@ -410,7 +410,7 @@
         ]
       },
       {
-        "name": "Exposé",
+        "name": "Expos\u00e9",
         "category": "attack_actions",
         "action_type": "magic",
         "range": "(magic)8\"",
@@ -1599,7 +1599,7 @@
     "crew_card_name": "Ultimate Creation",
     "totem": "Mechanical Attendant",
     "keywords": [
-      "Tempered Steel"
+      "Augmented"
     ],
     "characteristics": [
       "Augmented",
@@ -2077,7 +2077,7 @@
     "crew_card_name": "Mobilize the Watch",
     "totem": "Disease Containment Unit",
     "keywords": [
-      "Excessive Violence"
+      "Guard"
     ],
     "characteristics": [
       "Guard",
@@ -2676,7 +2676,7 @@
     ]
   },
   {
-    "name": "Domador de Cadáveres",
+    "name": "Domador de Cad\u00e1veres",
     "faction": "Guild",
     "station": "Minion",
     "model_limit": 1,
@@ -4311,8 +4311,7 @@
     "crew_card_name": "Heavy Salvo",
     "totem": "Walking Cannon",
     "keywords": [
-      "Heavy Salvo",
-      "Walking Cannon (2)"
+      "Cavalier"
     ],
     "characteristics": [
       "Cavalier",
@@ -5907,10 +5906,10 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
-    "crew_card_name": "Jane Doe",
+    "crew_card_name": "Vigilante Justice",
     "totem": "Jane Doe",
     "keywords": [
-      "Vigilante Justice"
+      "Elite"
     ],
     "characteristics": [
       "Elite",
@@ -6792,7 +6791,7 @@
     ],
     "attack_actions": [
       {
-        "name": "Exposé",
+        "name": "Expos\u00e9",
         "category": "attack_actions",
         "action_type": "magic",
         "range": "(magic)8\"",
@@ -7214,7 +7213,7 @@
     ]
   },
   {
-    "name": "Niño Ortega",
+    "name": "Ni\u00f1o Ortega",
     "faction": "Guild",
     "model_limit": 1,
     "cost": "7",
@@ -7316,7 +7315,7 @@
     ]
   },
   {
-    "name": "Papá Loco",
+    "name": "Pap\u00e1 Loco",
     "faction": "Guild",
     "station": "Totem",
     "model_limit": 1,
@@ -7561,7 +7560,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Bound by Blood",
-    "totem": "Papa Loco",
+    "totem": "Pap\u00e1 Loco",
     "keywords": [
       "Family"
     ],
@@ -8779,7 +8778,7 @@
         "text": "During the end phase, this model may move up to 4\"."
       },
       {
-        "name": "Demise (\"¿Eso es todo?\")",
+        "name": "Demise (\"\u00bfEso es todo?\")",
         "text": "Once per turn. When this model is killed, it may discard a card. If it does so, it heals 4 and gains a Familia token."
       },
       {
@@ -8858,7 +8857,7 @@
     ],
     "tactical_actions": [
       {
-        "name": "¡Reacciona!",
+        "name": "\u00a1Reacciona!",
         "category": "tactical_actions",
         "range": "(aura)12\"",
         "skill_value": 0,

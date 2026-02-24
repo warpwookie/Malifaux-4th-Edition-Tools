@@ -1,0 +1,135 @@
+{
+  "card_type": "stat_card",
+  "name": "Rooster Rider",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Minion",
+  "model_limit": 3,
+  "cost": "6",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 7,
+  "health": 7,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (3)",
+    "Living",
+    "Beast"
+  ],
+  "keywords": [
+    "Tricksy"
+  ],
+  "abilities": [
+    {
+      "name": "Don't Turn Your Back",
+      "defensive_type": null,
+      "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+    },
+    {
+      "name": "Frantic",
+      "defensive_type": null,
+      "text": "While this model has half of its maximum health or less, its attack actions receive a (-) to their duels and deal +1 damage."
+    },
+    {
+      "name": "Rocket Bird",
+      "defensive_type": null,
+      "text": "While this model has a Shielded token, it may move through enemy models."
+    }
+  ],
+  "actions": [
+    {
+      "name": "PECKPECKPECK",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "If this action deals damage, this model may declare it again suffering -1 Skl.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Defensive Reflexes",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "This model gains a Shielded token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "AHHH, MY EYE!",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage and move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Trusty Rifle",
+      "action_type": "missile",
+      "range": "(gun)14\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Fowl Play",
+      "range": null,
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This model may declare the Charge action, ignoring engagement.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Poultry in Motion",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "The generated (melee) action receives +2 Skl if it targets a model with an Analyzed token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Stat_Tricksy_Rooster_Rider_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

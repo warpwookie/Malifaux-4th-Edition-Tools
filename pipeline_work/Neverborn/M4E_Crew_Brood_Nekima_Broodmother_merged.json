@@ -1,8 +1,8 @@
 {
   "card_type": "crew_card",
-  "name": "Nekima, Broodmother",
-  "associated_master": "Pitborne",
-  "associated_title": "Nekima, Broodmother",
+  "name": "Pitborne",
+  "associated_master": "Nekima",
+  "associated_title": "Broodmother",
   "faction": "Neverborn",
   "keyword_abilities": [
     {
@@ -49,7 +49,7 @@
   "extraction_notes": [
     "Card grants abilities to 'Friendly Brood models' and an action to 'Friendly unique Brood models'",
     "Black Blood has a specific range indicator (melee)1\" which represents melee range at 1 inch",
-    "From the Pits is a signature action (\u2666 symbol indicates this)",
+    "From the Pits is a signature action (♦ symbol indicates this)",
     "Terror Tot is a model type summoned by the action"
   ],
   "_extraction_meta": {

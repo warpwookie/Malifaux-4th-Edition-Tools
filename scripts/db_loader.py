@@ -352,6 +352,7 @@ def load_upgrade_card(conn: sqlite3.Connection, card: dict, replace: bool = Fals
         for (aid,) in c.fetchall():
             c.execute("DELETE FROM upgrade_action_triggers WHERE action_id=?", (aid,))
         c.execute("DELETE FROM upgrade_actions WHERE upgrade_id=?", (upgrade_id,))
+        c.execute("DELETE FROM upgrade_universal_triggers WHERE upgrade_id=?", (upgrade_id,))
         
         c.execute("""UPDATE upgrades SET upgrade_type=?, keyword=?, faction=?, limitations=?,
             description=?, source_pdf=?, parse_date=?, parse_status=? WHERE id=?""",
@@ -394,6 +395,14 @@ def load_upgrade_card(conn: sqlite3.Connection, card: dict, replace: bool = Fals
                 (action_id, trig["name"], trig.get("suit"), trig.get("timing"),
                  trig["text"], trig.get("is_mandatory", False), trig.get("soulstone_cost", 0)))
     
+    # Universal triggers (apply to all attack actions, e.g., Bestial Form)
+    for trig in card.get("universal_triggers", []):
+        c.execute("""INSERT INTO upgrade_universal_triggers
+            (upgrade_id, name, suit, timing, text, is_mandatory, soulstone_cost)
+            VALUES (?,?,?,?,?,?,?)""",
+            (upgrade_id, trig["name"], trig.get("suit"), trig.get("timing"),
+             trig["text"], trig.get("is_mandatory", False), trig.get("soulstone_cost", 0)))
+
     conn.commit()
     return {"status": status, "upgrade_id": upgrade_id, "name": name}
 

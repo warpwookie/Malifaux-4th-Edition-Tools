@@ -1,0 +1,147 @@
+{
+  "card_type": "stat_card",
+  "name": "MOSSBEARD",
+  "title": null,
+  "faction": "Bayou",
+  "station": null,
+  "model_limit": 1,
+  "cost": "7",
+  "df": 5,
+  "wp": 5,
+  "sz": 1,
+  "sp": 6,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Angler",
+    "Infamous"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+    },
+    {
+      "name": "Peer Through Fog",
+      "defensive_type": null,
+      "text": "This model's actions ignore concealment."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Harrowing Tale",
+      "action_type": "melee",
+      "range": "(melee)8\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "X",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "X is equal to the difference in the number of cards in this model's control hand and its maximum hand size (to a maximum of 3).",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"And One From Rumsen!\"",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Once per activation. Declare this action again, targeting a different model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Critical Strike",
+          "suit": "(c)",
+          "timing": "when_resolving",
+          "text": "When resolving, this action deals +1 damage to the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Uncomfortable Twitch",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 2\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Survival Skills",
+          "suit": "(r)(r)",
+          "timing": "after_succeeding",
+          "text": "This model heals 1.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Endure It",
+      "action_type": null,
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only.",
+      "effects": "Target heals 2. For each raise this action receives, the target heals an additional +1.",
+      "triggers": [
+        {
+          "name": "Hasten",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Hastened token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    },
+    {
+      "name": "Haphazard Topography",
+      "action_type": null,
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn. Target a marker.",
+      "effects": "Make a marker of the same type within 3\" of the target. Then remove the target.",
+      "triggers": [
+        {
+          "name": "Tripping Hazard",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Enemy models within 2\" of the made marker are dealt 1 damage.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions"
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Angler\\M4E_Stat_Infamous_Angler_Mossbeard.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

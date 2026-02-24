@@ -1,0 +1,98 @@
+{
+  "card_type": "stat_card",
+  "name": "SWASHBUCKLER",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Minion",
+  "model_limit": 2,
+  "cost": "4",
+  "df": 5,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 5,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Minion (2)",
+    "Living"
+  ],
+  "keywords": [
+    "Infamous",
+    "Angler"
+  ],
+  "abilities": [
+    {
+      "name": "Hard to Kill",
+      "defensive_type": "unusual_defense",
+      "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health.",
+      "icon_description": null
+    },
+    {
+      "name": "Swarm the Deck",
+      "defensive_type": null,
+      "text": "When this model activates within 2\" of a friendly marker, it gains a Hastened token.",
+      "icon_description": null
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sword",
+      "action_type": "melee",
+      "range": "(melee)1\"",
+      "skill_value": 5,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Free Loot",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Remove a Scheme marker within 2\" of this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Oy! That Be Mine!",
+      "range": "8\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. Target an enemy marker.",
+      "effects": "Move this model up to its Sp toward the target. Then, if this model is in base contact with the target, remove it and this model may draw a card.",
+      "triggers": [
+        {
+          "name": "Hidden Cache",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make a Scheme marker in base contact with this model.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Angler\\M4E_Stat_Infamous_Angler_Swashbuckler_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

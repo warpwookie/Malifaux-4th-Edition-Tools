@@ -354,6 +354,119 @@
     ]
   },
   {
+    "name": "Aunty Mel",
+    "faction": "Bayou",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "8",
+    "df": 6,
+    "wp": 6,
+    "sz": 1,
+    "sp": 5,
+    "health": 11,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Hard to Kill",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Thar She Blows!",
+        "text": "After deployment, attach a White Whale upgrade to an enemy non-leader model with a cost of 7 or more."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Ol' Thunder",
+        "category": "attack_actions",
+        "action_type": "variable",
+        "range": "*",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "When this action is declared, choose if it has a range of \"(melee)1\" or \"(gun)10\". If this model is within 1\" of a Tide marker, this action receives a (fortitude).",
+        "triggers": [
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Gut Feeling",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Choose a suit. Target may discard a card of the chosen suit. If it does not, declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\"Whadya Say About My Pappy?!\"",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Non-leader only. If there are no enemies in play with an attached White Whale upgrade, attach a White Whale upgrade to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Inclement Weather",
+        "category": "tactical_actions",
+        "range": "10\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Make a Tide marker within range.",
+        "triggers": [
+          {
+            "name": "Typhoon",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Enemy models within (aura)2\" of the made marker move 2\" directly away from it.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Troll the Surface",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Look at the top three cards of the opponent's fate deck and put them back in any order.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Life Raft",
+        "category": "tactical_actions",
+        "range": "(aura)3\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "This model and allies within range gain a Drift token."
+      }
+    ]
+  },
+  {
     "name": "Bad Juju",
     "faction": "Bayou",
     "station": "Henchman",
@@ -490,6 +603,7 @@
   {
     "name": "Barrelby",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "7",
     "df": 5,
     "wp": 5,
@@ -833,9 +947,121 @@
     ]
   },
   {
+    "name": "Big Brain Brin",
+    "faction": "Bayou",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 7,
+    "sz": 1,
+    "sp": 5,
+    "health": 9,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Living",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Arcane Reservoir",
+        "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
+      },
+      {
+        "name": "Serene Countenance",
+        "defensive_type": "unusual_defense",
+        "text": "Enemy attack actions that target this model cannot cheat their duel."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Elementary",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)6\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Target gains an Analyzed token.",
+        "triggers": [
+          {
+            "name": "Maim",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Injured token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Weird Science",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 7,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Once per activation. Make a Scheme marker within range.",
+        "triggers": [
+          {
+            "name": "Mind Link",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Another friendly model within 6\" declares an attack action, drawing range and LoS from the made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Transporter",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "A friendly model within 3\" of the made marker is placed in base contact with the made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Replicator",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Make another Scheme marker within range.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Surge",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Draw a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Tap the Leyline",
+        "category": "tactical_actions",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Once per turn. Draw two cards and then discard one card."
+      }
+    ]
+  },
+  {
     "name": "Bo Peep",
     "faction": "Bayou",
     "station": "Henchman",
+    "model_limit": 1,
     "cost": "7",
     "df": 5,
     "wp": 5,
@@ -935,6 +1161,212 @@
         "soulstone_cost": 0,
         "effects": "Move the target up to 4\" toward a friendly model in its LoS.",
         "costs_and_restrictions": "Ally or friendly minion only."
+      }
+    ]
+  },
+  {
+    "name": "Bruce",
+    "faction": "Bayou",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 4,
+    "sz": 1,
+    "sp": 6,
+    "health": 6,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Accomplice",
+        "text": "When this model ends its activation, a friendly model within 6\" that has not activated this turn may discard a card to do so."
+      },
+      {
+        "name": "Latch On",
+        "text": "Enemy models in base contact with this model suffer -1 Df."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Trapping Jaws",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "c",
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Staggered token.",
+        "triggers": [
+          {
+            "name": "You're Comin' With Me",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\", then place this model into base contact with it.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Family Pet",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 7,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Place this model into base contact with the target, then the target heals 3 and gains a Drift token.",
+        "costs_and_restrictions": "Once per activation. Ally only.",
+        "triggers": [
+          {
+            "name": "Gone Fishin'",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Tide marker in base contact with this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Resupply",
+        "category": "tactical_actions",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+        "costs_and_restrictions": "Once per turn."
+      }
+    ]
+  },
+  {
+    "name": "Buckaroo",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 7,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Resilient",
+        "defensive_type": "unusual_defense",
+        "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+      },
+      {
+        "name": "Slip and Slide",
+        "text": "When this model removes a Drift token to place in base contact with a friendly Tide marker, it may choose a friendly Tide marker within 10\" instead of 5\"."
+      },
+      {
+        "name": "Trample",
+        "text": "This model can move through other models."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "\"Mighty\" Jaws",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Rear Up",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Deal 1 damage to enemy models within (aura)2\" of this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "\"Ain't My First Rodeo\"",
+        "category": "tactical_actions",
+        "range": "(aura)4\"",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within range must pass a TN 12 Df duel or be dealt 1 damage.",
+        "triggers": [
+          {
+            "name": "\"...It's My Second\"",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Place this model anywhere within range.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Friendly Waters",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Onward",
+        "category": "tactical_actions",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "This model may declare the Walk action.",
+        "triggers": [
+          {
+            "name": "Fastest Time",
+            "suit": "(m)",
+            "timing": "after_resolving",
+            "text": "After resolving the generated action, this model may make a Tide or Scheme marker in base contact with itself.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -1261,6 +1693,7 @@
   {
     "name": "Fluffernutter",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "3",
     "df": 5,
     "wp": 4,
@@ -2494,6 +2927,135 @@
     ]
   },
   {
+    "name": "Hermits",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 2,
+    "cost": "5",
+    "df": 5,
+    "wp": 4,
+    "sz": 2,
+    "sp": 5,
+    "health": 6,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (2)"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Don't Turn Your Back",
+        "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+      },
+      {
+        "name": "Extended Reach",
+        "text": "Enemy models within 2\" cannot take attack actions generated by the Charge action."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Jab! JABB!",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This action deals damage twice.",
+        "triggers": [
+          {
+            "name": "Two Heads",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "This model may declare the Interact action, ignoring engagement.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Tossed Spear",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)10\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Two Heads",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "This model may declare the Interact action, ignoring engagement.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Skedaddle",
+        "category": "tactical_actions",
+        "skill_value": 0,
+        "tn": 4,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to 3\", ignoring vertical distance. Then, this model gains a Drift token.",
+        "triggers": [
+          {
+            "name": "Shrug Off",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Remove one token from this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Wallowing",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model gains an Aura (Staggered) token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Seashells by the Swampshore",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Drift token.",
+        "costs_and_restrictions": "Ally only."
+      }
+    ]
+  },
+  {
     "name": "Hog Oil Salesman",
     "faction": "Bayou",
     "model_limit": 1,
@@ -2967,6 +3529,7 @@
   {
     "name": "Jebediah Jones",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "7",
     "df": 5,
     "wp": 4,
@@ -3080,6 +3643,117 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Judd & Honey",
+    "faction": "Bayou",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 5,
+    "sz": 3,
+    "sp": 6,
+    "health": 9,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Shootin' Fish in a Barrel",
+        "text": "Once per turn. This model may remove a Tide marker touching a (t) generated by this model. If it does so, draw a card."
+      },
+      {
+        "name": "Stand and Fire",
+        "text": "If this model is unengaged, enemy models that declare the Charge action within 12\" of this model are dealt 1 damage."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Honeycomb Hwacha",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)12\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action does not deal additional damage from raises. For each raise this action receives, deal +1 damage to enemy models within (i)2\" of the target.",
+        "triggers": [
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Gut Feeling",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Choose a suit. Target may discard a card of the chosen suit. If it does not, declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Cluster Bomb",
+            "suit": "(t)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action does not generate a (i) and instead deals +2 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Signal Flare",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "The target heals 2, moves up to 2\" towards this model, and gains a Drift token.",
+        "triggers": [
+          {
+            "name": "Sinkhole",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Tide marker into base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Collateral Damage",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Remove a marker or a destructible terrain piece within 2\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Resupply",
+        "category": "tactical_actions",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+        "costs_and_restrictions": "Once per turn."
       }
     ]
   },
@@ -3791,8 +4465,293 @@
     ]
   },
   {
+    "name": "Mah Tucket",
+    "title": "Mecha-Meemaw",
+    "faction": "Bayou",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 6,
+    "sz": 4,
+    "sp": 7,
+    "health": 13,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": "Looted Parts",
+    "totem": "Big Brain Brin",
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Construct",
+      "Living",
+      "Master",
+      "Tricksy",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Legs in Unexpected Places",
+        "text": "This model may not gain Staggered or Slow tokens."
+      },
+      {
+        "name": "Made o' Metal",
+        "defensive_type": "fortitude",
+        "text": "Reduce all damage dealt to this model by 1."
+      },
+      {
+        "name": "Ominous Whirring",
+        "text": "When this model activates, it may drain two (soulstone) to increase the damage of its attack actions by +1 until the end of its activation."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Over-Sized Drill",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action ignores (warding) abilities. This attack has a raise value of 3.",
+        "triggers": [
+          {
+            "name": "Dropped Down a Hole",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Place the target into base contact with a marker within 6\" of its current location.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Cruelty",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. Declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Analyze Weakness",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Analyzed token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Giant Harpoon Gun",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)12\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 6\" toward this model.",
+        "triggers": [
+          {
+            "name": "Of FIRE!",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Lead the Target",
+            "suit": "(t)",
+            "timing": "when_resolving",
+            "text": "When resolving, this model may move the target in any direction.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "'Nother Gremlin's Trash",
+        "category": "tactical_actions",
+        "range": "4\"",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Once per activation. This model may either remove an enemy Scheme marker within range or make a Scheme marker within range.",
+        "triggers": [
+          {
+            "name": "Secret Tunnel",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Choose another ally within 2\" of the made marker and place it within 2\" of another marker within 6\" of the made marker, ignoring LoS.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mah Tucket",
+    "title": "Metal Magpie",
+    "faction": "Bayou",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 14,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": "Carefully Laid Plans",
+    "totem": "The Little Lass",
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Tricksy",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Long Term Plottin'",
+        "text": "When this model activates, it may drain a (soulstone) to heal 4."
+      },
+      {
+        "name": "Perfectly Good Still",
+        "text": "After a Shielded token is removed from another model within 8\", this model gains a Shielded token."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Whamajigger",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)3\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Move the target up to 2\".",
+        "triggers": [
+          {
+            "name": "Extra Smashy",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, remove a friendly token from the target. Deal +2 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Frazzled",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "The target may discard a card. If it does not, this model draws a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "In-Built Indicators",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Place the target within 3\", then make a Scheme marker within 1\" of it.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Override Circuits",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)10\"",
+        "skill_value": 7,
+        "resist": "Wp",
+        "tn": 11,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This action cannot target the same model more than once per activation. Target gains an Analyzed token and declares an action chosen and controlled by this model.",
+        "triggers": [
+          {
+            "name": "Maim",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Injured token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Retrofit",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 4,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Another ally only. Target gains a Shielded token and is moved up to 4\".",
+        "triggers": [
+          {
+            "name": "Mend",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Target heals 2.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Pulled Here and There",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move either this model or the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Cinders",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "A model within 3\" of the target gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "System Overload",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (aura)2\" of the target must pass a TN 12 Df duel or be dealt 2 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "McTavish",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "8",
     "df": 5,
     "wp": 5,
@@ -3920,6 +4879,92 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Mechanized Porkchop",
+    "faction": "Bayou",
+    "model_limit": 1,
+    "cost": "9",
+    "df": 5,
+    "wp": 5,
+    "sz": 3,
+    "sp": 7,
+    "health": 12,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Construct",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "defensive_type": "unusual_defense",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "\"It Didn't Like That Much...\"",
+        "text": "When a Shielded token is removed from this model, enemies within (aura)1\" gain an Injured token."
+      },
+      {
+        "name": "Rage Machine",
+        "text": "Enemy models within 3\" with an Analyzed token suffer a (-) to Df and Wp duels."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Snort Steam",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(missile)1\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "3",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "If this action receives a raise, deal 1 damage to enemy models within (aura)3\" of the target.",
+        "triggers": [
+          {
+            "name": "Maddened Stomp",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "Remove all markers within (aura)2\" of the target. When resolving, deal +1 damage for each marker removed this way (to a maximum of +2).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Smolder",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Rampage",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model 5\", ignoring enemy models. Models moved through this way must pass a TN 13 Sp duel or be dealt 1 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Belly Full o' Coals",
+        "category": "tactical_actions",
+        "range": "3\"",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range. Enemy models within (aura)1\" of this model must pass a TN 12 Sp duel or gain a Burning token."
       }
     ]
   },
@@ -4142,6 +5187,131 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "costs_and_restrictions": "Friendly only. Target gains either a Poison or an Insight token."
+      }
+    ]
+  },
+  {
+    "name": "Mossbeard",
+    "faction": "Bayou",
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 6,
+    "health": 9,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler",
+      "Infamous"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Hard to Kill",
+        "defensive_type": "unusual_defense",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Peer Through Fog",
+        "text": "This model's actions ignore concealment."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Harrowing Tale",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "damage": "X",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "X is equal to the difference in the number of cards in this model's control hand and its maximum hand size (to a maximum of 3).",
+        "triggers": [
+          {
+            "name": "And One From Rumsen!",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Declare this action again, targeting a different model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Uncomfortable Twitch",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 2\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Survival Skills",
+            "suit": "(t)(t)",
+            "timing": "after_succeeding",
+            "text": "This model heals 1.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Endure It",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Target heals 2. For each raise this action receives, the target heals an additional +1.",
+        "costs_and_restrictions": "Ally only.",
+        "triggers": [
+          {
+            "name": "Hasten",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Hastened token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Haphazard Topography",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Make a marker of the same type within 3\" of the target. Then remove the target.",
+        "costs_and_restrictions": "Once per turn. Target a marker.",
+        "triggers": [
+          {
+            "name": "Tripping Hazard",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within 2\" of the made marker are dealt 1 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -4724,7 +5894,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Somethin's A'Foot",
-    "totem": "Sammy LaCroix",
+    "totem": "SAMMY LaCROIX",
     "keywords": [
       "Kin"
     ],
@@ -4865,9 +6035,9 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Somethin's A'Foot",
-    "totem": "Young LaCroix",
+    "totem": "YOUNG LaCROIX",
     "keywords": [
-      "Arms Race"
+      "Kin"
     ],
     "characteristics": [
       "Kin",
@@ -5761,8 +6931,120 @@
     ]
   },
   {
+    "name": "Rooster Rider",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 7,
+    "health": 7,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Beast",
+      "Living",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Don't Turn Your Back",
+        "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
+      },
+      {
+        "name": "Frantic",
+        "text": "While this model has half of its maximum health or less, its attack actions receive a (-) to their duels and deal +1 damage."
+      },
+      {
+        "name": "Rocket Bird",
+        "text": "While this model has a Shielded token, it may move through enemy models."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "PECKPECKPECK",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "If this action deals damage, this model may declare it again suffering -1 Skl.",
+        "triggers": [
+          {
+            "name": "Defensive Reflexes",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\"AHHH, MY EYE!\"",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage and move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Trusty Rifle",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)14\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Knock Aside",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Fowl Play",
+        "category": "tactical_actions",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "This model may declare the Charge action, ignoring engagement.",
+        "triggers": [
+          {
+            "name": "Poultry in Motion",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "The generated (melee) action receives +2 Skl if it targets a model with an Analyzed token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Ruffles",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "3",
     "df": 5,
     "wp": 4,
@@ -5974,7 +7256,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "keywords": [
-      "Tri Chi"
+      "Tri-Chi"
     ],
     "characteristics": [
       "Elemental",
@@ -6161,6 +7443,134 @@
     ]
   },
   {
+    "name": "Sir Vantes",
+    "faction": "Bayou",
+    "model_limit": 1,
+    "cost": "7",
+    "df": 6,
+    "wp": 5,
+    "sz": 3,
+    "sp": 5,
+    "health": 9,
+    "shields": 0,
+    "base_size": "40mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Escar...Go!",
+        "text": "After killing an enemy model, this model may declare the Charge action, ignoring any special restrictions."
+      },
+      {
+        "name": "Slip and Slide",
+        "text": "When this model removes a Drift token to place in base contact with a friendly Tide marker, it may choose a friendly Tide marker within 10\" instead of 5\"."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Knight's Folly",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)4\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "If this action was generated by the Charge action, it deals +1 damage.",
+        "triggers": [
+          {
+            "name": "Shrug Off",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Remove one token from this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Stumble",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "When resolving, if the target has a Staggered token, deal +1 damage. Otherwise, it gains a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Friendly Waters",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Bait the Waters",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "c",
+        "resist": "Wp",
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 3\" toward an ally in LoS.",
+        "triggers": [
+          {
+            "name": "Sucked Down",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Place the target into base contact with a friendly Tide marker within 6\" of it. If the target is placed in this way, it is dealt 3 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Snail's Pace",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Heroic Intervention",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move all friendly models engaged with the target 5\" away from the target. Then, place this model in base contact with the target. This model may declare a (melee) targeting the target.",
+        "costs_and_restrictions": "Enemy engaged with another friendly model only.",
+        "triggers": [
+          {
+            "name": "Snail's Pace",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Skeeter",
     "faction": "Bayou",
     "station": "Totem",
@@ -6246,6 +7656,115 @@
         "soulstone_cost": 1,
         "effects": "Friendly peon only. Place this model in base contact with the target. Kill the target to draw a card and then discard a card.",
         "costs_and_restrictions": "Friendly peon only."
+      }
+    ]
+  },
+  {
+    "name": "Skulker Skin",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "5",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 5,
+    "health": 7,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Shrouded in the Shallows",
+        "text": "When this model is dealt damage, it may remove a Drift token to reduce the damage by 2."
+      },
+      {
+        "name": "Stealth",
+        "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Shove",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "skill_built_in_suit": "m",
+        "resist": "Df",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move the target 2\". For each raise this action receives, move the target an additional +1\".",
+        "triggers": [
+          {
+            "name": "Friendly Waters",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Blowdart",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)10\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "If this model is within 1\" of a Tide marker, this action receives a (c).",
+        "triggers": [
+          {
+            "name": "Sinkhole",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Make a Tide marker into base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Friendly Waters",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Under the Surface",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 7,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Place this model into base contact with the target. Then, make either a Scheme or Tide marker in base contact with the target and remove the target.",
+        "costs_and_restrictions": "Target a friendly Scheme or Tide marker within range.",
+        "triggers": [
+          {
+            "name": "Friendly Waters",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -6359,7 +7878,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Bigger Hat Than You",
-    "totem": "Skeeter (2)",
+    "totem": "Skeeter",
     "keywords": [
       "Big Hat"
     ],
@@ -6464,6 +7983,7 @@
     "title": "Loot Monger",
     "faction": "Bayou",
     "station": "Master",
+    "model_limit": 1,
     "cost": "-",
     "df": 5,
     "wp": 6,
@@ -6579,6 +8099,147 @@
             "suit": "(t)",
             "timing": "after_succeeding",
             "text": "Summon a Bayou Gremlin within 3\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sparks LeBlanc",
+    "faction": "Bayou",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 5,
+    "sz": 1,
+    "sp": 6,
+    "health": 9,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Construct",
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Loaded With Explosives",
+        "text": "When a Shielded token is removed from this model, it may drain a (soulstone) to deal 2 damage to enemy models within (melee)1\" of it."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Heavy Wrench",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Defensive Reflexes",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Frantic Attack",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model deals 1 irreducible damage to itself. Declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Analyze Weakness",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Analyzed token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Spin Around Real Fast",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (aura)1\" gain an Injured token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Planned Obsolescence",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)6\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "tn": 12,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Non-master only. Remove an Analyzed token from the target. Attach the Intentional Decay upgrade to the target.",
+        "triggers": [
+          {
+            "name": "Defensive Reflexes",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Stolen Tech",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. The target must drain a (fortitude), if able. If it does, infuse a (fortitude).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "\"Now Yer a Robot\"",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Target gains a Shielded token.",
+        "triggers": [
+          {
+            "name": "Knock Aside",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Twist the Truth",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "An ally within 1\" of the target gains a Shielded token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -6918,6 +8579,7 @@
   {
     "name": "Squish and Squash",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "5",
     "df": 5,
     "wp": 5,
@@ -7096,6 +8758,7 @@
   {
     "name": "Stumpy",
     "faction": "Bayou",
+    "model_limit": 1,
     "cost": "8",
     "df": 6,
     "wp": 5,
@@ -7190,6 +8853,209 @@
         "soulstone_cost": 0,
         "effects": "This model heals 2.",
         "costs_and_restrictions": "Discard a card."
+      }
+    ]
+  },
+  {
+    "name": "Survivor",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "5",
+    "df": 5,
+    "wp": 4,
+    "sz": 1,
+    "sp": 6,
+    "health": 7,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Construct",
+      "Living",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Fillings Is Metal",
+        "text": "This model may treat enemies with an Analyzed token as if they had the construct characteristic."
+      },
+      {
+        "name": "Hard to Kill",
+        "defensive_type": "fortitude",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Patchwork Power",
+        "text": "Before performing a duel, this model may remove a Shielded token to add a suit of its choice to its Skl."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Mechanical Punch",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This action deals +2 damage for each raise instead of +1.",
+        "triggers": [
+          {
+            "name": "Knock Aside",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Disassemble",
+            "suit": "(m)",
+            "timing": "when_resolving",
+            "text": "Target construct. When resolving, deal +1 damage and remove up to one token from the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Electrical Malfunction",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)14\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Triggers on this action must be declared, if able.",
+        "triggers": [
+          {
+            "name": "Frantic Attack",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model deals 1 irreducible damage to itself. Declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Throw Yer Arm At 'em",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "This model deals 1 irreducible damage to itself. Target is moved 3\" away.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Magnetism",
+        "category": "tactical_actions",
+        "range": "16\"",
+        "skill_value": 0,
+        "tn": 7,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Move this model its Sp toward the target.",
+        "costs_and_restrictions": "Construct or non-Scheme marker only.",
+        "triggers": [
+          {
+            "name": "Reverse Polarity",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, instead of moving this model, if the target is a model, move the target its Sp toward this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Swashbuckler",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 2,
+    "cost": "4",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 5,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler",
+      "Infamous"
+    ],
+    "characteristics": [
+      "Living",
+      "Minion (2)"
+    ],
+    "abilities": [
+      {
+        "name": "Hard to Kill",
+        "defensive_type": "unusual_defense",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Swarm the Deck",
+        "text": "When this model activates within 2\" of a friendly marker, it gains a Hastened token."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Sword",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Free Loot",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Remove a Scheme marker within 2\" of this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Oy! That Be Mine!",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to its Sp toward the target. Then, if this model is in base contact with the target, remove it and this model may draw a card.",
+        "costs_and_restrictions": "Once per activation. Target an enemy marker.",
+        "triggers": [
+          {
+            "name": "Hidden Cache",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -7625,6 +9491,94 @@
     ]
   },
   {
+    "name": "Test Subject",
+    "faction": "Bayou",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "4",
+    "df": 4,
+    "wp": 4,
+    "sz": 2,
+    "sp": 6,
+    "health": 5,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Beast",
+      "Construct",
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Failed Experiment",
+        "text": "While this model has an enemy token, it increases its Df, Wp, and the Skl of all actions by 1."
+      },
+      {
+        "name": "Stampede",
+        "text": "After this model ends a Charge action in base contact with any other models, it may deal 1 damage to itself. If it does so, deal 1 damage to all other models in base contact with this model."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Static Touch",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Analyze Weakness",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Analyzed token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Electrical Shock",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)8\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Damage from this action ignores (shield) abilities.",
+        "triggers": [
+          {
+            "name": "Arc",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Happy Accident",
+        "category": "tactical_actions",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Make a Scheme marker in base contact with this model.",
+        "costs_and_restrictions": "Once per activation. Remove a marker in base contact with this model."
+      }
+    ]
+  },
+  {
     "name": "The Brewmaster",
     "title": "Moonshiner",
     "faction": "Bayou",
@@ -7893,6 +9847,422 @@
     ]
   },
   {
+    "name": "The Clampetts",
+    "title": "Bally-Hoo Bucket",
+    "faction": "Bayou",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 5,
+    "wp": 6,
+    "sz": 3,
+    "sp": 6,
+    "health": 14,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": "Tides of Meridion",
+    "totem": "Judd & Honey",
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Meridion's Passage",
+        "text": "Once per activation. After resolving an action where this model moves through the centerline, make a Tide marker anywhere on the centerline."
+      },
+      {
+        "name": "Offboard Motor",
+        "text": "While resolving the Charge action, increase the distance this model moves by up to +4\"."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Caught in the Motor",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)1\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Catch of a Lifetime",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "This model heals 6.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Wallowing",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model gains an Aura (Staggered) token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Gut Feeling",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Choose a suit. Target may discard a card of the chosen suit. If it does not, declare this action again.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Drawn to the Sea",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)12\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "tn": 13,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 6\" toward a piece of terrain or Tide marker in its LoS.",
+        "triggers": [
+          {
+            "name": "From the Depths",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target must be within 1\" of a Tide marker. Target is dealt 3 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Coordinated Attack",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Another friendly model may declare a (melee) action targeting the same model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Waves Crash",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Make a Tide marker within range. Enemy models within (aura)2\" of the made marker must pass a TN 13 Sp duel or be dealt 1 damage.",
+        "triggers": [
+          {
+            "name": "Lucky Lure",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "An ally within 2\" of the made marker gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Claimed by the Deep",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Remove any one marker touching a (aura) generated by this action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Clampetts",
+    "title": "Fisherfolk",
+    "faction": "Bayou",
+    "station": "Master",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 5,
+    "sz": 3,
+    "sp": 6,
+    "health": 14,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "crew_card_name": "Brackish Bully",
+    "totem": "Bruce",
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Living",
+      "Master",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Hard to Kill",
+        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Stealth",
+        "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
+      },
+      {
+        "name": "Thrown Overboard",
+        "text": "After this model suffers damage, it may drain a (soulstone). If it does so, make a Tide marker in base contact and heal 2."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Tongue Lash",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)3\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Mental Trauma",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target must either discard a card or be dealt 3 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Whirlpool",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within 1\" of the target are placed within 3\" of this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Fishin' with Dynamite",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Deal 1 damage to enemy models within (X)1\" of the target. For each raise this action receives, increase the range of the (X) by +1\".",
+        "triggers": [
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Friendly Waters",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "\"Fish On!\"",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Ally only. Move either the target or this model up to 4\" toward the other.",
+        "triggers": [
+          {
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Silurid Stomp",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range. Then, enemy models within (X)1\" must pass a TN 13 Sp duel or be dealt 1 damage.",
+        "triggers": [
+          {
+            "name": "Gone Fishin'",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Tide marker in base contact with this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Little Lass",
+    "faction": "Bayou",
+    "station": "Totem",
+    "model_limit": 1,
+    "cost": "-",
+    "df": 6,
+    "wp": 5,
+    "sz": 1,
+    "sp": 5,
+    "health": 9,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Living",
+      "Totem",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Delegated Authority",
+        "text": "When this model ends its activation, it may remove up to one token from all models within 3\". Then, each model that removed a token this way gains this model's choice of a Shielded or Analyzed token."
+      },
+      {
+        "name": "Mah! Help!",
+        "text": "After this model resolves the Charge action, a friendly Mah Tucket within 10\" may drain a (soulstone) to place into base contact with an enemy engaged with this model and deal 2 damage to it."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Whamajigglette",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 2\".",
+        "triggers": [
+          {
+            "name": "Knock Aside",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Frazzled",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "The target may discard a card. If it does not, this model draws a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Szzap!",
+            "suit": "(c)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage for each token on the target (to a maximum of 2). Then, remove a token from the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Caustic Canteen",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic)8\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within (aura)1\" of the target are dealt 1 damage.",
+        "triggers": [
+          {
+            "name": "All Scraped Up",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Models damaged by this action gain a Injured token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Resupply",
+        "category": "tactical_actions",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Draw up to two cards from this model's discard pile with values of 1-5.",
+        "costs_and_restrictions": "Once per turn."
+      },
+      {
+        "name": "Eyein' You Up",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Move the target up to 4\". If this action receives a raise, the target gains a Shielded token.",
+        "costs_and_restrictions": "Friendly only.",
+        "triggers": [
+          {
+            "name": "Auto-Repair",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "This model heals 1.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "The Sow",
     "faction": "Bayou",
     "station": "Totem",
@@ -7999,6 +10369,118 @@
         "soulstone_cost": 0,
         "effects": "Replace the target with a Wild Boar, then remove all Glutted and Burning tokens from the target.",
         "costs_and_restrictions": "Once per activation. Friendly Piglet model with either a Glutted or Burning token only."
+      }
+    ]
+  },
+  {
+    "name": "Trixiebelle",
+    "faction": "Bayou",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "8",
+    "df": 5,
+    "wp": 5,
+    "sz": 3,
+    "sp": 6,
+    "health": 11,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Tricksy"
+    ],
+    "characteristics": [
+      "Construct",
+      "Henchman",
+      "Loyal",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Armor",
+        "text": "Once per activation. This model may reduce damage dealt to it by 1."
+      },
+      {
+        "name": "Don't Mind Me",
+        "text": "The following do not restrict this model from taking the Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact."
+      },
+      {
+        "name": "\"Look Who's Reachin' Over Yer Head Now!\"",
+        "text": "This model's Interact action has a Rg of 4\"."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Oversized Metal Fist",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)2\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This action deals +2 damage for each raise instead of +1.",
+        "triggers": [
+          {
+            "name": "Of FIRE!",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Hand Cannon",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun)10\"",
+        "skill_value": 5,
+        "resist": "Df",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "triggers": [
+          {
+            "name": "Glitter Bomb",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Allies within (aura)2\" of the target gain a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Of FIRE!",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Target gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Maim",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Injured token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Leap",
+        "category": "tactical_actions",
+        "range": "6\"",
+        "skill_value": 0,
+        "tn": 4,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "effects": "Place this model anywhere within range.",
+        "costs_and_restrictions": "Once per activation."
       }
     ]
   },
@@ -8267,6 +10749,138 @@
             "suit": "(r)",
             "timing": "after_succeeding",
             "text": "Enemy models within (aura)2\" of the target gain a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Uncle Bogg",
+    "faction": "Bayou",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "9",
+    "df": 6,
+    "wp": 6,
+    "sz": 3,
+    "sp": 6,
+    "health": 13,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": false,
+    "keywords": [
+      "Angler"
+    ],
+    "characteristics": [
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Chatty",
+        "text": "Enemy models within 6\" must each discard a card to declare the Interact action."
+      },
+      {
+        "name": "Laugh Off",
+        "text": "If this model would be moved from an enemy model's effect, it may discard a card to choose not to."
+      },
+      {
+        "name": "Warning Growl",
+        "defensive_type": "unusual_defense",
+        "text": "Attacks targeting friendly models within 2\" do not deal additional damage due to raises."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Exaggerated Claim",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee)4\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "If this model is within 1\" of a Tide marker, this action receives a (+).",
+        "triggers": [
+          {
+            "name": "Gremlin Manners",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Declare the \"Get!\" action, drawing range and LoS from the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Tear Off a Bite",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "This model heals 2.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Friendly Waters",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "This model gains a Drift token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Tall Tale",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Discard a card. Target gains a Staggered token and must discard a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "\"Get!\"",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": true,
+        "soulstone_cost": 0,
+        "costs_and_restrictions": "Ally only. Move the target up to 4\". Increase the distance moved by +2\" if the target has a Drift token. Then, enemy models in base contact with the target must discard a card or be dealt 1 damage.",
+        "triggers": [
+          {
+            "name": "Sinkhole",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Make a Tide marker into base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\"He Came Outta Nowhere!\"",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Immediately, place the target in base contact with a Tide Marker within 6\" of itself.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Eau de Bayou",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Aura (Staggered) token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -9018,7 +11632,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Wise Words of Wisdom",
-    "totem": "Flying Piglet (3)",
+    "totem": "Flying Piglet",
     "keywords": [
       "Wizz-Bang"
     ],

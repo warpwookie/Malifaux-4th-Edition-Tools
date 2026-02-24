@@ -308,7 +308,7 @@
     ]
   },
   {
-    "name": "Arik Schöttemer",
+    "name": "Arik Sch\u00f6ttemer",
     "faction": "Outcasts",
     "station": "Henchman",
     "model_limit": 1,
@@ -5601,131 +5601,6 @@
     ]
   },
   {
-    "name": "Mossbeard",
-    "faction": "Outcasts",
-    "model_limit": 1,
-    "cost": "7",
-    "df": 5,
-    "wp": 5,
-    "sz": 1,
-    "sp": 6,
-    "health": 9,
-    "shields": 0,
-    "base_size": "30mm",
-    "infuses_soulstone_on_death": false,
-    "keywords": [
-      "Angler",
-      "Infamous"
-    ],
-    "characteristics": [
-      "Living",
-      "Unique"
-    ],
-    "abilities": [
-      {
-        "name": "Hard to Kill",
-        "defensive_type": "unusual_defense",
-        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
-      },
-      {
-        "name": "Peer Through Fog",
-        "text": "This model's actions ignore concealment."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Harrowing Tale",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic)8\"",
-        "skill_value": 6,
-        "resist": "Wp",
-        "damage": "X",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "X is equal to the difference in the number of cards in this model's control hand and its maximum hand size (to a maximum of 3).",
-        "triggers": [
-          {
-            "name": "And One From Rumsen!",
-            "suit": "(c)",
-            "timing": "after_succeeding",
-            "text": "Once per activation. Declare this action again, targeting a different model.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Critical Strike",
-            "suit": "(r)",
-            "timing": "when_resolving",
-            "text": "When resolving, this action deals +1 damage to the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Uncomfortable Twitch",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Move the target up to 2\".",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Survival Skills",
-            "suit": "(t)(t)",
-            "timing": "after_succeeding",
-            "text": "This model heals 1.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Endure It",
-        "category": "tactical_actions",
-        "range": "6\"",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Target heals 2. For each raise this action receives, the target heals an additional +1.",
-        "costs_and_restrictions": "Ally only.",
-        "triggers": [
-          {
-            "name": "Hasten",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Target gains a Hastened token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "Haphazard Topography",
-        "category": "tactical_actions",
-        "range": "8\"",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": true,
-        "soulstone_cost": 0,
-        "effects": "Make a marker of the same type within 3\" of the target. Then remove the target.",
-        "costs_and_restrictions": "Once per turn. Target a marker.",
-        "triggers": [
-          {
-            "name": "Tripping Hazard",
-            "suit": "(r)",
-            "timing": "after_succeeding",
-            "text": "Enemy models within 2\" of the made marker are dealt 1 damage.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Mr. Ambrose",
     "faction": "Outcasts",
     "station": "Henchman",
@@ -7174,7 +7049,7 @@
     "shields": 0,
     "base_size": "50mm",
     "infuses_soulstone_on_death": true,
-    "crew_card_name": "RUST-EATEN FATE",
+    "crew_card_name": "Rust-Eaten Fate",
     "totem": "Soul Battery",
     "keywords": [
       "Amalgam"
@@ -7286,7 +7161,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Salvage & Logistics",
-    "totem": "Hollow Waif (2)",
+    "totem": "Hollow Waif",
     "keywords": [
       "Amalgam"
     ],
@@ -8521,86 +8396,6 @@
             "suit": "(t)",
             "timing": "after_succeeding",
             "text": "This model may remove a token from the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Swashbuckler",
-    "faction": "Outcasts",
-    "station": "Minion",
-    "model_limit": 2,
-    "cost": "4",
-    "df": 5,
-    "wp": 5,
-    "sz": 2,
-    "sp": 6,
-    "health": 5,
-    "shields": 0,
-    "base_size": "30mm",
-    "infuses_soulstone_on_death": false,
-    "keywords": [
-      "Angler",
-      "Infamous"
-    ],
-    "characteristics": [
-      "Living",
-      "Minion (2)"
-    ],
-    "abilities": [
-      {
-        "name": "Hard to Kill",
-        "defensive_type": "unusual_defense",
-        "text": "When this model suffers damage, if it has 2 or more health, it may not be reduced to below 1 health."
-      },
-      {
-        "name": "Swarm the Deck",
-        "text": "When this model activates within 2\" of a friendly marker, it gains a Hastened token."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Sword",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee)1\"",
-        "skill_value": 5,
-        "resist": "Df",
-        "damage": "2",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "triggers": [
-          {
-            "name": "Free Loot",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Remove a Scheme marker within 2\" of this model.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Oy! That Be Mine!",
-        "category": "tactical_actions",
-        "range": "8\"",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Move this model up to its Sp toward the target. Then, if this model is in base contact with the target, remove it and this model may draw a card.",
-        "costs_and_restrictions": "Once per activation. Target an enemy marker.",
-        "triggers": [
-          {
-            "name": "Hidden Cache",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Make a Scheme marker in base contact with this model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -10878,7 +10673,7 @@
         "text": "When this model uses an Impact token, reduce the raise value of that action to 3."
       },
       {
-        "name": "Söldnerkapitän",
+        "name": "S\u00f6ldnerkapit\u00e4n",
         "text": "After this model receives one or more raises, it may attach an Equipment upgrade to an ally within 6\" after resolving the current action."
       }
     ],

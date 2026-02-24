@@ -1,0 +1,50 @@
+{
+  "card_type": "crew_card",
+  "name": "Looted Parts",
+  "associated_master": "Mah Tucket",
+  "associated_title": "Mecha-Meemaw",
+  "faction": "Bayou",
+  "keyword_abilities": [
+    {
+      "granted_to": "Friendly Tricksy models",
+      "abilities": [
+        {
+          "name": "\"I Saw That\"",
+          "defensive_type": null,
+          "text": "After succeeding in an attack action that received a raise, this model may give the opposing model an Analyzed token."
+        },
+        {
+          "name": "Stolen Blueprints",
+          "defensive_type": null,
+          "text": "This model may declare actions printed on the stat cards of enemy models with an Analyzed token within 6\". After resolving an enemy model's action in this way, remove an Analyzed token from that enemy."
+        }
+      ]
+    },
+    {
+      "granted_to": "Friendly unique Tricksy models",
+      "abilities": [
+        {
+          "name": "Power Up",
+          "defensive_type": null,
+          "text": "When this model ends its activation, it may drain a (soulstone) or discard a card to gain a Shielded token and heal 2."
+        }
+      ]
+    }
+  ],
+  "keyword_actions": [],
+  "markers": [],
+  "tokens": [],
+  "extraction_notes": [
+    "Card shows two distinct scopes: 'Friendly Tricksy models' and 'Friendly unique Tricksy models'",
+    "Analyzed token is referenced but not defined on this card (likely defined elsewhere)",
+    "Shielded token is referenced but not defined on this card"
+  ],
+  "_extraction_meta": {
+    "source_image": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\pipeline_work\\Bayou\\M4E_Crew_Tricksy_Mah_Tucket_Mecha_Meemaw_front.png",
+    "model_used": "claude-sonnet-4-5-20250929",
+    "input_tokens": 1904,
+    "output_tokens": 450,
+    "attempt": 1
+  },
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Crew_Tricksy_Mah_Tucket_Mecha_Meemaw.pdf"
+}

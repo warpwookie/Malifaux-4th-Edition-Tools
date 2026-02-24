@@ -95,7 +95,8 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 - Trigger timings: `after_resolving`, `after_damaging`, `after_succeeding`, `on_success`, `before_resolving`, `on_trigger`
 
 ### Stat ranges (hard bounds)
-- Df/Wp: 2–8, Sz: 1–6, Sp: 3–8, Health: 1–16
+- Df: 2–8, Wp: 0–8, Sz: 0–6, Sp: 0–9, Health: 0–16
+- Wp=0: Clockwork Trap (inanimate). Sz=0: Gupps, Voodoo Doll, Camerabot. Sp=0: immobile/inanimate models. Sp=9: Sunless Self. Health=0: Marathine (card text: "does not have health").
 
 ### Known edge cases
 1. Bayou Gremlin: attack actions under "Tactical Actions" header (auto-reclassified by validator)
@@ -105,6 +106,8 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 5. Nexus has no totem: represented as `totem='-'`
 6. Control-effect attacks: no damage value (lures, pushes) — this is correct
 7. Effigy totems have `cost=2` (excluded from Master/Totem cost audit)
+8. Crossroads keyword: 7 Henchman-led crews (Seven Deadly Sins: Envy, Gluttony, Greed, Wrath, Pride, Sloth, Lust). Wrath is the only one with a crew card ("On Tour"). These are Henchmen (`cost=8`), not Masters.
+9. Master stat card layout: center text after bullet = **keyword**, bottom-left = **crew card name**, bottom-right = **totem name** (sometimes with model limit). Both master titles share the same keyword. Do NOT parse crew card names or totem names as keywords.
 
 ## Validation Tiers
 

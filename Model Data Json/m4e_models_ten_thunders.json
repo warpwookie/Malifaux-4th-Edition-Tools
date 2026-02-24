@@ -542,7 +542,7 @@
     "crew_card_name": "Entangled Spirits",
     "totem": "Ama No Zako",
     "keywords": [
-      "Entangled Spirits"
+      "Oni"
     ],
     "characteristics": [
       "Living",
@@ -2558,10 +2558,7 @@
     "crew_card_name": "House Always Wins",
     "totem": "Hungering Darkness",
     "keywords": [
-      "Darkness",
-      "Eclipse",
-      "Honeypot",
-      "Hungering"
+      "Honeypot"
     ],
     "characteristics": [
       "Living",
@@ -2689,7 +2686,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Roll the Dice",
-    "totem": "Hungering Darkness, Beneath the Bets",
+    "totem": "Hungering Darkness",
     "keywords": [
       "Honeypot"
     ],
@@ -4896,7 +4893,7 @@
     "crew_card_name": "Close Oversight",
     "totem": "Forgeling",
     "keywords": [
-      "Loyalty Revitalized"
+      "Foundry"
     ],
     "characteristics": [
       "Foundry",
@@ -5222,7 +5219,7 @@
     ],
     "attack_actions": [
       {
-        "name": "Tekkō-Kagi",
+        "name": "Tekk\u014d-Kagi",
         "category": "attack_actions",
         "action_type": "melee",
         "range": "(melee)1\"",
@@ -6012,7 +6009,7 @@
     ]
   },
   {
-    "name": "Mập Map",
+    "name": "M\u1eadp Map",
     "faction": "Ten Thunders",
     "station": "Henchman",
     "model_limit": 1,
@@ -6731,7 +6728,7 @@
         "text": "Enemy models that activate engaged with this model may not declare the Interact action until the end of their activation."
       },
       {
-        "name": "Ս Threatening Demeanor",
+        "name": "\u054d Threatening Demeanor",
         "defensive_type": "unusual_defense",
         "text": "Once per activation. This model may reduce damage dealt to it by 1."
       }
@@ -8157,7 +8154,7 @@
     ]
   },
   {
-    "name": "Story of Thánh Giong",
+    "name": "Story of Th\u00e1nh Giong",
     "faction": "Ten Thunders",
     "station": "Henchman",
     "model_limit": 1,
@@ -9448,9 +9445,8 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "crew_card_name": "Cunning Patience",
-    "totem": "Kunoichi (3)",
+    "totem": "Kunoichi",
     "keywords": [
-      "Kunoichi (3)",
       "Qi and Gong"
     ],
     "characteristics": [

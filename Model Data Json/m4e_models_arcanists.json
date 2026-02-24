@@ -2406,7 +2406,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Take the Stage",
-    "totem": "Mechanical Dove (3)",
+    "totem": "Mechanical Dove",
     "keywords": [
       "Performer"
     ],
@@ -2539,7 +2539,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Law's Reach",
-    "totem": "Bernadette, Bravo",
+    "totem": "Bernadette Basse",
     "keywords": [
       "Frontier"
     ],
@@ -2683,7 +2683,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Dustbound Oath",
-    "totem": "Bernadette, Furtive",
+    "totem": "Bernadette Basse",
     "keywords": [
       "Frontier"
     ],
@@ -3150,7 +3150,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Pursuit of Knowledge",
-    "totem": "The Puzzle Box, Unsolved",
+    "totem": "The Puzzle Box",
     "keywords": [
       "Witness"
     ],
@@ -3291,7 +3291,7 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Power Unleashed",
-    "totem": "The Puzzle Box, Solved",
+    "totem": "The Puzzle Box",
     "keywords": [
       "Witness"
     ],
@@ -4139,7 +4139,7 @@
       {
         "name": "U Incorporeal",
         "defensive_type": "unusual_defense",
-        "text": "Reduce damage dealt to this model by 1. Damage from ✝ actions may not be reduced this way."
+        "text": "Reduce damage dealt to this model by 1. Damage from \u271d actions may not be reduced this way."
       }
     ],
     "attack_actions": [
@@ -5446,7 +5446,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "keywords": [
-      "Watchman"
+      "Watchmen"
     ],
     "characteristics": [
       "Henchman",
@@ -9521,7 +9521,6 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
     "keywords": [
-      "Construct",
       "Wildfire"
     ],
     "characteristics": [

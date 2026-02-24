@@ -1,0 +1,73 @@
+{
+  "card_type": "stat_card",
+  "name": "HABBER-DASHER",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Peon",
+  "model_limit": 3,
+  "cost": "-",
+  "df": 7,
+  "wp": 3,
+  "sz": 1,
+  "sp": 7,
+  "health": 1,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Peon (3)",
+    "Construct"
+  ],
+  "keywords": [
+    "Big Hat",
+    "Tricksy"
+  ],
+  "abilities": [
+    {
+      "name": "Demise (Just a Normal Hat)",
+      "defensive_type": null,
+      "text": "After this model is killed, make a Scheme marker within 2\" of this model."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Hidden Pistol",
+      "action_type": "missile",
+      "range": "(gun)6\"",
+      "skill_value": 3,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "1",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "This action ignores (warding) abilities.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Hat's Trick",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Kill this model.",
+      "effects": "Enemy models within (aura)3\" must pass a TN 13 Sp duel or be dealt 2 damage.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Stat_Big-Hat_Tricksy_Habber_Dasher_A.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

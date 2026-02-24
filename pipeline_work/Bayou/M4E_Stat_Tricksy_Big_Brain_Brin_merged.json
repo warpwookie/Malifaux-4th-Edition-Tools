@@ -1,0 +1,136 @@
+{
+  "card_type": "stat_card",
+  "name": "BIG BRAIN BRIN",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Totem",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 7,
+  "sz": 1,
+  "sp": 5,
+  "health": 9,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Totem",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Tricksy"
+  ],
+  "abilities": [
+    {
+      "name": "Arcane Reservoir",
+      "defensive_type": null,
+      "text": "Crews containing one or more models with this ability increase their maximum hand size by one."
+    },
+    {
+      "name": "Serene Countenance",
+      "defensive_type": "unusual_defense",
+      "text": "Enemy attack actions that target this model cannot cheat their duel."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Elementary",
+      "action_type": "melee",
+      "range": "(melee)6\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Wp",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Target gains an Analyzed token.",
+      "triggers": [
+        {
+          "name": "Maim",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Injured token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Weird Science",
+      "range": "6\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 7,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation.",
+      "effects": "Make a Scheme marker within range.",
+      "triggers": [
+        {
+          "name": "Mind Link",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Another friendly model within 6\" declares an attack action, drawing range and LoS from the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Transporter",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "A friendly model within 3\" of the made marker is placed in base contact with the made marker.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Replicator",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Make another Scheme marker within range.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Surge",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Draw a card.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Tap the Leyline",
+      "range": null,
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Draw two cards and then discard one card.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Stat_Tricksy_Big_Brain_Brin.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

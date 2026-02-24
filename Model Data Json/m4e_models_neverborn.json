@@ -893,7 +893,6 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": false,
     "keywords": [
-      "Loyal",
       "Returned"
     ],
     "characteristics": [
@@ -2410,7 +2409,7 @@
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "For each raise this action receives, choose and apply one of the following effects in an order of your choosing (max 3):\n\"Where Am I?!\": Place the target into base contact with this model.\n\"Get Away!\": Deal 1 damage to enemies within (†)2\" of the target.\n\"I'm a Bird...\": Place the target within 2\" of itself.",
+        "effects": "For each raise this action receives, choose and apply one of the following effects in an order of your choosing (max 3):\n\"Where Am I?!\": Place the target into base contact with this model.\n\"Get Away!\": Deal 1 damage to enemies within (\u2020)2\" of the target.\n\"I'm a Bird...\": Place the target within 2\" of itself.",
         "costs_and_restrictions": "This model chooses whether this action is resisted by Df or Wp."
       }
     ],
@@ -2882,7 +2881,7 @@
     "crew_card_name": "Frostbitten Prophecy",
     "totem": "Primordial Magic",
     "keywords": [
-      "Frostbitten Prophecy"
+      "Savage"
     ],
     "characteristics": [
       "Living",
@@ -4443,7 +4442,7 @@
     "crew_card_name": "Starving Tirade",
     "totem": "Urnbearer",
     "keywords": [
-      "Urnbearer (2)"
+      "Returned"
     ],
     "characteristics": [
       "Living",
@@ -5522,7 +5521,7 @@
     "crew_card_name": "Guided Evolution",
     "totem": "Razorspine Rattler",
     "keywords": [
-      "Adaptive Evolution"
+      "Chimera"
     ],
     "characteristics": [
       "Beast",
@@ -8002,7 +8001,7 @@
     "crew_card_name": "Coronation",
     "totem": "Urchin",
     "keywords": [
-      "Rising Tide"
+      "Banished"
     ],
     "characteristics": [
       "Banished",
@@ -8948,10 +8947,10 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
-    "crew_card_name": "Lord Chompy Bits, Dreamlord",
+    "crew_card_name": "Lucid Dreaming",
     "totem": "Lord Chompy Bits",
     "keywords": [
-      "Lucid Dreaming"
+      "Nightmare"
     ],
     "characteristics": [
       "Living",
@@ -9087,11 +9086,10 @@
     "shields": 0,
     "base_size": "30mm",
     "infuses_soulstone_on_death": false,
-    "crew_card_name": "Lucid Dreaming",
+    "crew_card_name": "Oneirophobia",
     "totem": "Lord Chompy Bits",
     "keywords": [
-      "Lurking Lullaby",
-      "Oneirophobia"
+      "Nightmare"
     ],
     "characteristics": [
       "Living",

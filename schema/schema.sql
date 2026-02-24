@@ -220,6 +220,77 @@ CREATE TABLE IF NOT EXISTS parse_log (
 );
 
 -- ============================================================
+-- UPGRADE CARDS (keyword-based attachable upgrades)
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS upgrades (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT NOT NULL UNIQUE,
+    upgrade_type    TEXT,                                -- "Equipment", "Training", "Loot", etc.
+    keyword         TEXT,                                -- Associated keyword (e.g., "Freikorps")
+    faction         TEXT NOT NULL,                       -- Home faction
+    limitations     TEXT,                                -- "Plentiful (2)", "Restricted: Freikorps", etc.
+    description     TEXT,                                -- Introductory text
+    source_pdf      TEXT,
+    parse_date      TEXT,
+    parse_status    TEXT DEFAULT 'auto'
+);
+
+CREATE TABLE IF NOT EXISTS upgrade_abilities (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    upgrade_id      INTEGER NOT NULL,
+    name            TEXT NOT NULL,
+    defensive_type  TEXT,                                -- "fortitude", "warding", "unusual_defense", or NULL
+    text            TEXT NOT NULL,
+    FOREIGN KEY (upgrade_id) REFERENCES upgrades(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS upgrade_actions (
+    id                      INTEGER PRIMARY KEY AUTOINCREMENT,
+    upgrade_id              INTEGER NOT NULL,
+    name                    TEXT NOT NULL,
+    category                TEXT NOT NULL,               -- "attack_actions" or "tactical_actions"
+    action_type             TEXT,                         -- "melee", "missile", "magic", "variable" or NULL
+    range                   TEXT,
+    skill_value             INTEGER,
+    skill_built_in_suit     TEXT,
+    skill_fate_modifier     TEXT,
+    resist                  TEXT,
+    tn                      INTEGER,
+    damage                  TEXT,
+    is_signature            BOOLEAN DEFAULT 0,
+    soulstone_cost          INTEGER DEFAULT 0,
+    effects                 TEXT,
+    costs_and_restrictions  TEXT,
+    FOREIGN KEY (upgrade_id) REFERENCES upgrades(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS upgrade_action_triggers (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    action_id       INTEGER NOT NULL,
+    name            TEXT NOT NULL,
+    suit            TEXT,
+    timing          TEXT,
+    text            TEXT NOT NULL,
+    is_mandatory    BOOLEAN DEFAULT 0,
+    soulstone_cost  INTEGER DEFAULT 0,
+    FOREIGN KEY (action_id) REFERENCES upgrade_actions(id) ON DELETE CASCADE
+);
+
+-- Universal triggers: granted to ALL attack actions (e.g., Bestial Form)
+CREATE TABLE IF NOT EXISTS upgrade_universal_triggers (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    upgrade_id      INTEGER NOT NULL,
+    name            TEXT NOT NULL,
+    suit            TEXT,
+    timing          TEXT,
+    text            TEXT NOT NULL,
+    is_mandatory    BOOLEAN DEFAULT 0,
+    soulstone_cost  INTEGER DEFAULT 0,
+    FOREIGN KEY (upgrade_id) REFERENCES upgrades(id) ON DELETE CASCADE
+);
+
+-- ============================================================
 -- INDEXES
 -- ============================================================
 
@@ -231,3 +302,7 @@ CREATE INDEX IF NOT EXISTS idx_triggers_action ON triggers(action_id);
 CREATE INDEX IF NOT EXISTS idx_abilities_model ON abilities(model_id);
 CREATE INDEX IF NOT EXISTS idx_model_factions_faction ON model_factions(faction);
 CREATE INDEX IF NOT EXISTS idx_parse_log_status ON parse_log(status);
+CREATE INDEX IF NOT EXISTS idx_upgrades_faction ON upgrades(faction);
+CREATE INDEX IF NOT EXISTS idx_upgrades_keyword ON upgrades(keyword);
+CREATE INDEX IF NOT EXISTS idx_upgrade_actions_upgrade ON upgrade_actions(upgrade_id);
+CREATE INDEX IF NOT EXISTS idx_upgrade_action_triggers_action ON upgrade_action_triggers(action_id);

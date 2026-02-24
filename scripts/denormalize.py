@@ -15,8 +15,9 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-DB_PATH = Path("/home/claude/m4e.db")
-OUT_DIR = Path("/home/claude/knowledge_base")
+_SCRIPT_DIR = Path(__file__).parent
+DB_PATH = _SCRIPT_DIR.parent / "db" / "m4e.db"
+OUT_DIR = _SCRIPT_DIR.parent / "Model Data Json"
 
 # Fields to strip from denormalized output (internal DB IDs, redundant fields)
 STRIP_MODEL_FIELDS = {"id", "parse_date", "parse_status", "source_pdf"}
@@ -178,6 +179,59 @@ def export_crew_cards(conn: sqlite3.Connection) -> list[dict]:
     return result
 
 
+STRIP_UPGRADE_FIELDS = {"id", "parse_date", "parse_status", "source_pdf"}
+STRIP_UPGRADE_ABILITY_FIELDS = {"id", "upgrade_id"}
+STRIP_UPGRADE_ACTION_FIELDS = {"id", "upgrade_id"}
+STRIP_UPGRADE_TRIGGER_FIELDS = {"id", "action_id", "upgrade_id"}
+
+
+def export_upgrades(conn: sqlite3.Connection) -> list[dict]:
+    """Export all upgrade cards with fully denormalized nested data."""
+    c = conn.cursor()
+
+    c.execute("SELECT * FROM upgrades ORDER BY faction, name")
+    upgrades = c.fetchall()
+
+    result = []
+    for upg in upgrades:
+        uid = upg["id"]
+
+        # Abilities
+        c.execute("SELECT * FROM upgrade_abilities WHERE upgrade_id=? ORDER BY id", (uid,))
+        abilities = [clean_bool_fields(clean_dict(a, STRIP_UPGRADE_ABILITY_FIELDS)) for a in c.fetchall()]
+
+        # Actions + triggers
+        c.execute("SELECT * FROM upgrade_actions WHERE upgrade_id=? ORDER BY id", (uid,))
+        actions_raw = c.fetchall()
+        actions = []
+        for act in actions_raw:
+            aid = act["id"]
+            c.execute("SELECT * FROM upgrade_action_triggers WHERE action_id=? ORDER BY id", (aid,))
+            triggers = [clean_bool_fields(clean_dict(t, STRIP_UPGRADE_TRIGGER_FIELDS)) for t in c.fetchall()]
+
+            action_clean = clean_bool_fields(clean_dict(act, STRIP_UPGRADE_ACTION_FIELDS))
+            if triggers:
+                action_clean["triggers"] = triggers
+            actions.append(action_clean)
+
+        # Universal triggers
+        c.execute("SELECT * FROM upgrade_universal_triggers WHERE upgrade_id=? ORDER BY id", (uid,))
+        universal_triggers = [clean_bool_fields(clean_dict(t, STRIP_UPGRADE_TRIGGER_FIELDS)) for t in c.fetchall()]
+
+        # Build upgrade document
+        u = clean_bool_fields(clean_dict(upg, STRIP_UPGRADE_FIELDS))
+        if abilities:
+            u["granted_abilities"] = abilities
+        if actions:
+            u["granted_actions"] = actions
+        if universal_triggers:
+            u["universal_triggers"] = universal_triggers
+
+        result.append(u)
+
+    return result
+
+
 def export_token_registry(conn: sqlite3.Connection) -> list[dict]:
     """Export the global token registry."""
     c = conn.cursor()
@@ -256,6 +310,14 @@ def main():
         json.dump(all_crew, f, indent=2)
     print(f"  Total: {len(all_crew)} crew cards -> {crew_path.name}")
     
+    # === Export upgrades ===
+    print("\nExporting upgrades...")
+    all_upgrades = export_upgrades(conn)
+    upgrades_path = OUT_DIR / "m4e_upgrades.json"
+    with open(upgrades_path, "w", encoding="utf-8") as f:
+        json.dump(all_upgrades, f, indent=2)
+    print(f"  Total: {len(all_upgrades)} upgrades -> {upgrades_path.name}")
+
     # === Export token registry ===
     print("\nExporting token registry...")
     tokens = export_token_registry(conn)
@@ -287,6 +349,7 @@ def main():
     print(f"{'='*50}")
     print(f"  Models:       {len(all_models)}")
     print(f"  Crew Cards:   {len(all_crew)}")
+    print(f"  Upgrades:     {len(all_upgrades)}")
     print(f"  Abilities:    {total_abilities}")
     print(f"  Attacks:      {total_attacks}")
     print(f"  Tacticals:    {total_tacticals}")

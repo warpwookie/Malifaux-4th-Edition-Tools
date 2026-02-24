@@ -1,0 +1,134 @@
+{
+  "card_type": "stat_card",
+  "name": "Som'er Teeth Jones",
+  "title": "Bayou Boss",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 6,
+  "wp": 5,
+  "sz": 2,
+  "sp": 6,
+  "health": 14,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "30mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Bigger Hat Than You",
+  "totem": "Skeeter (2)",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Big Hat"
+  ],
+  "abilities": [
+    {
+      "name": "Biggest Hat",
+      "defensive_type": null,
+      "text": "When this model ends its activation, up to three friendly Bayou Gremlins that have activated this turn no longer count as having activated this turn."
+    },
+    {
+      "name": "\"Handle It, Kid\"",
+      "defensive_type": null,
+      "text": "After this model is dealt damage, it may drain a (t) to have a friendly Bayou Gremlin within 10\" be dealt the damage instead."
+    },
+    {
+      "name": "Home on the Bayou",
+      "defensive_type": null,
+      "text": "This model receives a (+) to opposed duels while on the friendly table half."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Boomer",
+      "action_type": "missile",
+      "range": "(gun)10\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "For each raise this attack receives, it deals +1 damage to enemy models within (x)1\" of the target",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "'Expert' Shot",
+          "suit": "(t)",
+          "timing": "after_failing",
+          "text": "After failing, deal 1 damage to an ally engaged with the target to have it declare a (melee) attack, which receives +1 Dmg.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "\"Clobber 'Em!\"",
+          "suit": "(m)",
+          "timing": "when_resolving",
+          "text": "When resolving, deal +1 damage to the target for each friendly Bayou Gremlin within 3\" of it, to a maximum of +3.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Up 'n At 'Em",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 6,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Ally only. Move the target up to 4\". The target may be dealt 2 damage to declare a non-Charge action.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "\"Bring a Friend!\"",
+          "suit": "(c)(c)",
+          "timing": "after_succeeding",
+          "text": "Summon a Bayou Gremlin within 3\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    },
+    {
+      "name": "Gang Up on 'Em",
+      "range": "10\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 4,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Enemy only. This action has a raise value of 3. This action may not target the same model more than once per activation. Summon a Bayou Gremlin within 3\" of the target. For each raise this action receives, summon one additional Bayou Gremlin within 3\" of the target.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Needs Supervision",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Replace one of the summoned models with a Good Ol' Boy or Gremlin Crier. It heals 2 and gains a Summon token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Big Hat\\M4E_Stat_Big-Hat_Som'er_Teeth_Jones_Bayou_Boss.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

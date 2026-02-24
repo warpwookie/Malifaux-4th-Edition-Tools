@@ -502,7 +502,7 @@ def audit_upgrades(conn, report, verbose):
     c.execute("""SELECT u.id, u.name FROM upgrades u
                  WHERE NOT EXISTS (SELECT 1 FROM upgrade_abilities WHERE upgrade_id=u.id)
                  AND NOT EXISTS (SELECT 1 FROM upgrade_actions WHERE upgrade_id=u.id)
-                 AND NOT EXISTS (SELECT 1 FROM upgrade_granted_triggers WHERE upgrade_id=u.id)""")
+                 AND NOT EXISTS (SELECT 1 FROM upgrade_universal_triggers WHERE upgrade_id=u.id)""")
     empty = c.fetchall()
     if empty:
         report.error(section, f"{len(empty)} upgrades with no abilities, actions, or granted triggers",
@@ -512,7 +512,7 @@ def audit_upgrades(conn, report, verbose):
     
     # Granted triggers count
     try:
-        c.execute("SELECT COUNT(*) FROM upgrade_granted_triggers")
+        c.execute("SELECT COUNT(*) FROM upgrade_universal_triggers")
         gt = c.fetchone()[0]
         if gt > 0:
             report.info(section, f"{gt} upgrade granted triggers in database")

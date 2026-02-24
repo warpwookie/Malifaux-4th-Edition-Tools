@@ -1,0 +1,125 @@
+{
+  "card_type": "stat_card",
+  "name": "LENNY JONES",
+  "title": null,
+  "faction": "Bayou",
+  "station": "Henchman",
+  "model_limit": 1,
+  "cost": "10",
+  "df": 5,
+  "wp": 4,
+  "sz": 3,
+  "sp": 6,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "40mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": null,
+  "totem": null,
+  "characteristics": [
+    "Henchman",
+    "Unique",
+    "Living"
+  ],
+  "keywords": [
+    "Big Hat"
+  ],
+  "abilities": [
+    {
+      "name": "Gremlin General",
+      "defensive_type": null,
+      "text": "Other allies within 2\" receive a (+) to their attacks."
+    },
+    {
+      "name": "Grit",
+      "defensive_type": null,
+      "text": "While this model has half of its maximum health or less, its attack actions receive a (-)."
+    },
+    {
+      "name": "Resilient",
+      "defensive_type": "unusual_defense",
+      "text": "Attacks targeting this model reduce raises they receive by 1 (to a minimum of 0)."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Whack'n Stick",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Pound to Dust",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Remove all non-Scheme markers within (aura)2\" of the target.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Knock Aside",
+          "suit": "(m)",
+          "timing": "after_succeeding",
+          "text": "Move the target up to 3\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Whacked Piglet",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Deal 2 damage to a different enemy within 8\".",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Toss",
+      "action_type": "missile",
+      "range": "(gun)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": 12,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This may target friendly models. Target a model of lower Sz than this model.",
+      "effects": "Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement.",
+      "triggers": [],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Friends",
+      "range": "4\"",
+      "skill_value": null,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": null,
+      "damage": null,
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per turn.",
+      "effects": "Summon up to two Bayou Gremlins within range.",
+      "triggers": [],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Big Hat\\M4E_Stat_Big-Hat_Lenny_Jones.pdf",
+  "merge_warnings": [],
+  "extraction_notes": []
+}

@@ -6,11 +6,17 @@
   "description": "This model gains the following trigger on all actions printed on its stat card:",
   "granted_abilities": [],
   "granted_actions": [],
-  "extraction_notes": [
-    "This upgrade grants a trigger to all actions on the model's stat card rather than granting new actions. The trigger details are:",
-    "Hook, Line, and Sinker: (t) - After Succeeding - This trigger must be declared, if able. Immediately, this action fails. Friendly models within (n)2\" of this model gain an enemy Staggered token. This model may discard a card to discard this upgrade.",
-    "Since this is a trigger modification rather than a granted action, it does not fit the standard granted_actions structure. The upgrade modifies existing actions rather than providing new ones."
+  "universal_triggers": [
+    {
+      "name": "Hook, Line, and Sinker",
+      "suit": "(t)",
+      "timing": "after_succeeding",
+      "text": "This trigger must be declared, if able. Immediately, this action fails. Friendly models within (pulse)2\" of this model gain an enemy Staggered token. This model may discard a card to discard this upgrade.",
+      "is_mandatory": true,
+      "soulstone_cost": 0
+    }
   ],
+  "extraction_notes": [],
   "faction": "Resurrectionists",
   "keyword": "Tormented",
   "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Resurrectionists\\Tormented\\M4E_Upgrade_Tormented_Catch_of_the_Day.pdf"

@@ -59,33 +59,33 @@
     ],
     "keywords": [
       "Academic",
-      "Banasuva",
       "Chimera",
-      "Construct",
       "Crossroads",
       "Cult",
       "December",
       "Foundry",
       "Frontier",
       "M&SU",
-      "Mouse",
       "Performer",
       "Syndicate",
-      "Watchman",
       "Watchmen",
       "Wildfire",
       "Witness"
     ]
   },
   "Bayou": {
-    "total_models": 88,
+    "total_models": 110,
     "masters": [
+      "Mah Tucket, Mecha-Meemaw",
+      "Mah Tucket, Metal Magpie",
       "Ophelia LaCroix, Overloaded",
       "Ophelia LaCroix, Red Cage Raider",
       "Som'er Teeth Jones, Bayou Boss",
       "Som'er Teeth Jones, Loot Monger",
       "The Brewmaster, Moonshiner",
       "The Brewmaster, Proof-Prophet",
+      "The Clampetts, Bally-Hoo Bucket",
+      "The Clampetts, Fisherfolk",
       "Ulix Turner, Hogfather",
       "Ulix Turner, Porkbelly Protector",
       "Wong, The Enchanter",
@@ -95,6 +95,7 @@
     ],
     "henchmen": [
       "ALPHONSE LeBLANC",
+      "Aunty Mel",
       "Bad Juju",
       "Bo Peep",
       "Fingers Leong",
@@ -105,13 +106,19 @@
       "Lucky Fate, Emissary",
       "Nia, Fractured Future",
       "Old Major",
-      "Popcorn Turner"
+      "Popcorn Turner",
+      "Sparks LeBlanc",
+      "Trixiebelle",
+      "Uncle Bogg"
     ],
-    "minions": 23,
+    "minions": 30,
     "totems": [
       "Apprentice Wesley",
+      "Big Brain Brin",
+      "Bruce",
       "Cooper Jones",
       "Flying Piglet",
+      "Judd & Honey",
       "Lucky Fate, Effigy",
       "Mirewing",
       "Olivia Bernard",
@@ -119,12 +126,13 @@
       "SAMMY LaCROIX",
       "Skeeter",
       "Spit Hog",
+      "The Little Lass",
       "The Sow",
       "Voodoo Doll",
       "YOUNG LaCROIX"
     ],
     "keywords": [
-      "Arms Race",
+      "Angler",
       "Big Hat",
       "Crossroads",
       "Infamous",
@@ -133,7 +141,6 @@
       "Returned",
       "Sooey",
       "Swampfiend",
-      "Tri Chi",
       "Tri-Chi",
       "Tricksy",
       "Wizz-Bang"
@@ -200,13 +207,9 @@
     "keywords": [
       "Apex",
       "Bygone",
-      "Bygone EVS",
       "Cadmus",
-      "Cryptologist (2)",
       "DUA",
       "EVS",
-      "Luna",
-      "Oro Boro",
       "Seeker",
       "Society",
       "Syndicate",
@@ -273,22 +276,14 @@
       "Augmented",
       "Cavalier",
       "Crossroads",
-      "Disease Containment Unit",
       "Elite",
-      "Excessive Violence",
       "Family",
       "Frontier",
       "Guard",
-      "Heavy Salvo",
       "Journalist",
       "Marshal",
-      "Mechanical Attendant",
       "Savage",
-      "Tempered Steel",
-      "The Scribe",
       "Vanguard",
-      "Vigilante Justice",
-      "Walking Cannon (2)",
       "Witch Hunter"
     ]
   },
@@ -350,38 +345,21 @@
       "Urnbearer"
     ],
     "keywords": [
-      "Abyssal Anchor",
-      "Adaptive Evolution",
       "Apex",
       "Banished",
-      "Blood Hunter",
       "Brood",
       "Chimera",
       "Crossroads",
-      "Erymanthian Boar",
       "Fae",
-      "Frostbitten Prophecy",
       "Grim",
-      "Jackalope",
-      "Lord Chompy Bits",
-      "Loyal",
-      "Lucid Dreaming",
-      "Lurking Lullaby",
-      "Marathine",
       "Nightmare",
-      "Oneirophobia",
-      "Primordial Magic",
-      "Razorspine Rattler",
       "Returned",
-      "Rising Tide",
       "Savage",
-      "Urchin",
-      "Urnbearer (2)",
       "Woe"
     ]
   },
   "Outcasts": {
-    "total_models": 104,
+    "total_models": 102,
     "masters": [
       "Captain Zipp, Cloudchaser",
       "Captain Zipp, Dread Pirate",
@@ -423,7 +401,7 @@
       "The Nothing Beast",
       "Vanessa Chambers"
     ],
-    "minions": 24,
+    "minions": 23,
     "totems": [
       "Ashen Echo",
       "Benny Wolcomb",
@@ -445,7 +423,6 @@
     "keywords": [
       "Amalgam",
       "Ampersand",
-      "Angler",
       "Bandit",
       "Crossroads",
       "Freikorps",
@@ -454,8 +431,7 @@
       "Jockey",
       "Mercenary",
       "Obliteration",
-      "Plague",
-      "Soul Battery"
+      "Plague"
     ]
   },
   "Resurrectionists": {
@@ -523,31 +499,16 @@
     "keywords": [
       "Amalgam",
       "Ancestor",
-      "Corpse Curator",
       "Crossroads",
       "Experimental",
       "Experimental Transports",
-      "Flickering Grasp",
       "Forgotten",
       "Fungal",
-      "Guardian Spirit",
-      "Mortuary Access",
-      "Noxious Nephilim",
-      "Parade of the Dead",
       "Redchapel",
       "Revenant",
-      "Soul Porter",
-      "Stolen Lab Equipment",
-      "Temperance",
       "Tormented",
       "Transmortis",
-      "Transports",
-      "Urami",
-      "Vengeful Spirits",
-      "Wailing Doom",
-      "Yin, the Penangalan",
-      "Zombie",
-      "Zombie Chihuahua"
+      "Urami"
     ]
   },
   "Ten Thunders": {
@@ -605,28 +566,15 @@
       "Wanyudo"
     ],
     "keywords": [
-      "Ama No Zako",
-      "Amanjaku",
-      "Aspiring Student",
       "Crossroads",
-      "Darkness",
-      "Eclipse",
-      "Entangled Spirits",
-      "Forgeling",
       "Foundry",
       "Honeypot",
-      "Hungering",
-      "Kunoichi (3)",
       "Last Blossom",
-      "Loyalty Revitalized",
       "Monk",
-      "Mu Long",
       "Oni",
-      "Paper Tiger",
       "Qi and Gong",
       "Red Library",
-      "Sayuri",
-      "Shang"
+      "Sayuri"
     ]
   }
 }

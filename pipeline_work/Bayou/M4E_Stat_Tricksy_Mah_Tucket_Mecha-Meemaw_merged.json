@@ -1,0 +1,153 @@
+{
+  "card_type": "stat_card",
+  "name": "MAH TUCKET",
+  "title": "MECHA-MEEMAW",
+  "faction": "Bayou",
+  "station": "Master",
+  "model_limit": 1,
+  "cost": "-",
+  "df": 5,
+  "wp": 6,
+  "sz": 4,
+  "sp": 7,
+  "health": 13,
+  "soulstone_cache": null,
+  "shields": 0,
+  "base_size": "50mm",
+  "infuses_soulstone_on_death": false,
+  "crew_card_name": "Looted Parts",
+  "totem": "Big Brain Brin",
+  "characteristics": [
+    "Master",
+    "Unique",
+    "Living",
+    "Construct",
+    "Tricksy"
+  ],
+  "keywords": [],
+  "abilities": [
+    {
+      "name": "Legs in Unexpected Places",
+      "defensive_type": null,
+      "text": "This model may not gain Staggered or Slow tokens."
+    },
+    {
+      "name": "Made o' Metal",
+      "defensive_type": "unusual_defense",
+      "text": "Reduce all damage dealt to this model by 1."
+    },
+    {
+      "name": "Ominous Whirring",
+      "defensive_type": null,
+      "text": "When this model activates, it may drain two (soulstone) to increase the damage of its attack actions by +1 until the end of its activation."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Over-Sized Drill",
+      "action_type": "melee",
+      "range": "(melee)2\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "3",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "This action ignores (warding) abilities. This attack has a raise value of 3.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Dropped Down a Hole",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Place the target into base contact with a marker within 6\" of its current location.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Cruelty",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Once per turn. Declare this action again.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Analyze Weakness",
+          "suit": "(t)",
+          "timing": "after_succeeding",
+          "text": "Target gains an Analyzed token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "Giant Harpoon Gun",
+      "action_type": "missile",
+      "range": "(gun)12\"",
+      "skill_value": 6,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "resist": "Df",
+      "tn": null,
+      "damage": "2",
+      "is_signature": false,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": null,
+      "effects": "Move the target up to 6\" toward this model.",
+      "triggers": [
+        {
+          "name": "Of FIRE!",
+          "suit": "(r)",
+          "timing": "after_succeeding",
+          "text": "Target gains a Burning token.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        },
+        {
+          "name": "Lead the Target",
+          "suit": "(t)",
+          "timing": "when_resolving",
+          "text": "When resolving, this model may move the target in any direction.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "attack_actions"
+    },
+    {
+      "name": "'Nother Gremlin's Trash",
+      "range": "4\"",
+      "skill_value": 0,
+      "skill_built_in_suit": null,
+      "skill_fate_modifier": null,
+      "tn": 5,
+      "damage": null,
+      "is_signature": true,
+      "soulstone_cost": 0,
+      "costs_and_restrictions": "Once per activation. This model may either remove an enemy Scheme marker within range or make a Scheme marker within range.",
+      "effects": null,
+      "triggers": [
+        {
+          "name": "Secret Tunnel",
+          "suit": "(c)",
+          "timing": "after_succeeding",
+          "text": "Choose another ally within 2\" of the made marker and place it within 2\" of another marker within 6\" of the made marker, ignoring LoS.",
+          "is_mandatory": false,
+          "soulstone_cost": 0
+        }
+      ],
+      "category": "tactical_actions",
+      "action_type": null
+    }
+  ],
+  "source_pdf": "C:\\Users\\mbeck\\Documents\\GitHub\\Malifaux-4th-Edition-Tools\\source_pdfs\\Bayou\\Tricksy\\M4E_Stat_Tricksy_Mah_Tucket_Mecha-Meemaw.pdf",
+  "merge_warnings": [
+    "Title mismatch: front='MECHA-MEEMAW' back='Mecha-Meemaw'"
+  ],
+  "extraction_notes": []
+}

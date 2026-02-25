@@ -137,15 +137,80 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     return merged
 
 
+def merge_crew_card(front: dict, back: dict, source_pdf: str = None) -> dict:
+    """
+    Merge crew card front (abilities/actions) with back (markers/tokens).
+
+    Front provides: name, associated_master, associated_title, faction,
+                    keyword_abilities, keyword_actions
+    Back provides:  markers (with terrain traits, full rules text),
+                    tokens (with full rules text)
+    """
+    warnings = []
+
+    # Cross-check name match
+    front_name = front.get("name", "").strip()
+    back_name = back.get("name", "").strip()
+    if front_name.lower() != back_name.lower():
+        warnings.append(f"Name mismatch: front='{front_name}' back='{back_name}'")
+
+    # Start from front data (abilities, actions, metadata)
+    merged = dict(front)
+    merged["card_type"] = "crew_card"
+
+    # Merge markers: back is authoritative (has full details from dedicated section)
+    back_markers = back.get("markers", [])
+    front_markers = merged.get("markers", [])
+    back_marker_names = {m["name"].lower() for m in back_markers}
+
+    # Keep front-only markers not present on back, then add all back markers
+    unique_front_markers = [m for m in front_markers if m["name"].lower() not in back_marker_names]
+    if unique_front_markers:
+        warnings.append(
+            f"Front has markers not on back: {[m['name'] for m in unique_front_markers]}"
+        )
+    merged["markers"] = back_markers + unique_front_markers
+
+    # Merge tokens: back is authoritative (has complete rules text)
+    back_tokens = back.get("tokens", [])
+    front_tokens = merged.get("tokens", [])
+    back_token_names = {t["name"].lower() for t in back_tokens}
+
+    unique_front_tokens = [t for t in front_tokens if t["name"].lower() not in back_token_names]
+    if unique_front_tokens:
+        warnings.append(
+            f"Front has tokens not on back: {[t['name'] for t in unique_front_tokens]}"
+        )
+    merged["tokens"] = back_tokens + unique_front_tokens
+
+    merged["source_pdf"] = source_pdf
+    merged["merge_warnings"] = warnings
+
+    # Combine extraction notes from both sides
+    merged["extraction_notes"] = (
+        front.get("extraction_notes", []) +
+        back.get("extraction_notes", [])
+    )
+
+    # Remove extraction meta from front (will be in individual side data)
+    merged.pop("_extraction_meta", None)
+
+    return merged
+
+
 def merge_from_file(input_path: str, source_pdf: str = None) -> dict:
     """Load extraction JSON and merge."""
     with open(input_path, encoding="utf-8") as f:
         data = json.load(f)
     
     if "front" in data and "back" in data:
-        return merge_stat_card(data["front"], data["back"], source_pdf)
+        front_type = data["front"].get("card_type", "")
+        if front_type == "crew_card":
+            return merge_crew_card(data["front"], data["back"], source_pdf)
+        else:
+            return merge_stat_card(data["front"], data["back"], source_pdf)
     elif data.get("card_type") == "crew_card":
-        # Crew cards don't need merging
+        # Single-side crew card (no back) — no merging needed
         data["source_pdf"] = source_pdf
         return data
     else:

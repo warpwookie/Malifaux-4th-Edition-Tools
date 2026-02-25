@@ -32,8 +32,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from pdf_splitter import extract_card_images, batch_extract, classify_card_type
-from card_extractor import extract_stat_card, extract_crew_card, extract_upgrade_card
-from merger import merge_stat_card
+from card_extractor import extract_stat_card, extract_crew_card, extract_crew_card_back, extract_upgrade_card
+from merger import merge_stat_card, merge_crew_card
 from validator import validate_card
 from db_loader import init_db, load_stat_card, load_crew_card, load_upgrade_card, log_parse
 
@@ -129,11 +129,33 @@ def process_single_pdf(pdf_path: str, db_path: str, client: anthropic.Anthropic,
         merged = merge_stat_card(extraction["front"], extraction["back"], str(pdf_path))
         
     elif card_type == "crew_card":
-        img = images[0]
-        merged = extract_crew_card(client, img["image_path"])
-        if "error" in merged:
-            return {"status": "error", "step": "vision", "error": merged["error"]}
-        merged["source_pdf"] = str(pdf_path)
+        if len(images) >= 2:
+            # Two-page crew card: front has abilities/actions, back has markers/tokens
+            front_img = next((i for i in images if i["side"] == "front"), images[0])
+            back_img = next((i for i in images if i["side"] == "back"), images[1])
+
+            print("  Step 2a: Extracting crew card front...")
+            front = extract_crew_card(client, front_img["image_path"])
+            if "error" in front:
+                return {"status": "error", "step": "vision", "error": front["error"]}
+
+            print("  Step 2b: Extracting crew card back...")
+            back = extract_crew_card_back(client, back_img["image_path"])
+
+            if "error" in back:
+                print(f"  WARNING: Back extraction failed ({back.get('error')}), using front only")
+                merged = front
+                merged["source_pdf"] = str(pdf_path)
+            else:
+                print("  Step 3: Merging front + back...")
+                merged = merge_crew_card(front, back, str(pdf_path))
+        else:
+            # Single-page crew card (fallback)
+            img = images[0]
+            merged = extract_crew_card(client, img["image_path"])
+            if "error" in merged:
+                return {"status": "error", "step": "vision", "error": merged["error"]}
+            merged["source_pdf"] = str(pdf_path)
     
     elif card_type == "upgrade_card":
         img = images[0]

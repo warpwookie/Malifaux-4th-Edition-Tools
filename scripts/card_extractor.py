@@ -157,10 +157,41 @@ def extract_stat_card(client: anthropic.Anthropic, front_path: str, back_path: s
     return {"front": front, "back": back, "status": "extracted"}
 
 
-def extract_crew_card(client: anthropic.Anthropic, image_path: str) -> dict:
-    """Extract a crew card from a single image."""
-    print(f"  Extracting crew card: {Path(image_path).name}")
-    result = extract_card_side(client, image_path, "crew_card_prompt")
+def extract_crew_card(client: anthropic.Anthropic, front_path: str, back_path: str = None) -> dict:
+    """
+    Extract a crew card from front image and optionally back image.
+
+    If back_path is provided, returns {"front": ..., "back": ..., "status": "extracted"}
+    matching the stat card two-side extraction format.
+    If back_path is None, returns the front extraction directly (legacy behavior).
+    """
+    print(f"  Extracting crew card front: {Path(front_path).name}")
+    front = extract_card_side(client, front_path, "crew_card_prompt")
+
+    if "error" in front:
+        return front
+
+    if back_path is None:
+        return front
+
+    print(f"  Extracting crew card back: {Path(back_path).name}")
+    back = extract_card_side(client, back_path, "crew_card_back_prompt")
+
+    if "error" in back:
+        # Non-fatal: return front with warning about back failure
+        front["_back_extraction_error"] = back.get("error", "Unknown error")
+        return front
+
+    return {"front": front, "back": back, "status": "extracted"}
+
+
+def extract_crew_card_back(client: anthropic.Anthropic, image_path: str) -> dict:
+    """
+    Extract markers and tokens from a crew card back image.
+    Standalone function for backfill processing of existing back PNGs.
+    """
+    print(f"  Extracting crew card back: {Path(image_path).name}")
+    result = extract_card_side(client, image_path, "crew_card_back_prompt")
     return result
 
 
@@ -186,10 +217,13 @@ if __name__ == "__main__":
             sys.exit(1)
         result = extract_stat_card(client, args.images[0], args.images[1])
     else:
-        if len(args.images) != 1:
-            print("ERROR: Crew cards require exactly 1 image")
+        if len(args.images) == 2:
+            result = extract_crew_card(client, args.images[0], args.images[1])
+        elif len(args.images) == 1:
+            result = extract_crew_card(client, args.images[0])
+        else:
+            print("ERROR: Crew cards require 1 or 2 images (front, optional back)")
             sys.exit(1)
-        result = extract_crew_card(client, args.images[0])
     
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)

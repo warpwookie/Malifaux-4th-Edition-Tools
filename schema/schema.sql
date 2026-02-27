@@ -204,6 +204,47 @@ CREATE TABLE IF NOT EXISTS token_model_sources (
 );
 
 -- ============================================================
+-- MARKER REFERENCE (global registry)
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS markers (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT UNIQUE NOT NULL,                    -- "Ice Pillar", "Scheme", "Piano"
+    category        TEXT NOT NULL,                           -- "universal" or "keyword_specific"
+    subcategory     TEXT,                                    -- "scheme"/"remains"/"strategy" (universal only)
+    default_size    TEXT DEFAULT '30mm',                     -- "30mm", "40mm", "50mm"
+    default_height  TEXT DEFAULT 'Ht 0',                    -- "Ht 0", "Ht 3", etc.
+    terrain_traits_csv TEXT,                                 -- Denormalized quick-ref: "blocking, impassable"
+    rules_text      TEXT,                                    -- Canonical marker rules/effects
+    keyword         TEXT                                     -- Owning keyword (null for universal)
+);
+
+CREATE TABLE IF NOT EXISTS marker_terrain_traits (
+    marker_id   INTEGER NOT NULL,
+    trait        TEXT NOT NULL,                              -- "blocking", "concealing", "destructible", etc.
+    FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
+    UNIQUE(marker_id, trait)
+);
+
+CREATE TABLE IF NOT EXISTS marker_crew_sources (
+    marker_id       INTEGER NOT NULL,
+    crew_card_id    INTEGER NOT NULL,
+    FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
+    FOREIGN KEY (crew_card_id) REFERENCES crew_cards(id) ON DELETE CASCADE,
+    UNIQUE(marker_id, crew_card_id)
+);
+
+CREATE TABLE IF NOT EXISTS marker_model_sources (
+    marker_id       INTEGER NOT NULL,
+    model_id        INTEGER NOT NULL,
+    source_type     TEXT NOT NULL,                           -- "ability", "action_effect", "trigger"
+    source_name     TEXT NOT NULL,                           -- Name of the ability/action/trigger
+    relationship    TEXT DEFAULT 'references',               -- "creates", "removes", "references"
+    FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
+    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE
+);
+
+-- ============================================================
 -- PARSE AUDIT LOG
 -- ============================================================
 
@@ -306,3 +347,8 @@ CREATE INDEX IF NOT EXISTS idx_upgrades_faction ON upgrades(faction);
 CREATE INDEX IF NOT EXISTS idx_upgrades_keyword ON upgrades(keyword);
 CREATE INDEX IF NOT EXISTS idx_upgrade_actions_upgrade ON upgrade_actions(upgrade_id);
 CREATE INDEX IF NOT EXISTS idx_upgrade_action_triggers_action ON upgrade_action_triggers(action_id);
+CREATE INDEX IF NOT EXISTS idx_markers_name ON markers(name);
+CREATE INDEX IF NOT EXISTS idx_markers_keyword ON markers(keyword);
+CREATE INDEX IF NOT EXISTS idx_marker_crew_sources_marker ON marker_crew_sources(marker_id);
+CREATE INDEX IF NOT EXISTS idx_marker_model_sources_marker ON marker_model_sources(marker_id);
+CREATE INDEX IF NOT EXISTS idx_marker_model_sources_model ON marker_model_sources(model_id);

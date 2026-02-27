@@ -517,7 +517,7 @@ Examples:
     upgrade_count = sum(1 for p in new_pdfs if classify_card(p.stem) == "upgrade")
     
     print(f"\n  Breakdown: {stat_count} stat cards, {crew_count} crew cards, {upgrade_count} upgrades")
-    api_calls = (stat_count * 2) + crew_count + (upgrade_count * 2)
+    api_calls = (stat_count * 2) + (crew_count * 2) + (upgrade_count * 2)
     print(f"  Estimated API calls: ~{api_calls}")
     
     # List mode

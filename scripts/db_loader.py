@@ -143,9 +143,12 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
     
     # Auto-extract tokens mentioned in text
     _update_token_references(c, model_id, card)
-    
+
+    # Auto-extract marker references from text
+    _update_marker_references(c, model_id, card)
+
     conn.commit()
-    
+
     return {"status": status, "model_id": model_id, "name": name, "title": title}
 
 
@@ -200,6 +203,60 @@ def _update_token_references(c: sqlite3.Cursor, model_id: int, card: dict):
         scan_text(act.get("effects", ""), "action_effect", act.get("name", ""))
         for trig in act.get("triggers", []):
             scan_text(trig.get("text", ""), "trigger", 
+                     f"{act.get('name', '')} > {trig.get('name', '')}")
+
+
+def _update_marker_references(c: sqlite3.Cursor, model_id: int, card: dict):
+    """Scan card text for marker references and update marker_model_sources."""
+    # Remove existing references for this model
+    c.execute("DELETE FROM marker_model_sources WHERE model_id=?", (model_id,))
+
+    # Get known marker names (sorted longest first for greedy matching)
+    c.execute("SELECT id, name FROM markers ORDER BY length(name) DESC")
+    known_markers = [(row[0], row[1]) for row in c.fetchall()]
+    if not known_markers:
+        return
+
+    marker_patterns = []
+    for marker_id, marker_name in known_markers:
+        pattern = re.compile(
+            r'\b' + re.escape(marker_name) + r'\s+markers?\b',
+            re.IGNORECASE
+        )
+        marker_patterns.append((marker_id, marker_name, pattern))
+
+    create_words = {"make", "makes", "making", "made", "summon", "summons",
+                    "place", "places", "placed", "create", "creates"}
+    remove_words = {"remove", "removes", "removed", "removing", "discard", "discards",
+                    "destroy", "destroys"}
+
+    def scan_text(text: str, source_type: str, source_name: str):
+        if not text:
+            return
+        for marker_id, marker_name, pattern in marker_patterns:
+            for match in pattern.finditer(text):
+                start = max(0, match.start() - 30)
+                context = text[start:match.end() + 10].lower()
+                if any(w in context for w in create_words):
+                    relationship = "creates"
+                elif any(w in context for w in remove_words):
+                    relationship = "removes"
+                else:
+                    relationship = "references"
+                c.execute("""INSERT INTO marker_model_sources
+                    (marker_id, model_id, source_type, source_name, relationship)
+                    VALUES (?,?,?,?,?)""",
+                    (marker_id, model_id, source_type, source_name, relationship))
+
+    # Scan abilities
+    for ab in card.get("abilities", []):
+        scan_text(ab.get("text", ""), "ability", ab.get("name", ""))
+
+    # Scan actions
+    for act in card.get("actions", []):
+        scan_text(act.get("effects", ""), "action_effect", act.get("name", ""))
+        for trig in act.get("triggers", []):
+            scan_text(trig.get("text", ""), "trigger",
                      f"{act.get('name', '')} > {trig.get('name', '')}")
 
 
@@ -266,20 +323,36 @@ def load_crew_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
                     (action_id, trig["name"], trig.get("suit"), trig.get("timing"),
                      trig["text"], trig.get("is_mandatory", False), trig.get("soulstone_cost", 0)))
     
-    # Markers
+    # Markers (per-card storage)
     for marker in card.get("markers", []):
         c.execute("""INSERT INTO crew_markers (crew_card_id, name, size, height, text)
             VALUES (?,?,?,?,?)""",
             (crew_id, marker["name"], marker.get("size"), marker.get("height"), marker.get("text")))
-        marker_id = c.lastrowid
-        for trait in marker.get("terrain_traits", []):
-            c.execute("INSERT INTO crew_marker_terrain_traits VALUES (?,?)", (marker_id, trait))
-    
+        cm_id = c.lastrowid
+        traits = marker.get("terrain_traits", [])
+        for trait in traits:
+            c.execute("INSERT INTO crew_marker_terrain_traits VALUES (?,?)", (cm_id, trait))
+
+        # Also upsert into global markers registry
+        traits_csv = ", ".join(sorted(traits)) if traits else None
+        c.execute("INSERT OR IGNORE INTO markers (name, category, default_size, default_height, "
+                  "terrain_traits_csv, rules_text) VALUES (?,?,?,?,?,?)",
+                  (marker["name"], "keyword_specific",
+                   marker.get("size", "30mm"), marker.get("height", "Ht 0"),
+                   traits_csv, marker.get("text")))
+        c.execute("SELECT id FROM markers WHERE name=?", (marker["name"],))
+        global_marker_id = c.fetchone()[0]
+        for trait in traits:
+            c.execute("INSERT OR IGNORE INTO marker_terrain_traits (marker_id, trait) VALUES (?,?)",
+                      (global_marker_id, trait))
+        c.execute("INSERT OR IGNORE INTO marker_crew_sources (marker_id, crew_card_id) VALUES (?,?)",
+                  (global_marker_id, crew_id))
+
     # Tokens
     for token in card.get("tokens", []):
         c.execute("INSERT INTO crew_tokens (crew_card_id, name, text) VALUES (?,?,?)",
                   (crew_id, token["name"], token["text"]))
-    
+
     conn.commit()
     return {"status": status, "crew_card_id": crew_id, "name": name}
 

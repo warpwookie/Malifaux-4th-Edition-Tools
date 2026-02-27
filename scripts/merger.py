@@ -137,15 +137,53 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     return merged
 
 
+def merge_crew_card(front: dict, back: dict, source_pdf: str = None) -> dict:
+    """
+    Merge crew card front and back extractions.
+
+    Front provides: name, associated_master, associated_title, faction,
+                    keyword_abilities, keyword_actions, markers
+    Back provides:  tokens (name + full rules text)
+    """
+    warnings = []
+
+    front_name = front.get("name", "").strip()
+    back_name = back.get("name", "").strip()
+    if front_name.lower() != back_name.lower():
+        warnings.append(f"Crew card name mismatch: front='{front_name}' back='{back_name}'")
+
+    merged = {
+        "card_type": "crew_card",
+        "name": front_name,
+        "associated_master": front.get("associated_master"),
+        "associated_title": front.get("associated_title"),
+        "faction": front.get("faction"),
+        "keyword_abilities": front.get("keyword_abilities", []),
+        "keyword_actions": front.get("keyword_actions", []),
+        "markers": front.get("markers", []),
+        "tokens": back.get("tokens", []),
+        "source_pdf": source_pdf,
+        "merge_warnings": warnings,
+        "extraction_notes": (
+            front.get("extraction_notes", []) +
+            back.get("extraction_notes", [])
+        ),
+    }
+
+    return merged
+
+
 def merge_from_file(input_path: str, source_pdf: str = None) -> dict:
     """Load extraction JSON and merge."""
     with open(input_path, encoding="utf-8") as f:
         data = json.load(f)
-    
+
     if "front" in data and "back" in data:
+        if data["front"].get("card_type") == "crew_card":
+            return merge_crew_card(data["front"], data["back"], source_pdf)
         return merge_stat_card(data["front"], data["back"], source_pdf)
     elif data.get("card_type") == "crew_card":
-        # Crew cards don't need merging
+        # Single-side crew card (no back) — pass through
         data["source_pdf"] = source_pdf
         return data
     else:

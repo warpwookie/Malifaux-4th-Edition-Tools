@@ -38,6 +38,35 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Ice Pillar",
+        "height": "Ht 5",
+        "text": "Models within 2\" of this marker suffer -1 to their duel totals during their activation.",
+        "terrain_traits": [
+          "blocking",
+          "impassable"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -69,6 +98,36 @@
         "soulstone_cost": 0,
         "effects": "Kill two friendly elemental minions within range; do not infuse any \u25c6 when they are killed. Summon a golem Academic model with 6 health in base contact with this model."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -90,7 +149,19 @@
     "tokens": [
       {
         "name": "Burning",
-        "text": "The following cumulative effects apply based on the level of Burning Man's Prayer's fervor bar:\n1 Fervor: Damage from friendly Burning tokens is dealt to enemy models within X\", instead of base contact. X equals the level of this crew's fervor bar.\n2 Fervor: Friendly Burning tokens are not removed during the end phase.\n3 Fervor: Attacks targeting enemies with a friendly Burning token which deal damage, deal +1 damage."
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -114,6 +185,32 @@
         "granted_to": "Friendly EVS models",
         "name": "Contaminated Theories",
         "text": "Once per activation. When an enemy model cheats fate in a duel with this model, with a card in this model's completed fieldwork objectives, this model may drain a \u2666 and mark the objective with the value of the cheated card as uncompleted. If it does so, the cheated card's value is set to 0."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      },
+      {
+        "name": "Voyage",
+        "text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move."
       }
     ]
   },
@@ -153,6 +250,20 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -180,6 +291,30 @@
         "is_signature": false,
         "soulstone_cost": 1,
         "effects": "Make a Decoy marker in base contact with this model. Then, this model heals 2 and is placed within 4\"."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Decoy",
+        "text": "When a friendly Performer within 3\" is dealt damage, it may be placed into base contact with this marker to reduce the damage by 1, then remove this marker."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Backtrack",
+        "text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -209,6 +344,28 @@
         "soulstone_cost": 0,
         "effects": "Place this model in base contact with the target. Then this model may declare the Interact action. The following do not restrict this model from declaring this Interact action: being engaged, leaving engagement with a Walk, and targeting a marker with an enemy in base contact.",
         "costs_and_restrictions": "Friendly Scheme or Decoy marker only."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Backtrack",
+        "text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -242,6 +399,35 @@
         "soulstone_cost": 0,
         "effects": "Move the target up to 5\". If this action receives a raise, the target gains a Staggered token.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Ice Pillar",
+        "height": "Ht 5",
+        "text": "Models within 2\" of this marker suffer -1 to their duel totals during their activation.",
+        "terrain_traits": [
+          "blocking",
+          "impassable"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -288,6 +474,24 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Perforated",
+        "text": "After this model resolves the Walk or Charge action, deal 1 damage to it per inch it moved (to a maximum of 3). Other models may target this model with the Interact action to remove this token."
+      }
     ]
   },
   {
@@ -311,6 +515,28 @@
         "is_signature": false,
         "soulstone_cost": 1,
         "effects": "Deal 1 damage to target ally. This model moves up to 4\" and gains an Impact token."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token"
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -358,6 +584,28 @@
         "effects": "Declare an attack drawing range and LoS from the target. If the attack succeeds, draw a card and remove the target.",
         "costs_and_restrictions": "Target a friendly Tide marker."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Staggered)",
+        "text": "When an enemy model within 2\" of this model activates, it must discard a card or gain a Staggered token."
+      },
+      {
+        "name": "Drift",
+        "text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\"."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -394,6 +642,28 @@
         "effects": "Target an enemy leader with an Analyzed or Injured token. The opponent must tell you the name of their currently selected scheme.",
         "costs_and_restrictions": "(t)(t)"
       }
+    ],
+    "tokens": [
+      {
+        "name": "Analyzed",
+        "text": "This model may not reduce damage with its abilities. Remove this token during the end phase."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -420,13 +690,32 @@
     ],
     "markers": [
       {
-        "name": "Piano"
+        "name": "Piano",
+        "size": "40mm",
+        "height": "Ht 3",
+        "text": "Enemy models within 1\" must discard a card as a cost to declare the Interact action.",
+        "terrain_traits": [
+          "blocking",
+          "impassable"
+        ]
       }
     ],
     "tokens": [
       {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Challenged",
+        "text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
         "name": "Hastened",
-        "text": "Hastened token"
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
       }
     ]
   },
@@ -445,6 +734,34 @@
         "granted_to": "Friendly unique Swampfiend models",
         "name": "Foreseen Doom",
         "text": "After an enemy model fails an attack targeting this model, this model may drain a (t) to deal 2 irreducible damage to the attacker."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Bog",
+        "size": "50mm",
+        "text": "When an enemy model activates within 1\" of this marker, it must discard a card or gain a Stunned token.",
+        "terrain_traits": [
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -491,17 +808,32 @@
     ],
     "markers": [
       {
-        "name": "Piano"
+        "name": "Piano",
+        "size": "40mm",
+        "height": "Ht 3",
+        "text": "Enemy models within 1\" must discard a card as a cost to declare the Interact action.",
+        "terrain_traits": [
+          "blocking",
+          "impassable"
+        ]
       }
     ],
     "tokens": [
       {
-        "name": "Hastened",
-        "text": "Hastened token."
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
       },
       {
         "name": "Craven",
-        "text": "Craven token."
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
       }
     ]
   },
@@ -539,7 +871,26 @@
     ],
     "markers": [
       {
-        "name": "Pyrotechnic"
+        "name": "Pyrotechnic",
+        "text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile:\n(c) BOOM!: Models within (r)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage.\n(m) Surprise!: Models within (r)2\" gain a Glowy token.\n(t) Whoa: Models within (r)2\" gain an Insight token.\n(r) Toxic Smoke: Models within (r)2\" gain a Poison token."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Glowy",
+        "text": "Attacks that target this model are unaffected by concealing terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
       }
     ]
   },
@@ -578,6 +929,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Poison)",
+        "text": "The area within 2\" of this model is hazardous (Poison) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      }
     ]
   },
   {
@@ -612,6 +985,38 @@
         "soulstone_cost": 0,
         "effects": "This action may target friendly models. If the target has a Parasite token, increase this action's Skl by +2. Place this model in base contact with the target. Then, place the target in base contact with an ally within 6\" of it."
       }
+    ],
+    "markers": [
+      {
+        "name": "Web",
+        "size": "50mm",
+        "text": "Models in base contact with a Web marker may not be moved by other models friendly to them.",
+        "terrain_traits": [
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Parasite",
+        "text": "When this model is killed, the crew that applied this token infuses a (soulstone)."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -635,6 +1040,28 @@
         "name": "Power Up",
         "text": "When this model ends its activation, it may drain a (soulstone) or discard a card to gain a Shielded token and heal 2."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Analyzed",
+        "text": "This model may not reduce damage with its abilities. Remove this token during the end phase."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -657,6 +1084,38 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "This model heals 2 and gains a Bolstered token."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Bog",
+        "size": "50mm",
+        "text": "When an enemy model activates within 1\" of this marker, it must discard a card or gain a Stunned token.",
+        "terrain_traits": [
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bog Spirit",
+        "text": "After this model is killed, the crew that applied this token may summon a Will o' the Wisp with 3 health into base contact."
+      },
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -720,6 +1179,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Glutted",
+        "text": "When this model ends its activation, it may remove this token to heal 1."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -758,6 +1239,24 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all \u2195 symbols on its card as blank. When this model ends its activation, remove this token"
       }
     ]
   },
@@ -799,7 +1298,19 @@
     "tokens": [
       {
         "name": "Adaptable",
-        "text": "The target gains an Adaptable token."
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Perforated",
+        "text": "After this model resolves the Walk or Charge action, deal 1 damage to it per inch it moved (to a maximum of 3). Other models may target this model with the Interact action to remove this token."
       }
     ]
   },
@@ -833,6 +1344,28 @@
         "soulstone_cost": 0,
         "effects": "Summon a Piglet with a Glutted token within 2\" of the target.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Glutted",
+        "text": "When this model ends its activation, it may remove this token to heal 1."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -876,6 +1409,37 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Tide",
+        "terrain_traits": [
+          "severe",
+          "concealing"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Staggered)",
+        "text": "When an enemy model within 2\" of this model activates, it must discard a card or gain a Staggered token."
+      },
+      {
+        "name": "Drift",
+        "text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\"."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -909,6 +1473,32 @@
         "soulstone_cost": 0,
         "effects": "X is equal to the value of this crew's power bar. Lower this crew's power bar to 0.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Improvised Part",
+        "text": "This model may declare tactical actions printed on the stat cards of non-master allies within 6\" as if they were printed on this model's stat card. After declaring such an action, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -953,6 +1543,30 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Pyrotechnic",
+        "text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile: (r) BOOM!: Models within (m)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage. (m) Surprise!: Models within (m)2\" gain a Glowy token. (t) Whoa: Models within (m)2\" gain an Insight token. (c) Toxic Smoke: Models within (m)2\" gain a Poison token."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Glowy",
+        "text": "Attacks that target this model are unaffected by concealing terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      }
     ]
   },
   {
@@ -985,8 +1599,28 @@
     ],
     "tokens": [
       {
-        "name": "Research Bar",
-        "text": "This crew has a research bar with three slots numbered 1, 2, and 3. The research bar starts empty and fills from left to right (1, then 2, then 3)."
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      },
+      {
+        "name": "Voyage",
+        "text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move."
       }
     ]
   },
@@ -1015,7 +1649,30 @@
     "markers": [
       {
         "name": "Underbrush",
-        "text": "During the start phase of turn 1, make up to three Underbrush markers anywhere on the table, not in base contact with enemy models."
+        "size": "50mm",
+        "terrain_traits": [
+          "concealing",
+          "dense",
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Suppressed",
+        "text": "When this model declares a (t) action, it must drain a (soulstone) or the action fails. After this model resolves a (t) action, remove this token."
       }
     ]
   },
@@ -1034,6 +1691,28 @@
         "granted_to": "Friendly non-beast, non-peon Frontier models",
         "name": "Frontier's Finest",
         "text": "When this model ends its activation, it may remove a Badge token to resolve one of the following effects:\nOrder Restored: Remove a Scheme marker within 2\" of this model.\nHome on the Range: Move up to 4\".\nKick Up Dust: Allies within 2\" of this model gain a Hidden token."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Badge",
+        "text": "When this model would be killed, it may discard a card and remove this token to heal 2."
+      },
+      {
+        "name": "Exposed",
+        "text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1063,6 +1742,28 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Make an Assault marker within range, ignoring LoS. Enemy models within (t)12\" of the made marker must pass a TN 14 Sp or be dealt 2 damage, ignoring (fortitude) abilities."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Challenged",
+        "text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
       }
     ]
   },
@@ -1094,6 +1795,32 @@
         "effects": "Target declares a (missile) action printed on their stat card.",
         "costs_and_restrictions": "Once per activation. Another ally only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Familia",
+        "text": "When a friendly model within 6\" is dealt damage, this model may remove this token to reduce that damage by 1."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "New Blood",
+        "text": "This model gains the Family keyword."
+      },
+      {
+        "name": "Reload",
+        "text": "After a model in this model's LoS ends its activation, this model may remove this token to declare a (missile) targeting that model. If it does so, no other models in this crew may use a Reload token until after another model activates."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -1122,6 +1849,24 @@
         "soulstone_cost": 0,
         "effects": "The target declares an action chosen and controlled by this model. Then, the target must take a TN 15 Wp duel. If it succeeds, it may discard one Wreathed upgrade.",
         "costs_and_restrictions": "Target a model with a Wreathed upgrade."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model activates, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -1176,6 +1921,24 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Negligent)",
+        "text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -1211,6 +1974,42 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ],
+    "markers": [
+      {
+        "name": "Inferno",
+        "size": "50mm",
+        "text": "Burning",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      },
+      {
+        "name": "Suppressed",
+        "text": "When this model declares a (+) action, it must drain a (+) or the action fails. After this model resolves a (+) action, remove this token."
       }
     ]
   },
@@ -1250,17 +2049,37 @@
     "markers": [
       {
         "name": "Inferno",
-        "text": "Referenced by Fire's Glow action"
+        "size": "50mm",
+        "text": "Burning",
+        "terrain_traits": [
+          "hazardous"
+        ]
       }
     ],
     "tokens": [
       {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
         "name": "Burning",
-        "text": "Referenced multiple times in abilities and actions"
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
       },
       {
         "name": "Shielded",
-        "text": "Referenced by Fire's Glow action"
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      },
+      {
+        "name": "Suppressed",
+        "text": "When this model declares a \u271b action, it must drain a (+) or the action fails. After this model resolves a \u271b action, remove this token."
       }
     ]
   },
@@ -1291,6 +2110,28 @@
         "soulstone_cost": 0,
         "effects": "This model gains an Injured token and may declare this action again, increasing the Dmg by +2.",
         "costs_and_restrictions": "Once per activation"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Promoted",
+        "text": "If this model is non-unique it receives +1 Skl when declaring attack actions."
       }
     ]
   },
@@ -1324,6 +2165,46 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "The target gains a Convert token."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Pyre",
+        "size": "50mm",
+        "text": "Burning. Before a friendly Revenant model within 1\" of this marker performs an opposed duel, it may remove this marker to receive a (+).",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Convert",
+        "text": "The Dmg stat of this model's attack actions is reduced by 1."
+      },
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -1364,6 +2245,46 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Inferno",
+        "size": "50mm",
+        "text": "Burning",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Binding)",
+        "text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -1393,6 +2314,34 @@
         "soulstone_cost": 0,
         "effects": "Make an Assault marker within range. Then, place this model in base contact with the made marker."
       }
+    ],
+    "markers": [
+      {
+        "name": "Assault",
+        "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Challenged",
+        "text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      }
     ]
   },
   {
@@ -1416,6 +2365,24 @@
         "soulstone_cost": 0,
         "effects": "Move this model up to its Sp. Then, this model may gain a Reload or an Aura (Concealment) token.",
         "costs_and_restrictions": "This action cannot be declared while engaged."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Reload",
+        "text": "When a model in this models LoS ends its activation, this model may remove this token to declare a (missile) targeting that model. If it does so, no other models in this crew may use a Reload token until the next model activates."
       }
     ]
   },
@@ -1445,6 +2412,28 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move all enemy models within range up to 2\". If this causes them to be dealt falling damage, they are dealt 1 additional falling damage."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Shame",
+        "text": "This model cannot be targeted by the actions of other enemy models. When this model ends its activation, it may choose to deal 1 damage to itself to remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1488,6 +2477,42 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ],
+    "markers": [
+      {
+        "name": "Inferno",
+        "size": "50mm",
+        "text": "(Burning).",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Binding)",
+        "text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Fast",
+        "text": "During this model's activation, it may declare one extra action (to a max of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
       }
     ]
   },
@@ -1540,6 +2565,28 @@
         "soulstone_cost": 0,
         "effects": "Remove a Bounty token from the target. The target declares the Interact action controlled by this model."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Bounty",
+        "text": "When this model is killed, the crew that applied this token draws a card."
+      },
+      {
+        "name": "Exposed",
+        "text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      }
     ]
   },
   {
@@ -1590,6 +2637,32 @@
         "effects": "Target moves up to 3\" and declares the Prepare action.",
         "costs_and_restrictions": "Ally only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Promoted",
+        "text": "If this model is non-unique it receives +1 Skl when declaring attack actions."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -1612,6 +2685,24 @@
         "granted_to": "Friendly unique Journalist models",
         "name": "On a Deadline",
         "text": "After an enemy model within 3\" declares the Interact action, this model may decrease this crew's scandal bar by 2 to draw a card."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -1648,6 +2739,32 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Select any three friendly Scheme markers that are within 14\" of another selected marker, ignoring LoS. All enemy models within the area formed by the three markers must pass a TN 14 Df duel or be dealt 2 damage and gain a Stunned token. Then, remove two of the chosen markers."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -1692,6 +2809,32 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -1728,6 +2871,33 @@
         "soulstone_cost": 0,
         "effects": "Place the target within 6\" of its current location, not in base contact with any model(s).",
         "costs_and_restrictions": "Target a Strategy marker."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Door",
+        "text": "Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+        "terrain_traits": [
+          "blocking"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -1771,6 +2941,24 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -1803,6 +2991,28 @@
         "effects": "This model and the target gain a Shielded token.",
         "costs_and_restrictions": "Ally only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      }
     ]
   },
   {
@@ -1832,6 +3042,36 @@
         "soulstone_cost": 0,
         "effects": "The target gains a Familia token and may attach a Hermanos de Armas upgrade.",
         "costs_and_restrictions": "Another ally only."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Familia",
+        "text": "When a friendly model within 6\" is dealt damage, this model may remove this token to reduce that damage by 1."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Incurable",
+        "text": "This model cannot heal. During the end phase, remove this token."
+      },
+      {
+        "name": "New Blood",
+        "text": "This model gains the Family keyword."
+      },
+      {
+        "name": "Perforated",
+        "text": "After this model resolves the Walk or Charge action, deal 1 damage to it per inch it moved (to a maximum of 3). Other models may target this model with the Interact action to remove this token."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -1877,6 +3117,40 @@
         "soulstone_cost": 0,
         "effects": "Make a Pylon marker within range, not within 6\" of this crew's deployment zone or another Pylon marker."
       }
+    ],
+    "markers": [
+      {
+        "name": "Pylon",
+        "size": "40mm",
+        "height": "Ht 2",
+        "text": "When this marker is removed, enemy models within (t)2\" must pass a TN 12 Wp duel or gain a Stunned token.",
+        "terrain_traits": [
+          "blocking",
+          "impassable"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      }
     ]
   },
   {
@@ -1916,6 +3190,24 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Negligent)",
+        "text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -1943,6 +3235,32 @@
         "soulstone_cost": 0,
         "effects": "Summon an M&SU minion into base contact with the target. The summoned model has 4 health.",
         "costs_and_restrictions": "Once per activation. Deal 2 damage to target engaged ally."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -1981,6 +3299,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -2010,6 +3350,32 @@
         "soulstone_cost": 0,
         "effects": "Place the target anywhere within 6\" of this model.",
         "costs_and_restrictions": "This action may target allies. This model may drain a (soulstone) to treat this action as a (+) action."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may discard this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Aetheric Surge",
+        "text": "This model receives +2 Skl and a suit of its choice when declaring attack actions."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -2047,6 +3413,32 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Negligent)",
+        "text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
+      },
+      {
+        "name": "Fragile Ego",
+        "text": "After another enemy model is chosen to activate, if this model has not activated this turn, the crew that applied this token may remove it to force this model to activate instead."
+      },
+      {
+        "name": "Paranoia",
+        "text": "When this token is removed, the crew that applied it may move this model up to 4\" and then make a Scheme marker into base contact with it, after resolving the current action (if any). During the end phase, this model must either discard a card or remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2087,6 +3479,35 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Underbrush",
+        "size": "50mm",
+        "terrain_traits": [
+          "concealing",
+          "dense",
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Suppressed",
+        "text": "When this model declares a (magic) action, it must drain a (soulstone) or the action fails. After this model resolves a (magic) action, remove this token."
+      }
     ]
   },
   {
@@ -2122,6 +3543,39 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Lair",
+        "size": "50mm",
+        "text": "(Fright).",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      },
+      {
+        "name": "Under Your Bed",
+        "size": "50mm",
+        "text": "All friendly Nightmare models in play may draw range and LoS for attack and Interact actions from this marker. After an action is taken in this way, enemy models within (r)1\" gain a Fright token and then remove this marker."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Fright",
+        "text": "This model considers its (warding) abilities blank. After a friendly model succeeds in a (magic) action targeting this model, it may choose to receive one additional raise; if it does, remove this token after resolving the action."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2144,8 +3598,28 @@
     ],
     "tokens": [
       {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Negligent)",
+        "text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
         "name": "Paranoia",
-        "text": "Referenced by Cruel Whispers ability - gained by enemy models"
+        "text": "When this token is removed, the crew that applied it may move this model up to 4\" and then make a Scheme marker into base contact with it, after resolving the current action (if any). During the end phase this model must either discard a card or remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2184,6 +3658,34 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Lair",
+        "size": "50mm",
+        "text": "(Fright).",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Fright",
+        "text": "This model considers its (fortitude) abilities blank. After a friendly model succeeds in a (+) action targeting this model, it may choose to receive one additional raise; if it does, remove this token after resolving the action."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2217,6 +3719,32 @@
         "soulstone_cost": 0,
         "effects": "Summon a Terror Tot into base contact with the target."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Broodling",
+        "text": "After this model is killed, summon a friendly Terror Tot into base contact."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Glutted",
+        "text": "When this model ends its activation, it may remove this token to heal 1."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -2245,6 +3773,32 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal 1 damage to allies within range. This model heals 1 for each ally damaged. When Black Blood occurs due to this action, any enemies that would gain an Injured token but cannot because they already have one are dealt 1 damage."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Broodling",
+        "text": "After this model is killed, summon a friendly Terror Tot into base contact."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Glutted",
+        "text": "When this model ends its activation, it may remove this token to heal 1."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -2280,6 +3834,38 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Web",
+        "size": "50mm",
+        "text": "Models in base contact with a Web marker may not be moved by other models friendly to them.",
+        "terrain_traits": [
+          "severe"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Parasite",
+        "text": "When this model is killed, the crew that applied this token infuses a (soulstone)."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2305,6 +3891,32 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Target another ally. Place the target in base contact with an engaged enemy within range."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may discard this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Aetheric Surge",
+        "text": "This model receives +2 Skl and a suit of its choice when declaring attack actions."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -2334,6 +3946,24 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "The target chooses to be dealt 2 damage or allow this model to choose to draw a card or infuse a (soulstone)."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Cancelled by Slow."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Cancelled by Hastened."
       }
     ]
   },
@@ -2380,6 +4010,36 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2408,6 +4068,34 @@
         "effects": "Target an Echo marker within range. Place this model in base contact with the target, then remove the target.",
         "costs_and_restrictions": "This action ignores LoS."
       }
+    ],
+    "markers": [
+      {
+        "name": "Echo",
+        "text": "When a friendly Obliteration model is killed within 10\" of this marker, it may drain a (c). If it does, it does not infuse a (c) for being killed and, after the model is removed, this crew may summon a model of the same name within 1\" of this marker with a Flicker token and 2 health. Then remove this marker."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Backtrack",
+        "text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict."
+      },
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2429,8 +4117,24 @@
     ],
     "tokens": [
       {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
         "name": "Blight",
-        "text": "The following cumulative effects apply based on the level of this crew's pox bar:\n\n1 Pox: Enemy models with a friendly Blight token suffer -1 Sp during enemy activations.\n\n2 Pox: During the end phase, before resolving Blight tokens, enemy models with a friendly Blight token are dealt 1 damage.\n\n3 Pox: Enemy models with a friendly Blight token must discard a card to declare the Interact action."
+        "text": "This model suffers a (r) to Wp duels generated by Plague models. During the end phase, enemy models within (aura)1\" gain a Blight token, then if there are no other models within 1\" with a Blight token, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (+) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2472,6 +4176,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Blight",
+        "text": "This model suffers a (c) to Wp duels generated by Plague models. During the end phase, enemy models within (melee)1\" gain a Blight token, then if there are no other models within 1\" with a Blight token, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2501,6 +4227,34 @@
         "soulstone_cost": 0,
         "effects": "X is equal to the number of Echo markers within 4\" of the target. After resolving this action, remove one Echo marker within 4\" of the target."
       }
+    ],
+    "markers": [
+      {
+        "name": "Echo",
+        "text": "When a friendly Obliteration model is killed within 10\" of this marker, it may drain a (soulstone). If it does, it does not infuse a (soulstone) for being killed and, after the model is removed, this crew may summon a model of the same name within 1\" of this marker with a Flicker token and 2 health. Then remove this marker."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Backtrack",
+        "text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict."
+      },
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2525,6 +4279,36 @@
         "soulstone_cost": 0,
         "effects": "This model declares one of the target's tactical actions as if it were printed on this model's stat card.",
         "costs_and_restrictions": "Ally only"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2554,6 +4338,32 @@
         "soulstone_cost": 0,
         "effects": "X is equal to the turn number. If this action kills the target, infuse two (soulstone).",
         "costs_and_restrictions": "Non-peon only. This model chooses whether this action is resisted by (fortitude) or (warding)."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (s) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2597,6 +4407,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2623,6 +4455,28 @@
         "soulstone_cost": 0,
         "effects": "Remove the target to infuse a (r).",
         "costs_and_restrictions": "Once per activation. Cannot be declared while engaged. Target an enemy Scheme marker or enemy Remains marker."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2678,6 +4532,24 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Cancelled by Slow."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Cancelled by Hastened."
+      }
     ]
   },
   {
@@ -2695,6 +4567,28 @@
         "granted_to": "Friendly unique Tormented models",
         "name": "Sins Reflected",
         "text": "When this model ends its activation, it may drain a (soulstone). If it does so, attach an Injustice upgrade to an enemy model within 4\"."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Binding)",
+        "text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by the effects of other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2733,6 +4627,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Binding)",
+        "text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by the effects of other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2751,6 +4667,24 @@
         "name": "Pounce",
         "text": "When an enemy model ends its activation, one model with this ability and engaged with the enemy may drain a (soulstone) to declare a (melee) action targeting the enemy."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2768,6 +4702,32 @@
         "granted_to": "Friendly unique Transmortis models",
         "name": "Recruitment Drive",
         "text": "After this model kills an enemy model, it may drain a (+) to summon an Undergraduate with 4 health within 1\" of the killed model."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2793,6 +4753,38 @@
         "soulstone_cost": 0,
         "effects": "Make a Pyre marker in base contact with this model or the target, then declare the Charge action, ignoring restrictions.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Pyre",
+        "size": "50mm",
+        "text": "(Burning). Before a friendly Revenant model within 1\" of this marker performs an opposed duel, it may remove this marker to receive a (+).",
+        "terrain_traits": [
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2835,6 +4827,36 @@
         "effects": "Select any scheme. The next time the opponent chooses a Next Available Scheme, they must choose it from the section on the scheme you chose.",
         "costs_and_restrictions": "This action may only be declared while in the enemy deployment zone."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Fire)",
+        "text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Greedy",
+        "text": "When this model would discard an upgrade, it may instead remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2865,6 +4887,34 @@
         "effects": "This model declares a /// action drawing range and LoS from the target. If this model drained a (t), the generated action receives a (crow) and a suit of this model's choice.",
         "costs_and_restrictions": "Once per activation. Target a friendly Lamp marker within range. This model may drain a (t)."
       }
+    ],
+    "markers": [
+      {
+        "name": "Lamp",
+        "text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (soulstone) to Df duels."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Death",
+        "text": "When this model succeeds in an attack action that deals damage, it may remove this token. If it does so, the target must either discard a card, drain a (soulstone), or be killed."
+      },
+      {
+        "name": "Life",
+        "text": "When this model suffers damage, it may remove this token. If it does so, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2888,6 +4938,24 @@
         "soulstone_cost": 0,
         "effects": "Gain an Aura (Concealment) token, then declare the Charge action, ignoring engagement.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2937,6 +5005,36 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Fumes)",
+        "text": "Enemy models within 3\" receive a (-) to attack actions that target friendly models. During the end phase, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Interesting Parts",
+        "text": "This model is affected by the enemy crew card as if it were a unique model allied to the enemy leader, but it may not affect or use power bars. This model considers enemy non-Scheme, non-Strategy markers to be friendly."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -2959,6 +5057,32 @@
         "granted_to": "Friendly unique Forgotten models",
         "name": "Walk with Pride",
         "text": "After this model declares a non-Charge general action, it may drain a (+) to have another ally within 3\" declare the same action."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Abandoned",
+        "text": "During the end phase, if this model does not have more models (other than itself) it considers friendly within 3\" of it than models it considers enemy, this model is dealt 2 irreducible damage. Then, if this token did not damage this model, remove this token."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -3007,8 +5131,24 @@
     ],
     "tokens": [
       {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
         "name": "Spiritual Chains",
-        "text": "Not explicitly defined on this card - referenced by Chained Spirit ability"
+        "text": "When this model flips, cheats, or discards the black joker, it is dealt 2 damage and then this token is removed."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3054,6 +5194,36 @@
         "effects": "This model declares the Interact action and increases its Rg to 4\".",
         "costs_and_restrictions": "Remove a Graft token."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Fumes)",
+        "text": "Enemy models within 3\" receive a (-) to attack actions that target friendly models. During the end phase, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to gain a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Graft",
+        "text": "During the end phase, this model may remove this token to heal 2."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3095,7 +5265,27 @@
     "tokens": [
       {
         "name": "Abandoned",
-        "text": "Referenced by Each Flaw Tells a Story and Lost and Alone abilities/actions"
+        "text": "During the end phase, if this model does not have more models (other than itself) it considers friendly within 3\" of it than models it considers enemy, this model is dealt 2 irreducible damage. Then, if this token did not damage this model, remove this token."
+      },
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -3119,6 +5309,24 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "If a friendly Ikiryo, Spirit of Vengeance is in play, place it into base contact with this model. If a friendly Ikiryo, Spirit of Vengeance is not in play, summon it in base contact with this model. Then, a friendly Ikiryo, Spirit of Vengeance may declare a (melee) action."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3154,6 +5362,24 @@
         "soulstone_cost": 0,
         "effects": "Target is moved up to 5\" and gains an Insight token.",
         "costs_and_restrictions": "Other ally only. This action cannot target the same model more than once per activation."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Frozen Solid",
+        "text": "This model may not be moved by enemy effects. After either this model suffers damage or an enemy model targets this model with the Interact action, remove this token (this model may target itself with the Interact action)."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Numb",
+        "text": "This model loses its Don't Turn Your Back ability (if any) and does not prevent friendly models from declaring the Interact action due to:\n\u25a0 Being engaged with this model.\n\u25a0 This model being in base contact with a marker.\n\u25a0 Leaving this model's engagement range.\nDuring the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -3196,6 +5422,24 @@
         "soulstone_cost": 0,
         "effects": "Target an enemy Remains marker. The opposing player tells you the name of their currently selected scheme."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Frozen Solid",
+        "text": "This model may not be moved by enemy effects. After either this model suffers damage or an enemy model targets this model with the Interact action, remove this token (this model may target itself with the Interact action)."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Numb",
+        "text": "This model loses its Don't Turn Your Back ability (if any) and does not prevent friendly models from declaring the Interact action due to:\n\u25a0 Being engaged with this model.\n\u25a0 This model being in base contact with a marker.\n\u25a0 Leaving this model's engagement range.\nDuring the end phase, remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -3225,6 +5469,28 @@
         "soulstone_cost": 0,
         "effects": "Target a Scheme marker. Place this model into base contact with the target.",
         "costs_and_restrictions": "(t)(t)"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Shame",
+        "text": "This model cannot be targeted by the actions of other enemy models. When this model ends its activation, it may choose to deal 1 damage to itself to remove this token."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -3269,6 +5535,41 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Scrap",
+        "terrain_traits": [
+          "severe",
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3293,6 +5594,24 @@
         "soulstone_cost": 0,
         "effects": "Look at the top two cards of the target's fate deck. Discard any number of them and place the rest back on top of the target's deck in any order. Then, draw a card.",
         "costs_and_restrictions": "Once per activation."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -3332,6 +5651,38 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Rift",
+        "text": "A friendly Oni within 1\" of this marker may remove this marker after succeeding in an attack to make that attack deal +1 damage."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (s) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3354,6 +5705,32 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Choose a friendly Oni model within 8\" and place it into base contact with this model."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Flicker",
+        "text": "During the end phase, kill this model. This token cannot be removed."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3395,6 +5772,32 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3430,7 +5833,36 @@
     "markers": [
       {
         "name": "Scrap",
-        "text": "During the start phase of turn 1, make a Scrap marker anywhere on the table, not in base contact with an enemy model."
+        "terrain_traits": [
+          "severe",
+          "hazardous"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3459,6 +5891,32 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Select three allies, ignoring range and LoS. They must each be within 14\" of another selected ally, ignoring LoS. The chosen models may each remove a Chi token. All enemy models within the area formed by the three models must pass a TN 13 (fortitude) duel or be dealt 1 damage, +1 for each token removed."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Balm",
+        "text": "During the end phase, this model heals 1. Then, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Chi",
+        "text": "Before performing a duel, this model may remove this token to receive +1 to its duel total."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -3503,6 +5961,32 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Balm",
+        "text": "During the end phase, this model heals 1. Then, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Chi",
+        "text": "Before performing a duel, this model may remove this token to receive +1 to its duel total."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -3533,6 +6017,32 @@
         "effects": "Make a Scheme marker within range. If this action receives a raise, draw a card.",
         "costs_and_restrictions": "Once per activation. This action cannot be declared while engaged."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3557,6 +6067,28 @@
         "soulstone_cost": 0,
         "effects": "Target declares an action, chosen and controlled by this model.",
         "costs_and_restrictions": "Reduce this crew's leverage bar by 4."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3601,6 +6133,32 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Shadow",
+        "terrain_traits": [
+          "concealing"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      }
     ]
   },
   {
@@ -3637,6 +6195,36 @@
         "soulstone_cost": 0,
         "effects": "Select any scheme. The next time the opponent chooses a Next Available Scheme, they must choose it from the section on the scheme you chose.",
         "costs_and_restrictions": "This action may only be declared while in the enemy deployment zone."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Fire)",
+        "text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Greedy",
+        "text": "When this model would discard an upgrade, it may instead remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3683,6 +6271,36 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Remove an Insight token. Move this model up to 4\"."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3731,7 +6349,31 @@
     "markers": [
       {
         "name": "Shadow",
-        "text": "During the start phase of turn 1, make up to five Shadow markers anywhere on the table, not in the enemy deployment zone."
+        "terrain_traits": [
+          "concealing"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -3750,6 +6392,24 @@
         "granted_to": "Friendly Transmortis models",
         "name": "The Stars Shift",
         "text": "When this model flips, cheats, or discards a non-joker card, it may treat that card as a card listed in its star chart. If it does so, erase that card from its star chart."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (+) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -3795,6 +6455,28 @@
           }
         ]
       }
+    ],
+    "tokens": [
+      {
+        "name": "Bolstered",
+        "text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Poison",
+        "text": "During the end phase, deal 1 irreducible damage to this model."
+      }
     ]
   },
   {
@@ -3825,6 +6507,34 @@
         "effects": "This model may select an ally within 2\". Make an Assault marker within range and then place this model and the selected ally into base contact with the made marker.",
         "costs_and_restrictions": "(t)(soulstone)A"
       }
+    ],
+    "markers": [
+      {
+        "name": "Assault",
+        "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Challenged",
+        "text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      }
     ]
   },
   {
@@ -3848,6 +6558,32 @@
         "name": "Glorious Purpose",
         "text": "When this model declares the Interact action, it may gain a Hunger token to increase the Rg of the action by +4\"."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Incurable",
+        "text": "This model cannot heal. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -3870,6 +6606,32 @@
         "granted_to": "Friendly unique Returned models",
         "name": "Bound to Purpose",
         "text": "When this model declares the Interact action, it may gain a Hunger token to increase the Rg of the action by +2\"."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Incurable",
+        "text": "This model cannot heal. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3905,6 +6667,29 @@
         "soulstone_cost": 0,
         "effects": "Target a piece of terrain that is at least partially in the enemy deployment zone. Make up to two Scheme markers within 1\" of the terrain."
       }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Door",
+        "text": "Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+        "terrain_traits": [
+          "blocking"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Replica",
+        "text": "After this model discards an upgrade, it may remove this token to attach the discarded upgrade."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      }
     ]
   },
   {
@@ -3934,6 +6719,24 @@
         "effects": "Target declares the Charge action.",
         "costs_and_restrictions": "Friendly beast only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Aura (Concealment)",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Reload",
+        "text": "When a model in this models LoS ends its activation, this model may remove this token to declare a (missile) targeting that model. If it does so, no other models in this crew may use a Reload token until the next model activates."
+      }
     ]
   },
   {
@@ -3962,6 +6765,42 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make a Lost Technology marker within range. Then, enemy models within (t)2\" of the made marker must pass a TN 12 Wp duel or gain a Staggered token."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Lost Technology",
+        "height": "Ht 2",
+        "text": "Enemy models within 3\" of this marker that declare a non-Walk action must pass a TN 10 Df duel or the action fails.",
+        "terrain_traits": [
+          "blocking"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3996,8 +6835,24 @@
     ],
     "tokens": [
       {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Death",
+        "text": "When this model succeeds in an attack action that deals damage, it may remove this token. If it does so, the target must either discard a card, drain a (+), or be killed."
+      },
+      {
         "name": "Life",
-        "text": "When this model heals, it may reduce the amount healed to 0. If it does so, this model gains a Life token."
+        "text": "When this model suffers damage, it may remove this token. If it does so, it may not be reduced to below 1 health."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4021,6 +6876,32 @@
         "granted_to": "Friendly Returned models",
         "name": "Blinded by Hunger",
         "text": "When this model declares the Walk or Charge action, it may gain a Hunger token to treat that action as a (t) action, ignoring the once per activation restriction."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Incurable",
+        "text": "This model cannot heal. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4052,6 +6933,28 @@
         "effects": "Any number of allies within 2\" of the target may gain a Shielded token.",
         "costs_and_restrictions": "Ally only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+      }
     ]
   },
   {
@@ -4081,6 +6984,34 @@
         "soulstone_cost": 0,
         "effects": "Make an Assault marker within range. Enemy models within (marker)2\" of the made marker must pass a TN 12 Sp or be dealt 2 damage.",
         "costs_and_restrictions": "(arrow)(diamond)"
+      }
+    ],
+    "markers": [
+      {
+        "name": "Assault",
+        "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Hazardous)",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Challenged",
+        "text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token."
+      },
+      {
+        "name": "Hidden",
+        "text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed."
+      },
+      {
+        "name": "Impact",
+        "text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
       }
     ]
   },
@@ -4120,7 +7051,23 @@
     "tokens": [
       {
         "name": "Brilliance",
-        "text": "Referenced in abilities Deal Me In and \"I'll Raise\" but full token rules not provided on this card."
+        "text": "When this model cheats fate, the crew that applied this token may remove it to deal 1 damage to this model or heal it 2."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -4152,6 +7099,24 @@
         "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
         "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Craven",
+        "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Sin",
+        "text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token."
+      }
     ]
   },
   {
@@ -4180,6 +7145,20 @@
         "soulstone_cost": 0,
         "effects": "For each raise this attack receives, move the target up to 2\". Then, this model may be placed into base contact with the target.",
         "costs_and_restrictions": "(s)(s)"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Injured",
+        "text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
       }
     ]
   },
@@ -4210,6 +7189,28 @@
         "soulstone_cost": 0,
         "effects": "Target gains a Brilliance token. This model may look at the top three cards of its own fate deck, may discard one, and then put any remaining cards back in any order.",
         "costs_and_restrictions": "(t)(c)"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Brilliance",
+        "text": "When this model cheats fate, the crew that applied this token may remove it to deal 1 damage to this model or heal it 2."
+      },
+      {
+        "name": "Distracted",
+        "text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
+      },
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -4249,6 +7250,33 @@
           }
         ]
       }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Door",
+        "text": "Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+        "terrain_traits": [
+          "blocking"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Entranced",
+        "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+      },
+      {
+        "name": "Fast",
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -4271,6 +7299,32 @@
         "granted_to": "Friendly unique Returned models",
         "name": "Hungry March",
         "text": "When this model declares the Walk action, it may gain a Hunger token to treat that action as a (t) action."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adaptable",
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
+      },
+      {
+        "name": "Hunger",
+        "text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself."
+      },
+      {
+        "name": "Incurable",
+        "text": "This model cannot heal. During the end phase, remove this token."
+      },
+      {
+        "name": "Insight",
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
+      },
+      {
+        "name": "Stunned",
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+      },
+      {
+        "name": "Summon",
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4311,6 +7365,28 @@
         "effects": "Enemy models within ((pulse))3\" of the target gain a Burning token and are dealt 1 damage. Then, kill the target.",
         "costs_and_restrictions": "Friendly Steam Arachnid only."
       }
+    ],
+    "tokens": [
+      {
+        "name": "Aura (Fire)",
+        "text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+      },
+      {
+        "name": "Burning",
+        "text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
+      },
+      {
+        "name": "Summon",
+        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+      }
     ]
   },
   {
@@ -4327,6 +7403,28 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "When resolving, this action deals +1 damage for every two friendly Mutation upgrades attached to models within 3\" of this model."
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Instinct",
+        "text": "When this model succeeds in an attack action, it may remove this token to receive an additional raise."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -4361,6 +7459,29 @@
         "is_signature": true,
         "soulstone_cost": 0,
         "effects": "Target a piece of terrain that is at least partially in the enemy deployment zone. Make up to two Scheme markers within 1\" of the terrain."
+      }
+    ],
+    "markers": [
+      {
+        "name": "Shadow Door",
+        "text": "Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+        "terrain_traits": [
+          "blocking"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Focused",
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+      },
+      {
+        "name": "Replica",
+        "text": "After this model discards an upgrade, it may remove this token to attach the discarded upgrade."
+      },
+      {
+        "name": "Slow",
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -4406,6 +7527,28 @@
             "soulstone_cost": 0
           }
         ]
+      }
+    ],
+    "tokens": [
+      {
+        "name": "Adversary",
+        "text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
+      },
+      {
+        "name": "Hastened",
+        "text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
+      },
+      {
+        "name": "Instinct",
+        "text": "When this model succeeds in an attack action, it may remove this token to receive an additional raise."
+      },
+      {
+        "name": "Shielded",
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+      },
+      {
+        "name": "Staggered",
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   }

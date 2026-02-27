@@ -22,7 +22,12 @@
       "Bash(__NEW_LINE_44552b33700ecb35__ python3:*)",
       "Bash(__NEW_LINE_b8139e9bdbeee7e1__ python3:*)",
       "Bash(xargs:*)",
-      "Bash(powershell.exe -Command \"[Environment]::GetEnvironmentVariable\\(''ANTHROPIC_API_KEY'', ''User''\\)\")"
+      "Bash(powershell.exe -Command \"[Environment]::GetEnvironmentVariable\\(''ANTHROPIC_API_KEY'', ''User''\\)\")",
+      "Bash(/c/Users/mbeck/AppData/Local/Python/bin/python3:*)",
+      "Bash(PYTHONIOENCODING=utf-8 /c/Users/mbeck/AppData/Local/Python/bin/python3:*)",
+      "Bash(\"/c/Users/mbeck/AppData/Local/Python/bin/python.exe\" -c \":*)",
+      "Bash(py -c:*)",
+      "Bash(export PYTHONIOENCODING=utf-8:*)"
     ]
   }
 }

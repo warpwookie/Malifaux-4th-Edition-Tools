@@ -243,6 +243,33 @@ def export_token_registry(conn: sqlite3.Connection) -> list[dict]:
     return tokens
 
 
+def export_marker_registry(conn: sqlite3.Connection) -> list[dict]:
+    """Export the global marker registry with terrain traits and crew card sources."""
+    c = conn.cursor()
+    c.execute("SELECT * FROM markers ORDER BY category, name")
+    markers = []
+    for m in c.fetchall():
+        mid = m["id"]
+
+        # Get normalized terrain traits
+        c.execute("SELECT trait FROM marker_terrain_traits WHERE marker_id=? ORDER BY trait", (mid,))
+        traits = [r["trait"] for r in c.fetchall()]
+
+        # Get crew card sources
+        c.execute("""SELECT cc.name, cc.faction FROM marker_crew_sources mcs
+            JOIN crew_cards cc ON mcs.crew_card_id = cc.id
+            WHERE mcs.marker_id=? ORDER BY cc.name""", (mid,))
+        crew_sources = [{"name": r["name"], "faction": r["faction"]} for r in c.fetchall()]
+
+        clean = {k: v for k, v in m.items() if k not in {"id"} and v is not None}
+        if traits:
+            clean["terrain_traits"] = traits
+        if crew_sources:
+            clean["defined_on_crew_cards"] = crew_sources
+        markers.append(clean)
+    return markers
+
+
 def build_faction_summary(models: list[dict]) -> dict:
     """Build a quick summary of what's in each faction."""
     summary = {}
@@ -325,7 +352,15 @@ def main():
     with open(tokens_path, "w", encoding="utf-8") as f:
         json.dump(tokens, f, indent=2)
     print(f"  Total: {len(tokens)} tokens -> {tokens_path.name}")
-    
+
+    # === Export marker registry ===
+    print("\nExporting marker registry...")
+    markers = export_marker_registry(conn)
+    markers_path = OUT_DIR / "m4e_markers.json"
+    with open(markers_path, "w", encoding="utf-8") as f:
+        json.dump(markers, f, indent=2)
+    print(f"  Total: {len(markers)} markers -> {markers_path.name}")
+
     # === Build faction summary ===
     print("\nBuilding faction summary...")
     summary = build_faction_summary(all_models)
@@ -355,6 +390,7 @@ def main():
     print(f"  Tacticals:    {total_tacticals}")
     print(f"  Triggers:     {total_triggers}")
     print(f"  Tokens:       {len(tokens)}")
+    print(f"  Markers:      {len(markers)}")
     print(f"  Factions:     {len(by_faction)}")
     
     conn.close()

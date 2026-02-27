@@ -176,6 +176,19 @@
     ],
     "_note": "Crew-specific tokens (e.g., Drift, Aura) are defined on crew cards and not listed here."
   },
+  "terrain_traits": [
+    "blocking",
+    "concealing",
+    "dense",
+    "destructible",
+    "hazardous",
+    "impassable",
+    "severe"
+  ],
+  "marker_categories": [
+    "universal",
+    "keyword_specific"
+  ],
   "icon_map": {
     "suits": {
       "r": "(r)",

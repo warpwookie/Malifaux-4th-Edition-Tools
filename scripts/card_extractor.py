@@ -164,6 +164,20 @@ def extract_crew_card(client: anthropic.Anthropic, image_path: str) -> dict:
     return result
 
 
+def extract_crew_card_back(client: anthropic.Anthropic, image_path: str) -> dict:
+    """Extract token definitions from the back of a crew card."""
+    print(f"  Extracting crew card back: {Path(image_path).name}")
+    result = extract_card_side(client, image_path, "crew_card_back_prompt")
+    return result
+
+
+def extract_crew_card_markers(client: anthropic.Anthropic, image_path: str) -> dict:
+    """Extract marker definitions from the front of a crew card."""
+    print(f"  Extracting crew card markers: {Path(image_path).name}")
+    result = extract_card_side(client, image_path, "crew_card_markers_prompt")
+    return result
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract M4E card data via Claude API")
     parser.add_argument("images", nargs="+", help="Image file(s) â€” 2 for stat card (front, back), 1 for crew")

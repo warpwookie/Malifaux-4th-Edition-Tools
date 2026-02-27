@@ -14,10 +14,66 @@
   {
     "name": "Adversary",
     "type": "debuff",
-    "timing": "end_phase"
+    "timing": "end_phase",
+    "rules_text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token."
   },
   {
-    "name": "Analyzed"
+    "name": "Aetheric Surge",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "This model receives +2 Skl and a suit of its choice when declaring attack actions."
+  },
+  {
+    "name": "Analyzed",
+    "rules_text": "This model may not reduce damage with its abilities. Remove this token during the end phase."
+  },
+  {
+    "name": "Aura (Binding)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Concealment)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Fire)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Fumes)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "Enemy models within 3\" receive a (-) to attack actions that target friendly models. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Hazardous)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Negligent)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Poison)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "The area within 2\" of this model is hazardous (Poison) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
+  },
+  {
+    "name": "Aura (Staggered)",
+    "type": "debuff",
+    "timing": "end_phase",
+    "rules_text": "When an enemy model within 2\" of this model activates, it must discard a card or gain a Staggered token."
   },
   {
     "name": "Backtrack",
@@ -50,9 +106,16 @@
     "rules_text": "Grants benefits to friendly Family models. Keyword: Family."
   },
   {
+    "name": "Bog Spirit",
+    "type": "resource",
+    "timing": "permanent",
+    "rules_text": "After this model is killed, the crew that applied this token may summon a Will o' the Wisp with 3 health into base contact."
+  },
+  {
     "name": "Bolstered",
     "type": "buff",
-    "timing": "end_phase"
+    "timing": "end_phase",
+    "rules_text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured."
   },
   {
     "name": "Bounty",
@@ -79,12 +142,6 @@
     "rules_text": "deals damage equal to value, then reduces by 1"
   },
   {
-    "name": "Chains",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "Spiritual Chains token. Removed to generate bonus actions. Keyword: Tormented."
-  },
-  {
     "name": "Challenged",
     "type": "debuff",
     "timing": "permanent",
@@ -105,7 +162,8 @@
   {
     "name": "Craven",
     "type": "debuff",
-    "timing": "end_activation"
+    "timing": "end_activation",
+    "rules_text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
   },
   {
     "name": "Death",
@@ -116,16 +174,12 @@
   {
     "name": "Distracted",
     "type": "debuff",
-    "timing": "end_activation"
+    "timing": "end_activation",
+    "rules_text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused."
   },
   {
-    "name": "Drift"
-  },
-  {
-    "name": "Ego",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "Fragile Ego token. Forces model to declare attacks. Keyword: Woe."
+    "name": "Drift",
+    "rules_text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\"."
   },
   {
     "name": "Entranced",
@@ -149,6 +203,7 @@
     "name": "Fast",
     "type": "buff",
     "timing": "end_activation",
+    "rules_text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow.",
     "cancels": "Slow"
   },
   {
@@ -160,13 +215,26 @@
   {
     "name": "Focused",
     "type": "buff",
-    "timing": "on_use"
+    "timing": "on_use",
+    "rules_text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
+  },
+  {
+    "name": "Fragile Ego",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "After another enemy model is chosen to activate, if this model has not activated this turn, the crew that applied this token may remove it to force this model to activate instead."
   },
   {
     "name": "Fright",
     "type": "debuff",
     "timing": "permanent",
     "rules_text": "Imposes penalties on the frightened model. Keyword: Nightmare/Neverborn."
+  },
+  {
+    "name": "Frozen Solid",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "This model may not be moved by enemy effects. After either this model suffers damage or an enemy model targets this model with the Interact action, remove this token (this model may target itself with the Interact action)."
   },
   {
     "name": "Glowy",
@@ -195,7 +263,8 @@
   {
     "name": "Hastened",
     "type": "buff",
-    "timing": "end_activation"
+    "timing": "end_activation",
+    "rules_text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered."
   },
   {
     "name": "Hidden",
@@ -212,7 +281,14 @@
   {
     "name": "Impact",
     "type": "buff",
-    "timing": "on_use"
+    "timing": "on_use",
+    "rules_text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage."
+  },
+  {
+    "name": "Improvised Part",
+    "type": "resource",
+    "timing": "on_use",
+    "rules_text": "This model may declare tactical actions printed on the stat cards of non-master allies within 6\" as if they were printed on this model's stat card. After declaring such an action, remove this token."
   },
   {
     "name": "Incurable",
@@ -223,7 +299,8 @@
   {
     "name": "Injured",
     "type": "debuff",
-    "timing": "end_phase"
+    "timing": "end_phase",
+    "rules_text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered."
   },
   {
     "name": "Insight",
@@ -238,10 +315,22 @@
     "rules_text": "Used by Chimera models for transformation and bonus effects. Keyword: Chimera."
   },
   {
+    "name": "Interesting Parts",
+    "type": "debuff",
+    "timing": "permanent",
+    "rules_text": "This model is affected by the enemy crew card as if it were a unique model allied to the enemy leader, but it may not affect or use power bars. This model considers enemy non-Scheme, non-Strategy markers to be friendly."
+  },
+  {
     "name": "Life",
     "type": "buff",
     "timing": "permanent",
     "rules_text": "Enemy attacks targeting this model suffer (-). Gained by forgoing healing. Keyword: Pilgrim."
+  },
+  {
+    "name": "New Blood",
+    "type": "buff",
+    "timing": "permanent",
+    "rules_text": "This model gains the Family keyword."
   },
   {
     "name": "Numb",
@@ -260,12 +349,6 @@
     "type": "debuff",
     "timing": "permanent",
     "rules_text": "Allows drawing range and LoS from models with Parasite tokens. Keyword: Explorer's Society."
-  },
-  {
-    "name": "Part",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "Improvised Part token. Used to fuel Amalgam model abilities. Keyword: Amalgam."
   },
   {
     "name": "Perforated",
@@ -325,13 +408,8 @@
     "name": "Slow",
     "type": "debuff",
     "timing": "end_activation",
+    "rules_text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast.",
     "cancels": "Fast"
-  },
-  {
-    "name": "Solid",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "Frozen Solid token. Restricts the frozen model's movement and actions. Keyword: December."
   },
   {
     "name": "Spirit",
@@ -343,34 +421,31 @@
     "name": "Spiritual Chains",
     "type": "resource",
     "timing": "on_use",
-    "rules_text": "Removed to generate bonus actions. Used by Tormented crew. Keyword: Tormented."
+    "rules_text": "When this model flips, cheats, or discards the black joker, it is dealt 2 damage and then this token is removed."
   },
   {
     "name": "Staggered",
     "type": "debuff",
-    "timing": "end_activation"
+    "timing": "end_activation",
+    "rules_text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
   },
   {
     "name": "Stunned",
     "type": "debuff",
-    "timing": "end_activation"
+    "timing": "end_activation",
+    "rules_text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
   },
   {
     "name": "Summon",
     "type": "penalty",
-    "timing": "permanent"
+    "timing": "permanent",
+    "rules_text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
   },
   {
     "name": "Suppressed",
     "type": "debuff",
     "timing": "permanent",
     "rules_text": "Restricts the suppressed model's actions. Keyword: Guard."
-  },
-  {
-    "name": "Surge",
-    "type": "buff",
-    "timing": "permanent",
-    "rules_text": "Aetheric Surge token. Reduces all damage dealt to model by 1 (min 0). Keyword: Outcasts."
   },
   {
     "name": "Voyage",

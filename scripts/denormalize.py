@@ -270,6 +270,85 @@ def export_marker_registry(conn: sqlite3.Connection) -> list[dict]:
     return markers
 
 
+def _strip_nulls(obj):
+    """Recursively remove keys with None/null values from dicts."""
+    if isinstance(obj, dict):
+        return {k: _strip_nulls(v) for k, v in obj.items() if v is not None}
+    elif isinstance(obj, list):
+        return [_strip_nulls(item) for item in obj]
+    return obj
+
+
+def _strip_action_category(actions: list[dict]) -> list[dict]:
+    """Remove redundant 'category' field from action dicts."""
+    for act in actions:
+        act.pop("category", None)
+        # Also strip from triggers if present (shouldn't be, but defensive)
+    return actions
+
+
+def export_knowledge_base(models: list[dict], crew_cards: list[dict],
+                          upgrades: list[dict], markers: list[dict],
+                          tokens: list[dict], faction_summary: dict) -> dict:
+    """Build a single combined JSON knowledge base optimized for AI consumption.
+
+    Strips redundant fields:
+    - action.category (redundant with parent array name)
+    - marker.terrain_traits_csv (redundant with terrain_traits array)
+    - All null values
+    """
+    import copy
+    from datetime import date
+
+    # Deep copy to avoid mutating the originals used by other exports
+    kb_models = copy.deepcopy(models)
+    kb_crew = copy.deepcopy(crew_cards)
+    kb_upgrades = copy.deepcopy(upgrades)
+    kb_markers = copy.deepcopy(markers)
+
+    # Strip redundant action.category from models
+    for m in kb_models:
+        _strip_action_category(m.get("attack_actions", []))
+        _strip_action_category(m.get("tactical_actions", []))
+
+    # Strip redundant action.category from crew card keyword actions
+    for cc in kb_crew:
+        for ka in cc.get("keyword_actions", []):
+            for act in ka.get("actions", []):
+                act.pop("category", None)
+
+    # Strip redundant action.category from upgrades
+    for u in kb_upgrades:
+        _strip_action_category(u.get("granted_actions", []))
+
+    # Strip redundant terrain_traits_csv from markers
+    for mk in kb_markers:
+        mk.pop("terrain_traits_csv", None)
+
+    # Build the combined knowledge base
+    kb = {
+        "_meta": {
+            "description": "Malifaux 4th Edition complete game data — "
+                           "798 models, 130 crew cards, 70 upgrades across 8 factions",
+            "generated": date.today().isoformat(),
+            "counts": {
+                "models": len(kb_models),
+                "crew_cards": len(kb_crew),
+                "upgrades": len(kb_upgrades),
+                "markers": len(kb_markers),
+                "tokens": len(tokens),
+            },
+        },
+        "models": _strip_nulls(kb_models),
+        "crew_cards": _strip_nulls(kb_crew),
+        "upgrades": _strip_nulls(kb_upgrades),
+        "markers": _strip_nulls(kb_markers),
+        "tokens": _strip_nulls(tokens),
+        "faction_summary": faction_summary,
+    }
+    return kb
+
+
 def build_faction_summary(models: list[dict]) -> dict:
     """Build a quick summary of what's in each faction."""
     summary = {}
@@ -369,6 +448,18 @@ def main():
         json.dump(summary, f, indent=2)
     print(f"  Summary -> {summary_path.name}")
     
+    # === Export combined knowledge base ===
+    print("\nExporting combined knowledge base...")
+    kb = export_knowledge_base(all_models, all_crew, all_upgrades, markers, tokens, summary)
+    kb_path = OUT_DIR / "m4e_knowledge_base.json"
+    with open(kb_path, "w", encoding="utf-8") as f:
+        json.dump(kb, f, indent=2, ensure_ascii=False)
+    kb_size = kb_path.stat().st_size / 1024
+    if kb_size > 1024:
+        print(f"  Knowledge base: {kb_size/1024:.1f} MB -> {kb_path.name}")
+    else:
+        print(f"  Knowledge base: {kb_size:.0f} KB -> {kb_path.name}")
+
     # === Stats ===
     total_abilities = sum(len(m.get("abilities", [])) for m in all_models)
     total_attacks = sum(len(m.get("attack_actions", [])) for m in all_models)

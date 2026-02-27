@@ -110,7 +110,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -161,7 +161,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -206,7 +206,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       },
       {
         "name": "Voyage",
@@ -365,7 +365,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -532,7 +532,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token"
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -886,7 +886,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -945,7 +945,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -1256,7 +1256,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all \u2195 symbols on its card as blank. When this model ends its activation, remove this token"
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1498,7 +1498,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -1561,7 +1561,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -1616,7 +1616,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       },
       {
         "name": "Voyage",
@@ -1763,7 +1763,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       }
     ]
   },
@@ -1866,7 +1866,7 @@
       },
       {
         "name": "Slow",
-        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model activates, remove this token. Canceled by Fast."
+        "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
       }
     ]
   },
@@ -2005,7 +2005,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       },
       {
         "name": "Suppressed",
@@ -2075,7 +2075,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       },
       {
         "name": "Suppressed",
@@ -2283,7 +2283,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2340,7 +2340,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       }
     ]
   },
@@ -2508,7 +2508,7 @@
       },
       {
         "name": "Fast",
-        "text": "During this model's activation, it may declare one extra action (to a max of 3). When this model ends its activation, remove this token. Canceled by Slow."
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
       },
       {
         "name": "Focused",
@@ -2661,7 +2661,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2833,7 +2833,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -2897,7 +2897,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3355,7 +3355,7 @@
     "tokens": [
       {
         "name": "Adaptable",
-        "text": "Before performing a duel, this model may discard this token to add a suit of its choice to its duel total."
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
       },
       {
         "name": "Aetheric Surge",
@@ -3438,7 +3438,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3574,7 +3574,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3619,7 +3619,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3684,7 +3684,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -3896,7 +3896,7 @@
     "tokens": [
       {
         "name": "Adaptable",
-        "text": "Before performing a duel, this model may discard this token to add a suit of its choice to its duel total."
+        "text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total."
       },
       {
         "name": "Aetheric Surge",
@@ -3955,7 +3955,7 @@
       },
       {
         "name": "Fast",
-        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Cancelled by Slow."
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
       },
       {
         "name": "Impact",
@@ -3963,7 +3963,7 @@
       },
       {
         "name": "Staggered",
-        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Cancelled by Hastened."
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -4038,7 +4038,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4094,7 +4094,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4130,7 +4130,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (+) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -4253,7 +4253,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4308,7 +4308,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4363,7 +4363,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (s) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4540,7 +4540,7 @@
       },
       {
         "name": "Fast",
-        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Cancelled by Slow."
+        "text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow."
       },
       {
         "name": "Impact",
@@ -4548,7 +4548,7 @@
       },
       {
         "name": "Staggered",
-        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Cancelled by Hastened."
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       }
     ]
   },
@@ -4584,7 +4584,7 @@
       },
       {
         "name": "Staggered",
-        "text": "This model suffers -2 Sp and cannot be moved by the effects of other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       },
       {
         "name": "Summon",
@@ -4643,7 +4643,7 @@
       },
       {
         "name": "Staggered",
-        "text": "This model suffers -2 Sp and cannot be moved by the effects of other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
+        "text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened."
       },
       {
         "name": "Summon",
@@ -4683,7 +4683,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4784,7 +4784,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4855,7 +4855,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4913,7 +4913,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -4955,7 +4955,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -5148,7 +5148,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -5206,7 +5206,7 @@
       },
       {
         "name": "Focused",
-        "text": "Before performing a duel, this model may remove this token to gain a (+) to the duel. Canceled by Distracted."
+        "text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted."
       },
       {
         "name": "Graft",
@@ -5326,7 +5326,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -5371,7 +5371,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Numb",
@@ -5430,7 +5430,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Numb",
@@ -5607,7 +5607,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Slow",
@@ -5681,7 +5681,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (s) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -5730,7 +5730,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -5784,7 +5784,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Shielded",
@@ -6029,7 +6029,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Shielded",
@@ -6080,7 +6080,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Slow",
@@ -6088,7 +6088,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -6284,7 +6284,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -6409,7 +6409,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (+) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -6471,7 +6471,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Poison",
@@ -6533,7 +6533,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       }
     ]
   },
@@ -6623,7 +6623,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Stunned",
@@ -6784,7 +6784,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       },
       {
         "name": "Shielded",
@@ -6800,7 +6800,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model cannot declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -6852,7 +6852,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -7011,7 +7011,7 @@
       },
       {
         "name": "Insight",
-        "text": "Before performing a duel, this model may remove this token to look at the top card of its face deck and may discard it."
+        "text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it."
       }
     ]
   },
@@ -7111,7 +7111,7 @@
       },
       {
         "name": "Shielded",
-        "text": "When this model is dealt damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+        "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
       },
       {
         "name": "Sin",
@@ -7275,7 +7275,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (+) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },
@@ -7385,7 +7385,7 @@
       },
       {
         "name": "Summon",
-        "text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
+        "text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed."
       }
     ]
   },

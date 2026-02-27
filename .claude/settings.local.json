@@ -27,7 +27,11 @@
       "Bash(PYTHONIOENCODING=utf-8 /c/Users/mbeck/AppData/Local/Python/bin/python3:*)",
       "Bash(\"/c/Users/mbeck/AppData/Local/Python/bin/python.exe\" -c \":*)",
       "Bash(py -c:*)",
-      "Bash(export PYTHONIOENCODING=utf-8:*)"
+      "Bash(export PYTHONIOENCODING=utf-8:*)",
+      "Bash(du:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python3:*)",
+      "Bash(where:*)",
+      "Bash(PYTHONIOENCODING=utf-8 /c/Users/mbeck/AppData/Local/Python/bin/python3.exe:*)"
     ]
   }
 }

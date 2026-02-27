@@ -142,6 +142,9 @@
     "rules_text": "deals damage equal to value, then reduces by 1"
   },
   {
+    "name": "Chains"
+  },
+  {
     "name": "Challenged",
     "type": "debuff",
     "timing": "permanent",
@@ -180,6 +183,9 @@
   {
     "name": "Drift",
     "rules_text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\"."
+  },
+  {
+    "name": "Ego"
   },
   {
     "name": "Entranced",
@@ -351,6 +357,12 @@
     "rules_text": "Allows drawing range and LoS from models with Parasite tokens. Keyword: Explorer's Society."
   },
   {
+    "name": "Part"
+  },
+  {
+    "name": "Parts"
+  },
+  {
     "name": "Perforated",
     "type": "debuff",
     "timing": "permanent",
@@ -412,6 +424,9 @@
     "cancels": "Fast"
   },
   {
+    "name": "Solid"
+  },
+  {
     "name": "Spirit",
     "type": "resource",
     "timing": "permanent",
@@ -446,6 +461,9 @@
     "type": "debuff",
     "timing": "permanent",
     "rules_text": "Restricts the suppressed model's actions. Keyword: Guard."
+  },
+  {
+    "name": "Surge"
   },
   {
     "name": "Voyage",

@@ -68,8 +68,16 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     attack_actions = []
     for act in back.get("attack_actions", []):
         act["category"] = "attack_actions"
-        # Ensure action_type exists
-        if "action_type" not in act or act["action_type"] is None:
+        # Check for layout exception: tactical action under attack header (no resist)
+        if act.get("resist") is None:
+            warnings.append(
+                f"Attack action '{act.get('name')}' has no resist — "
+                "reclassifying as tactical_action (layout exception)."
+            )
+            act["category"] = "tactical_actions"
+            act["action_type"] = None
+        # Ensure action_type exists for real attacks
+        elif "action_type" not in act or act["action_type"] is None:
             warnings.append(f"Attack action '{act.get('name')}' missing action_type")
         attack_actions.append(act)
     
@@ -98,10 +106,15 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
                 warnings.append(f"Could not determine action_type for '{act.get('name')}', defaulted to melee")
         tactical_actions.append(act)
     
-    # Separate reclassified attacks from true tacticals
-    true_tacticals = [a for a in tactical_actions if a["category"] == "tactical_actions"]
+    # Separate reclassified actions
+    # Tactical→attack: tactical actions with resist (reclassified above)
     reclassified_attacks = [a for a in tactical_actions if a["category"] == "attack_actions"]
-    all_attacks = attack_actions + reclassified_attacks
+    true_tacticals = [a for a in tactical_actions if a["category"] == "tactical_actions"]
+    # Attack→tactical: attack actions without resist (reclassified above)
+    reclassified_tacticals = [a for a in attack_actions if a["category"] == "tactical_actions"]
+    true_attacks = [a for a in attack_actions if a["category"] == "attack_actions"]
+    all_attacks = true_attacks + reclassified_attacks
+    all_tacticals = true_tacticals + reclassified_tacticals
     
     merged = {
         "card_type": "stat_card",
@@ -125,7 +138,7 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
         "characteristics": characteristics,
         "keywords": front.get("keywords", []),
         "abilities": front.get("abilities", []),
-        "actions": all_attacks + true_tacticals,
+        "actions": all_attacks + all_tacticals,
         "source_pdf": source_pdf,
         "merge_warnings": warnings,
         "extraction_notes": (

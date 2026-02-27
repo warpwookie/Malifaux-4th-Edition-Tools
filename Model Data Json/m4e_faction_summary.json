@@ -1,6 +1,6 @@
 {
   "Arcanists": {
-    "total_models": 95,
+    "total_models": 96,
     "masters": [
       "Colette Du Bois, Smuggler",
       "Colette Du Bois, Star of the Show",
@@ -12,20 +12,17 @@
       "Kaeris, Reborn",
       "Rasputina, Abominable",
       "Rasputina, Winter's Teeth",
+      "Rasputina, Winter\u2019s Teeth",
       "Sandeep Desai, Font of Magic",
       "Sandeep Desai, The Quiet Flame",
       "Toni Ironsides, Troubleshooter",
       "Toni Ironsides, Union President"
     ],
     "henchmen": [
-      "Amina Naidu",
-      "Arcane Fate, Emissary",
       "Bellaventine Thorpe",
       "Cassandra Felton",
-      "Ceddra, Sightless Snow",
       "Deacon Hillcrest",
       "Envy",
-      "Harris J-5",
       "Harrison Frodsham",
       "Howard Langston",
       "Jonathan Reichart",
@@ -33,16 +30,14 @@
       "Kandara",
       "Kudra",
       "Lohith",
-      "Mechanical Rider",
       "Paul Crockett",
       "Shadowlark",
       "Snow Storm",
       "The Captain"
     ],
-    "minions": 24,
+    "minions": 23,
     "totems": [
       "Angelica Durand",
-      "Arcane Fate, Effigy",
       "Banasuva",
       "Bernadette Basse, Bravo",
       "Bernadette Basse, Furtive",
@@ -61,7 +56,6 @@
       "Academic",
       "Chimera",
       "Crossroads",
-      "Cult",
       "December",
       "Foundry",
       "Frontier",
@@ -74,7 +68,7 @@
     ]
   },
   "Bayou": {
-    "total_models": 110,
+    "total_models": 116,
     "masters": [
       "Mah Tucket, Mecha-Meemaw",
       "Mah Tucket, Metal Magpie",
@@ -82,6 +76,8 @@
       "Ophelia LaCroix, Red Cage Raider",
       "Som'er Teeth Jones, Bayou Boss",
       "Som'er Teeth Jones, Loot Monger",
+      "Som\u2019er Teeth Jones, Bayou Boss",
+      "Som\u2019er Teeth Jones, Loot Monger",
       "The Brewmaster, Moonshiner",
       "The Brewmaster, Proof-Prophet",
       "The Clampetts, Bally-Hoo Bucket",
@@ -101,17 +97,14 @@
       "Fingers Leong",
       "Francois LaCroix",
       "Gluttony",
-      "Hoochdini",
       "Lenny Jones",
-      "Lucky Fate, Emissary",
-      "Nia, Fractured Future",
       "Old Major",
       "Popcorn Turner",
       "Sparks LeBlanc",
       "Trixiebelle",
       "Uncle Bogg"
     ],
-    "minions": 30,
+    "minions": 33,
     "totems": [
       "Apprentice Wesley",
       "Big Brain Brin",
@@ -119,7 +112,6 @@
       "Cooper Jones",
       "Flying Piglet",
       "Judd & Honey",
-      "Lucky Fate, Effigy",
       "Mirewing",
       "Olivia Bernard",
       "Penelope",
@@ -134,6 +126,7 @@
     "keywords": [
       "Angler",
       "Big Hat",
+      "Big Hat(2)2)",
       "Crossroads",
       "Infamous",
       "Jockey",
@@ -143,7 +136,8 @@
       "Swampfiend",
       "Tri-Chi",
       "Tricksy",
-      "Wizz-Bang"
+      "Wizz-Bang",
+      "Wizz-Bang(3)"
     ]
   },
   "Explorer's Society": {
@@ -163,7 +157,6 @@
       "Maxine Agassiz, Monomaniacal",
       "Maxine Agassiz, The Renowned",
       "Nexus, Heart of the Hive",
-      "Nexus, One of Many",
       "Tiri, The Architect",
       "Tiri, The Nomad"
     ],
@@ -173,8 +166,6 @@
       "Dr. Meredith Stanley",
       "GIBSON DeWALT",
       "Harata Ngaatoro",
-      "Host Ducat",
-      "Intrepid Fate, Emissary",
       "Jin Baccara",
       "Kett",
       "Kiya Manimi",
@@ -182,7 +173,6 @@
       "Model 9",
       "Mr. Ngaatoro",
       "Sidir Alchibal",
-      "The First Light",
       "The Iron Matron",
       "Winston Finnigan"
     ],
@@ -191,7 +181,6 @@
       "Beau Fishbocker",
       "Cryptologist",
       "Empyrean Eagle",
-      "Intrepid Fate, Effigy",
       "Luna",
       "Mr. Mordrake, Bump in the Night",
       "Mr. Mordrake, Silent Witness",
@@ -205,19 +194,25 @@
       "Unseelie Engine"
     ],
     "keywords": [
+      "8 Seeker",
       "Apex",
+      "Apex(2)2)",
+      "Apex(3)3)",
       "Bygone",
       "Cadmus",
+      "Cadmus(2)",
+      "Cadmus-",
       "DUA",
       "EVS",
       "Seeker",
       "Society",
       "Syndicate",
+      "SyndicateThe",
       "Wastrel"
     ]
   },
   "Guild": {
-    "total_models": 99,
+    "total_models": 100,
     "masters": [
       "Charles Hoffman, Inventor",
       "Charles Hoffman, Steel Sculptor",
@@ -241,7 +236,6 @@
       "Agent 46",
       "Alan Reid",
       "Allison Dade",
-      "Brutal Fate, Emissary",
       "Commander Bura",
       "Francisco Ortega",
       "Greed",
@@ -257,7 +251,6 @@
     "totems": [
       "Asset 17",
       "Auguste Hart",
-      "Brutal Fate, Effigy",
       "Disease Containment Unit",
       "Edie Clark",
       "Jane Doe",
@@ -266,6 +259,7 @@
       "Pap\u00e1 Loco",
       "Purifying Flame",
       "Sly \"Six-Shots\"",
+      "Sly \u201cSix-Shots\"",
       "Smokestack",
       "The Dispatcher",
       "The Printing Press",
@@ -273,22 +267,29 @@
       "Walking Cannon"
     ],
     "keywords": [
+      "1 0Witch Hunter",
+      "9 Witch Hunter",
+      ":  10Witch Hunter",
       "Augmented",
       "Cavalier",
+      "Cavalier (2)",
       "Crossroads",
       "Elite",
       "Family",
       "Frontier",
       "Guard",
+      "GuardThe",
       "Journalist",
       "Marshal",
+      "S TWNi: t8ch Hunter",
+      "SCTaNv: a9lier",
       "Savage",
       "Vanguard",
       "Witch Hunter"
     ]
   },
   "Neverborn": {
-    "total_models": 97,
+    "total_models": 98,
     "masters": [
       "Euripides, Hierophant",
       "Euripides, Old One-Eye",
@@ -299,6 +300,7 @@
       "Nekima, Broodmother",
       "Nekima, Nephilim Queen",
       "Pandora, Despair's Desire",
+      "Pandora, Despair\u2019s Desire",
       "Pandora, Tyrant-Torn",
       "Silken King, Colossus",
       "Silken King, Long Live",
@@ -318,13 +320,11 @@
       "Ithanna",
       "Klaus Norwood",
       "Myranda",
-      "Mysterious Fate, Emissary",
-      "Serena Bowman",
       "Thoon",
       "Widow Weaver",
       "Wrath"
     ],
-    "minions": 27,
+    "minions": 25,
     "totems": [
       "Abyssal Anchor",
       "Blood Hunter",
@@ -336,7 +336,6 @@
       "Lord Chompy Bits, Dreamlord",
       "Lord Chompy Bits, Lurking Lullaby",
       "Marathine",
-      "Mysterious Fate, Effigy",
       "Poltergeist",
       "Primordial Magic",
       "Razorspine Rattler",
@@ -345,16 +344,23 @@
       "Urnbearer"
     ],
     "keywords": [
+      "11 Nightmare",
       "Apex",
       "Banished",
       "Brood",
       "Chimera",
-      "Crossroads",
+      "Crossroads-",
       "Fae",
       "Grim",
+      "N : 1N0ightmare",
+      "N : N9ightmare",
+      "NightmaLorre",
       "Nightmare",
       "Returned",
+      "Returned(2)2)",
+      "SNTiNg: h5tmare",
       "Savage",
+      "T NN: i6ghtmare",
       "Woe"
     ]
   },
@@ -373,7 +379,6 @@
       "Rusty Alyce, Trigger Happy",
       "Tara, Timeless",
       "Tara, Voidcaller",
-      "Viktoria Chambers, Ashes and Blood",
       "Viktoria Chambers, Twin Blades",
       "Von Schill, Iron-Heart",
       "Von Schill, The Veteran"
@@ -383,25 +388,19 @@
       "Angel Eyes",
       "Arik Sch\u00f6ttemer",
       "Burt Jebsen",
-      "Dead Rider",
       "Hannah Lovelace",
-      "Hodgepodge Fate, Emissary",
-      "Hooded Rider",
       "Mad Dog Brackett",
       "Marlena Webster",
-      "Maurice",
       "Mr. Ambrose",
       "Nix",
-      "Pale Rider",
       "Pearl Musgrove",
       "Pride",
-      "Sue",
       "Taelor",
       "The First Mate",
       "The Nothing Beast",
       "Vanessa Chambers"
     ],
-    "minions": 23,
+    "minions": 22,
     "totems": [
       "Ashen Echo",
       "Benny Wolcomb",
@@ -409,7 +408,6 @@
       "Doc Mitchell",
       "Earl Burns",
       "Goop",
-      "Hodgepodge Fate, Effigy",
       "Hollow Waif",
       "Karina",
       "Mancha Roja",
@@ -422,6 +420,7 @@
     ],
     "keywords": [
       "Amalgam",
+      "Amalgam(2)2)",
       "Ampersand",
       "Bandit",
       "Crossroads",
@@ -430,8 +429,11 @@
       "Infamous",
       "Jockey",
       "Mercenary",
+      "Mercenary-",
       "Obliteration",
-      "Plague"
+      "Plague",
+      "T NO: 7bliteration",
+      "T NO: 9bliteration"
     ]
   },
   "Resurrectionists": {
@@ -459,10 +461,8 @@
       "Archie",
       "Asura Roten",
       "Batsch & Amalie",
-      "Carrion Fate, Emissary",
       "Chiaki, The Beacon",
       "Datsue Ba",
-      "Ezekiel",
       "Izamu, The Armor",
       "Kari Zotiko",
       "Kuchisake-Onna",
@@ -472,16 +472,13 @@
       "Rafkin",
       "Sebastian",
       "Sloth",
-      "The Strange Lady",
       "The Valedictorian",
       "Vincent St. Clair"
     ],
-    "minions": 32,
+    "minions": 33,
     "totems": [
       "Backup Assistant",
-      "Carrion Fate, Effigy",
       "Copycat Killer",
-      "Corpse Candle",
       "Corpse Curator",
       "Ikiryo, Spirit of Vengeance",
       "Ikiryo, The Heart That Left",
@@ -497,11 +494,15 @@
       "Zombie Chihuahua"
     ],
     "keywords": [
+      "1 Urami",
+      "4 Experimental",
+      "5 Urami",
+      "6 Urami",
+      "9 Urami",
       "Amalgam",
       "Ancestor",
       "Crossroads",
       "Experimental",
-      "Experimental Transports",
       "Forgotten",
       "Fungal",
       "Redchapel",
@@ -512,7 +513,7 @@
     ]
   },
   "Ten Thunders": {
-    "total_models": 88,
+    "total_models": 91,
     "masters": [
       "Asami Tanaka, Oni Mother",
       "Asami Tanaka, Shintaku",
@@ -525,6 +526,7 @@
       "Misaki Katanaka, Fractured",
       "Misaki Katanaka, Oyabun",
       "Shenlong, Dragon's Breath",
+      "Shenlong, Dragon\u2019s Breath",
       "Shenlong, The Teacher",
       "Youko Hamasaki, Silk of the Lotus",
       "Youko Hamasaki, Unseen"
@@ -538,12 +540,13 @@
       "Koji",
       "Lady Yume",
       "Lust",
+      "Map Map",
       "M\u1eadp Map",
       "Neil Henry",
       "Ohaguro Bettari",
       "Ototo",
       "Sensei Yu",
-      "Shadow Fate, Emissary",
+      "Story of Thanh Giong",
       "Story of Th\u00e1nh Giong",
       "Yamaziko"
     ],
@@ -561,11 +564,13 @@
       "Mu Long",
       "Paper Tiger",
       "Rock Hopper",
-      "Shadow Fate, Effigy",
       "Shang",
       "Wanyudo"
     ],
     "keywords": [
+      "0 Qi and Gong",
+      "1 Qi and Gong",
+      "8 Oni",
       "Crossroads",
       "Foundry",
       "Honeypot",
@@ -574,7 +579,8 @@
       "Oni",
       "Qi and Gong",
       "Red Library",
-      "Sayuri"
+      "Sayuri",
+      "TN OO: n9i"
     ]
   }
 }

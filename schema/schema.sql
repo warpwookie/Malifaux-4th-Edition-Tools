@@ -332,6 +332,47 @@ CREATE TABLE IF NOT EXISTS upgrade_universal_triggers (
 );
 
 -- ============================================================
+-- RULES, FAQ, AND GAINING GROUNDS
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS rules_sections (
+    id          TEXT PRIMARY KEY,                            -- e.g., "glossary", "stat_cards"
+    title       TEXT NOT NULL,
+    pages       TEXT,                                        -- JSON array of page refs, e.g., '["2-3"]'
+    content     TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS faq_entries (
+    id              TEXT PRIMARY KEY,                        -- e.g., "1.1", "2.3"
+    section         TEXT NOT NULL,                           -- e.g., "GENERAL", "ABILITIES"
+    section_number  INTEGER NOT NULL,
+    question        TEXT NOT NULL,
+    answer          TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS strategies (
+    id              TEXT PRIMARY KEY,                        -- e.g., "strategy_boundary_dispute"
+    name            TEXT NOT NULL,
+    suit            TEXT,                                    -- "(r)", "(m)", "(t)", "(c)"
+    max_vp          INTEGER NOT NULL,
+    setup           TEXT,
+    rules           TEXT,
+    scoring         TEXT,
+    additional_vp   TEXT
+);
+
+CREATE TABLE IF NOT EXISTS schemes (
+    id                      TEXT PRIMARY KEY,                -- e.g., "scheme_assassinate"
+    name                    TEXT NOT NULL,
+    max_vp                  INTEGER NOT NULL,
+    selection               TEXT,                            -- NULL if no selection step
+    reveal                  TEXT,
+    scoring                 TEXT,
+    additional_vp           TEXT,
+    next_available_schemes  TEXT                             -- JSON array of scheme names
+);
+
+-- ============================================================
 -- INDEXES
 -- ============================================================
 
@@ -352,3 +393,5 @@ CREATE INDEX IF NOT EXISTS idx_markers_keyword ON markers(keyword);
 CREATE INDEX IF NOT EXISTS idx_marker_crew_sources_marker ON marker_crew_sources(marker_id);
 CREATE INDEX IF NOT EXISTS idx_marker_model_sources_marker ON marker_model_sources(marker_id);
 CREATE INDEX IF NOT EXISTS idx_marker_model_sources_model ON marker_model_sources(model_id);
+CREATE INDEX IF NOT EXISTS idx_faq_section ON faq_entries(section);
+CREATE INDEX IF NOT EXISTS idx_schemes_name ON schemes(name);

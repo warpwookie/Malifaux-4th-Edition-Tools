@@ -270,6 +270,45 @@ def export_marker_registry(conn: sqlite3.Connection) -> list[dict]:
     return markers
 
 
+def export_rules(conn: sqlite3.Connection) -> list[dict]:
+    """Export all rules sections."""
+    c = conn.cursor()
+    c.execute("SELECT * FROM rules_sections ORDER BY rowid")
+    result = []
+    for r in c.fetchall():
+        entry = dict(r)
+        # Parse pages JSON back to list
+        if entry.get("pages"):
+            entry["pages"] = json.loads(entry["pages"])
+        result.append(entry)
+    return result
+
+
+def export_faq(conn: sqlite3.Connection) -> list[dict]:
+    """Export all FAQ entries."""
+    c = conn.cursor()
+    c.execute("SELECT * FROM faq_entries ORDER BY section_number, id")
+    return [dict(r) for r in c.fetchall()]
+
+
+def export_gaining_grounds(conn: sqlite3.Connection) -> dict:
+    """Export strategies and schemes as a combined dict."""
+    c = conn.cursor()
+
+    c.execute("SELECT * FROM strategies ORDER BY name")
+    strategies = [dict(r) for r in c.fetchall()]
+
+    c.execute("SELECT * FROM schemes ORDER BY name")
+    schemes = []
+    for s in c.fetchall():
+        entry = dict(s)
+        if entry.get("next_available_schemes"):
+            entry["next_available_schemes"] = json.loads(entry["next_available_schemes"])
+        schemes.append(entry)
+
+    return {"strategies": strategies, "schemes": schemes}
+
+
 def _strip_nulls(obj):
     """Recursively remove keys with None/null values from dicts."""
     if isinstance(obj, dict):
@@ -289,7 +328,9 @@ def _strip_action_category(actions: list[dict]) -> list[dict]:
 
 def export_knowledge_base(models: list[dict], crew_cards: list[dict],
                           upgrades: list[dict], markers: list[dict],
-                          tokens: list[dict], faction_summary: dict) -> dict:
+                          tokens: list[dict], faction_summary: dict,
+                          rules: list[dict] = None, faq: list[dict] = None,
+                          gaining_grounds: dict = None) -> dict:
     """Build a single combined JSON knowledge base optimized for AI consumption.
 
     Strips redundant fields:
@@ -326,18 +367,20 @@ def export_knowledge_base(models: list[dict], crew_cards: list[dict],
         mk.pop("terrain_traits_csv", None)
 
     # Build the combined knowledge base
+    counts = {
+        "models": len(kb_models),
+        "crew_cards": len(kb_crew),
+        "upgrades": len(kb_upgrades),
+        "markers": len(kb_markers),
+        "tokens": len(tokens),
+    }
+
     kb = {
         "_meta": {
             "description": "Malifaux 4th Edition complete game data — "
-                           "798 models, 130 crew cards, 70 upgrades across 8 factions",
+                           "models, crew cards, upgrades, rules, FAQ, and Gaining Grounds",
             "generated": date.today().isoformat(),
-            "counts": {
-                "models": len(kb_models),
-                "crew_cards": len(kb_crew),
-                "upgrades": len(kb_upgrades),
-                "markers": len(kb_markers),
-                "tokens": len(tokens),
-            },
+            "counts": counts,
         },
         "models": _strip_nulls(kb_models),
         "crew_cards": _strip_nulls(kb_crew),
@@ -346,6 +389,19 @@ def export_knowledge_base(models: list[dict], crew_cards: list[dict],
         "tokens": _strip_nulls(tokens),
         "faction_summary": faction_summary,
     }
+
+    if rules is not None:
+        kb["rules"] = _strip_nulls(rules)
+        counts["rules_sections"] = len(rules)
+    if faq is not None:
+        kb["faq"] = _strip_nulls(faq)
+        counts["faq_entries"] = len(faq)
+    if gaining_grounds is not None:
+        kb["strategies"] = _strip_nulls(gaining_grounds["strategies"])
+        kb["schemes"] = _strip_nulls(gaining_grounds["schemes"])
+        counts["strategies"] = len(gaining_grounds["strategies"])
+        counts["schemes"] = len(gaining_grounds["schemes"])
+
     return kb
 
 
@@ -440,6 +496,30 @@ def main():
         json.dump(markers, f, indent=2)
     print(f"  Total: {len(markers)} markers -> {markers_path.name}")
 
+    # === Export rules ===
+    print("\nExporting rules...")
+    all_rules = export_rules(conn)
+    rules_path = OUT_DIR / "m4e_rules.json"
+    with open(rules_path, "w", encoding="utf-8") as f:
+        json.dump(all_rules, f, indent=2, ensure_ascii=False)
+    print(f"  Total: {len(all_rules)} sections -> {rules_path.name}")
+
+    # === Export FAQ ===
+    print("\nExporting FAQ...")
+    all_faq = export_faq(conn)
+    faq_path = OUT_DIR / "m4e_faq.json"
+    with open(faq_path, "w", encoding="utf-8") as f:
+        json.dump(all_faq, f, indent=2, ensure_ascii=False)
+    print(f"  Total: {len(all_faq)} entries -> {faq_path.name}")
+
+    # === Export Gaining Grounds ===
+    print("\nExporting Gaining Grounds...")
+    gg = export_gaining_grounds(conn)
+    gg_path = OUT_DIR / "m4e_gaining_grounds.json"
+    with open(gg_path, "w", encoding="utf-8") as f:
+        json.dump(gg, f, indent=2, ensure_ascii=False)
+    print(f"  Total: {len(gg['strategies'])} strategies, {len(gg['schemes'])} schemes -> {gg_path.name}")
+
     # === Build faction summary ===
     print("\nBuilding faction summary...")
     summary = build_faction_summary(all_models)
@@ -447,10 +527,11 @@ def main():
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
     print(f"  Summary -> {summary_path.name}")
-    
+
     # === Export combined knowledge base ===
     print("\nExporting combined knowledge base...")
-    kb = export_knowledge_base(all_models, all_crew, all_upgrades, markers, tokens, summary)
+    kb = export_knowledge_base(all_models, all_crew, all_upgrades, markers, tokens, summary,
+                               rules=all_rules, faq=all_faq, gaining_grounds=gg)
     kb_path = OUT_DIR / "m4e_knowledge_base.json"
     with open(kb_path, "w", encoding="utf-8") as f:
         json.dump(kb, f, indent=2, ensure_ascii=False)
@@ -482,6 +563,10 @@ def main():
     print(f"  Triggers:     {total_triggers}")
     print(f"  Tokens:       {len(tokens)}")
     print(f"  Markers:      {len(markers)}")
+    print(f"  Rules:        {len(all_rules)} sections")
+    print(f"  FAQ:          {len(all_faq)} entries")
+    print(f"  Strategies:   {len(gg['strategies'])}")
+    print(f"  Schemes:      {len(gg['schemes'])}")
     print(f"  Factions:     {len(by_faction)}")
     
     conn.close()

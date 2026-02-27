@@ -1,6 +1,6 @@
 {
   "Arcanists": {
-    "total_models": 96,
+    "total_models": 95,
     "masters": [
       "Colette Du Bois, Smuggler",
       "Colette Du Bois, Star of the Show",
@@ -12,7 +12,6 @@
       "Kaeris, Reborn",
       "Rasputina, Abominable",
       "Rasputina, Winter's Teeth",
-      "Rasputina, Winter\u2019s Teeth",
       "Sandeep Desai, Font of Magic",
       "Sandeep Desai, The Quiet Flame",
       "Toni Ironsides, Troubleshooter",
@@ -68,7 +67,7 @@
     ]
   },
   "Bayou": {
-    "total_models": 116,
+    "total_models": 110,
     "masters": [
       "Mah Tucket, Mecha-Meemaw",
       "Mah Tucket, Metal Magpie",
@@ -76,8 +75,6 @@
       "Ophelia LaCroix, Red Cage Raider",
       "Som'er Teeth Jones, Bayou Boss",
       "Som'er Teeth Jones, Loot Monger",
-      "Som\u2019er Teeth Jones, Bayou Boss",
-      "Som\u2019er Teeth Jones, Loot Monger",
       "The Brewmaster, Moonshiner",
       "The Brewmaster, Proof-Prophet",
       "The Clampetts, Bally-Hoo Bucket",
@@ -104,7 +101,7 @@
       "Trixiebelle",
       "Uncle Bogg"
     ],
-    "minions": 33,
+    "minions": 31,
     "totems": [
       "Apprentice Wesley",
       "Big Brain Brin",
@@ -212,7 +209,7 @@
     ]
   },
   "Guild": {
-    "total_models": 100,
+    "total_models": 99,
     "masters": [
       "Charles Hoffman, Inventor",
       "Charles Hoffman, Steel Sculptor",
@@ -259,7 +256,6 @@
       "Pap\u00e1 Loco",
       "Purifying Flame",
       "Sly \"Six-Shots\"",
-      "Sly \u201cSix-Shots\"",
       "Smokestack",
       "The Dispatcher",
       "The Printing Press",
@@ -289,7 +285,7 @@
     ]
   },
   "Neverborn": {
-    "total_models": 98,
+    "total_models": 97,
     "masters": [
       "Euripides, Hierophant",
       "Euripides, Old One-Eye",
@@ -300,7 +296,6 @@
       "Nekima, Broodmother",
       "Nekima, Nephilim Queen",
       "Pandora, Despair's Desire",
-      "Pandora, Despair\u2019s Desire",
       "Pandora, Tyrant-Torn",
       "Silken King, Colossus",
       "Silken King, Long Live",
@@ -513,7 +508,7 @@
     ]
   },
   "Ten Thunders": {
-    "total_models": 91,
+    "total_models": 88,
     "masters": [
       "Asami Tanaka, Oni Mother",
       "Asami Tanaka, Shintaku",
@@ -526,7 +521,6 @@
       "Misaki Katanaka, Fractured",
       "Misaki Katanaka, Oyabun",
       "Shenlong, Dragon's Breath",
-      "Shenlong, Dragon\u2019s Breath",
       "Shenlong, The Teacher",
       "Youko Hamasaki, Silk of the Lotus",
       "Youko Hamasaki, Unseen"
@@ -541,13 +535,11 @@
       "Lady Yume",
       "Lust",
       "Map Map",
-      "M\u1eadp Map",
       "Neil Henry",
       "Ohaguro Bettari",
       "Ototo",
       "Sensei Yu",
       "Story of Thanh Giong",
-      "Story of Th\u00e1nh Giong",
       "Yamaziko"
     ],
     "minions": 25,

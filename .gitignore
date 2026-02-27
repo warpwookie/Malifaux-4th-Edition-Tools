@@ -2,8 +2,6 @@
 # M4E Parser - Git Ignore Rules
 # ===========================================
 
-# Source PDFs (binary files, stored locally only)
-source_pdfs/
 
 # Reference PDFs (large binary files)
 reference/*.pdf
@@ -37,3 +35,5 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.bak
+
+pipeline_work/

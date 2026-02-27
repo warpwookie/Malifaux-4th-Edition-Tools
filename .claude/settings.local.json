@@ -40,7 +40,10 @@
       "Bash(git status -u)",
       "Bash(git add scripts/pdf_text_extractor.py scripts/pdf_text_batch.py scripts/merger.py scripts/db_loader.py \"Model Data Json/\" db/m4e.db)",
       "Bash(git add scripts/pdf_text_extractor.py scripts/pdf_text_batch.py scripts/merger.py scripts/db_loader.py \"Model Data Json/\")",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(wc -l /c/Users/mbeck/Documents/GitHub/Malifaux-4th-Edition-Tools/archive_scripts/*.py)",
+      "Bash(git add scripts/pipeline.py scripts/rebuild_db_from_json.py fix_token_data.py archive_scripts/pipeline.py archive_scripts/rebuild_db_from_json.py archive_scripts/fix_token_data.py)",
+      "Bash(git commit:*)"
     ]
   }
 }

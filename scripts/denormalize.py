@@ -233,12 +233,27 @@ def export_upgrades(conn: sqlite3.Connection) -> list[dict]:
 
 
 def export_token_registry(conn: sqlite3.Connection) -> list[dict]:
-    """Export the global token registry."""
+    """Export the global token registry with model sources."""
     c = conn.cursor()
     c.execute("SELECT * FROM tokens ORDER BY name")
     tokens = []
     for t in c.fetchall():
+        tid = t["id"]
         clean = {k: v for k, v in t.items() if k != "id" and v is not None}
+
+        # Get model sources
+        c.execute("""SELECT m.name AS model_name, tms.source_type, tms.source_name,
+                            tms.applies_or_references
+                     FROM token_model_sources tms
+                     JOIN models m ON m.id = tms.model_id
+                     WHERE tms.token_id=? ORDER BY m.name, tms.source_name""", (tid,))
+        sources = []
+        for s in c.fetchall():
+            src = {k: v for k, v in dict(s).items() if v is not None}
+            sources.append(src)
+        if sources:
+            clean["model_sources"] = sources
+
         tokens.append(clean)
     return tokens
 

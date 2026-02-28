@@ -6546,63 +6546,16 @@
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this model has fewer cards in its control hand than the target, this action receives a (+)."
-      },
-      {
-        "name": "Abort the Trial",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 8\"",
-        "skill_value": 6,
-        "resist": "Wp",
-        "tn": "-",
-        "damage": "-",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Name a token. Remove the named token from all models within 2\" of the target. (soulstone) Weaponised Semantics: Once per activation. The target declares an action chosen and controlled by this model."
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Course Correction",
-        "category": "tactical_actions",
-        "range": "(aura) 8\"",
-        "skill_value": 0,
-        "tn": 5,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Ally only. Move the target up to 5\". Then, the target gains a Voyage token."
-      },
-      {
-        "name": "X",
-        "category": "tactical_actions",
-        "range": "Once per activation.",
-        "skill_value": 0,
-        "tn": "Target gains a",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Fast token.",
+        "effects": "If this model has fewer cards in its control hand than the target, this action receives a (+).",
         "triggers": [
           {
-            "name": "Learn by Example",
-            "suit": "(c)",
+            "name": "Off On a Tangent",
+            "suit": "(X)",
             "timing": "after_succeeding",
-            "text": "Target may declare the Interact action.",
+            "text": "Move the target up to 4\".",
             "is_mandatory": false,
             "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "X",
-        "category": "tactical_actions",
-        "range": "",
-        "skill_value": "Move the target up to 4\".",
-        "tn": "-",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "",
-        "triggers": [
+          },
           {
             "name": "Touch of Madness",
             "suit": "(m)",
@@ -6616,6 +6569,59 @@
             "suit": "(t)",
             "timing": "after_succeeding",
             "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Abort the Trial",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic) 8\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "tn": "-",
+        "damage": "-",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This action may target friendly models. Name a token. Remove the named token from all models within 2\" of the target. (soulstone) Weaponised Semantics: Once per activation. The target declares an action chosen and controlled by this model.",
+        "triggers": [
+          {
+            "name": "Weaponised Semantics",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. The target declares an action chosen and controlled by this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Course Correction",
+        "category": "tactical_actions",
+        "range": "(aura) 8\"",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Ally only. Move the target up to 5\". Then, the target gains a Voyage token.",
+        "triggers": [
+          {
+            "name": "Race the Tide",
+            "suit": "(X)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Target gains a Fast token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Learn by Example",
+            "suit": "(c)(c)",
+            "timing": "after_succeeding",
+            "text": "Target may declare the Interact action.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }

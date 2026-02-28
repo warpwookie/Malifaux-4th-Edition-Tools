@@ -46,7 +46,8 @@
       "Bash(git commit:*)",
       "Bash(git add schema/schema.sql scripts/load_rules_data.py scripts/denormalize.py \"Model Data Json/m4e_faq.json\" \"Model Data Json/m4e_gaining_grounds.json\" \"Model Data Json/m4e_rules.json\" \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_faction_summary.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_arcanists.json\" \"Model Data Json/m4e_models_bayou.json\" \"Model Data Json/m4e_models_guild.json\" \"Model Data Json/m4e_models_neverborn.json\" \"Model Data Json/m4e_models_ten_thunders.json\" db/m4e.db)",
       "Bash(git add schema/schema.sql scripts/load_rules_data.py scripts/denormalize.py \"Model Data Json/m4e_faq.json\" \"Model Data Json/m4e_gaining_grounds.json\" \"Model Data Json/m4e_rules.json\" \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_faction_summary.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_arcanists.json\" \"Model Data Json/m4e_models_bayou.json\" \"Model Data Json/m4e_models_guild.json\" \"Model Data Json/m4e_models_neverborn.json\" \"Model Data Json/m4e_models_ten_thunders.json\")",
-      "Bash(git add \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_explorers_society.json\" \"Model Data Json/m4e_tokens.json\")"
+      "Bash(git add \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_explorers_society.json\" \"Model Data Json/m4e_tokens.json\")",
+      "Bash(git add \"Model Data Json/m4e_tokens.json\" \"Model Data Json/m4e_knowledge_base.json\")"
     ]
   }
 }

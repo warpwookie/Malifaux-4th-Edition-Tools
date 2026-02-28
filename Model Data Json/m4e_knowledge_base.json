@@ -87659,6 +87659,54 @@
       ]
     },
     {
+      "name": "On Tour",
+      "associated_master": "Wrath",
+      "associated_title": "Master",
+      "faction": "Neverborn",
+      "keyword_abilities": [
+        {
+          "granted_to": "Friendly Crossroads models",
+          "name": "Thunderous Performance",
+          "text": "While performing an opposed duel with an enemy that has a Craven token, this model receives +1 to its duel total."
+        },
+        {
+          "granted_to": "Friendly Crossroads models",
+          "name": "Consumed by Sin",
+          "text": "When this model receives a raise in an opposed duel with an enemy model, the enemy model gains a Sin token."
+        }
+      ],
+      "keyword_actions": [
+        {
+          "granted_to": "Friendly Crossroads models",
+          "name": "Destructive Performance",
+          "category": "tactical_actions",
+          "range": "(magic) 14\"",
+          "is_signature": true,
+          "soulstone_cost": 0,
+          "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
+          "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS."
+        }
+      ],
+      "tokens": [
+        {
+          "name": "Craven",
+          "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
+        },
+        {
+          "name": "Entranced",
+          "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
+        },
+        {
+          "name": "Shielded",
+          "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
+        },
+        {
+          "name": "Sin",
+          "text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token."
+        }
+      ]
+    },
+    {
       "name": "Oneirophobia",
       "associated_master": "The Dreamer",
       "associated_title": "Insomniac",
@@ -91103,54 +91151,6 @@
         {
           "name": "Slow",
           "text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast."
-        }
-      ]
-    },
-    {
-      "name": "On Tour",
-      "associated_master": "Wrath",
-      "associated_title": "Master",
-      "faction": "Unknown",
-      "keyword_abilities": [
-        {
-          "granted_to": "Friendly Crossroads models",
-          "name": "Thunderous Performance",
-          "text": "While performing an opposed duel with an enemy that has a Craven token, this model receives +1 to its duel total."
-        },
-        {
-          "granted_to": "Friendly Crossroads models",
-          "name": "Consumed by Sin",
-          "text": "When this model receives a raise in an opposed duel with an enemy model, the enemy model gains a Sin token."
-        }
-      ],
-      "keyword_actions": [
-        {
-          "granted_to": "Friendly Crossroads models",
-          "name": "Destructive Performance",
-          "category": "tactical_actions",
-          "range": "(magic) 14\"",
-          "is_signature": true,
-          "soulstone_cost": 0,
-          "effects": "Remove all enemy Scheme markers in the area between this model and the two targets. All enemies in the area between this model and the two targets must pass a TN 13 Wp duel or gain this model's choice of a Craven or Sin token and be dealt 2 damage.",
-          "costs_and_restrictions": "Once per activation. Target two other friendly Crossroads models within range, ignoring LoS."
-        }
-      ],
-      "tokens": [
-        {
-          "name": "Craven",
-          "text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token."
-        },
-        {
-          "name": "Entranced",
-          "text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token."
-        },
-        {
-          "name": "Shielded",
-          "text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0."
-        },
-        {
-          "name": "Sin",
-          "text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token."
         }
       ]
     },

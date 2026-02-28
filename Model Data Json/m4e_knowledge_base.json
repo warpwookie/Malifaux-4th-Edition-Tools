@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Malifaux 4th Edition complete game data — models, crew cards, upgrades, rules, FAQ, and Gaining Grounds",
-    "generated": "2026-02-27",
+    "generated": "2026-02-28",
     "counts": {
       "models": 798,
       "crew_cards": 130,
@@ -93443,7 +93443,7 @@
       "category": "keyword_specific",
       "default_size": "30mm",
       "default_height": "Ht 0",
-      "rules_text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (soulstone) to Df duels.",
+      "rules_text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (+) to Df duels.",
       "keyword": "Seeker",
       "defined_on_crew_cards": [
         {
@@ -93535,7 +93535,7 @@
       "category": "keyword_specific",
       "default_size": "30mm",
       "default_height": "Ht 0",
-      "rules_text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile:\n(c) BOOM!: Models within (r)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage.\n(m) Surprise!: Models within (r)2\" gain a Glowy token.\n(t) Whoa: Models within (r)2\" gain an Insight token.\n(r) Toxic Smoke: Models within (r)2\" gain a Poison token.",
+      "rules_text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile:\n(r) BOOM!: Models within (pulse)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage.\n(m) Surprise!: Models within (pulse)2\" gain a Glowy token.\n(t) Whoa: Models within (pulse)2\" gain an Insight token.\n(c) Toxic Smoke: Models within (pulse)2\" gain a Poison token.",
       "keyword": "Wizz-Bang",
       "defined_on_crew_cards": [
         {

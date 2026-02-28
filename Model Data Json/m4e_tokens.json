@@ -1569,6 +1569,7 @@
     "type": "buff",
     "timing": "end_phase",
     "rules_text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured.",
+    "cancels": "Injured",
     "model_sources": [
       {
         "model_name": "Adze",
@@ -4061,6 +4062,7 @@
     "type": "debuff",
     "timing": "end_activation",
     "rules_text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused.",
+    "cancels": "Focused",
     "model_sources": [
       {
         "model_name": "Artemis",
@@ -5026,6 +5028,7 @@
     "type": "debuff",
     "timing": "permanent",
     "rules_text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden.",
+    "cancels": "Hidden",
     "model_sources": [
       {
         "model_name": "Cornelius Basse",
@@ -5335,6 +5338,7 @@
     "type": "buff",
     "timing": "on_use",
     "rules_text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted.",
+    "cancels": "Distracted",
     "model_sources": [
       {
         "model_name": "Amina Naidu",
@@ -6341,6 +6345,7 @@
     "type": "buff",
     "timing": "end_activation",
     "rules_text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered.",
+    "cancels": "Staggered",
     "model_sources": [
       {
         "model_name": "Abyssal Anchor",
@@ -6457,6 +6462,7 @@
     "type": "buff",
     "timing": "permanent",
     "rules_text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed.",
+    "cancels": "Exposed",
     "model_sources": [
       {
         "model_name": "Bernadette Basse",
@@ -7097,6 +7103,7 @@
     "type": "debuff",
     "timing": "end_phase",
     "rules_text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered.",
+    "cancels": "Bolstered",
     "model_sources": [
       {
         "model_name": "Abomination",
@@ -11578,6 +11585,7 @@
     "type": "debuff",
     "timing": "end_activation",
     "rules_text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened.",
+    "cancels": "Hastened",
     "model_sources": [
       {
         "model_name": "Ancient Construct",
@@ -12281,7 +12289,7 @@
     "name": "Stunned",
     "type": "debuff",
     "timing": "end_activation",
-    "rules_text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token.",
+    "rules_text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token.",
     "model_sources": [
       {
         "model_name": "Adze",

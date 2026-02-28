@@ -532,7 +532,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -761,7 +761,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1115,7 +1115,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1256,7 +1256,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -1712,7 +1712,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -2200,7 +2200,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -2433,7 +2433,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -2585,7 +2585,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -2760,7 +2760,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -2829,7 +2829,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -3011,7 +3011,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -3149,7 +3149,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -4130,7 +4130,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -4192,7 +4192,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -4359,7 +4359,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -4723,7 +4723,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -4780,7 +4780,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -5490,7 +5490,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -5564,7 +5564,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -5677,7 +5677,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -5726,7 +5726,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -5858,7 +5858,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -6157,7 +6157,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -6373,7 +6373,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -6409,7 +6409,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       }
     ]
   },
@@ -6578,7 +6578,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -6627,7 +6627,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -6897,7 +6897,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",
@@ -7320,7 +7320,7 @@
       },
       {
         "name": "Stunned",
-        "text": "This model cannot declare triggers, and it counts all (t) symbols on its card as blank. When this model ends its activation, remove this token."
+        "text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token."
       },
       {
         "name": "Summon",

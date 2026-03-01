@@ -20,6 +20,20 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent.parent
 SCHEMA_PATH = SCRIPT_DIR / "schema" / "schema.sql"
+REFERENCE_PATH = SCRIPT_DIR / "reference" / "reference_data.json"
+
+# Load known token names from reference data for allowlist-based matching.
+# This prevents phantom tokens like "Blood" from "New Blood token" text.
+_KNOWN_TOKENS = set()
+try:
+    with open(REFERENCE_PATH, encoding="utf-8") as _f:
+        _ref = json.load(_f)
+    _KNOWN_TOKENS = set(_ref.get("tokens", {}).get("basic", {}).keys())
+    # Also include tokens from cancellation pairs (e.g., Hidden, Exposed)
+    for pair in _ref.get("tokens", {}).get("cancellation_pairs", []):
+        _KNOWN_TOKENS.update(pair)
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
 
 
 def init_db(db_path: str) -> sqlite3.Connection:
@@ -155,15 +169,27 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
 
 def _update_token_references(c: sqlite3.Cursor, model_id: int, card: dict):
     """Scan card text for token references and update the token registry."""
-    token_pattern = re.compile(r'\b([A-Z][a-z]+)\s+token')
+    if not _KNOWN_TOKENS:
+        return  # No reference data loaded, skip token extraction
+    # Build regex from known token names only (prevents phantom tokens)
+    names_alt = "|".join(re.escape(t) for t in sorted(_KNOWN_TOKENS, key=len, reverse=True))
+    token_pattern = re.compile(r'\b(' + names_alt + r')\s+tokens?\b', re.IGNORECASE)
     # Also catch "X or Y token" pattern
-    or_pattern = re.compile(r'\b([A-Z][a-z]+)\s+or\s+(?:a\s+|an\s+)?([A-Z][a-z]+)\s+token')
+    or_pattern = re.compile(
+        r'\b(' + names_alt + r')\s+or\s+(?:a\s+|an\s+)?(' + names_alt + r')\s+tokens?\b',
+        re.IGNORECASE
+    )
     
     # Remove existing references for this model
     c.execute("""DELETE FROM token_model_sources WHERE model_id=?""", (model_id,))
     
-    def register_token(token_name: str, source_type: str, source_name: str, 
+    # Map lowercase -> canonical casing for consistent DB entries
+    _canon = {t.lower(): t for t in _KNOWN_TOKENS}
+
+    def register_token(token_name: str, source_type: str, source_name: str,
                        applies_or_references: str = "applies"):
+        # Use canonical casing from reference data
+        token_name = _canon.get(token_name.lower(), token_name)
         # Ensure token exists in registry
         c.execute("INSERT OR IGNORE INTO tokens (name) VALUES (?)", (token_name,))
         c.execute("SELECT id FROM tokens WHERE name=?", (token_name,))

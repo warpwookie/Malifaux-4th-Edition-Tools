@@ -11,7 +11,7 @@
       "Kaeris, Iron-Threaded",
       "Kaeris, Reborn",
       "Rasputina, Abominable",
-      "Rasputina, Winter's Teeth",
+      "Rasputina, Winter\u2019s Teeth",
       "Sandeep Desai, Font of Magic",
       "Sandeep Desai, The Quiet Flame",
       "Toni Ironsides, Troubleshooter",
@@ -67,14 +67,14 @@
     ]
   },
   "Bayou": {
-    "total_models": 110,
+    "total_models": 109,
     "masters": [
       "Mah Tucket, Mecha-Meemaw",
       "Mah Tucket, Metal Magpie",
-      "Ophelia LaCroix, Overloaded",
-      "Ophelia LaCroix, Red Cage Raider",
-      "Som'er Teeth Jones, Bayou Boss",
-      "Som'er Teeth Jones, Loot Monger",
+      "Ophelia Lacroix, Overloaded",
+      "Ophelia Lacroix, Red Cage Raider",
+      "Som\u2019er Teeth Jones, Bayou Boss",
+      "Som\u2019er Teeth Jones, Loot Monger",
       "The Brewmaster, Moonshiner",
       "The Brewmaster, Proof-Prophet",
       "The Clampetts, Bally-Hoo Bucket",
@@ -87,21 +87,21 @@
       "Zoraida, Swamp Hag"
     ],
     "henchmen": [
-      "ALPHONSE LeBLANC",
+      "Alphonse Leblanc",
       "Aunty Mel",
       "Bad Juju",
       "Bo Peep",
       "Fingers Leong",
-      "Francois LaCroix",
+      "Francois Lacroix",
       "Gluttony",
       "Lenny Jones",
       "Old Major",
       "Popcorn Turner",
-      "Sparks LeBlanc",
+      "Sparks Leblanc",
       "Trixiebelle",
       "Uncle Bogg"
     ],
-    "minions": 31,
+    "minions": 30,
     "totems": [
       "Apprentice Wesley",
       "Big Brain Brin",
@@ -112,13 +112,13 @@
       "Mirewing",
       "Olivia Bernard",
       "Penelope",
-      "SAMMY LaCROIX",
+      "Sammy Lacroix",
       "Skeeter",
       "Spit Hog",
       "The Little Lass",
       "The Sow",
       "Voodoo Doll",
-      "YOUNG LaCROIX"
+      "Young Lacroix"
     ],
     "keywords": [
       "Angler",
@@ -128,7 +128,6 @@
       "Infamous",
       "Jockey",
       "Kin",
-      "Returned",
       "Sooey",
       "Swampfiend",
       "Tri-Chi",
@@ -148,9 +147,9 @@
       "Jedza, The Wanderer",
       "Lord Cooper, Huntmaster",
       "Lord Cooper, Manhunter",
-      "Lucas McCabe, Dismounted Hunter",
-      "Lucas McCabe, Relic Hunter",
-      "Lucas McCabe, Tomb Delver",
+      "Lucas Mccabe, Dismounted Hunter",
+      "Lucas Mccabe, Relic Hunter",
+      "Lucas Mccabe, Tomb Delver",
       "Maxine Agassiz, Monomaniacal",
       "Maxine Agassiz, The Renowned",
       "Nexus, Heart of the Hive",
@@ -159,14 +158,14 @@
     ],
     "henchmen": [
       "Corvis Rook",
-      "Desper LaRaux",
+      "Desper Laraux",
       "Dr. Meredith Stanley",
-      "GIBSON DeWALT",
+      "Gibson Dewalt",
       "Harata Ngaatoro",
       "Jin Baccara",
       "Kett",
       "Kiya Manimi",
-      "Mikhail XVI",
+      "Mikhail Xvi",
       "Model 9",
       "Mr. Ngaatoro",
       "Sidir Alchibal",
@@ -209,7 +208,7 @@
     ]
   },
   "Guild": {
-    "total_models": 99,
+    "total_models": 100,
     "masters": [
       "Charles Hoffman, Inventor",
       "Charles Hoffman, Steel Sculptor",
@@ -238,7 +237,7 @@
       "Greed",
       "King's Wall",
       "Louisa Fusi",
-      "Melissa K.O.R.E.",
+      "Melissa K.o.r.e.",
       "Phiona Gage",
       "Samael Hopkins",
       "Taggart Queeg",
@@ -255,7 +254,7 @@
       "Mechanical Attendant",
       "Pap\u00e1 Loco",
       "Purifying Flame",
-      "Sly \"Six-Shots\"",
+      "Sly \u201cSix-Shots\"",
       "Smokestack",
       "The Dispatcher",
       "The Printing Press",
@@ -285,7 +284,7 @@
     ]
   },
   "Neverborn": {
-    "total_models": 97,
+    "total_models": 100,
     "masters": [
       "Euripides, Hierophant",
       "Euripides, Old One-Eye",
@@ -295,7 +294,7 @@
       "Marcus, Monstermaker",
       "Nekima, Broodmother",
       "Nekima, Nephilim Queen",
-      "Pandora, Despair's Desire",
+      "Pandora, Despair\u2019s Desire",
       "Pandora, Tyrant-Torn",
       "Silken King, Colossus",
       "Silken King, Long Live",
@@ -319,7 +318,7 @@
       "Widow Weaver",
       "Wrath"
     ],
-    "minions": 25,
+    "minions": 26,
     "totems": [
       "Abyssal Anchor",
       "Blood Hunter",
@@ -355,12 +354,13 @@
       "Returned(2)2)",
       "SNTiNg: h5tmare",
       "Savage",
+      "Swampfiend",
       "T NN: i6ghtmare",
       "Woe"
     ]
   },
   "Outcasts": {
-    "total_models": 102,
+    "total_models": 99,
     "masters": [
       "Captain Zipp, Cloudchaser",
       "Captain Zipp, Dread Pirate",
@@ -422,7 +422,6 @@
       "Freikorps",
       "Half-Blood",
       "Infamous",
-      "Jockey",
       "Mercenary",
       "Mercenary-",
       "Obliteration",
@@ -434,8 +433,8 @@
   "Resurrectionists": {
     "total_models": 107,
     "masters": [
-      "Dr. McMourning, Insanitary",
-      "Dr. McMourning, Malpractitioner",
+      "Dr. Mcmourning, Insanitary",
+      "Dr. Mcmourning, Malpractitioner",
       "Jack Daw, Ensouled",
       "Jack Daw, Spirit of Betrayal",
       "Kirai Ankoku, Envoy of the Court",
@@ -446,7 +445,7 @@
       "Prof. Von Schtook, Stargazer",
       "Reva Cortinas, Death Shepherd",
       "Reva Cortinas, Luminary",
-      "Seamus, AKA Sebastian Baker",
+      "Seamus, Aka Sebastian Baker",
       "Seamus, The Last Breath",
       "Yan Lo, Pathseeker",
       "Yan Lo, The Spirit Walker"
@@ -476,7 +475,7 @@
       "Copycat Killer",
       "Corpse Curator",
       "Ikiryo, Spirit of Vengeance",
-      "Ikiryo, The Heart That Left",
+      "Ikiryo, The Heart that Left",
       "Jaakuna Ubume",
       "Lady Ligeia",
       "Necrotic Machine",
@@ -520,7 +519,7 @@
       "Mei Feng, Sentinel of Steel",
       "Misaki Katanaka, Fractured",
       "Misaki Katanaka, Oyabun",
-      "Shenlong, Dragon's Breath",
+      "Shenlong, Dragon\u2019s Breath",
       "Shenlong, The Teacher",
       "Youko Hamasaki, Silk of the Lotus",
       "Youko Hamasaki, Unseen"

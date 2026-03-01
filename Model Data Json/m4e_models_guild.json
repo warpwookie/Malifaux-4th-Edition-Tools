@@ -2642,7 +2642,7 @@
     ]
   },
   {
-    "name": "Domador de Cad\u00e1veres",
+    "name": "Domador De Cad\u00e1veres",
     "faction": "Guild",
     "station": "Minion",
     "model_limit": 2,
@@ -6309,7 +6309,7 @@
     ]
   },
   {
-    "name": "Melissa K.O.R.E.",
+    "name": "Melissa K.o.r.e.",
     "faction": "Guild",
     "station": "Henchman",
     "model_limit": 1,
@@ -7157,6 +7157,102 @@
     ]
   },
   {
+    "name": "Pale Rider",
+    "faction": "Guild",
+    "model_limit": 1,
+    "cost": "11",
+    "df": 6,
+    "wp": 7,
+    "sz": 3,
+    "sp": 8,
+    "health": 10,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": true,
+    "keywords": [],
+    "characteristics": [
+      "Horseman",
+      "Living",
+      "Unique",
+      "Versatile"
+    ],
+    "abilities": [
+      {
+        "name": "Chasing Fate",
+        "text": "When this model is dealt damage, it may drain a (soulstone) to reduce an amount of damage equal to the turn number."
+      },
+      {
+        "name": "Cumbersome",
+        "text": "This model may not scale terrain."
+      },
+      {
+        "name": "Lone Rider",
+        "text": "This model may not be targeted by the actions of friendly models."
+      },
+      {
+        "name": ")",
+        "text": "The (fortitude) abilities of enemy models within 3\" are blank."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "In Death\u2019s Sights",
+        "category": "attack_actions",
+        "action_type": "variable",
+        "range": "*",
+        "skill_value": 6,
+        "resist": "Df",
+        "tn": "-",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "When this action is declared, choose if it has a range of (melee)1\" or (gun)12\".",
+        "triggers": [
+          {
+            "name": "Final Breath",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Deal an additional amount of damage to the target equal to the turn number -1. This model heals the same amount.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Revel in Conflict",
+        "category": "tactical_actions",
+        "range": "(pulse) 4\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Once per activation. All friendly models within range heal 1, or 2 if they are engaged. (soulstone)(soulstone) Hatred Unleashed: Once per game. All friendly models healed this way declare an attack action (maximum 3)."
+      },
+      {
+        "name": "Ride With Me",
+        "category": "tactical_actions",
+        "range": "2\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This model may target another friendly model of lower Sz. Move this model up to 5\". Then, if this action targeted another friendly model, place the friendly model into base contact with this model.",
+        "triggers": [
+          {
+            "name": "Diminished Pain",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. The target heals 4.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Pap\u00e1 Loco",
     "faction": "Guild",
     "station": "Totem",
@@ -7743,7 +7839,7 @@
     ]
   },
   {
-    "name": "Pistolero de Latigo",
+    "name": "Pistolero De Latigo",
     "faction": "Guild",
     "station": "Minion",
     "model_limit": 3,
@@ -8972,7 +9068,7 @@
     ]
   },
   {
-    "name": "Sly \"Six-Shots\"",
+    "name": "Sly \u201cSix-Shots\"",
     "faction": "Guild",
     "station": "Totem",
     "model_limit": 1,

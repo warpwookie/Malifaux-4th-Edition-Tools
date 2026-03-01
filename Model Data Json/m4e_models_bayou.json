@@ -1,109 +1,5 @@
 [
   {
-    "name": "ALPHONSE LeBLANC",
-    "faction": "Bayou",
-    "station": "Henchman",
-    "model_limit": 1,
-    "cost": "9",
-    "df": 5,
-    "wp": 6,
-    "sz": 3,
-    "sp": 6,
-    "health": 12,
-    "shields": 0,
-    "base_size": "50mm",
-    "infuses_soulstone_on_death": true,
-    "keywords": [
-      "Wizz-Bang"
-    ],
-    "characteristics": [
-      "Henchman",
-      "Living",
-      "Unique"
-    ],
-    "abilities": [
-      {
-        "name": "\u201cOoo, Shiny\u2026\u201d",
-        "text": "While this model has a Glowy token, increase this model\u2019s action limit by 1 (to a maximum of 3)."
-      },
-      {
-        "name": "Warning Growl",
-        "defensive_type": "unusual_defense",
-        "text": "Attacks against allied models within 2\" do not deal additional damage due to raises."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Huge Fist",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee) 2\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "tn": "-",
-        "damage": "3",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "(soulstone) \u201cFriend?\u201d: Once per activation. If the target has not yet activated this turn, it must be the next enemy model to activate, if able.",
-        "triggers": [
-          {
-            "name": "Overwhelmed",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "Target gains an Entranced token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "Toss",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 2\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "tn": 12,
-        "damage": "-",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This may target friendly models. Target a model of lower Sz than this model. Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement. (soulstone) \u201cOops, Too Hard\u201d: Friendly only. Kill the target. Deal 1 damage to all models within (pulse)1\" of the target and draw two cards.",
-        "triggers": [
-          {
-            "name": "\u201cFuuuuture!\u201d",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "Target gains an Insight token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Careful Handling",
-        "category": "tactical_actions",
-        "range": "(aura) 8\"",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Remove a Pyrotechnic marker within 2\". Make a Pyrotechnic marker within range, then resolve its end of turn effects using a suit in this action\u2019s final duel total.",
-        "triggers": [
-          {
-            "name": "Watch and Learn",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Friendly models within (pulse)2\" of the made marker gain an Insight token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Adze",
     "faction": "Bayou",
     "model_limit": 1,
@@ -221,6 +117,110 @@
             "suit": "(c)",
             "timing": "after_succeeding",
             "text": "Enemy models within (pulse)1\" gain a Stunned token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Alphonse Leblanc",
+    "faction": "Bayou",
+    "station": "Henchman",
+    "model_limit": 1,
+    "cost": "9",
+    "df": 5,
+    "wp": 6,
+    "sz": 3,
+    "sp": 6,
+    "health": 12,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": true,
+    "keywords": [
+      "Wizz-Bang"
+    ],
+    "characteristics": [
+      "Henchman",
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "\u201cOoo, Shiny\u2026\u201d",
+        "text": "While this model has a Glowy token, increase this model\u2019s action limit by 1 (to a maximum of 3)."
+      },
+      {
+        "name": "Warning Growl",
+        "defensive_type": "unusual_defense",
+        "text": "Attacks against allied models within 2\" do not deal additional damage due to raises."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Huge Fist",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee) 2\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "tn": "-",
+        "damage": "3",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "(soulstone) \u201cFriend?\u201d: Once per activation. If the target has not yet activated this turn, it must be the next enemy model to activate, if able.",
+        "triggers": [
+          {
+            "name": "Overwhelmed",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Entranced token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Toss",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic) 2\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "tn": 12,
+        "damage": "-",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This may target friendly models. Target a model of lower Sz than this model. Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement. (soulstone) \u201cOops, Too Hard\u201d: Friendly only. Kill the target. Deal 1 damage to all models within (pulse)1\" of the target and draw two cards.",
+        "triggers": [
+          {
+            "name": "\u201cFuuuuture!\u201d",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Target gains an Insight token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Careful Handling",
+        "category": "tactical_actions",
+        "range": "(aura) 8\"",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Remove a Pyrotechnic marker within 2\". Make a Pyrotechnic marker within range, then resolve its end of turn effects using a suit in this action\u2019s final duel total.",
+        "triggers": [
+          {
+            "name": "Watch and Learn",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Friendly models within (pulse)2\" of the made marker gain an Insight token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -785,7 +785,6 @@
         "range": "(melee) 1\"",
         "skill_value": 4,
         "tn": "-",
-        "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This attack receives +1 Skl if there is at least one other friendly Bayou Gremlin within 1\" of the target.",
@@ -806,7 +805,6 @@
         "range": "(gun) 10\"",
         "skill_value": 4,
         "tn": "-",
-        "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This attack receives +1 Skl and +1 Dmg for each other friendly Bayou Gremlin within 3\" of this model that has not activated this turn, to a maximum of +2. After resolving, all other friendly Bayou Gremlins within 3\" count as having activated this turn.",
@@ -1846,7 +1844,7 @@
     ]
   },
   {
-    "name": "Francois LaCroix",
+    "name": "Francois Lacroix",
     "faction": "Bayou",
     "station": "Henchman",
     "model_limit": 1,
@@ -2198,93 +2196,6 @@
     ]
   },
   {
-    "name": "Giant Leech",
-    "faction": "Bayou",
-    "station": "Minion",
-    "model_limit": 2,
-    "cost": "4",
-    "df": 4,
-    "wp": 4,
-    "sz": 2,
-    "sp": 6,
-    "health": 4,
-    "shields": 0,
-    "base_size": "50mm",
-    "infuses_soulstone_on_death": true,
-    "keywords": [
-      "Returned",
-      "Swampfiend"
-    ],
-    "characteristics": [
-      "Living",
-      "Minion (2)"
-    ],
-    "abilities": [
-      {
-        "name": "Distended With Blood",
-        "text": "This model receives +1 Sz for each friendly non-Summon, non-Slow token on it, to a maximum of +2."
-      },
-      {
-        "name": "Latch On",
-        "text": "Enemy models in base contact with this model suffer -1 Df."
-      },
-      {
-        "name": "Stealth",
-        "text": "While more than 6\" away from this model, enemy models cannot target it and ignore it when drawing LoS."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Bloodsuck",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee) 1\"",
-        "skill_value": 4,
-        "resist": "Df",
-        "tn": "-",
-        "damage": "1",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This model heals 1.",
-        "triggers": [
-          {
-            "name": "Paralyzed",
-            "suit": "(t)",
-            "timing": "when_resolving",
-            "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "Body Slam",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 4\"",
-        "skill_value": 4,
-        "resist": "Df",
-        "tn": "-",
-        "damage": "X",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Once per activation. If the target is at a lower elevation, this action receives a (+). X is equal to this model\u2019s Sz. Place this model in base contact with the target."
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Where There\u2019s One",
-        "category": "tactical_actions",
-        "range": "0\"",
-        "skill_value": 0,
-        "tn": 11,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Enemy only. If the target is at half its maximum health or below, this action receives +1 to its Skl. Summon a Giant Leech in base contact with the target."
-      }
-    ]
-  },
-  {
     "name": "Gluttony",
     "faction": "Bayou",
     "station": "Henchman",
@@ -2378,7 +2289,7 @@
     ]
   },
   {
-    "name": "Good Ol' Boy",
+    "name": "Good Ol\u2019 Boy",
     "faction": "Bayou",
     "station": "Minion",
     "model_limit": 3,
@@ -3673,7 +3584,7 @@
     ]
   },
   {
-    "name": "LaCROIX RAIDER",
+    "name": "Lacroix Raider",
     "faction": "Bayou",
     "station": "Minion",
     "model_limit": 3,
@@ -3763,122 +3674,6 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Ally only. Target gains an Impact token."
-      }
-    ]
-  },
-  {
-    "name": "Leech King",
-    "faction": "Bayou",
-    "model_limit": 1,
-    "cost": "9",
-    "df": 5,
-    "wp": 6,
-    "sz": 2,
-    "sp": 6,
-    "health": 12,
-    "shields": 0,
-    "base_size": "30mm",
-    "infuses_soulstone_on_death": true,
-    "keywords": [
-      "Returned",
-      "Swampfiend"
-    ],
-    "characteristics": [
-      "Living",
-      "Unique"
-    ],
-    "abilities": [
-      {
-        "name": "Demise (I\u2019ll Have What They\u2019re Having)",
-        "text": "When this model is killed, it is replaced with a Giant Leech and heals 4."
-      },
-      {
-        "name": "Regeneration",
-        "text": "When this model activates, it heals 1."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Blood Magic",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 8\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "tn": "-",
-        "damage": "2",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "If the target has half its maximum health or less, this action deals +1 damage.",
-        "triggers": [
-          {
-            "name": "Drink Blood",
-            "suit": "(r)",
-            "timing": "when_resolving",
-            "text": "When resolving, this model heals an amount equal to the damage suffered by the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Coordinated Attack",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Another friendly model may declare a (melee) action targeting the same model.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Forgetful",
-            "suit": "(c)",
-            "timing": "after_succeeding",
-            "text": "Target discards a random card.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "Bloodletting",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 8\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "tn": "-",
-        "damage": "1",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This action may target allies. Enemy models within (pulse)3\" of the target are dealt 1 damage.",
-        "triggers": [
-          {
-            "name": "Strip Defenses",
-            "suit": "(r)",
-            "timing": "after_succeeding",
-            "text": "This model may remove a token from the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Paralyzed",
-            "suit": "(t)",
-            "timing": "when_resolving",
-            "text": "When resolving, if the target has a Stunned token, deal +1 damage. Otherwise, it gains a Stunned token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Clew of Leeches",
-        "category": "tactical_actions",
-        "range": "8\"",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Enemy only. Summon a Giant Leech in base contact with the target."
       }
     ]
   },
@@ -4255,114 +4050,6 @@
     ]
   },
   {
-    "name": "MERRIS LaCROIX",
-    "faction": "Bayou",
-    "model_limit": 1,
-    "cost": "7",
-    "df": 5,
-    "wp": 4,
-    "sz": 1,
-    "sp": 7,
-    "health": 9,
-    "shields": 0,
-    "base_size": "30mm",
-    "infuses_soulstone_on_death": true,
-    "keywords": [
-      "Kin"
-    ],
-    "characteristics": [
-      "Living",
-      "Unique"
-    ],
-    "abilities": [
-      {
-        "name": "Demise (Flashover)",
-        "text": "After this model is killed, models within (pulse)1\" gain a Burning token."
-      },
-      {
-        "name": "Flight",
-        "text": "This model ignores terrain and other models while moving."
-      },
-      {
-        "name": "Sputtering Exhaust",
-        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "\u201cUp We Go!\u201d",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee) 2\"",
-        "skill_value": 2,
-        "resist": "Sz",
-        "tn": "-",
-        "damage": "2",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Place the target anywhere within 3\" of its current location.",
-        "triggers": [
-          {
-            "name": "Smolder",
-            "suit": "(r)",
-            "timing": "after_succeeding",
-            "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Reposition",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Move this model up to 3\".",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Draw Out Secrets",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "Make a Scheme marker in base contact with the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Flaming Bottle",
-        "category": "tactical_actions",
-        "range": "8\"",
-        "skill_value": 0,
-        "tn": 8,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Once per activation. Target a Scheme marker. Enemy models within (pulse)2\" of the target must pass a TN 12 Sp duel or gain a Burning token. Then, remove the target. (soulstone) Hop, Friends!: Each ally within (pulse)2\" of the target may gain either an Adaptable token or an Impact token."
-      },
-      {
-        "name": "Blasting Off!",
-        "category": "tactical_actions",
-        "range": "(aura) -",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Move this model up to 5\".",
-        "triggers": [
-          {
-            "name": "Hop On",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Choose an ally within 2\". Place the chosen model in base contact with this model.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Mah Tucket",
     "title": "Mecha-Meemaw",
     "faction": "Bayou",
@@ -4642,7 +4329,7 @@
     ]
   },
   {
-    "name": "McTavish",
+    "name": "Mctavish",
     "faction": "Bayou",
     "model_limit": 1,
     "cost": "8",
@@ -4847,6 +4534,114 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Place this model anywhere within range. Enemy models within (pulse)1\" of this model must pass a TN 12 Sp duel or gain a Burning token."
+      }
+    ]
+  },
+  {
+    "name": "Merris Lacroix",
+    "faction": "Bayou",
+    "model_limit": 1,
+    "cost": "7",
+    "df": 5,
+    "wp": 4,
+    "sz": 1,
+    "sp": 7,
+    "health": 9,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": true,
+    "keywords": [
+      "Kin"
+    ],
+    "characteristics": [
+      "Living",
+      "Unique"
+    ],
+    "abilities": [
+      {
+        "name": "Demise (Flashover)",
+        "text": "After this model is killed, models within (pulse)1\" gain a Burning token."
+      },
+      {
+        "name": "Flight",
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "name": "Sputtering Exhaust",
+        "text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "\u201cUp We Go!\u201d",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee) 2\"",
+        "skill_value": 2,
+        "resist": "Sz",
+        "tn": "-",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Place the target anywhere within 3\" of its current location.",
+        "triggers": [
+          {
+            "name": "Smolder",
+            "suit": "(r)",
+            "timing": "after_succeeding",
+            "text": "If the target has a Burning token, it resolves the Burning token. Then, it gains a Burning token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Draw Out Secrets",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Flaming Bottle",
+        "category": "tactical_actions",
+        "range": "8\"",
+        "skill_value": 0,
+        "tn": 8,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Once per activation. Target a Scheme marker. Enemy models within (pulse)2\" of the target must pass a TN 12 Sp duel or gain a Burning token. Then, remove the target. (soulstone) Hop, Friends!: Each ally within (pulse)2\" of the target may gain either an Adaptable token or an Impact token."
+      },
+      {
+        "name": "Blasting Off!",
+        "category": "tactical_actions",
+        "range": "(aura) -",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to 5\".",
+        "triggers": [
+          {
+            "name": "Hop On",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Choose an ally within 2\". Place the chosen model in base contact with this model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -5739,7 +5534,7 @@
     ]
   },
   {
-    "name": "Ophelia LaCroix",
+    "name": "Ophelia Lacroix",
     "title": "Overloaded",
     "faction": "Bayou",
     "station": "Master",
@@ -5881,7 +5676,7 @@
     ]
   },
   {
-    "name": "Ophelia LaCroix",
+    "name": "Ophelia Lacroix",
     "title": "Red Cage Raider",
     "faction": "Bayou",
     "station": "Master",
@@ -6531,7 +6326,7 @@
     ]
   },
   {
-    "name": "RAMI LaCROIX",
+    "name": "Rami Lacroix",
     "faction": "Bayou",
     "model_limit": 1,
     "cost": "6",
@@ -6634,7 +6429,7 @@
     ]
   },
   {
-    "name": "RAPHAEL LaCROIX",
+    "name": "Raphael Lacroix",
     "faction": "Bayou",
     "model_limit": 1,
     "cost": "8",
@@ -6959,7 +6754,7 @@
     ]
   },
   {
-    "name": "SAMMY LaCROIX",
+    "name": "Sammy Lacroix",
     "faction": "Bayou",
     "station": "Totem",
     "model_limit": 1,
@@ -7676,7 +7471,7 @@
     ]
   },
   {
-    "name": "Som'er Teeth Jones",
+    "name": "Som\u2019er Teeth Jones",
     "title": "Bayou Boss",
     "faction": "Bayou",
     "station": "Master",
@@ -7729,10 +7524,10 @@
         "effects": "For each raise this attack receives, it deals +1 damage to enemy models within (pulse)1\" of the target (soulstone) \u2019Expert\u2019 Shot: After failing, deal 1 damage to an ally engaged with the target to have it declare a (melee) attack, which receives +1 Dmg.",
         "triggers": [
           {
-            "name": "",
+            "name": "\u201cClobber \u2019Em!\u201d",
             "suit": "(m)",
             "timing": "when_resolving",
-            "text": "\u201cClobber \u2019Em!\u201d: When resolving, deal +1 damage to the target for each friendly Bayou Gremlin within 3\" of it, to a maximum of +3.",
+            "text": "When resolving, deal +1 damage to the target for each friendly Bayou Gremlin within 3\" of it, to a maximum of +3.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -7773,7 +7568,7 @@
     ]
   },
   {
-    "name": "Som'er Teeth Jones",
+    "name": "Som\u2019er Teeth Jones",
     "title": "Loot Monger",
     "faction": "Bayou",
     "station": "Master",
@@ -7903,7 +7698,7 @@
     ]
   },
   {
-    "name": "Sparks LeBlanc",
+    "name": "Sparks Leblanc",
     "faction": "Bayou",
     "station": "Henchman",
     "model_limit": 1,
@@ -10123,6 +9918,108 @@
     ]
   },
   {
+    "name": "Toast",
+    "faction": "Bayou",
+    "model_limit": 1,
+    "cost": "6",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 5,
+    "health": 7,
+    "shields": 0,
+    "base_size": "50mm",
+    "infuses_soulstone_on_death": true,
+    "keywords": [
+      "Infamous",
+      "Jockey"
+    ],
+    "characteristics": [
+      "Living",
+      "Undead",
+      "Unique",
+      "Versatile"
+    ],
+    "abilities": [
+      {
+        "name": "Ramming Speed",
+        "text": "This model\u2019s (melee) actions generated by the Charge action receive +1 Skl and any one suit to its final duel totals."
+      },
+      {
+        "name": "You Take the Wheel",
+        "text": "Once per turn. After this model resolves the Walk action, it may discard a card to declare the Interact action, ignoring engagement. This Interact action may target a marker with enemies in base contact with it."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Catch in the Treads",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee) 1\"",
+        "skill_value": 6,
+        "resist": "Df",
+        "tn": "-",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "If this action was generated by the Charge action, it deals +1 damage.",
+        "triggers": [
+          {
+            "name": "Reposition",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Move this model up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Flamethrower",
+        "category": "attack_actions",
+        "action_type": "missile",
+        "range": "(gun) 10\"",
+        "skill_value": 5,
+        "resist": "Sp",
+        "tn": "-",
+        "damage": "2",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Enemy models within 1\" of the target gain a Burning token.",
+        "triggers": [
+          {
+            "name": "Critical Strike",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, this action deals +1 damage to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Rampage",
+            "suit": "(c)",
+            "timing": "after_succeeding",
+            "text": "Move this model 5\", ignoring enemy models. Models moved through this way must pass a TN 13 Sp duel or be dealt 1 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "All-Terrain Turtle",
+        "category": "tactical_actions",
+        "range": "(aura) -",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move this model 4\", ignoring models and terrain. Models moved through this way must each pass a TN 12 Df duel or be dealt 1 damage."
+      }
+    ]
+  },
+  {
     "name": "Trixiebelle",
     "faction": "Bayou",
     "station": "Henchman",
@@ -11247,7 +11144,7 @@
     ]
   },
   {
-    "name": "Will O' the Wisp",
+    "name": "Will O\u2019 the Wisp",
     "faction": "Bayou",
     "station": "Minion",
     "model_limit": 3,
@@ -11593,7 +11490,7 @@
     ]
   },
   {
-    "name": "YOUNG LaCROIX",
+    "name": "Young Lacroix",
     "faction": "Bayou",
     "station": "Totem",
     "model_limit": 1,

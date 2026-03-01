@@ -1180,9 +1180,13 @@ def _parse_trigger_line(line_spans):
     # Find BoldItalic trigger name ending with ":"
     for i in range(idx, len(line_spans)):
         if line_spans[i]["font"] == FONT_TRIGGER:
-            trigger_name = line_spans[i]["text"].strip().rstrip(":")
-            idx = i + 1
-            break
+            candidate = line_spans[i]["text"].strip().rstrip(":")
+            if candidate:  # Skip whitespace-only BoldItalic spans
+                trigger_name = candidate
+                idx = i + 1
+                break
+            # else keep searching
+            continue
         # Skip whitespace-only Regular spans
         if line_spans[i]["text"].strip():
             break
@@ -1279,20 +1283,885 @@ def extract_crew_card_text(pdf_path, faction=None):
     Extract crew card from PDF.
 
     Crew cards are 2 pages: front (abilities/actions/markers) and back (tokens).
-    Returns merged crew card data.
+    Returns {"front": {...}, "back": {...}} matching merger.merge_crew_card() schema.
     """
-    # TODO: Implement crew card parsing
-    return {"error": "Crew card text extraction not yet implemented"}
+    pdf_path = str(pdf_path)
+    doc = fitz.open(pdf_path)
+
+    if len(doc) < 2:
+        doc.close()
+        return {"error": f"Expected 2-page crew card, got {len(doc)} pages"}
+
+    front_spans = _get_page_spans(doc[0])
+    front = _extract_crew_front(front_spans, faction=faction, pdf_path=pdf_path)
+
+    back_spans = _get_page_spans(doc[1])
+    back = _extract_crew_back(back_spans)
+
+    doc.close()
+    return {"front": front, "back": back}
+
+
+def _extract_crew_front(page_spans, faction=None, pdf_path=None):
+    """Extract crew card front page: name, master, abilities, actions, markers."""
+    notes = []
+
+    # 1. CARD NAME — Astoria-Bold, large (11-14pt), Y < 50
+    name_spans = [s for s in page_spans
+                  if s["font"] == FONT_NAME_LARGE
+                  and s["size"] >= 11.0
+                  and s["y0"] < 50
+                  and s["text"].strip()]
+    card_name = ""
+    if name_spans:
+        raw = " ".join(s["text"].strip() for s in name_spans)
+        card_name = _smart_title_case(raw)
+    else:
+        notes.append("Could not extract crew card name")
+
+    # 2. MASTER INFO — Astoria-Bold 8pt (name) + Astoria-BoldItalic 8pt (title), Y 35-50
+    master_spans = [s for s in page_spans
+                    if s["font"] == FONT_NAME_LARGE
+                    and 7.0 <= s["size"] <= 9.0
+                    and 34 < s["y0"] < 50
+                    and s["text"].strip()]
+    title_spans = [s for s in page_spans
+                   if s["font"] == FONT_NAME_ITALIC
+                   and 7.0 <= s["size"] <= 9.0
+                   and 34 < s["y0"] < 50
+                   and s["text"].strip()]
+
+    associated_master = ""
+    associated_title = ""
+    if master_spans:
+        master_text = " ".join(s["text"].strip() for s in master_spans)
+        associated_master = master_text.rstrip(",").strip()
+    if title_spans:
+        associated_title = " ".join(s["text"].strip() for s in title_spans).strip()
+
+    # 3. FACTION from path
+    if faction is None and pdf_path:
+        faction = _faction_from_path(pdf_path)
+
+    # 4. BODY CONTENT — everything between header and footer
+    # Footer: "Crew Card" at Y > 320
+    body_spans = [s for s in page_spans
+                  if 50 < s["y0"] < 320]
+
+    # Parse granted_to sections with their abilities and actions
+    keyword_abilities, keyword_actions, markers = _parse_crew_body(body_spans, notes)
+
+    front = {
+        "card_type": "crew_card",
+        "name": card_name,
+        "associated_master": associated_master,
+        "associated_title": associated_title,
+        "faction": faction or "Unknown",
+        "keyword_abilities": keyword_abilities,
+        "keyword_actions": keyword_actions,
+        "markers": markers,
+        "extraction_notes": notes,
+    }
+    return front
+
+
+def _parse_crew_body(body_spans, notes):
+    """
+    Parse crew card body into granted_to sections with abilities and actions.
+
+    Layout:
+    - "Friendly X models gain the following abilities/actions/trigger:"
+    - Followed by ability definitions (ExtraBold name + Regular text)
+    - Or action table (section header + column headers + action rows)
+    - Or trigger definitions (BoldItalic name + suit + text)
+    """
+    keyword_abilities = []
+    keyword_actions = []
+    markers = []
+
+    if not body_spans:
+        return keyword_abilities, keyword_actions, markers
+
+    lines = _group_into_lines(body_spans, tolerance=2.0)
+
+    current_granted_to = ""
+    current_abilities = []
+    current_actions = []
+    in_action_section = False
+    action_section_type = None  # "attack" or "tactical"
+    current_action = None
+    current_ability = None
+    has_active_trigger = False
+
+    def flush_section():
+        """Save current granted_to section."""
+        nonlocal current_abilities, current_actions, current_ability, current_action
+        if current_ability:
+            current_ability["text"] = current_ability["text"].strip()
+            current_abilities.append(current_ability)
+            current_ability = None
+        if current_action:
+            current_action["effects"] = current_action["effects"].strip()
+            current_actions.append(current_action)
+            current_action = None
+
+        if current_granted_to and current_abilities:
+            keyword_abilities.append({
+                "granted_to": current_granted_to,
+                "abilities": current_abilities,
+            })
+        if current_granted_to and current_actions:
+            keyword_actions.append({
+                "granted_to": current_granted_to,
+                "actions": current_actions,
+            })
+        current_abilities = []
+        current_actions = []
+
+    # Pre-pass: detect multi-line "gain the following" boundaries.
+    # Some granted_to headers span 2-3 lines, so we merge consecutive
+    # non-ability-name lines and check for the full pattern.
+    granted_to_ranges = []  # list of (start_line_idx, end_line_idx, granted_to_text)
+    i = 0
+    while i < len(lines):
+        line_text = _spans_to_text(lines[i])
+        # Check if this line starts a potential granted_to header
+        if ("gain the following" in line_text.lower()
+            or "gains the following" in line_text.lower()):
+            granted_to_ranges.append((i, i, line_text.strip()))
+            i += 1
+            continue
+        # Check if this + next lines form a granted_to header
+        has_ability_name_here = any(
+            s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":")
+            for s in lines[i]
+        )
+        if not has_ability_name_here and i + 1 < len(lines):
+            next_text = _spans_to_text(lines[i + 1])
+            next_lower = next_text.lower()
+            # If next line alone is a standalone granted_to with a fresh subject
+            # prefix (e.g. "Friendly X models gain the following"), don't combine
+            # with line i which is likely unrelated continuation text.
+            next_has_gtf = ("gain the following" in next_lower
+                            or "gains the following" in next_lower)
+            SUBJECT_PREFIXES = ("friendly", "all ", "this crew", "enemy ", "each ")
+            if (next_has_gtf
+                    and any(next_text.strip().lower().startswith(p)
+                            for p in SUBJECT_PREFIXES)):
+                # Next line will be caught as a single-line match next iteration
+                i += 1
+                continue
+            combined = line_text + " " + next_text
+            if ("gain the following" in combined.lower()
+                or "gains the following" in combined.lower()):
+                # Check if a third line continues the header (e.g., "trigger on their...")
+                if i + 2 < len(lines):
+                    line3_text = _spans_to_text(lines[i + 2])
+                    line3_lower = line3_text.strip().lower()
+                    if (line3_lower.startswith("trigger")
+                            or line3_lower.startswith("action")
+                            or line3_lower.startswith("ability")
+                            or line3_lower.startswith("abilities")):
+                        combined3 = combined + " " + line3_text
+                        granted_to_ranges.append((i, i + 2, combined3.strip()))
+                        i += 3
+                        continue
+                granted_to_ranges.append((i, i + 1, combined.strip()))
+                i += 2
+                continue
+        i += 1
+
+    # Build a set of line indices that are part of granted_to headers
+    granted_to_line_map = {}
+    for start, end, text in granted_to_ranges:
+        for li in range(start, end + 1):
+            granted_to_line_map[li] = text
+
+    for line_idx, line_spans in enumerate(lines):
+        # Check if this line is part of a granted_to header
+        if line_idx in granted_to_line_map:
+            # Only process when we hit the first line of the range
+            gt_text = granted_to_line_map[line_idx]
+            # Skip if this isn't the first line of the range
+            is_first = True
+            for start, end, text in granted_to_ranges:
+                if start <= line_idx <= end and line_idx != start:
+                    is_first = False
+                    break
+            if not is_first:
+                continue
+
+            flush_section()
+            current_granted_to = gt_text.rstrip(":")
+            # Remove trailing "gain(s) the following X:" portion
+            for pattern in ["gain the following abilities",
+                            "gain the following actions",
+                            "gain the following ability",
+                            "gain the following action",
+                            "gain the following trigger on",
+                            "gain the following trigger",
+                            "gains the following abilities",
+                            "gains the following actions",
+                            "gains the following ability",
+                            "gains the following action",
+                            "gains the following trigger on",
+                            "gains the following trigger",
+                            "gain the following",
+                            "gains the following"]:
+                idx = current_granted_to.lower().find(pattern.lower())
+                if idx >= 0:
+                    current_granted_to = current_granted_to[:idx].strip()
+                    break
+            in_action_section = False
+            action_section_type = None
+            has_active_trigger = False
+            continue
+
+        line_text = _spans_to_text(line_spans)
+
+        # Skip orphan continuation words after a granted_to header
+        # (e.g., "action:" or "trigger on their..." on its own line)
+        stripped_lower = line_text.strip().lower().rstrip(":")
+        if stripped_lower in ("action", "actions", "ability", "abilities",
+                              "trigger", "triggers"):
+            # Only skip if all spans are Regular font (not ability names)
+            all_regular = all(s["font"] in (FONT_BODY, FONT_SYMBOL)
+                              for s in line_spans if s["text"].strip())
+            if all_regular:
+                continue
+
+        # Check for action section headers (Attack Actions, Tactical Actions, Tactical Action)
+        header_match = False
+        for s in line_spans:
+            if s["font"] == FONT_ABILITY_NAME and s["size"] >= 7.5:
+                text_lower = s["text"].strip().lower()
+                if "attack" in text_lower and "action" in text_lower:
+                    # Save any pending ability
+                    if current_ability:
+                        current_ability["text"] = current_ability["text"].strip()
+                        current_abilities.append(current_ability)
+                        current_ability = None
+                    in_action_section = True
+                    action_section_type = "attack"
+                    header_match = True
+                    break
+                elif "tactical" in text_lower and "action" in text_lower:
+                    if current_ability:
+                        current_ability["text"] = current_ability["text"].strip()
+                        current_abilities.append(current_ability)
+                        current_ability = None
+                    in_action_section = True
+                    action_section_type = "tactical"
+                    header_match = True
+                    break
+        if header_match:
+            continue
+
+        # Skip column header rows (Rg, Skl, Rst, TN, Dmg)
+        is_col_header = any(
+            s["font"] == FONT_ABILITY_NAME and s["text"].strip() in ("Rg", "Skl", "Rst", "TN", "Dmg")
+            for s in line_spans
+        )
+        if is_col_header:
+            continue
+
+        # In action section: parse like stat card back page actions
+        if in_action_section:
+            line_type = _classify_action_line(line_spans, has_active_trigger)
+
+            if line_type == "action_header":
+                parsed = _parse_action_header(line_spans, action_section_type)
+                has_columns = (parsed["range"] or parsed["skill_value"] != "0"
+                               or parsed["resist"] or parsed["tn"] != "-"
+                               or parsed["damage"] != "-")
+                if not has_columns and (current_action or len(parsed["name"]) <= 2):
+                    if current_action:
+                        current_action["name"] += " " + parsed["name"]
+                else:
+                    if current_action:
+                        current_action["effects"] = current_action["effects"].strip()
+                        current_actions.append(current_action)
+                    # Add crew card action fields
+                    parsed["category"] = "attack_actions" if action_section_type == "attack" else "tactical_actions"
+                    parsed["skill_built_in_suit"] = None
+                    parsed["is_signature"] = False
+                    parsed["soulstone_cost"] = 0
+                    parsed["costs_and_restrictions"] = None
+                    # Convert skill_value to int if possible
+                    try:
+                        parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else None
+                    except ValueError:
+                        pass
+                    # Convert tn
+                    try:
+                        parsed["tn"] = int(parsed["tn"]) if parsed["tn"] and parsed["tn"] != "-" else None
+                    except ValueError:
+                        parsed["tn"] = None
+                    # Normalize damage
+                    if parsed["damage"] == "-":
+                        parsed["damage"] = None
+                    if parsed["resist"] == "-":
+                        parsed["resist"] = None
+
+                    current_action = parsed
+                    has_active_trigger = False
+
+            elif line_type == "trigger" and current_action:
+                trigger = _parse_trigger_line(line_spans)
+                if trigger:
+                    current_action["triggers"].append(trigger)
+                    has_active_trigger = True
+
+            elif line_type == "trigger_continuation" and current_action and current_action["triggers"]:
+                text = _spans_to_text(line_spans)
+                current_action["triggers"][-1]["text"] += " " + text
+
+            elif line_type == "effect_text" and current_action:
+                text = _spans_to_text(line_spans)
+                current_action["effects"] += " " + text
+                has_active_trigger = False
+
+            continue
+
+        # Not in action section: check for abilities or standalone triggers
+        first_content = None
+        for s in line_spans:
+            if s["text"].strip():
+                first_content = s
+                break
+        if first_content is None:
+            continue
+
+        # Check for trigger lines (BoldItalic + suit or soulstone symbol) outside action sections
+        has_bold_italic = any(s["font"] == FONT_TRIGGER for s in line_spans)
+        SUIT_CODES = {99, 109, 114, 116}
+        has_suit_symbol = any(
+            s["font"] == FONT_SYMBOL and any(c in SUIT_CODES for c in _get_symbol_codes(s))
+            for s in line_spans
+        )
+        has_soulstone = any(
+            s["font"] == FONT_SYMBOL and 115 in _get_symbol_codes(s)
+            for s in line_spans
+        )
+
+        if (has_suit_symbol or has_soulstone) and has_bold_italic:
+            # This is a standalone trigger (e.g., granted to an existing action)
+            trigger = _parse_trigger_line(line_spans)
+            if trigger:
+                ss_cost = 1 if has_soulstone and not has_suit_symbol else 0
+                # Treat as a granted action with just the trigger
+                if current_action is None:
+                    current_action = {
+                        "name": trigger["name"],
+                        "category": "attack_actions",
+                        "action_type": None,
+                        "range": None,
+                        "skill_value": None,
+                        "skill_built_in_suit": None,
+                        "resist": None,
+                        "tn": None,
+                        "damage": None,
+                        "is_signature": False,
+                        "soulstone_cost": ss_cost,
+                        "costs_and_restrictions": None,
+                        "effects": "",
+                        "triggers": [trigger],
+                    }
+                else:
+                    current_action["triggers"].append(trigger)
+                has_active_trigger = True
+            continue
+
+        # Trigger continuation (indented body text when inside a trigger)
+        if has_active_trigger and first_content["x0"] >= 18 and first_content["font"] in (FONT_BODY, FONT_BOLD, FONT_ITALIC):
+            if current_action and current_action.get("triggers"):
+                text = _spans_to_text(line_spans)
+                current_action["triggers"][-1]["text"] += " " + text
+                continue
+
+        # Check for ability name (ExtraBold ending with ":")
+        has_ability_name = False
+        for s in line_spans:
+            if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+                has_ability_name = True
+                break
+
+        if has_ability_name:
+            has_active_trigger = False
+            # Save previous ability
+            if current_ability:
+                current_ability["text"] = current_ability["text"].strip()
+                current_abilities.append(current_ability)
+
+            # Check for defensive icon
+            defensive_type = None
+            ability_start_idx = 0
+            if line_spans[0]["font"] == FONT_SYMBOL:
+                codes = _get_symbol_codes(line_spans[0])
+                for code in codes:
+                    if code in DEFENSIVE_ICON_MAP:
+                        defensive_type = DEFENSIVE_ICON_MAP[code]
+                        break
+                ability_start_idx = 1
+
+            # Find the name span
+            name_text = ""
+            name_idx = ability_start_idx
+            for idx in range(ability_start_idx, len(line_spans)):
+                if line_spans[idx]["font"] == FONT_ABILITY_NAME and line_spans[idx]["text"].strip().endswith(":"):
+                    name_text = line_spans[idx]["text"].strip().rstrip(":")
+                    name_idx = idx
+                    break
+
+            remaining = line_spans[name_idx + 1:]
+            text_parts = _spans_to_text(remaining)
+
+            current_ability = {
+                "name": name_text,
+                "text": text_parts,
+                "defensive_type": defensive_type,
+            }
+        elif current_ability:
+            # Continuation of current ability text
+            text = _spans_to_text(line_spans)
+            current_ability["text"] += " " + text
+
+    # Flush final section
+    flush_section()
+
+    return keyword_abilities, keyword_actions, markers
+
+
+def _extract_crew_back(page_spans):
+    """Extract crew card back page: name verification and token definitions."""
+    notes = []
+
+    # 1. CARD NAME — verify it matches front
+    name_spans = [s for s in page_spans
+                  if s["font"] == FONT_NAME_LARGE
+                  and s["size"] >= 11.0
+                  and s["y0"] < 50
+                  and s["text"].strip()]
+    back_name = ""
+    if name_spans:
+        raw = " ".join(s["text"].strip() for s in name_spans)
+        back_name = _smart_title_case(raw)
+
+    # 2. TOKENS — find "Tokens" header, then parse name:text pairs
+    tokens = []
+    token_header_y = None
+
+    for s in page_spans:
+        if (s["font"] == FONT_ABILITY_NAME
+            and s["text"].strip().lower() == "tokens"
+            and s["size"] >= 9.0):
+            token_header_y = s["y1"]
+            break
+
+    if token_header_y is not None:
+        # All spans below "Tokens" header and above footer
+        token_spans = [s for s in page_spans
+                       if s["y0"] > token_header_y and s["y0"] < 320]
+
+        if token_spans:
+            lines = _group_into_lines(token_spans, tolerance=2.0)
+            current_token = None
+
+            for line_spans in lines:
+                # Check for new token definition (ExtraBold name ending with ":")
+                has_token_name = False
+                for s in line_spans:
+                    if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+                        has_token_name = True
+                        break
+
+                if has_token_name:
+                    # Save previous token
+                    if current_token:
+                        current_token["text"] = current_token["text"].strip()
+                        tokens.append(current_token)
+
+                    # Find name and remaining text
+                    name_text = ""
+                    name_idx = 0
+                    for idx, s in enumerate(line_spans):
+                        if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+                            name_text = s["text"].strip().rstrip(":")
+                            name_idx = idx
+                            break
+
+                    remaining = line_spans[name_idx + 1:]
+                    text = _spans_to_text(remaining)
+
+                    current_token = {
+                        "name": name_text,
+                        "text": text,
+                    }
+                elif current_token:
+                    # Continuation of current token text
+                    text = _spans_to_text(line_spans)
+                    current_token["text"] += " " + text
+
+            # Don't forget last token
+            if current_token:
+                current_token["text"] = current_token["text"].strip()
+                tokens.append(current_token)
+
+    back = {
+        "card_type": "crew_card",
+        "name": back_name,
+        "tokens": tokens,
+        "extraction_notes": notes,
+    }
+    return back
 
 
 def extract_upgrade_card_text(pdf_path, faction=None):
     """
     Extract upgrade card from PDF.
 
-    Returns upgrade card data.
+    Upgrade cards are single-page cards with abilities, actions, and/or triggers.
+    Returns flat dict matching load_upgrade_card() schema.
     """
-    # TODO: Implement upgrade card parsing
-    return {"error": "Upgrade card text extraction not yet implemented"}
+    pdf_path = str(pdf_path)
+    doc = fitz.open(pdf_path)
+
+    if len(doc) < 1:
+        doc.close()
+        return {"error": "Empty PDF"}
+
+    page_spans = _get_page_spans(doc[0])
+    doc.close()
+
+    notes = []
+
+    # Determine faction from path
+    if faction is None:
+        faction = _faction_from_path(pdf_path)
+
+    # Extract keyword from path (folder name containing the PDF)
+    keyword = _keyword_from_path(pdf_path)
+
+    # 1. UPGRADE TYPE — Astoria-Bold, 11-13pt, Y < 25 (e.g., "Equipment", "Training")
+    type_spans = [s for s in page_spans
+                  if s["font"] == FONT_NAME_LARGE
+                  and 10.0 <= s["size"] <= 13.5
+                  and s["y0"] < 25
+                  and s["text"].strip()]
+    upgrade_type = None
+    if type_spans:
+        raw = " ".join(s["text"].strip() for s in type_spans)
+        upgrade_type = _smart_title_case(raw)
+
+    # 2. CARD NAME — Astoria-Bold, 18-22pt, Y 25-60
+    name_spans = [s for s in page_spans
+                  if s["font"] == FONT_NAME_LARGE
+                  and s["size"] >= 16.0
+                  and 25 <= s["y0"] <= 65
+                  and s["text"].strip()]
+    card_name = ""
+    if name_spans:
+        raw = " ".join(s["text"].strip() for s in name_spans)
+        card_name = _smart_title_case(raw)
+    else:
+        notes.append("Could not extract upgrade card name")
+
+    # 3. DESCRIPTION — HarriText-Regular, first body line (Y ~70-85)
+    desc_spans = [s for s in page_spans
+                  if s["font"] in (FONT_BODY, FONT_BOLD)
+                  and 65 <= s["y0"] <= 90
+                  and s["text"].strip()]
+    description = ""
+    if desc_spans:
+        lines = _group_into_lines(desc_spans, tolerance=2.0)
+        if lines:
+            desc_parts = []
+            for line in lines:
+                if all(65 <= s["y0"] <= 95 for s in line):
+                    desc_parts.append(_spans_to_text(line))
+            description = " ".join(desc_parts).strip()
+
+    # 4. LIMITATIONS — near bottom of card, "LIMITATIONS" header
+    limitations = "-"
+    for s in page_spans:
+        if (s["font"] == FONT_ABILITY_NAME
+            and "limitation" in s["text"].strip().lower()
+            and s["y0"] > 270):
+            # Find limitation value below the header
+            lim_spans = [ls for ls in page_spans
+                         if ls["y0"] > s["y1"]
+                         and ls["y0"] < 325
+                         and ls["font"] in (FONT_BOLD, FONT_BODY)
+                         and ls["text"].strip()]
+            if lim_spans:
+                limitations = " ".join(ls["text"].strip() for ls in lim_spans)
+            break
+
+    # 5. BODY CONTENT — parse abilities, actions, universal triggers
+    # Body is between description and limitations
+    body_start_y = 85
+    if desc_spans:
+        body_start_y = max(s["y1"] for s in desc_spans) - 1
+
+    body_end_y = 285  # Before limitations area
+    body_spans = [s for s in page_spans
+                  if body_start_y <= s["y0"] < body_end_y]
+
+    granted_abilities, granted_actions, universal_triggers = _parse_upgrade_body(
+        body_spans, notes
+    )
+
+    result = {
+        "card_type": "upgrade",
+        "name": card_name,
+        "upgrade_type": upgrade_type,
+        "keyword": keyword,
+        "faction": faction if faction != "Unknown" else None,
+        "limitations": limitations,
+        "description": description,
+        "granted_abilities": granted_abilities,
+        "granted_actions": granted_actions,
+        "universal_triggers": universal_triggers,
+        "extraction_notes": notes,
+        "source_pdf": pdf_path,
+    }
+    return result
+
+
+def _parse_upgrade_body(body_spans, notes):
+    """
+    Parse upgrade card body into abilities, actions, and universal triggers.
+
+    Similar to stat card back page but also handles abilities and universal triggers.
+    """
+    granted_abilities = []
+    granted_actions = []
+    universal_triggers = []
+
+    if not body_spans:
+        return granted_abilities, granted_actions, universal_triggers
+
+    lines = _group_into_lines(body_spans, tolerance=2.0)
+
+    in_action_section = False
+    action_section_type = None
+    current_action = None
+    current_ability = None
+    has_active_trigger = False
+
+    for line_spans in lines:
+        # Check for action section headers
+        header_match = False
+        for s in line_spans:
+            if s["font"] == FONT_ABILITY_NAME and s["size"] >= 7.5:
+                text_lower = s["text"].strip().lower()
+                if "attack" in text_lower and "action" in text_lower:
+                    if current_ability:
+                        current_ability["text"] = current_ability["text"].strip()
+                        granted_abilities.append(current_ability)
+                        current_ability = None
+                    in_action_section = True
+                    action_section_type = "attack"
+                    header_match = True
+                    break
+                elif "tactical" in text_lower and "action" in text_lower:
+                    if current_ability:
+                        current_ability["text"] = current_ability["text"].strip()
+                        granted_abilities.append(current_ability)
+                        current_ability = None
+                    in_action_section = True
+                    action_section_type = "tactical"
+                    header_match = True
+                    break
+        if header_match:
+            continue
+
+        # Skip column header rows
+        is_col_header = any(
+            s["font"] == FONT_ABILITY_NAME and s["text"].strip() in ("Rg", "Skl", "Rst", "TN", "Dmg")
+            for s in line_spans
+        )
+        if is_col_header:
+            continue
+
+        # In action section: parse actions like stat card back
+        if in_action_section:
+            line_type = _classify_action_line(line_spans, has_active_trigger)
+
+            if line_type == "action_header":
+                parsed = _parse_action_header(line_spans, action_section_type)
+                has_columns = (parsed["range"] or parsed["skill_value"] != "0"
+                               or parsed["resist"] or parsed["tn"] != "-"
+                               or parsed["damage"] != "-")
+                if not has_columns and (current_action or len(parsed["name"]) <= 2):
+                    if current_action:
+                        current_action["name"] += " " + parsed["name"]
+                else:
+                    if current_action:
+                        current_action["effects"] = current_action["effects"].strip()
+                        granted_actions.append(current_action)
+                    parsed["category"] = "attack_actions" if action_section_type == "attack" else "tactical_actions"
+                    parsed["skill_built_in_suit"] = None
+                    parsed["skill_fate_modifier"] = None
+                    parsed["is_signature"] = False
+                    parsed["soulstone_cost"] = 0
+                    parsed["costs_and_restrictions"] = None
+                    try:
+                        parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else 0
+                    except ValueError:
+                        parsed["skill_value"] = 0
+                    try:
+                        parsed["tn"] = int(parsed["tn"]) if parsed["tn"] and parsed["tn"] != "-" else None
+                    except ValueError:
+                        parsed["tn"] = None
+                    if parsed["damage"] == "-":
+                        parsed["damage"] = None
+                    if parsed["resist"] == "-":
+                        parsed["resist"] = None
+                    current_action = parsed
+                    has_active_trigger = False
+
+            elif line_type == "trigger" and current_action:
+                trigger = _parse_trigger_line(line_spans)
+                if trigger:
+                    current_action["triggers"].append(trigger)
+                    has_active_trigger = True
+
+            elif line_type == "trigger_continuation" and current_action and current_action["triggers"]:
+                text = _spans_to_text(line_spans)
+                current_action["triggers"][-1]["text"] += " " + text
+
+            elif line_type == "effect_text" and current_action:
+                text = _spans_to_text(line_spans)
+                current_action["effects"] += " " + text
+                has_active_trigger = False
+
+            continue
+
+        # Not in action section: check for triggers (universal), abilities
+        first_content = None
+        for s in line_spans:
+            if s["text"].strip():
+                first_content = s
+                break
+        if first_content is None:
+            continue
+
+        # Check for trigger lines (suit symbol + BoldItalic name)
+        has_bold_italic = any(s["font"] == FONT_TRIGGER for s in line_spans)
+        SUIT_CODES = {99, 109, 114, 116}
+        has_suit_symbol = any(
+            s["font"] == FONT_SYMBOL and any(c in SUIT_CODES for c in _get_symbol_codes(s))
+            for s in line_spans
+        )
+        # Also check for soulstone symbol (code 115) as suit indicator for costly triggers
+        has_soulstone = any(
+            s["font"] == FONT_SYMBOL and 115 in _get_symbol_codes(s)
+            for s in line_spans
+        )
+
+        if (has_suit_symbol or has_soulstone) and has_bold_italic:
+            trigger = _parse_trigger_line(line_spans)
+            if trigger:
+                universal_triggers.append(trigger)
+                has_active_trigger = True
+            continue
+
+        # Trigger continuation
+        if has_active_trigger and first_content["x0"] >= 18 and first_content["font"] in (FONT_BODY, FONT_BOLD, FONT_ITALIC):
+            if universal_triggers:
+                text = _spans_to_text(line_spans)
+                universal_triggers[-1]["text"] += " " + text
+                continue
+
+        # Check for ability name (ExtraBold ending with ":")
+        has_ability_name = False
+        for s in line_spans:
+            if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+                has_ability_name = True
+                break
+
+        if has_ability_name:
+            has_active_trigger = False
+            if current_ability:
+                current_ability["text"] = current_ability["text"].strip()
+                granted_abilities.append(current_ability)
+
+            defensive_type = None
+            ability_start_idx = 0
+            if line_spans[0]["font"] == FONT_SYMBOL:
+                codes = _get_symbol_codes(line_spans[0])
+                for code in codes:
+                    if code in DEFENSIVE_ICON_MAP:
+                        defensive_type = DEFENSIVE_ICON_MAP[code]
+                        break
+                ability_start_idx = 1
+
+            name_text = ""
+            name_idx = ability_start_idx
+            for idx in range(ability_start_idx, len(line_spans)):
+                if line_spans[idx]["font"] == FONT_ABILITY_NAME and line_spans[idx]["text"].strip().endswith(":"):
+                    name_text = line_spans[idx]["text"].strip().rstrip(":")
+                    name_idx = idx
+                    break
+
+            remaining = line_spans[name_idx + 1:]
+            text_parts = _spans_to_text(remaining)
+
+            current_ability = {
+                "name": name_text,
+                "text": text_parts,
+                "defensive_type": defensive_type,
+            }
+        elif current_ability:
+            text = _spans_to_text(line_spans)
+            current_ability["text"] += " " + text
+
+    # Flush remaining
+    if current_ability:
+        current_ability["text"] = current_ability["text"].strip()
+        granted_abilities.append(current_ability)
+    if current_action:
+        current_action["effects"] = current_action["effects"].strip()
+        granted_actions.append(current_action)
+
+    return granted_abilities, granted_actions, universal_triggers
+
+
+def _keyword_from_path(pdf_path):
+    """Extract keyword from PDF path (the folder containing the PDF)."""
+    path = Path(pdf_path)
+    # Expected: source_pdfs/{Faction}/{Keyword}/M4E_Upgrade_*.pdf
+    parts = path.parts
+    faction_names = {
+        "Guild", "Arcanists", "Neverborn", "Bayou",
+        "Outcasts", "Resurrectionists", "Ten Thunders", "Explorer's Society"
+    }
+    for i, part in enumerate(parts):
+        if part in faction_names or part.replace("'", "\u2019") in faction_names:
+            # Next part should be the keyword folder
+            if i + 1 < len(parts) - 1:  # -1 to skip the filename itself
+                kw = parts[i + 1]
+                # Strip "Versatile - " prefix variations
+                if kw.startswith("Versatile"):
+                    return "Versatile"
+                # Normalize common abbreviations
+                kw_map = {
+                    "M&SU": "M&SU",
+                    "Qi and Gong": "Qi and Gong",
+                    "Qi-and-Gong": "Qi and Gong",
+                    "Last-Blossom": "Last Blossom",
+                    "Last Blossom": "Last Blossom",
+                    "Red-Library": "Red Library",
+                    "Red Library": "Red Library",
+                    "Witch-Hunter": "Witch Hunter",
+                    "Witch Hunter": "Witch Hunter",
+                    "Big Hat": "Big Hat",
+                    "Tri-Chi": "Tri-Chi",
+                    "Wizz-Bang": "Wizz-Bang",
+                }
+                return kw_map.get(kw, kw)
+    return None
 
 
 # ============================================================================

@@ -4,7 +4,7 @@
 
 Automated data extraction pipeline for **Malifaux 4th Edition** (M4E) tabletop game stat cards. Reads PDF card images via Claude Vision API, extracts structured game data into JSON, validates it, and loads it into a normalized SQLite database.
 
-**Current state:** 778 models, 124 crew cards, 70 upgrades across 8 factions. 0 errors, 0 warnings, 42 audit checks passed.
+**Current state:** 798 models, 130 crew cards, 70 upgrades across 8 factions. 2 errors (known edge cases), 7 warnings, 33 passed.
 
 ## Tech Stack
 

@@ -2093,7 +2093,7 @@
     ]
   },
   {
-    "name": "Dr. McMourning",
+    "name": "Dr. Mcmourning",
     "title": "Insanitary",
     "faction": "Resurrectionists",
     "station": "Master",
@@ -2235,7 +2235,7 @@
     ]
   },
   {
-    "name": "Dr. McMourning",
+    "name": "Dr. Mcmourning",
     "title": "Malpractitioner",
     "faction": "Resurrectionists",
     "station": "Master",
@@ -3928,7 +3928,7 @@
   },
   {
     "name": "Ikiryo",
-    "title": "The Heart That Left",
+    "title": "The Heart that Left",
     "faction": "Resurrectionists",
     "station": "Totem",
     "model_limit": 1,
@@ -5573,10 +5573,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Accidental Roll Over",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Accidental Roll Over: Move this model up to 5\", ignoring other models. Enemy models moved through this way must pass a TN 10 Df duel or be dealt 1 damage and gain a Poison token.",
+            "text": "Move this model up to 5\", ignoring other models. Enemy models moved through this way must pass a TN 10 Df duel or be dealt 1 damage and gain a Poison token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -8479,10 +8479,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Pouncing Strike",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Pouncing Strike: Place this model into base contact with a different enemy model within 5\". Then declare this action again, targeting that enemy model.",
+            "text": "Place this model into base contact with a different enemy model within 5\". Then declare this action again, targeting that enemy model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -8546,7 +8546,7 @@
   },
   {
     "name": "Seamus",
-    "title": "AKA Sebastian Baker",
+    "title": "Aka Sebastian Baker",
     "faction": "Resurrectionists",
     "station": "Master",
     "model_limit": 1,
@@ -8598,10 +8598,10 @@
         "effects": "Target gains an Entranced token.",
         "triggers": [
           {
-            "name": "",
+            "name": "Coordinated Attack",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Coordinated Attack: Another friendly model may declare a (melee) action targeting the same model.",
+            "text": "Another friendly model may declare a (melee) action targeting the same model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -10891,10 +10891,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Cinder Storm",
             "suit": "(t)",
             "timing": "after_succeeding",
-            "text": "Cinder Storm: The target gains an Aura (Fire) token.",
+            "text": "The target gains an Aura (Fire) token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }

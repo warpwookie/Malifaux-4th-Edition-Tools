@@ -1,0 +1,349 @@
+{
+  "document": "M4E FAQ",
+  "version": "FAQ 1.0 (2025)",
+  "total_pages": 6,
+  "total_entries": 45,
+  "entries": [
+    {
+      "id": "1.1",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "When a model draws LoS from another object, is cover determined from the model, or from the object the model is drawing LoS from?",
+      "answer": "If a model is drawing LoS from another object, all sight lines are drawn from that second object. Cover would therefore be determined from the second object’s position and not the model."
+    },
+    {
+      "id": "1.2",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "How does cover interact with non-targeted effects? Can a model caught in a pulse or chosen for the effect of the Breath of Fire action gain cover?",
+      "answer": "No. Cover can only be gained when a model is targeted by an action. Neither pulses, nor effects like Breath of Fire, which just deals damage to a nearby model provide cover. This may result in a situation where the target of Breath of Fire suffers less damage than the second model."
+    },
+    {
+      "id": "1.3",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If an action ignores or does not require LoS, are sight lines still drawn to determine cover and concealment?",
+      "answer": "Yes. If the action has a target, sight lines are drawn during step A.3 and A.4 of Resolving Actions. Step A.4 is not automatically skipped if step A.3 is skipped."
+    },
+    {
+      "id": "1.4",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "What does it mean when a model “ignores v abilities,” such as the Ruthless ability?",
+      "answer": "This means the model with Ruthless treats all v abilities on other models as if they didn’t exist. For example, the Ruthless model’s damage cannot be reduced by the Threatening Demeanor ability, nor do they suffer a - when targeting a model with the Terrifying ability, nor can a model with the Tangled in the Briars ability drain a s to place the Ruthless model and give it an Exposed token."
+    },
+    {
+      "id": "1.5",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "When a model attempts to move through a friendly model, who chooses if it may? The player controlling the movement effect, the player controlling the moved model, or the player controlling the model being moved through?",
+      "answer": "No one, there is no choice being made. Friendly models never block friendly models from moving through them."
+    },
+    {
+      "id": "1.6",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "What does it mean when an effect “ignores once per” restrictions, such as Harold Tull, Artillerist’s trigger Gertrude and Ethel?",
+      "answer": "If an effect ignores a once per restriction, it both may be used even if the effect has already been used, and does not count against that restriction for future uses. In the case of Gertrude and Ethel, this trigger can either be used after the Walking Cannon has activated for a second Howitzer attack or before the Walking Cannon activates for the first attack, while still allowing a second attack during the Walking Cannon’s activation (or from some other source, such as Hold Down)."
+    },
+    {
+      "id": "1.7",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If I apply a friendly Staggered token to my own model, does that prevent enemy models from moving my model?",
+      "answer": "Yes."
+    },
+    {
+      "id": "1.8",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If a model has an enemy Staggered token, can it be moved by its own actions that are controlled by another model?",
+      "answer": "Yes. Actions such as Obey that allow a model to declare an action aren’t directly moving it. Instead, it is moving itself, just not under its own control."
+    },
+    {
+      "id": "1.9",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If my model declares the Walk action while not engaged, then ends the Walk action engaged with an enemy, but also immediately scales a building in such a way that it is no longer engaged, does this count as “leaving engagement with a Walk action?” Can my model still declare the Interact action?",
+      "answer": "Yes, you can still declare the Interact action. As per the Engagement section of the rules, a model is prevented from declaring the Interact action if it declared the Walk action while engaged. In the above example, the model declared the Walk while not engaged. The fact that it then entered and left engagement does not matter. 1 MALIFAUX FOURTH EDITION • FREQUENTLY ASKED QUESTIONS • OCTOBER 2025"
+    },
+    {
+      "id": "1.10",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If a model declares the Walk action while engaged and then scales terrain, leaving the engagement in the process, can they Interact?",
+      "answer": "No. Scaling is considered part of the Walk action due to being an after resolving effect and being part of the action still. As such the Walk action was declared while engaged and has been used to leave engagement and the Interact action cannot be declared."
+    },
+    {
+      "id": "1.11",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "When a pulse or other area effect affects multiple models at the same time, who chooses the order that models resolve the generated duel? Does the entire area effect count as a single unresolved effect of the active player, or does each duel a model must attempt count as separate, individual effects?",
+      "answer": "The pulse generates one new effect on every model caught inside of it. The controller of the models caught inside the pulse (or other area effect) would choose which to resolve first, one at a time. See pg 40 of the Comprehensive Rule Book (Damage Timing) for an example."
+    },
+    {
+      "id": "1.12",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "Many effects in the game refer to multiple objects at a time such as “friendly Scheme or Remains markers.” Does the “friendly” restriction apply to both types of objects, or just the one immediately following the word friendly?",
+      "answer": "In examples like this, friendly always applies to both objects. This effect should be read, “friendly Scheme or friendly Remains markers.” If we want one of the two objects to be alignment agnostic, we will reverse the order they are listed, such as “Remains markers or friendly Scheme markers.”"
+    },
+    {
+      "id": "1.13",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If an effect adds +1, a suit, a fate modifier, etc., to a model’s Skl, does that effect last until the end of the game?",
+      "answer": "No, just until the action finishes resolving. “Increase this action’s Skl by +1” and “Increase this action’s duel total by +1” are identical in practice."
+    },
+    {
+      "id": "1.14",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "Are two abilities that are prefaced by the same text (before parenthesis) the same ability?",
+      "answer": "Yes. Abilities such as Demise (Eternal) and Demise (Explosive) are considered the same ability. If a model gains a second instance of an ability with the same name as an ability it already has, the second instance becomes active and the first is ignored. Therefore, a model with Demise (Eternal) that gains Demise (Explosive) would ignore Demise (Eternal) and only be able to use Demise (Explosive). There are some effects that specify Demise abilities, which affect all abilities prefaced by Demise."
+    },
+    {
+      "id": "1.15",
+      "section": "GENERAL",
+      "section_number": 1,
+      "question": "If an effect would allow a model to look at or reveal the top card(s) of a fate deck, and there are not enough cards left in the fate deck, is the fate deck shuffled first?",
+      "answer": "Yes. For example, if a model declares the Intuition action and there is only one card left in the deck, it first looks at that last remaining card, then reshuffles the deck, then looks at the top two cards of the deck, rearranges all three as it pleases, before placing all three on top of the fresh deck."
+    },
+    {
+      "id": "2.1",
+      "section": "ACTIONS",
+      "section_number": 2,
+      "question": "Can a model that “ignores other models while moving” declare the Interact action after leaving an enemy model’s engagement range with the Walk action?",
+      "answer": "No. Ignoring other models only allows a model to move through other models, it does not ignore other aspects of those models, such as engagement range. 2 MALIFAUX FOURTH EDITION • FREQUENTLY ASKED QUESTIONS • OCTOBER 2025"
+    },
+    {
+      "id": "3.1",
+      "section": "TERRAIN",
+      "section_number": 3,
+      "question": "What does “ignoring terrain” mean?",
+      "answer": "A model that ignores terrain (such as from the Wrecking Ball action) is unaffected (see the Unaffected by Terrain section) by all of that terrain’s traits, including height, and can thus change elevation during a move that ignores height as if all terrain was flat."
+    },
+    {
+      "id": "4.1",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Can a Strategy marker be chosen or used by a player for Schemes that can choose/use any non-specified marker?",
+      "answer": "Yes. While Strategy markers ignore the effects of models, Schemes such as Grave Robbing or Reshape the Land are the effects of a player and not a model."
+    },
+    {
+      "id": "4.2",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Can a model use the Walk the Line action to move a model toward a Strategy marker?",
+      "answer": "No. The Walk the Line action is an action belonging to a model. The action ignores the Strategy marker, as described on pg. 46 of the Comprehensive Rules. As such, the action does not “see” the Strategy marker as a viable marker to move the model toward."
+    },
+    {
+      "id": "4.3",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Can a model make a marker, such as a Piano marker, overlapping a Strategy marker?",
+      "answer": "Yes, unless the Strategy marker has the impassable terrain trait. For example, the Haphazard Topography action cannot target a Strategy marker, but the Bombs Away action can make a Piano marker overlapping a Strategy marker."
+    },
+    {
+      "id": "4.4",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "How thick is the centerline? If a model is touching the centerline, but not overlapping it, is it considered “completely within” a table half?",
+      "answer": "The centerline does not have any thickness. It is a one-dimensional line that runs through the mathematical center of the table. It is not possible to “touch” the centerline without overlapping it. Thus, any model whose base “touches” the centerline is considered to be on both table halves, and not “completely within” either."
+    },
+    {
+      "id": "4.5",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "If a model is on top of two pieces of terrain, can it contribute toward controlling both for the Take the Highground scheme?",
+      "answer": "Yes."
+    },
+    {
+      "id": "4.6",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Plant Explosives",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "4.6.i",
+        "4.6.ii",
+        "4.6.iii"
+      ]
+    },
+    {
+      "id": "4.6.i",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Explosive tokens cannot be removed, but can they be copied by effects like K.O.T.O.’s Harmonize trigger?",
+      "answer": "Yes."
+    },
+    {
+      "id": "4.6.ii",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Are Explosive tokens gained “after deployment” friendly or enemy tokens?",
+      "answer": "Explosive tokens gained from setting up the encounter are enemy tokens."
+    },
+    {
+      "id": "4.6.iii",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Does a model that deploys after deployment, such as with the From Shadows ability, gain an Explosive token when it deploys?",
+      "answer": "No. “After deployment” does not mean “after this model is deployed,” it instead refers to just after Step I: Deployment of encounters."
+    },
+    {
+      "id": "4.7",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Leave Your Mark",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "4.7.i"
+      ]
+    },
+    {
+      "id": "4.7.i",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Is it possible to block the LoS of a Scheme marker to the centerpoint, such as by having an enemy model covering the centerpoint?",
+      "answer": "Yes. 3 MALIFAUX FOURTH EDITION • FREQUENTLY ASKED QUESTIONS • OCTOBER 2025"
+    },
+    {
+      "id": "4.8",
+      "section": "ENCOUNTERS",
+      "section_number": 4,
+      "question": "Can a Scheme like Breakthrough be revealed at the end of a peon’s activation, if that peon is ignored by Schemes?",
+      "answer": "Yes."
+    },
+    {
+      "id": "5.1",
+      "section": "SPECIFIC ABILITIES, ACTIONS, AND TRIGGERS",
+      "section_number": 5,
+      "question": "Hard to Kill – Does Hard to Kill reduce the damage taken for the purposes of irreducible damage?",
+      "answer": "No. Hard to Kill prevents a model’s health from being lowered and does not reduce damage."
+    },
+    {
+      "id": "5.2",
+      "section": "SPECIFIC ABILITIES, ACTIONS, AND TRIGGERS",
+      "section_number": 5,
+      "question": "Stealth – Can a model target a model with the Stealth ability if it is not within 6\" of the model with Stealth, but is drawing range from an object that is within 6\" of the model with Stealth?",
+      "answer": "Yes. Only the object range is being drawn from needs to be within 6\" of the model with Stealth."
+    },
+    {
+      "id": "5.2",
+      "section": "SPECIFIC ABILITIES, ACTIONS, AND TRIGGERS",
+      "section_number": 5,
+      "question": "If a model declares the Onslaught trigger during the same action where Rasputina, Abominable uses the Absolute Zero ability, does the model still get to declare the attack generated by Onslaught?",
+      "answer": "Yes. Absolute Zero ends Step C.3 (Taking Actions) of the activation phase and forces the model into Step C.4 (End Activation). It may no longer use any portion of its action limit, but there is nothing preventing models from resolving actions outside of Step C.3 (or outside of the activation phase altogether!)"
+    },
+    {
+      "id": "6.1",
+      "section": "ARCANISTS",
+      "section_number": 6,
+      "question": "When Ceddra, White Stag, uses Onward, and declares the Hunter’s Cunning trigger, does she still get to resolve the generated Walk action after replacing?",
+      "answer": "Yes. Models that replace are generally considered to be the same entity, just represented by a different stat card. This also means that if White Stag uses Demise (Eternal), replaces into Sightless Snow, and then replaces back into White Stag all within the same turn, Demise (Eternal) is not available for use again."
+    },
+    {
+      "id": "8.1",
+      "section": "EXPLORER’S SOCIETY",
+      "section_number": 8,
+      "question": "If Sidir Archibal uses the Mortar Strike action and there are no other markers within 2\" of the made Remains marker, does he have to remove the marker he just made?",
+      "answer": "This is a typo. Please treat this action as if it read, “Make a Remains marker within range, then remove either a piece of destructible terrain or another marker within 2\" of the made marker.”"
+    },
+    {
+      "id": "8.2",
+      "section": "EXPLORER’S SOCIETY",
+      "section_number": 8,
+      "question": "DUA",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "8.2.i"
+      ]
+    },
+    {
+      "id": "8.2.i",
+      "section": "EXPLORER’S SOCIETY",
+      "section_number": 8,
+      "question": "Does Fall Into Darkness trigger place the target in base contact with a Shadow Door marker within 6\" of itself, or within 6\" of the model declaring the trigger?",
+      "answer": "As written, this wording means “within 6 inches of the model declaring the trigger”. This is not the intention for this specific trigger. Expect it to be errata’d accordingly later, and until then please play the Fall Into Darkness trigger as if it read, “Place the target in base contact with a Shadow Door marker within 6\" of itself.” 4 MALIFAUX FOURTH EDITION • FREQUENTLY ASKED QUESTIONS • OCTOBER 2025"
+    },
+    {
+      "id": "9.1",
+      "section": "GUILD",
+      "section_number": 9,
+      "question": "Are Dashel Barker, The Old Guard, and Dashel Barker, Butcher unique models?",
+      "answer": "Yes."
+    },
+    {
+      "id": "10.1",
+      "section": "NEVERBORN",
+      "section_number": 10,
+      "question": "Savage",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "10.1.i"
+      ]
+    },
+    {
+      "id": "10.1.i",
+      "section": "NEVERBORN",
+      "section_number": 10,
+      "question": "How does The Land Yields interact with the Runic Binding scheme?",
+      "answer": "It does not have a significant impact. If there were a single 8ss model in the area created by the Scheme markers, the Scheme would see that there are two models in the area with a total cost of 8ss."
+    },
+    {
+      "id": "10.2",
+      "section": "NEVERBORN",
+      "section_number": 10,
+      "question": "Woe",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "10.2.i"
+      ]
+    },
+    {
+      "id": "10.2.i",
+      "section": "NEVERBORN",
+      "section_number": 10,
+      "question": "Does the Feed on Paranoia ability heal the model when a Scheme marker is made as the result of a friendly Paranoia token being removed from an enemy model?",
+      "answer": "No."
+    },
+    {
+      "id": "10.3",
+      "section": "NEVERBORN",
+      "section_number": 10,
+      "question": "Is Candy a unique model?",
+      "answer": "Yes."
+    },
+    {
+      "id": "11.1",
+      "section": "OUTCASTS",
+      "section_number": 11,
+      "question": "When Zipp, Dread Pirate succeeds in the Your Money or Your Life… Or Maybe Your Hat action, can the target choose an upgrade that Zipp already has attached?",
+      "answer": "No. Due to the “This or That” rule, the model cannot choose an upgrade Zipp cannot attach."
+    },
+    {
+      "id": "12.1",
+      "section": "RESURRECTIONISTS",
+      "section_number": 12,
+      "question": "Tormented",
+      "answer": "(See sub-items below)",
+      "has_sub_items": true,
+      "sub_item_ids": [
+        "12.1.i"
+      ]
+    },
+    {
+      "id": "12.1.i",
+      "section": "RESURRECTIONISTS",
+      "section_number": 12,
+      "question": "If an enemy model with the Set Adrift upgrade attached to it is controlled by a model in Jack Daw’s crew, and it declares the Scream of the Lost trigger, can Jack Daw choose to have it kill itself? What if the model does not have any s to drain?",
+      "answer": "There is no circumstance under which the enemy model could be killed by Scream of the Lost while controlled by a model in Jack’s crew. The “This or That” section of the Comprehensive Rule book describes that a model cannot choose to kill itself while controlled by the opposing player. It is the same as attempting to give a Stunned token to a model that already has a Stunned token, as outlined in the example on that page."
+    }
+  ]
+}

@@ -1,547 +1,6 @@
 [
   {
-    "name": "Abandoned",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "During the end phase, if this model does not have more models (other than itself) it considers friendly within 3\" of it than models it considers enemy, this model is dealt 2 irreducible damage. Then, if this token did not damage this model, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Archie",
-        "source_type": "ability",
-        "source_name": "\u201cWant Some Ice Cream???\u201d",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Archie",
-        "source_type": "trigger",
-        "source_name": "\u201cWhat Did   He Throw!?\u201d > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Crooligan",
-        "source_type": "action_effect",
-        "source_name": "Hide and Shriek",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Crooligan",
-        "source_type": "action_effect",
-        "source_name": "Hide and Shriek",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Crooligan",
-        "source_type": "action_effect",
-        "source_name": "Pattycake",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Molly Squidpiddge",
-        "source_type": "trigger",
-        "source_name": "Disturbing Story > Muwahahaha",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Molly Squidpiddge",
-        "source_type": "action_effect",
-        "source_name": "Maniacal Laughter",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Molly Squidpiddge",
-        "source_type": "action_effect",
-        "source_name": "Misfit Press",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Molly Squidpiddge",
-        "source_type": "trigger",
-        "source_name": "Parade Route > Marching in Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Molly Squidpiddge",
-        "source_type": "ability",
-        "source_name": "The Lost Speak",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Necrotic Machine",
-        "source_type": "action_effect",
-        "source_name": "Crawling Terror",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Necrotic Machine",
-        "source_type": "trigger",
-        "source_name": "Necrotic Injection > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Night Terror",
-        "source_type": "trigger",
-        "source_name": "Supersonic Screech > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Noxious Nephilim",
-        "source_type": "action_effect",
-        "source_name": "Playful Frenzy",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Noxious Nephilim",
-        "source_type": "ability",
-        "source_name": "Ragged Hope",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Noxious Nephilim",
-        "source_type": "action_effect",
-        "source_name": "The Lonely Call",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Noxious Nephilim",
-        "source_type": "trigger",
-        "source_name": "The Lonely Call > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Philip and the Nanny",
-        "source_type": "action_effect",
-        "source_name": "Deadly Banter",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Philip and the Nanny",
-        "source_type": "trigger",
-        "source_name": "Deadly Banter > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Philip and the Nanny",
-        "source_type": "ability",
-        "source_name": "\u201cIs That Head Talking?!?\u201d",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Rabble Riser",
-        "source_type": "action_effect",
-        "source_name": "Lost Blade",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Rabble Riser",
-        "source_type": "trigger",
-        "source_name": "Lost Blade > Misunderstood Monster",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Rabble Riser",
-        "source_type": "action_effect",
-        "source_name": "Misplaced Trust",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Rabble Riser",
-        "source_type": "action_effect",
-        "source_name": "Waiting in the Dark",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Adaptable",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total.",
-    "model_sources": [
-      {
-        "model_name": "Alan Reid",
-        "source_type": "ability",
-        "source_name": "Legal Rhetoric",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Arcane Fate",
-        "source_type": "action_effect",
-        "source_name": "Supportive Measures",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ashes and Dust",
-        "source_type": "trigger",
-        "source_name": "Whirlwind of Scrap > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Bellaventine Thorpe",
-        "source_type": "trigger",
-        "source_name": "Arcane Firearm > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Bellaventine Thorpe",
-        "source_type": "ability",
-        "source_name": "Guild Deserter",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Bishop",
-        "source_type": "ability",
-        "source_name": "Adaptive",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dabbler",
-        "source_type": "action_effect",
-        "source_name": "Aetheric Passage",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Dabbler",
-        "source_type": "trigger",
-        "source_name": "Elemental Bolt > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Damian Ravencroft",
-        "source_type": "action_effect",
-        "source_name": "Absolute Control",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Damian Ravencroft",
-        "source_type": "ability",
-        "source_name": "Beacon of Order",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Damian Ravencroft",
-        "source_type": "trigger",
-        "source_name": "Confiscated Lore > Knight to E5",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Damian Ravencroft",
-        "source_type": "ability",
-        "source_name": "Memories of the Yellow Crypt",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Damian Ravencroft",
-        "source_type": "action_effect",
-        "source_name": "Witch Killer",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Doppelganger",
-        "source_type": "trigger",
-        "source_name": "Blend In > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Doppelganger",
-        "source_type": "trigger",
-        "source_name": "Lure > Assume Form",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Guild Lawyer",
-        "source_type": "action_effect",
-        "source_name": "Quick Thinking",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyll",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hannah Lovelace",
-        "source_type": "trigger",
-        "source_name": "Tactical Lift > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Investigator",
-        "source_type": "ability",
-        "source_name": "Legal Rhetoric",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jade Rabbit",
-        "source_type": "trigger",
-        "source_name": "Impassioned Defense > Thorough Research",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Katanaka Sniper",
-        "source_type": "action_effect",
-        "source_name": "Concealing Shadow",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kenshiro",
-        "source_type": "ability",
-        "source_name": "Fleet of Foot",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kenshiro",
-        "source_type": "trigger",
-        "source_name": "Reverse Momentum > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "LaCROIX RAIDER",
-        "source_type": "trigger",
-        "source_name": "Refurbished Shotgun > Risky Maneuver",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Leger de Main",
-        "source_type": "ability",
-        "source_name": "Mirror Trick",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Linh Ly",
-        "source_type": "trigger",
-        "source_name": "Jump Off the Page > Restricted Section",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lohith",
-        "source_type": "ability",
-        "source_name": "Reform from Rock",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lohith",
-        "source_type": "action_effect",
-        "source_name": "Soulstone Geode",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lucius Mattheson",
-        "source_type": "action_effect",
-        "source_name": "Executive Order",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "action_effect",
-        "source_name": "Flaming Bottle",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Map Map",
-        "source_type": "trigger",
-        "source_name": "Helped by Booklights > Thorough Research",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Marco Bonatti",
-        "source_type": "ability",
-        "source_name": "Inkfingers",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Maurice",
-        "source_type": "trigger",
-        "source_name": "Serrated Blade > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Misaki Katanaka",
-        "source_type": "trigger",
-        "source_name": "Lightning Strike > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Miya Murakami",
-        "source_type": "action_effect",
-        "source_name": "Bookworm",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ms. Weiss",
-        "source_type": "trigger",
-        "source_name": "Healing Energy > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mysterious Fate",
-        "source_type": "trigger",
-        "source_name": "Quaking Soil > Malifaux Born",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Old Cranky",
-        "source_type": "ability",
-        "source_name": "Sage Advice",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ophelia LaCroix",
-        "source_type": "trigger",
-        "source_name": "Heavy Firearm > See the Trick",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ophelia LaCroix",
-        "source_type": "trigger",
-        "source_name": "The Boss\u2019 Boomstick > Aim!",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Ototo",
-        "source_type": "action_effect",
-        "source_name": "Massive Tetsubo",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Ototo",
-        "source_type": "action_effect",
-        "source_name": "The Storm is Coming",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "SAMMY LaCROIX",
-        "source_type": "trigger",
-        "source_name": "Cauldron > Explosive Moss",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "SAMMY LaCROIX",
-        "source_type": "ability",
-        "source_name": "Piggy Market",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Scavenger",
-        "source_type": "trigger",
-        "source_name": "Scrounge > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shang",
-        "source_type": "trigger",
-        "source_name": "Seek Shadows > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Soul Battery",
-        "source_type": "trigger",
-        "source_name": "Dark Bargain > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Soulstone Gamin",
-        "source_type": "ability",
-        "source_name": "Demise (Last Release)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Soulstone Gamin",
-        "source_type": "action_effect",
-        "source_name": "Soulstone Infusion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Story of Thanh Giong",
-        "source_type": "trigger",
-        "source_name": "Bamboo Spears > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Student of Conflict",
-        "source_type": "ability",
-        "source_name": "Adaptable Force",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Student of Conflict",
-        "source_type": "trigger",
-        "source_name": "Covetous Cravings > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Midnight Stalker",
-        "source_type": "ability",
-        "source_name": "Invader",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Midnight Stalker",
-        "source_type": "trigger",
-        "source_name": "Sword Cane > Forethought",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Puzzle Box",
-        "source_type": "action_effect",
-        "source_name": "A New Arrangement",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Puzzle Box",
-        "source_type": "ability",
-        "source_name": "Drawn to Mystery",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "The Scribe",
-        "source_type": "trigger",
-        "source_name": "Elite Decree > Planning Ahead",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Scribe",
-        "source_type": "ability",
-        "source_name": "Legal Rhetoric",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Torakage",
-        "source_type": "action_effect",
-        "source_name": "Ninjutsu",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Viktoria Chambers",
-        "source_type": "action_effect",
-        "source_name": "Changing Tactics",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Yamaziko",
-        "source_type": "action_effect",
-        "source_name": "Logistics",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Yamaziko",
-        "source_type": "ability",
-        "source_name": "Strategist",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Adversary",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token.",
     "model_sources": [
       {
         "model_name": "Amai",
@@ -910,7 +369,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Pistolero de Latigo",
+        "model_name": "Pistolero De Latigo",
         "source_type": "action_effect",
         "source_name": "Rusty Pistol",
         "applies_or_references": "applies"
@@ -1026,557 +485,7 @@
     ]
   },
   {
-    "name": "Aetheric Surge",
-    "type": "buff",
-    "timing": "permanent",
-    "rules_text": "This model receives +2 Skl and a suit of its choice when declaring attack actions.",
-    "model_sources": [
-      {
-        "model_name": "Vanessa Chambers",
-        "source_type": "ability",
-        "source_name": "Adaptable Shield",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Vanessa Chambers",
-        "source_type": "ability",
-        "source_name": "Channel the Leyline",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Vanessa Chambers",
-        "source_type": "ability",
-        "source_name": "Channel the Leyline",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Viktoria Chambers",
-        "source_type": "ability",
-        "source_name": "Demise (Unbalanced)",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Analyzed",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model may not reduce damage with its abilities. Remove this token during the end phase.",
-    "model_sources": [
-      {
-        "model_name": "Big Brain Brin",
-        "source_type": "action_effect",
-        "source_name": "Elementary",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mah Tucket",
-        "source_type": "trigger",
-        "source_name": "Over-Sized Drill > Analyze Weakness",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mah Tucket",
-        "source_type": "action_effect",
-        "source_name": "Override Circuits",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mechanized Porkchop",
-        "source_type": "ability",
-        "source_name": "Rage Machine",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Rooster Rider",
-        "source_type": "trigger",
-        "source_name": "Fowl Play > Poultry in Motion",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sparks LeBlanc",
-        "source_type": "trigger",
-        "source_name": "Heavy Wrench > Analyze Weakness",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sparks LeBlanc",
-        "source_type": "action_effect",
-        "source_name": "Planned Obsolescence",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Survivor",
-        "source_type": "ability",
-        "source_name": "\u201cFillings Is Metal\u201d",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Test Subject",
-        "source_type": "trigger",
-        "source_name": "Static Touch > Analyze Weakness",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Little Lass",
-        "source_type": "ability",
-        "source_name": "Delegated Authority",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Aura (Binding)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Concealment)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Fire)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Fumes)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "Enemy models within 3\" receive a (-) to attack actions that target friendly models. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Hazardous)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Negligent)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Poison)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "The area within 2\" of this model is hazardous (Poison) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token."
-  },
-  {
-    "name": "Aura (Staggered)",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "When an enemy model within 2\" of this model activates, it must discard a card or gain a Staggered token."
-  },
-  {
-    "name": "Backtrack",
-    "type": "debuff",
-    "timing": "on_use",
-    "rules_text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict.",
-    "model_sources": [
-      {
-        "model_name": "Aionus",
-        "source_type": "ability",
-        "source_name": "A Stitch in Time",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Aionus",
-        "source_type": "trigger",
-        "source_name": "Sever Timeline > Temporal Distortion",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Aionus",
-        "source_type": "action_effect",
-        "source_name": "Stutter Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Angelica Durand",
-        "source_type": "trigger",
-        "source_name": "Encore! Encore! > Choreographed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cassandra Felton",
-        "source_type": "trigger",
-        "source_name": "Breath of Fire > Staged",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "trigger",
-        "source_name": "Double Whammy > Staged",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "trigger",
-        "source_name": "Cigarette Holder > Staged",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Karina",
-        "source_type": "action_effect",
-        "source_name": "Stutter Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mechanical Dove",
-        "source_type": "trigger",
-        "source_name": "Brief Interlude > Choreographed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Scion of the Void",
-        "source_type": "trigger",
-        "source_name": "Hungry Emptiness > Temporal Distortion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shadowlark",
-        "source_type": "trigger",
-        "source_name": "Phantasmal Blade > Staged",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Talos",
-        "source_type": "trigger",
-        "source_name": "Open the Furnace > Temporal Distortion",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Tara",
-        "source_type": "action_effect",
-        "source_name": "Expedite",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Tara",
-        "source_type": "ability",
-        "source_name": "Lost in the Moment",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Tara",
-        "source_type": "trigger",
-        "source_name": "Soulstone Sword > Temporal Distortion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Tara",
-        "source_type": "action_effect",
-        "source_name": "Stutter Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Nothing Beast",
-        "source_type": "action_effect",
-        "source_name": "Stutter Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Thirty-Three",
-        "source_type": "trigger",
-        "source_name": "Lost Peacebringer > Temporal Distortion",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Void Hunter",
-        "source_type": "action_effect",
-        "source_name": "Stutter Time",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Badge",
-    "type": "buff",
-    "timing": "permanent",
-    "rules_text": "When this model would be killed, it may discard a card and remove this token to heal 2.",
-    "model_sources": [
-      {
-        "model_name": "Bernadette Basse",
-        "source_type": "action_effect",
-        "source_name": "Gear Up",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "action_effect",
-        "source_name": "Bounty Paid",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "action_effect",
-        "source_name": "Into Action",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "action_effect",
-        "source_name": "Into Action",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Balm",
-    "type": "resource",
-    "timing": "end_phase",
-    "rules_text": "During the end phase, this model heals 1. Then, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Aspiring Student",
-        "source_type": "action_effect",
-        "source_name": "Rising Block",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "River Monk",
-        "source_type": "trigger",
-        "source_name": "Flow Like Water > Healing Salve",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "The Dragon\u2019s Light",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Blight",
-    "type": "damage",
-    "timing": "end_phase",
-    "rules_text": "This model suffers a (r) to Wp duels generated by Plague models. During the end phase, enemy models within (aura)1\" gain a Blight token, then if there are no other models within 1\" with a Blight token, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Benny Wolcomb",
-        "source_type": "action_effect",
-        "source_name": "Infected Blade",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Benny Wolcomb",
-        "source_type": "action_effect",
-        "source_name": "Mocking Miasma",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "trigger",
-        "source_name": "A Dance of Tiny Feet > Fever Bloom",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "action_effect",
-        "source_name": "Bleeding Disease",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "action_effect",
-        "source_name": "Bleeding Disease",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "trigger",
-        "source_name": "Haunting Pipes > Taint",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "trigger",
-        "source_name": "Lure > Taint",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "ability",
-        "source_name": "Plagueborn",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "action_effect",
-        "source_name": "Pustulent Tumors",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "action_effect",
-        "source_name": "Pustulent Tumors",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "ability",
-        "source_name": "Source of the Contagion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hamelin",
-        "source_type": "action_effect",
-        "source_name": "The Black Staff",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Malifaux Rat",
-        "source_type": "ability",
-        "source_name": "Disease Carrier",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "action_effect",
-        "source_name": "Drink Spirit",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "ability",
-        "source_name": "Loose Bowels",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "action_effect",
-        "source_name": "Mouthful of Misery",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "action_effect",
-        "source_name": "The Red Death",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "action_effect",
-        "source_name": "The Red Death",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nix",
-        "source_type": "trigger",
-        "source_name": "The Red Death > Fever Bloom",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "action_effect",
-        "source_name": "Bleeding Disease",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "trigger",
-        "source_name": "Bleeding Disease > Taint",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "action_effect",
-        "source_name": "Coughing Fit",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "trigger",
-        "source_name": "Coughing Fit > Fever Bloom",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "action_effect",
-        "source_name": "Pustulent Tumors",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "action_effect",
-        "source_name": "Pustulent Tumors",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Obedient Wretch",
-        "source_type": "ability",
-        "source_name": "Tummy Aches",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Rat Catcher",
-        "source_type": "trigger",
-        "source_name": "Rusty Trap > Fever Bloom",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Rat King",
-        "source_type": "action_effect",
-        "source_name": "Prey on the Weak",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Rat King",
-        "source_type": "trigger",
-        "source_name": "Prey on the Weak > Fever Bloom",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Rat King",
-        "source_type": "trigger",
-        "source_name": "Swarm of Yellow Teeth > Taint",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stolen",
-        "source_type": "action_effect",
-        "source_name": "Coughing Fit",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stolen",
-        "source_type": "trigger",
-        "source_name": "Obvious Symptoms > Taint",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stolen",
-        "source_type": "trigger",
-        "source_name": "Onward > Brush Shoulders",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Blood",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "Crew-specific resource token. Effects vary by crew card. Used across multiple keywords for kill tracking and ability activation."
-  },
-  {
-    "name": "Bog Spirit",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "After this model is killed, the crew that applied this token may summon a Will o' the Wisp with 3 health into base contact."
-  },
-  {
     "name": "Bolstered",
-    "type": "buff",
-    "timing": "end_phase",
-    "rules_text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured.",
-    "cancels": "Injured",
     "model_sources": [
       {
         "model_name": "Adze",
@@ -1675,7 +584,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Good Ol' Boy",
+        "model_name": "Good Ol\u2019 Boy",
         "source_type": "action_effect",
         "source_name": "Rollin Up My Sleeves",
         "applies_or_references": "applies"
@@ -1759,7 +668,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Som'er Teeth Jones",
+        "model_name": "Som\u2019er Teeth Jones",
         "source_type": "ability",
         "source_name": "Plundered Power",
         "applies_or_references": "applies"
@@ -1821,388 +730,7 @@
     ]
   },
   {
-    "name": "Bounty",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "When this model is killed, the crew that applied this token draws a card.",
-    "model_sources": [
-      {
-        "model_name": "Bernadette Basse",
-        "source_type": "action_effect",
-        "source_name": "Spread Your Name",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Bernadette Basse",
-        "source_type": "ability",
-        "source_name": "Warrants",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "action_effect",
-        "source_name": "On the Trail",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "trigger",
-        "source_name": "Runed Shotgun > Wanted",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cornelius Basse",
-        "source_type": "ability",
-        "source_name": "Warrants",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Brilliance",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "When this model cheats fate, the crew that applied this token may remove it to deal 1 damage to this model or heal it 2.",
-    "model_sources": [
-      {
-        "model_name": "Beckoner",
-        "source_type": "action_effect",
-        "source_name": "Deceiving Touch",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Beckoner",
-        "source_type": "ability",
-        "source_name": "Don\u2019t Bite The Hand",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Beckoner",
-        "source_type": "trigger",
-        "source_name": "Lure > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyneth Maddox",
-        "source_type": "action_effect",
-        "source_name": "Ante Up!",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyneth Maddox",
-        "source_type": "trigger",
-        "source_name": "Card Sharp > \u201cDo You Fold?\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyneth Maddox",
-        "source_type": "ability",
-        "source_name": "Stack the Deck",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "action_effect",
-        "source_name": "Bound to Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "action_effect",
-        "source_name": "Bound to Brilliance",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "trigger",
-        "source_name": "Bound to Brilliance > Feed the Darkness",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "trigger",
-        "source_name": "Bound to Brilliance > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "ability",
-        "source_name": "Demise (Bad Influence)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "action_effect",
-        "source_name": "Shimmerlungs",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "action_effect",
-        "source_name": "Shimmerlungs",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "trigger",
-        "source_name": "Shred > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hungering Darkness",
-        "source_type": "trigger",
-        "source_name": "Tendrils > Sharpened Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "action_effect",
-        "source_name": "Shimmerlungs",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "action_effect",
-        "source_name": "Shining Example",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "action_effect",
-        "source_name": "Shining Example",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "trigger",
-        "source_name": "Tear Apart > Consume Brilliance",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "trigger",
-        "source_name": "Tear Apart > Sharpened Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Illuminated",
-        "source_type": "trigger",
-        "source_name": "Tear Apart > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "Ante Up!",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "trigger",
-        "source_name": "Ante Up! > No Turning Back",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "Brilliant Guide",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "Brilliant Guide",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "Chasing Losses",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "trigger",
-        "source_name": "Chasing Losses > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "Dark Deal",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "trigger",
-        "source_name": "Dark Deal > Inner Glow",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "Don\u2019t Bite the Hand",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "Hold \u2019Em",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "Looming Eclipse",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "None for Me",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "ability",
-        "source_name": "None for Me",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "This Round\u2019s On Me",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "action_effect",
-        "source_name": "Drawn to Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "trigger",
-        "source_name": "Drawn to Brilliance > \u201cDo You Fold?\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "trigger",
-        "source_name": "One for the Road > Sharpened Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "trigger",
-        "source_name": "One for the Road > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "action_effect",
-        "source_name": "Shining Example",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "action_effect",
-        "source_name": "Shining Example",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Mr. Graves",
-        "source_type": "ability",
-        "source_name": "Bloody Brilliant",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Graves",
-        "source_type": "trigger",
-        "source_name": "Lead the Way > No Turning Back",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Mr. Graves",
-        "source_type": "trigger",
-        "source_name": "Show \u2019Em the Door > Sharpened Brilliance",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Mr. Graves",
-        "source_type": "trigger",
-        "source_name": "Show \u2019Em the Door > The Light Inside",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "ability",
-        "source_name": "Brilliant Guide",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "ability",
-        "source_name": "Brilliant Guide",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "action_effect",
-        "source_name": "Despicable Promise",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "trigger",
-        "source_name": "Despicable Promise > Inner Glow",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "ability",
-        "source_name": "Don\u2019t Bite the Hand",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Mr. Tannen",
-        "source_type": "trigger",
-        "source_name": "The Invisible Hand > Inner Glow",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Broodling",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "After this model is killed, summon a friendly Terror Tot into base contact.",
-    "model_sources": [
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "trigger",
-        "source_name": "Black Blood Pustule > Life from Blood",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hayreddin",
-        "source_type": "trigger",
-        "source_name": "Corrupted Shotgun > Life from Blood",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nekima",
-        "source_type": "trigger",
-        "source_name": "Vital Strike > Life from Blood",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Burning",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token.",
     "model_sources": [
       {
         "model_name": "Amanjaku",
@@ -2829,36 +1357,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "ability",
-        "source_name": "Demise (Flashover)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "action_effect",
-        "source_name": "Flaming Bottle",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "trigger",
-        "source_name": "\u201cUp We Go!\u201d > Smolder",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "trigger",
-        "source_name": "\u201cUp We Go!\u201d > Smolder",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "trigger",
-        "source_name": "\u201cUp We Go!\u201d > Smolder",
-        "applies_or_references": "applies"
-      },
-      {
         "model_name": "Mad Dog Brackett",
         "source_type": "action_effect",
         "source_name": "Burning Cigar",
@@ -2925,6 +1423,36 @@
         "applies_or_references": "references"
       },
       {
+        "model_name": "Merris Lacroix",
+        "source_type": "ability",
+        "source_name": "Demise (Flashover)",
+        "applies_or_references": "applies"
+      },
+      {
+        "model_name": "Merris Lacroix",
+        "source_type": "action_effect",
+        "source_name": "Flaming Bottle",
+        "applies_or_references": "applies"
+      },
+      {
+        "model_name": "Merris Lacroix",
+        "source_type": "trigger",
+        "source_name": "\u201cUp We Go!\u201d > Smolder",
+        "applies_or_references": "references"
+      },
+      {
+        "model_name": "Merris Lacroix",
+        "source_type": "trigger",
+        "source_name": "\u201cUp We Go!\u201d > Smolder",
+        "applies_or_references": "references"
+      },
+      {
+        "model_name": "Merris Lacroix",
+        "source_type": "trigger",
+        "source_name": "\u201cUp We Go!\u201d > Smolder",
+        "applies_or_references": "applies"
+      },
+      {
         "model_name": "Misaki Katanaka",
         "source_type": "ability",
         "source_name": "Burnt Out",
@@ -2985,7 +1513,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Ophelia LaCroix",
+        "model_name": "Ophelia Lacroix",
         "source_type": "trigger",
         "source_name": "The Boss\u2019 Boomstick > Fire!",
         "applies_or_references": "applies"
@@ -3105,19 +1633,19 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "RAPHAEL LaCROIX",
+        "model_name": "Raphael Lacroix",
         "source_type": "trigger",
         "source_name": "Heavy Firearm > Smolder",
         "applies_or_references": "references"
       },
       {
-        "model_name": "RAPHAEL LaCROIX",
+        "model_name": "Raphael Lacroix",
         "source_type": "trigger",
         "source_name": "Heavy Firearm > Smolder",
         "applies_or_references": "references"
       },
       {
-        "model_name": "RAPHAEL LaCROIX",
+        "model_name": "Raphael Lacroix",
         "source_type": "trigger",
         "source_name": "Heavy Firearm > Smolder",
         "applies_or_references": "applies"
@@ -3159,12 +1687,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "SAMMY LaCROIX",
-        "source_type": "trigger",
-        "source_name": "Cauldron > To the Flame",
-        "applies_or_references": "applies"
-      },
-      {
         "model_name": "Samael Hopkins",
         "source_type": "action_effect",
         "source_name": "Flaming Mallet",
@@ -3193,6 +1715,12 @@
         "source_type": "trigger",
         "source_name": "Onward > Shooting Sparks",
         "applies_or_references": "references"
+      },
+      {
+        "model_name": "Sammy Lacroix",
+        "source_type": "trigger",
+        "source_name": "Cauldron > To the Flame",
+        "applies_or_references": "applies"
       },
       {
         "model_name": "Shang",
@@ -3623,202 +2151,7 @@
     ]
   },
   {
-    "name": "Challenged",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Captain Zipp",
-        "source_type": "trigger",
-        "source_name": "Cutthroat Cutlass > Taunt",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "King's Wall",
-        "source_type": "trigger",
-        "source_name": "King\u2019s Shield > Taunt",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "King's Wall",
-        "source_type": "trigger",
-        "source_name": "Lure > Taunt",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mancha Roja",
-        "source_type": "trigger",
-        "source_name": "Toss in the Mud > Taunt",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mariya Dyatlov",
-        "source_type": "trigger",
-        "source_name": "Concussion Rounds > Taunt",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Chi",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "Before performing a duel, this model may remove this token to receive +1 to its duel total.",
-    "model_sources": [
-      {
-        "model_name": "Aspiring Student",
-        "source_type": "ability",
-        "source_name": "Explosive Chi",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Aspiring Student",
-        "source_type": "trigger",
-        "source_name": "Rising Block > Aggressive Chi",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lotus Eater",
-        "source_type": "trigger",
-        "source_name": "Hurricane Punch > Aggressive Chi",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lotus Eater",
-        "source_type": "action_effect",
-        "source_name": "Path of the Lotus",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lotus Eater",
-        "source_type": "ability",
-        "source_name": "Sacred Ink",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lotus Eater",
-        "source_type": "action_effect",
-        "source_name": "Stance Change",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mu Long",
-        "source_type": "action_effect",
-        "source_name": "Stance Change",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mu Long",
-        "source_type": "ability",
-        "source_name": "Training Dummy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mu Long",
-        "source_type": "trigger",
-        "source_name": "Whirling Arms > Self-Reflection",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "River Monk",
-        "source_type": "action_effect",
-        "source_name": "Guandao",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "River Monk",
-        "source_type": "trigger",
-        "source_name": "Guandao > Aggressive Chi",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Sensei Yu",
-        "source_type": "action_effect",
-        "source_name": "A Simple Lesson",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "Dawn Staff",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "trigger",
-        "source_name": "Dawn Staff > Aggressive Chi",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "Dragon\u2019s Advance",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "Fury of the Dawn",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "ability",
-        "source_name": "Sacred Ink",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "The River\u2019s Wrath",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "The River\u2019s Wrath",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shenlong",
-        "source_type": "action_effect",
-        "source_name": "Years of Practice",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Thunder Archer",
-        "source_type": "trigger",
-        "source_name": "Blessed Longbow > Harvest Chi",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Convert",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "The Dmg stat of this model's attack actions is reduced by 1.",
-    "model_sources": [
-      {
-        "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Call on the Faithful",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Temperance",
-        "source_type": "trigger",
-        "source_name": "Join Me... > Listen to Reason",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Craven",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token.",
     "model_sources": [
       {
         "model_name": "Asset 17",
@@ -4009,67 +2342,7 @@
     ]
   },
   {
-    "name": "Death",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When this model succeeds in an attack action that deals damage, it may remove this token. If it does so, the target must either discard a card, drain a (soulstone), or be killed.",
-    "model_sources": [
-      {
-        "model_name": "Grave Goo",
-        "source_type": "trigger",
-        "source_name": "Ingested > Last Light",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "ability",
-        "source_name": "Curse of the Dancing Forest",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "trigger",
-        "source_name": "Drain the Spark > Losing Yourself",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "action_effect",
-        "source_name": "Life from the Earth",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "trigger",
-        "source_name": "Life from the Earth > Thread Unwoven",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mikhail XVI",
-        "source_type": "trigger",
-        "source_name": "Koschei, The Epitaph Blade > Last Light",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Damned",
-        "source_type": "trigger",
-        "source_name": "Aggressive Leap > Last Light",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Kurgan",
-        "source_type": "action_effect",
-        "source_name": "The Long Rest",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Distracted",
-    "type": "debuff",
-    "timing": "when_triggered",
-    "rules_text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused.",
-    "cancels": "Focused",
     "model_sources": [
       {
         "model_name": "Artemis",
@@ -4087,12 +2360,6 @@
         "model_name": "Cooper Jones",
         "source_type": "action_effect",
         "source_name": "Moonshine   and a Barrel",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Crooligan",
-        "source_type": "action_effect",
-        "source_name": "Hide and Shriek",
         "applies_or_references": "applies"
       },
       {
@@ -4260,783 +2527,7 @@
     ]
   },
   {
-    "name": "Drift",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\".",
-    "model_sources": [
-      {
-        "model_name": "Aunty Mel",
-        "source_type": "action_effect",
-        "source_name": "Life Raft",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Bruce",
-        "source_type": "action_effect",
-        "source_name": "Family Pet",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Buckaroo",
-        "source_type": "ability",
-        "source_name": "Slip and Slide",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Buckaroo",
-        "source_type": "trigger",
-        "source_name": "\u201cAin\u2019t My First Rodeo\u201d > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hermits",
-        "source_type": "action_effect",
-        "source_name": "Seashells by",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hermits",
-        "source_type": "action_effect",
-        "source_name": "Skedaddle",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Judd & Honey",
-        "source_type": "action_effect",
-        "source_name": "Signal Flare",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sir Vantes",
-        "source_type": "trigger",
-        "source_name": "Knight\u2019s Folly > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sir Vantes",
-        "source_type": "ability",
-        "source_name": "Slip and Slide",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Skulker Skin",
-        "source_type": "trigger",
-        "source_name": "Blowdart > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Skulker Skin",
-        "source_type": "trigger",
-        "source_name": "Shove > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Skulker Skin",
-        "source_type": "ability",
-        "source_name": "Shrouded in the Shallows",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Skulker Skin",
-        "source_type": "trigger",
-        "source_name": "Under the Surface > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Clampetts",
-        "source_type": "trigger",
-        "source_name": "Fishin\u2019 with Dynamite > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Clampetts",
-        "source_type": "trigger",
-        "source_name": "Waves Crash > Lucky Lure",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Uncle Bogg",
-        "source_type": "trigger",
-        "source_name": "Exaggerated Claim > Friendly Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Uncle Bogg",
-        "source_type": "action_effect",
-        "source_name": "\u201cGet!\u201d",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Entranced",
-    "type": "debuff",
-    "timing": "when_triggered",
-    "rules_text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "ALPHONSE LeBLANC",
-        "source_type": "trigger",
-        "source_name": "Huge Fist > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Anya Lycarayen",
-        "source_type": "trigger",
-        "source_name": "Contract Kill > Glancing Shot",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Auguste Hart",
-        "source_type": "action_effect",
-        "source_name": "Crazed Swipe",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Auguste Hart",
-        "source_type": "action_effect",
-        "source_name": "Flash Photography",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Auguste Hart",
-        "source_type": "ability",
-        "source_name": "Manic Interview",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Batsch & Amalie",
-        "source_type": "ability",
-        "source_name": "Fruiting Bodies",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Batsch & Amalie",
-        "source_type": "trigger",
-        "source_name": "Fungal Network > Black Mold",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Batsch & Amalie",
-        "source_type": "action_effect",
-        "source_name": "Mushroom Cloud",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Batsch & Amalie",
-        "source_type": "action_effect",
-        "source_name": "Mushroom Cloud",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Blackbird",
-        "source_type": "action_effect",
-        "source_name": "Phantasmal Knife",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Blackbird",
-        "source_type": "trigger",
-        "source_name": "Phantasmal Knife > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Blackbird",
-        "source_type": "action_effect",
-        "source_name": "Spotlight",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Brocken Spectre",
-        "source_type": "trigger",
-        "source_name": "Claustrophobia > ",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Brocken Spectre",
-        "source_type": "trigger",
-        "source_name": "Hallowed Glory > Off-Balance",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Bunraku",
-        "source_type": "trigger",
-        "source_name": "Tanto > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Camerabot",
-        "source_type": "action_effect",
-        "source_name": "Minor Annoyance",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Captain Zipp",
-        "source_type": "action_effect",
-        "source_name": "Monologue",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Carlos Vasquez",
-        "source_type": "ability",
-        "source_name": "Celebrity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cassandra Felton",
-        "source_type": "trigger",
-        "source_name": "Heart-Stealer > Lonely Heart",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Charm Warder",
-        "source_type": "action_effect",
-        "source_name": "Jinx",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Chiyo Hamasaki",
-        "source_type": "trigger",
-        "source_name": "Invitation > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "action_effect",
-        "source_name": "Bedazzled",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "trigger",
-        "source_name": "Double Whammy > Disorient",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "action_effect",
-        "source_name": "Number One Fan",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "trigger",
-        "source_name": "Phantasmal Prism > Disorient",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "action_effect",
-        "source_name": "Sleight of Hand",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Colette Du Bois",
-        "source_type": "action_effect",
-        "source_name": "The French Drop",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Coryphee",
-        "source_type": "trigger",
-        "source_name": "Bladed Hands > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Coryphee Duet",
-        "source_type": "trigger",
-        "source_name": "Blade Dance > Visions of Glamour",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Coryphee Duet",
-        "source_type": "trigger",
-        "source_name": "Dance Partner > Visions of Glamour",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Courtesan",
-        "source_type": "action_effect",
-        "source_name": "Cutting Words",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Courtesan",
-        "source_type": "trigger",
-        "source_name": "Lure > Secret Admirer",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Crumb",
-        "source_type": "action_effect",
-        "source_name": "Probing Question",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dapperling",
-        "source_type": "action_effect",
-        "source_name": "Fungal Infection",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dead Dandy",
-        "source_type": "ability",
-        "source_name": "Social Faux Pas",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dead Dandy",
-        "source_type": "trigger",
-        "source_name": "Treacherous Strike > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dead Doxy",
-        "source_type": "action_effect",
-        "source_name": "A Grave Affair",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Dead Doxy",
-        "source_type": "trigger",
-        "source_name": "Tear Apart > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "ability",
-        "source_name": "Celebrity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "action_effect",
-        "source_name": "Cigarette Holder",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "ability",
-        "source_name": "Fueled by the Crowd",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "action_effect",
-        "source_name": "Mocking Laugh",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Dorian Crowe",
-        "source_type": "trigger",
-        "source_name": "Mocking Laugh > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "English Ivan",
-        "source_type": "action_effect",
-        "source_name": "Covert Agent",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "English Ivan",
-        "source_type": "action_effect",
-        "source_name": "Gloom Strike",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "English Ivan",
-        "source_type": "action_effect",
-        "source_name": "Runic Siphon",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Eva Havenhand",
-        "source_type": "action_effect",
-        "source_name": "Electric Whip",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Eva Havenhand",
-        "source_type": "action_effect",
-        "source_name": "Veiled Derringer",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Field Reporter",
-        "source_type": "action_effect",
-        "source_name": "Flash Photography",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Flying Piglet",
-        "source_type": "action_effect",
-        "source_name": "\u201cWhen Pigs Fl- Oh\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "GIBSON DeWALT",
-        "source_type": "action_effect",
-        "source_name": "Gloom Burst",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gracie",
-        "source_type": "trigger",
-        "source_name": "Hip Check > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Guild Hound",
-        "source_type": "action_effect",
-        "source_name": "Annoying",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hand of Janus",
-        "source_type": "trigger",
-        "source_name": "Seeking Bolts > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hans",
-        "source_type": "action_effect",
-        "source_name": "Warning Shot",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hinamatsu",
-        "source_type": "trigger",
-        "source_name": "Lure > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hinamatsu",
-        "source_type": "trigger",
-        "source_name": "Swirling Blades > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hoochdini",
-        "source_type": "action_effect",
-        "source_name": "Prestidigitation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Iron Wing",
-        "source_type": "action_effect",
-        "source_name": "Sky Hook",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jin Baccara",
-        "source_type": "action_effect",
-        "source_name": "Shade Bet",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jin Baccara",
-        "source_type": "ability",
-        "source_name": "Sinister Whisper",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kabuki Warrior",
-        "source_type": "action_effect",
-        "source_name": "Odachi",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Keepside Strangers",
-        "source_type": "trigger",
-        "source_name": "Handful of Snakes > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Keepside Strangers",
-        "source_type": "action_effect",
-        "source_name": "Hear the Whispers",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Keepside Strangers",
-        "source_type": "ability",
-        "source_name": "Skeleton in the Closet",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Leger de Main",
-        "source_type": "action_effect",
-        "source_name": "Distracting Illusion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lilitu",
-        "source_type": "trigger",
-        "source_name": "Crimson Call > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lust",
-        "source_type": "action_effect",
-        "source_name": "\u201cNow, Kiss!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Madame Sybelle",
-        "source_type": "action_effect",
-        "source_name": "Bleeder Lash",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Madame Sybelle",
-        "source_type": "trigger",
-        "source_name": "Bleeder Lash > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Mordrake",
-        "source_type": "action_effect",
-        "source_name": "Gloom Burst",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mr. Mordrake",
-        "source_type": "action_effect",
-        "source_name": "Shade Claw",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Mr. Mordrake",
-        "source_type": "action_effect",
-        "source_name": "Unsettled",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nekima",
-        "source_type": "trigger",
-        "source_name": "Vital Strike > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nellie Cochrane",
-        "source_type": "trigger",
-        "source_name": "Expos\u00e9 > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nellie Cochrane",
-        "source_type": "action_effect",
-        "source_name": "Lunacy",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nellie Cochrane",
-        "source_type": "action_effect",
-        "source_name": "Sow Chaos",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nellie Cochrane",
-        "source_type": "action_effect",
-        "source_name": "Spew Nonsense",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nellie Cochrane",
-        "source_type": "ability",
-        "source_name": "Spread the Word",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Newsie",
-        "source_type": "ability",
-        "source_name": "\u201cRead All About It!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nightcrawler Network",
-        "source_type": "action_effect",
-        "source_name": "Network Cable",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nocturne",
-        "source_type": "action_effect",
-        "source_name": "Displace",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Olivia Bernard",
-        "source_type": "trigger",
-        "source_name": "Twirling Baton > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Oskar",
-        "source_type": "trigger",
-        "source_name": "Spore Barrage > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Oskar",
-        "source_type": "trigger",
-        "source_name": "Toss in the Mud > Bouquet of Decay",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Seamus",
-        "source_type": "ability",
-        "source_name": "Bask in the Spotlight",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Seamus",
-        "source_type": "action_effect",
-        "source_name": "Bladed Bouquet",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Seamus",
-        "source_type": "action_effect",
-        "source_name": "Special Arrangements",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shadowlark",
-        "source_type": "action_effect",
-        "source_name": "Malevolent Shadow",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shadowlark",
-        "source_type": "action_effect",
-        "source_name": "Phantasmal Blade",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Showgirl",
-        "source_type": "ability",
-        "source_name": "Celebrity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Showgirl",
-        "source_type": "trigger",
-        "source_name": "Dismissive Wave > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Taggart Queeg",
-        "source_type": "action_effect",
-        "source_name": "Bleeder Lash",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The First Mate",
-        "source_type": "action_effect",
-        "source_name": "Menacing Croak",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Undercover Reporter",
-        "source_type": "trigger",
-        "source_name": "Smile, You\u2019re On Camera > Confusing Feelings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "White Rabbit Co.",
-        "source_type": "trigger",
-        "source_name": "Bespoke Headwear > Fedora",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "White Rabbit Co.",
-        "source_type": "ability",
-        "source_name": "Marvelous Wares",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Winston Finnigan",
-        "source_type": "ability",
-        "source_name": "Celebrity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "trigger",
-        "source_name": "Finale > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "trigger",
-        "source_name": "Sparkle Bomb > Overwhelmed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wrastler",
-        "source_type": "action_effect",
-        "source_name": "Gimmick",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "trigger",
-        "source_name": "Backroom Dealings > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "action_effect",
-        "source_name": "Covert Agent",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "action_effect",
-        "source_name": "Cutting Words",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "trigger",
-        "source_name": "Finishing Strike > Beautiful Clothes",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "action_effect",
-        "source_name": "Gather Intel",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "ability",
-        "source_name": "Incriminating Evidence",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "action_effect",
-        "source_name": "Information Network",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Youko Hamasaki",
-        "source_type": "action_effect",
-        "source_name": "Information Network",
-        "applies_or_references": "removes"
-      }
-    ]
-  },
-  {
     "name": "Exposed",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden.",
-    "cancels": "Hidden",
     "model_sources": [
       {
         "model_name": "Cornelius Basse",
@@ -5065,73 +2556,7 @@
     ]
   },
   {
-    "name": "Familia",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When a friendly model within 6\" is dealt damage, this model may remove this token to reduce that damage by 1.",
-    "model_sources": [
-      {
-        "model_name": "Abuela Ortega",
-        "source_type": "trigger",
-        "source_name": "Escucha Me > Primero la Familia",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ni\u00f1o Ortega",
-        "source_type": "action_effect",
-        "source_name": "Drawn to Family",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ni\u00f1o Ortega",
-        "source_type": "ability",
-        "source_name": "Eyes on Every Angle",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Pistolero de Latigo",
-        "source_type": "ability",
-        "source_name": "Fierce Kinship",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Pistolero de Latigo",
-        "source_type": "action_effect",
-        "source_name": "Reinforce the Front",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Pistolero de Latigo",
-        "source_type": "trigger",
-        "source_name": "Rusty Pistol > Bravado",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Santiago Ortega",
-        "source_type": "ability",
-        "source_name": "Demise (\u201c\u00bfEso es todo?\u201d)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Santiago Ortega",
-        "source_type": "trigger",
-        "source_name": "Peacebringer Blade > Bravado",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Santiago Ortega",
-        "source_type": "action_effect",
-        "source_name": "\u00a1Reacciona!",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Fast",
-    "type": "buff",
-    "timing": "end_activation",
-    "rules_text": "Increase this model's action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow.",
-    "cancels": "Slow",
     "model_sources": [
       {
         "model_name": "Allison Dade",
@@ -5182,7 +2607,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "GIBSON DeWALT",
+        "model_name": "Gibson Dewalt",
         "source_type": "action_effect",
         "source_name": "Artefactor\u2019s Wrench",
         "applies_or_references": "applies"
@@ -5286,67 +2711,7 @@
     ]
   },
   {
-    "name": "Flicker",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "During the end phase, kill this model. This token cannot be removed.",
-    "model_sources": [
-      {
-        "model_name": "Asami Tanaka",
-        "source_type": "ability",
-        "source_name": "Beyond\u2019s Reward",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Asami Tanaka",
-        "source_type": "action_effect",
-        "source_name": "From the Maw",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Asami Tanaka",
-        "source_type": "action_effect",
-        "source_name": "Sinister Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Rally",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Tara",
-        "source_type": "action_effect",
-        "source_name": "From the Void",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "action_effect",
-        "source_name": "Manifest Nightmare",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "trigger",
-        "source_name": "Manifest Nightmare > Idle Thoughts",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Nothing Beast",
-        "source_type": "ability",
-        "source_name": "Half in the Void",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
     "name": "Focused",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted.",
-    "cancels": "Distracted",
     "model_sources": [
       {
         "model_name": "Amina Naidu",
@@ -5364,12 +2729,6 @@
         "model_name": "Bill Algren",
         "source_type": "trigger",
         "source_name": "Heroic Intervention > Inspiration",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "ability",
-        "source_name": "Ancient Ritual",
         "applies_or_references": "applies"
       },
       {
@@ -5409,7 +2768,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "trigger",
         "source_name": "Plastic Surgery > Preparations",
         "applies_or_references": "applies"
@@ -5427,7 +2786,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "K.O.T.O.",
+        "model_name": "K.o.t.o.",
         "source_type": "trigger",
         "source_name": "Music Swells > Inspiration",
         "applies_or_references": "applies"
@@ -5585,775 +2944,7 @@
     ]
   },
   {
-    "name": "Fragile Ego",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "After another enemy model is chosen to activate, if this model has not activated this turn, the crew that applied this token may remove it to force this model to activate instead.",
-    "model_sources": [
-      {
-        "model_name": "Pandora",
-        "source_type": "action_effect",
-        "source_name": "Self Loathing",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Fright",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "This model considers its (warding) abilities blank. After a friendly model succeeds in a (magic) action targeting this model, it may choose to receive one additional raise; if it does, remove this token after resolving the action.",
-    "model_sources": [
-      {
-        "model_name": "Alp",
-        "source_type": "ability",
-        "source_name": "Demise (Uneasy)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Alp",
-        "source_type": "action_effect",
-        "source_name": "Imaginary Claws",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Coppelius",
-        "source_type": "trigger",
-        "source_name": "Deadly Claws > Frighten",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Coppelius",
-        "source_type": "action_effect",
-        "source_name": "Onward",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Insidious Madness",
-        "source_type": "action_effect",
-        "source_name": "Disembodied Voices",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "ability",
-        "source_name": "Demise (Uneasy)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "ability",
-        "source_name": "Demise (Uneasy)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "action_effect",
-        "source_name": "Dream Eater",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "action_effect",
-        "source_name": "Fear Made Flesh",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "trigger",
-        "source_name": "Heavy Claws > Frighten",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "ability",
-        "source_name": "Monster in the Dark",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Lord Chompy Bits",
-        "source_type": "action_effect",
-        "source_name": "Nytemare\u2019s Mark",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Serena Bowman",
-        "source_type": "trigger",
-        "source_name": "Horrific Reality > Frighten",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stitched Together",
-        "source_type": "trigger",
-        "source_name": "Deadly Claws > Frighten",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "action_effect",
-        "source_name": "Bad Dreams",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "ability",
-        "source_name": "Contagious Nightmare",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "action_effect",
-        "source_name": "Endless Slumber",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Dreamer",
-        "source_type": "trigger",
-        "source_name": "Twist Reality > Frighten",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Widow Weaver",
-        "source_type": "action_effect",
-        "source_name": "Endless Nightmare",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Widow Weaver",
-        "source_type": "action_effect",
-        "source_name": "Endless Nightmare",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Widow Weaver",
-        "source_type": "ability",
-        "source_name": "Monster in the Dark",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Frozen Solid",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "This model may not be moved by enemy effects. After either this model suffers damage or an enemy model targets this model with the Interact action, remove this token (this model may target itself with the Interact action).",
-    "model_sources": [
-      {
-        "model_name": "Cyclops",
-        "source_type": "trigger",
-        "source_name": "Glacial Volley > Frozen Trophy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "trigger",
-        "source_name": "Aetheric Gaze > Frozen Trophy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "trigger",
-        "source_name": "Avalanche > Ice Sheet",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Primordial Magic",
-        "source_type": "action_effect",
-        "source_name": "Winter\u2019s Maw",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Thoon",
-        "source_type": "trigger",
-        "source_name": "Arctic Pull > Frozen Trophy",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Glowy",
-    "type": "buff",
-    "timing": "end_phase",
-    "rules_text": "Attacks that target this model are unaffected by concealing terrain. During the end phase, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "ALPHONSE LeBLANC",
-        "source_type": "ability",
-        "source_name": "\u201cOoo, Shiny\u2026\u201d",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Flying Piglet",
-        "source_type": "trigger",
-        "source_name": "\u201cWhen Pigs Fl- Oh\u201d > \u201cThat\u2019s Normal.\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gautraeux Bokor",
-        "source_type": "ability",
-        "source_name": "Swamp Lights",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Gautraeux Bokor",
-        "source_type": "trigger",
-        "source_name": "Swamp Spirits > \u201cThat\u2019s Normal\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gautraeux Bokor",
-        "source_type": "action_effect",
-        "source_name": "Swirling Magic",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hoochdini",
-        "source_type": "ability",
-        "source_name": "Toad-Al Power",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hopscotch",
-        "source_type": "ability",
-        "source_name": "Toxic Invigoration",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lightning Bug",
-        "source_type": "action_effect",
-        "source_name": "Colorful Blast",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Olivia Bernard",
-        "source_type": "trigger",
-        "source_name": "Light Show > The Ol\u2019 Razzle Dazzle",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Olivia Bernard",
-        "source_type": "ability",
-        "source_name": "Lovely Assistant",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Olivia Bernard",
-        "source_type": "action_effect",
-        "source_name": "Twirling Baton",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Swine-Cursed",
-        "source_type": "ability",
-        "source_name": "Swamp Lights",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Swine-Cursed",
-        "source_type": "trigger",
-        "source_name": "Tusk Slam > Li",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Chain Fuse",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "ability",
-        "source_name": "Cursed Warnings",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Finale",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Finale",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Iron Fan of Tsu Li",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Sparkle Bomb",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "Sparkle Bomb",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "trigger",
-        "source_name": "Sparkle Bomb > Glitter Lungs",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "\u201cClear the Stage!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "\u201cThe Glow is Healthy!\u201d",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "action_effect",
-        "source_name": "\u201cThe Glow is Healthy!\u201d",
-        "applies_or_references": "removes"
-      }
-    ]
-  },
-  {
-    "name": "Glutted",
-    "type": "resource",
-    "timing": "end_activation",
-    "rules_text": "When this model ends its activation, it may remove this token to heal 1.",
-    "model_sources": [
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "ability",
-        "source_name": "Ancient Ritual",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "ability",
-        "source_name": "Ancient Ritual",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "trigger",
-        "source_name": "Blood Clot > Meat for the Young",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Black Blood Shaman",
-        "source_type": "trigger",
-        "source_name": "Ritual Knife > Blood Spray",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Blood Hunter",
-        "source_type": "trigger",
-        "source_name": "Bloody Teeth > Accursed Blood",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Blood Hunter",
-        "source_type": "trigger",
-        "source_name": "Crash Through > Bloody Trophy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Crumb",
-        "source_type": "trigger",
-        "source_name": "Probing Question > Accursed Blood",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hayreddin",
-        "source_type": "trigger",
-        "source_name": "Black Blood Pustule > Meat for the Young",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hayreddin",
-        "source_type": "trigger",
-        "source_name": "Combat Staff > Accursed Blood",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hayreddin",
-        "source_type": "trigger",
-        "source_name": "Corrupted Shotgun > Blood Spray",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Hog Whisperer",
-        "source_type": "action_effect",
-        "source_name": "Herd \u2019Em",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Hog Whisperer",
-        "source_type": "action_effect",
-        "source_name": "Herd \u2019Em",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Hog Whisperer",
-        "source_type": "ability",
-        "source_name": "Swineherd",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lelu",
-        "source_type": "trigger",
-        "source_name": "Heavy Claws > Bloody Trophy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lelu",
-        "source_type": "action_effect",
-        "source_name": "Release the Hounds",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lelu",
-        "source_type": "ability",
-        "source_name": "Twinned Soul (Lilitu)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lelu",
-        "source_type": "ability",
-        "source_name": "Twinned Soul (Lilitu)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lilitu",
-        "source_type": "trigger",
-        "source_name": "Barbed Whip > Blood Spray",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lilitu",
-        "source_type": "action_effect",
-        "source_name": "Crimson Call",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lilitu",
-        "source_type": "ability",
-        "source_name": "Twinned Soul (Lelu)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lilitu",
-        "source_type": "ability",
-        "source_name": "Twinned Soul (Lelu)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mature Nephilim",
-        "source_type": "ability",
-        "source_name": "Blood Frenzy",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Mature Nephilim",
-        "source_type": "trigger",
-        "source_name": "Heavy Claws > Bloody Trophy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mature Nephilim",
-        "source_type": "trigger",
-        "source_name": "Heavy Claws > Meat for the Young",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nekima",
-        "source_type": "trigger",
-        "source_name": "Dark Bargain > Meat for the Young",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nekima",
-        "source_type": "trigger",
-        "source_name": "Lorelei > Meat for the Young",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nekima",
-        "source_type": "action_effect",
-        "source_name": "Vital Strike",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Old Major",
-        "source_type": "ability",
-        "source_name": "Chow Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Old Major",
-        "source_type": "trigger",
-        "source_name": "Huge Tusks > Crunch Down",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Old Major",
-        "source_type": "action_effect",
-        "source_name": "Incite a Stampede",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Old Major",
-        "source_type": "ability",
-        "source_name": "Thick Fat",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Penelope",
-        "source_type": "action_effect",
-        "source_name": "Nudge \u2019Em On",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Piglet",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (Wild Boar)",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Piglet",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (Wild Boar)",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Piglet",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (Wild Boar)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Piglet",
-        "source_type": "trigger",
-        "source_name": "Nipped > Crunch Down",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Piglet",
-        "source_type": "ability",
-        "source_name": "Thick Fat",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Slop Hauler",
-        "source_type": "action_effect",
-        "source_name": "Feed the Piggies",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Slop Hauler",
-        "source_type": "ability",
-        "source_name": "Slippery with Slop",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Squealer",
-        "source_type": "ability",
-        "source_name": "Chow Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Squealer",
-        "source_type": "ability",
-        "source_name": "Follow the Squeal",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Squealer",
-        "source_type": "ability",
-        "source_name": "Follow the Squeal",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Terror Tot",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Young Nephilim)",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Terror Tot",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Young Nephilim)",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Terror Tot",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Young Nephilim)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Sow",
-        "source_type": "action_effect",
-        "source_name": "Grunt and Grow",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Sow",
-        "source_type": "ability",
-        "source_name": "Thick Fat",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "The Sow",
-        "source_type": "trigger",
-        "source_name": "Three Mouths to Feed > Crunch Down",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ulix Turner",
-        "source_type": "trigger",
-        "source_name": "Proper Care > Fattened Up",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "War Pig",
-        "source_type": "ability",
-        "source_name": "Chow Time",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "War Pig",
-        "source_type": "ability",
-        "source_name": "Thick Fat",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wild Boar",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (War Pig)",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wild Boar",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (War Pig)",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Wild Boar",
-        "source_type": "ability",
-        "source_name": "Grow Up Strong (War Pig)",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wild Boar",
-        "source_type": "trigger",
-        "source_name": "Low Gore > Crunch Down",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wild Boar",
-        "source_type": "ability",
-        "source_name": "Thick Fat",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Young Nephilim",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Mature Nephilim)",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Young Nephilim",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Mature Nephilim)",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Young Nephilim",
-        "source_type": "ability",
-        "source_name": "Relish in Blood (Mature Nephilim)",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Graft",
-    "type": "buff",
-    "timing": "end_phase",
-    "rules_text": "During the end phase, this model may remove this token to heal 2.",
-    "model_sources": [
-      {
-        "model_name": "Corpse Curator",
-        "source_type": "action_effect",
-        "source_name": "Control Graft",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Corpse Curator",
-        "source_type": "action_effect",
-        "source_name": "Control Graft",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Dr. McMourning",
-        "source_type": "action_effect",
-        "source_name": "Plastic Surgery",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dr. McMourning",
-        "source_type": "ability",
-        "source_name": "Special Parts for Special Customers",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Greedy",
-    "type": "debuff",
-    "timing": "when_triggered",
-    "rules_text": "When this model would discard an upgrade, it may instead remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Sun Quiang",
-        "source_type": "trigger",
-        "source_name": "Study > Ancestor\u2019s Marking",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Yan Lo",
-        "source_type": "trigger",
-        "source_name": "Lessons of History > Guard Reliquary",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Yin",
-        "source_type": "action_effect",
-        "source_name": "Empower Ancestor",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Yin",
-        "source_type": "trigger",
-        "source_name": "Feed on Grief > From the Urn",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Hastened",
-    "type": "buff",
-    "timing": "end_activation",
-    "rules_text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered.",
-    "cancels": "Staggered",
     "model_sources": [
       {
         "model_name": "Abyssal Anchor",
@@ -6467,10 +3058,6 @@
   },
   {
     "name": "Hidden",
-    "type": "buff",
-    "timing": "end_phase",
-    "rules_text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed.",
-    "cancels": "Exposed",
     "model_sources": [
       {
         "model_name": "Bernadette Basse",
@@ -6559,240 +3146,7 @@
     ]
   },
   {
-    "name": "Hunger",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself.",
-    "model_sources": [
-      {
-        "model_name": "Athorak",
-        "source_type": "ability",
-        "source_name": "Bloody Rites",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Athorak",
-        "source_type": "trigger",
-        "source_name": "Combat Staff > Shared Cravings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Athorak",
-        "source_type": "ability",
-        "source_name": "Eta Kithae",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Athorak",
-        "source_type": "action_effect",
-        "source_name": "Still the Heart",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Athorak",
-        "source_type": "trigger",
-        "source_name": "Willing Sacrifice > Bloody Tithe",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "ability",
-        "source_name": "By Need Alone",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "trigger",
-        "source_name": "Lure > Bloody Tithe",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "action_effect",
-        "source_name": "Macuahuitl",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "trigger",
-        "source_name": "Macuahuitl > Shared Cravings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Blood Vessel",
-        "source_type": "ability",
-        "source_name": "Ready to Serve",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Blood Vessel",
-        "source_type": "action_effect",
-        "source_name": "Rend the Flesh",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Blood Vessel",
-        "source_type": "action_effect",
-        "source_name": "Rite of Sacrifice",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cavern Nephilim",
-        "source_type": "ability",
-        "source_name": "By Need Alone",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "December Acolyte",
-        "source_type": "trigger",
-        "source_name": "Harpoon Gun > Desperation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyll",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyll",
-        "source_type": "ability",
-        "source_name": "Whisper in Their Ear",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "action_effect",
-        "source_name": "Bloodthirst Rite",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Bloodthirst Rite > Called by Blood",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "action_effect",
-        "source_name": "Devour",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Devour > Bloody Tithe",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "ability",
-        "source_name": "Exalt in Blood",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "ability",
-        "source_name": "Insatiable",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "ability",
-        "source_name": "Rend the Kin",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Split and Spill > Bloody Tithe",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Marathine",
-        "source_type": "trigger",
-        "source_name": "Living Weapon > Shared Cravings",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Rasputina",
-        "source_type": "action_effect",
-        "source_name": "Entomb in Ice",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Rasputina",
-        "source_type": "action_effect",
-        "source_name": "Hunger Pangs",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Snow Storm",
-        "source_type": "action_effect",
-        "source_name": "Gnawing Emptiness",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Snow Storm",
-        "source_type": "trigger",
-        "source_name": "Gnawing Emptiness > Desperation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "trigger",
-        "source_name": "Lure > Drink Deeply",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Wendigo",
-        "source_type": "action_effect",
-        "source_name": "Gnawing Emptiness",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Wendigo",
-        "source_type": "trigger",
-        "source_name": "Gnawing Emptiness > Desperation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wendigo",
-        "source_type": "ability",
-        "source_name": "Punish the Gluttonous",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "White Eyes",
-        "source_type": "ability",
-        "source_name": "Nowhere to Hide",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "White Eyes",
-        "source_type": "trigger",
-        "source_name": "Shuddering Shape > Bloody Tithe",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "White Eyes",
-        "source_type": "trigger",
-        "source_name": "Terrorize > Shared Cravings",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Impact",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage.",
     "model_sources": [
       {
         "model_name": "Bucket Bot",
@@ -6843,7 +3197,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Francois LaCroix",
+        "model_name": "Francois Lacroix",
         "source_type": "ability",
         "source_name": "Slingin\u2019 Six Irons",
         "applies_or_references": "references"
@@ -6867,13 +3221,13 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "Good Ol' Boy",
+        "model_name": "Good Ol\u2019 Boy",
         "source_type": "action_effect",
         "source_name": "Rollin Up My Sleeves",
         "applies_or_references": "references"
       },
       {
-        "model_name": "Good Ol' Boy",
+        "model_name": "Good Ol\u2019 Boy",
         "source_type": "ability",
         "source_name": "Seasoned Looter",
         "applies_or_references": "applies"
@@ -6897,13 +3251,13 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "LaCROIX RAIDER",
+        "model_name": "Lacroix Raider",
         "source_type": "action_effect",
         "source_name": "Improvised Ammo",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "LaCROIX RAIDER",
+        "model_name": "Lacroix Raider",
         "source_type": "trigger",
         "source_name": "Refurbished Shotgun > Risky Maneuver",
         "applies_or_references": "references"
@@ -6913,12 +3267,6 @@
         "source_type": "action_effect",
         "source_name": "Team Effort",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "MERRIS LaCROIX",
-        "source_type": "action_effect",
-        "source_name": "Flaming Bottle",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Mariya Dyatlov",
@@ -6931,6 +3279,12 @@
         "source_type": "action_effect",
         "source_name": "Improvised Ammo",
         "applies_or_references": "applies"
+      },
+      {
+        "model_name": "Merris Lacroix",
+        "source_type": "action_effect",
+        "source_name": "Flaming Bottle",
+        "applies_or_references": "references"
       },
       {
         "model_name": "Ms. Weiss",
@@ -6951,13 +3305,13 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Ophelia LaCroix",
+        "model_name": "Ophelia Lacroix",
         "source_type": "ability",
         "source_name": "Quick Draw",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Ophelia LaCroix",
+        "model_name": "Ophelia Lacroix",
         "source_type": "trigger",
         "source_name": "The Boss\u2019 Boomstick > Aim!",
         "applies_or_references": "applies"
@@ -7005,7 +3359,7 @@
         "applies_or_references": "removes"
       },
       {
-        "model_name": "SAMMY LaCROIX",
+        "model_name": "Sammy Lacroix",
         "source_type": "ability",
         "source_name": "Piggy Market",
         "applies_or_references": "applies"
@@ -7041,7 +3395,7 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "YOUNG LaCROIX",
+        "model_name": "Young Lacroix",
         "source_type": "action_effect",
         "source_name": "Slung-shot",
         "applies_or_references": "applies"
@@ -7049,69 +3403,7 @@
     ]
   },
   {
-    "name": "Improvised Part",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "This model may declare tactical actions printed on the stat cards of non-master allies within 6\" as if they were printed on this model's stat card. After declaring such an action, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Clockwork Queen",
-        "source_type": "action_effect",
-        "source_name": "Quick Weld",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Goop",
-        "source_type": "ability",
-        "source_name": "Pile o\u2019 Parts",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Incurable",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model cannot heal. During the end phase, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Gwyll",
-        "source_type": "trigger",
-        "source_name": "Cling to Death > Death\u2019s Door",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Devour > Death\u2019s Door",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Visceral Rampage > Death\u2019s Door",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Perdita Ortega",
-        "source_type": "trigger",
-        "source_name": "Harrying Shot > Death\u2019s Door",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "trigger",
-        "source_name": "Exsanguinate > Death\u2019s Door",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Injured",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered.",
-    "cancels": "Bolstered",
     "model_sources": [
       {
         "model_name": "Abomination",
@@ -7264,7 +3556,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Domador de Cad\u00e1veres",
+        "model_name": "Domador De Cad\u00e1veres",
         "source_type": "action_effect",
         "source_name": "Decay",
         "applies_or_references": "applies"
@@ -7552,7 +3844,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "action_effect",
         "source_name": "Heavy Wrench",
         "applies_or_references": "applies"
@@ -7674,926 +3966,7 @@
     ]
   },
   {
-    "name": "Insight",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it.",
-    "model_sources": [
-      {
-        "model_name": "ALPHONSE LeBLANC",
-        "source_type": "trigger",
-        "source_name": "Careful Handling > Watch and Learn",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "ALPHONSE LeBLANC",
-        "source_type": "trigger",
-        "source_name": "Toss > \u201cFuuuuture!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ancient Construct",
-        "source_type": "trigger",
-        "source_name": "Toss > Epiphany",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Athorak",
-        "source_type": "ability",
-        "source_name": "Bloody Rites",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Aua Warrior",
-        "source_type": "trigger",
-        "source_name": "Defensive Energy > Epiphany",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Banasuva",
-        "source_type": "trigger",
-        "source_name": "The Thousand Arms of Justice > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "trigger",
-        "source_name": "Macuahuitl > Faith in the Flesh",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Barbaros",
-        "source_type": "trigger",
-        "source_name": "To the Slaughter > Clarity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Beckoner",
-        "source_type": "action_effect",
-        "source_name": "Lure",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cooper Jones",
-        "source_type": "trigger",
-        "source_name": "Defensive Energy > Sudden Inspiration",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cyclops",
-        "source_type": "trigger",
-        "source_name": "Glacial Volley > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "trigger",
-        "source_name": "Aetheric Gaze > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "action_effect",
-        "source_name": "Shiver the World",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gautraeux Bokor",
-        "source_type": "trigger",
-        "source_name": "Swirling Magic > Swamp Wisdom",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwyll",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Harold Tull",
-        "source_type": "action_effect",
-        "source_name": "Stealthy Takedown",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jade Rabbit",
-        "source_type": "trigger",
-        "source_name": "Impassioned Defense > Thorough Research",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "John Watson",
-        "source_type": "trigger",
-        "source_name": "Medical Tools > Clarity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "John Watson",
-        "source_type": "trigger",
-        "source_name": "Walk It Off > Review Plans",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "K.O.T.O.",
-        "source_type": "trigger",
-        "source_name": "Music Swells > Nervous Energy",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "K.O.T.O.",
-        "source_type": "ability",
-        "source_name": "Reading the Room",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kandara",
-        "source_type": "action_effect",
-        "source_name": "Beyond Sight",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kandara",
-        "source_type": "trigger",
-        "source_name": "Paired Knives > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kastore",
-        "source_type": "trigger",
-        "source_name": "Bloodthirst Rite > Faith in the Flesh",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kitty Dumont",
-        "source_type": "action_effect",
-        "source_name": "Drawn to Brilliance",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kudra",
-        "source_type": "trigger",
-        "source_name": "Cobra\u2019s Fangs > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kudra",
-        "source_type": "trigger",
-        "source_name": "From All, One > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kunoichi",
-        "source_type": "trigger",
-        "source_name": "To the Rooftops > Clarity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Linh Ly",
-        "source_type": "trigger",
-        "source_name": "Storycraft > Gift of Knowledge",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Linh Ly",
-        "source_type": "action_effect",
-        "source_name": "Study the Archives",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Linh Ly",
-        "source_type": "ability",
-        "source_name": "Well-Versed",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Map Map",
-        "source_type": "trigger",
-        "source_name": "Bored to Death > Clarity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Map Map",
-        "source_type": "ability",
-        "source_name": "Guardian of Knowledge",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Map Map",
-        "source_type": "action_effect",
-        "source_name": "Helped by Booklights",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Map Map",
-        "source_type": "trigger",
-        "source_name": "Helped by Booklights > Thorough Research",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Miya Murakami",
-        "source_type": "action_effect",
-        "source_name": "Bookworm",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Moon Shinobi",
-        "source_type": "action_effect",
-        "source_name": "A Shot of Genius",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Oxfordian Mage",
-        "source_type": "action_effect",
-        "source_name": "Beyond Sight",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Oxfordian Mage",
-        "source_type": "trigger",
-        "source_name": "Lightning Bolt > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Oxfordian Mage",
-        "source_type": "ability",
-        "source_name": "The Oxfordian Method",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Parson",
-        "source_type": "trigger",
-        "source_name": "Relic Hammer > The Nomad\u2019s Path",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sandeep Desai",
-        "source_type": "trigger",
-        "source_name": "Elemental Creation > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sandeep Desai",
-        "source_type": "action_effect",
-        "source_name": "Heavenly Gada",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sandeep Desai",
-        "source_type": "ability",
-        "source_name": "Mind\u2019s Eye",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sen",
-        "source_type": "ability",
-        "source_name": "Reading the Room",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shastar Vidiya Guard",
-        "source_type": "ability",
-        "source_name": "Know the Warrior",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Shastar Vidiya Guard",
-        "source_type": "trigger",
-        "source_name": "Onward > Revelation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Shastar Vidiya Guard",
-        "source_type": "ability",
-        "source_name": "Well-Studied",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Story of Raijin",
-        "source_type": "action_effect",
-        "source_name": "Thunderstruck",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Story of Thanh Giong",
-        "source_type": "ability",
-        "source_name": "Divine King",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Story of Thanh Giong",
-        "source_type": "trigger",
-        "source_name": "Righteous Protector > Gift of Knowledge",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Tanuki",
-        "source_type": "trigger",
-        "source_name": "Lifting Spirits > Sudden Inspiration",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Brewmaster",
-        "source_type": "action_effect",
-        "source_name": "Drunken Clarity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Tiri",
-        "source_type": "trigger",
-        "source_name": "Earthquake > The Nomad\u2019s Path",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "action_effect",
-        "source_name": "Dark Benediction",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Urnbearer",
-        "source_type": "trigger",
-        "source_name": "Exsanguinate > Faith in the Flesh",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Walking Cannon",
-        "source_type": "action_effect",
-        "source_name": "Ready with Tea",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Whiskey Gamin",
-        "source_type": "action_effect",
-        "source_name": "A Shot of Genius",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Whiskey Golem",
-        "source_type": "action_effect",
-        "source_name": "High Pressure Dispenser",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "trigger",
-        "source_name": "\u201cClear the Stage!\u201d > \u201cFuuuuture!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wong",
-        "source_type": "trigger",
-        "source_name": "\u201cThe Glow is Healthy!\u201d > \u201cFuuuuture!\u201d",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Instinct",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "When this model succeeds in an attack action, it may remove this token to receive an additional raise.",
-    "model_sources": [
-      {
-        "model_name": "Myranda",
-        "source_type": "trigger",
-        "source_name": "Call of the Wild > Keen Instincts",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Myranda",
-        "source_type": "trigger",
-        "source_name": "Flurry of Claws > Act on Instinct",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Myranda",
-        "source_type": "trigger",
-        "source_name": "Shaped by the Wild > Keen Instincts",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Interesting Parts",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "This model is affected by the enemy crew card as if it were a unique model allied to the enemy leader, but it may not affect or use power bars. This model considers enemy non-Scheme, non-Strategy markers to be friendly.",
-    "model_sources": [
-      {
-        "model_name": "Dr. McMourning",
-        "source_type": "trigger",
-        "source_name": "Cobble Together > Creative Genius",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Life",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When this model suffers damage, it may remove this token. If it does so, it may not be reduced to below 1 health.",
-    "model_sources": [
-      {
-        "model_name": "Grave Goo",
-        "source_type": "action_effect",
-        "source_name": "Rapid Digestion",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "trigger",
-        "source_name": "A Weary Road > Wayward Soul",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "ability",
-        "source_name": "Cradle the Spark",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "trigger",
-        "source_name": "Drain the Spark > Death Denied",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "action_effect",
-        "source_name": "Life from the Earth",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Jedza",
-        "source_type": "ability",
-        "source_name": "Midnight Crossing",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lamplighter",
-        "source_type": "action_effect",
-        "source_name": "Lighting Stick",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lamplighter",
-        "source_type": "ability",
-        "source_name": "Reactive Life",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Mikhail XVI",
-        "source_type": "action_effect",
-        "source_name": "Heartbeat of the Earth",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Mikhail XVI",
-        "source_type": "action_effect",
-        "source_name": "Heartbeat of the Earth",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Mikhail XVI",
-        "source_type": "action_effect",
-        "source_name": "Koschei, The Epitaph Blade",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sophie",
-        "source_type": "ability",
-        "source_name": "Last Caravan",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sophie",
-        "source_type": "trigger",
-        "source_name": "Plenty of Wares > Bell of the Vagrant",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "New Blood",
-    "type": "buff",
-    "timing": "permanent",
-    "rules_text": "This model gains the Family keyword."
-  },
-  {
-    "name": "Numb",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "This model loses its Don't Turn Your Back ability (if any) and does not prevent friendly models from declaring the Interact action due to:\n\u25a0 Being engaged with this model.\n\u25a0 This model being in base contact with a marker.\n\u25a0 Leaving this model's engagement range.\nDuring the end phase, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Cyclops",
-        "source_type": "trigger",
-        "source_name": "Glacial Volley > Frosted Veins",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "action_effect",
-        "source_name": "Crowned in Frost",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "ability",
-        "source_name": "Ossuary Rite",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "action_effect",
-        "source_name": "Shatter the Weak",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "action_effect",
-        "source_name": "Shatter the Weak",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "ability",
-        "source_name": "The Ice Remembers",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Euripides",
-        "source_type": "action_effect",
-        "source_name": "Tundra\u2019s Wrath",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Geryon",
-        "source_type": "trigger",
-        "source_name": "Shoulder Rush > Frosted Veins",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gigant",
-        "source_type": "action_effect",
-        "source_name": "Icy Boulder",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Primordial Magic",
-        "source_type": "action_effect",
-        "source_name": "Shatter the Weak",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stryx",
-        "source_type": "trigger",
-        "source_name": "Clawed Wings > Frosted Veins",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Stryx",
-        "source_type": "ability",
-        "source_name": "Cursed Omen",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Stryx",
-        "source_type": "action_effect",
-        "source_name": "Dark Messenger",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Thoon",
-        "source_type": "trigger",
-        "source_name": "Arctic Pull > Frosted Veins",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Paranoia",
-    "type": "debuff",
-    "timing": "end_phase",
-    "rules_text": "When this token is removed, the crew that applied it may move this model up to 4\" and then make a Scheme marker into base contact with it, after resolving the current action (if any). During the end phase, this model must either discard a card or remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Aversion",
-        "source_type": "trigger",
-        "source_name": "Terrorize > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Aversion",
-        "source_type": "trigger",
-        "source_name": "Terrorize > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Baby Kade",
-        "source_type": "trigger",
-        "source_name": "Lure > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Baby Kade",
-        "source_type": "trigger",
-        "source_name": "Lure > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Candy",
-        "source_type": "trigger",
-        "source_name": "Self-Loathing > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Candy",
-        "source_type": "trigger",
-        "source_name": "Self-Loathing > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Delirium",
-        "source_type": "action_effect",
-        "source_name": "Psychotic Influence",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Iggy",
-        "source_type": "trigger",
-        "source_name": "Giggling Flames > \u201c",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Iggy",
-        "source_type": "trigger",
-        "source_name": "Giggling Flames > \u201c",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Iggy",
-        "source_type": "action_effect",
-        "source_name": "Saw What You Did",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lyssa",
-        "source_type": "action_effect",
-        "source_name": "Horrid Claws",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Pandora",
-        "source_type": "ability",
-        "source_name": "A Word In Your Ear",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Pandora",
-        "source_type": "action_effect",
-        "source_name": "Fears Given Form",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Pandora",
-        "source_type": "trigger",
-        "source_name": "The Box Opens > Mass Delusion",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Pandora",
-        "source_type": "trigger",
-        "source_name": "The Box Opens > Spreading Fear",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Poltergeist",
-        "source_type": "action_effect",
-        "source_name": "Agonizing Claws",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Poltergeist",
-        "source_type": "action_effect",
-        "source_name": "Drawn to Insanity",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sorrow",
-        "source_type": "trigger",
-        "source_name": "Horrible Wail > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sorrow",
-        "source_type": "trigger",
-        "source_name": "Horrible Wail > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Carver",
-        "source_type": "action_effect",
-        "source_name": "Glimpse of Insanity",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Carver",
-        "source_type": "trigger",
-        "source_name": "Rusty Shears > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Carver",
-        "source_type": "trigger",
-        "source_name": "Rusty Shears > \u201cThey\u2019re After You\u2026\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Carver",
-        "source_type": "action_effect",
-        "source_name": "Smashing Pumpkins",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Parasite",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "When this model is killed, the crew that applied this token infuses a (soulstone).",
-    "model_sources": [
-      {
-        "model_name": "Archivist",
-        "source_type": "trigger",
-        "source_name": "Inaudible Whisper > ",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cavatica",
-        "source_type": "trigger",
-        "source_name": "Called Out > Subsume Will",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Cavatica",
-        "source_type": "trigger",
-        "source_name": "Fancy Cane > Tag",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Cavatica",
-        "source_type": "action_effect",
-        "source_name": "Parasitic Infiltration",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Dr. Meredith Stanley",
-        "source_type": "trigger",
-        "source_name": "Alchemical Blast > Carrier",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Eyes and Ears",
-        "source_type": "trigger",
-        "source_name": "Eavesdrop > Social Parasite",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Eyes and Ears",
-        "source_type": "action_effect",
-        "source_name": "\u201cFree Hat!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "ability",
-        "source_name": "Connected Consciousness",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "action_effect",
-        "source_name": "Embrace of the Spinneret",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "trigger",
-        "source_name": "Embrace of the Spinneret > Subsume Will",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "trigger",
-        "source_name": "Embrace of the Spinneret > Tag",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "action_effect",
-        "source_name": "Hive Strike",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "trigger",
-        "source_name": "Hive Strike > Tag",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "ability",
-        "source_name": "Tummy Full of Screams",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Nexus",
-        "source_type": "action_effect",
-        "source_name": "Will of Cadmus",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Nightsilk Creeper",
-        "source_type": "trigger",
-        "source_name": "Dust and Cobwebs > Said the Spider to the Fly",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Shambling Nest",
-        "source_type": "action_effect",
-        "source_name": "Swarm of Mites",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Shambling Nest",
-        "source_type": "action_effect",
-        "source_name": "Ticks and Leeches",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Shambling Nest",
-        "source_type": "action_effect",
-        "source_name": "Ticks and Leeches",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Spelleater",
-        "source_type": "action_effect",
-        "source_name": "Down to",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Spelleater",
-        "source_type": "trigger",
-        "source_name": "Food for the Hive > Transmutation",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Spelleater",
-        "source_type": "trigger",
-        "source_name": "Siphon Existence > Transmutation",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Perforated",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "After this model resolves the Walk or Charge action, deal 1 damage to it per inch it moved (to a maximum of 3). Other models may target this model with the Interact action to remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Francois LaCroix",
-        "source_type": "trigger",
-        "source_name": "Stab \u2019em > And Stay There!",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ophelia LaCroix",
-        "source_type": "trigger",
-        "source_name": "Exhibition Shooting > Needled",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Perdita Ortega",
-        "source_type": "action_effect",
-        "source_name": "With My Eyes Closed",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "SAMMY LaCROIX",
-        "source_type": "trigger",
-        "source_name": "All the Way Home > And Stay There!",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Poison",
-    "type": "debuff",
-    "timing": "never",
-    "rules_text": "During the end phase, deal 1 irreducible damage to this model.",
     "model_sources": [
       {
         "model_name": "Adze",
@@ -8728,49 +4101,49 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "ability",
         "source_name": "Catalyst",
         "applies_or_references": "references"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "Cobble Together",
         "applies_or_references": "references"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "Cobble Together",
         "applies_or_references": "removes"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "ability",
         "source_name": "Organ Donor",
         "applies_or_references": "references"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "Rusty Tools",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "trigger",
         "source_name": "Rusty Tools > Transfusion",
         "applies_or_references": "removes"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "Vial of Goo",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "\u201cA New Specimen!\u201d",
         "applies_or_references": "removes"
@@ -8898,7 +4271,7 @@
       {
         "model_name": "Leftovers",
         "source_type": "trigger",
-        "source_name": "Many Mouths > ",
+        "source_name": "Many Mouths > Accidental Roll Over",
         "applies_or_references": "applies"
       },
       {
@@ -8929,12 +4302,6 @@
         "model_name": "Mirewing",
         "source_type": "action_effect",
         "source_name": "Silver Wind",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Moon Shinobi",
-        "source_type": "action_effect",
-        "source_name": "A Shot of Genius",
         "applies_or_references": "applies"
       },
       {
@@ -9209,12 +4576,6 @@
       },
       {
         "model_name": "Whiskey Gamin",
-        "source_type": "action_effect",
-        "source_name": "A Shot of Genius",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Whiskey Gamin",
         "source_type": "ability",
         "source_name": "Driving While a Drink",
         "applies_or_references": "references"
@@ -9250,7 +4611,7 @@
         "applies_or_references": "removes"
       },
       {
-        "model_name": "Will O' the Wisp",
+        "model_name": "Will O\u2019 the Wisp",
         "source_type": "action_effect",
         "source_name": "Poisonous Glow",
         "applies_or_references": "applies"
@@ -9276,156 +4637,7 @@
     ]
   },
   {
-    "name": "Promoted",
-    "type": "buff",
-    "timing": "permanent",
-    "rules_text": "If this model is non-unique it receives +1 Skl when declaring attack actions.",
-    "model_sources": [
-      {
-        "model_name": "Dashel Barker",
-        "source_type": "trigger",
-        "source_name": "\u201cOn Yer Feet!\u201d > Fast Tracked",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Guild Hound",
-        "source_type": "action_effect",
-        "source_name": "Loyal to the Badge",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Reload",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "When a model in this models LoS ends its activation, this model may remove this token to declare a (missile) targeting that model. If it does so, no other models in this crew may use a Reload token until the next model activates.",
-    "model_sources": [
-      {
-        "model_name": "Crypsis Corps",
-        "source_type": "trigger",
-        "source_name": "Focus Attention > Patient Strike",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Empyrean Eagle",
-        "source_type": "trigger",
-        "source_name": "Trained Stoop > Majesty Incarnate",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lord Cooper",
-        "source_type": "action_effect",
-        "source_name": "Quick Reload",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Perdita Ortega",
-        "source_type": "action_effect",
-        "source_name": "Finger on the Trigger",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ullr",
-        "source_type": "action_effect",
-        "source_name": "\u201cFetch!\u201d",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Vatagi Huntsman",
-        "source_type": "ability",
-        "source_name": "Set Up the Kill",
-        "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Replica",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "After this model discards an upgrade, it may remove this token to attach the discarded upgrade.",
-    "model_sources": [
-      {
-        "model_name": "Huckster",
-        "source_type": "trigger",
-        "source_name": "Inflated Worth > Imitated Art",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Huckster",
-        "source_type": "trigger",
-        "source_name": "Sales Pitch > Imitated Art",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lucas McCabe",
-        "source_type": "trigger",
-        "source_name": "Scrounge for Relics > Hold On Tight",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Lucas McCabe",
-        "source_type": "action_effect",
-        "source_name": "Whip Vault",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Ruffian",
-        "source_type": "trigger",
-        "source_name": "Derringer > Imitated Art",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Research Bar",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "Crew-level bar (Seeker keyword) with 3 slots granting cumulative bonuses. Increased by resolving the Interact action near terrain."
-  },
-  {
-    "name": "Shame",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "This model cannot be targeted by the actions of other enemy models. When this model ends its activation, it may choose to deal 1 damage to itself to remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Anya Lycarayen",
-        "source_type": "action_effect",
-        "source_name": "Contract Kill",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Anya Lycarayen",
-        "source_type": "trigger",
-        "source_name": "Contract Kill > Glancing Shot",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Anya Lycarayen",
-        "source_type": "action_effect",
-        "source_name": "Toxic Workplace",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Brass Bull",
-        "source_type": "trigger",
-        "source_name": "Come With Me > \u201cDo You Even Have a Ticket?!\u201d",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Winston Finnigan",
-        "source_type": "trigger",
-        "source_name": "Dirigible Ride > Won Over",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
     "name": "Shielded",
-    "type": "buff",
-    "timing": "on_use",
-    "rules_text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0.",
     "model_sources": [
       {
         "model_name": "Abyssal Anchor",
@@ -9560,7 +4772,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "ability",
         "source_name": "Precise",
         "applies_or_references": "references"
@@ -10064,31 +5276,31 @@
         "applies_or_references": "removes"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "trigger",
         "source_name": "Heavy Wrench > Defensive Reflexes",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "ability",
         "source_name": "Loaded With Explosives",
         "applies_or_references": "removes"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "trigger",
         "source_name": "Planned Obsolescence > Defensive Reflexes",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "action_effect",
         "source_name": "\u201cNow Yer a Robot\u201d",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Sparks LeBlanc",
+        "model_name": "Sparks Leblanc",
         "source_type": "trigger",
         "source_name": "\u201cNow Yer a Robot\u201d > Twist the Truth",
         "applies_or_references": "applies"
@@ -10233,12 +5445,6 @@
       },
       {
         "model_name": "The Little Lass",
-        "source_type": "ability",
-        "source_name": "Delegated Authority",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Little Lass",
         "source_type": "action_effect",
         "source_name": "Eyein\u2019 You Up",
         "applies_or_references": "applies"
@@ -10366,28 +5572,12 @@
     ]
   },
   {
-    "name": "Sin",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token."
-  },
-  {
     "name": "Slow",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "Reduce this model's action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast.",
-    "cancels": "Fast",
     "model_sources": [
       {
         "model_name": "Abyssal Anchor",
         "source_type": "trigger",
         "source_name": "The Claws > Grab On",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Aionus",
-        "source_type": "ability",
-        "source_name": "A Stitch in Time",
         "applies_or_references": "applies"
       },
       {
@@ -10673,7 +5863,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Dr. McMourning",
+        "model_name": "Dr. Mcmourning",
         "source_type": "trigger",
         "source_name": "Scalpel > Severed Hand Prank",
         "applies_or_references": "applies"
@@ -10919,7 +6109,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "K.O.T.O.",
+        "model_name": "K.o.t.o.",
         "source_type": "trigger",
         "source_name": "Drain Life > Chill",
         "applies_or_references": "applies"
@@ -10979,13 +6169,13 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Lucas McCabe",
+        "model_name": "Lucas Mccabe",
         "source_type": "action_effect",
         "source_name": "Netgun",
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Lucas McCabe",
+        "model_name": "Lucas Mccabe",
         "source_type": "action_effect",
         "source_name": "Treasure Trove",
         "applies_or_references": "applies"
@@ -11063,7 +6253,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Mikhail XVI",
+        "model_name": "Mikhail Xvi",
         "source_type": "action_effect",
         "source_name": "Entombed",
         "applies_or_references": "applies"
@@ -11417,12 +6607,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "The Dreamer",
-        "source_type": "action_effect",
-        "source_name": "Endless Slumber",
-        "applies_or_references": "applies"
-      },
-      {
         "model_name": "The Kurgan",
         "source_type": "trigger",
         "source_name": "Avalanche > Mudslide",
@@ -11551,61 +6735,7 @@
     ]
   },
   {
-    "name": "Spirit",
-    "type": "resource",
-    "timing": "permanent",
-    "rules_text": "Crew-specific resource token. Effects vary by crew card. Used across Ancestor, Oni, Swampfiend, and Urami keywords for spirit-themed abilities."
-  },
-  {
-    "name": "Spiritual Chains",
-    "type": "resource",
-    "timing": "when_triggered",
-    "rules_text": "When this model flips, cheats, or discards the black joker, it is dealt 2 damage and then this token is removed.",
-    "model_sources": [
-      {
-        "model_name": "Enslaved Spirit",
-        "source_type": "action_effect",
-        "source_name": "Guided by Guilt",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Gwisin",
-        "source_type": "trigger",
-        "source_name": "Tear Apart > Draw Out Pain",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Ikiryo",
-        "source_type": "action_effect",
-        "source_name": "Spirit Lash",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kirai Ankoku",
-        "source_type": "action_effect",
-        "source_name": "Pour Out Your Hate",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kirai Ankoku",
-        "source_type": "ability",
-        "source_name": "Prison of Guilt",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kirai Ankoku",
-        "source_type": "trigger",
-        "source_name": "\u201cYou...\u201d > Draw Out Pain",
-        "applies_or_references": "removes"
-      }
-    ]
-  },
-  {
     "name": "Staggered",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened.",
-    "cancels": "Hastened",
     "model_sources": [
       {
         "model_name": "Ancient Construct",
@@ -12190,7 +7320,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Som'er Teeth Jones",
+        "model_name": "Som\u2019er Teeth Jones",
         "source_type": "trigger",
         "source_name": "Misappropriatin\u2019 Yer Junk > Stagger",
         "applies_or_references": "applies"
@@ -12307,9 +7437,6 @@
   },
   {
     "name": "Stunned",
-    "type": "debuff",
-    "timing": "end_activation",
-    "rules_text": "This model cannot declare triggers, and it counts all (r)(m)(t)(c) symbols on its card as blank. When this model ends its activation, remove this token.",
     "model_sources": [
       {
         "model_name": "Adze",
@@ -12588,7 +7715,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Leger de Main",
+        "model_name": "Leger De Main",
         "source_type": "action_effect",
         "source_name": "Disillusion",
         "applies_or_references": "applies"
@@ -12600,7 +7727,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "McTavish",
+        "model_name": "Mctavish",
         "source_type": "trigger",
         "source_name": "Gator Scramble > Without Warning",
         "applies_or_references": "applies"
@@ -12624,7 +7751,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Melissa K.O.R.E.",
+        "model_name": "Melissa K.o.r.e.",
         "source_type": "action_effect",
         "source_name": "Transfer Power",
         "applies_or_references": "applies"
@@ -12750,7 +7877,7 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Som'er Teeth Jones",
+        "model_name": "Som\u2019er Teeth Jones",
         "source_type": "trigger",
         "source_name": "Sack o\u2019 Loot > Daze",
         "applies_or_references": "applies"
@@ -12852,13 +7979,13 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Will O' the Wisp",
+        "model_name": "Will O\u2019 the Wisp",
         "source_type": "trigger",
         "source_name": "Poisonous Glow > Hexed Gambit",
         "applies_or_references": "references"
       },
       {
-        "model_name": "Will O' the Wisp",
+        "model_name": "Will O\u2019 the Wisp",
         "source_type": "ability",
         "source_name": "Shimmering Lights",
         "applies_or_references": "references"
@@ -12915,9 +8042,6 @@
   },
   {
     "name": "Summon",
-    "type": "penalty",
-    "timing": "permanent",
-    "rules_text": "This model cannot declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed.",
     "model_sources": [
       {
         "model_name": "Arcane Fate",
@@ -13112,7 +8236,7 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "Som'er Teeth Jones",
+        "model_name": "Som\u2019er Teeth Jones",
         "source_type": "action_effect",
         "source_name": "Gang Up on \u2019Em",
         "applies_or_references": "applies"
@@ -13152,136 +8276,6 @@
         "source_type": "trigger",
         "source_name": "Death-Touched Crossbow > Exorcism",
         "applies_or_references": "references"
-      }
-    ]
-  },
-  {
-    "name": "Suppressed",
-    "type": "debuff",
-    "timing": "permanent",
-    "rules_text": "When this model declares a (+) action, it must drain a (+) or the action fails. After this model resolves a (+) action, remove this token.",
-    "model_sources": [
-      {
-        "model_name": "Aeslin",
-        "source_type": "action_effect",
-        "source_name": "Counter Magic",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Thalarian Queller",
-        "source_type": "action_effect",
-        "source_name": "Quell Magic",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Titania",
-        "source_type": "action_effect",
-        "source_name": "The Third Law",
-        "applies_or_references": "applies"
-      }
-    ]
-  },
-  {
-    "name": "Voyage",
-    "type": "resource",
-    "timing": "on_use",
-    "rules_text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move.",
-    "model_sources": [
-      {
-        "model_name": "Beau Fishbocker",
-        "source_type": "trigger",
-        "source_name": "Danger Ahead > Bon Voyage",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dr. Beebe",
-        "source_type": "trigger",
-        "source_name": "System Recalibration > Bon Voyage",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Harata Ngaatoro",
-        "source_type": "action_effect",
-        "source_name": "Carved Taiaha",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Harata Ngaatoro",
-        "source_type": "trigger",
-        "source_name": "Claimed by the Sea > Calm Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Harata Ngaatoro",
-        "source_type": "ability",
-        "source_name": "Echoes of the Ocean",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Harpooner",
-        "source_type": "trigger",
-        "source_name": "Reel In > Bon Voyage",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Harpooner",
-        "source_type": "trigger",
-        "source_name": "Reel In > Caught in the Line",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kiya Manimi",
-        "source_type": "ability",
-        "source_name": "Technophile",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Machinist",
-        "source_type": "ability",
-        "source_name": "Quartermaster",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Machinist",
-        "source_type": "trigger",
-        "source_name": "Update the Log > Calm Waters",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Maxine Agassiz",
-        "source_type": "ability",
-        "source_name": "Captain of the Superior",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Maxine Agassiz",
-        "source_type": "trigger",
-        "source_name": "Converging Ley Lines > Bon Voyage",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Maxine Agassiz",
-        "source_type": "action_effect",
-        "source_name": "Course Correction",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Orville Agassiz",
-        "source_type": "ability",
-        "source_name": "Aeronautical Eccentricity",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Tidecaller",
-        "source_type": "trigger",
-        "source_name": "Toss > Skip Over the Waves",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Tidecaller",
-        "source_type": "action_effect",
-        "source_name": "Weighted Anchor",
-        "applies_or_references": "removes"
       }
     ]
   }

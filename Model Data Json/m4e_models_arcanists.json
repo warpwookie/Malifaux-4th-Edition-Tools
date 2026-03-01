@@ -6830,7 +6830,7 @@
     ]
   },
   {
-    "name": "Leger de Main",
+    "name": "Leger De Main",
     "faction": "Arcanists",
     "model_limit": 1,
     "cost": "6",
@@ -8018,7 +8018,7 @@
   },
   {
     "name": "Rasputina",
-    "title": "Winter's Teeth",
+    "title": "Winter\u2019s Teeth",
     "faction": "Arcanists",
     "station": "Master",
     "model_limit": 1,
@@ -9955,10 +9955,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Quick Reflexes",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Quick Reflexes: Declare this action again, targeting a different model.",
+            "text": "Declare this action again, targeting a different model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -9985,10 +9985,10 @@
         "effects": "The target heals 2 and gains a Focused token.",
         "triggers": [
           {
-            "name": "",
+            "name": "On Your Heels",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "On Your Heels: Place this model into base contact with the target.",
+            "text": "Place this model into base contact with the target.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }

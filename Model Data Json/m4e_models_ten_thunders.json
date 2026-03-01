@@ -175,10 +175,10 @@
         "effects": "Once per activation. Ally only. Deal 1 irreducible damage to the target, then the target may declare the Interact action.",
         "triggers": [
           {
-            "name": "",
+            "name": "Promising Whisper",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Promising Whisper: Remove a Rift marker within 1\" of the target. When resolving, the target may declare any action instead of the Interact action.",
+            "text": "Remove a Rift marker within 1\" of the target. When resolving, the target may declare any action instead of the Interact action.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -339,10 +339,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Coordinated Attack",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Coordinated Attack: Another friendly model may declare a (melee) action targeting the same model.",
+            "text": "Another friendly model may declare a (melee) action targeting the same model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -2295,10 +2295,10 @@
         "effects": "The target and models within (pulse)2\" of the target gain a Brilliance token. (soulstone) Brilliance Unfolding: Once per turn. Draw a number of cards equal to the number of models that gained a Brilliance token from this action.",
         "triggers": [
           {
-            "name": "",
+            "name": "All In",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "All In: This model may deal up to 2 irreducible damage to itself. When resolving, deal +1 damage to the target per damage suffered when declaring this trigger.",
+            "text": "This model may deal up to 2 irreducible damage to itself. When resolving, deal +1 damage to the target per damage suffered when declaring this trigger.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -2863,7 +2863,7 @@
     ]
   },
   {
-    "name": "K.O.T.O.",
+    "name": "K.o.t.o.",
     "faction": "Ten Thunders",
     "model_limit": 1,
     "cost": "5",
@@ -6249,10 +6249,10 @@
         "effects": "If the target is within 1\" of a Rift marker, this action receives a (+). (soulstone) Shared Purpose: An ally leader may declare an attack action targeting the same model.",
         "triggers": [
           {
-            "name": "",
+            "name": "Shove Aside",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Shove Aside: Once per activation. Move the target 4\". Then, this model moves up to 4\" and may declare a (melee) action targeting a different model.",
+            "text": "Once per activation. Move the target 4\". Then, this model moves up to 4\" and may declare a (melee) action targeting a different model.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -6296,10 +6296,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Horrifying Display",
             "suit": "(m)",
             "timing": "when_resolving",
-            "text": "Horrifying Display: When resolving, the target is moved away from this model instead of toward it.",
+            "text": "When resolving, the target is moved away from this model instead of toward it.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -7284,7 +7284,7 @@
   },
   {
     "name": "Shenlong",
-    "title": "Dragon's Breath",
+    "title": "Dragon\u2019s Breath",
     "faction": "Ten Thunders",
     "station": "Master",
     "model_limit": 1,

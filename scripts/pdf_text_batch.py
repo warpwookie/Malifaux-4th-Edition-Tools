@@ -33,10 +33,12 @@ WORK_DIR = PROJECT_DIR / "pipeline_work"
 # Ensure project root is on sys.path
 sys.path.insert(0, str(PROJECT_DIR))
 
-from scripts.pdf_text_extractor import extract_stat_card_text
-from scripts.merger import merge_stat_card
+from scripts.pdf_text_extractor import (
+    extract_stat_card_text, extract_crew_card_text, extract_upgrade_card_text
+)
+from scripts.merger import merge_stat_card, merge_crew_card
 from scripts.validator import validate_card
-from scripts.db_loader import load_stat_card, init_db
+from scripts.db_loader import load_stat_card, load_crew_card, load_upgrade_card, init_db
 
 
 FACTIONS = [
@@ -259,6 +261,113 @@ def process_one_card(pdf_path, faction, keyword, conn=None, dry_run=False, save_
         elif conn is not None:
             load_result = load_stat_card(conn, merged, replace=True)
             result["db_status"] = load_result.get("status", "unknown")
+
+    except Exception as e:
+        result["status"] = "exception"
+        result["issues"].append(f"Exception: {type(e).__name__}: {e}")
+
+    return result
+
+
+def process_one_crew_card(pdf_path, faction, keyword, conn=None, dry_run=False, save_json=False):
+    """
+    Process a single crew card PDF through the full pipeline.
+
+    Returns dict with status, card data, and any issues.
+    """
+    result = {
+        "pdf": str(pdf_path.name),
+        "faction": faction,
+        "keyword": keyword,
+        "status": "ok",
+        "issues": [],
+    }
+
+    try:
+        # Step 1: Extract text from PDF
+        extracted = extract_crew_card_text(str(pdf_path), faction=faction)
+        if "error" in extracted:
+            result["status"] = "extract_error"
+            result["issues"].append(extracted["error"])
+            return result
+
+        front = extracted.get("front", {})
+        back = extracted.get("back", {})
+
+        # Step 2: Merge front + back
+        merged = merge_crew_card(front, back, source_pdf=str(pdf_path))
+
+        result["name"] = merged.get("name", "?")
+
+        # Save intermediate JSON if requested
+        if save_json:
+            json_dir = WORK_DIR / faction / keyword
+            json_dir.mkdir(parents=True, exist_ok=True)
+            json_path = json_dir / f"{pdf_path.stem}_merged.json"
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(merged, f, indent=2, ensure_ascii=False)
+
+        # Step 3: Load into DB (unless dry-run)
+        if dry_run:
+            result["db_status"] = "dry_run"
+        elif conn is not None:
+            load_result = load_crew_card(conn, merged, replace=True)
+            result["db_status"] = load_result.get("status", "unknown")
+            if load_result.get("error"):
+                result["issues"].append(f"DB: {load_result['error']}")
+                result["status"] = "db_error"
+
+    except Exception as e:
+        result["status"] = "exception"
+        result["issues"].append(f"Exception: {type(e).__name__}: {e}")
+
+    return result
+
+
+def process_one_upgrade_card(pdf_path, faction, keyword, conn=None, dry_run=False, save_json=False):
+    """
+    Process a single upgrade card PDF through the full pipeline.
+
+    Returns dict with status, card data, and any issues.
+    """
+    result = {
+        "pdf": str(pdf_path.name),
+        "faction": faction,
+        "keyword": keyword,
+        "status": "ok",
+        "issues": [],
+    }
+
+    try:
+        # Step 1: Extract text from PDF (single page, no merge needed)
+        extracted = extract_upgrade_card_text(str(pdf_path), faction=faction)
+        if "error" in extracted:
+            result["status"] = "extract_error"
+            result["issues"].append(extracted["error"])
+            return result
+
+        # Set source_pdf on the extraction result
+        extracted["source_pdf"] = str(pdf_path)
+
+        result["name"] = extracted.get("name", "?")
+
+        # Save intermediate JSON if requested
+        if save_json:
+            json_dir = WORK_DIR / faction / keyword
+            json_dir.mkdir(parents=True, exist_ok=True)
+            json_path = json_dir / f"{pdf_path.stem}_merged.json"
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(extracted, f, indent=2, ensure_ascii=False)
+
+        # Step 2: Load into DB (unless dry-run)
+        if dry_run:
+            result["db_status"] = "dry_run"
+        elif conn is not None:
+            load_result = load_upgrade_card(conn, extracted, replace=True)
+            result["db_status"] = load_result.get("status", "unknown")
+            if load_result.get("error"):
+                result["issues"].append(f"DB: {load_result['error']}")
+                result["status"] = "db_error"
 
     except Exception as e:
         result["status"] = "exception"
@@ -1063,52 +1172,128 @@ def main():
 
     # ── Standard processing mode ──
     if run_process:
+        # Initialize DB schema (creates tables if they don't exist)
+        init_db(args.db)
+
         faction = args.faction if args.faction else None
-        pdfs = discover_stat_pdfs(faction=faction)
+
+        # Discover all card types
+        all_pdfs = discover_all_pdfs()
+        stat_pdfs = all_pdfs["stat"]
+        crew_pdfs = all_pdfs["crew"]
+        upgrade_pdfs = all_pdfs["upgrade"]
+
+        # Apply faction filter
+        if faction:
+            stat_pdfs = [(p, f, k) for p, f, k in stat_pdfs if f == faction]
+            crew_pdfs = [(p, f, k) for p, f, k in crew_pdfs if f == faction]
+            upgrade_pdfs = [(p, f, k) for p, f, k in upgrade_pdfs if f == faction]
+
         if args.keyword:
-            pdfs = [(p, f, k) for p, f, k in pdfs if k == args.keyword]
+            stat_pdfs = [(p, f, k) for p, f, k in stat_pdfs if k == args.keyword]
+            crew_pdfs = [(p, f, k) for p, f, k in crew_pdfs if k == args.keyword]
+            upgrade_pdfs = [(p, f, k) for p, f, k in upgrade_pdfs if k == args.keyword]
+
+        # ── Phase 1: Stat cards ──
         if args.limit:
-            pdfs = pdfs[:args.limit]
+            stat_pdfs = stat_pdfs[:args.limit]
 
-        print(f"\nProcessing {len(pdfs)} stat card PDFs...")
+        print(f"\nPhase 1: Processing {len(stat_pdfs)} stat card PDFs...")
+        stat_ok = 0
+        stat_fail = 0
 
-        ok_count = 0
-        fail_count = 0
-        skip_count = 0
-
-        for i, (pdf_path, f_name, kw_name) in enumerate(pdfs, 1):
-            pct = i / len(pdfs) * 100
+        for i, (pdf_path, f_name, kw_name) in enumerate(stat_pdfs, 1):
+            pct = i / len(stat_pdfs) * 100
             short_name = pdf_path.stem.replace("M4E_Stat_", "")
 
             r = process_one_card(
                 pdf_path, f_name, kw_name, conn=conn,
                 dry_run=args.dry_run, save_json=args.save_json)
 
-            if r["status"] in ("ok",):
-                ok_count += 1
-            elif r["status"] == "validation_fail":
-                fail_count += 1
-            elif r["status"] in ("extract_error", "exception"):
-                fail_count += 1
+            if r["status"] == "ok":
+                stat_ok += 1
             else:
-                skip_count += 1
+                stat_fail += 1
 
-            name = r.get("name", "?")
             if r["issues"]:
                 status_icon = {"ok": "+", "dry_run": ".", "validation_fail": "!",
-                               "extract_error": "X", "exception": "E"}.get(r["status"], "?")
-                print(f"  [{i:3d}/{len(pdfs)}] {pct:5.1f}% {status_icon} {f_name}/{kw_name}/{short_name} ({name})")
+                               "extract_error": "X", "exception": "E", "db_error": "D"}.get(r["status"], "?")
+                print(f"  [{i:3d}/{len(stat_pdfs)}] {pct:5.1f}% {status_icon} {f_name}/{kw_name}/{short_name} ({r.get('name', '?')})")
                 for iss in r["issues"]:
                     print(f"         {iss}")
-            elif i % 25 == 0 or i == len(pdfs):
+            elif i % 50 == 0 or i == len(stat_pdfs):
                 elapsed = time.time() - start
                 rate = i / elapsed if elapsed > 0 else 0
-                print(f"  [{i:3d}/{len(pdfs)}] {pct:5.1f}% ok={ok_count} fail={fail_count} ({rate:.1f} cards/sec)")
+                print(f"  [{i:3d}/{len(stat_pdfs)}] {pct:5.1f}% ok={stat_ok} fail={stat_fail} ({rate:.1f} cards/sec)")
 
         if not args.dry_run:
             conn.commit()
+        print(f"  Stat cards: OK={stat_ok}  Fail={stat_fail}")
 
-        print(f"\n  OK: {ok_count}  Fail: {fail_count}  Skip: {skip_count}")
+        # ── Phase 2: Crew cards (must come after stat cards so masters exist) ──
+        print(f"\nPhase 2: Processing {len(crew_pdfs)} crew card PDFs...")
+        crew_ok = 0
+        crew_fail = 0
+
+        for i, (pdf_path, f_name, kw_name) in enumerate(crew_pdfs, 1):
+            short_name = pdf_path.stem.replace("M4E_Crew_", "")
+
+            r = process_one_crew_card(
+                pdf_path, f_name, kw_name, conn=conn,
+                dry_run=args.dry_run, save_json=args.save_json)
+
+            if r["status"] == "ok":
+                crew_ok += 1
+            else:
+                crew_fail += 1
+
+            if r["issues"]:
+                status_icon = {"ok": "+", "dry_run": ".", "extract_error": "X",
+                               "exception": "E", "db_error": "D"}.get(r["status"], "?")
+                print(f"  [{i:3d}/{len(crew_pdfs)}] {status_icon} {f_name}/{kw_name}/{short_name} ({r.get('name', '?')})")
+                for iss in r["issues"]:
+                    print(f"         {iss}")
+            elif i % 25 == 0 or i == len(crew_pdfs):
+                print(f"  [{i:3d}/{len(crew_pdfs)}] ok={crew_ok} fail={crew_fail}")
+
+        if not args.dry_run:
+            conn.commit()
+        print(f"  Crew cards: OK={crew_ok}  Fail={crew_fail}")
+
+        # ── Phase 3: Upgrade cards ──
+        print(f"\nPhase 3: Processing {len(upgrade_pdfs)} upgrade card PDFs...")
+        upg_ok = 0
+        upg_fail = 0
+
+        for i, (pdf_path, f_name, kw_name) in enumerate(upgrade_pdfs, 1):
+            short_name = pdf_path.stem.replace("M4E_Upgrade_", "")
+
+            r = process_one_upgrade_card(
+                pdf_path, f_name, kw_name, conn=conn,
+                dry_run=args.dry_run, save_json=args.save_json)
+
+            if r["status"] == "ok":
+                upg_ok += 1
+            else:
+                upg_fail += 1
+
+            if r["issues"]:
+                status_icon = {"ok": "+", "dry_run": ".", "extract_error": "X",
+                               "exception": "E", "db_error": "D"}.get(r["status"], "?")
+                print(f"  [{i:3d}/{len(upgrade_pdfs)}] {status_icon} {f_name}/{kw_name}/{short_name} ({r.get('name', '?')})")
+                for iss in r["issues"]:
+                    print(f"         {iss}")
+            elif i % 25 == 0 or i == len(upgrade_pdfs):
+                print(f"  [{i:3d}/{len(upgrade_pdfs)}] ok={upg_ok} fail={upg_fail}")
+
+        if not args.dry_run:
+            conn.commit()
+        print(f"  Upgrades: OK={upg_ok}  Fail={upg_fail}")
+
+        # ── Summary ──
+        total_ok = stat_ok + crew_ok + upg_ok
+        total_fail = stat_fail + crew_fail + upg_fail
+        print(f"\n  TOTAL: OK={total_ok}  Fail={total_fail}")
 
     # ── Export diffs ──
     if args.export_diffs and all_diffs:

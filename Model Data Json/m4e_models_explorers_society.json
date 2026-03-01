@@ -733,10 +733,10 @@
         "effects": "If this action receives a raise, this model may draw a non-joker (t) from its discard pile.",
         "triggers": [
           {
-            "name": "",
+            "name": "In Your Head",
             "suit": "(soulstone)",
             "timing": "after_succeeding",
-            "text": "In Your Head: Target must either discard a (t) or the target gains a Parasite token and this model may draw a card.",
+            "text": "Target must either discard a (t) or the target gains a Parasite token and this model may draw a card.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -1730,7 +1730,7 @@
     ]
   },
   {
-    "name": "Calypso Mk II",
+    "name": "Calypso Mk Ii",
     "faction": "Explorer's Society",
     "model_limit": 1,
     "cost": "7",
@@ -2717,7 +2717,7 @@
     ]
   },
   {
-    "name": "Desper LaRaux",
+    "name": "Desper Laraux",
     "faction": "Explorer's Society",
     "station": "Henchman",
     "model_limit": 1,
@@ -3580,7 +3580,7 @@
     ]
   },
   {
-    "name": "GIBSON DeWALT",
+    "name": "Gibson Dewalt",
     "faction": "Explorer's Society",
     "station": "Henchman",
     "model_limit": 1,
@@ -5776,7 +5776,7 @@
     ]
   },
   {
-    "name": "Lucas McCabe",
+    "name": "Lucas Mccabe",
     "title": "Dismounted Hunter",
     "faction": "Explorer's Society",
     "station": "Master",
@@ -5908,7 +5908,7 @@
     ]
   },
   {
-    "name": "Lucas McCabe",
+    "name": "Lucas Mccabe",
     "title": "Relic Hunter",
     "faction": "Explorer's Society",
     "station": "Master",
@@ -6037,7 +6037,7 @@
     ]
   },
   {
-    "name": "Lucas McCabe",
+    "name": "Lucas Mccabe",
     "title": "Tomb Delver",
     "faction": "Explorer's Society",
     "station": "Master",
@@ -6546,16 +6546,63 @@
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this model has fewer cards in its control hand than the target, this action receives a (+).",
+        "effects": "If this model has fewer cards in its control hand than the target, this action receives a (+)."
+      },
+      {
+        "name": "Abort the Trial",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic) 8\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "tn": "-",
+        "damage": "-",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "This action may target friendly models. Name a token. Remove the named token from all models within 2\" of the target. (soulstone) Weaponised Semantics: Once per activation. The target declares an action chosen and controlled by this model."
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Course Correction",
+        "category": "tactical_actions",
+        "range": "(aura) 8\"",
+        "skill_value": 0,
+        "tn": 5,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Ally only. Move the target up to 5\". Then, the target gains a Voyage token."
+      },
+      {
+        "name": "X",
+        "category": "tactical_actions",
+        "range": "Once per activation.",
+        "skill_value": 0,
+        "tn": "Target gains a",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Fast token.",
         "triggers": [
           {
-            "name": "Off On a Tangent",
-            "suit": "(X)",
+            "name": "Learn by Example",
+            "suit": "(c)",
             "timing": "after_succeeding",
-            "text": "Move the target up to 4\".",
+            "text": "Target may declare the Interact action.",
             "is_mandatory": false,
             "soulstone_cost": 0
-          },
+          }
+        ]
+      },
+      {
+        "name": "X",
+        "category": "tactical_actions",
+        "range": "",
+        "skill_value": "Move the target up to 4\".",
+        "tn": "-",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "",
+        "triggers": [
           {
             "name": "Touch of Madness",
             "suit": "(m)",
@@ -6573,64 +6620,11 @@
             "soulstone_cost": 0
           }
         ]
-      },
-      {
-        "name": "Abort the Trial",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 8\"",
-        "skill_value": 6,
-        "resist": "Wp",
-        "tn": "-",
-        "damage": "-",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Name a token. Remove the named token from all models within 2\" of the target. (soulstone) Weaponised Semantics: Once per activation. The target declares an action chosen and controlled by this model.",
-        "triggers": [
-          {
-            "name": "Weaponised Semantics",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "Once per activation. The target declares an action chosen and controlled by this model.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Course Correction",
-        "category": "tactical_actions",
-        "range": "(aura) 8\"",
-        "skill_value": 0,
-        "tn": 5,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Ally only. Move the target up to 5\". Then, the target gains a Voyage token.",
-        "triggers": [
-          {
-            "name": "Race the Tide",
-            "suit": "(X)",
-            "timing": "after_succeeding",
-            "text": "Once per activation. Target gains a Fast token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Learn by Example",
-            "suit": "(c)(c)",
-            "timing": "after_succeeding",
-            "text": "Target may declare the Interact action.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
       }
     ]
   },
   {
-    "name": "Mikhail XVI",
+    "name": "Mikhail Xvi",
     "faction": "Explorer's Society",
     "station": "Henchman",
     "model_limit": 1,
@@ -10127,10 +10121,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Arc",
             "suit": "(t)",
             "timing": "after_succeeding",
-            "text": "Arc: Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
+            "text": "Once per activation. Declare this action again targeting a different model, drawing range and LoS from the original target.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -10604,10 +10598,10 @@
             "soulstone_cost": 0
           },
           {
-            "name": "",
+            "name": "Get in There",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Get in There: A non-unique friendly model in LoS of the target may move up to 3\" toward the target.",
+            "text": "A non-unique friendly model in LoS of the target may move up to 3\" toward the target.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }

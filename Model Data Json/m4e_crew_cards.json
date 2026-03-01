@@ -1621,6 +1621,10 @@
       {
         "name": "Voyage",
         "text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move."
+      },
+      {
+        "name": "Research Bar",
+        "text": "This crew has a research bar with three slots numbered 1, 2, and 3. The research bar starts empty and fills from left to right (1, then 2, then 3)."
       }
     ]
   },

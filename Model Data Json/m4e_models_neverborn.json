@@ -8964,6 +8964,7 @@
         "range": "(aura) 6\"",
         "skill_value": 0,
         "tn": 6,
+        "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make an Under Your Bed marker within range."

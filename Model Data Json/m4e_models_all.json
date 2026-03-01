@@ -11266,6 +11266,7 @@
         "range": "(melee) 1\"",
         "skill_value": 4,
         "tn": "-",
+        "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This attack receives +1 Skl if there is at least one other friendly Bayou Gremlin within 1\" of the target.",
@@ -11286,6 +11287,7 @@
         "range": "(gun) 10\"",
         "skill_value": 4,
         "tn": "-",
+        "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This attack receives +1 Skl and +1 Dmg for each other friendly Bayou Gremlin within 3\" of this model that has not activated this turn, to a maximum of +2. After resolving, all other friendly Bayou Gremlins within 3\" count as having activated this turn.",
@@ -53488,6 +53490,7 @@
         "range": "(aura) 6\"",
         "skill_value": 0,
         "tn": 6,
+        "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make an Under Your Bed marker within range."

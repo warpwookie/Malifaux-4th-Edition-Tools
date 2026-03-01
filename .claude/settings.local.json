@@ -54,7 +54,18 @@
       "Bash(git add \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_neverborn.json\" \"Model Data Json/m4e_tokens.json\" \"reference/reference_data.json\" \"scripts/detect_m3e.py\" \"scripts/fix_tokens.py\")",
       "Bash(PYTHONIOENCODING=utf-8 python.exe -c \":*)",
       "Bash(git add scripts/pdf_text_batch.py \"Model Data Json/m4e_crew_cards.json\" \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_bayou.json\" \"Model Data Json/m4e_models_neverborn.json\")",
-      "Bash(git add scripts/pdf_text_batch.py)"
+      "Bash(git add scripts/pdf_text_batch.py)",
+      "Bash(git log --all --oneline --grep=\"token\\\\|reference\\\\|pdf\" -i)",
+      "Bash(# Check system-wide for DejaVuSans fonts find /c/Windows/Fonts -iname \"\"dejavu*\"\" find /c/Users/mbeck -iname \"\"DejaVuSans*\"\" -path \"\"*/fonts/*\"\")",
+      "Bash(test -f /c/Users/mbeck/Documents/GitHub/Malifaux-4th-Edition-Tools/scripts/pipeline.py)",
+      "Bash(test -f /c/Users/mbeck/Documents/GitHub/Malifaux-4th-Edition-Tools/archive_scripts/pipeline.py)",
+      "Bash(test -d /c/Users/mbeck/Documents/GitHub/Malifaux-4th-Edition-Tools/data)",
+      "Bash(awk -F'/' '{if \\(NF==10 && NR>1\\) print}')",
+      "Bash(git add CLAUDE.md scripts/db_loader.py scripts/pdf_text_extractor.py scripts/pdf_text_batch.py scripts/merger.py db/m4e.db \"Model Data Json/\" \"source_pdfs/Rules and Objectives/m4e_rules.json\" \"source_pdfs/Rules and Objectives/m4e_faq.json\" \"source_pdfs/Rules and Objectives/m4e_gaining_grounds.json\")",
+      "Bash(git add CLAUDE.md scripts/db_loader.py scripts/pdf_text_extractor.py scripts/pdf_text_batch.py scripts/merger.py \"Model Data Json/\" \"source_pdfs/Rules and Objectives/m4e_rules.json\" \"source_pdfs/Rules and Objectives/m4e_faq.json\" \"source_pdfs/Rules and Objectives/m4e_gaining_grounds.json\")",
+      "Bash(git add -u pipeline_work/)",
+      "Bash(git add \"source_pdfs/Rules and Objectives/m4e_rules.json\" \"source_pdfs/Rules and Objectives/m4e_faq.json\" \"source_pdfs/Rules and Objectives/m4e_gaining_grounds.json\" scripts/pdf_text_extractor.py scripts/db_loader.py scripts/pdf_text_batch.py)",
+      "Bash(git push origin main)"
     ]
   }
 }

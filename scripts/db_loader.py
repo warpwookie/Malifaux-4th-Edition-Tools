@@ -143,7 +143,7 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
             (model_id, act["name"], act.get("category"), act.get("action_type"),
              act.get("range"), act.get("skill_value"), act.get("skill_built_in_suit"),
              act.get("skill_fate_modifier"), act.get("resist"), act.get("tn"),
-             act.get("damage") if act.get("category") != "tactical_actions" else None,
+             act.get("damage"),
              act.get("is_signature", False),
              act.get("soulstone_cost", 0), act.get("effects"),
              act.get("action_cost"), act.get("restrictions"),

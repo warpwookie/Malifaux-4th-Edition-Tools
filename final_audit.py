@@ -301,17 +301,17 @@ def audit_statistical(conn, report, verbose):
     else:
         report.info(section, "All attack actions have damage values")
     
-    # Tactical actions with damage (shouldn't happen often, damage='0' is effectively none)
+    # Tactical actions with damage (valid per card rules overriding core rules)
     c.execute("""SELECT a.id, a.name, m.name, a.damage FROM actions a
                  JOIN models m ON a.model_id=m.id
-                 WHERE a.category='tactical_actions' 
-                 AND a.damage IS NOT NULL AND a.damage != '' AND a.damage != '0'""")
+                 WHERE a.category='tactical_actions'
+                 AND a.damage IS NOT NULL AND a.damage != '' AND a.damage != '0' AND a.damage != '-'""")
     tac_dmg = c.fetchall()
     if tac_dmg:
-        report.warn(section, f"{len(tac_dmg)} tactical actions with damage (unusual)",
+        report.info(section, f"{len(tac_dmg)} tactical actions with damage values (card exceptions)",
                    [f"'{r[1]}' on {r[2]}: dmg={r[3]}" for r in tac_dmg])
     else:
-        report.info(section, "No tactical actions have damage (correct)")
+        report.info(section, "No tactical actions have damage values")
 
 
 def audit_consistency(conn, report, verbose):

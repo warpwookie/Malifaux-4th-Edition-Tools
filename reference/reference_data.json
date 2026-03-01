@@ -226,8 +226,7 @@
   "validation_rules": {
     "hard_rules": [
       "Every attack_action MUST have resist != null",
-      "Every tactical_action MUST have resist == null",
-      "Every tactical_action MUST have action_type == null",
+      "Tactical actions with resist or action_type are flagged as info (card exceptions allowed)",
       "Every trigger.timing must be one of the 6 enum values",
       "Every attack action_type must be melee, missile, magic, or variable",
       "model_limit must equal 1 for Unique models",

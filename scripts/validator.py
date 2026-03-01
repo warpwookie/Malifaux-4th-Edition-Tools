@@ -141,14 +141,15 @@ def validate_stat_card(card: dict, ref: dict) -> ValidationResult:
                 result.hard_violations.append(
                     f"Attack '{act_name}' invalid action_type: '{atype}' (must be {valid_types})")
         
-        # Tactical actions MUST NOT have resist or action_type
+        # Tactical actions with resist or action_type are unusual but valid
+        # (card rules override core rules)
         elif cat == "tactical_actions":
             if act.get("resist") is not None:
-                result.hard_violations.append(
-                    f"Tactical '{act_name}' has resist='{act.get('resist')}' (must be null)")
+                result.info.append(
+                    f"Tactical '{act_name}' has resist='{act.get('resist')}' (card exception)")
             if act.get("action_type") is not None:
-                result.hard_violations.append(
-                    f"Tactical '{act_name}' has action_type='{act.get('action_type')}' (must be null)")
+                result.info.append(
+                    f"Tactical '{act_name}' has action_type='{act.get('action_type')}' (card exception)")
         
         # Trigger timing validation
         valid_timings = ref["trigger_timings"]

@@ -1352,11 +1352,9 @@ def _parse_action_header(line_spans, section_type):
     else:
         range_str = ""
 
-    # For tactical actions, force action_type and resist to None
-    if section_type == "tactical":
-        action_type = None
-        resist_val = None
-    elif section_type == "attack" and action_type is None:
+    # Preserve actual values from PDF regardless of section type
+    # (card rules override core rules — tactical actions CAN have resist/damage)
+    if section_type == "attack" and action_type is None:
         # Attack actions without explicit icon: default to "variable"
         action_type = "variable"
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-merger.py â€” Merge front and back card extractions into a unified card JSON.
+merger.py â€" Merge front and back card extractions into a unified card JSON.
 
 Takes the two-part extraction output and produces a single canonical card record
 ready for validation and database loading.
@@ -62,57 +62,26 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     # Build unified card
     stats = front.get("stats", {})
     
-    # Merge actions: add category and action_type fields
-    attack_actions = []
+    # Merge actions: add category field, trust card section headers
+    # (card rules override core rules — don't reclassify based on resist presence)
+    all_attacks = []
     for act in back.get("attack_actions", []):
         act["category"] = "attack_actions"
-        # Check for layout exception: tactical action under attack header (no resist)
         if act.get("resist") is None:
             warnings.append(
-                f"Attack action '{act.get('name')}' has no resist — "
-                "reclassifying as tactical_action (layout exception)."
-            )
-            act["category"] = "tactical_actions"
-            act["action_type"] = None
-        # Ensure action_type exists for real attacks
+                f"Attack action '{act.get('name')}' has no resist (unusual).")
         elif "action_type" not in act or act["action_type"] is None:
             warnings.append(f"Attack action '{act.get('name')}' missing action_type")
-        attack_actions.append(act)
-    
-    tactical_actions = []
+        all_attacks.append(act)
+
+    all_tacticals = []
     for act in back.get("tactical_actions", []):
         act["category"] = "tactical_actions"
-        act["action_type"] = None  # Force null for tacticals
-        # Check for layout exception: attacks listed under tactical header
         if act.get("resist") is not None:
             warnings.append(
-                f"Tactical action '{act.get('name')}' has resist='{act.get('resist')}' â€” "
-                "may be attack action under tactical header (layout exception). "
-                "Reclassifying as attack_action."
-            )
-            act["category"] = "attack_actions"
-            # Need to determine action_type from range
-            rng = act.get("range", "")
-            if "(melee)" in str(rng).lower() or "melee" in str(rng).lower():
-                act["action_type"] = "melee"
-            elif "(gun)" in str(rng).lower() or "(missile)" in str(rng).lower():
-                act["action_type"] = "missile"
-            elif "(magic)" in str(rng).lower():
-                act["action_type"] = "magic"
-            else:
-                act["action_type"] = "melee"  # default for unknown ranged attacks
-                warnings.append(f"Could not determine action_type for '{act.get('name')}', defaulted to melee")
-        tactical_actions.append(act)
-    
-    # Separate reclassified actions
-    # Tactical→attack: tactical actions with resist (reclassified above)
-    reclassified_attacks = [a for a in tactical_actions if a["category"] == "attack_actions"]
-    true_tacticals = [a for a in tactical_actions if a["category"] == "tactical_actions"]
-    # Attack→tactical: attack actions without resist (reclassified above)
-    reclassified_tacticals = [a for a in attack_actions if a["category"] == "tactical_actions"]
-    true_attacks = [a for a in attack_actions if a["category"] == "attack_actions"]
-    all_attacks = true_attacks + reclassified_attacks
-    all_tacticals = true_tacticals + reclassified_tacticals
+                f"Tactical action '{act.get('name')}' has resist='{act.get('resist')}' "
+                "(card exception to core rules).")
+        all_tacticals.append(act)
     
     merged = {
         "card_type": "stat_card",

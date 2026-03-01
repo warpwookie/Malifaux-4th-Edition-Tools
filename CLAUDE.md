@@ -98,7 +98,7 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 - **Versatile** is a characteristic, NOT a keyword. Never put it in `model_keywords`.
 - Each model belongs to exactly **one** faction. No dual-faction models in M4E.
 - Keywords define crew membership. Characteristics are inherent traits.
-- Attack actions MUST have a resist stat. Tactical actions must NOT.
+- Attack actions MUST have a resist stat. Tactical actions typically do not, but card rules override core rules — some tactical actions have resist and damage (e.g., Bayou Gremlin).
 - Trigger timings: `after_resolving`, `after_damaging`, `after_succeeding`, `on_success`, `before_resolving`, `on_trigger`
 
 ### Stat ranges (hard bounds)
@@ -106,7 +106,7 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 - Wp=0: Clockwork Trap (inanimate). Sz=0: Gupps, Voodoo Doll, Camerabot. Sp=0: immobile/inanimate models. Sp=9: Sunless Self. Health=0: Marathine (card text: "does not have health").
 
 ### Known edge cases
-1. Bayou Gremlin: attack actions under "Tactical Actions" header (auto-reclassified by validator)
+1. Bayou Gremlin: tactical actions with attack-like stats (Rst: Df, Dmg: 1) — card exception to core rules. These remain `tactical_actions` with their stat values preserved.
 2. Alt-art variants: `_A`/`_B`/`_C` suffixes — only `_A` is processed
 3. Variable range actions: `action_type: "variable"`
 4. Summoned-only models: `cost='-'` with `station=NULL`
@@ -118,7 +118,7 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 
 ## Validation Tiers
 
-- **Hard rules** (auto-reject): required fields, valid factions, stat ranges, attack/tactical action constraints, trigger timing enums, Unique→model_limit=1
+- **Hard rules** (auto-reject): required fields, valid factions, stat ranges, attack action constraints (must have resist), trigger timing enums, Unique→model_limit=1. Tactical actions with resist/action_type are flagged as info (card exceptions), not hard-rejected.
 - **Soft rules** (flag for review): unusual cost/station combos, zero abilities/actions, soulstone-on-death anomalies
 - **Hallucination flags**: WP/SP swaps (WP > SP+2), health outliers, >4 triggers per action, duplicate names, name mismatches between front/back
 

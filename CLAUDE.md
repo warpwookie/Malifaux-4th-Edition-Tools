@@ -2,66 +2,73 @@
 
 ## Project Overview
 
-Automated data extraction pipeline for **Malifaux 4th Edition** (M4E) tabletop game stat cards. Reads PDF card images via Claude Vision API, extracts structured game data into JSON, validates it, and loads it into a normalized SQLite database.
+Automated data extraction pipeline for **Malifaux 4th Edition** (M4E) tabletop game stat cards. Extracts structured game data directly from PDF text layers using PyMuPDF, validates it, and loads it into a normalized SQLite database.
 
-**Current state:** 798 models, 130 crew cards, 70 upgrades across 8 factions. 2 errors (known edge cases), 7 warnings, 33 passed.
+**Current state:** 798 models, 130 crew cards, 70 upgrades across 8 factions. 0 errors, 0 warnings, 42 audit checks passed.
 
 ## Tech Stack
 
 - **Language:** Python (no external package manager — no requirements.txt/pyproject.toml)
-- **Dependencies:** `anthropic` (Claude API), `fitz`/PyMuPDF (PDF rendering), `sqlite3` (stdlib)
+- **Dependencies:** `fitz`/PyMuPDF (PDF text extraction), `sqlite3` (stdlib)
 - **Database:** SQLite (`db/m4e.db`), 15+ normalized tables, WAL journal mode, foreign keys enforced
-- **API:** Claude Sonnet 4.5 (`claude-sonnet-4-5-20250929`) for vision extraction
-- **Environment variable required:** `ANTHROPIC_API_KEY`
+- **Extraction:** Font-based text parsing via PyMuPDF — no API calls needed
 
 ## Directory Layout
 
 ```
-├── run_faction.py          # MAIN ENTRY POINT — batch process a faction
-├── final_audit.py          # Database-wide validation (run after any changes)
-├── cleanup_repo.py         # Archive one-off scripts
-├── scripts/                # Core pipeline modules
-│   ├── pipeline.py         # Single-card orchestrator (5-step flow)
-│   ├── pdf_splitter.py     # PDF → PNG at 250 DPI
-│   ├── card_extractor.py   # PNG → JSON via Claude Vision API
-│   ├── merger.py           # Front+Back JSON → unified card JSON
-│   ├── validator.py        # Hard rules, soft flags, hallucination detection
-│   ├── db_loader.py        # Validated JSON → SQLite (upsert with cascades)
-│   └── denormalize.py      # DB → denormalized JSON for AI knowledge base
+├── final_audit.py              # Database-wide validation (run after any changes)
+├── cleanup_repo.py             # Archive one-off scripts
+├── scripts/                    # Core pipeline modules
+│   ├── pdf_text_extractor.py   # PDF → JSON via PyMuPDF text parsing (stat/crew/upgrade)
+│   ├── pdf_text_batch.py       # MAIN ENTRY POINT — batch process all factions
+│   ├── merger.py               # Front+Back JSON → unified card JSON
+│   ├── validator.py            # Hard rules, soft flags, hallucination detection
+│   ├── db_loader.py            # Validated JSON → SQLite (upsert with cascades)
+│   ├── denormalize.py          # DB → denormalized JSON for AI knowledge base
+│   ├── detect_m3e.py           # M3E contamination scanner
+│   ├── load_rules_data.py      # Rules/FAQ/strategies → SQLite
+│   └── generate_token_reference.py  # Token reference PDF generator
 ├── schema/
-│   └── schema.sql          # Full SQLite DDL (idempotent, CREATE IF NOT EXISTS)
+│   └── schema.sql              # Full SQLite DDL (idempotent, CREATE IF NOT EXISTS)
 ├── db/
-│   ├── m4e.db              # Production database
-│   └── README.md           # Table docs + example queries
-├── data/                   # Per-faction JSON exports from DB
-├── Model Data Json/        # Denormalized exports for AI context
+│   ├── m4e.db                  # Production database
+│   └── README.md               # Table docs + example queries
+├── data/                       # Per-faction JSON exports from DB
+├── Model Data Json/            # Denormalized exports for AI context
 ├── reference/
-│   └── reference_data.json # Validation enums: factions, stations, suits, tokens
-├── prompts/                # Vision prompt templates (.txt)
-├── pipeline_work/          # Intermediate PNGs and merged JSONs (per faction)
-├── Rules and Objectives/   # Game rules in PDF, JSON, and Markdown
-└── archive_scripts/        # ~55 archived one-off fix/check/diagnose scripts
+│   └── reference_data.json     # Validation enums: factions, stations, suits, tokens
+├── pipeline_work/              # Intermediate merged JSONs (per faction, gitignored)
+├── Rules and Objectives/       # Game rules in PDF, JSON, and Markdown
+└── archive_scripts/            # ~74 archived scripts (includes legacy Vision API pipeline)
 ```
 
 ## Key Commands
 
 ```bash
-# Process a single keyword within a faction
-python run_faction.py Bayou --keyword Sooey
+# Full re-ingestion of all factions (stat + crew + upgrade cards)
+PYTHONIOENCODING=utf-8 python scripts/pdf_text_batch.py --all
 
-# Process an entire faction (auto-detects keyword folders)
-python run_faction.py Guild
+# Process a single faction
+PYTHONIOENCODING=utf-8 python scripts/pdf_text_batch.py --faction Guild
+
+# Reload rules/FAQ/strategies data
+PYTHONIOENCODING=utf-8 python scripts/load_rules_data.py
 
 # Run the comprehensive audit (always do this after changes)
 python final_audit.py --verbose
 
-# Export audit to JSON
-python final_audit.py --export report.json
+# Export denormalized JSON files
+PYTHONIOENCODING=utf-8 python scripts/denormalize.py
+
+# Scan for M3E contamination
+PYTHONIOENCODING=utf-8 python scripts/detect_m3e.py
 ```
 
 ## Pipeline Flow
 
-PDF → `pdf_splitter` (PNG) → `card_extractor` (raw JSON via Claude API) → `merger` (unified JSON) → `validator` (rule checks) → `db_loader` (SQLite)
+PDF → `pdf_text_extractor` (structured JSON via PyMuPDF) → `merger` (unified JSON) → `validator` (rule checks) → `db_loader` (SQLite)
+
+Batch orchestrator: `pdf_text_batch.py` — discovers PDFs across `source_pdfs/`, processes in 3 phases: stat cards → crew cards → upgrades.
 
 ## Coding Conventions
 

@@ -41,14 +41,12 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     model_limit = 1
     
     for char in characteristics:
-        # Check for station with limit: "Minion (3)", "Peon (7)"
-        m = re.match(r'(Minion|Peon)\s*\((\d+)\)', char)
+        # Check for station with optional limit: "Minion (3)", "Peon (7)", "Master (2)"
+        m = re.match(r'(Master|Henchman|Minion|Peon|Totem)\s*(?:\((\d+)\))?', char)
         if m:
             station = m.group(1)
-            model_limit = int(m.group(2))
-            break
-        elif char in ("Master", "Henchman", "Totem"):
-            station = char
+            if m.group(2):
+                model_limit = int(m.group(2))
             break
     
     # If "Unique" in characteristics, model_limit = 1
@@ -174,6 +172,7 @@ def merge_crew_card(front: dict, back: dict, source_pdf: str = None) -> dict:
         "keyword_abilities": front.get("keyword_abilities", []),
         "keyword_actions": front.get("keyword_actions", []),
         "markers": front.get("markers", []),
+        "crew_tracker": front.get("crew_tracker"),
         "tokens": back.get("tokens", []),
         "source_pdf": source_pdf,
         "merge_warnings": warnings,

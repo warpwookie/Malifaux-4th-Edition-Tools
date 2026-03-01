@@ -18,13 +18,32 @@ Usage:
 import argparse
 import json
 import os
+import re
 import sqlite3
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
 DB_PATH = "db/m4e.db"
 SOURCE_DIR = Path("source_pdfs")
+
+
+def _normalize_for_match(name):
+    """Normalize a name for fuzzy matching.
+
+    Strips accents, collapses spaces, and removes consecutive duplicate words
+    (handles curved text artifacts like "Lor d Chompy Chompy Bits" → "lordchompybits").
+    """
+    stripped = "".join(c for c in unicodedata.normalize("NFD", name)
+                       if unicodedata.category(c) != "Mn")
+    words = stripped.lower().split()
+    # Remove consecutive duplicate words
+    deduped = []
+    for w in words:
+        if not deduped or w != deduped[-1]:
+            deduped.append(w)
+    return "".join(deduped)
 
 # Valid enum values
 VALID_FACTIONS = {
@@ -363,7 +382,7 @@ def audit_consistency(conn, report, verbose):
         pass  # Table might not exist
     
     # Masters should have crew_card_name
-    c.execute("""SELECT id, name, title, crew_card_name FROM models 
+    c.execute("""SELECT id, name, title, crew_card_name FROM models
                  WHERE station='Master' AND (crew_card_name IS NULL OR crew_card_name = '')""")
     no_crew = c.fetchall()
     if no_crew:
@@ -371,16 +390,107 @@ def audit_consistency(conn, report, verbose):
                    [f"id={r[0]} {r[1]} ({r[2]})" for r in no_crew])
     else:
         report.info(section, "All Masters have crew_card_name set")
-    
+
+    # Validate crew_card_name values reference existing crew cards
+    # Supports " / " separator for models that choose between multiple crew cards
+    c.execute("""SELECT id, name, title, crew_card_name FROM models
+                 WHERE station='Master' AND crew_card_name IS NOT NULL
+                 AND crew_card_name != '' AND crew_card_name != '*'""")
+    orphan_crew_refs = []
+    for r in c.fetchall():
+        card_names = [n.strip() for n in r[3].split(" / ")]
+        for cn in card_names:
+            # Normalize smart quotes for comparison (PDF uses U+2019, stat cards use U+0027)
+            cn_norm = cn.replace("\u2018", "'").replace("\u2019", "'")
+            exists = c.execute(
+                "SELECT 1 FROM crew_cards WHERE LOWER(REPLACE(REPLACE(name, ?, ?), ?, ?)) = LOWER(?)",
+                ("\u2018", "'", "\u2019", "'", cn_norm)
+            ).fetchone()
+            if not exists:
+                orphan_crew_refs.append(f"{r[1]} ({r[2]}): crew_card '{cn}' not in crew_cards")
+    if orphan_crew_refs:
+        report.warn(section, f"{len(orphan_crew_refs)} crew_card_name refs not found in crew_cards",
+                   orphan_crew_refs)
+    else:
+        report.info(section, "All crew_card_name values reference existing crew cards")
+
     # Masters should have totem (totem='-' means intentionally no totem)
-    c.execute("""SELECT id, name, title, totem FROM models 
-                 WHERE station='Master' AND (totem IS NULL OR totem = '')""")
+    # Exclude Masters whose other title has a totem (shared totem across titles)
+    c.execute("""SELECT id, name, title, totem FROM models
+                 WHERE station='Master' AND (totem IS NULL OR totem = '')
+                 AND NOT EXISTS (
+                     SELECT 1 FROM models m2
+                     WHERE m2.name = models.name AND m2.id != models.id
+                     AND m2.totem IS NOT NULL AND m2.totem != ''
+                 )""")
     no_totem = c.fetchall()
     if no_totem:
         report.warn(section, f"{len(no_totem)} Masters with no totem",
                    [f"id={r[0]} {r[1]} ({r[2]})" for r in no_totem])
     else:
-        report.info(section, "All Masters have totem set")
+        report.info(section, "All Masters have totem set (or shared with other title)")
+
+    # Validate totem values reference existing models
+    # Totem format: "Name" or "Name, Title" or "Name (N)" for model limit
+    c.execute("""SELECT id, name, title, totem FROM models
+                 WHERE station='Master' AND totem IS NOT NULL
+                 AND totem != '' AND totem != '-'""")
+    orphan_totems = []
+    for r in c.fetchall():
+        totem_str = r[3]
+        # Strip model limit suffix like " (2)" or " (3)"
+        totem_clean = re.sub(r'\s*\(\d+\)$', '', totem_str)
+        # Check for "Name, Title" format
+        if ", " in totem_clean:
+            totem_name, totem_title = totem_clean.split(", ", 1)
+            exists = c.execute(
+                "SELECT 1 FROM models WHERE LOWER(name) = LOWER(?) AND LOWER(title) = LOWER(?)",
+                (totem_name, totem_title)
+            ).fetchone()
+            # Fallback: fuzzy name match with exact title
+            # Handles partial names (Bernadette→Bernadette Basse),
+            # accents (Papa→Papá), and curved text artifacts (Lor d→Lord)
+            if not exists:
+                exists = c.execute(
+                    "SELECT 1 FROM models WHERE LOWER(name) LIKE LOWER(? || '%') AND LOWER(title) = LOWER(?)",
+                    (totem_name, totem_title)
+                ).fetchone()
+            if not exists:
+                totem_name_norm = _normalize_for_match(totem_name)
+                totems_with_title = c.execute(
+                    "SELECT name FROM models WHERE LOWER(title) = LOWER(?)",
+                    (totem_title,)
+                ).fetchall()
+                for t in totems_with_title:
+                    model_norm = _normalize_for_match(t[0])
+                    if model_norm in totem_name_norm or totem_name_norm in model_norm:
+                        exists = True
+                        break
+        else:
+            totem_name = totem_clean
+            exists = c.execute(
+                "SELECT 1 FROM models WHERE LOWER(name) = LOWER(?)", (totem_name,)
+            ).fetchone()
+            # Fallback: check all totem models for fuzzy match
+            # Handles accent differences (Papa→Papá), extra spaces (Lor d→Lord),
+            # and duplicate words from curved text extraction
+            if not exists:
+                totem_norm = _normalize_for_match(totem_name)
+                totems = c.execute(
+                    "SELECT name FROM models WHERE station = 'Totem'"
+                ).fetchall()
+                for t in totems:
+                    model_norm = _normalize_for_match(t[0])
+                    if totem_norm == model_norm or model_norm in totem_norm:
+                        exists = True
+                        break
+        if not exists:
+            orphan_totems.append(f"{r[1]} ({r[2]}): totem '{totem_str}' not found in models")
+    if orphan_totems:
+        report.warn(section, f"{len(orphan_totems)} totem refs not found in models",
+                   orphan_totems)
+    else:
+        report.info(section, "All totem values reference existing models")
     
     # Trigger count per action (more than 5 is suspicious — 5 is legitimate in M4E)
     c.execute("""SELECT a.name, m.name, COUNT(t.id) as tc
@@ -538,11 +648,14 @@ def audit_cross_table(conn, report, verbose):
     section = "7. CROSS-TABLE REFERENCES"
     
     # Crew cards referencing masters that exist (some crew cards reference Henchmen)
+    # Use LOWER() for case-insensitive matching (LaCroix vs Lacroix, etc.)
+    # Also handle "(Master)" suffix on Henchman-led crew cards (e.g., Wrath)
     c.execute("""SELECT cc.name, cc.associated_master, cc.associated_title
                  FROM crew_cards cc
                  WHERE NOT EXISTS (
-                     SELECT 1 FROM models m 
-                     WHERE m.name = cc.associated_master 
+                     SELECT 1 FROM models m
+                     WHERE (LOWER(m.name) = LOWER(cc.associated_master)
+                            OR LOWER(m.name) = LOWER(REPLACE(cc.associated_master, ' (Master)', '')))
                      AND m.station IN ('Master', 'Henchman')
                  )""")
     orphan_crew = c.fetchall()
@@ -553,16 +666,17 @@ def audit_cross_table(conn, report, verbose):
         report.info(section, "All crew cards reference existing masters")
     
     # Actions with triggers that have no suit
+    # Exclude built-in triggers (empty suit is valid — marked with "X" symbol on card)
     c.execute("""SELECT t.name, a.name, m.name FROM triggers t
                  JOIN actions a ON t.action_id=a.id
                  JOIN models m ON a.model_id=m.id
-                 WHERE t.suit IS NULL OR t.suit = ''""")
+                 WHERE t.suit IS NULL""")
     no_suit = c.fetchall()
     if no_suit:
-        report.warn(section, f"{len(no_suit)} triggers with no suit specified",
+        report.warn(section, f"{len(no_suit)} triggers with NULL suit (expected empty string for built-in)",
                    [f"trigger '{r[0]}' on action '{r[1]}' ({r[2]})" for r in no_suit])
     else:
-        report.info(section, "All triggers have suits specified")
+        report.info(section, "All triggers have suits specified (built-in triggers have empty suit)")
     
     # Average abilities/actions per model
     c.execute("SELECT AVG(cnt) FROM (SELECT COUNT(*) as cnt FROM abilities GROUP BY model_id)")

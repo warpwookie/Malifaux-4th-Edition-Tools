@@ -5,8 +5,12 @@
     "keyword": "Academic",
     "faction": "Arcanists",
     "limitations": "-",
-    "description": "This model gains the following abilities: . After this",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Gifts From the Sky",
+        "text": "Once per activation. After this model resolves a Walk action, make a Scheme marker within 1\" of this model."
+      },
       {
         "name": "Chains of Air",
         "text": "Reduce the Dmg of all of this model\u2019s attacks by 1."
@@ -23,8 +27,12 @@
     "keyword": "Academic",
     "faction": "Arcanists",
     "limitations": "-",
-    "description": "This model gains the following abilities: Increase the Dmg value of this model\u2019s",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Fire\u2019s Wrath",
+        "text": "Increase the Dmg value of this model\u2019s attack actions by 1."
+      },
       {
         "name": "Chains of Heat",
         "text": "This model may not declare triggers or declare the Charge action."
@@ -41,8 +49,12 @@
     "keyword": "Academic",
     "faction": "Arcanists",
     "limitations": "-",
-    "description": "This model gains the following abilities: The area within 2\" of this model is",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Rime-Touched",
+        "text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain."
+      },
       {
         "name": "Chains of Ice",
         "text": "This model lowers its Sp to 0."
@@ -59,8 +71,12 @@
     "keyword": "Kin",
     "faction": "Bayou",
     "limitations": "Plentiful 2",
-    "description": "This model gains the following abilities: When this model is dealt damage, it may",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Plink!",
+        "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+      },
       {
         "name": "Steady Blow",
         "text": "When this model removes an Impact token, it deals +2 damage instead of +1. This model gains the following action:"
@@ -71,7 +87,7 @@
         "name": "Flame Splat",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "2",
@@ -87,8 +103,12 @@
     "keyword": "Kin",
     "faction": "Bayou",
     "limitations": "Plentiful 2",
-    "description": "This model gains the following abilities: When this model is dealt damage, it may",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Plink!",
+        "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1."
+      },
       {
         "name": "Run and Gun",
         "text": "This model\u2019s Charge action may generate (gun) actions instead of (melee) actions."
@@ -100,7 +120,13 @@
     "keyword": "Tricksy",
     "faction": "Bayou",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model declares an attack"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Poor Design",
+        "text": "When this model declares an attack action, increase this card\u2019s breaking down bar by one. When this model ends its activation, it may drain any number of (soulstone) to lower this power bar by one for each (soulstone) drained. Then, if the bar is full, this model is killed. BREAKING DOWN"
+      }
+    ]
   },
   {
     "name": "Ratcheting Leg Spring",
@@ -108,7 +134,7 @@
     "keyword": "Kin",
     "faction": "Bayou",
     "limitations": "Plentiful 2",
-    "description": "",
+    "description": "This model gains the following ability:",
     "granted_abilities": [
       {
         "name": "Plink!",
@@ -119,7 +145,7 @@
       {
         "name": "Spring and Sprong",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -133,15 +159,25 @@
     "keyword": "Swampfiend",
     "faction": "Bayou",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "\u201cThat Doesn\u2019t Look Like Me\u201d",
+        "text": "When this model activates, it may drain a (soulstone) or discard two cards to discard this upgrade."
+      }
+    ]
   },
   {
     "name": "White Whale",
     "keyword": "Angler",
     "faction": "Bayou",
     "limitations": "-",
-    "description": "This model gains the following abilities: When this model is",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "\u201cFrom Hell's Heart I Poke Ya!\u201d",
+        "text": "When this model is dealt damage by Aunty Mel, it is dealt +1 damage."
+      },
       {
         "name": "\u201cA Gold Doubloon For Ya!\u201d",
         "text": "Enemy models that initiate an opposed duel targeting this model and receive one or more raises may draw a single card instead of dealing additional damage or any other raise effect."
@@ -193,8 +229,12 @@
     "keyword": "Seeker",
     "faction": "Explorer's Society",
     "limitations": "-",
-    "description": "This model gains the following abilities: When this model activates, it must",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Viscous Grip",
+        "text": "When this model activates, it must pass a TN 14 Sp duel or gain a Slow token."
+      },
       {
         "name": "\u201cGetItOffGetItOffGetItOff!\u201d",
         "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
@@ -261,12 +301,18 @@
     "keyword": "Wastrel",
     "faction": "Explorer's Society",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model activates, it may",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Essence Theft",
+        "text": "When this model activates, it may discard this upgrade to heal 2. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Protective Spirits",
         "category": "tactical_actions",
-        "range": "(aura) 4\"",
+        "range": "(aura)4\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -276,7 +322,7 @@
       {
         "name": "\u201cTake This!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -290,12 +336,18 @@
     "keyword": "Wastrel",
     "faction": "Explorer's Society",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: After this model suffers damage,",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Rebounding Curse",
+        "text": "After this model suffers damage, it may discard this upgrade to deal an equal amount of damage to the attacking model. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Flash of Light",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -305,7 +357,7 @@
       {
         "name": "\u201cTake This!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -319,12 +371,18 @@
     "keyword": "Wastrel",
     "faction": "Explorer's Society",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model is dealt damage, it",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Strong Guard",
+        "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 2. This model gains the following actions:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Blade Storm",
         "category": "tactical_actions",
-        "range": "(aura) *",
+        "range": "(aura)*",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -334,7 +392,7 @@
       {
         "name": "\u201cTake This!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -347,26 +405,28 @@
     "keyword": "Versatile",
     "faction": "Guild",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: Another friendly model"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Knock Some Sense Into Ya",
+        "text": "Another friendly model may target this model with the Interact action to remove this upgrade. This model gains the following trigger on all its attack actions: [?67] Fumble Around in Confusion: This trigger must be declared, if able. Immediately, this action fails. Deal 2 damage to this model."
+      }
+    ]
   },
   {
     "name": "Flaming Blade",
     "keyword": "Witch Hunter",
     "faction": "Guild",
     "limitations": "Plentiful (3)",
-    "description": "This model gains the following action:",
-    "granted_actions": [
+    "description": "This model gains the following action: 1\" 6 Wp- 1 This action deals +2 damage for each raise instead of +1. The target gains a Suppressed token and a Burning token. Discard this upgrade.",
+    "universal_triggers": [
       {
-        "name": "Flaming Sword",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee) 1\"",
-        "skill_value": 6,
-        "resist": "Wp",
-        "damage": "1",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This action deals +2 damage for each raise instead of +1. The target gains a Suppressed token and a Burning token. Discard this upgrade. (soulstone) Enthralled: After killing, summon a Witchling Stalker with 4 health in base contact with this model."
+        "name": "Enthralled",
+        "suit": "(soulstone)",
+        "timing": "after_succeeding",
+        "text": "After killing, summon a Witchling Stalker with 4 health in base contact with this model.",
+        "is_mandatory": false,
+        "soulstone_cost": 0
       }
     ]
   },
@@ -375,7 +435,13 @@
     "keyword": "Versatile",
     "faction": "Guild",
     "limitations": "-",
-    "description": "This model gains the following ability: After this model is killed,"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Demise (A New Voice)",
+        "text": "After this model is killed, summon a Propagandist in base contact with this model. This model gains the following trigger on all its attack actions: [?67] Blinded to Reason: This trigger must be declared, if able. Deal 2 damage to this model. When resolving, this action deals +2 damage to the target."
+      }
+    ]
   },
   {
     "name": "No One Left Behind",
@@ -383,7 +449,7 @@
     "keyword": "Family",
     "faction": "Guild",
     "limitations": "-",
-    "description": "",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
       {
         "name": "\u201cThat\u2019s My Favorite Uncle!\u201d",
@@ -405,7 +471,13 @@
     "keyword": "Elite",
     "faction": "Guild",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model is dealt damage, it"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Paper Trail",
+        "text": "When this model is dealt damage, it may discard this upgrade. If it does so, reduce the damage dealt by 1 and make a Scheme marker in base contact with this model."
+      }
+    ]
   },
   {
     "name": "Slip Into Obscurity",
@@ -418,7 +490,7 @@
       {
         "name": "In the Clear",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -433,7 +505,13 @@
     "keyword": "Elite",
     "faction": "Guild",
     "limitations": "-",
-    "description": "This model gains the following ability: This model is affected by"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Your Face, Your Eyes",
+        "text": "This model is affected by the enemy crew card as if it were a unique model allied to the enemy leader, but it may not affect or use power bars, attach upgrades, or summon models. This model considers enemy non-Scheme, non-Strategy markers to be friendly and not enemy. Remove this upgrade after this model suffers more than 2 damage from a single attack."
+      }
+    ]
   },
   {
     "name": "Through and Through",
@@ -441,7 +519,7 @@
     "keyword": "Family",
     "faction": "Guild",
     "limitations": "-",
-    "description": "",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
       {
         "name": "Rune-Carved Bullets",
@@ -463,8 +541,12 @@
     "keyword": "Family",
     "faction": "Guild",
     "limitations": "-",
-    "description": "This model gains the following abilities: During this model\u2019s activation,",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Breakneck Pace",
+        "text": "During this model\u2019s activation, increase its Sp by +2, and it is unaffected by severe terrain."
+      },
       {
         "name": "Through Fire and Lead",
         "text": "When this model activates, it may discard a Familia token. If it does so, another ally within 6\" may move up to 2\"."
@@ -481,8 +563,12 @@
     "keyword": "Versatile",
     "faction": "Neverborn",
     "limitations": "-",
-    "description": "This model gains the following abilities: This model treats any black jokers",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Forever Doomed",
+        "text": "This model treats any black jokers it flips or cheats as red jokers."
+      },
       {
         "name": "Combat Finesse",
         "defensive_type": "fortitude",
@@ -494,7 +580,7 @@
         "name": "Pale Blade",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -538,8 +624,12 @@
     "keyword": "Chimera",
     "faction": "Neverborn",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following abilities: When this model declares",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Adapt and Overcome",
+        "text": "When this model declares a non-general action, it may choose one friendly attached upgrade to receive a (+) and one suit to that action\u2019s Skl. After resolving the action, discard the chosen upgrade."
+      },
       {
         "name": "Armor",
         "defensive_type": "fortitude",
@@ -570,8 +660,12 @@
     "keyword": "Banished",
     "faction": "Neverborn",
     "limitations": "Restricted (non-master)",
-    "description": "This model gains the following abilities: Another friendly",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "\u201cGetItOffGetItOffGetItOff!\u201d",
+        "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
+      },
       {
         "name": "Loose Lips",
         "text": "Enemy models within 6\" may declare tactical actions printed on this model\u2019s stat card."
@@ -584,8 +678,12 @@
     "keyword": "Chimera",
     "faction": "Neverborn",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following abilities: When this model declares",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Adapt and Overcome",
+        "text": "When this model declares a non-general action, it may choose one friendly attached upgrade to receive a (+) and one suit to that action\u2019s Skl. After resolving the action, discard the chosen upgrade."
+      },
       {
         "name": "Flight",
         "text": "This model ignores terrain and other models while moving."
@@ -598,7 +696,7 @@
     "keyword": "Chimera",
     "faction": "Neverborn",
     "limitations": "Plentiful (2)",
-    "description": "",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
       {
         "name": "Adapt and Overcome",
@@ -616,8 +714,12 @@
     "keyword": "Chimera",
     "faction": "Neverborn",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following abilities: When this model declares",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Adapt and Overcome",
+        "text": "When this model declares a non-general action, it may choose one friendly attached upgrade to receive a (+) and one suit to that action\u2019s Skl. After resolving the action, discard the chosen upgrade."
+      },
       {
         "name": "Ferocity",
         "text": "Once per turn. When receiving raises, this model may deal 1 irreducible damage to itself to receive an additional raise."
@@ -630,8 +732,12 @@
     "keyword": "Banished",
     "faction": "Neverborn",
     "limitations": "-",
-    "description": "This model gains the following abilities: Another friendly",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "\u201cGetItOffGetItOffGetItOff!\u201d",
+        "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
+      },
       {
         "name": "Serve the Throne",
         "text": "When this model activates, the enemy leader heals 2. Then, deal 2 damage to this model."
@@ -644,8 +750,12 @@
     "keyword": "Banished",
     "faction": "Neverborn",
     "limitations": "-",
-    "description": "This model gains the following abilities: Another friendly",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "\u201cGetItOffGetItOffGetItOff!\u201d",
+        "text": "Another friendly model may target this model with the Interact action to remove this upgrade."
+      },
       {
         "name": "Power\u2019s Temptation",
         "text": "During Wp duels, this model suffers a (-) and may not cheat."
@@ -658,8 +768,13 @@
     "keyword": "Versatile",
     "faction": "Neverborn",
     "limitations": "-",
-    "description": "This model gains the following abilities: Reduce all damage dealt to this model",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Bulletproof",
+        "defensive_type": "fortitude",
+        "text": "Reduce all damage dealt to this model by (gun) actions by 1."
+      },
       {
         "name": "Forever Doomed",
         "text": "This model treats any black jokers it flips or cheats as red jokers. This model\u2019s Fallow Night action gains the following trigger: This model gains the following attack action:"
@@ -670,7 +785,7 @@
         "name": "Piercing Darkness",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "3",
@@ -714,13 +829,19 @@
     "keyword": "Freikorps",
     "faction": "Outcasts",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: This model\u2019s Charge action may",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Breaching Charge",
+        "text": "This model\u2019s Charge action may generate the Slam action. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Breaching Axe",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -759,7 +880,7 @@
       {
         "name": "\u201cBetter Listen Now!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -774,7 +895,13 @@
     "keyword": "Freikorps",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "This model gains the following ability: When this model activates, another ally",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Bandolier",
+        "text": "When this model activates, another ally within 4\" may gain an Impact token. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Clockwork Grenade",
@@ -819,7 +946,13 @@
     "keyword": "Versatile",
     "faction": "Outcasts",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: During the end phase, if this"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "The End Beckons",
+        "text": "During the end phase, if this model has LoS to an enemy The Bad Omen it must discard a card of value 9 or higher, drain a (soulstone), or be killed. Then, regardless of whether an enemy The Bad Omen is in LoS, discard this upgrade."
+      }
+    ]
   },
   {
     "name": "Monkey\u2019s Paw",
@@ -827,8 +960,12 @@
     "keyword": "Versatile",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "This model gains the following abilities: Increase this model\u2019s Sp by 1. When",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Cursed Wish",
+        "text": "Increase this model\u2019s Sp by 1. When this model declares the Walk action, it must discard a card or be dealt 1 irreducible damage."
+      },
       {
         "name": "Demise (Wish Granted)",
         "text": "After this model is killed, it infuses two (soulstone) instead of one and draws a card."
@@ -846,7 +983,7 @@
       {
         "name": "Explosive Surprise",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -860,7 +997,7 @@
     "keyword": "Versatile",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "",
+    "description": "This model gains the following ability:",
     "granted_abilities": [
       {
         "name": "Don\u2019t Mind Me",
@@ -874,35 +1011,23 @@
     "keyword": "Freikorps",
     "faction": "Outcasts",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following action:",
-    "granted_actions": [
+    "description": "This model gains the following action: 6\" 0 - 8 - Place this model anywhere within range.",
+    "universal_triggers": [
       {
-        "name": "Leap",
-        "category": "tactical_actions",
-        "range": "(aura) 6\"",
-        "skill_value": 0,
-        "tn": 8,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Once per activation. Place this model anywhere within range.",
-        "triggers": [
-          {
-            "name": "Survival Skills",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "This model heals 1.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "\u201cI\u2019m Out!\u201d",
-            "suit": "(c)",
-            "timing": "after_succeeding",
-            "text": "This trigger must be declared if able. Discard this upgrade.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
+        "name": "Survival Skills",
+        "suit": "(t)",
+        "timing": "after_succeeding",
+        "text": "This model heals 1.",
+        "is_mandatory": false,
+        "soulstone_cost": 0
+      },
+      {
+        "name": "\u201cI\u2019m Out!\u201d",
+        "suit": "(c)",
+        "timing": "after_succeeding",
+        "text": "This trigger must be declared if able. Discard this upgrade.",
+        "is_mandatory": false,
+        "soulstone_cost": 0
       }
     ]
   },
@@ -912,12 +1037,18 @@
     "keyword": "Freikorps",
     "faction": "Outcasts",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model is dealt",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Overcharge Shield",
+        "text": "When this model is dealt damage, it may discard this upgrade to reduce the damage by 1. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Shield Generator",
         "category": "tactical_actions",
-        "range": "(aura) 4\"",
+        "range": "(aura)4\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -950,29 +1081,15 @@
     "keyword": "Freikorps",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "This model gains the following action:",
-    "granted_actions": [
+    "description": "This model gains the following action: 10\" 6 Df- 3 Models within 1\" of the target must pass a TN 13 Sp duel or be dealt 2 damage. Increase this by +2\" for each raise this action receives.",
+    "universal_triggers": [
       {
-        "name": "Rocket Launcher",
-        "category": "attack_actions",
-        "action_type": "missile",
-        "range": "(gun) 10\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "damage": "3",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Once per activation. This action does not deal extra damage from raises. Models within (pulse)1\" of the target must pass a TN 13 Sp duel or be dealt 2 damage. Increase this (pulse) by +2\" for each raise this action receives.",
-        "triggers": [
-          {
-            "name": "\u201cI\u2019m Out!\u201d",
-            "suit": "(c)",
-            "timing": "after_succeeding",
-            "text": "This trigger must be declared if able. Discard this upgrade.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
+        "name": "\u201cI\u2019m Out!\u201d",
+        "suit": "(c)",
+        "timing": "after_succeeding",
+        "text": "This trigger must be declared if able. Discard this upgrade.",
+        "is_mandatory": false,
+        "soulstone_cost": 0
       }
     ]
   },
@@ -981,7 +1098,7 @@
     "keyword": "Versatile",
     "faction": "Outcasts",
     "limitations": "Plentiful (2)",
-    "description": "",
+    "description": "This model gains the following ability:",
     "granted_abilities": [
       {
         "name": "Demise (The Hunt Begins)",
@@ -1005,7 +1122,13 @@
     "keyword": "Infamous",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "This model gains the following ability: When this model ends its"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Buried Treasure",
+        "text": "When this model ends its activation, it may remove a marker from within 2\" to either draw a card or infuse a (soulstone)."
+      }
+    ]
   },
   {
     "name": "Well-Worn Boots",
@@ -1013,7 +1136,13 @@
     "keyword": "Versatile",
     "faction": "Outcasts",
     "limitations": "-",
-    "description": "This model gains the following ability: This model may"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Expert Climber",
+        "text": "Once per activation. This model may ignore vertical distance while resolving the Walk or Charge action."
+      }
+    ]
   },
   {
     "name": "Catch of the Day",
@@ -1038,8 +1167,12 @@
     "keyword": "Versatile",
     "faction": "Resurrectionists",
     "limitations": "-",
-    "description": "This model gains the following abilities: This model receives +1 to its Df and Wp.",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Defenses Up",
+        "text": "This model receives +1 to its Df and Wp."
+      },
       {
         "name": "\u201cThe Fun\u2019s Over?\u201d",
         "text": "When this model activates, remove a Remains marker within 6\". If it cannot, discard this upgrade. This model gains the following action:"
@@ -1049,7 +1182,7 @@
       {
         "name": "Furious Rush",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -1118,7 +1251,13 @@
     "keyword": "Ancestor",
     "faction": "Resurrectionists",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model declares a non-"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "5,300 Formulae",
+        "text": "When this model declares a non- Charge, non-Walk tactical action, this model may discard this upgrade to make it count as a (aura) action."
+      }
+    ]
   },
   {
     "name": "The Path of Ash",
@@ -1126,7 +1265,13 @@
     "keyword": "Ancestor",
     "faction": "Resurrectionists",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model declares the"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Spirit\u2019s Blessing",
+        "text": "When this model declares the Interact action, it may increase the range by +2\" and target Scheme markers with enemy model(s) in base contact. If it does so, after resolving the action, discard this upgrade."
+      }
+    ]
   },
   {
     "name": "The Path of Bone",
@@ -1134,7 +1279,13 @@
     "keyword": "Ancestor",
     "faction": "Resurrectionists",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When an enemy engaged with"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Grasping Viscera",
+        "text": "When an enemy engaged with this model is affected by movement that would cause it to leave engagement, this model may discard this upgrade to reduce that movement to 0\" and draw a card."
+      }
+    ]
   },
   {
     "name": "The Path of Spirit",
@@ -1142,7 +1293,13 @@
     "keyword": "Ancestor",
     "faction": "Resurrectionists",
     "limitations": "Plentiful (2)",
-    "description": "This model gains the following ability: When this model declares the"
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Walker of Worlds",
+        "text": "When this model declares the Walk or Charge action, it may discard this upgrade. If it does so, it may increase its Sp by 2 and ignore models and terrain during this action."
+      }
+    ]
   },
   {
     "name": "Unjustly Accused",
@@ -1176,12 +1333,19 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: Reduce damage dealt to this model",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Incorporeal",
+        "defensive_type": "unusual_defense",
+        "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Dark Bargain",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
@@ -1196,12 +1360,19 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: After resolving an enemy attack",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Butterfly Jump",
+        "defensive_type": "fortitude",
+        "text": "After resolving an enemy attack action targeting this model, this model may move up to 3\". This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Intuition",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1215,7 +1386,7 @@
     "keyword": "Monk",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
       {
         "name": "Weightless Soul",
@@ -1234,13 +1405,19 @@
     "keyword": "Monk",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: After this",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Redirect Flames",
+        "text": "Once per activation. After this model suffers damage, enemy models within (pulse)1\" of this model gain a Burning token. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Flaming Dragon Kick",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 4\"",
+        "range": "(melee)4\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -1273,8 +1450,12 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following abilities: When this model activates, it may",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Atonement",
+        "text": "When this model activates, it may discard two cards or drain a (soulstone). If it does so, an enemy Minako Rei model heals 2, then discard this upgrade."
+      },
       {
         "name": "Demise (Final Reward)",
         "text": "After this model is killed, the opposing player may summon a Katashiro in base contact with this model."
@@ -1287,8 +1468,12 @@
     "keyword": "Monk",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following abilities: After this model",
+    "description": "This model gains the following abilities:",
     "granted_abilities": [
+      {
+        "name": "Flow Into Form",
+        "text": "Once per activation. After this model suffers damage, it gains a Balm token."
+      },
       {
         "name": "Steady Soul",
         "text": "When this model resolves a Balm token, it heals an additional +1. This model gains the following action:"
@@ -1331,12 +1516,18 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: For each raise this model\u2019s",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Shadow Behind the Fan",
+        "text": "For each raise this model\u2019s attack actions receive, a friendly model within 3\" of this model gains a Focused token. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Compose the Scene",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -1350,12 +1541,18 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: This model receives +2 to its Df and",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Sealed in Stone",
+        "text": "This model receives +2 to its Df and may not be moved by friendly effects. This model gains the following actions:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Sentinel\u2019s Embrace",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -1365,7 +1562,7 @@
       {
         "name": "Memories of Granite",
         "category": "tactical_actions",
-        "range": "(pulse) 4\"",
+        "range": "(pulse)4\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -1407,13 +1604,19 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: This model ignores terrain and other models",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Flight",
+        "text": "This model ignores terrain and other models while moving. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Lightning Strike",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -1439,12 +1642,18 @@
     "keyword": "Versatile",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "This model gains the following ability: For each raise this model\u2019s attack",
+    "description": "This model gains the following ability:",
+    "granted_abilities": [
+      {
+        "name": "Ashen Ovation",
+        "text": "For each raise this model\u2019s attack actions receive, an enemy model within 3\" of this model gains an Entranced token. This model gains the following action:"
+      }
+    ],
     "granted_actions": [
       {
         "name": "Painted Fury",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
@@ -1459,38 +1668,8 @@
     "keyword": "Monk",
     "faction": "Ten Thunders",
     "limitations": "-",
-    "description": "",
+    "description": "This model gains the following actions: 8\" 6 Df11 - Move the target up to 4\", +4\" for each raise (maximum 12\"). If this model is not a master and this action did not receive a raise, discard this upgrade after resolving this action.",
     "granted_actions": [
-      {
-        "name": "Four Winds Punch",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 8\"",
-        "skill_value": 6,
-        "resist": "Df",
-        "tn": 11,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "This action may target friendly models. If a Chi token was used during this action, it has a raise value of 3. Move the target up to 4\", +4\" for each raise (maximum 12\"). If this model is not a master and this action did not receive a raise, discard this upgrade after resolving this action. (pulse)1\" of it are dealt 1 damage.",
-        "triggers": [
-          {
-            "name": "Collision",
-            "suit": "(r)",
-            "timing": "after_succeeding",
-            "text": "The target and enemy models within",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "Self-Reflection",
-            "suit": "(c)",
-            "timing": "after_succeeding",
-            "text": "This model gains a Chi token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
       {
         "name": "Enlightened Leap",
         "category": "tactical_actions",
@@ -1500,6 +1679,24 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Once per activation. If a Chi token was used during this action, it has a raise value of 3. Place this model anywhere within range. If this model is not a master and this action did not receive a raise, discard this upgrade after resolving this action."
+      }
+    ],
+    "universal_triggers": [
+      {
+        "name": "Collision",
+        "suit": "(r)",
+        "timing": "after_succeeding",
+        "text": "The target and enemy models within",
+        "is_mandatory": false,
+        "soulstone_cost": 0
+      },
+      {
+        "name": "Self-Reflection",
+        "suit": "(c)",
+        "timing": "after_succeeding",
+        "text": "This model gains a Chi token.",
+        "is_mandatory": false,
+        "soulstone_cost": 0
       }
     ]
   }

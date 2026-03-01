@@ -138,15 +138,16 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         c.execute("""INSERT INTO actions (model_id, name, category, action_type, range,
             skill_value, skill_built_in_suit, skill_fate_modifier,
             resist, tn, damage, is_signature, soulstone_cost,
-            effects, costs_and_restrictions)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            effects, action_cost, restrictions, special_conditions)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (model_id, act["name"], act.get("category"), act.get("action_type"),
              act.get("range"), act.get("skill_value"), act.get("skill_built_in_suit"),
              act.get("skill_fate_modifier"), act.get("resist"), act.get("tn"),
              act.get("damage") if act.get("category") != "tactical_actions" else None,
              act.get("is_signature", False),
              act.get("soulstone_cost", 0), act.get("effects"),
-             act.get("costs_and_restrictions")))
+             act.get("action_cost"), act.get("restrictions"),
+             act.get("special_conditions")))
         action_id = c.lastrowid
         
         for trig in act.get("triggers", []):
@@ -309,15 +310,17 @@ def load_crew_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         c.execute("DELETE FROM crew_tokens WHERE crew_card_id=?", (crew_id,))
         
         c.execute("""UPDATE crew_cards SET associated_master=?, associated_title=?, faction=?,
-            source_pdf=?, parse_date=?, parse_status=? WHERE id=?""",
+            crew_tracker=?, source_pdf=?, parse_date=?, parse_status=? WHERE id=?""",
             (card["associated_master"], card["associated_title"], card["faction"],
-             card.get("source_pdf"), datetime.now().isoformat(), "auto", crew_id))
+             card.get("crew_tracker"), card.get("source_pdf"),
+             datetime.now().isoformat(), "auto", crew_id))
         status = "updated"
     else:
         c.execute("""INSERT INTO crew_cards (name, associated_master, associated_title, faction,
-            source_pdf, parse_date, parse_status) VALUES (?,?,?,?,?,?,?)""",
+            crew_tracker, source_pdf, parse_date, parse_status) VALUES (?,?,?,?,?,?,?,?)""",
             (name, card["associated_master"], card["associated_title"], card["faction"],
-             card.get("source_pdf"), datetime.now().isoformat(), "auto"))
+             card.get("crew_tracker"), card.get("source_pdf"),
+             datetime.now().isoformat(), "auto"))
         crew_id = c.lastrowid
         status = "inserted"
     
@@ -331,17 +334,19 @@ def load_crew_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
     # Keyword actions
     for ka in card.get("keyword_actions", []):
         for act in ka.get("actions", []):
-            c.execute("""INSERT INTO crew_keyword_actions 
+            c.execute("""INSERT INTO crew_keyword_actions
                 (crew_card_id, granted_to, name, category, action_type, range,
                  skill_value, skill_built_in_suit, resist, tn, damage,
-                 is_signature, soulstone_cost, effects, costs_and_restrictions)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                 is_signature, soulstone_cost, effects, action_cost,
+                 restrictions, special_conditions)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (crew_id, ka["granted_to"], act["name"], act.get("category"),
                  act.get("action_type"), act.get("range"), act.get("skill_value"),
                  act.get("skill_built_in_suit"), act.get("resist"), act.get("tn"),
                  act.get("damage"), act.get("is_signature", False),
                  act.get("soulstone_cost", 0), act.get("effects"),
-                 act.get("costs_and_restrictions")))
+                 act.get("action_cost"), act.get("restrictions"),
+                 act.get("special_conditions")))
             action_id = c.lastrowid
             for trig in act.get("triggers", []):
                 c.execute("""INSERT INTO crew_keyword_action_triggers
@@ -476,17 +481,19 @@ def load_upgrade_card(conn: sqlite3.Connection, card: dict, replace: bool = Fals
             (upgrade_id, ab["name"], ab.get("defensive_type"), ab["text"]))
     
     for act in card.get("granted_actions", []):
-        c.execute("""INSERT INTO upgrade_actions 
+        c.execute("""INSERT INTO upgrade_actions
             (upgrade_id, name, category, action_type, range, skill_value,
              skill_built_in_suit, skill_fate_modifier, resist, tn, damage,
-             is_signature, soulstone_cost, effects, costs_and_restrictions)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+             is_signature, soulstone_cost, effects, action_cost,
+             restrictions, special_conditions)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (upgrade_id, act["name"], act.get("category", "tactical_actions"),
              act.get("action_type"), act.get("range"), act.get("skill_value"),
              act.get("skill_built_in_suit"), act.get("skill_fate_modifier"),
              act.get("resist"), act.get("tn"), act.get("damage"),
              act.get("is_signature", False), act.get("soulstone_cost", 0),
-             act.get("effects"), act.get("costs_and_restrictions")))
+             act.get("effects"), act.get("action_cost"),
+             act.get("restrictions"), act.get("special_conditions")))
         action_id = c.lastrowid
         for trig in act.get("triggers", []):
             c.execute("""INSERT INTO upgrade_action_triggers

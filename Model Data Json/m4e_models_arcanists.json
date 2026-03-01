@@ -36,14 +36,17 @@
         "name": "Shatter Illusions",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may remove a friendly token from the target to receive a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model may remove a friendly token from the target to receive a (+).",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -90,6 +93,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "\u201cHave You Seen My Sister?\u201d",
@@ -104,12 +110,15 @@
       {
         "name": "Revitalize",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Remove a token from the target. If this action receives a raise, remove any number of tokens from the target."
+        "effects": ". Remove a token from the target. If this action receives a raise, remove any number of tokens from the target.",
+        "action_cost": "",
+        "restrictions": "Friendly only",
+        "special_conditions": ""
       }
     ]
   },
@@ -153,7 +162,7 @@
         "name": "\u201cObjection!\u201d",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 7,
         "resist": "Wp",
         "tn": "-",
@@ -161,6 +170,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Slow token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Foiled Plans",
@@ -184,15 +196,26 @@
         "name": "Obey",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 7,
         "resist": "Wp",
         "tn": 13,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot target the same model more than once per activation. This action may target friendly models. Target declares an action, chosen and controlled by this model. (soulstone) That Mine\u2019s Mine: Make a Scheme marker in base contact with terrain that is within 2\" of the target.",
+        "effects": "Target declares an action, chosen and controlled by this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action cannot target the same model more than once per activation. This action may target friendly models.",
         "triggers": [
+          {
+            "name": "That Mine\u2019s Mine",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Make a Scheme marker in base contact with terrain that is within 2\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Strip Defenses",
             "suit": "(r)",
@@ -208,12 +231,15 @@
       {
         "name": "Walk the Line",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Move the target up to 6\" toward a marker in its LoS.",
+        "effects": "Move the target up to 6\" toward a marker in its LoS.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Preparations",
@@ -265,7 +291,7 @@
         "name": "Fancy Cane",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -273,6 +299,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -303,6 +332,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make a Decoy marker within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Magician\u2019s Secret",
@@ -317,12 +349,15 @@
       {
         "name": "Encore! Encore!",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Move the target up to 6\".",
+        "effects": "Move the target up to 6\".",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Take a Bow",
@@ -350,7 +385,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -389,20 +427,31 @@
         "name": "Arcane Fury",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this attack receives a raise, remove a marker within 2\" of the target. (soulstone)(soulstone) Arcane Fate: This model must be engaging an enemy model and cannot have a Summon token. Replace this model with the Arcane Fate, Emissary, then this model heals 6.",
+        "effects": "If this attack receives a raise, remove a marker within 2\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Delay",
             "suit": "(c)",
             "timing": "after_succeeding",
             "text": "Target gains a Slow token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "Arcane Fate",
+            "suit": "(soulstone)(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model must be engaging an enemy model and cannot have a Summon token. Replace this model with the Arcane Fate, Emissary, then this model heals 6.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -418,7 +467,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Target gains an Adaptable token."
+        "effects": "Target gains an Adaptable token.",
+        "action_cost": "",
+        "restrictions": "Friendly only.",
+        "special_conditions": ""
       }
     ]
   },
@@ -461,14 +513,17 @@
         "name": "Raging Gore",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action receives a (+) if it was generated by the Charge action.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action receives a (+) if it was generated by the Charge action.",
         "triggers": [
           {
             "name": "Heave",
@@ -493,12 +548,15 @@
       {
         "name": "Arcane Rush",
         "category": "tactical_actions",
-        "range": "(pulse) 2\"",
+        "range": "(pulse)2\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Enemy models within range must discard a card or be moved 3\" directly away. Models moved by this action must pass a TN 12 Df duel or be dealt 2 damage.",
+        "effects": "Enemy models within range must discard a card or be moved 3\" directly away. Models moved by this action must pass a TN 12 Df duel or be dealt 2 damage.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Overwhelming Energy",
@@ -557,14 +615,17 @@
         "name": "Fist of Unmaking",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "X",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model chooses whether this action is resisted by Df, Wp, or Sp.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model chooses whether this action is resisted by Df, Wp, or Sp.",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -602,7 +663,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Another ally only. This action cannot target the same model more than once per activation. Target declares an attack action.",
+        "effects": "Target declares an attack action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Another ally only. This action cannot target the same model more than once per activation.",
         "triggers": [
           {
             "name": "Mend",
@@ -617,13 +681,24 @@
       {
         "name": "Good Fundamentals",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target declares the Prepare action. (soulstone) Tag Team: Place this model in base contact with the target. Then, this model may declare a (melee) action against a model engaging the target, which receives a (+).",
+        "effects": "Target declares the Prepare action.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Tag Team",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Place this model in base contact with the target. Then, this model may declare a (melee) action against a model engaging the target, which receives a (+).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "\u201cI\u2019ve Got Your Back!\u201d",
             "suit": "(m)",
@@ -677,7 +752,7 @@
         "name": "Clockwork Rifle",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -685,6 +760,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Stoic Nod",
@@ -717,13 +795,24 @@
       {
         "name": "Hand Signals",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Another ally only. Target moves up to 4\". (soulstone) Whistle the Raptor Home: Summon a Trained Raptor in base contact with the target.",
+        "effects": "Target moves up to 4\".",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Another ally only.",
         "triggers": [
+          {
+            "name": "Whistle the Raptor Home",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon a Trained Raptor in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Reposition",
             "suit": "(m)",
@@ -745,12 +834,15 @@
       {
         "name": "Go For the Eyes",
         "category": "tactical_actions",
-        "range": "(pulse) 6\"",
+        "range": "(pulse)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly Trained Raptors within range may declare a (melee) action."
+        "effects": "Friendly Trained Raptors within range may declare a (melee) action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -796,7 +888,7 @@
         "name": "The Thousand Arms of Justice",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -804,6 +896,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Ember",
@@ -827,14 +922,17 @@
         "name": "Toss",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 2\"",
+        "range": "(magic)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": 11,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This may target friendly models. Target a model of lower Sz than this model. Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement.",
+        "effects": "Move the target up to 10\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 14 Df duel or be dealt 2 damage. Falling does not end this movement.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This may target friendly models. Target a model of lower Sz than this model.",
         "triggers": [
           {
             "name": "Ember",
@@ -859,12 +957,15 @@
       {
         "name": "The Flame\u2019s Embrace",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Enemies within range must pass a TN 13 Df duel or be dealt 2 damage and gain a Burning token. Models with a Burning token suffer a (-) to this duel."
+        "effects": "Enemies within range must pass a TN 13 Df duel or be dealt 2 damage and gain a Burning token. Models with a Burning token suffer a (-) to this duel.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": ""
       },
       {
         "name": "Tap the Leyline",
@@ -874,7 +975,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": "Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -920,7 +1024,7 @@
         "name": "Ravenous Bite",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -928,6 +1032,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -960,12 +1067,15 @@
       {
         "name": "Eternal Hunger",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a marker. If the target is a Remains marker, this action receives +(r) to its final duel total. Move this model 6\" toward the target. If this model ends the move in base contact with the target, remove the target.",
+        "effects": "Move this model 6\" toward the target. If this model ends the move in base contact with the target, remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a marker. If the target is a Remains marker, this action receives +(r) to its final duel total.",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -1045,7 +1155,7 @@
         "name": "Runic Blade",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -1053,6 +1163,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model heals 1.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -1084,7 +1197,7 @@
         "name": "Arcane Firearm",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -1092,6 +1205,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If the target has Wp 6 or greater, it gains a Stunned token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Goading Words",
@@ -1116,12 +1232,25 @@
       {
         "name": "Outmaneuver",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Up to two friendly models within range may move up to 3\". (soulstone) Conflicted Morals: Once per turn. Another non- master ally moved this way may declare an action."
+        "effects": "Up to two friendly models within range may move up to 3\".",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Conflicted Morals",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. Another non- master ally moved this way may declare an action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -1174,7 +1303,10 @@
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "When this action is declared, choose if it has a range of (melee)1\" or (gun)10\".",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "When this action is declared, choose if it has a range of (melee)1\" or (gun)10\".",
         "triggers": [
           {
             "name": "Stagger",
@@ -1190,7 +1322,7 @@
         "name": "Spread Your Name",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -1198,6 +1330,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Bounty token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Coordinated Attack",
@@ -1222,12 +1357,15 @@
       {
         "name": "\u201cRope, Ho!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model must be on terrain of Ht 2 or greater. Target ally is placed into base contact with this model."
+        "effects": "Target ally is placed into base contact with this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model must be on terrain of Ht 2 or greater."
       },
       {
         "name": "Gifted Deck",
@@ -1237,7 +1375,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Look at the top three cards of your deck, draw up to two of these cards with a value of 5 or less, then put any remaining cards back in any order."
+        "effects": "Look at the top three cards of your deck, draw up to two of these cards with a value of 5 or less, then put any remaining cards back in any order.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -1284,7 +1425,7 @@
         "name": "Lucky Knife",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -1292,6 +1433,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -1316,13 +1460,24 @@
       {
         "name": "Tripwire",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a marker. Enemy models within (pulse)2\" of the target must pass a TN 14 Sp duel or be dealt 2 damage and gain a Staggered token. (soulstone) Resonant Twang: Allies within (pulse)2\" of the target move up to 3\" and gain a Hidden token.",
+        "effects": "Enemy models within (pulse)2\" of the target must pass a TN 14 Sp duel or be dealt 2 damage and gain a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target a marker.",
         "triggers": [
+          {
+            "name": "Resonant Twang",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Allies within (pulse)2\" of the target move up to 3\" and gain a Hidden token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "On Your Heels",
             "suit": "(m)",
@@ -1344,12 +1499,15 @@
       {
         "name": "Gear Up",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target gains a Badge token.",
+        "effects": "Target gains a Badge token.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Mend",
@@ -1369,7 +1527,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -1410,14 +1571,17 @@
         "name": "Phantasmal Knife",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has an Entranced token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has an Entranced token, this action receives a (+).",
         "triggers": [
           {
             "name": "Confusing Feelings",
@@ -1433,7 +1597,7 @@
         "name": "Spotlight",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": 10,
@@ -1441,6 +1605,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains an Entranced token. If this action receives a raise, move the target up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Quick Reflexes",
@@ -1465,12 +1632,15 @@
       {
         "name": "Strike the Set",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a marker. Place this model in base contact with the target. Then remove the target. If the target was a Decoy marker, draw a card.",
+        "effects": "Place this model in base contact with the target. Then remove the target. If the target was a Decoy marker, draw a card.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a marker.",
         "triggers": [
           {
             "name": "Thief\u2019s Pocket",
@@ -1524,14 +1694,17 @@
         "name": "Vicious Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -1564,13 +1737,24 @@
       {
         "name": "Leap",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Place this model anywhere within range. (soulstone) Claws in the Blinding White: This model declares a (melee) action.",
+        "effects": "Place this model anywhere within range.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Claws in the Blinding White",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model declares a (melee) action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Defensive Reflexes",
             "suit": "(r)",
@@ -1625,7 +1809,7 @@
         "name": "Chain-Wrapped Fists",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -1633,6 +1817,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -1648,7 +1835,7 @@
         "name": "Corrupted Chains",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -1656,6 +1843,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move the target up to 3\" toward this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -1686,6 +1876,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model heals 2 and gains a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Heatwave",
@@ -1705,7 +1898,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a Remains or Scrap marker. Enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or be dealt 2 damage and gain a Burning token.",
+        "effects": "Enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or be dealt 2 damage and gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target a Remains or Scrap marker.",
         "triggers": [
           {
             "name": "Safety Measures",
@@ -1759,14 +1955,17 @@
         "name": "The Flaming Fist of the Amazing Carlos Vasquez",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Burning token, this action receives a (+). If this action receives a raise, this model may move up to 2\".",
+        "effects": "If this action receives a raise, this model may move up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Burning token, this action receives a (+).",
         "triggers": [
           {
             "name": "Whirlwind Attack",
@@ -1790,7 +1989,7 @@
         "name": "Breath of Fire",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -1798,6 +1997,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Up In Flames",
@@ -1814,12 +2016,15 @@
       {
         "name": "The Dance of Flame",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may move up to 5\", ignoring vertical distance. Then, enemy models within (pulse)2\" of this model must pass a TN 14 Df duel or gain a Burning token."
+        "effects": "This model may move up to 5\", ignoring vertical distance. Then, enemy models within (pulse)2\" of this model must pass a TN 14 Df duel or gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -1865,14 +2070,17 @@
         "name": "Heart-Stealer",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "X",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model chooses whether this action is resisted by Df or Wp.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model chooses whether this action is resisted by Df or Wp.",
         "triggers": [
           {
             "name": "Lonely Heart",
@@ -1888,7 +2096,7 @@
         "name": "Breath of Fire",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -1896,6 +2104,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Staged",
@@ -1920,12 +2131,15 @@
       {
         "name": "Upstage",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Non-leader ally only. This model may remove a Decoy marker within 1\" of itself. Select one tactical action printed on the target\u2019s card. This model may declare the selected action, which cannot declare triggers. If this model removed a Decoy marker, the generated action receives a (+).",
+        "effects": "Select one tactical action printed on the target\u2019s card. This model may declare the selected action, which cannot declare triggers. If this model removed a Decoy marker, the generated action receives a (+).",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Non-leader ally only. This model may remove a Decoy marker within 1\" of itself.",
         "triggers": [
           {
             "name": "Close-Up Magic",
@@ -1981,7 +2195,7 @@
         "name": "Breath of Frost",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 7,
         "resist": "Sp",
         "tn": "-",
@@ -1989,6 +2203,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Dismember",
@@ -2005,12 +2222,15 @@
       {
         "name": "Call of the Wild",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally or friendly beast only. Move the target up to its Sp.",
+        "effects": "Move the target up to its Sp.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Ally or friendly beast only.",
         "triggers": [
           {
             "name": "Flames of Change",
@@ -2025,12 +2245,15 @@
       {
         "name": "Swallow You Whole",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 3,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Kill the target. This model heals X, where X is equal to the target\u2019s current health.",
+        "effects": "This model heals X, where X is equal to the target\u2019s current health.",
+        "action_cost": "",
+        "restrictions": "Friendly only.",
+        "special_conditions": "Kill the target.",
         "triggers": [
           {
             "name": "Untamable Hunger",
@@ -2085,7 +2308,7 @@
         "name": "Wicked Bite",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -2093,6 +2316,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Puncture",
@@ -2125,12 +2351,15 @@
       {
         "name": "Onward",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model may declare the Walk action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Hunter\u2019s Cunning",
@@ -2184,14 +2413,17 @@
         "name": "Bear Trap",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Reposition",
@@ -2249,14 +2481,17 @@
         "name": "Double Whammy",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3. If the target is within 2\" of a friendly marker, this action deals its damage twice.",
+        "effects": "If the target is within 2\" of a friendly marker, this action deals its damage twice.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Staged",
@@ -2296,7 +2531,7 @@
         "name": "Phantasmal Prism",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -2304,6 +2539,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "X is equal to the number of (soulstone) in the target\u2019s pool (to a minimum of 2 and maximum of 6).",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Thief\u2019s Pocket",
@@ -2328,13 +2566,24 @@
       {
         "name": "The French Drop",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Place the target into base contact with a friendly marker within 6\" of itself. (soulstone) Baffled: Enemy models in (pulse)2\" of the target gain an Entranced token.",
+        "effects": "Place the target into base contact with a friendly marker within 6\" of itself.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Baffled",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemy models in (pulse)2\" of the target gain an Entranced token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Take a Bow",
             "suit": "(r)",
@@ -2395,7 +2644,7 @@
         "name": "Bedazzled",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 3\"",
+        "range": "(melee)3\"",
         "skill_value": 7,
         "resist": "Wp",
         "tn": "-",
@@ -2403,6 +2652,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains Slow and Entranced tokens.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Reposition",
@@ -2426,15 +2678,26 @@
         "name": "Presto-Chango",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 14,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target allies. Make a Decoy marker in base contact with the target, then place the target within 2\" of the model or marker that LoS was drawn from. (soulstone) Sword Trick: Once per activation. When resolving, deal 2 damage to the target, +1 for each raise this action receives.",
+        "effects": "Make a Decoy marker in base contact with the target, then place the target within 2\" of the model or marker that LoS was drawn from.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target allies.",
         "triggers": [
+          {
+            "name": "Sword Trick",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. When resolving, deal 2 damage to the target, +1 for each raise this action receives.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Magician\u2019s Secret",
             "suit": "(t)",
@@ -2455,17 +2718,23 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Remove an Entranced token from target enemy. Move the target up to 6\"."
+        "effects": "Move the target up to 6\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Remove an Entranced token from target enemy."
       },
       {
         "name": "Sleight of Hand",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make a Decoy marker within range. Enemy models within (pulse)2\" of the made marker must pass a TN 13 Wp duel or gain an Entranced token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Vanish",
@@ -2495,7 +2764,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Law\u2019s Reach",
-    "totem": "Bernadette,",
+    "totem": "Bernadette, Bravo",
     "keywords": [
       "Frontier"
     ],
@@ -2524,15 +2793,26 @@
         "name": "Shackles",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target gains a Staggered token. Move the target up to 2\", then move this model up to 2\". (soulstone) Tough as Nails: Once per turn. This model heals 4, +2 if this action received a raise.",
+        "effects": "Target gains a Staggered token. Move the target up to 2\", then move this model up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Tough as Nails",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. This model heals 4, +2 if this action received a raise.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Knock Aside",
             "suit": "(m)",
@@ -2555,7 +2835,7 @@
         "name": "Runed Shotgun",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 10\"",
+        "range": "(gun)10\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -2563,6 +2843,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, deal 1 damage to enemy models within [?80]2\" of the target. Models damaged by this action gain a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Maneuver",
@@ -2587,12 +2870,15 @@
       {
         "name": "On the Trail",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a model with a Bounty token. Move this model up to its Sp toward the target.",
+        "effects": "Move this model up to its Sp toward the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target a model with a Bounty token.",
         "triggers": [
           {
             "name": "Spring Trap",
@@ -2607,12 +2893,15 @@
       {
         "name": "Set Trap",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Summon a Clockwork Trap in range."
+        "effects": "Summon a Clockwork Trap in range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -2632,7 +2921,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Dustbound Oath",
-    "totem": "Bernadette,",
+    "totem": "Bernadette, Furtive",
     "keywords": [
       "Frontier"
     ],
@@ -2663,7 +2952,10 @@
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "When this action is declared, choose if it has a range of (melee)1\" or (gun)12\". The target gains an Exposed token.",
+        "effects": "The target gains an Exposed token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "When this action is declared, choose if it has a range of (melee)1\" or (gun)12\".",
         "triggers": [
           {
             "name": "Among the Willows",
@@ -2696,12 +2988,15 @@
       {
         "name": "Into Action",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Other ally only. Place the target within 3\" of its current location, then it gains a Badge token. (t) Recruit: A different ally within range gains a Badge token.",
+        "effects": "Place the target within 3\" of its current location, then it gains a Badge token. (t) Recruit: A different ally within range gains a Badge token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Other ally only.",
         "triggers": [
           {
             "name": "Lay Low",
@@ -2716,12 +3011,15 @@
       {
         "name": "Bounty Paid",
         "category": "tactical_actions",
-        "range": "(pulse) 6\"",
+        "range": "(pulse)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model and allies within range with a Badge token heal 2.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Vanish",
@@ -2781,7 +3079,7 @@
         "name": "Bladed Hands",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
@@ -2789,6 +3087,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Beautiful Clothes",
@@ -2812,7 +3113,7 @@
         "name": "Eye-Catching Display",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -2820,6 +3121,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Slow token. If this action receives a raise, make a Decoy marker in base contact with the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "On Your Heels",
@@ -2841,7 +3145,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Another ally only. Place this model within 2\" of the target.",
+        "effects": ". Place this model within 2\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Another ally only",
         "triggers": [
           {
             "name": "Purification",
@@ -2896,7 +3203,7 @@
         "name": "Blade Dance",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 3\"",
+        "range": "(melee)3\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -2904,6 +3211,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This action deals damage twice.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Whirlwind Attack",
@@ -2936,12 +3246,15 @@
       {
         "name": "The Power of Dance",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Friendly models within range heal 2.",
+        "effects": "Friendly models within range heal 2.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Survival Skills",
@@ -2956,13 +3269,24 @@
       {
         "name": "Dance Partner",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Another ally only. Place this model within 2\" of the target. Then move all enemy models engaged with the target up to 3\". (soulstone) Swept Up In the Moment: When resolving, increase the distance enemy models are moved by +5\".",
+        "effects": "Place this model within 2\" of the target. Then move all enemy models engaged with the target up to 3\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Another ally only.",
         "triggers": [
+          {
+            "name": "Swept Up In the Moment",
+            "suit": "(soulstone)",
+            "timing": "when_resolving",
+            "text": "When resolving, increase the distance enemy models are moved by +5\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Visions of Glamour",
             "suit": "(t)",
@@ -3016,7 +3340,7 @@
         "name": "Elemental Bolt",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
@@ -3024,6 +3348,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -3056,12 +3383,15 @@
       {
         "name": "Aetheric Passage",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move this model up to 4\". This model may remove an Adaptable token to increase the distance it moves by +2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Wash Away",
@@ -3091,7 +3421,7 @@
     "base_size": "30mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Pursuit of Knowledge",
-    "totem": "The Puzzle Box,",
+    "totem": "The Puzzle Box, Unsolved",
     "keywords": [
       "Witness"
     ],
@@ -3120,14 +3450,17 @@
         "name": "Witch Killer",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this model removed an Adaptable token to add a suit, this attack receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If this model removed an Adaptable token to add a suit, this attack receives a (+).",
         "triggers": [
           {
             "name": "Siphon Essence",
@@ -3151,15 +3484,26 @@
         "name": "Zwischenzug",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 12,
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target allies. Move the target up to 4\". Allies ignore any damage dealt by this action. [?9](soulstone) All My Pawns: Enemy only. A different enemy model within range is dealt 2 damage and moved up to 4\".",
+        "effects": "Move the target up to 4\". Allies ignore any damage dealt by this action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target allies.",
         "triggers": [
+          {
+            "name": "All My Pawns",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemy only. A different enemy model within range is dealt 2 damage and moved up to 4\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Vanish",
             "suit": "(m)",
@@ -3196,7 +3540,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Look at the top five cards of the opposing player\u2019s fate deck and discard any number of them, putting the rest back in any order.",
+        "effects": "Look at the top five cards of the opposing player\u2019s fate deck and discard any number of them, putting the rest back in any order.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Knight to E5",
@@ -3226,7 +3573,7 @@
     "base_size": "40mm",
     "infuses_soulstone_on_death": true,
     "crew_card_name": "Power Unleashed",
-    "totem": "The Puzzle Box,",
+    "totem": "The Puzzle Box, Solved",
     "keywords": [
       "Witness"
     ],
@@ -3255,14 +3602,17 @@
         "name": "Die Thou, Unsung",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 4\"",
+        "range": "(melee)4\"",
         "skill_value": 7,
         "resist": "Df",
         "tn": "-",
         "damage": "*",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Choose one of the target\u2019s non-(gun) attack actions. This action\u2019s Dmg is equal to the Dmg of the chosen action.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Choose one of the target\u2019s non-(gun) attack actions. This action\u2019s Dmg is equal to the Dmg of the chosen action.",
         "triggers": [
           {
             "name": "Siphon Life",
@@ -3302,15 +3652,26 @@
         "name": "Wave of Power",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has Wp 5 or less, it gains a Stunned token. (soulstone) Magic Made Real: Summon a Soulstone Gamin into base contact with the target.",
+        "effects": "If the target has Wp 5 or less, it gains a Stunned token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Magic Made Real",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon a Soulstone Gamin into base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "On Your Heels",
             "suit": "(m)",
@@ -3339,7 +3700,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot target the same model more than once per activation. Ally only. Target gains an Adaptable token then declares an action.",
+        "effects": "Target gains an Adaptable token then declares an action.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "This action cannot target the same model more than once per activation.",
         "triggers": [
           {
             "name": "Pulled Here and There",
@@ -3392,7 +3756,7 @@
         "name": "Consuming Madness",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -3400,6 +3764,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "For every raise this action receives, the target discards a card.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -3431,14 +3798,17 @@
         "name": "Translocation Ritual",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target allies. Place the target anywhere within range within 1\" of a model with a Burning token.",
+        "effects": "Place the target anywhere within range within 1\" of a model with a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target allies.",
         "triggers": [
           {
             "name": "Cauterize",
@@ -3468,7 +3838,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Remove up to two tokens from the target. Then, the target gains a Burning token."
+        "effects": "Remove up to two tokens from the target. Then, the target gains a Burning token.",
+        "action_cost": "",
+        "restrictions": "Friendly only.",
+        "special_conditions": ""
       }
     ]
   },
@@ -3512,7 +3885,7 @@
         "name": "Harpoon Gun",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -3520,6 +3893,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move the target up to 3\" toward this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Icy Pull",
@@ -3552,12 +3928,15 @@
       {
         "name": "Forage",
         "category": "tactical_actions",
-        "range": "(aura) 2\"",
+        "range": "(aura)2\"",
         "skill_value": "-",
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Remove target enemy Scheme marker. Draw the top card of this model\u2019s discard pile."
+        "effects": "Draw the top card of this model\u2019s discard pile.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "Remove target enemy Scheme marker."
       }
     ]
   },
@@ -3600,7 +3979,7 @@
         "name": "Cigarette Holder",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -3608,6 +3987,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Burning and an Entranced token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Staged",
@@ -3639,14 +4021,17 @@
         "name": "Mocking Laugh",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has an Entranced token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has an Entranced token, this action receives a (+).",
         "triggers": [
           {
             "name": "Ennui",
@@ -3670,26 +4055,32 @@
         "name": "Carried Off",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 7,
         "resist": "Df",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "The target declares the Walk action, controlled by this model. If the target scales terrain during this action, this model may draw a card and then discard a card. [?77] Knock Aside: Move the target up to 3\"."
+        "effects": "The target declares the Walk action, controlled by this model. If the target scales terrain during this action, this model may draw a card and then discard a card. [?77] Knock Aside: Move the target up to 3\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ],
     "tactical_actions": [
       {
         "name": "Losing Interest",
         "category": "tactical_actions",
-        "range": "(pulse) 6\"",
+        "range": "(pulse)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may draw range and LoS from a Decoy marker within 6\". Allies within range may each move up to 2\"."
+        "effects": "Allies within range may each move up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may draw range and LoS from a Decoy marker within 6\"."
       }
     ]
   },
@@ -3732,14 +4123,17 @@
         "name": "Quick Jab",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "X",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model chooses whether this action is resisted by Df, Wp, or Sp.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model chooses whether this action is resisted by Df, Wp, or Sp.",
         "triggers": [
           {
             "name": "Ember",
@@ -3779,14 +4173,17 @@
         "name": "Sparring Partner",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": 10,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to 3\". Then, this model may move up to 3\", which must end within 3\" of the target."
+        "effects": "Move the target up to 3\". Then, this model may move up to 3\", which must end within 3\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models."
       }
     ]
   },
@@ -3832,7 +4229,7 @@
         "name": "Torch and Blade",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -3840,6 +4237,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model may remove one marker or piece of destructible terrain within 2\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -3863,7 +4263,7 @@
         "name": "Immolate",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": 9,
@@ -3871,6 +4271,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, this model may remove a Burning token from the target to deal +3 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Good for a Laugh",
@@ -3893,6 +4296,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model heals 2 and gains a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Heatwave",
@@ -3907,13 +4313,24 @@
       {
         "name": "Onward",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may declare the Walk action. (soulstone) Burning Vitality: Once per activation. This model heals 2.",
+        "effects": "This model may declare the Walk action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Burning Vitality",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model heals 2.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Shooting Sparks",
             "suit": "(t)",
@@ -3969,15 +4386,26 @@
         "name": "Dual Gatling Guns",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target does not have cover, this action receives a (+). (soulstone) Sound and Fury: Models damaged by this action gain a Craven token.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target does not have cover, this action receives a (+).",
         "triggers": [
+          {
+            "name": "Sound and Fury",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Models damaged by this action gain a Craven token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Smoking Guns",
             "suit": "(r)",
@@ -4000,26 +4428,32 @@
         "name": "What\u2019s Fair is Fair",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 2\"",
+        "range": "(magic)2\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target leader only. Once per game. Set this crew\u2019s soulstone pool equal to the target\u2019s soulstone pool."
+        "effects": "Set this crew\u2019s soulstone pool equal to the target\u2019s soulstone pool.",
+        "action_cost": "",
+        "restrictions": "Once per game.",
+        "special_conditions": "Target leader only."
       }
     ],
     "tactical_actions": [
       {
         "name": "Ominous Pipes",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Make a Scheme marker within range. Enemies within (pulse)3\" of the made marker must pass a TN 12 Wp duel or gain a Craven token. Then, if this action did not receive a raise, remove the made marker."
+        "effects": "Make a Scheme marker within range. Enemies within (pulse)3\" of the made marker must pass a TN 12 Wp duel or gain a Craven token. Then, if this action did not receive a raise, remove the made marker.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": ""
       }
     ]
   },
@@ -4061,7 +4495,7 @@
         "name": "Absorb Energy",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -4069,6 +4503,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 6\" of the target. This model heals 1 for each model damaged this way.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Essence Transfer",
@@ -4092,14 +4529,17 @@
         "name": "Power Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This may target friendly models. Move the target up to 5\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 12 Df duel or be dealt 2 damage."
+        "effects": "Move the target up to 5\" directly away from this model. If this move is interrupted, the target and all models in base contact with it must pass a TN 12 Df duel or be dealt 2 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This may target friendly models."
       }
     ],
     "tactical_actions": [
@@ -4111,7 +4551,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Reduce the number of (soulstone) this model needs to drain to declare this action by an amount equal to the turn number. Replace this model with a golem Academic model. Then, the new model heals 2."
+        "effects": "Replace this model with a golem Academic model. Then, the new model heals 2.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Reduce the number of (soulstone) this model needs to drain to declare this action by an amount equal to the turn number."
       },
       {
         "name": "Tap the Leyline",
@@ -4121,7 +4564,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": ". Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn",
+        "special_conditions": ""
       }
     ]
   },
@@ -4168,7 +4614,7 @@
         "name": "Flame Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -4176,6 +4622,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "The target and models within (pulse)2\" of the target gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Wreathed in Flame",
@@ -4197,17 +4646,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": "Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       },
       {
         "name": "Backdraft",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "All enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or move 3\" toward the target."
+        "effects": "All enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or move 3\" toward the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       },
       {
         "name": "Spawn Steam Arachnid",
@@ -4217,7 +4672,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Deal 2 irreducible damage to this model. Once per turn. Summon a Steam Arachnid within 1\" of this model."
+        "effects": "Summon a Steam Arachnid within 1\" of this model.",
+        "action_cost": "Deal 2 irreducible damage to this model.",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -4263,7 +4721,7 @@
         "name": "Slapp",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -4271,6 +4729,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Remove up to one token from the target. For every raise this action receives, move the target up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Stagger",
@@ -4286,14 +4747,17 @@
         "name": "Ancient Words",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "For each raise this attack receives, increase this attack\u2019s Dmg stat by +1.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "For each raise this attack receives, increase this attack\u2019s Dmg stat by +1.",
         "triggers": [
           {
             "name": "Get in There",
@@ -4318,12 +4782,15 @@
       {
         "name": "Impassioned Defense",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Shielded token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Mend",
@@ -4387,14 +4854,17 @@
         "name": "Blood-Soaked Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has an Adversary token, this attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has an Adversary token, this attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Pouncing Strike",
@@ -4427,12 +4897,25 @@
       {
         "name": "Baying Howl",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target must pass a TN 11 Wp duel or gain an Adversary token. Then, move another friendly beast within range up to 3\". (soulstone) Bad Moon Rising: Look at the top three cards of the target\u2019s fate deck. This model may discard one non-joker looked at this way. Place the rest back in any order."
+        "effects": "Target must pass a TN 11 Wp duel or gain an Adversary token. Then, move another friendly beast within range up to 3\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Bad Moon Rising",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Look at the top three cards of the target\u2019s fate deck. This model may discard one non-joker looked at this way. Place the rest back in any order.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -4479,7 +4962,7 @@
         "name": "Spout Flames",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
@@ -4487,6 +4970,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "The target and models within (pulse)2\" of the target gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Big Boom",
@@ -4508,7 +4994,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Remove a Burning token from the target. This model heals 2 and gains a Burning token."
+        "effects": "This model heals 2 and gains a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Remove a Burning token from the target."
       }
     ]
   },
@@ -4554,7 +5043,7 @@
         "name": "Huge Flaming Fist",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -4562,6 +5051,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -4599,17 +5091,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. This model deals 3 irreducible damage to itself. Summon a Fire Gamin in base contact with this model."
+        "effects": "Summon a Fire Gamin in base contact with this model.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "This model deals 3 irreducible damage to itself."
       },
       {
         "name": "Flashfire",
         "category": "tactical_actions",
-        "range": "(aura) 12\"",
+        "range": "(aura)12\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Enemy models within (pulse)3\" of the target must pass a TN 12 Df duel or be dealt 2 damage and gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Fire Whirl",
@@ -4661,7 +5159,7 @@
         "name": "Flame Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -4669,6 +5167,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "The target and models within (pulse)2\" of the target gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -4693,12 +5194,15 @@
       {
         "name": "Backdraft",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "All enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or move 3\" toward the target."
+        "effects": "All enemy models within (pulse)3\" of the target must pass a TN 14 Sp duel or move 3\" toward the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       },
       {
         "name": "Embrace the Flame",
@@ -4708,7 +5212,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a model with a Burning token. Target heals 1+X, where X is the number of allies within (pulse)3\" of the target with a Burning token.",
+        "effects": "Target heals 1+X, where X is the number of allies within (pulse)3\" of the target with a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target a model with a Burning token.",
         "triggers": [
           {
             "name": "Hasten",
@@ -4760,14 +5267,17 @@
         "name": "Strength in Numbers",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target is within 3\" of another friendly model, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target is within 3\" of another friendly model, this action receives a (+).",
         "triggers": [
           {
             "name": "Vivid Language",
@@ -4792,12 +5302,15 @@
       {
         "name": "Instigate",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Other ally only. Move the target up to 4\".",
+        "effects": "Move the target up to 4\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Other ally only.",
         "triggers": [
           {
             "name": "A Little Arson Among Friends",
@@ -4817,7 +5330,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -4862,20 +5378,23 @@
         "name": "\u201cUp We Go!\u201d",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 3,
         "resist": "Sz",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Place the target anywhere within 3\" of its current location. (pulse)1\" of it are dealt 1 damage.",
+        "effects": "Place the target anywhere within 3\" of its current location.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Collision",
             "suit": "(r)",
             "timing": "after_succeeding",
-            "text": "The target and enemy models within",
+            "text": "The target and enemy models within (pulse)1\" of it are dealt 1 damage.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -4893,20 +5412,23 @@
         "name": "Wind Gust",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": 10,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to 6\". (pulse)1\" of it are dealt 1 damage.",
+        "effects": "Move the target up to 6\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models.",
         "triggers": [
           {
             "name": "Collision",
             "suit": "(r)",
             "timing": "after_succeeding",
-            "text": "The target and enemy models within",
+            "text": "The target and enemy models within (pulse)1\" of it are dealt 1 damage.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -4916,7 +5438,7 @@
         "name": "Crushing Winds",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 8\"",
+        "range": "(gun)8\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -4924,6 +5446,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Enemy models within (pulse)2\" of the target are dealt 1 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Knock Aside",
@@ -4945,17 +5470,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. This model deals 3 irreducible damage to itself. Summon a Wind Gamin in base contact with this model."
+        "effects": "Summon a Wind Gamin in base contact with this model.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "This model deals 3 irreducible damage to itself."
       },
       {
         "name": "Leap",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Place this model anywhere within range."
+        "effects": "Place this model anywhere within range.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": ""
       }
     ]
   },
@@ -5000,7 +5531,7 @@
         "name": "Woodsman\u2019s Axe",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -5008,6 +5539,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "You\u2019re Comin\u2019 With Me",
@@ -5023,7 +5557,7 @@
         "name": "Clockwork Revolver",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -5031,6 +5565,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Seek Cover",
@@ -5054,7 +5591,7 @@
         "name": "Reveal",
         "category": "attack_actions",
         "action_type": "variable",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
@@ -5062,6 +5599,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains an Exposed token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Follow My Path",
@@ -5113,14 +5653,17 @@
         "name": "Timekeeper\u2019s Tools",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Sweeping Strike",
@@ -5150,7 +5693,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Move the target up to 4\" toward a piece of terrain in the target\u2019s LoS."
+        "effects": "Move the target up to 4\" toward a piece of terrain in the target\u2019s LoS.",
+        "action_cost": "",
+        "restrictions": "Friendly only.",
+        "special_conditions": ""
       }
     ]
   },
@@ -5191,27 +5737,33 @@
         "name": "Pistol Whip",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Move the target up to 3\"."
+        "effects": "Move the target up to 3\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       },
       {
         "name": "Specialty Pistols",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 12\"",
+        "range": "(gun)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "While this model is on terrain of Ht 2 or greater, this action may be treated as a [?70].",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "While this model is on terrain of Ht 2 or greater, this action may be treated as a [?70].",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -5244,12 +5796,15 @@
       {
         "name": "Creep Along",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move this model up to its Sp toward a friendly model in its LoS.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Hidden Cache",
@@ -5304,7 +5859,7 @@
         "name": "Pendulum Swing",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -5312,6 +5867,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Sweeping Strike",
@@ -5336,12 +5894,15 @@
       {
         "name": "Hunt for Parts",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Place this model anywhere within range. (pulse)2\" must pass a TN 10 Wp duel or gain a Slow token.",
+        "effects": "Place this model anywhere within range.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Shrug Off",
@@ -5355,7 +5916,7 @@
             "name": "Never Tell Me the Odds",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": "Enemy models within",
+            "text": "Enemy models within (pulse)2\" must pass a TN 10 Wp duel or gain a Slow token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -5369,7 +5930,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Discard a card. This model heals 2."
+        "effects": "This model heals 2.",
+        "action_cost": "Discard a card.",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -5412,15 +5976,26 @@
         "name": "Spycraft",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this attack receives a raise, the target gains a Slow token. (soulstone) The Clock Strikes Midnight: Choose another ally. Declare this action again, drawing range and LoS from the chosen model.",
+        "effects": "If this attack receives a raise, the target gains a Slow token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "The Clock Strikes Midnight",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Choose another ally. Declare this action again, drawing range and LoS from the chosen model.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Critical Strike",
             "suit": "(r)",
@@ -5449,7 +6024,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Friendly only. Target heals 2.",
+        "effects": "Target heals 2.",
+        "action_cost": "",
+        "restrictions": "Friendly only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Extra Supplies",
@@ -5464,12 +6042,15 @@
       {
         "name": "Expanding Influence",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally or friendly minion only. Move the target up to 4\" toward a friendly model in its LoS."
+        "effects": "Move the target up to 4\" toward a friendly model in its LoS.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Ally or friendly minion only."
       }
     ]
   },
@@ -5515,14 +6096,17 @@
         "name": "Thermite Injection",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Burning token, this action has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Burning token, this action has a raise value of 3.",
         "triggers": [
           {
             "name": "Onslaught",
@@ -5538,7 +6122,7 @@
         "name": "Breath of Fire",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -5546,6 +6130,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Like the Wind",
@@ -5567,17 +6154,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": "Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       },
       {
         "name": "Living Spark",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "X is equal to 2 plus the level of this crew\u2019s fervor bar. All models within (pulse)X\" of the target must pass a TN 13 Wp duel or resolve their Burning tokens.",
+        "effects": "All models within (pulse)X\" of the target must pass a TN 13 Wp duel or resolve their Burning tokens.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "X is equal to 2 plus the level of this crew\u2019s fervor bar.",
         "triggers": [
           {
             "name": "Collapsing Star",
@@ -5629,7 +6222,7 @@
         "name": "Executioner Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -5637,6 +6230,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, the target may either discard a card or drain a (soulstone). If it does neither, it is killed.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Kindle",
@@ -5660,14 +6256,17 @@
         "name": "Command   Construct",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": 11,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Construct only. This action may target friendly models. This action cannot target the same model more than once per activation. Target declares an action, chosen and controlled by this model.",
+        "effects": "Target declares an action, chosen and controlled by this model.",
+        "action_cost": "",
+        "restrictions": "Construct only.",
+        "special_conditions": "This action may target friendly models. This action cannot target the same model more than once per activation.",
         "triggers": [
           {
             "name": "Arcanist Cache",
@@ -5689,7 +6288,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Remove any number of enemy tokens from this model. This model declares the Charge action, ignoring restrictions, increasing the Skl of the generated action by the number of tokens removed."
+        "effects": "This model declares the Charge action, ignoring restrictions, increasing the Skl of the generated action by the number of tokens removed.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Remove any number of enemy tokens from this model."
       }
     ]
   },
@@ -5732,14 +6334,17 @@
         "name": "Icy Grip",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Slow token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Slow token, this action receives a (+).",
         "triggers": [
           {
             "name": "Dismember",
@@ -5755,7 +6360,7 @@
         "name": "Snowball",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
@@ -5763,6 +6368,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, move the target up to 2\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Delay",
@@ -5819,7 +6427,7 @@
         "name": "Frozen Smash",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 3\"",
+        "range": "(melee)3\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -5827,6 +6435,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model may remove a friendly token from the target to increase this action\u2019s Dmg by 1.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Heave",
@@ -5872,17 +6483,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. This model deals 3 irreducible damage to itself. Summon an Ice Gamin in base contact with this model."
+        "effects": "Summon an Ice Gamin in base contact with this model.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "This model deals 3 irreducible damage to itself."
       },
       {
         "name": "Stinging Cold",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Enemy models within (pulse)3\" of the target must pass a TN 13 Sp duel or gain a Slow token."
+        "effects": "Enemy models within (pulse)3\" of the target must pass a TN 13 Sp duel or gain a Slow token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -5928,14 +6545,17 @@
         "name": "Steamborg Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may remove a friendly marker within 2\" to receive a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model may remove a friendly marker within 2\" to receive a (+).",
         "triggers": [
           {
             "name": "Lethal Aura",
@@ -5976,13 +6596,24 @@
       {
         "name": "Fade Into Memory",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a marker. Enemy models within (pulse)2\" of the target must pass a TN 12 Df duel or be dealt 2 damage. Then, remove the target. (soulstone) Blade in the Dark: Once per activation. This model may declare a (melee) action, which receives a (+).",
+        "effects": "Enemy models within (pulse)2\" of the target must pass a TN 12 Df duel or be dealt 2 damage. Then, remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a marker.",
         "triggers": [
+          {
+            "name": "Blade in the Dark",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model may declare a (melee) action, which receives a (+).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "\u201cHave You Seen My Brother?\u201d",
             "suit": "(t)",
@@ -6034,15 +6665,26 @@
         "name": "Ex-executioner Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this action receives a raise, the target may either discard a card or drain a (soulstone). If it does neither, it is killed. (soulstone) I\u2019ve Got This: This model heals 3 and another ally in LoS may move up to 3\".",
+        "effects": "If this action receives a raise, the target may either discard a card or drain a (soulstone). If it does neither, it is killed.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "I\u2019ve Got This",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model heals 3 and another ally in LoS may move up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Knock Aside",
             "suit": "(m)",
@@ -6057,14 +6699,17 @@
         "name": "\u201cI Know All the Hideouts\u201d",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 7,
         "resist": "Sp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target allies. Target gains an Exposed or Hidden token and is moved up to 4\".",
+        "effects": "Target gains an Exposed or Hidden token and is moved up to 4\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target allies.",
         "triggers": [
           {
             "name": "Sudden Strike",
@@ -6102,7 +6747,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target heals 2. For each raise this action receives, the target heals an additional +1.",
+        "effects": "Target heals 2. For each raise this action receives, the target heals an additional +1.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Lay Low",
@@ -6159,7 +6807,7 @@
         "name": "Arc Axes",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -6167,6 +6815,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "The target gains a Slow token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Devastating Strike",
@@ -6199,13 +6850,24 @@
       {
         "name": "Tag Out",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 3,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target another engaged friendly model. Place this model anywhere within 1\" of a model engaging the target, then place the target anywhere within 3\" of its current location. If this action receives a raise, this model may declare a (melee) action. (soulstone) \u201cI\u2019ll Hold Them Off!\u201d: Enemies within (pulse)1\" gain a Staggered token. If the target has not activated this turn, it may do so.",
+        "effects": "Place this model anywhere within 1\" of a model engaging the target, then place the target anywhere within 3\" of its current location. If this action receives a raise, this model may declare a (melee) action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target another engaged friendly model.",
         "triggers": [
+          {
+            "name": "\u201cI\u2019ll Hold Them Off!\u201d",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemies within (pulse)1\" gain a Staggered token. If the target has not activated this turn, it may do so.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Fortify",
             "suit": "(t)",
@@ -6271,7 +6933,7 @@
         "name": "\u201cUp We Go!\u201d",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 4,
         "resist": "Sz",
         "tn": "-",
@@ -6279,6 +6941,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Place the target anywhere within 3\" of its current location.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Delay",
@@ -6294,14 +6959,17 @@
         "name": "Grand Conflagration",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 7,
         "resist": "Sp",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action receives a (+) if the target has a Burning token. Models damaged by this action gain a Burning token.",
+        "effects": "Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action receives a (+) if the target has a Burning token.",
         "triggers": [
           {
             "name": "Kindle",
@@ -6339,17 +7007,33 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Another allied construct only. This action cannot target the same model more than once per activation. Target gains a Hastened token, then declares an action. (soulstone) To the Limit: Once per turn. If the target has not activated this turn, it may do so after this model ends its activation."
+        "effects": "Target gains a Hastened token, then declares an action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Another allied construct only. This action cannot target the same model more than once per activation.",
+        "triggers": [
+          {
+            "name": "To the Limit",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. If the target has not activated this turn, it may do so after this model ends its activation.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       },
       {
         "name": "Summon the Swarm",
         "category": "tactical_actions",
-        "range": "(aura) 12\"",
+        "range": "(aura)12\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Enemy only. Summon a Steam Arachnid within 1\" of the target."
+        "effects": "Summon a Steam Arachnid within 1\" of the target.",
+        "action_cost": "",
+        "restrictions": "Enemy only.",
+        "special_conditions": ""
       }
     ]
   },
@@ -6398,20 +7082,23 @@
         "name": "Hand of Immolation",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "While this model has a Burning token, this attack has a raise value of 3. Models damaged by this action gain a Burning token.",
+        "effects": "Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "While this model has a Burning token, this attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Touch of Madness",
             "suit": "(m)",
             "timing": "after_succeeding",
-            "text": ": Target discards a random card.",
+            "text": "Target discards a random card.",
             "is_mandatory": false,
             "soulstone_cost": 0
           },
@@ -6443,7 +7130,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target an ally with a Burning token. Place the target anywhere within 8\" of its current location.",
+        "effects": "Place the target anywhere within 8\" of its current location.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target an ally with a Burning token.",
         "triggers": [
           {
             "name": "Explosive Entrance",
@@ -6458,12 +7148,15 @@
       {
         "name": "Phoenix\u2019s Touch",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target heals 2 and may gain a Burning token.",
+        "effects": "Target heals 2 and may gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Heat Transfer",
@@ -6478,12 +7171,15 @@
       {
         "name": "Wings of Fire",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Move this model up to 6\" in a straight line. Models moved through this way gain a Burning token."
+        "effects": "Move this model up to 6\" in a straight line. Models moved through this way gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -6528,14 +7224,17 @@
         "name": "Icy Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Staggered token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Staggered token, this action receives a (+).",
         "triggers": [
           {
             "name": "Freeze Over",
@@ -6566,6 +7265,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target an Ice Pillar marker. Enemy models within (pulse)2\" of the target must pass a TN 13 Sp duel or be dealt 1 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Mummified in Ice",
@@ -6618,14 +7320,17 @@
         "name": "Paired Knives",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "From the Heavens",
@@ -6649,20 +7354,33 @@
         "name": "Elemental Creation",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 7,
         "resist": "Wp",
         "tn": "-",
         "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot target the same model more than once per activation. Summon a gamin Academic model within 2\" of the target. (soulstone) Gamin Storm: Summon one additional gamin Academic model within 2\" of the target for each raise this action receives."
+        "effects": "Summon a gamin Academic model within 2\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action cannot target the same model more than once per activation.",
+        "triggers": [
+          {
+            "name": "Gamin Storm",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon one additional gamin Academic model within 2\" of the target for each raise this action receives.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       },
       {
         "name": "Bladed Maelstrom",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 10\"",
+        "range": "(gun)10\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -6670,6 +7388,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If the target is engaged with an elemental ally, this action deals +1 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Draw Out Secrets",
@@ -6694,12 +7415,15 @@
       {
         "name": "Beyond Sight",
         "category": "tactical_actions",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target gains an Insight token.",
+        "effects": ". Target gains an Insight token.",
+        "action_cost": "",
+        "restrictions": "Ally only",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Pulled Here and There",
@@ -6755,7 +7479,7 @@
         "name": "Cobra\u2019s Fangs",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 7,
         "resist": "Df",
         "tn": "-",
@@ -6763,6 +7487,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Poison token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Reposition",
@@ -6786,7 +7513,7 @@
         "name": "Disillusion",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -6794,6 +7521,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move the target up to its Sp.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Interrogate",
@@ -6810,13 +7540,24 @@
       {
         "name": "From All, One",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. This model heals 1 for each friendly elemental model within range, to a maximum of 3. (soulstone) From One, All: Allies within (pulse)6\" of this model heal X, where X is equal to the amount this model healed from this action.",
+        "effects": "This model heals 1 for each friendly elemental model within range, to a maximum of 3.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "From One, All",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Allies within (pulse)6\" of this model heal X, where X is equal to the amount this model healed from this action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Revelation",
             "suit": "(c)",
@@ -6865,7 +7606,7 @@
         "name": "Distracting Illusion",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -6873,6 +7614,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains Stunned and Entranced tokens.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Blow Your Mind",
@@ -6896,15 +7640,26 @@
         "name": "Disillusion",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Move the target up to its Sp. [?9](soulstone) Showmanship: Place this model within 4\". Then, enemy models within (pulse)2\" of this model must pass a TN 12 Wp duel or gain a Stunned token.",
+        "effects": "Move the target up to its Sp.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Showmanship",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Place this model within 4\". Then, enemy models within (pulse)2\" of this model must pass a TN 12 Wp duel or gain a Stunned token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Blow Your Mind",
             "suit": "(r)",
@@ -6933,7 +7688,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot be declared while engaged. Make two Scheme markers within range.",
+        "effects": "Make two Scheme markers within range.",
+        "action_cost": "",
+        "restrictions": "This action cannot be declared while engaged.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Sneak Away",
@@ -6984,7 +7742,7 @@
         "name": "Huge Fist",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -6992,6 +7750,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -7031,15 +7792,26 @@
         "name": "Thrown Boulder",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 8\"",
+        "range": "(gun)8\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Enemy models within (pulse)1\" of the target are dealt 1 damage. (soulstone) The Mountain Crumbles: Deal this action\u2019s damage to a different enemy within 3\" of the target.",
+        "effects": "Enemy models within (pulse)1\" of the target are dealt 1 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "The Mountain Crumbles",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Deal this action\u2019s damage to a different enemy within 3\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Reverberation",
             "suit": "(r)",
@@ -7063,12 +7835,25 @@
       {
         "name": "Soulstone Geode",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Enemy models within range must pass a TN 12 Df duel or be dealt 2 damage. (soulstone) Claim Gemstones: Other allies within range may gain an Adaptable token."
+        "effects": "Enemy models within range must pass a TN 12 Df duel or be dealt 2 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Claim Gemstones",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Other allies within range may gain an Adaptable token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -7109,14 +7894,17 @@
         "name": "Icy Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Staggered token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Staggered token, this action receives a (+).",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -7140,14 +7928,17 @@
         "name": "Breath of Frost",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Staggered token."
+        "effects": "Deal this action\u2019s damage to a different enemy model within 2\" of the target. Models damaged by this action gain a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ],
     "tactical_actions": [
@@ -7159,27 +7950,36 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": "Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       },
       {
         "name": "Ice Pillars",
         "category": "tactical_actions",
-        "range": "(aura) 12\"",
+        "range": "(aura)12\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make an Ice Pillar marker anywhere within range."
+        "effects": "Make an Ice Pillar marker anywhere within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       },
       {
         "name": "Intuition",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Look at the top three cards of your fate deck and then return them in any order."
+        "effects": "Look at the top three cards of your fate deck and then return them in any order.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -7223,14 +8023,17 @@
         "name": "Inky Grip",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "(pulse)2\" of this model 2\". Deal 1 damage to models moved this way.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Reposition",
@@ -7244,7 +8047,7 @@
             "name": "Mass of Tentacles",
             "suit": "(t)",
             "timing": "after_succeeding",
-            "text": "Move enemy models within",
+            "text": "Move enemy models within (pulse)2\" of this model 2\". Deal 1 damage to models moved this way.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -7254,15 +8057,26 @@
         "name": "Lashing Tendrils",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to 4\". [?9](soulstone) Reach Out and Grab Them: Enemy models within (pulse)1\" of the target gain a Staggered token.",
+        "effects": ". Move the target up to 4\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models",
         "triggers": [
+          {
+            "name": "Reach Out and Grab Them",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (pulse)1\" of the target gain a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Stagger",
             "suit": "(m)",
@@ -7332,7 +8146,7 @@
         "name": "Talons",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
@@ -7340,6 +8154,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Ember",
@@ -7377,7 +8194,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target heals 1. For each raise this action receives, the target heals an additional +1. Then, kill this model.",
+        "effects": "Target heals 1. For each raise this action receives, the target heals an additional +1. Then, kill this model.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Choreographed",
@@ -7397,7 +8217,10 @@
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target an enemy Scheme marker. Summon a Mechanical Dove in base contact with the target. Then, remove the target."
+        "effects": "Summon a Mechanical Dove in base contact with the target. Then, remove the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target an enemy Scheme marker."
       }
     ]
   },
@@ -7432,11 +8255,7 @@
       },
       {
         "name": "Lone Rider",
-        "text": "This model may not be targeted by the actions of friendly models."
-      },
-      {
-        "name": ")",
-        "text": "The (warding) abilities of enemy models within 3\" are blank."
+        "text": "This model may not be targeted by the actions of friendly models. Nemesis ((warding)): The (warding) abilities of enemy models within 3\" are blank."
       }
     ],
     "attack_actions": [
@@ -7451,7 +8270,10 @@
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "When this action is declared, choose if it has a range of (melee)1\" or (gun)8\".",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "When this action is declared, choose if it has a range of (melee)1\" or (gun)8\".",
         "triggers": [
           {
             "name": "Arcane Ritual",
@@ -7468,12 +8290,25 @@
       {
         "name": "Revel in Creation",
         "category": "tactical_actions",
-        "range": "(pulse) 4\"",
+        "range": "(pulse)4\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Each enemy model within range may discard a card. This model may make one Scheme marker into base contact with every enemy model within range that does not discard a card. (soulstone)(soulstone) Clockwork Revelation: Once per game. Select a Strategy marker within range and place it within 6\" of its location, not in base contact with any model(s)."
+        "effects": "Each enemy model within range may discard a card. This model may make one Scheme marker into base contact with every enemy model within range that does not discard a card.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Clockwork Revelation",
+            "suit": "(soulstone)(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per game. Select a Strategy marker within range and place it within 6\" of its location, not in base contact with any model(s).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       },
       {
         "name": "Ride With Me",
@@ -7483,7 +8318,10 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may target another friendly model of lower Sz. Move this model up to 5\". Then, if this action targeted another friendly model, place the friendly model into base contact with this model.",
+        "effects": "Move this model up to 5\". Then, if this action targeted another friendly model, place the friendly model into base contact with this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model may target another friendly model of lower Sz.",
         "triggers": [
           {
             "name": "Twist Fate",
@@ -7538,14 +8376,17 @@
         "name": "Circular Saw-Blade",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this action has a (+), it ignores all (fortitude) abilities on the target.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If this action has a (+), it ignores all (fortitude) abilities on the target.",
         "triggers": [
           {
             "name": "Kindle",
@@ -7578,12 +8419,15 @@
       {
         "name": "Dismantle",
         "category": "tactical_actions",
-        "range": "(pulse) 2\"",
+        "range": "(pulse)2\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Choose up to two markers within range. Make a Remains marker within 1\" of each of the chosen markers. Then, remove one of the chosen markers.",
+        "effects": "Make a Remains marker within 1\" of each of the chosen markers. Then, remove one of the chosen markers.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Choose up to two markers within range.",
         "triggers": [
           {
             "name": "Shooting Sparks",
@@ -7638,15 +8482,26 @@
         "name": "Coded Signals",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this action receives a raise, make a Scheme marker within 3\" of the target. (soulstone) Useful Intel: An ally within 3\" of the target heals 2 and may move up to 3\".",
+        "effects": "If this action receives a raise, make a Scheme marker within 3\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Useful Intel",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "An ally within 3\" of the target heals 2 and may move up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Pull and Drag",
             "suit": "(r)",
@@ -7667,7 +8522,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       },
       {
         "name": "Fight for the Union",
@@ -7677,17 +8535,23 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a friendly Toni Ironsides. Target gains a Shielded token. If the target has half its maximum health or less, it also declares an action."
+        "effects": "Target gains a Shielded token. If the target has half its maximum health or less, it also declares an action.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a friendly Toni Ironsides."
       },
       {
         "name": "\u201cRope, Ho!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model must be on terrain of Ht 2 or greater. Target ally is placed into base contact with this model.",
+        "effects": "Target ally is placed into base contact with this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model must be on terrain of Ht 2 or greater.",
         "triggers": [
           {
             "name": "Preparations",
@@ -7742,14 +8606,17 @@
         "name": "Lightning Bolt",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Models on terrain Ht 2 or higher suffer a (-) to resist this action.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Models on terrain Ht 2 or higher suffer a (-) to resist this action.",
         "triggers": [
           {
             "name": "Enflame",
@@ -7790,12 +8657,15 @@
       {
         "name": "Beyond Sight",
         "category": "tactical_actions",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Target gains an Insight token.",
+        "effects": "Target gains an Insight token.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Levitate",
@@ -7847,7 +8717,7 @@
         "name": "Woodsman\u2019s Axe",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -7855,6 +8725,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Finisher",
@@ -7878,15 +8751,26 @@
         "name": "Trusty Rifle",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 14\"",
+        "range": "(gun)14\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "(soulstone) Wilderness Paths: Place this model anywhere within 8\", within 1\" of blocking terrain.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Wilderness Paths",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Place this model anywhere within 8\", within 1\" of blocking terrain.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Biting Jaws",
             "suit": "(c)",
@@ -7902,12 +8786,15 @@
       {
         "name": "Hidden Supplies",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target an enemy Scheme marker. Once per activation. Summon a Clockwork Trap into base contact with the target. Then, remove the target."
+        "effects": "Summon a Clockwork Trap into base contact with the target. Then, remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target an enemy Scheme marker."
       }
     ]
   },
@@ -7959,7 +8846,10 @@
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "When this action is declared, choose if it has a range of (melee)1\" or (magic)6\".",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "When this action is declared, choose if it has a range of (melee)1\" or (magic)6\".",
         "triggers": [
           {
             "name": "Stumble",
@@ -7983,15 +8873,26 @@
         "name": "Entomb in Ice",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make an Ice Pillar marker within 1\" of the target. This model may drain a (soulstone). If it does so, make up to two additional markers within 3\" of the first. (soulstone) Harsh Winter: Enemy models within (pulse)1\" of any of the made markers gain Staggered and Hunger tokens.",
+        "effects": "Make an Ice Pillar marker within 1\" of the target. This model may drain a (soulstone). If it does so, make up to two additional markers within 3\" of the first.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Harsh Winter",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemy models within (pulse)1\" of any of the made markers gain Staggered and Hunger tokens.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "My Loyal Servant",
             "suit": "(r)",
@@ -8012,7 +8913,10 @@
         "tn": "*",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Target a friendly Ice Pillar marker completely on the enemy table half. Summon an allied minion in base contact with the target, then remove the target."
+        "effects": "Summon an allied minion in base contact with the target, then remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "Target a friendly Ice Pillar marker completely on the enemy table half."
       }
     ]
   },
@@ -8060,7 +8964,7 @@
         "name": "Winter\u2019s Strike",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -8068,6 +8972,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, the target gains either a Slow or a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Onslaught",
@@ -8107,14 +9014,27 @@
         "name": "Hunger Pangs",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target an allied beast or model with a friendly Hunger token. Target declares the Charge action, ignoring engagement, controlled by this model. (soulstone) Spirit of Hunger: Summon a Wendigo within 1\" of the target."
+        "effects": "Target declares the Charge action, ignoring engagement, controlled by this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target an allied beast or model with a friendly Hunger token.",
+        "triggers": [
+          {
+            "name": "Spirit of Hunger",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon a Wendigo within 1\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tactical_actions": [
@@ -8126,7 +9046,20 @@
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make an Ice Pillar marker anywhere within range. (soulstone) Frozen Domain: Make an Ice Pillar marker anywhere on the friendly table half, in this model\u2019s LoS. Allies within (pulse)2\" of the made marker gain a Shielded token."
+        "effects": "Make an Ice Pillar marker anywhere within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Frozen Domain",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Make an Ice Pillar marker anywhere on the friendly table half, in this model\u2019s LoS. Allies within (pulse)2\" of the made marker gain a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -8167,14 +9100,17 @@
         "name": "Cunning Ploy",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Staggered token, this model may add any one suit to its duel total.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Staggered token, this model may add any one suit to its duel total.",
         "triggers": [
           {
             "name": "Draw Out Secrets",
@@ -8199,12 +9135,15 @@
       {
         "name": "Countdown",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a marker. If this model is in severe or concealing terrain, increase the TN of the Sp duel by 2. Enemy models within (pulse)1\" of the target must pass a TN 11 Sp duel or gain a Staggered token.",
+        "effects": "Enemy models within (pulse)1\" of the target must pass a TN 11 Sp duel or gain a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Target a marker. If this model is in severe or concealing terrain, increase the TN of the Sp duel by 2.",
         "triggers": [
           {
             "name": "Flying Debris",
@@ -8227,12 +9166,15 @@
       {
         "name": "Unnatural Speed",
         "category": "tactical_actions",
-        "range": "(aura) 3\"",
+        "range": "(aura)3\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Place this model anywhere within range."
+        "effects": "Place this model anywhere within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -8276,7 +9218,7 @@
         "name": "Snapping Tongues",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -8284,6 +9226,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Tear Off a Bite",
@@ -8315,7 +9260,7 @@
         "name": "Terror From Below",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": "-",
@@ -8323,6 +9268,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Place this model in base contact with the target, then remove all markers within (pulse)1\" of the target and deal +1 damage per marker removed this way (to a max of 4).",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Knock Aside",
@@ -8339,12 +9287,15 @@
       {
         "name": "Sandstorm",
         "category": "tactical_actions",
-        "range": "(pulse) 4\"",
+        "range": "(pulse)4\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Deal 1 damage to enemy models in range.",
+        "effects": "Deal 1 damage to enemy models in range.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Hunker Down",
@@ -8403,15 +9354,26 @@
         "name": "Elemental Creation",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 7,
         "resist": "Wp",
         "tn": "-",
         "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot target the same model more than once per activation. Summon a gamin Academic model within 2\" of the target. (soulstone) Elemental Chaos: Once per turn. Deal +2 damage to the target for each friendly gamin within 10\" of it with a different name (maximum 6).",
+        "effects": "Summon a gamin Academic model within 2\" of the target.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action cannot target the same model more than once per activation.",
         "triggers": [
+          {
+            "name": "Elemental Chaos",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. Deal +2 damage to the target for each friendly gamin within 10\" of it with a different name (maximum 6).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Bound to Form",
             "suit": "(r)",
@@ -8440,17 +9402,33 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally with a Summon token only. This action cannot target the same model more than once per activation. The target moves up to 6\", then declares an action. (soulstone) Unshackled Elements: While resolving the generated action, the target ignores its Summon token."
+        "effects": "The target moves up to 6\", then declares an action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Ally with a Summon token only. This action cannot target the same model more than once per activation.",
+        "triggers": [
+          {
+            "name": "Unshackled Elements",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "While resolving the generated action, the target ignores its Summon token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       },
       {
         "name": "Sparks of Insight",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Another ally only. Move the target up to 5\".",
+        "effects": "Move the target up to 5\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "Another ally only.",
         "triggers": [
           {
             "name": "Mantra of Binding",
@@ -8517,15 +9495,26 @@
         "name": "Heavenly Gada",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model may lower the Dmg of this action by 1. If this model chose to lower its Dmg, an ally in LoS gains an Insight token. (soulstone) Query the Aether: Once per activation. This model draws a card for each scheme the opponent has revealed (to a maximum of 2 cards).",
+        "effects": "If this model chose to lower its Dmg, an ally in LoS gains an Insight token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This model may lower the Dmg of this action by 1.",
         "triggers": [
+          {
+            "name": "Query the Aether",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model draws a card for each scheme the opponent has revealed (to a maximum of 2 cards).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "From the Heavens",
             "suit": "(r)",
@@ -8548,14 +9537,17 @@
         "name": "Shraap",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3. The target gains one of the following tokens, plus one for each raise this action receives: Staggered, Burning, Injured, or Slow."
+        "effects": "The target gains one of the following tokens, plus one for each raise this action receives: Staggered, Burning, Injured, or Slow.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3."
       }
     ],
     "tactical_actions": [
@@ -8568,6 +9560,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Enemy models within (pulse)2\" of the target must pass a TN 13 Wp duel or be dealt 2 damage. If this action receives a raise, enemy models that fail this duel gain a Slow token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Mass Hysteria",
@@ -8631,14 +9626,17 @@
         "name": "Phantasmal Blade",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 7,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has an Entranced token, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has an Entranced token, this action receives a (+).",
         "triggers": [
           {
             "name": "Staged",
@@ -8671,13 +9669,24 @@
       {
         "name": "Malevolent Shadow",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Decoy marker within range. If this model does not have LoS to an enemy leader, enemy models within (pulse)2\" of the made marker must each pass a TN 13 Df duel or gain an Entranced token. (soulstone) In the Wings: Place this model in base contact with the made marker.",
+        "effects": "Make a Decoy marker within range. If this model does not have LoS to an enemy leader, enemy models within (pulse)2\" of the made marker must each pass a TN 13 Df duel or gain an Entranced token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "In the Wings",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Place this model in base contact with the made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Thief\u2019s Pocket",
             "suit": "(r)",
@@ -8691,12 +9700,15 @@
       {
         "name": "Unnatural Speed",
         "category": "tactical_actions",
-        "range": "(aura) 3\"",
+        "range": "(aura)3\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Place this model anywhere within range."
+        "effects": "Place this model anywhere within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -8741,14 +9753,17 @@
         "name": "Divine Armament",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "While this model is within 2\" of another ally, increase this action\u2019s Rg by +2\".",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "While this model is within 2\" of another ally, increase this action\u2019s Rg by +2\".",
         "triggers": [
           {
             "name": "Quick Shot",
@@ -8780,7 +9795,7 @@
         "name": "Chakram",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 10\"",
+        "range": "(gun)10\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -8788,6 +9803,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -8828,12 +9846,15 @@
       {
         "name": "Onward",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model may declare the Walk action.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Revelation",
@@ -8883,7 +9904,7 @@
         "name": "Dismissive Wave",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
@@ -8891,6 +9912,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Beautiful Clothes",
@@ -8914,15 +9938,26 @@
         "name": "Beckoning Call",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to its Sp toward a friendly model in its LoS. (soulstone) Rushed Backstage: When resolving, the target may move through models. Deal 1 damage to enemy models moved through this way.",
+        "effects": "Move the target up to its Sp toward a friendly model in its LoS.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models.",
         "triggers": [
+          {
+            "name": "Rushed Backstage",
+            "suit": "(soulstone)",
+            "timing": "when_resolving",
+            "text": "When resolving, the target may move through models. Deal 1 damage to enemy models moved through this way.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Take a Bow",
             "suit": "(r)",
@@ -8946,12 +9981,15 @@
       {
         "name": "Curtain Call",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model may declare the Interact action, ignoring engagement. This Interact action may target a marker with one or more enemies in base contact.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Reposition",
@@ -8999,7 +10037,7 @@
         "name": "Ice Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 14\"",
+        "range": "(magic)14\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
@@ -9007,6 +10045,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, the target gains a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Stumble",
@@ -9031,12 +10072,15 @@
       {
         "name": "Ice Pillars",
         "category": "tactical_actions",
-        "range": "(aura) 12\"",
+        "range": "(aura)12\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Make an Ice Pillar marker anywhere within range.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Mummified in Ice",
@@ -9065,6 +10109,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target heals 2. For each raise this action receives, the target heals an additional +2.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Fortify",
@@ -9116,14 +10163,17 @@
         "name": "Gnawing Emptiness",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a friendly Hunger token, it suffers a (-) to resist this attack.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a friendly Hunger token, it suffers a (-) to resist this attack.",
         "triggers": [
           {
             "name": "Always Eating",
@@ -9155,7 +10205,7 @@
         "name": "Ice Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 14\"",
+        "range": "(magic)14\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
@@ -9163,6 +10213,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "If this action receives a raise, the target gains a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Vantage Point",
@@ -9192,7 +10245,20 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make an Ice Pillar marker within range. Enemy models within (pulse)3\" of the made marker must pass a TN 13 Sp duel or be dealt 2 damage. (soulstone) Thrive in Winter: Friendly non-living models within (pulse)3\" of the made marker may move up to 4\"."
+        "effects": "Make an Ice Pillar marker within range. Enemy models within (pulse)3\" of the made marker must pass a TN 13 Sp duel or be dealt 2 damage.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
+        "triggers": [
+          {
+            "name": "Thrive in Winter",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Friendly non-living models within (pulse)3\" of the made marker may move up to 4\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ]
   },
@@ -9233,14 +10299,17 @@
         "name": "Sharp Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Siphon Life",
@@ -9256,7 +10325,7 @@
         "name": "Drain",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
@@ -9264,6 +10333,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model heals 1.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "On Your Heels",
@@ -9293,7 +10365,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Deal 1 irreducible damage to this model, then the target either heals 1 or gains an Adaptable token."
+        "effects": "Deal 1 irreducible damage to this model, then the target either heals 1 or gains an Adaptable token.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": ""
       }
     ]
   },
@@ -9338,7 +10413,7 @@
         "name": "Flaming Pincer",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 3,
         "resist": "Df",
         "tn": "-",
@@ -9346,6 +10421,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Flaming Detonation",
@@ -9367,7 +10445,10 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Scheme marker in base contact with this model, then kill this model."
+        "effects": "Make a Scheme marker in base contact with this model, then kill this model.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -9413,14 +10494,17 @@
         "name": "Relic Hammer",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may not be controlled by the enemy crew. If the target is a master, this action receives a (+).",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may not be controlled by the enemy crew. If the target is a master, this action receives a (+).",
         "triggers": [
           {
             "name": "From the Heavens",
@@ -9461,12 +10545,15 @@
       {
         "name": "Wind Barrier",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Make a Scheme marker within range. Allies within (pulse)3\" of the made marker gain a Shielded token.",
+        "effects": "Make a Scheme marker within range. Allies within (pulse)3\" of the made marker gain a Shielded token.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Crossbreeze",
@@ -9520,14 +10607,17 @@
         "name": "Conflagration",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action receives a (+) if the target has a Burning token. Models damaged by this action gain a Burning token.",
+        "effects": "Models damaged by this action gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action receives a (+) if the target has a Burning token.",
         "triggers": [
           {
             "name": "Kindle",
@@ -9551,26 +10641,32 @@
         "name": "Light Under Their Feet",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 12,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to its Sp. This model may remove a Burning token from the target to have it ignore models and terrain while moving."
+        "effects": "Move the target up to its Sp. This model may remove a Burning token from the target to have it ignore models and terrain while moving.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models."
       }
     ],
     "tactical_actions": [
       {
         "name": "Blast to Bits",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a Scheme marker. Models within (pulse)2\" of the target must pass a TN 12 Sp duel or be dealt 2 damage. Then, remove the target.",
+        "effects": "Models within (pulse)2\" of the target must pass a TN 12 Sp duel or be dealt 2 damage. Then, remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a Scheme marker.",
         "triggers": [
           {
             "name": "Blaze",
@@ -9630,7 +10726,7 @@
         "name": "Mental Drain",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 4,
         "resist": "Wp",
         "tn": "-",
@@ -9638,6 +10734,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "This model heals 1.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Critical Strike",
@@ -9670,12 +10769,15 @@
       {
         "name": "A New Arrangement",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains an Adaptable token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Purification",
@@ -9695,7 +10797,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw two cards and then discard one card."
+        "effects": "Draw two cards and then discard one card.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -9738,7 +10843,7 @@
         "name": "Confusing Strike",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
@@ -9746,6 +10851,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Target gains a Stunned token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Hole in the World",
@@ -9761,7 +10869,7 @@
         "name": "Disillusion",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
@@ -9769,6 +10877,9 @@
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Move the target up to its Sp.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Duality",
@@ -9798,7 +10909,10 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       }
     ]
   },
@@ -9843,14 +10957,17 @@
         "name": "Thermite Injection",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Burning token, this action has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Burning token, this action has a raise value of 3.",
         "triggers": [
           {
             "name": "Kindle",
@@ -9883,12 +11000,15 @@
       {
         "name": "Liquid Flame",
         "category": "tactical_actions",
-        "range": "(aura) 3\"",
+        "range": "(aura)3\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Scheme marker within range. Then, all models in the area between this model and the made marker gain a Burning token."
+        "effects": "Make a Scheme marker within range. Then, all models in the area between this model and the made marker gain a Burning token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": ""
       }
     ]
   },
@@ -9937,15 +11057,26 @@
         "name": "Staggering Punch",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 7,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target gains a Staggered token. (soulstone)(soulstone) Spit Out a Tooth and Grin: Once per game. This model heals 14. [?67] Delay: Target gains a Slow token.",
+        "effects": "Target gains a Staggered token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Spit Out a Tooth and Grin",
+            "suit": "(soulstone)(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per game. This model heals 14.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Follow Through",
             "suit": "(r)",
@@ -9966,7 +11097,7 @@
             "name": "Choice Words About Your Mother",
             "suit": "(t)",
             "timing": "after_succeeding",
-            "text": "Choose an enemy model in LoS. Move the chosen model 6\u201d toward this model.",
+            "text": "Choose an enemy model in LoS. Move the chosen model 6\u201d toward this model. [?67] Delay: Target gains a Slow token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -9977,12 +11108,15 @@
       {
         "name": "\u201cGet Your Guard Up!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "The target heals 2 and gains a Focused token.",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "On Your Heels",
@@ -9997,13 +11131,24 @@
       {
         "name": "Intimidation",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Enemy models within range must either gain an Injured token or be dealt 2 damage. (soulstone) Second Wind: This model may remove any number of tokens on it and declare a (melee) action.",
+        "effects": "Enemy models within range must either gain an Injured token or be dealt 2 damage.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "Second Wind",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model may remove any number of tokens on it and declare a (melee) action.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Defensive Reflexes",
             "suit": "(r)",
@@ -10062,15 +11207,26 @@
         "name": "Bosses Beware",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": "-",
         "damage": "X",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "X is equal to the number of friendly models within 3\" of the target (to a maximum of 4). (soulstone) The Language of the Unheard: Another friendly model within 3\" of the target may declare the Charge action, ignoring engagement.",
+        "effects": "X is equal to the number of friendly models within 3\" of the target (to a maximum of 4).",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [
+          {
+            "name": "The Language of the Unheard",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Another friendly model within 3\" of the target may declare the Charge action, ignoring engagement.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Coordinated Attack",
             "suit": "(m)",
@@ -10094,12 +11250,15 @@
       {
         "name": "Picket Line",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 0,
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. The target heals 2 and gains a Shielded token.",
+        "effects": "The target heals 2 and gains a Shielded token.",
+        "action_cost": "",
+        "restrictions": "Ally only.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "\u201cI\u2019ve Got Your Back!\u201d",
@@ -10119,7 +11278,10 @@
         "tn": 8,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Choose up to two other allies within range. Once per turn. Each chosen model moves up to 2\" and may declare a non-Charge general action.",
+        "effects": "Each chosen model moves up to 2\" and may declare a non-Charge general action.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": "Choose up to two other allies within range.",
         "triggers": [
           {
             "name": "Rallying Cry",
@@ -10178,14 +11340,17 @@
         "name": "Raking Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a Staggered token, this action receives +1 Skl.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a Staggered token, this action receives +1 Skl.",
         "triggers": [
           {
             "name": "Fly Away Home",
@@ -10207,7 +11372,10 @@
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target an enemy Scheme marker. Place this model in base contact with the target, then remove the target."
+        "effects": "Place this model in base contact with the target, then remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target an enemy Scheme marker."
       }
     ]
   },
@@ -10248,14 +11416,17 @@
         "name": "Powerful Tools",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 5,
         "resist": "Df",
         "tn": "-",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "The target may not drain (soulstone) while this action is resolving.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "The target may not drain (soulstone) while this action is resolving.",
         "triggers": [
           {
             "name": "Blow It to Hell",
@@ -10277,7 +11448,10 @@
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot be declared while engaged. Make two Scheme markers within range.",
+        "effects": "Make two Scheme markers within range.",
+        "action_cost": "",
+        "restrictions": "This action cannot be declared while engaged.",
+        "special_conditions": "",
         "triggers": [
           {
             "name": "Union\u2019s Claim",
@@ -10348,14 +11522,17 @@
         "name": "Gnawing Emptiness",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 5,
         "resist": "Wp",
         "tn": "-",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has a friendly Hunger token, it suffers a (-) to resist this attack.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "If the target has a friendly Hunger token, it suffers a (-) to resist this attack.",
         "triggers": [
           {
             "name": "Devastating Strike",
@@ -10385,17 +11562,23 @@
         "tn": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per turn. Draw up to two cards from this model\u2019s discard pile with values of 1-5."
+        "effects": "Draw up to two cards from this model\u2019s discard pile with values of 1-5.",
+        "action_cost": "",
+        "restrictions": "Once per turn.",
+        "special_conditions": ""
       },
       {
         "name": "Starving Advance",
         "category": "tactical_actions",
-        "range": "(aura) 2\"",
+        "range": "(aura)2\"",
         "skill_value": 0,
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target a marker. Place this model in base contact with the target, then remove the target."
+        "effects": "Place this model in base contact with the target, then remove the target.",
+        "action_cost": "",
+        "restrictions": "Once per activation.",
+        "special_conditions": "Target a marker."
       }
     ]
   },
@@ -10436,14 +11619,17 @@
         "name": "Sharp Claws",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 4,
         "resist": "Df",
         "tn": "-",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This attack has a raise value of 3.",
+        "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This attack has a raise value of 3.",
         "triggers": [
           {
             "name": "Knock Aside",
@@ -10459,14 +11645,17 @@
         "name": "Wind Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 5,
         "resist": "Sp",
         "tn": 10,
         "damage": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to 4\".",
+        "effects": "Move the target up to 4\".",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "This action may target friendly models.",
         "triggers": [
           {
             "name": "Knock Aside",

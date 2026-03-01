@@ -14,17 +14,19 @@ ARCHIVE_DIR = Path("archive_scripts")
 
 # Core pipeline files to KEEP (in scripts/ subdirectory)
 KEEP_IN_SCRIPTS = {
-    "pipeline.py",
-    "card_extractor.py",
+    "pdf_text_extractor.py",
+    "pdf_text_batch.py",
     "merger.py",
     "validator.py",
-    "pdf_splitter.py",
     "db_loader.py",
+    "denormalize.py",
+    "detect_m3e.py",
+    "load_rules_data.py",
+    "generate_token_reference.py",
 }
 
 # Core files to KEEP in root
 KEEP_IN_ROOT = {
-    "run_faction.py",
     "final_audit.py",
     "cleanup_repo.py",
 }

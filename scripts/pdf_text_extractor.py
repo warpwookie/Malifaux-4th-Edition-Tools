@@ -3,9 +3,9 @@
 pdf_text_extractor.py — Extract M4E stat card data from PDF text layers.
 
 Uses PyMuPDF dict-mode to read structured text with font/position metadata.
-Zero Vision API calls — all extraction from PDF text layer.
+All extraction from PDF text layer — no API calls needed.
 
-Public API mirrors card_extractor.py so merger/validator/db_loader are unchanged.
+Public API produces the same JSON schema expected by merger/validator/db_loader.
 
 Usage:
     python pdf_text_extractor.py source.pdf [--debug]
@@ -252,9 +252,12 @@ def _extract_characteristics_keywords(spans):
                   and 5.5 <= s["size"] <= 10.0
                   and len(s["text"].strip()) <= 3]
 
-    # Crew card name / totem name: Astoria-Bold multi-char at 6.0-6.5pt
+    # Crew card name / totem name: Astoria-Bold multi-char at 5.5-7.5pt
+    # Also include Astoria-BoldItalic — totem titles use this font
+    # (e.g., "Mr. Mordrake," in Bold + "Bump in the Night" in BoldItalic)
     small_bold_spans = [s for s in zone_spans
-                        if s["font"] == FONT_NAME_LARGE and 5.5 <= s["size"] <= 7.5
+                        if s["font"] in (FONT_NAME_LARGE, FONT_NAME_ITALIC)
+                        and 5.5 <= s["size"] <= 7.5
                         and len(s["text"].strip()) > 2]
 
     # STN (Summon Target Number): Astoria-Bold ~7.0pt
@@ -346,12 +349,18 @@ def _parse_char_keyword_string(text):
     if item:
         items.append(item)
 
-    # Normalize station format: "Minion(3)" → "Minion (3)"
+    # Normalize station/keyword format:
+    #   "Minion(3)" → "Minion (3)"
+    #   "Amalgam(2)2)" → "Amalgam (2)"  (fix doubled suffix from curved text)
+    #   "Master(2)" → "Master (2)"
     normalized = []
     for item in items:
-        m = re.match(r'^(Minion|Peon)\((\d+)\)$', item)
+        # Fix doubled suffix: "Keyword(N)N)" → "Keyword(N)"
+        item = re.sub(r'\((\d+)\)\d+\)', r'(\1)', item)
+        # Normalize station/keyword limit: "Keyword(N)" → "Keyword (N)"
+        m = re.match(r'^([A-Za-z][A-Za-z ]+?)\((\d+)\)$', item)
         if m:
-            normalized.append(f"{m.group(1)} ({m.group(2)})")
+            normalized.append(f"{m.group(1).strip()} ({m.group(2)})")
         else:
             normalized.append(item)
 
@@ -372,8 +381,8 @@ def _extract_front_extras(small_bold_spans, stn_spans, all_zone_spans):
     extras = {}
 
     # Separate crew card name (left) from totem name (right)
-    # Only applies to 6.0-6.5pt size spans
-    small_63_spans = [s for s in small_bold_spans if 6.0 <= s["size"] <= 6.5]
+    # Typically 6.3pt but some cards use 5.8pt (e.g., "Mr. Mordrake,")
+    small_63_spans = [s for s in small_bold_spans if 5.5 <= s["size"] <= 6.5]
 
     if small_63_spans:
         left_spans = [s for s in small_63_spans if s["x0"] < PAGE_WIDTH / 2]
@@ -384,7 +393,19 @@ def _extract_front_extras(small_bold_spans, stn_spans, all_zone_spans):
             extras["crew_card_name"] = _reconstruct_multiline_text(left_spans)
 
         if right_spans:
-            extras["totem"] = _reconstruct_multiline_text(right_spans)
+            totem = _reconstruct_multiline_text(right_spans).rstrip(",")
+            extras["totem"] = totem
+
+    # Check for '*' crew card name (indicates multiple crew card choices).
+    # '*' is a single char so it doesn't pass the len>2 filter above.
+    if "crew_card_name" not in extras:
+        star_spans = [s for s in all_zone_spans
+                      if s["font"] == FONT_NAME_LARGE
+                      and 5.5 <= s["size"] <= 7.0
+                      and s["text"].strip() == "*"
+                      and s["x0"] < PAGE_WIDTH / 2]
+        if star_spans:
+            extras["crew_card_name"] = "*"
 
     # Extract STN (Summon Target Number)
     stn_text = _reconstruct_curved_text(stn_spans)
@@ -468,7 +489,7 @@ def _extract_front(page_spans, page, faction=None, pdf_path=None):
     """
     Extract stat card front page data.
 
-    Returns dict matching Vision API front extraction schema.
+    Returns dict matching front extraction schema.
     """
     notes = []
 
@@ -631,13 +652,21 @@ def _extract_abilities(spans):
                 break
 
         if has_name:
+            # Start new ability
+            name_text = line_spans[name_idx]["text"].strip().rstrip(":")
+
+            # Skip punctuation-only fragments (e.g. bare ")" from split parens)
+            if not any(c.isalpha() for c in name_text):
+                # Treat as continuation of current ability
+                if current_ability:
+                    text_parts = _spans_to_text(line_spans)
+                    current_ability["text"] += " " + text_parts
+                continue
+
             # Save previous ability
             if current_ability:
                 current_ability["text"] = current_ability["text"].strip()
                 abilities.append(current_ability)
-
-            # Start new ability
-            name_text = line_spans[name_idx]["text"].strip().rstrip(":")
 
             # Collect rest of line as text
             remaining = line_spans[name_idx + 1:]
@@ -675,6 +704,148 @@ def _spans_to_text(spans):
     # Normalize whitespace
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
+
+def _split_preamble_effect(spans):
+    """Split spans into italic preamble text and body effect text.
+
+    Walks through spans and separates italic (FONT_ITALIC) from body
+    (FONT_BODY, FONT_BOLD) text.  Symbol spans attach to whichever mode
+    is currently active.  Returns (italic_text, body_text).
+
+    Body-font spans that are just numbers, punctuation, or inch marks
+    (e.g., the '"' in '8"') don't trigger the switch to body mode —
+    they stay as part of the italic preamble.
+    """
+    italic_parts = []
+    body_parts = []
+    in_body = False
+
+    def _is_substantive_body(text):
+        """Check if span text is real body content, not just numbers/punctuation."""
+        stripped = text.strip()
+        if not stripped:
+            return False
+        # Numbers, quotes, inches, periods, commas, etc. within italic text
+        if all(c in '0123456789"\'"\u201c\u201d.,-/:;!?() ' for c in stripped):
+            return False
+        # Must have at least one letter to be substantive
+        return any(c.isalpha() for c in stripped)
+
+    for s in spans:
+        if s["font"] == FONT_SYMBOL:
+            mapped = _map_symbol_text(s["text"], s["font"])
+            if in_body:
+                body_parts.append(mapped)
+            else:
+                italic_parts.append(mapped)
+        elif s["font"] == FONT_ITALIC:
+            if in_body:
+                # Italic within body text is emphasis, keep as body
+                body_parts.append(s["text"])
+            else:
+                italic_parts.append(s["text"])
+        elif s["font"] in (FONT_BODY, FONT_BOLD):
+            if in_body:
+                body_parts.append(s["text"])
+            elif _is_substantive_body(s["text"]):
+                # Real body text — switch to body mode
+                in_body = True
+                body_parts.append(s["text"])
+            else:
+                # Non-substantive (numbers, punctuation) — keep as italic
+                italic_parts.append(s["text"])
+        else:
+            # Other fonts (trigger, ability name, etc.) — treat as body
+            if in_body:
+                body_parts.append(s["text"])
+            else:
+                italic_parts.append(s["text"])
+
+    italic = re.sub(r'\s+', ' ', "".join(italic_parts)).strip()
+    body = re.sub(r'\s+', ' ', "".join(body_parts)).strip()
+    return italic, body
+
+
+def _classify_preamble(text):
+    """Classify italic preamble text into cost, restrictions, and special conditions.
+
+    Splits text into sentences and categorizes each:
+    - Cost: model pays something (discard, suffer damage, sacrifice, etc.)
+    - Restriction: limits when/who (Ally only, Once per turn, etc.)
+    - Special condition: everything else (This action ignores..., etc.)
+
+    Returns dict with keys: action_cost, restrictions, special_conditions
+    """
+    if not text:
+        return {"action_cost": "", "restrictions": "", "special_conditions": ""}
+
+    # Split into sentences — split on ". " or trailing "."
+    # Preserve the period with each sentence
+    sentences = []
+    remaining = text.strip()
+    while remaining:
+        # Find sentence boundary: ". " followed by uppercase letter, or end of string
+        dot_pos = remaining.find(". ")
+        if dot_pos >= 0:
+            sentences.append(remaining[:dot_pos + 1].strip())
+            remaining = remaining[dot_pos + 2:].strip()
+        else:
+            sentences.append(remaining.strip())
+            remaining = ""
+
+    costs = []
+    restrictions = []
+    conditions = []
+
+    cost_patterns = [
+        r'\bdiscard a card\b',
+        r'\bdiscard a \([rcmt]\)',
+        r'\bsuffer \d',
+        r'\bdeal \d.*damage to this model\b',
+        r'\blower this model',
+        r'\bsacrifice\b',
+        r'\bkill this model\b',
+        r'\bspend\b',
+        r'\bpay\b',
+        r'\bdrain a\b',
+        r'\bremove a .+token.+from this model\b',
+    ]
+
+    restriction_patterns = [
+        r'^(ally|enemy|non-\w+|friendly|living|undead|construct)\s+only\b',
+        r'\bonly\.$',
+        r'^once per (turn|activation|game)\b',
+        r'\bcannot be declared\b',
+        r'\bmay not be declared\b',
+        r'\bmay only be declared\b',
+        r'^target must\b',
+        r'^limit\b',
+    ]
+
+    for sentence in sentences:
+        if not sentence:
+            continue
+        lower = sentence.lower().rstrip(".")
+
+        is_cost = any(re.search(p, lower) for p in cost_patterns)
+        if is_cost:
+            costs.append(sentence)
+            continue
+
+        is_restriction = any(re.search(p, lower) for p in restriction_patterns)
+        if is_restriction:
+            restrictions.append(sentence)
+            continue
+
+        # Catch-all: special condition
+        conditions.append(sentence)
+
+    return {
+        "action_cost": " ".join(costs),
+        "restrictions": " ".join(restrictions),
+        "special_conditions": " ".join(conditions),
+    }
 
 
 def _group_into_lines(spans, tolerance=2.0):
@@ -787,7 +958,7 @@ def _extract_back(page_spans, page):
     """
     Extract stat card back page data.
 
-    Returns dict matching Vision API back extraction schema.
+    Returns dict matching back extraction schema.
     """
     notes = []
 
@@ -940,6 +1111,18 @@ def _parse_action_section(all_spans, section):
     actions = []
     current_action = None
     has_active_trigger = False
+    in_preamble = False
+    preamble_text = ""
+
+    def _finalize_preamble():
+        """Classify accumulated preamble text and store on current action."""
+        nonlocal preamble_text
+        if current_action and preamble_text:
+            classified = _classify_preamble(preamble_text.strip())
+            current_action["action_cost"] = classified["action_cost"]
+            current_action["restrictions"] = classified["restrictions"]
+            current_action["special_conditions"] = classified["special_conditions"]
+        preamble_text = ""
 
     for line_spans in lines:
         line_type = _classify_action_line(line_spans, has_active_trigger)
@@ -959,16 +1142,25 @@ def _parse_action_section(all_spans, section):
                     current_action["name"] += " " + parsed["name"]
                 # else: skip artifact line with no current action
             else:
+                # Finalize preamble of previous action before saving
+                _finalize_preamble()
+
                 # Save previous action
                 if current_action:
                     current_action["effects"] = current_action["effects"].strip()
                     actions.append(current_action)
 
-                # Start new action
+                # Start new action — preamble mode active until body text seen
                 current_action = parsed
                 has_active_trigger = False
+                in_preamble = True
+                preamble_text = ""
 
         elif line_type == "trigger" and current_action:
+            # Triggers end preamble mode
+            if in_preamble:
+                _finalize_preamble()
+                in_preamble = False
             trigger = _parse_trigger_line(line_spans)
             if trigger:
                 current_action["triggers"].append(trigger)
@@ -980,9 +1172,24 @@ def _parse_action_section(all_spans, section):
             current_action["triggers"][-1]["text"] += " " + text
 
         elif line_type == "effect_text" and current_action:
-            text = _spans_to_text(line_spans)
-            current_action["effects"] += " " + text
+            if in_preamble:
+                # Split italic preamble from body effect text
+                italic, body = _split_preamble_effect(line_spans)
+                if italic:
+                    preamble_text += " " + italic
+                if body:
+                    # Body text seen — end preamble mode
+                    _finalize_preamble()
+                    in_preamble = False
+                    current_action["effects"] += " " + body
+                # If only italic text (no body), stay in preamble mode
+            else:
+                text = _spans_to_text(line_spans)
+                current_action["effects"] += " " + text
             has_active_trigger = False  # Effect text breaks trigger continuation
+
+    # Finalize preamble of last action
+    _finalize_preamble()
 
     # Don't forget the last action
     if current_action:
@@ -1016,11 +1223,14 @@ def _classify_action_line(line_spans, has_active_trigger=False):
     # Check if line contains a BoldItalic span (trigger name indicator)
     has_bold_italic = any(s["font"] == FONT_TRIGGER for s in line_spans)
 
-    # Check if line contains a Symbol span with a SUIT icon (c=99, m=109, r=114, t=116)
-    # Other symbols (soulstone, aura, pulse, melee, etc.) are NOT suit indicators
+    # Check if line contains a Symbol span with a trigger-indicating icon:
+    # - Suit icons: c=99, m=109, r=114, t=116
+    # - Soulstone icons: 83, 115 (soulstone-cost triggers are valid triggers)
     SUIT_CODES = {99, 109, 114, 116}  # c, m, r, t
-    has_suit_symbol = any(
-        s["font"] == FONT_SYMBOL and any(c in SUIT_CODES for c in _get_symbol_codes(s))
+    SOULSTONE_CODES = {83, 115}
+    TRIGGER_SYMBOL_CODES = SUIT_CODES | SOULSTONE_CODES
+    has_trigger_symbol = any(
+        s["font"] == FONT_SYMBOL and any(c in TRIGGER_SYMBOL_CODES for c in _get_symbol_codes(s))
         for s in line_spans
     )
 
@@ -1030,9 +1240,17 @@ def _classify_action_line(line_spans, has_active_trigger=False):
         for s in line_spans
     )
 
-    # Trigger: has a suit symbol AND a BoldItalic trigger name, at indented X
-    # The symbol may not be first (tab spans precede it), so check first_content or has_suit_symbol
-    if has_suit_symbol and has_bold_italic and first["x0"] >= 9:
+    # Trigger: has a trigger symbol (suit or soulstone) AND a BoldItalic trigger name
+    # The symbol may not be first (tab spans precede it)
+    if has_trigger_symbol and has_bold_italic and first["x0"] >= 9:
+        return "trigger"
+
+    # Trigger with non-suit symbol: single-char ExtraBold (like "X") followed by
+    # BoldItalic trigger name. This is a built-in trigger marker, not an action name.
+    if (has_bold_italic and first_content["font"] == FONT_ABILITY_NAME
+            and len(first_content["text"].strip()) == 1
+            and any(s["font"] == FONT_TRIGGER and ":" in s["text"]
+                    for s in line_spans)):
         return "trigger"
 
     # Action header: ExtraBold name at left margin (X < 15), possibly preceded by symbol
@@ -1043,7 +1261,8 @@ def _classify_action_line(line_spans, has_active_trigger=False):
         return "action_header"
 
     # Trigger continuation: indented body text when we're inside a trigger
-    if has_active_trigger and first["x0"] >= 18 and first["font"] in (FONT_BODY, FONT_BOLD, FONT_ITALIC):
+    # Also match lines starting with symbols (e.g., (pulse) continuation of trigger text)
+    if has_active_trigger and first["font"] in (FONT_BODY, FONT_BOLD, FONT_ITALIC, FONT_SYMBOL):
         return "trigger_continuation"
 
     # Effect text (italic conditions or regular body text)
@@ -1121,8 +1340,11 @@ def _parse_action_header(line_spans, section_type):
     action_name = " ".join(name_parts).rstrip(":")
 
     # Build range string
-    if range_icon and range_val:
-        range_str = f"{range_icon} {range_val}"
+    # If the Rg column explicitly says "-", use "-" (pre-name icon is just a type marker)
+    if range_val == "-":
+        range_str = "-"
+    elif range_icon and range_val:
+        range_str = f"{range_icon}{range_val}"
     elif range_icon:
         range_str = range_icon
     elif range_val:
@@ -1147,6 +1369,9 @@ def _parse_action_header(line_spans, section_type):
         "tn": tn_val or "-",
         "damage": damage_val or "-",
         "effects": "",
+        "action_cost": "",
+        "restrictions": "",
+        "special_conditions": "",
         "triggers": [],
     }
 
@@ -1177,19 +1402,34 @@ def _parse_trigger_line(line_spans):
             idx = i + 1
             break
 
-    # Find BoldItalic trigger name ending with ":"
+    # Find BoldItalic trigger name — may span multiple BoldItalic spans
+    # (e.g., "Li" + "ght Them Up:" across two spans)
+    name_parts = []
+    found_name_end = False
     for i in range(idx, len(line_spans)):
         if line_spans[i]["font"] == FONT_TRIGGER:
-            candidate = line_spans[i]["text"].strip().rstrip(":")
-            if candidate:  # Skip whitespace-only BoldItalic spans
-                trigger_name = candidate
+            text = line_spans[i]["text"]
+            if ":" in text:
+                # This span ends the trigger name
+                name_parts.append(text.split(":")[0])
                 idx = i + 1
+                found_name_end = True
                 break
-            # else keep searching
-            continue
-        # Skip whitespace-only Regular spans
-        if line_spans[i]["text"].strip():
+            else:
+                name_parts.append(text)
+        elif name_parts:
+            # We already have name parts — non-BoldItalic span means name ended
+            # (missing colon, just use what we have)
+            idx = i
+            found_name_end = True
             break
+        # else: skip leading non-BoldItalic spans (whitespace, etc.)
+
+    if name_parts:
+        trigger_name = "".join(name_parts).strip()
+    elif not found_name_end:
+        # No BoldItalic trigger name found at all — entire line is trigger text
+        idx = 0 if not suit else idx
 
     # Rest is trigger text
     remaining = line_spans[idx:]
@@ -1252,7 +1492,7 @@ def extract_stat_card_text(pdf_path, faction=None):
     """
     Extract front + back from a 2-page stat card PDF.
 
-    Returns: {"front": {...}, "back": {...}} matching Vision API schema.
+    Returns: {"front": {...}, "back": {...}} matching expected merger schema.
     """
     pdf_path = str(pdf_path)
     doc = fitz.open(pdf_path)
@@ -1302,6 +1542,75 @@ def extract_crew_card_text(pdf_path, faction=None):
     return {"front": front, "back": back}
 
 
+def _detect_and_strip_crew_tracker(keyword_abilities, keyword_actions):
+    """Detect crew tracker/bar artifacts in ability/action text and strip them.
+
+    Tracker artifacts appear as trailing all-caps labels (e.g., "RESEARCH BAR",
+    "SCANDAL BAR") or checkbox sequences (e.g., "Fieldwork Objectives q 8 q 9...").
+    These are layout elements from the PDF, not rules text.
+
+    Returns the tracker name (e.g., "Research Bar") or None if no tracker found.
+    Modifies ability/action text in-place to remove the artifacts.
+    """
+    # Known tracker bar patterns (trailing all-caps labels)
+    TRACKER_BARS = [
+        "RESEARCH BAR",
+        "SCANDAL BAR",
+        "LEVERAGE BAR",
+        "POWER BAR",
+        "FERVOR BAR",
+        "LINKED GRID BAR",
+    ]
+
+    # Fieldwork objectives checkbox pattern — case-sensitive to avoid matching
+    # legitimate game text ("fieldwork objectives" in lowercase body text)
+    FIELDWORK_RE = re.compile(r'\s*Fieldwork Objectives(?:\s+q\s+\d+)*\s*$')
+
+    tracker_name = None
+
+    # Scan and strip from ability text
+    for ka in keyword_abilities:
+        for ab in ka.get("abilities", []):
+            text = ab.get("text", "")
+            if not text:
+                continue
+
+            # Check for trailing bar labels
+            for bar in TRACKER_BARS:
+                if text.rstrip().endswith(bar):
+                    text = text[:text.rfind(bar)].rstrip()
+                    tracker_name = bar.title()  # "RESEARCH BAR" -> "Research Bar"
+                    ab["text"] = text
+                    break
+
+            # Check for fieldwork objectives
+            m = FIELDWORK_RE.search(text)
+            if m:
+                ab["text"] = text[:m.start()].rstrip()
+                tracker_name = "Fieldwork Objectives"
+
+    # Scan and strip from action effects
+    for ka in keyword_actions:
+        for act in ka.get("actions", []):
+            text = act.get("effects", "")
+            if not text:
+                continue
+
+            for bar in TRACKER_BARS:
+                if text.rstrip().endswith(bar):
+                    text = text[:text.rfind(bar)].rstrip()
+                    tracker_name = bar.title()
+                    act["effects"] = text
+                    break
+
+            m = FIELDWORK_RE.search(text)
+            if m:
+                act["effects"] = text[:m.start()].rstrip()
+                tracker_name = "Fieldwork Objectives"
+
+    return tracker_name
+
+
 def _extract_crew_front(page_spans, faction=None, pdf_path=None):
     """Extract crew card front page: name, master, abilities, actions, markers."""
     notes = []
@@ -1334,10 +1643,26 @@ def _extract_crew_front(page_spans, faction=None, pdf_path=None):
     associated_master = ""
     associated_title = ""
     if master_spans:
-        master_text = " ".join(s["text"].strip() for s in master_spans)
-        associated_master = master_text.rstrip(",").strip()
+        # Group master+title by line (Y coordinate) to handle multi-title crew cards.
+        # E.g., "Lucas McCabe, Relic Hunter" on line 1 and "Lucas McCabe, Dismounted Hunter" on line 2.
+        master_lines = _group_into_lines(master_spans, tolerance=2.0)
+        master_names = []
+        for line in master_lines:
+            name = " ".join(s["text"].strip() for s in line).rstrip(",").strip()
+            if name and name not in master_names:
+                master_names.append(name)
+        associated_master = master_names[0] if master_names else ""
+        # Strip parenthetical station suffixes like "(Master)" from crew leader names
+        # (e.g., Wrath is a Henchman-led crew; card says "Wrath (Master)")
+        associated_master = re.sub(r'\s*\((?:Master|Henchman)\)\s*$', '', associated_master)
     if title_spans:
-        associated_title = " ".join(s["text"].strip() for s in title_spans).strip()
+        title_lines = _group_into_lines(title_spans, tolerance=2.0)
+        titles = []
+        for line in title_lines:
+            t = " ".join(s["text"].strip() for s in line).strip()
+            if t and t not in titles:
+                titles.append(t)
+        associated_title = " / ".join(titles) if titles else ""
 
     # 3. FACTION from path
     if faction is None and pdf_path:
@@ -1351,6 +1676,9 @@ def _extract_crew_front(page_spans, faction=None, pdf_path=None):
     # Parse granted_to sections with their abilities and actions
     keyword_abilities, keyword_actions, markers = _parse_crew_body(body_spans, notes)
 
+    # 5. DETECT AND STRIP TRACKER ARTIFACTS from ability/action text
+    crew_tracker = _detect_and_strip_crew_tracker(keyword_abilities, keyword_actions)
+
     front = {
         "card_type": "crew_card",
         "name": card_name,
@@ -1360,6 +1688,7 @@ def _extract_crew_front(page_spans, faction=None, pdf_path=None):
         "keyword_abilities": keyword_abilities,
         "keyword_actions": keyword_actions,
         "markers": markers,
+        "crew_tracker": crew_tracker,
         "extraction_notes": notes,
     }
     return front
@@ -1586,7 +1915,9 @@ def _parse_crew_body(body_spans, notes):
                     parsed["skill_built_in_suit"] = None
                     parsed["is_signature"] = False
                     parsed["soulstone_cost"] = 0
-                    parsed["costs_and_restrictions"] = None
+                    parsed["action_cost"] = None
+                    parsed["restrictions"] = None
+                    parsed["special_conditions"] = None
                     # Convert skill_value to int if possible
                     try:
                         parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else None
@@ -1663,7 +1994,9 @@ def _parse_crew_body(body_spans, notes):
                         "damage": None,
                         "is_signature": False,
                         "soulstone_cost": ss_cost,
-                        "costs_and_restrictions": None,
+                        "action_cost": None,
+                        "restrictions": None,
+                        "special_conditions": None,
                         "effects": "",
                         "triggers": [trigger],
                     }
@@ -1866,19 +2199,44 @@ def extract_upgrade_card_text(pdf_path, faction=None):
     else:
         notes.append("Could not extract upgrade card name")
 
-    # 3. DESCRIPTION — HarriText-Regular, first body line (Y ~70-85)
+    # 3. DESCRIPTION — preamble line like "This model gains the following ability:"
+    # Only capture the preamble line itself, NOT the ability/trigger text that follows.
+    # Find the first ability name (ExtraBold ":") or trigger name (BoldItalic ":")
+    # or action section header as the body start anchor.
+    first_body_content_y = None
+    for s in page_spans:
+        if s["y0"] <= 65 or s["y0"] >= 285:
+            continue
+        # ExtraBold ability name ending with ":"
+        if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+            first_body_content_y = s["y0"]
+            break
+        # BoldItalic trigger name ending with ":" (universal triggers)
+        if s["font"] == FONT_TRIGGER and s["text"].strip().endswith(":"):
+            first_body_content_y = s["y0"]
+            break
+        # Suit symbol before a trigger name (some triggers start with suit)
+        if s["font"] == FONT_SYMBOL and s["y0"] > 85:
+            # Check if there's a BoldItalic trigger name nearby on the same line
+            for s2 in page_spans:
+                if (s2["font"] == FONT_TRIGGER
+                    and abs(s2["y0"] - s["y0"]) < 2.0
+                    and s2["text"].strip()):
+                    first_body_content_y = s["y0"]
+                    break
+            if first_body_content_y is not None:
+                break
+    # Description spans: between card name and first body content (or Y 100 max)
+    desc_cutoff = first_body_content_y - 1 if first_body_content_y else 100
     desc_spans = [s for s in page_spans
                   if s["font"] in (FONT_BODY, FONT_BOLD)
-                  and 65 <= s["y0"] <= 90
+                  and 65 <= s["y0"] < desc_cutoff
                   and s["text"].strip()]
     description = ""
     if desc_spans:
         lines = _group_into_lines(desc_spans, tolerance=2.0)
         if lines:
-            desc_parts = []
-            for line in lines:
-                if all(65 <= s["y0"] <= 95 for s in line):
-                    desc_parts.append(_spans_to_text(line))
+            desc_parts = [_spans_to_text(line) for line in lines]
             description = " ".join(desc_parts).strip()
 
     # 4. LIMITATIONS — near bottom of card, "LIMITATIONS" header
@@ -1898,9 +2256,11 @@ def extract_upgrade_card_text(pdf_path, faction=None):
             break
 
     # 5. BODY CONTENT — parse abilities, actions, universal triggers
-    # Body is between description and limitations
+    # Body starts at the first ability/trigger, or after description.
     body_start_y = 85
-    if desc_spans:
+    if first_body_content_y is not None:
+        body_start_y = first_body_content_y - 1
+    elif desc_spans:
         body_start_y = max(s["y1"] for s in desc_spans) - 1
 
     body_end_y = 285  # Before limitations area
@@ -2005,7 +2365,9 @@ def _parse_upgrade_body(body_spans, notes):
                     parsed["skill_fate_modifier"] = None
                     parsed["is_signature"] = False
                     parsed["soulstone_cost"] = 0
-                    parsed["costs_and_restrictions"] = None
+                    parsed["action_cost"] = None
+                    parsed["restrictions"] = None
+                    parsed["special_conditions"] = None
                     try:
                         parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else 0
                     except ValueError:

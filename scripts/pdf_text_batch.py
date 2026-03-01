@@ -376,6 +376,43 @@ def process_one_upgrade_card(pdf_path, faction, keyword, conn=None, dry_run=Fals
     return result
 
 
+def _resolve_star_crew_card_names(conn):
+    """Resolve '*' crew_card_name entries by looking up matching crew cards.
+
+    Some Masters (e.g., Rusty Alyce, Rider Remade) have '*' instead of a crew
+    card name on their stat card because they choose between multiple crew cards.
+    After crew cards are loaded, we can resolve '*' to the actual names.
+
+    Returns the number of models resolved.
+    """
+    c = conn.cursor()
+    stars = c.execute(
+        "SELECT id, name, title FROM models WHERE crew_card_name = '*'"
+    ).fetchall()
+
+    resolved = 0
+    for model_id, name, title in stars:
+        # Find crew cards associated with this master+title
+        crew = c.execute(
+            """SELECT cc.name FROM crew_cards cc
+               WHERE LOWER(cc.associated_master) = LOWER(?)
+               AND LOWER(cc.associated_title) = LOWER(?)
+               ORDER BY cc.name""",
+            (name, title)
+        ).fetchall()
+
+        if crew:
+            crew_names = " / ".join(r[0] for r in crew)
+            c.execute("UPDATE models SET crew_card_name = ? WHERE id = ?",
+                      (crew_names, model_id))
+            print(f"  Resolved: {name} ({title}) → crew_card_name='{crew_names}'")
+            resolved += 1
+        else:
+            print(f"  WARNING: {name} ({title}) has '*' but no matching crew cards found")
+
+    return resolved
+
+
 # ── Deep Comparison ────────────────────────────────────────────────────
 
 def _normalize_text(text):
@@ -1289,6 +1326,31 @@ def main():
         if not args.dry_run:
             conn.commit()
         print(f"  Upgrades: OK={upg_ok}  Fail={upg_fail}")
+
+        # ── Phase 4: Post-processing ──
+        if not args.dry_run:
+            print("\nPhase 4: Post-processing")
+
+            # 4a. Resolve '*' crew_card_names
+            resolved = _resolve_star_crew_card_names(conn)
+            if resolved:
+                conn.commit()
+                print(f"  Resolved {resolved} '*' crew_card_name(s) from crew_cards table")
+
+            # 4b. Assign Totem station to models referenced as totems but missing station
+            c = conn.cursor()
+            totem_fixes = c.execute("""
+                UPDATE models SET station = 'Totem'
+                WHERE station IS NULL AND cost = '-'
+                AND id IN (
+                    SELECT m2.id FROM models m1, models m2
+                    WHERE m1.totem IS NOT NULL AND m1.totem != '' AND m1.totem != '-'
+                    AND (m1.totem LIKE '%' || m2.name || '%')
+                )
+            """).rowcount
+            if totem_fixes:
+                conn.commit()
+                print(f"  Assigned Totem station to {totem_fixes} model(s) referenced as totems")
 
         # ── Summary ──
         total_ok = stat_ok + crew_ok + upg_ok

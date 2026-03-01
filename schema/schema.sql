@@ -80,8 +80,10 @@ CREATE TABLE IF NOT EXISTS actions (
     damage                  TEXT,                         -- Damage value as string (can be "2", "X", etc.) or NULL
     is_signature            BOOLEAN DEFAULT 0,
     soulstone_cost          INTEGER DEFAULT 0,           -- 0, 1, or 2
-    effects                 TEXT,                         -- Resolution effect text
-    costs_and_restrictions  TEXT,                         -- Declaration-phase requirements (italic text)
+    effects                 TEXT,                         -- Resolution effect text (non-italic body text)
+    action_cost             TEXT,                         -- Italic preamble: additional costs (e.g., "Discard a card.")
+    restrictions            TEXT,                         -- Italic preamble: usage limits (e.g., "Ally only. Once per turn.")
+    special_conditions      TEXT,                         -- Italic preamble: other conditions (e.g., "This action ignores range and LoS.")
     FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE
 );
 
@@ -109,6 +111,7 @@ CREATE TABLE IF NOT EXISTS crew_cards (
     associated_master   TEXT NOT NULL,
     associated_title    TEXT NOT NULL,
     faction             TEXT NOT NULL,
+    crew_tracker        TEXT,                         -- Crew-specific tracker/bar name (e.g., "Research Bar", "Scandal Bar", "Fieldwork Objectives")
     source_pdf          TEXT,
     parse_date          TEXT,
     parse_status        TEXT DEFAULT 'auto'
@@ -139,8 +142,10 @@ CREATE TABLE IF NOT EXISTS crew_keyword_actions (
     damage          TEXT,
     is_signature    BOOLEAN DEFAULT 0,
     soulstone_cost  INTEGER DEFAULT 0,
-    effects         TEXT,
-    costs_and_restrictions TEXT,
+    effects             TEXT,
+    action_cost         TEXT,
+    restrictions        TEXT,
+    special_conditions  TEXT,
     FOREIGN KEY (crew_card_id) REFERENCES crew_cards(id) ON DELETE CASCADE
 );
 
@@ -302,7 +307,9 @@ CREATE TABLE IF NOT EXISTS upgrade_actions (
     is_signature            BOOLEAN DEFAULT 0,
     soulstone_cost          INTEGER DEFAULT 0,
     effects                 TEXT,
-    costs_and_restrictions  TEXT,
+    action_cost             TEXT,
+    restrictions            TEXT,
+    special_conditions      TEXT,
     FOREIGN KEY (upgrade_id) REFERENCES upgrades(id) ON DELETE CASCADE
 );
 

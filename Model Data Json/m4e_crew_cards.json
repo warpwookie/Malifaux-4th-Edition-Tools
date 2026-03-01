@@ -16,7 +16,7 @@
         "granted_to": "Friendly unique M&SU models",
         "name": "Safety Inspection",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "is_signature": false,
         "soulstone_cost": 0,
         "effects": "Once per activation. Deal 2 damage to target engaged ally. Summon an M&SU minion into base contact with the target. The summoned model has 4 health."
@@ -71,17 +71,17 @@
         "granted_to": "Friendly December models",
         "name": "Grim Feast",
         "category": "tactical_actions",
-        "range": "(aura) 4\"",
+        "range": "(aura)4\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a Remains marker. Place this model in base contact with the target, then remove the target. This model heals 2. (pulse)4\" must pass a TN 11 Wp duel or gain a Hunger token.",
+        "effects": "Target a Remains marker. Place this model in base contact with the target, then remove the target. This model heals 2.",
         "triggers": [
           {
             "name": "Unaccountably Peckish",
             "suit": "(c)",
             "timing": "after_succeeding",
-            "text": "Enemy models within",
+            "text": "Enemy models within (pulse)4\" must pass a TN 11 Wp duel or gain a Hunger token.",
             "is_mandatory": false,
             "soulstone_cost": 0
           }
@@ -118,7 +118,7 @@
         "name": "Exhaled Into Being",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "3",
@@ -182,7 +182,7 @@
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This model must be within 1\" of the centerline. This model heals 2 and gains a Burning token. If this crew\u2019s fervor bar has not been increased this turn, increase it by 1. FERVOR BAR"
+        "effects": "This model must be within 1\" of the centerline. This model heals 2 and gains a Burning token. If this crew\u2019s fervor bar has not been increased this turn, increase it by 1."
       }
     ],
     "tokens": [
@@ -262,7 +262,7 @@
         "name": "Wanted: Dead",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -275,7 +275,7 @@
         "name": "Wanted: Alive",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 7,
         "resist": "Sp",
         "is_signature": false,
@@ -287,7 +287,7 @@
         "name": "Collect Debt",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
@@ -335,7 +335,7 @@
         "granted_to": "Friendly non-peon Wildfire models",
         "name": "Frantic Triage",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -345,7 +345,7 @@
         "granted_to": "Friendly non-peon Wildfire models",
         "name": "Burst the Core",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -392,7 +392,7 @@
         "granted_to": "Friendly unique Witness models",
         "name": "Mental Bind",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -457,7 +457,17 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Scheme marker within range. Enemy models within (pulse)2\" of the made marker must pass a TN 12 Wp duel or gain a Stunned token. [?9](soulstone) Infinite Puzzle: Summon the Puzzle Box, Unsolved within range."
+        "effects": "Make a Scheme marker within range. Enemy models within (pulse)2\" of the made marker must pass a TN 12 Wp duel or gain a Stunned token.",
+        "triggers": [
+          {
+            "name": "Infinite Puzzle",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon the Puzzle Box, Unsolved within range.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -509,7 +519,7 @@
         "granted_to": "Friendly unique Performer models",
         "name": "Divert Attention",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -552,7 +562,7 @@
         "granted_to": "Friendly unique Performer models",
         "name": "Showstopper",
         "category": "tactical_actions",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -605,7 +615,7 @@
         "granted_to": "Friendly non-gamin Academic models",
         "name": "Mantra of Fury",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -615,7 +625,7 @@
         "granted_to": "Friendly non-gamin Academic models",
         "name": "Mantra of Rebuke",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -625,7 +635,7 @@
         "granted_to": "Friendly non-gamin Academic models",
         "name": "Mantra of Travel",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -681,12 +691,22 @@
         "name": "Take It Outside",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Choose an ally in the target\u2019s LoS. The target moves its Sp toward the chosen model. Then, the target must declare a (melee) action targeting the chosen model, if able. That (melee) may not declare triggers or receive raises. (soulstone) \u201cGET SOME!\u201d: Once per activation. This model declares one attack targeting each enemy engaged with it."
+        "effects": "Choose an ally in the target\u2019s LoS. The target moves its Sp toward the chosen model. Then, the target must declare a (melee) action targeting the chosen model, if able. That (melee) may not declare triggers or receive raises.",
+        "triggers": [
+          {
+            "name": "\u201cGET SOME!\u201d",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model declares one attack targeting each enemy engaged with it.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -735,7 +755,7 @@
         "name": "Frigid Gust",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Sp",
         "is_signature": false,
@@ -779,7 +799,7 @@
         "granted_to": "Friendly unique Kin models",
         "name": "Raid Remnant",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -840,7 +860,7 @@
         "granted_to": "Friendly unique Big Hat models",
         "name": "Disappointed",
         "category": "tactical_actions",
-        "range": "(aura) 4\"",
+        "range": "(aura)4\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -887,11 +907,21 @@
         "granted_to": "Friendly unique Angler models",
         "name": "Nautical Nonsense",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Tide marker within range. (soulstone) Bestest Boy: Summon a Bruce in base contact with the made marker."
+        "effects": "Make a Tide marker within range.",
+        "triggers": [
+          {
+            "name": "Bestest Boy",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon a Bruce in base contact with the made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       },
       {
         "granted_to": "Friendly unique Angler models",
@@ -944,7 +974,7 @@
         "granted_to": "Friendly unique Tricksy models",
         "name": "Unnecessary Tinkerin\u2019",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -954,7 +984,7 @@
         "granted_to": "Friendly unique Tricksy models",
         "name": "\u201cIt\u2019s Sabotage!\u201d",
         "category": "tactical_actions",
-        "range": "(magic) 1\"",
+        "range": "(magic)1\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1042,7 +1072,7 @@
         "granted_to": "Friendly unique Tri-Chi models",
         "name": "Liquid Courage",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1105,7 +1135,7 @@
         "granted_to": "Friendly unique Wizz-Bang models",
         "name": "Inspect The Stage",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1150,13 +1180,23 @@
         "name": "Drunken Fist",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 2\"",
+        "range": "(melee)2\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Remove a friendly Poison token from this model. This action treats all (-) flips as (+) flips. Place this model anywhere within 3\" of the target. (soulstone) Tipsy Takedown: Move the target up to 4\". If it is dealt falling damage, increase that damage by +1."
+        "effects": "Remove a friendly Poison token from this model. This action treats all (-) flips as (+) flips. Place this model anywhere within 3\" of the target.",
+        "triggers": [
+          {
+            "name": "Tipsy Takedown",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Move the target up to 4\". If it is dealt falling damage, increase that damage by +1.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -1244,7 +1284,7 @@
         "granted_to": "Friendly unique Swampfiend models",
         "name": "Muckborne",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1296,7 +1336,7 @@
         "granted_to": "Friendly unique Sooey models and Sooey models with the beast characteristic",
         "name": "Mad Dash",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "tn": 2,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1353,11 +1393,21 @@
         "granted_to": "Friendly unique Big Hat models",
         "name": "Seize the Opportunity",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 7,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target an enemy marker. Place this model in base contact with the target. If the target is a Scheme marker, this model gains an Impact token. Then, remove the target. (soulstone) Good Haul: Draw a card."
+        "effects": "Once per activation. Target an enemy marker. Place this model in base contact with the target. If the target is a Scheme marker, this model gains an Impact token. Then, remove the target.",
+        "triggers": [
+          {
+            "name": "Good Haul",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Draw a card.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -1396,11 +1446,21 @@
         "granted_to": "Friendly unique Kin models",
         "name": "Gremlin Ingenuity",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "The target gains an Adaptable token. (soulstone) Swig o\u2019 Shine: Once per activation. This model heals 3."
+        "effects": "The target gains an Adaptable token.",
+        "triggers": [
+          {
+            "name": "Swig o\u2019 Shine",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. This model heals 3.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -1445,7 +1505,7 @@
         "name": "\u201cSoo-ieeee!\u201d",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Df",
         "is_signature": false,
@@ -1502,7 +1562,17 @@
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a friendly Tide marker. Enemy models within (pulse)2\" of the target must pass a TN 13 Df duel or be dealt 2 damage. (soulstone) Low Tide: Enemies within range of the (pulse) gain a Staggered token."
+        "effects": "Target a friendly Tide marker. Enemy models within (pulse)2\" of the target must pass a TN 13 Df duel or be dealt 2 damage.",
+        "triggers": [
+          {
+            "name": "Low Tide",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Enemies within range of the (pulse) gain a Staggered token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -1550,11 +1620,21 @@
         "granted_to": "Friendly unique Wizz-Bang models",
         "name": "The Ol' Switcheroo",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 8,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a Pyrotechnic marker. Make a Scheme marker in base contact with the target. Then deal 1 damage to models within (pulse)2\" of the target. Remove the target. (soulstone) Porksplosions: Summon a Flying Piglet within range."
+        "effects": "Target a Pyrotechnic marker. Make a Scheme marker in base contact with the target. Then deal 1 damage to models within (pulse)2\" of the target. Remove the target.",
+        "triggers": [
+          {
+            "name": "Porksplosions",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon a Flying Piglet within range.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -1602,7 +1682,7 @@
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Reduce this crew\u2019s research bar by any amount. For each point this bar was reduced, choose another ally within range. The chosen models are placed within 6\" of this model. Then, one model moved by this action may declare the Interact action. RESEARCH BAR"
+        "effects": "Reduce this crew\u2019s research bar by any amount. For each point this bar was reduced, choose another ally within range. The chosen models are placed within 6\" of this model. Then, one model moved by this action may declare the Interact action."
       }
     ],
     "tokens": [
@@ -1634,8 +1714,8 @@
   },
   {
     "name": "Antique Dealer",
-    "associated_master": "Lucas McCabe, Lucas McCabe",
-    "associated_title": "Relic Hunter Dismounted Hunter",
+    "associated_master": "Lucas McCabe",
+    "associated_title": "Relic Hunter / Dismounted Hunter",
     "faction": "Explorer's Society",
     "keyword_abilities": [
       {
@@ -1649,7 +1729,7 @@
         "granted_to": "Friendly unique Wastrel models",
         "name": "Quick Forgery",
         "category": "tactical_actions",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1698,7 +1778,7 @@
         "granted_to": "Friendly unique Wastrel models",
         "name": "\u201cCareful! It\u2019s Cursed!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1747,7 +1827,7 @@
         "granted_to": "Friendly unique Apex models",
         "name": "Sic \u2018Em",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1795,7 +1875,7 @@
         "granted_to": "Friendly unique Bygone models",
         "name": "Engage Failsafe",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1903,7 +1983,7 @@
         "granted_to": "Friendly unique Syndicate models",
         "name": "Speed of Information",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -1955,7 +2035,7 @@
         "granted_to": "Friendly unique Bygone models",
         "name": "Foreboding Wards",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2004,7 +2084,7 @@
       {
         "granted_to": "Friendly EVS models",
         "name": "Contaminated Theories",
-        "text": "Once per activation. When an enemy model cheats fate in a duel with this model, with a card in this model\u2019s completed fieldwork objectives, this model may drain a (soulstone) and mark the objective with the value of the cheated card as uncompleted. If it does so, the cheated card\u2019s value is set to 0. Fieldwork Objectives q 8 q 9 q 10 q 11 q 12 q 13"
+        "text": "Once per activation. When an enemy model cheats fate in a duel with this model, with a card in this model\u2019s completed fieldwork objectives, this model may drain a (soulstone) and mark the objective with the value of the cheated card as uncompleted. If it does so, the cheated card\u2019s value is set to 0."
       }
     ],
     "tokens": [
@@ -2057,7 +2137,7 @@
         "name": "Exoskeletal Link",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 11,
@@ -2106,7 +2186,7 @@
         "granted_to": "Friendly unique Apex models",
         "name": "Set the Ambush",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2154,7 +2234,7 @@
         "granted_to": "Friendly unique Syndicate models",
         "name": "Union Buster",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2254,13 +2334,23 @@
         "name": "Turncoat",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 12,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Target declares an action chosen and controlled by this model. [?9](soulstone) Unseen Footsteps: When resolving, first place the target anywhere within 6\" of its current location."
+        "effects": "Once per activation. Target declares an action chosen and controlled by this model.",
+        "triggers": [
+          {
+            "name": "Unseen Footsteps",
+            "suit": "(soulstone)",
+            "timing": "when_resolving",
+            "text": "When resolving, first place the target anywhere within 6\" of its current location.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -2299,7 +2389,7 @@
         "granted_to": "Friendly unique DUA models",
         "name": "Umbral Flare",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2309,7 +2399,7 @@
         "granted_to": "Friendly unique DUA models",
         "name": "\u201cI Love it When a Plan",
         "category": "tactical_actions",
-        "range": "(aura) 2\"",
+        "range": "(aura)2\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2352,11 +2442,21 @@
         "granted_to": "Friendly Cadmus models",
         "name": "Soul Shock",
         "category": "tactical_actions",
-        "range": "(pulse) 3\"",
+        "range": "(pulse)3\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Enemy models within range must pass a TN 12 Wp duel or gain a Parasite token and be dealt 1 damage. Summon an Eyes and Ears in base contact with models killed by this action. (soulstone) Unfair Play: One enemy model within range gains a Parasite token."
+        "effects": "Once per activation. Enemy models within range must pass a TN 12 Wp duel or gain a Parasite token and be dealt 1 damage. Summon an Eyes and Ears in base contact with models killed by this action.",
+        "triggers": [
+          {
+            "name": "Unfair Play",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "One enemy model within range gains a Parasite token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -2404,7 +2504,7 @@
         "granted_to": "Friendly Cavalier models",
         "name": "A New Front",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2456,7 +2556,7 @@
         "granted_to": "Friendly Cavalier models",
         "name": "Heavy Bombardment",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2508,7 +2608,7 @@
         "granted_to": "Friendly unique Family models",
         "name": "\u201c\u00a1A por \u00c9l!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2560,13 +2660,21 @@
         "name": "Clerical Command",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action cannot target the same model more than once per activation. Target declares an action, chosen and controlled by this model. (soulstone) Legal Labyrinth: Move this model and the target up to 4\".",
+        "effects": "This action cannot target the same model more than once per activation. Target declares an action, chosen and controlled by this model.",
         "triggers": [
+          {
+            "name": "Legal Labyrinth",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Move this model and the target up to 4\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Overruled and Misled",
             "suit": "(m)",
@@ -2622,11 +2730,21 @@
         "granted_to": "Friendly Witch Hunter models",
         "name": "Cinder\u2019s Grasp",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make an Inferno marker within range. Enemies within (pulse)3\" of the made marker must pass a TN 13 Sp duel or be moved 3\" toward it. (soulstone) Burn Over: Once per activation. Enemy models with a friendly Burning token within (pulse)3\" of the made marker are dealt 2 damage."
+        "effects": "Make an Inferno marker within range. Enemies within (pulse)3\" of the made marker must pass a TN 13 Sp duel or be moved 3\" toward it.",
+        "triggers": [
+          {
+            "name": "Burn Over",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. Enemy models with a friendly Burning token within (pulse)3\" of the made marker are dealt 2 damage.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -2673,7 +2791,7 @@
         "granted_to": "Friendly Witch Hunter models",
         "name": "Fire\u2019s Glow",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2799,11 +2917,21 @@
         "granted_to": "Friendly unique Marshal models",
         "name": "Dragged Down",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Target a Remains marker. Enemies within (pulse)3\" of the target must pass a TN 13 Sp duel or be dealt 2 damage. Then, remove the target. (soulstone) Hands From Below: When resolving, enemy models suffer a (-) to the duel. Models that fail the duel gain a Craven token. Do not remove the marker."
+        "effects": "Target a Remains marker. Enemies within (pulse)3\" of the target must pass a TN 13 Sp duel or be dealt 2 damage. Then, remove the target.",
+        "triggers": [
+          {
+            "name": "Hands From Below",
+            "suit": "(soulstone)",
+            "timing": "when_resolving",
+            "text": "When resolving, enemy models suffer a (-) to the duel. Models that fail the duel gain a Craven token. Do not remove the marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -2859,7 +2987,7 @@
         "granted_to": "Friendly Cavalier models",
         "name": "Battlefront",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2911,7 +3039,7 @@
         "granted_to": "Friendly Cavalier models",
         "name": "Bombardment",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -2963,7 +3091,7 @@
         "granted_to": "Friendly unique Marshal models",
         "name": "Restore Natural Order",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 2,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -3025,7 +3153,7 @@
         "name": "Restraint",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 6\"",
+        "range": "(gun)6\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "2",
@@ -3047,7 +3175,7 @@
         "granted_to": "Friendly unique Guard models and friendly Guard models with a Promoted token",
         "name": "\u201cAt Attention!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -3100,7 +3228,7 @@
       {
         "granted_to": "Friendly unique Journalist models",
         "name": "On a Deadline",
-        "text": "After an enemy model within 3\" declares the Interact action, this model may decrease this crew\u2019s scandal bar by 2 to draw a card. SCANDAL BAR"
+        "text": "After an enemy model within 3\" declares the Interact action, this model may decrease this crew\u2019s scandal bar by 2 to draw a card."
       }
     ],
     "tokens": [
@@ -3145,12 +3273,22 @@
         "name": "Entrapment",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "The target gains an Entranced token. An ally with LoS to the target may move up to its Sp toward the target. (soulstone) Caught in the Act: Place a Strategy marker within 1\" of the target within 3\" of its current location. SCANDAL BAR"
+        "effects": "The target gains an Entranced token. An ally with LoS to the target may move up to its Sp toward the target.",
+        "triggers": [
+          {
+            "name": "Caught in the Act",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Place a Strategy marker within 1\" of the target within 3\" of its current location.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -3194,7 +3332,7 @@
         "granted_to": "Friendly Augmented models",
         "name": "Dual Power Source",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -3298,7 +3436,7 @@
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Pylon marker within range, not within 6\" of this crew\u2019s deployment zone or another Pylon marker. LINKED GRID BAR"
+        "effects": "Make a Pylon marker within range, not within 6\" of this crew\u2019s deployment zone or another Pylon marker."
       }
     ],
     "tokens": [
@@ -3341,7 +3479,7 @@
         "granted_to": "Friendly unique Elite models",
         "name": "Trading Places",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -3541,7 +3679,7 @@
         "name": "Cruel Promises",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 12\"",
+        "range": "(magic)12\"",
         "skill_value": 7,
         "resist": "Wp",
         "damage": "2",
@@ -3587,7 +3725,7 @@
         "name": "Hateful Rumors",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
@@ -3703,7 +3841,7 @@
         "granted_to": "Friendly Savage models",
         "name": "Frozen Vigor",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -3822,13 +3960,23 @@
         "name": "Stranglethorn",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 5,
         "resist": "Df",
         "damage": "1",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make up to two Underbrush markers within 1\" of the target. (soulstone) Judgement of the Court: Deal X damage to the target, where X is the number of Underbrush markers within 3\" of the target (to a maximum of 3)."
+        "effects": "Make up to two Underbrush markers within 1\" of the target.",
+        "triggers": [
+          {
+            "name": "Judgement of the Court",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Deal X damage to the target, where X is the number of Underbrush markers within 3\" of the target (to a maximum of 3).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -3867,11 +4015,21 @@
         "granted_to": "Friendly unique Nightmare models",
         "name": "Dreadful Dream",
         "category": "tactical_actions",
-        "range": "(pulse) 4\"",
+        "range": "(pulse)4\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Enemy models within range must pass a TN 12 Wp duel or gain a Fright token. (soulstone) \u201cI Can't Wake Up!\u201d: Once per activation. One minion or peon model that failed this duel gains a Flicker token."
+        "effects": "Once per activation. Enemy models within range must pass a TN 12 Wp duel or gain a Fright token.",
+        "triggers": [
+          {
+            "name": "\u201cI Can't Wake Up!\u201d",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per activation. One minion or peon model that failed this duel gains a Flicker token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -3940,7 +4098,7 @@
   },
   {
     "name": "On Tour",
-    "associated_master": "Wrath (Master)",
+    "associated_master": "Wrath",
     "associated_title": "",
     "faction": "Neverborn",
     "keyword_abilities": [
@@ -3960,7 +4118,7 @@
         "granted_to": "Friendly Crossroads models",
         "name": "Destructive",
         "category": "tactical_actions",
-        "range": "(magic) 14\"",
+        "range": "(magic)14\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -4003,11 +4161,21 @@
         "granted_to": "Friendly unique Nightmare models",
         "name": "Waking Scream",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Ally only. Kill the target. Enemy models within (pulse)2\" of the target must pass a TN 13 Wp duel or be dealt 2 damage. Models with a Fright token suffer a (-) to this duel. (soulstone) Woke Up Before I Hit the Ground: This model heals an amount equal to the target's health (maximum 5)."
+        "effects": "Ally only. Kill the target. Enemy models within (pulse)2\" of the target must pass a TN 13 Wp duel or be dealt 2 damage. Models with a Fright token suffer a (-) to this duel.",
+        "triggers": [
+          {
+            "name": "Woke Up Before I Hit the Ground",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model heals an amount equal to the target's health (maximum 5).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -4052,7 +4220,7 @@
         "name": "From the Pits",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "1",
@@ -4106,7 +4274,7 @@
         "name": "Swept Away",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "3",
@@ -4242,7 +4410,7 @@
         "granted_to": "Friendly unique Brood models",
         "name": "Sever Artery",
         "category": "tactical_actions",
-        "range": "(pulse) 8\"",
+        "range": "(pulse)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -4300,7 +4468,7 @@
         "name": "Ancient Winds",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Sp",
         "is_signature": false,
@@ -4311,7 +4479,7 @@
         "granted_to": "Friendly Savage models",
         "name": "Hepatomancy",
         "category": "tactical_actions",
-        "range": "(aura) 3\"",
+        "range": "(aura)3\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -4355,14 +4523,22 @@
         "name": "Heavy Slam",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "2",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If this action was generated by the Charge action, this model gains an Impact token. (soulstone) Went in Geared Up: Once per turn. This model attaches an Equipment upgrade.",
+        "effects": "If this action was generated by the Charge action, this model gains an Impact token.",
         "triggers": [
+          {
+            "name": "Went in Geared Up",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Once per turn. This model attaches an Equipment upgrade.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Knock Aside",
             "suit": "(m)",
@@ -4415,7 +4591,7 @@
         "granted_to": "Friendly Obliteration models",
         "name": "Reset Timeline",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -4593,7 +4769,7 @@
         "name": "Combat Maneuver",
         "category": "attack_actions",
         "action_type": "melee",
-        "range": "(melee) 1\"",
+        "range": "(melee)1\"",
         "skill_value": 6,
         "resist": "Df",
         "tn": 12,
@@ -4705,13 +4881,23 @@
         "name": "Gnawed to Death",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "X",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. X is equal to the number of friendly vermin models within 3\" of the target (to a maximum of 3). (soulstone) Rats in the Walls: Summon two Malifaux Rats within 1\" of the target."
+        "effects": "Once per activation. X is equal to the number of friendly vermin models within 3\" of the target (to a maximum of 3).",
+        "triggers": [
+          {
+            "name": "Rats in the Walls",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon two Malifaux Rats within 1\" of the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -4755,7 +4941,7 @@
         "name": "Temporal Anomaly",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Wp",
         "tn": 10,
@@ -4806,7 +4992,7 @@
         "granted_to": "Friendly Freikorps models",
         "name": "Adaptive Tactics",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -4911,7 +5097,7 @@
         "name": "Embrace Fate",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "*",
         "damage": "X",
@@ -4968,7 +5154,17 @@
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. Non-master enemy only. This model may declare an action printed on the target\u2019s stat card. (soulstone) Dust May Rise: Summon an Abomination in base contact with the target."
+        "effects": "Once per activation. Non-master enemy only. This model may declare an action printed on the target\u2019s stat card.",
+        "triggers": [
+          {
+            "name": "Dust May Rise",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Summon an Abomination in base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -5004,7 +5200,7 @@
         "granted_to": "Friendly Amalgam models without a Summon token",
         "name": "Wither",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5014,7 +5210,7 @@
         "granted_to": "Friendly Amalgam models without a Summon token",
         "name": "Scavenge",
         "category": "tactical_actions",
-        "range": "(aura) 1\"",
+        "range": "(aura)1\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5062,15 +5258,23 @@
         "name": "Broken Man\u2019s Lasso",
         "category": "attack_actions",
         "action_type": "missile",
-        "range": "(gun) 10\"",
+        "range": "(gun)10\"",
         "skill_value": 6,
         "resist": "Sp",
         "tn": 12,
         "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\". (soulstone) Debt Owed to Darkness: When resolving, move the target up to +4\", ignoring Staggered tokens.",
+        "effects": "This action may target friendly models. Move the target up to 4\". For each raise this attack receives, move the target up to +2\".",
         "triggers": [
+          {
+            "name": "Debt Owed to Darkness",
+            "suit": "(soulstone)",
+            "timing": "when_resolving",
+            "text": "When resolving, move the target up to +4\", ignoring Staggered tokens.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Stumble",
             "suit": "(m)",
@@ -5128,7 +5332,7 @@
         "name": "Stick Up",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "*",
@@ -5179,13 +5383,13 @@
         "name": "Trash Cannon",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 8\"",
+        "range": "(magic)8\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "X",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Once per activation. X is equal to the value of this crew\u2019s power bar. Lower this crew\u2019s power bar to 0. POWER BAR"
+        "effects": "Once per activation. X is equal to the value of this crew\u2019s power bar. Lower this crew\u2019s power bar to 0."
       }
     ],
     "tokens": [
@@ -5332,7 +5536,7 @@
         "name": "Sympathetic Whisper",
         "category": "attack_actions",
         "action_type": "variable",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
@@ -5406,7 +5610,7 @@
         "granted_to": "Friendly unique Ancestor models",
         "name": "Ancestral Blessing",
         "category": "tactical_actions",
-        "range": "(aura) 10\"",
+        "range": "(aura)10\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5471,7 +5675,7 @@
         "granted_to": "Friendly unique Redchapel models",
         "name": "Out of the Dark",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5516,13 +5720,31 @@
         "name": "Lightning Rod",
         "category": "attack_actions",
         "action_type": "variable",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": 7,
         "resist": "Sp",
         "tn": 14,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "This action may target other allies. Once per activation. Move the target up to 4\". (soulstone) \u201cIT\u2019S ALIVE!\u201d: Ally only. Deal 2 irreducible damage to the target. Remove a Summon token from the target. (soulstone)(soulstone) \u201cStaple This On\u201d: Ally only. Deal 2 irreducible damage to the target. The target gains an Interesting Parts token."
+        "effects": "This action may target other allies. Once per activation. Move the target up to 4\".",
+        "triggers": [
+          {
+            "name": "\u201cIT\u2019S ALIVE!\u201d",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Ally only. Deal 2 irreducible damage to the target. Remove a Summon token from the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\u201cStaple This On\u201d",
+            "suit": "(soulstone)(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Ally only. Deal 2 irreducible damage to the target. The target gains an Interesting Parts token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -5663,7 +5885,7 @@
         "name": "Memory Shard",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Df",
         "damage": "2",
@@ -5735,7 +5957,7 @@
         "granted_to": "Friendly unique Urami models",
         "name": "Swirling Spirits",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 4,
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5792,7 +6014,7 @@
         "granted_to": "Friendly models",
         "name": "Explosive Ventilation",
         "category": "tactical_actions",
-        "range": "(aura) 5\"",
+        "range": "(aura)5\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5802,7 +6024,7 @@
         "granted_to": "Friendly models",
         "name": "Sepsis",
         "category": "tactical_actions",
-        "range": "(aura) 1\"",
+        "range": "(aura)1\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5812,7 +6034,7 @@
         "granted_to": "Friendly models",
         "name": "\u201cNew Arms!\u201d",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -5904,12 +6126,22 @@
         "name": "Lost and Alone",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 7,
         "resist": "Wp",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "If the target has an Abandoned token, this attack has a raise value of 3 and the target may not cheat this duel. Move the target up to 3\". If the target has an Abandoned token, increase this move by +3\". (soulstone) Pulled Into the Story: Make a number of Scheme markers within 1\" of the target up to the number of raises this attack received."
+        "effects": "If the target has an Abandoned token, this attack has a raise value of 3 and the target may not cheat this duel. Move the target up to 3\". If the target has an Abandoned token, increase this move by +3\".",
+        "triggers": [
+          {
+            "name": "Pulled Into the Story",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Make a number of Scheme markers within 1\" of the target up to the number of raises this attack received.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -6036,12 +6268,22 @@
         "name": "Flood of Guilt",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Place the target in base contact with this model. (soulstone) Bloody Foam: Attach a Waterlogged upgrade to the target."
+        "effects": "Place the target in base contact with this model.",
+        "triggers": [
+          {
+            "name": "Bloody Foam",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Attach a Waterlogged upgrade to the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -6089,11 +6331,21 @@
         "granted_to": "Friendly unique Foundry models",
         "name": "Scatter Scrap",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 5,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Scrap marker within range. Enemy models within (pulse)2\" of the made marker must pass a TN 14 Sp duel or be dealt 2 damage. (soulstone) Welding Shield: Allies within (pulse)2\" of the made marker gain a Shielded token."
+        "effects": "Make a Scrap marker within range. Enemy models within (pulse)2\" of the made marker must pass a TN 14 Sp duel or be dealt 2 damage.",
+        "triggers": [
+          {
+            "name": "Welding Shield",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Allies within (pulse)2\" of the made marker gain a Shielded token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -6140,7 +6392,7 @@
         "granted_to": "Friendly unique Qi and Gong models",
         "name": "Information Broker",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -6183,12 +6435,22 @@
         "granted_to": "Friendly unique Oni models",
         "name": "Beyond\u2019s Invasion",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 3,
         "damage": "0",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make one Rift marker within range, plus one more for each raise this action receives. (soulstone)(soulstone)(soulstone) Realms Where Death Means Nothing: If a friendly master was killed this game, summon it with 7 health into base contact with a made marker."
+        "effects": "Make one Rift marker within range, plus one more for each raise this action receives.",
+        "triggers": [
+          {
+            "name": "Realms Where Death Means Nothing",
+            "suit": "(soulstone)(soulstone)(soulstone)",
+            "timing": "after_succeeding",
+            "text": "If a friendly master was killed this game, summon it with 7 health into base contact with a made marker.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -6241,7 +6503,7 @@
         "name": "A Debt Called In",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "2",
@@ -6290,7 +6552,7 @@
         "granted_to": "Friendly unique Oni models",
         "name": "Rally the Beyond",
         "category": "tactical_actions",
-        "range": "(aura) -",
+        "range": "-",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -6342,7 +6604,7 @@
         "name": "Mightier than   the Sword",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "2",
@@ -6398,11 +6660,21 @@
         "granted_to": "Friendly Foundry models",
         "name": "Ride the Rails",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Place this model into base contact with a Scrap marker within range, then make a Scrap marker within 6\" and not in base contact with an enemy. (soulstone) Defend the Line: This model declares an attack action, which receives a (+)."
+        "effects": "Place this model into base contact with a Scrap marker within range, then make a Scrap marker within 6\" and not in base contact with an enemy.",
+        "triggers": [
+          {
+            "name": "Defend the Line",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "This model declares an attack action, which receives a (+).",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
       }
     ],
     "tokens": [
@@ -6510,7 +6782,7 @@
         "granted_to": "Friendly unique Honeypot models",
         "name": "Rig the Deck",
         "category": "tactical_actions",
-        "range": "(aura) 6\"",
+        "range": "(aura)6\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
@@ -6563,7 +6835,7 @@
         "name": "Chi Blast",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 10\"",
+        "range": "(magic)10\"",
         "skill_value": 6,
         "resist": "Wp",
         "damage": "2",
@@ -6678,11 +6950,11 @@
         "granted_to": "Friendly unique Qi and Gong models",
         "name": "We Own You",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "skill_value": "-",
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Reduce this crew\u2019s leverage bar by 4. Target declares an action, chosen and controlled by this model. LEVERAGE BAR"
+        "effects": "Reduce this crew\u2019s leverage bar by 4. Target declares an action, chosen and controlled by this model."
       }
     ],
     "tokens": [
@@ -6725,12 +6997,20 @@
         "granted_to": "Friendly non-peon Last Blossom models",
         "name": "Smokebomb",
         "category": "tactical_actions",
-        "range": "(aura) 8\"",
+        "range": "(aura)8\"",
         "tn": 6,
         "is_signature": false,
         "soulstone_cost": 0,
-        "effects": "Make a Shadow marker within range. Enemies within (pulse)2\" of the marker must pass a TN 10 Wp duel or gain a Stunned token. (soulstone) Out of Sight: Allies within range of the (pulse) may move up to 3\".",
+        "effects": "Make a Shadow marker within range. Enemies within (pulse)2\" of the marker must pass a TN 10 Wp duel or gain a Stunned token.",
         "triggers": [
+          {
+            "name": "Out of Sight",
+            "suit": "(soulstone)",
+            "timing": "after_succeeding",
+            "text": "Allies within range of the (pulse) may move up to 3\".",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
           {
             "name": "Oyabun\u2019s Wisdom",
             "suit": "(t)",
@@ -6779,7 +7059,7 @@
         "name": "Drag Into Shadow",
         "category": "attack_actions",
         "action_type": "magic",
-        "range": "(magic) 6\"",
+        "range": "(magic)6\"",
         "skill_value": 7,
         "resist": "Sp",
         "damage": "1",

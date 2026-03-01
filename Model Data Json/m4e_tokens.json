@@ -87,12 +87,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Ferdinand Vogel",
-        "source_type": "action_effect",
-        "source_name": "Blood-Soaked Claws",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Francisco Ortega",
         "source_type": "trigger",
         "source_name": "Balanced Sword > Dead Before You Draw",
@@ -133,12 +127,6 @@
         "source_type": "action_effect",
         "source_name": "Plaintive Cry",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gwisin",
-        "source_type": "action_effect",
-        "source_name": "Drawn by Hate",
-        "applies_or_references": "removes"
       },
       {
         "model_name": "Gwisin",
@@ -409,12 +397,6 @@
         "source_type": "action_effect",
         "source_name": "Plaintive Cry",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Slate Ridge Mauler",
-        "source_type": "action_effect",
-        "source_name": "Blood-Soaked Claws",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Slop Hauler",
@@ -854,12 +836,6 @@
       },
       {
         "model_name": "Carlos Vasquez",
-        "source_type": "action_effect",
-        "source_name": "The Flaming Fist of the Amazing Carlos Vasquez",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Carlos Vasquez",
         "source_type": "trigger",
         "source_name": "The Flaming Fist of the Amazing Carlos Vasquez > Blaze",
         "applies_or_references": "applies"
@@ -1066,12 +1042,6 @@
         "model_name": "Fire Gamin",
         "source_type": "action_effect",
         "source_name": "Fire-Eater",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Fire Gamin",
-        "source_type": "action_effect",
-        "source_name": "Fire-Eater",
         "applies_or_references": "applies"
       },
       {
@@ -1132,12 +1102,6 @@
         "model_name": "Fire Golem",
         "source_type": "trigger",
         "source_name": "Huge Flaming Fist > Kindle",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Firebranded",
-        "source_type": "action_effect",
-        "source_name": "Embrace the Flame",
         "applies_or_references": "references"
       },
       {
@@ -1225,12 +1189,6 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "Herbie",
-        "source_type": "action_effect",
-        "source_name": "Thermite Injection",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Hog-Oil Salesman",
         "source_type": "trigger",
         "source_name": "Hog-Oil Oinkment > Blaze",
@@ -1282,12 +1240,6 @@
         "model_name": "Kaeris",
         "source_type": "action_effect",
         "source_name": "Grand Conflagration",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kaeris",
-        "source_type": "action_effect",
-        "source_name": "Grand Conflagration",
         "applies_or_references": "applies"
       },
       {
@@ -1300,24 +1252,12 @@
         "model_name": "Kaeris",
         "source_type": "action_effect",
         "source_name": "Hand of Immolation",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kaeris",
-        "source_type": "action_effect",
-        "source_name": "Hand of Immolation",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Kaeris",
         "source_type": "trigger",
         "source_name": "Hand of Immolation > Accelerant",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Kaeris",
-        "source_type": "action_effect",
-        "source_name": "Leap of Burning Faith",
         "applies_or_references": "references"
       },
       {
@@ -1526,8 +1466,8 @@
       },
       {
         "model_name": "Parker Barrows",
-        "source_type": "action_effect",
-        "source_name": "Ashen Rifle",
+        "source_type": "trigger",
+        "source_name": "Ashen Rifle > Guns Blazing",
         "applies_or_references": "applies"
       },
       {
@@ -1586,8 +1526,8 @@
       },
       {
         "model_name": "Popcorn Turner",
-        "source_type": "action_effect",
-        "source_name": "Spray of Shine",
+        "source_type": "trigger",
+        "source_name": "Spray of Shine > The Flaming Turner",
         "applies_or_references": "applies"
       },
       {
@@ -1658,14 +1598,14 @@
       },
       {
         "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Spark in the Night",
+        "source_type": "trigger",
+        "source_name": "Spark in the Night > Engulfing Flame",
         "applies_or_references": "references"
       },
       {
         "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Spark in the Night",
+        "source_type": "trigger",
+        "source_name": "Spark in the Night > Engulfing Flame",
         "applies_or_references": "references"
       },
       {
@@ -1762,12 +1702,6 @@
         "model_name": "Sonnia Criid",
         "source_type": "action_effect",
         "source_name": "Burn Them Out",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sonnia Criid",
-        "source_type": "action_effect",
-        "source_name": "Burn Them Out",
         "applies_or_references": "applies"
       },
       {
@@ -1787,18 +1721,6 @@
         "source_type": "ability",
         "source_name": "Ignite",
         "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sonnia Criid",
-        "source_type": "action_effect",
-        "source_name": "Sapping Flames",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Sonnia Criid",
-        "source_type": "action_effect",
-        "source_name": "The Yellow Crypt",
-        "applies_or_references": "removes"
       },
       {
         "model_name": "Sonnia Criid",
@@ -1918,12 +1840,6 @@
         "model_name": "The Firestarter",
         "source_type": "action_effect",
         "source_name": "Conflagration",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Firestarter",
-        "source_type": "action_effect",
-        "source_name": "Conflagration",
         "applies_or_references": "applies"
       },
       {
@@ -1958,12 +1874,6 @@
       },
       {
         "model_name": "The Scorpius",
-        "source_type": "action_effect",
-        "source_name": "Thermite Injection",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Scorpius",
         "source_type": "trigger",
         "source_name": "Thermite Injection > Kindle",
         "applies_or_references": "references"
@@ -1972,12 +1882,6 @@
         "model_name": "The Scorpius",
         "source_type": "ability",
         "source_name": "Third-Degree Burns",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "The Sow",
-        "source_type": "action_effect",
-        "source_name": "Grunt and Grow",
         "applies_or_references": "references"
       },
       {
@@ -2179,8 +2083,8 @@
       },
       {
         "model_name": "Envy",
-        "source_type": "action_effect",
-        "source_name": "Dual Gatling Guns",
+        "source_type": "trigger",
+        "source_name": "Dual Gatling Guns > Sound and Fury",
         "applies_or_references": "applies"
       },
       {
@@ -2197,20 +2101,8 @@
       },
       {
         "model_name": "Gluttony",
-        "source_type": "action_effect",
-        "source_name": "Bite the Hand",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Gluttony",
-        "source_type": "action_effect",
-        "source_name": "Maddening Drums",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Greed",
-        "source_type": "action_effect",
-        "source_name": "Guitar Bash",
+        "source_type": "trigger",
+        "source_name": "Maddening Drums > Sound and Fury",
         "applies_or_references": "applies"
       },
       {
@@ -2269,12 +2161,6 @@
       },
       {
         "model_name": "Sloth",
-        "source_type": "action_effect",
-        "source_name": "Bass Bash",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sloth",
         "source_type": "trigger",
         "source_name": "Resting in the Blues > \u201cDon\u2019t Worry About Nothin\u2019\u201d",
         "applies_or_references": "applies"
@@ -2283,18 +2169,6 @@
         "model_name": "The Forgotten Marshal",
         "source_type": "action_effect",
         "source_name": "Pine Box",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Judge",
-        "source_type": "action_effect",
-        "source_name": "Peacebringer",
-        "applies_or_references": "applies"
-      },
-      {
-        "model_name": "The Lone Marshal",
-        "source_type": "action_effect",
-        "source_name": "Trampling Hooves",
         "applies_or_references": "applies"
       },
       {
@@ -2378,12 +2252,6 @@
         "model_name": "Lord Cooper",
         "source_type": "action_effect",
         "source_name": "Herd Prey",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Lord Cooper",
-        "source_type": "action_effect",
-        "source_name": "Herd Prey",
         "applies_or_references": "references"
       },
       {
@@ -2424,8 +2292,8 @@
       },
       {
         "model_name": "Mr. Graves",
-        "source_type": "action_effect",
-        "source_name": "Show \u2019Em the Door",
+        "source_type": "trigger",
+        "source_name": "Show \u2019Em the Door > \u201cAnd Stay Out\u201d",
         "applies_or_references": "applies"
       },
       {
@@ -2608,8 +2476,8 @@
       },
       {
         "model_name": "Gibson Dewalt",
-        "source_type": "action_effect",
-        "source_name": "Artefactor\u2019s Wrench",
+        "source_type": "trigger",
+        "source_name": "Artefactor\u2019s Wrench > Chromatic Aberration",
         "applies_or_references": "applies"
       },
       {
@@ -2632,8 +2500,8 @@
       },
       {
         "model_name": "Kiya Manimi",
-        "source_type": "action_effect",
-        "source_name": "Amped Up",
+        "source_type": "trigger",
+        "source_name": "Amped Up > Overclocked Reflex",
         "applies_or_references": "applies"
       },
       {
@@ -2650,14 +2518,14 @@
       },
       {
         "model_name": "Maxine Agassiz",
-        "source_type": "action_effect",
-        "source_name": "X",
-        "applies_or_references": "references"
+        "source_type": "trigger",
+        "source_name": "Course Correction > Race the Tide",
+        "applies_or_references": "applies"
       },
       {
         "model_name": "Nellie Cochrane",
-        "source_type": "action_effect",
-        "source_name": "Slow News Day",
+        "source_type": "trigger",
+        "source_name": "Slow News Day > Scooped",
         "applies_or_references": "applies"
       },
       {
@@ -2680,8 +2548,8 @@
       },
       {
         "model_name": "Sensei Yu",
-        "source_type": "action_effect",
-        "source_name": "A Simple Lesson",
+        "source_type": "trigger",
+        "source_name": "A Simple Lesson > Extra Credit",
         "applies_or_references": "applies"
       },
       {
@@ -2698,8 +2566,8 @@
       },
       {
         "model_name": "Taelor",
-        "source_type": "action_effect",
-        "source_name": "Bring It!",
+        "source_type": "trigger",
+        "source_name": "Bring It! > Anticipation",
         "applies_or_references": "applies"
       },
       {
@@ -3067,8 +2935,8 @@
       },
       {
         "model_name": "Bernadette Basse",
-        "source_type": "action_effect",
-        "source_name": "Tripwire",
+        "source_type": "trigger",
+        "source_name": "Tripwire > Resonant Twang",
         "applies_or_references": "applies"
       },
       {
@@ -3093,12 +2961,6 @@
         "model_name": "Frontiersman",
         "source_type": "ability",
         "source_name": "Trailblazer",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Harold Tull",
-        "source_type": "action_effect",
-        "source_name": "Silenced Shot",
         "applies_or_references": "references"
       },
       {
@@ -3192,8 +3054,8 @@
       },
       {
         "model_name": "Ella Mae Chesterfield",
-        "source_type": "action_effect",
-        "source_name": "Chesterfield 1879",
+        "source_type": "trigger",
+        "source_name": "Chesterfield 1879 > Bloody Legacy",
         "applies_or_references": "applies"
       },
       {
@@ -3282,8 +3144,8 @@
       },
       {
         "model_name": "Merris Lacroix",
-        "source_type": "action_effect",
-        "source_name": "Flaming Bottle",
+        "source_type": "trigger",
+        "source_name": "Flaming Bottle > Hop, Friends!",
         "applies_or_references": "references"
       },
       {
@@ -3300,8 +3162,8 @@
       },
       {
         "model_name": "Old Cranky",
-        "source_type": "action_effect",
-        "source_name": "\u201cGive Me a Hand, Kid\u201d",
+        "source_type": "trigger",
+        "source_name": "\u201cGive Me a Hand, Kid\u201d > One o\u2019 the Good \u2019Uns",
         "applies_or_references": "applies"
       },
       {
@@ -3353,12 +3215,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Rosie Hill",
-        "source_type": "action_effect",
-        "source_name": "Kinetic Grenade",
-        "applies_or_references": "removes"
-      },
-      {
         "model_name": "Sammy Lacroix",
         "source_type": "ability",
         "source_name": "Piggy Market",
@@ -3366,14 +3222,14 @@
       },
       {
         "model_name": "Sue",
-        "source_type": "action_effect",
-        "source_name": "Walk the Line",
+        "source_type": "trigger",
+        "source_name": "Walk the Line > Bring Your Guns to Town",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Taelor",
-        "source_type": "action_effect",
-        "source_name": "Bring It!",
+        "source_type": "trigger",
+        "source_name": "Bring It! > Anticipation",
         "applies_or_references": "references"
       },
       {
@@ -3461,8 +3317,8 @@
       },
       {
         "model_name": "Ashes and Dust",
-        "source_type": "action_effect",
-        "source_name": "Whirlwind of Scrap",
+        "source_type": "trigger",
+        "source_name": "Whirlwind of Scrap > Rusted Winds",
         "applies_or_references": "applies"
       },
       {
@@ -3545,14 +3401,14 @@
       },
       {
         "model_name": "Disease Containment Unit",
-        "source_type": "action_effect",
-        "source_name": "Hidden Axe",
+        "source_type": "trigger",
+        "source_name": "Hidden Axe > Diseased Limb",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Disease Containment Unit",
-        "source_type": "action_effect",
-        "source_name": "Rapid Response",
+        "source_type": "trigger",
+        "source_name": "Rapid Response > Diseased Limb",
         "applies_or_references": "applies"
       },
       {
@@ -3605,8 +3461,8 @@
       },
       {
         "model_name": "Executioner",
-        "source_type": "action_effect",
-        "source_name": "Executioner Claws",
+        "source_type": "trigger",
+        "source_name": "Executioner Claws > Diseased Limb",
         "applies_or_references": "applies"
       },
       {
@@ -3725,8 +3581,8 @@
       },
       {
         "model_name": "Mortimer",
-        "source_type": "action_effect",
-        "source_name": "Grave Robber",
+        "source_type": "trigger",
+        "source_name": "Grave Robber > Corpse Gas",
         "applies_or_references": "applies"
       },
       {
@@ -3743,8 +3599,8 @@
       },
       {
         "model_name": "Nekima",
-        "source_type": "action_effect",
-        "source_name": "Blacken the Skies",
+        "source_type": "trigger",
+        "source_name": "Blacken the Skies > Blood for Blood",
         "applies_or_references": "applies"
       },
       {
@@ -3845,8 +3701,8 @@
       },
       {
         "model_name": "Sparks Leblanc",
-        "source_type": "action_effect",
-        "source_name": "Heavy Wrench",
+        "source_type": "trigger",
+        "source_name": "Heavy Wrench > Spin Around Real Fast",
         "applies_or_references": "applies"
       },
       {
@@ -4059,12 +3915,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Cooper Jones",
-        "source_type": "action_effect",
-        "source_name": "Moonshine   and a Barrel",
-        "applies_or_references": "removes"
-      },
-      {
         "model_name": "Corpse Curator",
         "source_type": "action_effect",
         "source_name": "Ancient Injectors",
@@ -4110,12 +3960,6 @@
         "model_name": "Dr. Mcmourning",
         "source_type": "action_effect",
         "source_name": "Cobble Together",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Dr. Mcmourning",
-        "source_type": "action_effect",
-        "source_name": "Cobble Together",
         "applies_or_references": "removes"
       },
       {
@@ -4141,18 +3985,6 @@
         "source_type": "action_effect",
         "source_name": "Vial of Goo",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Dr. Mcmourning",
-        "source_type": "action_effect",
-        "source_name": "\u201cA New Specimen!\u201d",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Dr. Meredith Stanley",
-        "source_type": "action_effect",
-        "source_name": "Alchemical Blast",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Fingers Leong",
@@ -4222,8 +4054,8 @@
       },
       {
         "model_name": "Hopscotch",
-        "source_type": "action_effect",
-        "source_name": "Sticky Tongue",
+        "source_type": "trigger",
+        "source_name": "Sticky Tongue > Toxic Touch",
         "applies_or_references": "applies"
       },
       {
@@ -4345,12 +4177,6 @@
         "source_type": "trigger",
         "source_name": "Bottle Opener > Moonshine Mash",
         "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Nia",
-        "source_type": "action_effect",
-        "source_name": "It\u2019s 5 O\u2019clock Somewhere",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Nightsilk Creeper",
@@ -4523,12 +4349,6 @@
       {
         "model_name": "The Brewmaster",
         "source_type": "action_effect",
-        "source_name": "Drunken Clarity",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "The Brewmaster",
-        "source_type": "action_effect",
         "source_name": "Drunken Dash",
         "applies_or_references": "applies"
       },
@@ -4676,12 +4496,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Aua Warrior",
-        "source_type": "action_effect",
-        "source_name": "Whirling Staff",
-        "applies_or_references": "removes"
-      },
-      {
         "model_name": "Battering Ram",
         "source_type": "trigger",
         "source_name": "Twin Knives > Defensive Reflexes",
@@ -4718,22 +4532,10 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Charles Hoffman",
-        "source_type": "action_effect",
-        "source_name": "Overload Shields",
-        "applies_or_references": "removes"
-      },
-      {
         "model_name": "Commander Bura",
         "source_type": "action_effect",
         "source_name": "Crushing Force",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Commander Bura",
-        "source_type": "action_effect",
-        "source_name": "Marlow\u2019s Finest",
-        "applies_or_references": "removes"
       },
       {
         "model_name": "Commander Bura",
@@ -4947,8 +4749,8 @@
       },
       {
         "model_name": "Kang",
-        "source_type": "action_effect",
-        "source_name": "Workers Rise Up",
+        "source_type": "trigger",
+        "source_name": "Workers Rise Up > Stronger Together",
         "applies_or_references": "applies"
       },
       {
@@ -4959,14 +4761,8 @@
       },
       {
         "model_name": "Kett",
-        "source_type": "action_effect",
-        "source_name": "Whirling Staff",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Kett",
-        "source_type": "action_effect",
-        "source_name": "Whirling Staff",
+        "source_type": "trigger",
+        "source_name": "Whirling Staff > Vortex of Protection",
         "applies_or_references": "applies"
       },
       {
@@ -4995,14 +4791,14 @@
       },
       {
         "model_name": "Map Map",
-        "source_type": "action_effect",
-        "source_name": "Helped by Booklights",
+        "source_type": "trigger",
+        "source_name": "Helped by Booklights > Booklight Glow",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Marcus",
-        "source_type": "action_effect",
-        "source_name": "Knotted Staff",
+        "source_type": "trigger",
+        "source_name": "Knotted Staff > This is My Mountain",
         "applies_or_references": "applies"
       },
       {
@@ -5127,14 +4923,14 @@
       },
       {
         "model_name": "Peacekeeper",
-        "source_type": "action_effect",
-        "source_name": "Wrecking Ball",
+        "source_type": "trigger",
+        "source_name": "Wrecking Ball > Defensive Reflexes",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Peacekeeper",
         "source_type": "trigger",
-        "source_name": "Wrecking Ball > Defensive Reflexes",
+        "source_name": "Wrecking Ball > Symbol of the Guild",
         "applies_or_references": "applies"
       },
       {
@@ -5157,8 +4953,8 @@
       },
       {
         "model_name": "Rasputina",
-        "source_type": "action_effect",
-        "source_name": "Ice Pillars",
+        "source_type": "trigger",
+        "source_name": "Ice Pillars > Frozen Domain",
         "applies_or_references": "applies"
       },
       {
@@ -5178,12 +4974,6 @@
         "source_type": "ability",
         "source_name": "Demise (Death Defied)",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Ethereal Reaping",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Reva Cortinas",
@@ -5354,12 +5144,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Student of Steel",
-        "source_type": "action_effect",
-        "source_name": "Overload Shields",
-        "applies_or_references": "removes"
-      },
-      {
         "model_name": "Student of Viscera",
         "source_type": "trigger",
         "source_name": "Emergency Surgery > Study Opponent",
@@ -5427,8 +5211,8 @@
       },
       {
         "model_name": "The Iron Matron",
-        "source_type": "action_effect",
-        "source_name": "Ancestral Sword",
+        "source_type": "trigger",
+        "source_name": "Ancestral Sword > Sudden Aggression",
         "applies_or_references": "references"
       },
       {
@@ -5499,8 +5283,8 @@
       },
       {
         "model_name": "Trixiebelle",
-        "source_type": "action_effect",
-        "source_name": "Hand Cannon",
+        "source_type": "trigger",
+        "source_name": "Hand Cannon > Glitter Bomb",
         "applies_or_references": "applies"
       },
       {
@@ -5630,8 +5414,8 @@
       },
       {
         "model_name": "Ama No Zako",
-        "source_type": "action_effect",
-        "source_name": "Dark Miasma",
+        "source_type": "trigger",
+        "source_name": "Dark Miasma > Sinister Haze",
         "applies_or_references": "references"
       },
       {
@@ -5654,8 +5438,8 @@
       },
       {
         "model_name": "Asami Tanaka",
-        "source_type": "action_effect",
-        "source_name": "Open the Gate",
+        "source_type": "trigger",
+        "source_name": "Open the Gate > Repellent Passage",
         "applies_or_references": "applies"
       },
       {
@@ -5672,8 +5456,8 @@
       },
       {
         "model_name": "Aspiring Student",
-        "source_type": "action_effect",
-        "source_name": "A River Chosen",
+        "source_type": "trigger",
+        "source_name": "A River Chosen > New Pupil",
         "applies_or_references": "applies"
       },
       {
@@ -5810,8 +5594,8 @@
       },
       {
         "model_name": "Crooked Man",
-        "source_type": "action_effect",
-        "source_name": "Miner\u2019s Tools",
+        "source_type": "trigger",
+        "source_name": "Miner\u2019s Tools > Weigh Down",
         "applies_or_references": "applies"
       },
       {
@@ -5930,8 +5714,8 @@
       },
       {
         "model_name": "Gorar",
-        "source_type": "action_effect",
-        "source_name": "Mold of the Other",
+        "source_type": "trigger",
+        "source_name": "Mold of the Other > Ouroboros",
         "applies_or_references": "applies"
       },
       {
@@ -5984,8 +5768,8 @@
       },
       {
         "model_name": "Harris J-5",
-        "source_type": "action_effect",
-        "source_name": "Hunt for Parts",
+        "source_type": "trigger",
+        "source_name": "Hunt for Parts > Never Tell Me the Odds",
         "applies_or_references": "applies"
       },
       {
@@ -6020,12 +5804,6 @@
       },
       {
         "model_name": "Ice Gamin",
-        "source_type": "action_effect",
-        "source_name": "Icy Grip",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Ice Gamin",
         "source_type": "trigger",
         "source_name": "Snowball > Delay",
         "applies_or_references": "applies"
@@ -6051,7 +5829,7 @@
       {
         "model_name": "Iggy",
         "source_type": "trigger",
-        "source_name": "Giggling Flames > \u201c",
+        "source_name": "Giggling Flames > \u201cThey\u2019re After You\u2026\u201d",
         "applies_or_references": "applies"
       },
       {
@@ -6080,8 +5858,8 @@
       },
       {
         "model_name": "Jedza",
-        "source_type": "action_effect",
-        "source_name": "Ancient Lamps",
+        "source_type": "trigger",
+        "source_name": "Ancient Lamps > Stay a While and Listen",
         "applies_or_references": "applies"
       },
       {
@@ -6344,8 +6122,8 @@
       },
       {
         "model_name": "Nightcrawler Network",
-        "source_type": "action_effect",
-        "source_name": "Lead the Witness",
+        "source_type": "trigger",
+        "source_name": "Lead the Witness > Catch a Glimpse",
         "applies_or_references": "applies"
       },
       {
@@ -6446,8 +6224,8 @@
       },
       {
         "model_name": "Seamus",
-        "source_type": "action_effect",
-        "source_name": "Special Arrangements",
+        "source_type": "trigger",
+        "source_name": "Special Arrangements > Murdered Suitor",
         "applies_or_references": "applies"
       },
       {
@@ -6491,12 +6269,6 @@
         "source_type": "trigger",
         "source_name": "Ice Blast > Delay",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Sorrow",
-        "source_type": "action_effect",
-        "source_name": "Growing Sorrow",
-        "applies_or_references": "removes"
       },
       {
         "model_name": "Sorrow",
@@ -6668,8 +6440,8 @@
       },
       {
         "model_name": "Toni Ironsides",
-        "source_type": "action_effect",
-        "source_name": "Staggering Punch",
+        "source_type": "trigger",
+        "source_name": "Staggering Punch > Choice Words About Your Mother",
         "applies_or_references": "applies"
       },
       {
@@ -6725,12 +6497,6 @@
         "source_type": "trigger",
         "source_name": "Gnashing Bite > Grab On",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Zombie Chihuahua",
-        "source_type": "action_effect",
-        "source_name": "Spare Parts",
-        "applies_or_references": "references"
       }
     ]
   },
@@ -6861,12 +6627,6 @@
         "model_name": "Clockwork Queen",
         "source_type": "action_effect",
         "source_name": "Exploit Vulnerability",
-        "applies_or_references": "removes"
-      },
-      {
-        "model_name": "Clockwork Queen",
-        "source_type": "action_effect",
-        "source_name": "Exploit Vulnerability",
         "applies_or_references": "references"
       },
       {
@@ -6889,8 +6649,8 @@
       },
       {
         "model_name": "Cojo",
-        "source_type": "action_effect",
-        "source_name": "Toss",
+        "source_type": "trigger",
+        "source_name": "Toss > Cojo SMASH",
         "applies_or_references": "applies"
       },
       {
@@ -6955,8 +6715,8 @@
       },
       {
         "model_name": "Ella Mae Chesterfield",
-        "source_type": "action_effect",
-        "source_name": "Chesterfield 1879",
+        "source_type": "trigger",
+        "source_name": "Chesterfield 1879 > Bloody Legacy",
         "applies_or_references": "applies"
       },
       {
@@ -7051,15 +6811,9 @@
       },
       {
         "model_name": "Joss",
-        "source_type": "action_effect",
-        "source_name": "Tag Out",
+        "source_type": "trigger",
+        "source_name": "Tag Out > \u201cI\u2019ll Hold Them Off!\u201d",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Kaltgeist",
-        "source_type": "action_effect",
-        "source_name": "Icy Claws",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Kari Zotiko",
@@ -7098,15 +6852,9 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Mara",
-        "source_type": "action_effect",
-        "source_name": "Icy Claws",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Marco Bonatti",
-        "source_type": "action_effect",
-        "source_name": "Lashing Tendrils",
+        "source_type": "trigger",
+        "source_name": "Lashing Tendrils > Reach Out and Grab Them",
         "applies_or_references": "applies"
       },
       {
@@ -7242,12 +6990,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Saboteur",
-        "source_type": "action_effect",
-        "source_name": "Cunning Ploy",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Sand Worm",
         "source_type": "action_effect",
         "source_name": "Snapping Tongues",
@@ -7309,8 +7051,8 @@
       },
       {
         "model_name": "Slate Ridge Mauler",
-        "source_type": "action_effect",
-        "source_name": "Blood-Soaked Claws",
+        "source_type": "trigger",
+        "source_name": "Blood-Soaked Claws > Bear Hug",
         "applies_or_references": "references"
       },
       {
@@ -7374,12 +7116,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Trained Raptor",
-        "source_type": "action_effect",
-        "source_name": "Raking Claws",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Uncle Bogg",
         "source_type": "trigger",
         "source_name": "Exaggerated Claim > Tall Tale",
@@ -7390,12 +7126,6 @@
         "source_type": "trigger",
         "source_name": "Atlas Strike > Falter",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Vasilisa",
-        "source_type": "action_effect",
-        "source_name": "Needle and Thread",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Vasilisa",
@@ -7420,12 +7150,6 @@
         "source_type": "action_effect",
         "source_name": "View of the Endless",
         "applies_or_references": "applies"
-      },
-      {
-        "model_name": "Wicked Doll",
-        "source_type": "action_effect",
-        "source_name": "Wicked Stitching",
-        "applies_or_references": "references"
       },
       {
         "model_name": "Wicked Doll",
@@ -7470,8 +7194,8 @@
       },
       {
         "model_name": "Ama No Zako",
-        "source_type": "action_effect",
-        "source_name": "Dark Miasma",
+        "source_type": "trigger",
+        "source_name": "Dark Miasma > Sinister Haze",
         "applies_or_references": "applies"
       },
       {
@@ -7698,8 +7422,8 @@
       },
       {
         "model_name": "Lady Yume",
-        "source_type": "action_effect",
-        "source_name": "Coil Around Prey",
+        "source_type": "trigger",
+        "source_name": "Coil Around Prey > Chilopodophobia",
         "applies_or_references": "applies"
       },
       {
@@ -7716,8 +7440,8 @@
       },
       {
         "model_name": "Leger De Main",
-        "source_type": "action_effect",
-        "source_name": "Disillusion",
+        "source_type": "trigger",
+        "source_name": "Disillusion > Showmanship",
         "applies_or_references": "applies"
       },
       {
@@ -7812,8 +7536,8 @@
       },
       {
         "model_name": "Peacekeeper",
-        "source_type": "action_effect",
-        "source_name": "Heavy Claws",
+        "source_type": "trigger",
+        "source_name": "Heavy Claws > Peace, by Any Means",
         "applies_or_references": "applies"
       },
       {
@@ -7860,8 +7584,8 @@
       },
       {
         "model_name": "Reva Cortinas",
-        "source_type": "action_effect",
-        "source_name": "Willed Flame",
+        "source_type": "trigger",
+        "source_name": "Willed Flame > Knock Aside",
         "applies_or_references": "applies"
       },
       {
@@ -8003,12 +7727,6 @@
         "applies_or_references": "applies"
       },
       {
-        "model_name": "Yokai",
-        "source_type": "action_effect",
-        "source_name": "Wander the Earth",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Zoraida",
         "source_type": "action_effect",
         "source_name": "Bumps and Boils",
@@ -8045,14 +7763,14 @@
     "model_sources": [
       {
         "model_name": "Arcane Fate",
-        "source_type": "action_effect",
-        "source_name": "Arcane Fury",
+        "source_type": "trigger",
+        "source_name": "Arcane Fury > Arcane Fate",
         "applies_or_references": "references"
       },
       {
         "model_name": "Aspiring Student",
-        "source_type": "action_effect",
-        "source_name": "A River Chosen",
+        "source_type": "trigger",
+        "source_name": "A River Chosen > New Pupil",
         "applies_or_references": "applies"
       },
       {
@@ -8063,14 +7781,14 @@
       },
       {
         "model_name": "Brutal Fate",
-        "source_type": "action_effect",
-        "source_name": "Brutal Takedown",
+        "source_type": "trigger",
+        "source_name": "Brutal Takedown > Brutal Fate",
         "applies_or_references": "references"
       },
       {
         "model_name": "Carrion Fate",
-        "source_type": "action_effect",
-        "source_name": "Carrion Curse",
+        "source_type": "trigger",
+        "source_name": "Carrion Curse > Carrion Fate",
         "applies_or_references": "references"
       },
       {
@@ -8098,12 +7816,6 @@
         "applies_or_references": "references"
       },
       {
-        "model_name": "Flying Piglet",
-        "source_type": "action_effect",
-        "source_name": "That\u2019ll Do, Pig",
-        "applies_or_references": "references"
-      },
-      {
         "model_name": "Ghost Eater",
         "source_type": "trigger",
         "source_name": "Tear Apart > Exorcism",
@@ -8117,8 +7829,8 @@
       },
       {
         "model_name": "Gorar",
-        "source_type": "action_effect",
-        "source_name": "Mold of the Other",
+        "source_type": "trigger",
+        "source_name": "Mold of the Other > Ouroboros",
         "applies_or_references": "applies"
       },
       {
@@ -8129,32 +7841,32 @@
       },
       {
         "model_name": "Hodgepodge Fate",
-        "source_type": "action_effect",
-        "source_name": "All Jumbled Up",
+        "source_type": "trigger",
+        "source_name": "All Jumbled Up > Hodgepodge Fate",
         "applies_or_references": "references"
       },
       {
         "model_name": "Intrepid Fate",
-        "source_type": "action_effect",
-        "source_name": "Laid Bare",
+        "source_type": "trigger",
+        "source_name": "Laid Bare > Intrepid Fate",
         "applies_or_references": "references"
       },
       {
         "model_name": "Jakob Lynch",
-        "source_type": "action_effect",
-        "source_name": "Chasing Losses",
+        "source_type": "trigger",
+        "source_name": "Chasing Losses > What\u2019s Due",
         "applies_or_references": "applies"
       },
       {
         "model_name": "Lady Justice",
-        "source_type": "action_effect",
-        "source_name": "Domineering Presence",
+        "source_type": "trigger",
+        "source_name": "Domineering Presence > \u201cSend Them Back to Hell!\u201d",
         "applies_or_references": "references"
       },
       {
         "model_name": "Lady Justice",
-        "source_type": "action_effect",
-        "source_name": "Equilibrium",
+        "source_type": "trigger",
+        "source_name": "Equilibrium > Be Gone",
         "applies_or_references": "references"
       },
       {
@@ -8165,8 +7877,8 @@
       },
       {
         "model_name": "Lucky Fate",
-        "source_type": "action_effect",
-        "source_name": "Terrible Luck",
+        "source_type": "trigger",
+        "source_name": "Terrible Luck > Lucky Fate",
         "applies_or_references": "references"
       },
       {
@@ -8183,8 +7895,8 @@
       },
       {
         "model_name": "Mysterious Fate",
-        "source_type": "action_effect",
-        "source_name": "Tattered Remains",
+        "source_type": "trigger",
+        "source_name": "Tattered Remains > Mysterious Fate",
         "applies_or_references": "references"
       },
       {
@@ -8207,14 +7919,8 @@
       },
       {
         "model_name": "Sandeep Desai",
-        "source_type": "action_effect",
-        "source_name": "Gathering Storm",
-        "applies_or_references": "references"
-      },
-      {
-        "model_name": "Sandeep Desai",
-        "source_type": "action_effect",
-        "source_name": "Gathering Storm",
+        "source_type": "trigger",
+        "source_name": "Gathering Storm > Unshackled Elements",
         "applies_or_references": "references"
       },
       {
@@ -8225,8 +7931,8 @@
       },
       {
         "model_name": "Shadow Fate",
-        "source_type": "action_effect",
-        "source_name": "Shadow Pull",
+        "source_type": "trigger",
+        "source_name": "Shadow Pull > Shadow Fate",
         "applies_or_references": "references"
       },
       {
@@ -8237,8 +7943,8 @@
       },
       {
         "model_name": "Som\u2019er Teeth Jones",
-        "source_type": "action_effect",
-        "source_name": "Gang Up on \u2019Em",
+        "source_type": "trigger",
+        "source_name": "Gang Up on \u2019Em > Needs Supervision",
         "applies_or_references": "applies"
       },
       {
@@ -8255,8 +7961,8 @@
       },
       {
         "model_name": "The Forgotten Marshal",
-        "source_type": "action_effect",
-        "source_name": "Peacebringer",
+        "source_type": "trigger",
+        "source_name": "Peacebringer > Release the Dead",
         "applies_or_references": "references"
       },
       {

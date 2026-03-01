@@ -65,7 +65,11 @@
       "Bash(git add CLAUDE.md scripts/db_loader.py scripts/pdf_text_extractor.py scripts/pdf_text_batch.py scripts/merger.py \"Model Data Json/\" \"source_pdfs/Rules and Objectives/m4e_rules.json\" \"source_pdfs/Rules and Objectives/m4e_faq.json\" \"source_pdfs/Rules and Objectives/m4e_gaining_grounds.json\")",
       "Bash(git add -u pipeline_work/)",
       "Bash(git add \"source_pdfs/Rules and Objectives/m4e_rules.json\" \"source_pdfs/Rules and Objectives/m4e_faq.json\" \"source_pdfs/Rules and Objectives/m4e_gaining_grounds.json\" scripts/pdf_text_extractor.py scripts/db_loader.py scripts/pdf_text_batch.py)",
-      "Bash(git push origin main)"
+      "Bash(git push origin main)",
+      "Bash(/tmp/artifact_check2.py:*)",
+      "Bash(/tmp/db_anomaly_checks.py:*)",
+      "Bash(test -d pipeline_work)",
+      "Bash(git add .claude/settings.local.json CLAUDE.md \"Model Data Json/\" cleanup_repo.py final_audit.py schema/schema.sql scripts/db_loader.py scripts/merger.py scripts/pdf_text_batch.py scripts/pdf_text_extractor.py backfill_crew_markers.py backfill_crew_tokens.py run_faction.py prompts/ scripts/card_extractor.py scripts/fix_tokens.py scripts/pdf_splitter.py archive_scripts/)"
     ]
   }
 }

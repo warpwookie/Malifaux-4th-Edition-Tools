@@ -47,16 +47,68 @@ FACTIONS = [
 
 # ── PDF Discovery ──────────────────────────────────────────────────────
 
+def _normalize_stat_stem(stem):
+    """
+    Normalize a stat PDF stem into a model identity key for deduplication.
+
+    Strips the M4E_Stat_ prefix, _A suffix, and known keyword/faction
+    abbreviation tokens so that different filenames for the same model
+    (e.g. 'Bandit_Ella_Mae' vs 'Bandit_Mercenary_Ella_Mae') collapse to
+    the same key.
+    """
+    s = stem.replace("M4E_Stat_", "")
+    s = re.sub(r'_A$', '', s)
+    # Remove faction-abbreviation prefixes used in Versatile filenames
+    s = re.sub(
+        r'^(Arc|Byu|Gld|Nvb|Res|TT|OC|EVS)-Versatile_', '', s)
+    # Remove keyword tokens (the directory name portion of the stem).
+    # Keywords appear as hyphenated or underscored prefixes before the
+    # model name.  We strip all known keyword directory names that
+    # appear across source_pdfs so that
+    # 'Bandit_Mercenary_Ella_Mae_Chesterfield' and
+    # 'Bandit_Ella_Mae_Chesterfield' both become
+    # 'Ella_Mae_Chesterfield'.
+    _KW_TOKENS = {
+        # These are the keyword-folder names used in source_pdfs,
+        # lower-cased and with spaces/hyphens converted to underscores.
+        "academic", "amalgam", "ancestor", "angler", "ape", "apex",
+        "augmented", "bandit", "big-hat", "big_hat", "brood",
+        "bygone", "cadmus", "cavalier", "chimera", "crossroads",
+        "december", "dua", "elite", "evs", "experimental",
+        "fae", "family", "forgotten", "foundry", "freikorps",
+        "frontier", "guard", "honeypot", "infamous", "journalist",
+        "kin", "last-blossom", "last_blossom", "marshal",
+        "mercenary", "m&su", "monk", "nightmare", "obliteration",
+        "oni", "plague", "qi_and_gong", "qi-and-gong",
+        "red_library", "red-library", "redchapel", "returned",
+        "revenant", "savage", "seeker", "sooey", "swampfiend",
+        "syndicate", "transmortis", "tri-chi", "tri_chi",
+        "tricksy", "wastrel", "wildfire", "witch-hunter",
+        "witch_hunter", "wizz-bang", "wizz_bang", "woe",
+        "horseman", "versatile",
+    }
+    parts = s.split("_")
+    # Walk from the left, stripping tokens that match known keywords
+    while parts and parts[0].lower().replace("-", "_") in _KW_TOKENS:
+        parts.pop(0)
+    # Also strip hyphenated compound keywords like "Big-Hat"
+    while parts and "-".join(parts[:2]).lower() in _KW_TOKENS:
+        parts.pop(0)
+    return "_".join(parts).lower() if parts else s.lower()
+
+
 def discover_stat_pdfs(faction=None):
     """
     Walk source_pdfs/ to find all stat card PDFs.
 
     Only processes _A suffix (or no suffix) — skips _B, _C, _D alt-art variants.
-    Deduplicates by filename stem so dual-keyword models are only counted once.
+    Deduplicates by normalized model identity so dual-keyword models and
+    filename variants are only counted once.
     Returns list of (pdf_path, faction_name, keyword_name).
     """
     pdfs = []
     seen_stems = set()
+    seen_identities = set()
     factions = [faction] if faction else FACTIONS
 
     for f_name in factions:
@@ -77,10 +129,17 @@ def discover_stat_pdfs(faction=None):
                 if re.search(r'_[B-Z]$', name):
                     continue
 
-                # Deduplicate: dual-keyword models appear in multiple folders
+                # Deduplicate: exact stem match (same file in two folders)
                 if name in seen_stems:
                     continue
                 seen_stems.add(name)
+
+                # Deduplicate: normalized identity match (different filename,
+                # same model — e.g. extra keyword in filename)
+                identity = (f_name, _normalize_stat_stem(name))
+                if identity in seen_identities:
+                    continue
+                seen_identities.add(identity)
 
                 pdfs.append((pdf_file, f_name, keyword))
 
@@ -91,12 +150,14 @@ def discover_all_pdfs():
     """
     Walk source_pdfs/ to find ALL card PDFs (stat, crew, upgrade).
 
-    Deduplicates by filename stem so dual-keyword models are only counted once.
+    Deduplicates by normalized model identity so dual-keyword models and
+    filename variants are only counted once.
     Returns dict with keys 'stat', 'crew', 'upgrade', each a list of
     (pdf_path, faction_name, keyword_name).
     """
     result = {"stat": [], "crew": [], "upgrade": []}
     seen_stems = set()
+    seen_identities = set()
 
     for f_name in FACTIONS:
         faction_dir = SOURCE_DIR / f_name
@@ -115,12 +176,18 @@ def discover_all_pdfs():
                 if re.search(r'_[B-Z]$', name):
                     continue
 
-                # Deduplicate: dual-keyword models appear in multiple folders
+                # Deduplicate: exact stem match
                 if name in seen_stems:
                     continue
                 seen_stems.add(name)
 
+                # Deduplicate: normalized identity match (stat cards only —
+                # crew and upgrade filenames are more uniform)
                 if name.startswith("M4E_Stat_"):
+                    identity = (f_name, _normalize_stat_stem(name))
+                    if identity in seen_identities:
+                        continue
+                    seen_identities.add(identity)
                     result["stat"].append((pdf_file, f_name, keyword))
                 elif name.startswith("M4E_Crew_"):
                     result["crew"].append((pdf_file, f_name, keyword))

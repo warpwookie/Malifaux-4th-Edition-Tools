@@ -52,9 +52,11 @@ def discover_stat_pdfs(faction=None):
     Walk source_pdfs/ to find all stat card PDFs.
 
     Only processes _A suffix (or no suffix) — skips _B, _C, _D alt-art variants.
+    Deduplicates by filename stem so dual-keyword models are only counted once.
     Returns list of (pdf_path, faction_name, keyword_name).
     """
     pdfs = []
+    seen_stems = set()
     factions = [faction] if faction else FACTIONS
 
     for f_name in factions:
@@ -75,6 +77,11 @@ def discover_stat_pdfs(faction=None):
                 if re.search(r'_[B-Z]$', name):
                     continue
 
+                # Deduplicate: dual-keyword models appear in multiple folders
+                if name in seen_stems:
+                    continue
+                seen_stems.add(name)
+
                 pdfs.append((pdf_file, f_name, keyword))
 
     return pdfs
@@ -84,10 +91,12 @@ def discover_all_pdfs():
     """
     Walk source_pdfs/ to find ALL card PDFs (stat, crew, upgrade).
 
+    Deduplicates by filename stem so dual-keyword models are only counted once.
     Returns dict with keys 'stat', 'crew', 'upgrade', each a list of
     (pdf_path, faction_name, keyword_name).
     """
     result = {"stat": [], "crew": [], "upgrade": []}
+    seen_stems = set()
 
     for f_name in FACTIONS:
         faction_dir = SOURCE_DIR / f_name
@@ -105,6 +114,11 @@ def discover_all_pdfs():
                 # Skip alt-art variants
                 if re.search(r'_[B-Z]$', name):
                     continue
+
+                # Deduplicate: dual-keyword models appear in multiple folders
+                if name in seen_stems:
+                    continue
+                seen_stems.add(name)
 
                 if name.startswith("M4E_Stat_"):
                     result["stat"].append((pdf_file, f_name, keyword))
@@ -492,13 +506,55 @@ def reconcile_coverage(conn):
     # ── Check stat card PDFs → DB ──
     for pdf_path, faction, keyword in all_pdfs["stat"]:
         report["stat"]["total_pdfs"] += 1
-        pdf_str = str(pdf_path)
 
-        # Check if source_pdf matches (use LIKE for path variations)
+        # Strategy 1: Match by source_pdf filename
         row = c.execute(
             "SELECT id, name FROM models WHERE source_pdf LIKE ?",
             (f"%{pdf_path.name}%",)
         ).fetchone()
+
+        # Strategy 2: Extract model name from filename and match by name+faction
+        # Handles duplicate PDFs filed under different keyword folders with
+        # slightly different filenames (e.g. Bandit_ vs Bandit_Mercenary_)
+        if not row:
+            # Extract last meaningful name parts from stem
+            stem = pdf_path.stem.replace("M4E_Stat_", "")
+            # Remove _A suffix
+            stem = re.sub(r'_A$', '', stem)
+            # Try extracting the model name (last parts after keyword prefixes)
+            parts = stem.split("_")
+            # Try matching progressively shorter suffixes
+            for start in range(len(parts)):
+                name_parts = parts[start:]
+                if len(name_parts) == 0:
+                    continue
+                # Try with spaces (underscores → spaces)
+                candidate = " ".join(name_parts)
+                if len(candidate) < 3:
+                    continue
+                # Try exact (preserving hyphens within parts)
+                row = c.execute(
+                    "SELECT id, name FROM models WHERE name COLLATE NOCASE=? AND faction=?",
+                    (candidate, faction)
+                ).fetchone()
+                if row:
+                    break
+                # Also try with hyphens removed
+                candidate_no_hyphen = candidate.replace("-", " ")
+                if candidate_no_hyphen != candidate:
+                    row = c.execute(
+                        "SELECT id, name FROM models WHERE name COLLATE NOCASE=? AND faction=?",
+                        (candidate_no_hyphen, faction)
+                    ).fetchone()
+                    if row:
+                        break
+                # Try DB name LIKE match for hyphenated names
+                row = c.execute(
+                    "SELECT id, name FROM models WHERE name COLLATE NOCASE LIKE ? AND faction=?",
+                    (candidate.replace(" ", "%"), faction)
+                ).fetchone()
+                if row:
+                    break
 
         if row:
             report["stat"]["matched"] += 1

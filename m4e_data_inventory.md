@@ -45,7 +45,6 @@
 | `attack_actions` | 786 | 99% | 4 cards missing |
 | `tactical_actions` | 758 | 96% | 32 cards missing (many are valid — not all models have tactical actions) |
 | `keywords` | 736 | 93% | **54 cards missing** — see below |
-| `shields` | varies | — | Present when applicable |
 | `base_size` | varies | — | Present when applicable |
 
 ### 54 Models Missing Keywords

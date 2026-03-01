@@ -24,7 +24,6 @@ CREATE TABLE IF NOT EXISTS models (
     sp              INTEGER NOT NULL,
     health          INTEGER NOT NULL,
     soulstone_cache INTEGER,                            -- Starting soulstone cache (Masters only, usually)
-    shields         INTEGER DEFAULT 0,                  -- Starting Shielded tokens
     base_size       TEXT,                                -- "30mm", "40mm", "50mm"
     infuses_soulstone_on_death BOOLEAN DEFAULT 1,       -- Soulstone icon in health bar
     crew_card_name  TEXT,                                -- Master only: associated crew card

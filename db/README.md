@@ -32,7 +32,6 @@ c = conn.cursor()
 | df, wp, sz, sp | INTEGER | Defense, Willpower, Size, Speed |
 | health | INTEGER | Health points |
 | soulstone_cache | INTEGER | Starting soulstones (Masters only) |
-| shields | INTEGER | Starting Shielded tokens |
 | base_size | TEXT | "30mm", "40mm", or "50mm" |
 | crew_card_name | TEXT | Masters only: name of their crew card |
 | totem | TEXT | Masters only: name of their totem. "-" means no totem |

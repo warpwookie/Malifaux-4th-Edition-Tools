@@ -583,7 +583,6 @@ def _extract_front(page_spans, page, faction=None, pdf_path=None):
         "stats": stats,
         "health": health,
         "soulstone_cache": soulstone_cache,
-        "shields": 0,  # TODO: extract from graphics if present
         "infuses_soulstone_on_death": True,  # Default; overridden by validator for Peons
         "crew_card_name": extras.get("crew_card_name"),
         "totem": extras.get("totem"),

@@ -20,7 +20,7 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     Merge front and back extractions into unified card format.
     
     Front provides: name, title, faction, cost, stats, characteristics, keywords,
-                    health, soulstone, shields, abilities, base_size (sometimes)
+                    health, soulstone, abilities, base_size (sometimes)
     Back provides:  attack_actions, tactical_actions, base_size (always), name/title (for cross-check)
     """
     # Cross-check name/title match
@@ -97,7 +97,6 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
         "sp": stats.get("sp"),
         "health": front.get("health"),
         "soulstone_cache": front.get("soulstone_cache"),
-        "shields": front.get("shields", 0),
         "base_size": base_size,
         "infuses_soulstone_on_death": front.get("infuses_soulstone_on_death", True),
         "crew_card_name": front.get("crew_card_name"),

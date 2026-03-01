@@ -451,130 +451,80 @@ def build_faction_summary(models: list[dict]) -> dict:
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    
+
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = dict_factory
-    
-    # === Export models ===
+
+    # Gather all data
     print("Exporting models...")
     all_models = export_models(conn)
-    print(f"  Total: {len(all_models)} models")
-    
-    # Group by faction
-    by_faction = defaultdict(list)
-    for m in all_models:
-        by_faction[m["faction"]].append(m)
-    
-    # Write per-faction files
-    for faction, models in sorted(by_faction.items()):
-        safe_name = faction.lower().replace("'", "").replace(" ", "_")
-        path = OUT_DIR / f"m4e_models_{safe_name}.json"
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(models, f, indent=2)
-        print(f"  {faction}: {len(models)} models -> {path.name}")
-    
-    # Write combined file
-    combined_path = OUT_DIR / "m4e_models_all.json"
-    with open(combined_path, "w", encoding="utf-8") as f:
-        json.dump(all_models, f, indent=2)
-    print(f"  Combined: {len(all_models)} models -> {combined_path.name}")
-    
-    # === Export crew cards ===
-    print("\nExporting crew cards...")
+    print(f"  {len(all_models)} models")
+
+    print("Exporting crew cards...")
     all_crew = export_crew_cards(conn)
-    crew_path = OUT_DIR / "m4e_crew_cards.json"
-    with open(crew_path, "w", encoding="utf-8") as f:
-        json.dump(all_crew, f, indent=2)
-    print(f"  Total: {len(all_crew)} crew cards -> {crew_path.name}")
-    
-    # === Export upgrades ===
-    print("\nExporting upgrades...")
+    print(f"  {len(all_crew)} crew cards")
+
+    print("Exporting upgrades...")
     all_upgrades = export_upgrades(conn)
-    upgrades_path = OUT_DIR / "m4e_upgrades.json"
-    with open(upgrades_path, "w", encoding="utf-8") as f:
-        json.dump(all_upgrades, f, indent=2)
-    print(f"  Total: {len(all_upgrades)} upgrades -> {upgrades_path.name}")
+    print(f"  {len(all_upgrades)} upgrades")
 
-    # === Export token registry ===
-    print("\nExporting token registry...")
+    print("Exporting tokens...")
     tokens = export_token_registry(conn)
-    tokens_path = OUT_DIR / "m4e_tokens.json"
-    with open(tokens_path, "w", encoding="utf-8") as f:
-        json.dump(tokens, f, indent=2)
-    print(f"  Total: {len(tokens)} tokens -> {tokens_path.name}")
+    print(f"  {len(tokens)} tokens")
 
-    # === Export marker registry ===
-    print("\nExporting marker registry...")
+    print("Exporting markers...")
     markers = export_marker_registry(conn)
-    markers_path = OUT_DIR / "m4e_markers.json"
-    with open(markers_path, "w", encoding="utf-8") as f:
-        json.dump(markers, f, indent=2)
-    print(f"  Total: {len(markers)} markers -> {markers_path.name}")
+    print(f"  {len(markers)} markers")
 
-    # === Export rules ===
-    print("\nExporting rules...")
+    print("Exporting rules...")
     all_rules = export_rules(conn)
-    rules_path = OUT_DIR / "m4e_rules.json"
-    with open(rules_path, "w", encoding="utf-8") as f:
-        json.dump(all_rules, f, indent=2, ensure_ascii=False)
-    print(f"  Total: {len(all_rules)} sections -> {rules_path.name}")
+    print(f"  {len(all_rules)} sections")
 
-    # === Export FAQ ===
-    print("\nExporting FAQ...")
+    print("Exporting FAQ...")
     all_faq = export_faq(conn)
-    faq_path = OUT_DIR / "m4e_faq.json"
-    with open(faq_path, "w", encoding="utf-8") as f:
-        json.dump(all_faq, f, indent=2, ensure_ascii=False)
-    print(f"  Total: {len(all_faq)} entries -> {faq_path.name}")
+    print(f"  {len(all_faq)} entries")
 
-    # === Export Gaining Grounds ===
-    print("\nExporting Gaining Grounds...")
+    print("Exporting Gaining Grounds...")
     gg = export_gaining_grounds(conn)
-    gg_path = OUT_DIR / "m4e_gaining_grounds.json"
-    with open(gg_path, "w", encoding="utf-8") as f:
-        json.dump(gg, f, indent=2, ensure_ascii=False)
-    print(f"  Total: {len(gg['strategies'])} strategies, {len(gg['schemes'])} schemes -> {gg_path.name}")
+    print(f"  {len(gg['strategies'])} strategies, {len(gg['schemes'])} schemes")
 
-    # === Build faction summary ===
-    print("\nBuilding faction summary...")
     summary = build_faction_summary(all_models)
-    summary_path = OUT_DIR / "m4e_faction_summary.json"
-    with open(summary_path, "w", encoding="utf-8") as f:
-        json.dump(summary, f, indent=2)
-    print(f"  Summary -> {summary_path.name}")
 
-    # === Export combined knowledge base ===
-    print("\nExporting combined knowledge base...")
+    # Build single combined knowledge base
+    print("\nBuilding knowledge base...")
     kb = export_knowledge_base(all_models, all_crew, all_upgrades, markers, tokens, summary,
                                rules=all_rules, faq=all_faq, gaining_grounds=gg)
     kb_path = OUT_DIR / "m4e_knowledge_base.json"
     with open(kb_path, "w", encoding="utf-8") as f:
         json.dump(kb, f, indent=2, ensure_ascii=False)
-    kb_size = kb_path.stat().st_size / 1024
-    if kb_size > 1024:
-        print(f"  Knowledge base: {kb_size/1024:.1f} MB -> {kb_path.name}")
-    else:
-        print(f"  Knowledge base: {kb_size:.0f} KB -> {kb_path.name}")
 
-    # === Stats ===
+    kb_size = kb_path.stat().st_size / 1024
+    size_str = f"{kb_size/1024:.1f} MB" if kb_size > 1024 else f"{kb_size:.0f} KB"
+
+    # Stats
     total_abilities = sum(len(m.get("abilities", [])) for m in all_models)
-    total_attacks = sum(len(m.get("attack_actions", [])) for m in all_models)
-    total_tacticals = sum(len(m.get("tactical_actions", [])) for m in all_models)
+    total_actions = sum(
+        len(m.get("attack_actions", [])) + len(m.get("tactical_actions", []))
+        for m in all_models
+    )
     total_triggers = sum(
         len(a.get("triggers", []))
         for m in all_models
         for a in m.get("attack_actions", []) + m.get("tactical_actions", [])
     )
-    
+
+    by_faction = defaultdict(int)
+    for m in all_models:
+        by_faction[m["faction"]] += 1
+
     print(f"\n{'='*50}")
-    print(f"DENORMALIZATION COMPLETE")
+    print(f"EXPORT COMPLETE -> {kb_path.name} ({size_str})")
     print(f"{'='*50}")
     print(f"  Models:       {len(all_models)}")
     print(f"  Crew Cards:   {len(all_crew)}")
     print(f"  Upgrades:     {len(all_upgrades)}")
     print(f"  Abilities:    {total_abilities}")
-    print(f"  Attacks:      {total_attacks}")
-    print(f"  Tacticals:    {total_tacticals}")
+    print(f"  Actions:      {total_actions}")
     print(f"  Triggers:     {total_triggers}")
     print(f"  Tokens:       {len(tokens)}")
     print(f"  Markers:      {len(markers)}")
@@ -583,17 +533,8 @@ def main():
     print(f"  Strategies:   {len(gg['strategies'])}")
     print(f"  Schemes:      {len(gg['schemes'])}")
     print(f"  Factions:     {len(by_faction)}")
-    
+
     conn.close()
-    
-    # File size report
-    print(f"\nFile sizes:")
-    for p in sorted(OUT_DIR.glob("*.json")):
-        size_kb = p.stat().st_size / 1024
-        if size_kb > 1024:
-            print(f"  {p.name:45s} {size_kb/1024:.1f} MB")
-        else:
-            print(f"  {p.name:45s} {size_kb:.0f} KB")
 
 
 if __name__ == "__main__":

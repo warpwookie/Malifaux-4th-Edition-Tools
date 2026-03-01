@@ -93,8 +93,7 @@
       "Burning": {
         "type": "debuff",
         "timing": "end_phase",
-        "cancels": null,
-        "note": "deals damage equal to value, then reduces by 1"
+        "cancels": null
       },
       "Craven": {
         "type": "debuff",
@@ -103,7 +102,7 @@
       },
       "Distracted": {
         "type": "debuff",
-        "timing": "end_activation",
+        "timing": "when_triggered",
         "cancels": null
       },
       "Fast": {
@@ -134,8 +133,7 @@
       "Poison": {
         "type": "debuff",
         "timing": "never",
-        "cancels": null,
-        "note": "deals damage equal to value, then reduces by 1; does NOT self-remove"
+        "cancels": null
       },
       "Shielded": {
         "type": "buff",
@@ -172,6 +170,18 @@
       [
         "Focused",
         "Stunned"
+      ],
+      [
+        "Bolstered",
+        "Injured"
+      ],
+      [
+        "Hastened",
+        "Staggered"
+      ],
+      [
+        "Hidden",
+        "Exposed"
       ]
     ],
     "_note": "Crew-specific tokens (e.g., Drift, Aura) are defined on crew cards and not listed here."
@@ -231,7 +241,7 @@
       "soulstone_cost > 0 should have soulstone icon prefix on card"
     ],
     "hallucination_patterns": [
-      "WP/SP swap \u00e2\u20ac\u201d bottom-left vs top-right confusion",
+      "WP/SP swap â€” bottom-left vs top-right confusion",
       "Health count off-by-one on high-HP models (14+)",
       "Missing last trigger on an action",
       "Stat copy errors between titles of the same model",

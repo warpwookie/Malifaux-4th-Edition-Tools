@@ -7,7 +7,7 @@
       "crew_cards": 130,
       "upgrades": 70,
       "markers": 24,
-      "tokens": 73,
+      "tokens": 76,
       "rules_sections": 29,
       "faq_entries": 44,
       "strategies": 4,
@@ -51147,6 +51147,106 @@
       ]
     },
     {
+      "name": "Sorrow",
+      "faction": "Neverborn",
+      "station": "Minion",
+      "model_limit": 3,
+      "cost": "5",
+      "df": 5,
+      "wp": 5,
+      "sz": 2,
+      "sp": 6,
+      "health": 5,
+      "shields": 0,
+      "base_size": "30mm",
+      "infuses_soulstone_on_death": true,
+      "keywords": [
+        "Woe"
+      ],
+      "characteristics": [
+        "Minion (3)"
+      ],
+      "abilities": [
+        {
+          "name": "Flight",
+          "text": "This model ignores terrain and other models while moving."
+        },
+        {
+          "name": "Incorporeal",
+          "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+        },
+        {
+          "name": "Life Leech",
+          "text": "When an enemy model activates within 2\" of this model, deal +1 damage to it for each model with this ability within 2\" of it."
+        }
+      ],
+      "attack_actions": [
+        {
+          "name": "Horrible Wail",
+          "action_type": "melee",
+          "range": "(melee) 1\"",
+          "skill_value": 5,
+          "resist": "Wp",
+          "tn": "-",
+          "damage": "1",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "effects": "",
+          "triggers": [
+            {
+              "name": "Gang Up",
+              "suit": "(r)",
+              "timing": "when_resolving",
+              "text": "When resolving, deal +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            },
+            {
+              "name": "“They’re After You…”",
+              "suit": "(t)",
+              "timing": "after_succeeding",
+              "text": "If the target has a Paranoia token, it gains a Slow token. Otherwise, it gains a Paranoia token.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        },
+        {
+          "name": "Growing Sorrow",
+          "action_type": "magic",
+          "range": "(magic) 6\"",
+          "skill_value": 6,
+          "resist": "Wp",
+          "tn": "-",
+          "damage": "-",
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "effects": "Target must have a Paranoia and a Slow token. Remove a friendly token from the target to summon a Sorrow into base contact with the target.",
+          "triggers": [
+            {
+              "name": "On Your Heels",
+              "suit": "(m)",
+              "timing": "after_succeeding",
+              "text": "Place this model into base contact with the target.",
+              "is_mandatory": false,
+              "soulstone_cost": 0
+            }
+          ]
+        }
+      ],
+      "tactical_actions": [
+        {
+          "name": "Creep Along",
+          "range": "(aura) -",
+          "skill_value": 0,
+          "tn": 6,
+          "is_signature": false,
+          "soulstone_cost": 0,
+          "effects": "Move this model up to its Sp toward a friendly model in its LoS."
+        }
+      ]
+    },
+    {
       "name": "Stitched Together",
       "faction": "Neverborn",
       "station": "Minion",
@@ -53273,106 +53373,6 @@
               "soulstone_cost": 0
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "sORROW",
-      "faction": "Neverborn",
-      "station": "Minion",
-      "model_limit": 3,
-      "cost": "5",
-      "df": 5,
-      "wp": 5,
-      "sz": 2,
-      "sp": 6,
-      "health": 5,
-      "shields": 0,
-      "base_size": "30mm",
-      "infuses_soulstone_on_death": true,
-      "keywords": [
-        "Woe"
-      ],
-      "characteristics": [
-        "Minion (3)"
-      ],
-      "abilities": [
-        {
-          "name": "Flight",
-          "text": "This model ignores terrain and other models while moving."
-        },
-        {
-          "name": "Incorporeal",
-          "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
-        },
-        {
-          "name": "Life Leech",
-          "text": "When an enemy model activates within 2\" of this model, deal +1 damage to it for each model with this ability within 2\" of it."
-        }
-      ],
-      "attack_actions": [
-        {
-          "name": "Horrible Wail",
-          "action_type": "melee",
-          "range": "(melee) 1\"",
-          "skill_value": 5,
-          "resist": "Wp",
-          "tn": "-",
-          "damage": "1",
-          "is_signature": false,
-          "soulstone_cost": 0,
-          "effects": "",
-          "triggers": [
-            {
-              "name": "Gang Up",
-              "suit": "(r)",
-              "timing": "when_resolving",
-              "text": "When resolving, deal +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            },
-            {
-              "name": "“They’re After You…”",
-              "suit": "(t)",
-              "timing": "after_succeeding",
-              "text": "If the target has a Paranoia token, it gains a Slow token. Otherwise, it gains a Paranoia token.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            }
-          ]
-        },
-        {
-          "name": "Growing Sorrow",
-          "action_type": "magic",
-          "range": "(magic) 6\"",
-          "skill_value": 6,
-          "resist": "Wp",
-          "tn": "-",
-          "damage": "-",
-          "is_signature": false,
-          "soulstone_cost": 0,
-          "effects": "Target must have a Paranoia and a Slow token. Remove a friendly token from the target to summon a Sorrow into base contact with the target.",
-          "triggers": [
-            {
-              "name": "On Your Heels",
-              "suit": "(m)",
-              "timing": "after_succeeding",
-              "text": "Place this model into base contact with the target.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            }
-          ]
-        }
-      ],
-      "tactical_actions": [
-        {
-          "name": "Creep Along",
-          "range": "(aura) -",
-          "skill_value": 0,
-          "tn": 6,
-          "is_signature": false,
-          "soulstone_cost": 0,
-          "effects": "Move this model up to its Sp toward a friendly model in its LoS."
         }
       ]
     },
@@ -93756,7 +93756,7 @@
     {
       "name": "Abandoned",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "During the end phase, if this model does not have more models (other than itself) it considers friendly within 3\" of it than models it considers enemy, this model is dealt 2 irreducible damage. Then, if this token did not damage this model, remove this token.",
       "model_sources": [
         {
@@ -94814,6 +94814,7 @@
     {
       "name": "Analyzed",
       "type": "debuff",
+      "timing": "end_phase",
       "rules_text": "This model may not reduce damage with its abilities. Remove this token during the end phase.",
       "model_sources": [
         {
@@ -94929,7 +94930,7 @@
     {
       "name": "Backtrack",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict.",
       "model_sources": [
         {
@@ -95083,8 +95084,8 @@
     {
       "name": "Balm",
       "type": "resource",
-      "timing": "on_use",
-      "rules_text": "Consumed to heal. Low River Style: heals additional +1 when resolved. Keyword: Monk.",
+      "timing": "end_phase",
+      "rules_text": "During the end phase, this model heals 1. Then, remove this token.",
       "model_sources": [
         {
           "model_name": "Aspiring Student",
@@ -95109,7 +95110,7 @@
     {
       "name": "Blight",
       "type": "damage",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "This model suffers a (r) to Wp duels generated by Plague models. During the end phase, enemy models within (aura)1\" gain a Blight token, then if there are no other models within 1\" with a Blight token, remove this token.",
       "model_sources": [
         {
@@ -95311,6 +95312,12 @@
           "applies_or_references": "applies"
         }
       ]
+    },
+    {
+      "name": "Blood",
+      "type": "resource",
+      "timing": "permanent",
+      "rules_text": "Crew-specific resource token. Effects vary by crew card. Used across multiple keywords for kill tracking and ability activation."
     },
     {
       "name": "Bog Spirit",
@@ -95571,7 +95578,7 @@
       "name": "Bounty",
       "type": "resource",
       "timing": "permanent",
-      "rules_text": "Gained when enemy models interact or attack friendlies. Keyword: Frontier.",
+      "rules_text": "When this model is killed, the crew that applied this token draws a card.",
       "model_sources": [
         {
           "model_name": "Bernadette Basse",
@@ -95923,7 +95930,7 @@
       "name": "Broodling",
       "type": "resource",
       "timing": "permanent",
-      "rules_text": "Used by Nephilim models for summoning or growth effects. Keyword: Nephilim.",
+      "rules_text": "After this model is killed, summon a friendly Terror Tot into base contact.",
       "model_sources": [
         {
           "model_name": "Black Blood Shaman",
@@ -97372,7 +97379,7 @@
     {
       "name": "Challenged",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token.",
       "model_sources": [
         {
@@ -97411,7 +97418,7 @@
       "name": "Chi",
       "type": "resource",
       "timing": "on_use",
-      "rules_text": "Removed to increase duel totals by additional +1. Core resource for Monk keyword. Keyword: Monk.",
+      "rules_text": "Before performing a duel, this model may remove this token to receive +1 to its duel total.",
       "model_sources": [
         {
           "model_name": "Aspiring Student",
@@ -97545,7 +97552,7 @@
       "name": "Convert",
       "type": "debuff",
       "timing": "permanent",
-      "rules_text": "Marks target for conversion effects. Keyword: Resurrectionists.",
+      "rules_text": "The Dmg stat of this model's attack actions is reduced by 1.",
       "model_sources": [
         {
           "model_name": "Reva Cortinas",
@@ -97758,7 +97765,7 @@
     {
       "name": "Death",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "When this model succeeds in an attack action that deals damage, it may remove this token. If it does so, the target must either discard a card, drain a (soulstone), or be killed.",
       "model_sources": [
         {
@@ -97814,7 +97821,7 @@
     {
       "name": "Distracted",
       "type": "debuff",
-      "timing": "end_activation",
+      "timing": "when_triggered",
       "rules_text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused.",
       "cancels": "Focused",
       "model_sources": [
@@ -98009,6 +98016,7 @@
     {
       "name": "Drift",
       "type": "buff",
+      "timing": "on_use",
       "rules_text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\".",
       "model_sources": [
         {
@@ -98118,7 +98126,7 @@
     {
       "name": "Entranced",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "when_triggered",
       "rules_text": "This model's actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token.",
       "model_sources": [
         {
@@ -98780,7 +98788,7 @@
     {
       "name": "Exposed",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden.",
       "cancels": "Hidden",
       "model_sources": [
@@ -98813,7 +98821,7 @@
     {
       "name": "Familia",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "When a friendly model within 6\" is dealt damage, this model may remove this token to reduce that damage by 1.",
       "model_sources": [
         {
@@ -99519,7 +99527,7 @@
     {
       "name": "Glowy",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "Attacks that target this model are unaffected by concealing terrain. During the end phase, remove this token.",
       "model_sources": [
         {
@@ -99671,8 +99679,8 @@
     {
       "name": "Glutted",
       "type": "resource",
-      "timing": "permanent",
-      "rules_text": "Gained by consuming markers. Used as a resource for various effects. Keyword: Big Hat.",
+      "timing": "end_activation",
+      "rules_text": "When this model ends its activation, it may remove this token to heal 1.",
       "model_sources": [
         {
           "model_name": "Black Blood Shaman",
@@ -100033,7 +100041,7 @@
     {
       "name": "Graft",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "During the end phase, this model may remove this token to heal 2.",
       "model_sources": [
         {
@@ -100065,8 +100073,8 @@
     {
       "name": "Greedy",
       "type": "debuff",
-      "timing": "permanent",
-      "rules_text": "Marks a model as greedy, restricting certain actions. Keyword: Resurrectionists.",
+      "timing": "when_triggered",
+      "rules_text": "When this model would discard an upgrade, it may instead remove this token.",
       "model_sources": [
         {
           "model_name": "Sun Quiang",
@@ -100214,7 +100222,7 @@
     {
       "name": "Hidden",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed.",
       "cancels": "Exposed",
       "model_sources": [
@@ -100307,7 +100315,7 @@
     {
       "name": "Hunger",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_activation",
       "rules_text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself.",
       "model_sources": [
         {
@@ -100817,8 +100825,8 @@
     {
       "name": "Incurable",
       "type": "debuff",
-      "timing": "permanent",
-      "rules_text": "Prevents or restricts healing on the affected model. Keyword: various.",
+      "timing": "end_phase",
+      "rules_text": "This model cannot heal. During the end phase, remove this token.",
       "model_sources": [
         {
           "model_name": "Gwyll",
@@ -101836,7 +101844,7 @@
     {
       "name": "Life",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "When this model suffers damage, it may remove this token. If it does so, it may not be reduced to below 1 health.",
       "model_sources": [
         {
@@ -101928,7 +101936,7 @@
     {
       "name": "Numb",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "This model loses its Don't Turn Your Back ability (if any) and does not prevent friendly models from declaring the Interact action due to:\n■ Being engaged with this model.\n■ This model being in base contact with a marker.\n■ Leaving this model's engagement range.\nDuring the end phase, remove this token.",
       "model_sources": [
         {
@@ -102020,7 +102028,7 @@
     {
       "name": "Paranoia",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_phase",
       "rules_text": "When this token is removed, the crew that applied it may move this model up to 4\" and then make a Scheme marker into base contact with it, after resolving the current action (if any). During the end phase, this model must either discard a card or remove this token.",
       "model_sources": [
         {
@@ -102126,6 +102134,18 @@
           "applies_or_references": "references"
         },
         {
+          "model_name": "Sorrow",
+          "source_type": "trigger",
+          "source_name": "Horrible Wail > “They’re After You…”",
+          "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Sorrow",
+          "source_type": "trigger",
+          "source_name": "Horrible Wail > “They’re After You…”",
+          "applies_or_references": "applies"
+        },
+        {
           "model_name": "The Carver",
           "source_type": "action_effect",
           "source_name": "Glimpse of Insanity",
@@ -102148,18 +102168,6 @@
           "source_type": "action_effect",
           "source_name": "Smashing Pumpkins",
           "applies_or_references": "applies"
-        },
-        {
-          "model_name": "sORROW",
-          "source_type": "trigger",
-          "source_name": "Horrible Wail > “They’re After You…”",
-          "applies_or_references": "applies"
-        },
-        {
-          "model_name": "sORROW",
-          "source_type": "trigger",
-          "source_name": "Horrible Wail > “They’re After You…”",
-          "applies_or_references": "applies"
         }
       ]
     },
@@ -102167,7 +102175,7 @@
       "name": "Parasite",
       "type": "debuff",
       "timing": "permanent",
-      "rules_text": "Allows drawing range and LoS from models with Parasite tokens. Keyword: Explorer's Society.",
+      "rules_text": "When this model is killed, the crew that applied this token infuses a (soulstone).",
       "model_sources": [
         {
           "model_name": "Archivist",
@@ -102339,7 +102347,7 @@
       "name": "Poison",
       "type": "debuff",
       "timing": "never",
-      "rules_text": "deals damage equal to value, then reduces by 1; does NOT self-remove",
+      "rules_text": "During the end phase, deal 1 irreducible damage to this model.",
       "model_sources": [
         {
           "model_name": "Adze",
@@ -103088,7 +103096,7 @@
     {
       "name": "Replica",
       "type": "buff",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "After this model discards an upgrade, it may remove this token to attach the discarded upgrade.",
       "model_sources": [
         {
@@ -103124,9 +103132,15 @@
       ]
     },
     {
+      "name": "Research Bar",
+      "type": "resource",
+      "timing": "permanent",
+      "rules_text": "Crew-level bar (Seeker keyword) with 3 slots granting cumulative bonuses. Increased by resolving the Interact action near terrain."
+    },
+    {
       "name": "Shame",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_activation",
       "rules_text": "This model cannot be targeted by the actions of other enemy models. When this model ends its activation, it may choose to deal 1 damage to itself to remove this token.",
       "model_sources": [
         {
@@ -104108,7 +104122,7 @@
     {
       "name": "Sin",
       "type": "debuff",
-      "timing": "permanent",
+      "timing": "end_activation",
       "rules_text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token."
     },
     {
@@ -105043,6 +105057,18 @@
           "applies_or_references": "applies"
         },
         {
+          "model_name": "Sorrow",
+          "source_type": "action_effect",
+          "source_name": "Growing Sorrow",
+          "applies_or_references": "removes"
+        },
+        {
+          "model_name": "Sorrow",
+          "source_type": "trigger",
+          "source_name": "Horrible Wail > “They’re After You…”",
+          "applies_or_references": "applies"
+        },
+        {
           "model_name": "Story of Sun Wukong",
           "source_type": "ability",
           "source_name": "Seven Means of Immortality",
@@ -105275,25 +105301,19 @@
           "source_type": "action_effect",
           "source_name": "Spare Parts",
           "applies_or_references": "references"
-        },
-        {
-          "model_name": "sORROW",
-          "source_type": "action_effect",
-          "source_name": "Growing Sorrow",
-          "applies_or_references": "removes"
-        },
-        {
-          "model_name": "sORROW",
-          "source_type": "trigger",
-          "source_name": "Horrible Wail > “They’re After You…”",
-          "applies_or_references": "applies"
         }
       ]
     },
     {
+      "name": "Spirit",
+      "type": "resource",
+      "timing": "permanent",
+      "rules_text": "Crew-specific resource token. Effects vary by crew card. Used across Ancestor, Oni, Swampfiend, and Urami keywords for spirit-themed abilities."
+    },
+    {
       "name": "Spiritual Chains",
       "type": "resource",
-      "timing": "on_use",
+      "timing": "when_triggered",
       "rules_text": "When this model flips, cheats, or discards the black joker, it is dealt 2 damage and then this token is removed.",
       "model_sources": [
         {
@@ -106918,7 +106938,7 @@
     {
       "name": "Voyage",
       "type": "resource",
-      "timing": "permanent",
+      "timing": "on_use",
       "rules_text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move.",
       "model_sources": [
         {

@@ -8027,6 +8027,109 @@
     ]
   },
   {
+    "name": "Sorrow",
+    "faction": "Neverborn",
+    "station": "Minion",
+    "model_limit": 3,
+    "cost": "5",
+    "df": 5,
+    "wp": 5,
+    "sz": 2,
+    "sp": 6,
+    "health": 5,
+    "shields": 0,
+    "base_size": "30mm",
+    "infuses_soulstone_on_death": true,
+    "keywords": [
+      "Woe"
+    ],
+    "characteristics": [
+      "Minion (3)"
+    ],
+    "abilities": [
+      {
+        "name": "Flight",
+        "text": "This model ignores terrain and other models while moving."
+      },
+      {
+        "name": "Incorporeal",
+        "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
+      },
+      {
+        "name": "Life Leech",
+        "text": "When an enemy model activates within 2\" of this model, deal +1 damage to it for each model with this ability within 2\" of it."
+      }
+    ],
+    "attack_actions": [
+      {
+        "name": "Horrible Wail",
+        "category": "attack_actions",
+        "action_type": "melee",
+        "range": "(melee) 1\"",
+        "skill_value": 5,
+        "resist": "Wp",
+        "tn": "-",
+        "damage": "1",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "",
+        "triggers": [
+          {
+            "name": "Gang Up",
+            "suit": "(r)",
+            "timing": "when_resolving",
+            "text": "When resolving, deal +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          },
+          {
+            "name": "\u201cThey\u2019re After You\u2026\u201d",
+            "suit": "(t)",
+            "timing": "after_succeeding",
+            "text": "If the target has a Paranoia token, it gains a Slow token. Otherwise, it gains a Paranoia token.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Growing Sorrow",
+        "category": "attack_actions",
+        "action_type": "magic",
+        "range": "(magic) 6\"",
+        "skill_value": 6,
+        "resist": "Wp",
+        "tn": "-",
+        "damage": "-",
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Target must have a Paranoia and a Slow token. Remove a friendly token from the target to summon a Sorrow into base contact with the target.",
+        "triggers": [
+          {
+            "name": "On Your Heels",
+            "suit": "(m)",
+            "timing": "after_succeeding",
+            "text": "Place this model into base contact with the target.",
+            "is_mandatory": false,
+            "soulstone_cost": 0
+          }
+        ]
+      }
+    ],
+    "tactical_actions": [
+      {
+        "name": "Creep Along",
+        "category": "tactical_actions",
+        "range": "(aura) -",
+        "skill_value": 0,
+        "tn": 6,
+        "is_signature": false,
+        "soulstone_cost": 0,
+        "effects": "Move this model up to its Sp toward a friendly model in its LoS."
+      }
+    ]
+  },
+  {
     "name": "Stitched Together",
     "faction": "Neverborn",
     "station": "Minion",
@@ -10214,109 +10317,6 @@
             "soulstone_cost": 0
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "sORROW",
-    "faction": "Neverborn",
-    "station": "Minion",
-    "model_limit": 3,
-    "cost": "5",
-    "df": 5,
-    "wp": 5,
-    "sz": 2,
-    "sp": 6,
-    "health": 5,
-    "shields": 0,
-    "base_size": "30mm",
-    "infuses_soulstone_on_death": true,
-    "keywords": [
-      "Woe"
-    ],
-    "characteristics": [
-      "Minion (3)"
-    ],
-    "abilities": [
-      {
-        "name": "Flight",
-        "text": "This model ignores terrain and other models while moving."
-      },
-      {
-        "name": "Incorporeal",
-        "text": "Reduce damage dealt to this model by 1. Damage from (magic) actions may not be reduced this way."
-      },
-      {
-        "name": "Life Leech",
-        "text": "When an enemy model activates within 2\" of this model, deal +1 damage to it for each model with this ability within 2\" of it."
-      }
-    ],
-    "attack_actions": [
-      {
-        "name": "Horrible Wail",
-        "category": "attack_actions",
-        "action_type": "melee",
-        "range": "(melee) 1\"",
-        "skill_value": 5,
-        "resist": "Wp",
-        "tn": "-",
-        "damage": "1",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "",
-        "triggers": [
-          {
-            "name": "Gang Up",
-            "suit": "(r)",
-            "timing": "when_resolving",
-            "text": "When resolving, deal +1 damage for each other ally within 1\" of the target, to a maximum of +2.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          },
-          {
-            "name": "\u201cThey\u2019re After You\u2026\u201d",
-            "suit": "(t)",
-            "timing": "after_succeeding",
-            "text": "If the target has a Paranoia token, it gains a Slow token. Otherwise, it gains a Paranoia token.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      },
-      {
-        "name": "Growing Sorrow",
-        "category": "attack_actions",
-        "action_type": "magic",
-        "range": "(magic) 6\"",
-        "skill_value": 6,
-        "resist": "Wp",
-        "tn": "-",
-        "damage": "-",
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Target must have a Paranoia and a Slow token. Remove a friendly token from the target to summon a Sorrow into base contact with the target.",
-        "triggers": [
-          {
-            "name": "On Your Heels",
-            "suit": "(m)",
-            "timing": "after_succeeding",
-            "text": "Place this model into base contact with the target.",
-            "is_mandatory": false,
-            "soulstone_cost": 0
-          }
-        ]
-      }
-    ],
-    "tactical_actions": [
-      {
-        "name": "Creep Along",
-        "category": "tactical_actions",
-        "range": "(aura) -",
-        "skill_value": 0,
-        "tn": 6,
-        "is_signature": false,
-        "soulstone_cost": 0,
-        "effects": "Move this model up to its Sp toward a friendly model in its LoS."
       }
     ]
   }

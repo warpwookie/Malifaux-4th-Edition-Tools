@@ -50,7 +50,8 @@
       "Bash(git add \"Model Data Json/m4e_tokens.json\" \"Model Data Json/m4e_knowledge_base.json\")",
       "Bash(git add scripts/denormalize.py \"Model Data Json/m4e_tokens.json\" \"Model Data Json/m4e_knowledge_base.json\")",
       "Bash(git add \"Model Data Json/m4e_crew_cards.json\" \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_tokens.json\")",
-      "Bash(git add \"Model Data Json/m4e_crew_cards.json\" \"Model Data Json/m4e_knowledge_base.json\")"
+      "Bash(git add \"Model Data Json/m4e_crew_cards.json\" \"Model Data Json/m4e_knowledge_base.json\")",
+      "Bash(git add \"Model Data Json/m4e_knowledge_base.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_neverborn.json\" \"Model Data Json/m4e_tokens.json\" \"reference/reference_data.json\" \"scripts/detect_m3e.py\" \"scripts/fix_tokens.py\")"
     ]
   }
 }

@@ -1,0 +1,53 @@
+{
+  "reconcile": {
+    "stat": {
+      "total_pdfs": 798,
+      "matched": 798,
+      "skipped_alt": 0,
+      "missing_from_db": [],
+      "errors": []
+    },
+    "crew": {
+      "total_pdfs": 130,
+      "matched": 130,
+      "skipped_alt": 0,
+      "missing_from_db": [],
+      "errors": []
+    },
+    "upgrade": {
+      "total_pdfs": 70,
+      "matched": 70,
+      "skipped_alt": 0,
+      "missing_from_db": [],
+      "errors": []
+    },
+    "orphan_db_records": [],
+    "missing_source_files": []
+  },
+  "stat_comparison": [
+    {
+      "pdf": "M4E_Stat_EVS_Maxine_Agassiz_The_Renowned.pdf",
+      "faction": "Explorer's Society",
+      "keyword": "EVS",
+      "diffs": [
+        "TRIGGER Crack the Formula count: DB=3 PDF=0",
+        "TRIGGER Crack the Formula +DB: {'Touch of Madness', 'Draw Out Secrets', 'Off On a Tangent'}",
+        "TRIGGER Abort the Trial count: DB=1 PDF=0",
+        "TRIGGER Abort the Trial +DB: {'Weaponised Semantics'}",
+        "TRIGGER Course Correction count: DB=2 PDF=0",
+        "TRIGGER Course Correction +DB: {'Race the Tide', 'Learn by Example'}"
+      ],
+      "categories": {
+        "stats": "match",
+        "keywords": "match",
+        "characteristics": "match",
+        "abilities": "match",
+        "actions": "match",
+        "triggers": "diff"
+      },
+      "name": "Maxine Agassiz"
+    }
+  ],
+  "crew_comparison": [],
+  "upgrade_comparison": []
+}

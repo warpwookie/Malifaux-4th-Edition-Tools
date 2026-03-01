@@ -6,9 +6,10 @@
 # Reference PDFs (large binary files)
 reference/*.pdf
 
-# SQLite database files (regenerated from scripts)
-db/*.db
-*.db
+# SQLite temporary files (the .db itself is tracked)
+*.db-journal
+*.db-wal
+*.db-shm
 
 # Python
 __pycache__/

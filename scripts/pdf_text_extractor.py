@@ -32,9 +32,11 @@ except ImportError:
 SYMBOL_MAP = {
     43:  "(+)",              # + → positive fate modifier
     45:  "(-)",              # - → negative fate modifier
-    83:  "(soulstone)",      # S → soulstone (stat block context)
+    67:  "(c)",              # C → Crow suit (uppercase encoding)
+    70:  "(signature)",      # F → lightning bolt (signature action, uppercase encoding)
+    83:  "(soulstone)",      # S → soulstone (stat block context, uppercase encoding)
     99:  "(c)",              # c → Crow suit
-    102: "(aura)",           # f → Aura range
+    102: "(aura)",           # f → signature at left margin, aura range in Rg column
     109: "(m)",              # m → Mask suit
     112: "(pulse)",          # p → Pulse range
     113: "(magic)",          # q → Magic range
@@ -56,13 +58,36 @@ DEFENSIVE_ICON_MAP = {
 }
 
 # Range icon codes → action_type values
+# NOTE: Code 102 (f) is the signature/lightning bolt icon at pre-name positions,
+# but also serves as the aura range icon when it appears in the Rg column.
+# Position-based disambiguation happens in _parse_action_header().
 ACTION_TYPE_MAP = {
     121: "melee",            # y
     122: "missile",          # z → gun/missile
     113: "magic",            # q
-    102: "aura",             # f (for tactical actions with aura range)
+    102: "aura",             # f (aura range when in Rg column; signature at left margin)
     112: "pulse",            # p (for tactical actions with pulse range)
+    70:  "aura",             # F (aura range when in Rg column; signature at left margin)
 }
+
+# Signature action icon codes (lightning bolt) — two font encodings
+SIGNATURE_CODES = {70, 102}  # F (uppercase encoding), f (lowercase encoding)
+
+# Soulstone cost codes on action headers
+SOULSTONE_ACTION_CODES = {83, 115}  # S, s
+
+# Regex to strip trailing transitional phrases from upgrade ability text.
+# These introduce the actions/triggers that follow on the card, e.g.:
+#   "This model gains the following action:"
+#   "This model's Fallow Night action gains the following trigger:"
+#   "This model's attack actions gain the following triggers:"
+# Can appear chained (e.g., "...gains the following trigger: This model gains the following attack action:")
+TRANSITIONAL_PHRASE_RE = re.compile(
+    r"(?:\s*This model(?:['\u2019]s\s+[\w\s]+?actions?)?\s+gains?\s+the\s+following"
+    r"(?:\s+(?:attack|tactical))?\s+(?:actions?|triggers?)"
+    r"(?:\s+on\s+all\s+its\s+attack\s+actions)?:\s*)+$",
+    re.IGNORECASE
+)
 
 # Trigger timing keywords found in trigger text
 TRIGGER_TIMING_MAP = {
@@ -1223,9 +1248,9 @@ def _classify_action_line(line_spans, has_active_trigger=False):
     has_bold_italic = any(s["font"] == FONT_TRIGGER for s in line_spans)
 
     # Check if line contains a Symbol span with a trigger-indicating icon:
-    # - Suit icons: c=99, m=109, r=114, t=116
+    # - Suit icons: c=99, m=109, r=114, t=116 (+ uppercase C=67)
     # - Soulstone icons: 83, 115 (soulstone-cost triggers are valid triggers)
-    SUIT_CODES = {99, 109, 114, 116}  # c, m, r, t
+    SUIT_CODES = {99, 109, 114, 116, 67}  # c, m, r, t (+ uppercase C)
     SOULSTONE_CODES = {83, 115}
     TRIGGER_SYMBOL_CODES = SUIT_CODES | SOULSTONE_CODES
     has_trigger_symbol = any(
@@ -1252,11 +1277,21 @@ def _classify_action_line(line_spans, has_active_trigger=False):
                     for s in line_spans)):
         return "trigger"
 
-    # Action header: ExtraBold name at left margin (X < 15), possibly preceded by symbol
-    if first_content["font"] == FONT_ABILITY_NAME and first_content["size"] < 8.5 and first_content["x0"] < 15:
+    # Trigger with ExtraBold name (font inconsistency in some PDFs):
+    # suit/soulstone symbol + ExtraBold text ending with ":" = trigger, not action header.
+    # e.g., Asami Tanaka's "Execute:" trigger uses ExtraBold instead of BoldItalic.
+    if (has_trigger_symbol and has_extra_bold
+            and any(s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":")
+                    for s in line_spans)):
+        return "trigger"
+
+    # Action header: ExtraBold name at left margin (X < 25), possibly preceded by symbol
+    # Threshold of 25 covers both direct names (x0~9) and wrapped continuations (x0~19)
+    # while staying well below column values (x0~96+)
+    if first_content["font"] == FONT_ABILITY_NAME and first_content["size"] < 8.5 and first_content["x0"] < 25:
         return "action_header"
 
-    if first_content["font"] == FONT_SYMBOL and first_content["x0"] < 15 and has_extra_bold:
+    if first_content["font"] == FONT_SYMBOL and first_content["x0"] < 25 and has_extra_bold:
         return "action_header"
 
     # Trigger continuation: indented body text when we're inside a trigger
@@ -1281,6 +1316,14 @@ def _parse_action_header(line_spans, section_type):
     resist_val = None
     tn_val = ""
     damage_val = ""
+    is_signature = False
+    soulstone_cost = 0
+    skill_built_in_suit = None
+    skill_fate_modifier = None
+
+    # Suit code → short name mapping
+    SUIT_CODE_MAP = {99: "c", 109: "m", 114: "r", 116: "t"}
+    FATE_CODE_MAP = {43: "+", 45: "-"}
 
     # Process spans
     name_parts = []
@@ -1289,11 +1332,23 @@ def _parse_action_header(line_spans, section_type):
     for span in line_spans:
         x_mid = (span["x0"] + span["x1"]) / 2
 
-        # Symbol font: could be action type or range prefix
+        # Symbol font: could be action type, range prefix, signature, soulstone,
+        # or built-in suit / fate modifier in the Skl column
         if span["font"] == FONT_SYMBOL:
             codes = _get_symbol_codes(span)
             for code in codes:
-                if code in ACTION_TYPE_MAP:
+                if code in SIGNATURE_CODES and span["x0"] < 25:
+                    # Lightning bolt at left margin = signature action indicator
+                    is_signature = True
+                elif code in SOULSTONE_ACTION_CODES and span["x0"] < 25:
+                    soulstone_cost += 1
+                elif code in SUIT_CODE_MAP and COL_SKL_X[0] <= x_mid <= COL_SKL_X[1]:
+                    # Built-in suit in Skl column
+                    skill_built_in_suit = SUIT_CODE_MAP[code]
+                elif code in FATE_CODE_MAP and COL_SKL_X[0] <= x_mid <= COL_SKL_X[1]:
+                    # Fate modifier (+/-) in Skl column
+                    skill_fate_modifier = FATE_CODE_MAP[code]
+                elif code in ACTION_TYPE_MAP:
                     if span["x0"] < 95:
                         # Before columns: this is the action type/range icon
                         # For melee/gun/magic before name, it's the action type
@@ -1336,7 +1391,7 @@ def _parse_action_header(line_spans, section_type):
         elif COL_DMG_X[0] <= x_mid <= COL_DMG_X[1]:
             damage_val += span["text"].strip()
 
-    action_name = " ".join(name_parts).rstrip(":")
+    action_name = " ".join(p for p in name_parts if p).rstrip(":").strip()
 
     # Build range string
     # If the Rg column explicitly says "-", use "-" (pre-name icon is just a type marker)
@@ -1362,9 +1417,13 @@ def _parse_action_header(line_spans, section_type):
         "action_type": action_type,
         "range": range_str,
         "skill_value": skill_val or "0",
+        "skill_built_in_suit": skill_built_in_suit,
+        "skill_fate_modifier": skill_fate_modifier,
         "resist": resist_val,
         "tn": tn_val or "-",
         "damage": damage_val or "-",
+        "is_signature": is_signature,
+        "soulstone_cost": soulstone_cost,
         "effects": "",
         "action_cost": "",
         "restrictions": "",
@@ -1422,10 +1481,24 @@ def _parse_trigger_line(line_spans):
             break
         # else: skip leading non-BoldItalic spans (whitespace, etc.)
 
+    # Fallback: if no BoldItalic name found, check for ExtraBold trigger name.
+    # Some PDFs use ExtraBold instead of BoldItalic for trigger names (font inconsistency).
+    if not name_parts and not found_name_end:
+        for i in range(idx, len(line_spans)):
+            if line_spans[i]["font"] == FONT_ABILITY_NAME and line_spans[i]["size"] < 8.5:
+                text = line_spans[i]["text"]
+                if ":" in text:
+                    name_parts.append(text.split(":")[0])
+                    idx = i + 1
+                    found_name_end = True
+                    break
+                else:
+                    name_parts.append(text)
+
     if name_parts:
         trigger_name = "".join(name_parts).strip()
     elif not found_name_end:
-        # No BoldItalic trigger name found at all — entire line is trigger text
+        # No trigger name found at all — entire line is trigger text
         idx = 0 if not suit else idx
 
     # Rest is trigger text
@@ -1718,15 +1791,26 @@ def _parse_crew_body(body_spans, notes):
     current_action = None
     current_ability = None
     has_active_trigger = False
+    crew_in_preamble = False
+    crew_preamble_text = ""
 
     def flush_section():
         """Save current granted_to section."""
         nonlocal current_abilities, current_actions, current_ability, current_action
+        nonlocal crew_in_preamble, crew_preamble_text
         if current_ability:
             current_ability["text"] = current_ability["text"].strip()
             current_abilities.append(current_ability)
             current_ability = None
         if current_action:
+            # Finalize any pending preamble
+            if crew_preamble_text:
+                classified = _classify_preamble(crew_preamble_text.strip())
+                current_action["action_cost"] = classified["action_cost"]
+                current_action["restrictions"] = classified["restrictions"]
+                current_action["special_conditions"] = classified["special_conditions"]
+            crew_preamble_text = ""
+            crew_in_preamble = False
             current_action["effects"] = current_action["effects"].strip()
             current_actions.append(current_action)
             current_action = None
@@ -1904,17 +1988,19 @@ def _parse_crew_body(body_spans, notes):
                     if current_action:
                         current_action["name"] += " " + parsed["name"]
                 else:
+                    # Finalize preamble of previous action before saving
+                    if crew_preamble_text and current_action:
+                        classified = _classify_preamble(crew_preamble_text.strip())
+                        current_action["action_cost"] = classified["action_cost"]
+                        current_action["restrictions"] = classified["restrictions"]
+                        current_action["special_conditions"] = classified["special_conditions"]
+                    crew_preamble_text = ""
+
                     if current_action:
                         current_action["effects"] = current_action["effects"].strip()
                         current_actions.append(current_action)
                     # Add crew card action fields
                     parsed["category"] = "attack_actions" if action_section_type == "attack" else "tactical_actions"
-                    parsed["skill_built_in_suit"] = None
-                    parsed["is_signature"] = False
-                    parsed["soulstone_cost"] = 0
-                    parsed["action_cost"] = None
-                    parsed["restrictions"] = None
-                    parsed["special_conditions"] = None
                     # Convert skill_value to int if possible
                     try:
                         parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else None
@@ -1933,8 +2019,18 @@ def _parse_crew_body(body_spans, notes):
 
                     current_action = parsed
                     has_active_trigger = False
+                    crew_in_preamble = True
 
             elif line_type == "trigger" and current_action:
+                # Triggers end preamble mode
+                if crew_in_preamble:
+                    if crew_preamble_text:
+                        classified = _classify_preamble(crew_preamble_text.strip())
+                        current_action["action_cost"] = classified["action_cost"]
+                        current_action["restrictions"] = classified["restrictions"]
+                        current_action["special_conditions"] = classified["special_conditions"]
+                    crew_preamble_text = ""
+                    crew_in_preamble = False
                 trigger = _parse_trigger_line(line_spans)
                 if trigger:
                     current_action["triggers"].append(trigger)
@@ -1945,8 +2041,23 @@ def _parse_crew_body(body_spans, notes):
                 current_action["triggers"][-1]["text"] += " " + text
 
             elif line_type == "effect_text" and current_action:
-                text = _spans_to_text(line_spans)
-                current_action["effects"] += " " + text
+                if crew_in_preamble:
+                    italic, body = _split_preamble_effect(line_spans)
+                    if italic:
+                        crew_preamble_text += " " + italic
+                    if body:
+                        # Body text seen — end preamble mode
+                        if crew_preamble_text:
+                            classified = _classify_preamble(crew_preamble_text.strip())
+                            current_action["action_cost"] = classified["action_cost"]
+                            current_action["restrictions"] = classified["restrictions"]
+                            current_action["special_conditions"] = classified["special_conditions"]
+                        crew_preamble_text = ""
+                        crew_in_preamble = False
+                        current_action["effects"] += " " + body
+                else:
+                    text = _spans_to_text(line_spans)
+                    current_action["effects"] += " " + text
                 has_active_trigger = False
 
             continue
@@ -1986,6 +2097,7 @@ def _parse_crew_body(body_spans, notes):
                         "range": None,
                         "skill_value": None,
                         "skill_built_in_suit": None,
+                        "skill_fate_modifier": None,
                         "resist": None,
                         "tn": None,
                         "damage": None,
@@ -2305,6 +2417,8 @@ def _parse_upgrade_body(body_spans, notes):
     current_action = None
     current_ability = None
     has_active_trigger = False
+    upg_in_preamble = False
+    upg_preamble_text = ""
 
     for line_spans in lines:
         # Check for action section headers
@@ -2354,17 +2468,18 @@ def _parse_upgrade_body(body_spans, notes):
                     if current_action:
                         current_action["name"] += " " + parsed["name"]
                 else:
+                    # Finalize preamble of previous action
+                    if upg_preamble_text and current_action:
+                        classified = _classify_preamble(upg_preamble_text.strip())
+                        current_action["action_cost"] = classified["action_cost"]
+                        current_action["restrictions"] = classified["restrictions"]
+                        current_action["special_conditions"] = classified["special_conditions"]
+                    upg_preamble_text = ""
+
                     if current_action:
                         current_action["effects"] = current_action["effects"].strip()
                         granted_actions.append(current_action)
                     parsed["category"] = "attack_actions" if action_section_type == "attack" else "tactical_actions"
-                    parsed["skill_built_in_suit"] = None
-                    parsed["skill_fate_modifier"] = None
-                    parsed["is_signature"] = False
-                    parsed["soulstone_cost"] = 0
-                    parsed["action_cost"] = None
-                    parsed["restrictions"] = None
-                    parsed["special_conditions"] = None
                     try:
                         parsed["skill_value"] = int(parsed["skill_value"]) if parsed["skill_value"] and parsed["skill_value"] != "0" else 0
                     except ValueError:
@@ -2379,8 +2494,18 @@ def _parse_upgrade_body(body_spans, notes):
                         parsed["resist"] = None
                     current_action = parsed
                     has_active_trigger = False
+                    upg_in_preamble = True
 
             elif line_type == "trigger" and current_action:
+                # Triggers end preamble mode
+                if upg_in_preamble:
+                    if upg_preamble_text:
+                        classified = _classify_preamble(upg_preamble_text.strip())
+                        current_action["action_cost"] = classified["action_cost"]
+                        current_action["restrictions"] = classified["restrictions"]
+                        current_action["special_conditions"] = classified["special_conditions"]
+                    upg_preamble_text = ""
+                    upg_in_preamble = False
                 trigger = _parse_trigger_line(line_spans)
                 if trigger:
                     current_action["triggers"].append(trigger)
@@ -2391,8 +2516,22 @@ def _parse_upgrade_body(body_spans, notes):
                 current_action["triggers"][-1]["text"] += " " + text
 
             elif line_type == "effect_text" and current_action:
-                text = _spans_to_text(line_spans)
-                current_action["effects"] += " " + text
+                if upg_in_preamble:
+                    italic, body = _split_preamble_effect(line_spans)
+                    if italic:
+                        upg_preamble_text += " " + italic
+                    if body:
+                        if upg_preamble_text:
+                            classified = _classify_preamble(upg_preamble_text.strip())
+                            current_action["action_cost"] = classified["action_cost"]
+                            current_action["restrictions"] = classified["restrictions"]
+                            current_action["special_conditions"] = classified["special_conditions"]
+                        upg_preamble_text = ""
+                        upg_in_preamble = False
+                        current_action["effects"] += " " + body
+                else:
+                    text = _spans_to_text(line_spans)
+                    current_action["effects"] += " " + text
                 has_active_trigger = False
 
             continue
@@ -2481,8 +2620,19 @@ def _parse_upgrade_body(body_spans, notes):
         current_ability["text"] = current_ability["text"].strip()
         granted_abilities.append(current_ability)
     if current_action:
+        # Finalize any pending preamble
+        if upg_preamble_text:
+            classified = _classify_preamble(upg_preamble_text.strip())
+            current_action["action_cost"] = classified["action_cost"]
+            current_action["restrictions"] = classified["restrictions"]
+            current_action["special_conditions"] = classified["special_conditions"]
         current_action["effects"] = current_action["effects"].strip()
         granted_actions.append(current_action)
+
+    # Strip trailing transitional phrases from ability text
+    # e.g., "...This model gains the following action:" is structural, not ability content
+    for ability in granted_abilities:
+        ability["text"] = TRANSITIONAL_PHRASE_RE.sub("", ability["text"]).strip()
 
     return granted_abilities, granted_actions, universal_triggers
 

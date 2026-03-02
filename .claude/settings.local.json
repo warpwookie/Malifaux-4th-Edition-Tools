@@ -69,7 +69,16 @@
       "Bash(/tmp/artifact_check2.py:*)",
       "Bash(/tmp/db_anomaly_checks.py:*)",
       "Bash(test -d pipeline_work)",
-      "Bash(git add .claude/settings.local.json CLAUDE.md \"Model Data Json/\" cleanup_repo.py final_audit.py schema/schema.sql scripts/db_loader.py scripts/merger.py scripts/pdf_text_batch.py scripts/pdf_text_extractor.py backfill_crew_markers.py backfill_crew_tokens.py run_faction.py prompts/ scripts/card_extractor.py scripts/fix_tokens.py scripts/pdf_splitter.py archive_scripts/)"
+      "Bash(git add .claude/settings.local.json CLAUDE.md \"Model Data Json/\" cleanup_repo.py final_audit.py schema/schema.sql scripts/db_loader.py scripts/merger.py scripts/pdf_text_batch.py scripts/pdf_text_extractor.py backfill_crew_markers.py backfill_crew_tokens.py run_faction.py prompts/ scripts/card_extractor.py scripts/fix_tokens.py scripts/pdf_splitter.py archive_scripts/)",
+      "Bash(python.exe:*)",
+      "Bash(git add CLAUDE.md final_audit.py reference/reference_data.json scripts/db_loader.py scripts/merger.py scripts/pdf_text_extractor.py scripts/validator.py db/m4e.db)",
+      "Bash(git add .gitignore db/m4e.db)",
+      "Bash(git add .gitignore)",
+      "Bash(git rm \"Model Data Json/m4e_crew_cards.json\" \"Model Data Json/m4e_faction_summary.json\" \"Model Data Json/m4e_faq.json\" \"Model Data Json/m4e_gaining_grounds.json\" \"Model Data Json/m4e_markers.json\" \"Model Data Json/m4e_models_all.json\" \"Model Data Json/m4e_models_arcanists.json\" \"Model Data Json/m4e_models_bayou.json\" \"Model Data Json/m4e_models_explorers_society.json\" \"Model Data Json/m4e_models_guild.json\" \"Model Data Json/m4e_models_neverborn.json\" \"Model Data Json/m4e_models_outcasts.json\" \"Model Data Json/m4e_models_resurrectionists.json\" \"Model Data Json/m4e_models_ten_thunders.json\" \"Model Data Json/m4e_rules.json\" \"Model Data Json/m4e_tokens.json\" \"Model Data Json/m4e_upgrades.json\")",
+      "Bash(git add scripts/denormalize.py \"Model Data Json/m4e_knowledge_base.json\")",
+      "Bash(git add schema/schema.sql scripts/db_loader.py scripts/merger.py scripts/pdf_text_extractor.py db/README.md m4e_data_inventory.md db/m4e.db)",
+      "Bash(\"C:/Users/mbeck/Documents/GitHub/Malifaux-4th-Edition-Tools/temp_investigate.py\":*)",
+      "Bash(git add scripts/pdf_text_extractor.py db/m4e.db)"
     ]
   }
 }

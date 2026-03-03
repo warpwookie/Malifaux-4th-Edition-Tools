@@ -47,6 +47,30 @@ FACTIONS = [
 ]
 
 
+# ── Faction Prefix Mapping ─────────────────────────────────────────────
+
+# Filename prefixes used in Versatile stat cards (e.g. Byu-Versatile → Bayou)
+_FACTION_PREFIX_MAP = {
+    "arc": "Arcanists",
+    "byu": "Bayou",
+    "es":  "Explorer's Society",
+    "evs": "Explorer's Society",
+    "gld": "Guild",
+    "nvb": "Neverborn",
+    "oc":  "Outcasts",
+    "out": "Outcasts",
+    "res": "Resurrectionists",
+    "tt":  "Ten Thunders",
+}
+
+
+def _faction_from_prefix(stem):
+    """Extract owning faction from a filename prefix like 'Byu-Versatile_...'."""
+    after = re.sub(r'^M4E_(Stat|Crew|Upgrade)_', '', stem)
+    prefix = re.split(r'[-_]', after)[0].lower()
+    return _FACTION_PREFIX_MAP.get(prefix)
+
+
 # ── PDF Discovery ──────────────────────────────────────────────────────
 
 def _normalize_stat_stem(stem):
@@ -109,7 +133,7 @@ def discover_stat_pdfs(faction=None):
     Returns list of (pdf_path, faction_name, keyword_name).
     """
     pdfs = []
-    seen_stems = set()
+    seen_stems = {}       # stem → index in pdfs list
     seen_identities = set()
     factions = [faction] if faction else FACTIONS
 
@@ -133,8 +157,15 @@ def discover_stat_pdfs(faction=None):
 
                 # Deduplicate: exact stem match (same file in two folders)
                 if name in seen_stems:
+                    # If the filename prefix indicates THIS faction owns the
+                    # model, replace the earlier entry (e.g. Byu-Versatile
+                    # appearing in both Arcanists/ and Bayou/ → Bayou wins)
+                    prefix_faction = _faction_from_prefix(name)
+                    if prefix_faction and prefix_faction == f_name:
+                        old_idx = seen_stems[name]
+                        pdfs[old_idx] = (pdf_file, f_name, keyword)
                     continue
-                seen_stems.add(name)
+                seen_stems[name] = len(pdfs)
 
                 # Deduplicate: normalized identity match (different filename,
                 # same model — e.g. extra keyword in filename)
@@ -158,7 +189,7 @@ def discover_all_pdfs():
     (pdf_path, faction_name, keyword_name).
     """
     result = {"stat": [], "crew": [], "upgrade": []}
-    seen_stems = set()
+    seen_stems = {}       # stem → (card_type, index in that type's list)
     seen_identities = set()
 
     for f_name in FACTIONS:
@@ -180,8 +211,11 @@ def discover_all_pdfs():
 
                 # Deduplicate: exact stem match
                 if name in seen_stems:
+                    prefix_faction = _faction_from_prefix(name)
+                    if prefix_faction and prefix_faction == f_name:
+                        card_type, old_idx = seen_stems[name]
+                        result[card_type][old_idx] = (pdf_file, f_name, keyword)
                     continue
-                seen_stems.add(name)
 
                 # Deduplicate: normalized identity match (stat cards only —
                 # crew and upgrade filenames are more uniform)
@@ -190,10 +224,13 @@ def discover_all_pdfs():
                     if identity in seen_identities:
                         continue
                     seen_identities.add(identity)
+                    seen_stems[name] = ("stat", len(result["stat"]))
                     result["stat"].append((pdf_file, f_name, keyword))
                 elif name.startswith("M4E_Crew_"):
+                    seen_stems[name] = ("crew", len(result["crew"]))
                     result["crew"].append((pdf_file, f_name, keyword))
                 elif name.startswith("M4E_Upgrade_"):
+                    seen_stems[name] = ("upgrade", len(result["upgrade"]))
                     result["upgrade"].append((pdf_file, f_name, keyword))
 
     return result

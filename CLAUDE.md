@@ -99,7 +99,7 @@ Master (`cost='-'`), Henchman, Minion (with model limit), Peon (with model limit
 - Each model belongs to exactly **one** faction. No dual-faction models in M4E.
 - Keywords define crew membership. Characteristics are inherent traits.
 - Attack actions MUST have a resist stat. Tactical actions typically do not, but card rules override core rules — some tactical actions have resist and damage (e.g., Bayou Gremlin).
-- Trigger timings: `after_resolving`, `after_damaging`, `after_succeeding`, `on_success`, `before_resolving`, `on_trigger`
+- Trigger timings: `after_succeeding`, `when_resolving`, `after_failing`, `after_resolving`
 
 ### Stat ranges (hard bounds)
 - Df: 2–8, Wp: 0–8, Sz: 0–6, Sp: 0–9, Health: 0–16

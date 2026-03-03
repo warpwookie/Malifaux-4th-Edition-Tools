@@ -96,7 +96,6 @@ def merge_stat_card(front: dict, back: dict, source_pdf: str = None) -> dict:
         "sz": stats.get("sz"),
         "sp": stats.get("sp"),
         "health": front.get("health"),
-        "soulstone_cache": front.get("soulstone_cache"),
         "base_size": base_size,
         "infuses_soulstone_on_death": front.get("infuses_soulstone_on_death", True),
         "crew_card_name": front.get("crew_card_name"),

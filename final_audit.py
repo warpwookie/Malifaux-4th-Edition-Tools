@@ -258,15 +258,6 @@ def audit_statistical(conn, report, verbose):
         else:
             report.info(section, f"All {stat} values in range [{lo},{hi}]")
     
-    # Models with unusually high soulstone cache
-    c.execute("SELECT id, name, title, soulstone_cache FROM models WHERE soulstone_cache > 4")
-    outliers = c.fetchall()
-    if outliers:
-        report.warn(section, f"{len(outliers)} models with soulstone_cache > 4",
-                   [f"id={r[0]} {r[1]} ({r[2]}): cache={r[3]}" for r in outliers])
-    else:
-        report.info(section, "All soulstone caches reasonable")
-    
     # Cost validation (exclude Effigy totems which legitimately have cost=2)
     c.execute("""SELECT id, name, title, station, cost FROM models 
                  WHERE station IN ('Master', 'Totem') AND cost != '-' AND cost IS NOT NULL

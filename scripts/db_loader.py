@@ -83,13 +83,13 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         
         # Update model row
         c.execute("""UPDATE models SET faction=?, station=?, model_limit=?, cost=?,
-            df=?, wp=?, sz=?, sp=?, health=?, soulstone_cache=?, base_size=?,
+            df=?, wp=?, sz=?, sp=?, health=?, base_size=?,
             infuses_soulstone_on_death=?, crew_card_name=?, totem=?,
             source_pdf=?, parse_date=?, parse_status=?
             WHERE id=?""",
             (faction, card.get("station"), card.get("model_limit", 1), card.get("cost"),
              card["df"], card["wp"], card["sz"], card["sp"], card["health"],
-             card.get("soulstone_cache"), card.get("base_size"),
+             card.get("base_size"),
              card.get("infuses_soulstone_on_death", True),
              card.get("crew_card_name"), card.get("totem"),
              card.get("source_pdf"), datetime.now().isoformat(), "auto",
@@ -98,13 +98,13 @@ def load_stat_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
     else:
         # Insert new model
         c.execute("""INSERT INTO models (name, title, faction, station, model_limit, cost,
-            df, wp, sz, sp, health, soulstone_cache, base_size,
+            df, wp, sz, sp, health, base_size,
             infuses_soulstone_on_death, crew_card_name, totem,
             source_pdf, parse_date, parse_status)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (name, title, faction, card.get("station"), card.get("model_limit", 1),
              card.get("cost"), card["df"], card["wp"], card["sz"], card["sp"],
-             card["health"], card.get("soulstone_cache"),
+             card["health"],
              card.get("base_size"), card.get("infuses_soulstone_on_death", True),
              card.get("crew_card_name"), card.get("totem"),
              card.get("source_pdf"), datetime.now().isoformat(), "auto"))

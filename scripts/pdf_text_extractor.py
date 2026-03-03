@@ -34,7 +34,11 @@ SYMBOL_MAP = {
     45:  "(-)",              # - → negative fate modifier
     67:  "(c)",              # C → Crow suit (uppercase encoding)
     70:  "(signature)",      # F → lightning bolt (signature action, uppercase encoding)
+    77:  "(m)",              # M → Mask suit (uppercase encoding)
+    80:  "(pulse)",          # P → Pulse range (uppercase encoding)
+    82:  "(r)",              # R → Ram suit (uppercase encoding)
     83:  "(soulstone)",      # S → soulstone (stat block context, uppercase encoding)
+    84:  "(t)",              # T → Tome suit (uppercase encoding)
     99:  "(c)",              # c → Crow suit
     102: "(aura)",           # f → signature at left margin, aura range in Rg column
     109: "(m)",              # m → Mask suit
@@ -201,8 +205,8 @@ def _map_symbol_text(text, font):
         code = ord(ch)
         if code in SYMBOL_MAP:
             result.append(SYMBOL_MAP[code])
-        elif code == 32:  # space
-            continue  # Skip spaces in symbol font
+        elif code in (9, 32):  # tab, space
+            continue  # Skip whitespace in symbol font
         else:
             result.append(f"[?{code}]")
     return "".join(result)
@@ -229,14 +233,46 @@ def _reconstruct_curved_text(spans):
 
     Uses x-center (midpoint of x0, x1) for stability with overlapping chars.
 
+    Multi-char spans (e.g. 'un', ' O') are expanded into individual character
+    positions with interpolated x coordinates. Characters at nearly-identical
+    x positions (within 1.5pt) are deduplicated to prevent doubled letters
+    from overlapping PDF text layers.
+
     Returns the reconstructed string.
     """
     if not spans:
         return ""
 
-    # Sort by x-center (midpoint) for robust ordering on curved paths
-    sorted_spans = sorted(spans, key=lambda s: (s["x0"] + s["x1"]) / 2)
-    return "".join(s["text"] for s in sorted_spans)
+    # Expand multi-char spans into individual character pseudo-entries
+    chars = []
+    for s in spans:
+        text = s["text"]
+        if len(text) == 1:
+            x_center = (s["x0"] + s["x1"]) / 2
+            chars.append((x_center, text))
+        else:
+            # Interpolate x position for each character across span width
+            span_width = s["x1"] - s["x0"]
+            for i, ch in enumerate(text):
+                if len(text) > 1:
+                    char_x = s["x0"] + (i + 0.5) * span_width / len(text)
+                else:
+                    char_x = (s["x0"] + s["x1"]) / 2
+                chars.append((char_x, ch))
+
+    # Sort by x position
+    chars.sort(key=lambda c: c[0])
+
+    # Deduplicate characters at nearly-identical x positions (within 1.5pt).
+    # Some PDFs have overlapping text layers producing the same character
+    # in both a single-char span and a multi-char span (e.g. 'O' + ' O').
+    deduped = []
+    for x, ch in chars:
+        if deduped and abs(x - deduped[-1][0]) < 1.5 and ch == deduped[-1][1]:
+            continue  # skip duplicate character at same position
+        deduped.append((x, ch))
+
+    return "".join(ch for _, ch in deduped)
 
 
 def _extract_characteristics_keywords(spans):
@@ -261,21 +297,43 @@ def _extract_characteristics_keywords(spans):
     if not zone_spans:
         return [], [], {}
 
+    # Deduplicate spans — some PDFs have overlapping text layers that produce
+    # identical spans, causing doubled characters (e.g., "Livviing" for "Living")
+    seen_keys = set()
+    deduped_zone = []
+    for s in zone_spans:
+        key = (s["font"], round(s["x0"], 1), round(s["y0"], 1), s["text"])
+        if key not in seen_keys:
+            seen_keys.add(key)
+            deduped_zone.append(s)
+    zone_spans = deduped_zone
+
     # Find the diamond bullet — this separates characteristics from keywords
     bullet_spans = [s for s in zone_spans
                     if s["font"] == FONT_BULLET and "•" in s["text"]]
 
     # Collect Astoria curved-text chars by font variant
     # Size varies: 6.4pt (Fire Gamin), 7.1pt (Joss), 8.2pt (Bad Juju), 9.0pt (Dashel)
-    # Exclude multi-char spans to avoid crew card name / totem name text
+    # Curved text uses single chars; multi-char spans (len>1) are crew/totem name
+    # fragments or overlapping text artifacts that must be excluded.
+    # At sizes < 7.5pt, len<=1 prevents totem/crew name fragments from leaking in.
+    # At sizes >= 7.5pt, len<=2 is safe — totem names don't appear at these sizes,
+    # and some PDFs legitimately group keyword chars into 2-char spans (e.g. 'un').
+    # _reconstruct_curved_text handles character-level dedup for overlapping spans.
+    def _charkey_span_ok(s):
+        stripped_len = len(s["text"].strip())
+        if s["size"] >= 7.5:
+            return stripped_len <= 2
+        return stripped_len <= 1
+
     italic_spans = [s for s in zone_spans
                     if s["font"] == FONT_NAME_ITALIC
                     and 5.5 <= s["size"] <= 10.0
-                    and len(s["text"].strip()) <= 3]
+                    and _charkey_span_ok(s)]
     bold_spans = [s for s in zone_spans
                   if s["font"] == FONT_NAME_LARGE
                   and 5.5 <= s["size"] <= 10.0
-                  and len(s["text"].strip()) <= 3]
+                  and _charkey_span_ok(s)]
 
     # Crew card name / totem name: Astoria-Bold multi-char at 5.5-7.5pt
     # Also include Astoria-BoldItalic — totem titles use this font
@@ -286,8 +344,35 @@ def _extract_characteristics_keywords(spans):
                         and len(s["text"].strip()) > 2]
 
     # STN (Summon Target Number): Astoria-Bold ~7.0pt
-    stn_spans = [s for s in zone_spans
-                 if s["font"] == FONT_NAME_LARGE and 6.5 <= s["size"] <= 7.5]
+    # STN text sits near the center of the card. Keyword chars at the same
+    # font/size (e.g. "Experimental" at 7.0pt on Flesh Construct) must NOT
+    # be removed. Only exclude the compact cluster of STN chars, not all
+    # 7.0pt Bold spans.
+    stn_candidates = [s for s in zone_spans
+                      if s["font"] == FONT_NAME_LARGE and 6.5 <= s["size"] <= 7.5]
+    stn_text = _reconstruct_curved_text(stn_candidates).strip()
+    stn_spans = []  # actual STN spans (subset of stn_candidates)
+    if re.match(r'STN\s*:?\s*\d+', stn_text):
+        # Find the x-range of just the STN pattern by walking sorted spans.
+        # STN is always a tight cluster (S, T, N, :, digit) spanning ~20pt.
+        sorted_cands = sorted(stn_candidates,
+                              key=lambda s: (s["x0"] + s["x1"]) / 2)
+        # Find 'S' that starts the STN sequence
+        for i, s in enumerate(sorted_cands):
+            if s["text"].strip() == "S":
+                # Check if next chars form "TN" pattern
+                cluster = [s]
+                for j in range(i + 1, min(i + 8, len(sorted_cands))):
+                    nx = (sorted_cands[j]["x0"] + sorted_cands[j]["x1"]) / 2
+                    sx = (cluster[-1]["x0"] + cluster[-1]["x1"]) / 2
+                    if nx - sx < 12:  # chars within 12pt of each other
+                        cluster.append(sorted_cands[j])
+                cluster_text = "".join(c["text"] for c in cluster).strip()
+                if re.match(r'STN\s*:?\s*\d+$', cluster_text):
+                    stn_spans = cluster
+                    break
+        stn_ids = {id(s) for s in stn_spans}
+        bold_spans = [s for s in bold_spans if id(s) not in stn_ids]
 
     # Split by bullet position into left (characteristics) and right (keywords)
     if bullet_spans:
@@ -331,6 +416,22 @@ def _extract_characteristics_keywords(spans):
 
     # Parse keywords: "Guard" or "BigHat,Sooey"
     keywords = _parse_char_keyword_string(kw_text)
+
+    # Clean keyword names: strip model limits and trailing punctuation.
+    # Keywords never have model limits in M4E — only stations (characteristics) do.
+    cleaned_kw = []
+    for kw in keywords:
+        # Strip model limit suffix: "Apex (2)" → "Apex", "Wizz-Bang(3)" → "Wizz-Bang"
+        # Opening paren may be missing if filtered as single-char span
+        kw = re.sub(r'\s*\(?\d+\)\s*$', '', kw)
+        # Strip trailing punctuation (dashes from no-totem markers, stray dots)
+        kw = kw.rstrip("-.")
+        # Strip leading digits + whitespace (STN overflow)
+        kw = re.sub(r'^\d+\s*', '', kw)
+        kw = kw.strip()
+        if kw:
+            cleaned_kw.append(kw)
+    keywords = cleaned_kw
 
     # Extract extras (crew card name, totem, STN)
     extras = _extract_front_extras(small_bold_spans, stn_spans, zone_spans)
@@ -592,9 +693,6 @@ def _extract_front(page_spans, page, faction=None, pdf_path=None):
     if health is None:
         notes.append("Health not extracted from PDF graphics — needs manual verification")
 
-    # 8. SOULSTONE CACHE — also graphical
-    soulstone_cache = _extract_soulstone_cache(page)
-
     # Determine faction from folder path
     if faction is None and pdf_path:
         faction = _faction_from_path(pdf_path)
@@ -607,7 +705,6 @@ def _extract_front(page_spans, page, faction=None, pdf_path=None):
         "cost": cost,
         "stats": stats,
         "health": health,
-        "soulstone_cache": soulstone_cache,
         "infuses_soulstone_on_death": True,  # Default; overridden by validator for Peons
         "crew_card_name": extras.get("crew_card_name"),
         "totem": extras.get("totem"),
@@ -961,17 +1058,6 @@ def _extract_health_from_drawings(page):
     # Return 0 for cards with no pips (e.g., Marathine "does not have health")
     return health
 
-
-def _extract_soulstone_cache(page):
-    """
-    Extract soulstone cache value from graphical elements.
-
-    Soulstone cache icons appear near the cost area for Masters/Henchmen.
-    Returns int or None.
-    """
-    # Soulstone cache is hard to extract from graphics alone
-    # For now, return None and let it be populated from existing data
-    return None
 
 
 # ============================================================================

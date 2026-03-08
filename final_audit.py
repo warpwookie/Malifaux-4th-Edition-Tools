@@ -677,17 +677,106 @@ def audit_cross_table(conn, report, verbose):
     report.info(section, f"Averages per model: {avg_ab:.1f} abilities, {avg_act:.1f} actions")
 
 
+def audit_markers_and_tokens(conn, report, verbose=False):
+    """Audit marker and token registries for consistency."""
+    section = "MARKERS & TOKENS"
+    c = conn.cursor()
+
+    # --- MARKERS ---
+    c.execute("SELECT COUNT(*) FROM markers")
+    total_markers = c.fetchone()[0]
+    c.execute("SELECT COUNT(*) FROM markers WHERE category IS NOT NULL")
+    with_cat = c.fetchone()[0]
+    report.info(section, f"{total_markers} markers in global registry ({with_cat} with category)")
+
+    # Check for markers without category
+    c.execute("SELECT name FROM markers WHERE category IS NULL ORDER BY name")
+    no_cat = [r[0] for r in c.fetchall()]
+    if no_cat:
+        report.warn(section, f"{len(no_cat)} markers without category", no_cat)
+    else:
+        report.info(section, "All markers have a category assigned")
+
+    # Validate terrain traits
+    valid_traits = {"blocking", "concealing", "dense", "destructible",
+                    "hazardous", "impassable", "severe"}
+    c.execute("SELECT DISTINCT trait FROM marker_terrain_traits ORDER BY trait")
+    db_traits = {r[0] for r in c.fetchall()}
+    c.execute("SELECT DISTINCT trait FROM crew_marker_terrain_traits ORDER BY trait")
+    crew_traits = {r[0] for r in c.fetchall()}
+    all_traits = db_traits | crew_traits
+    invalid_traits = all_traits - valid_traits
+    if invalid_traits:
+        report.error(section, f"Invalid terrain traits found: {sorted(invalid_traits)}")
+    else:
+        report.info(section, f"All terrain traits valid ({len(all_traits)} distinct)")
+
+    # Check marker_model_sources counts
+    c.execute("SELECT COUNT(*) FROM marker_model_sources")
+    mms = c.fetchone()[0]
+    c.execute("SELECT relationship, COUNT(*) FROM marker_model_sources GROUP BY relationship ORDER BY relationship")
+    rels = {r[0]: r[1] for r in c.fetchall()}
+    report.info(section, f"{mms} marker-model references (creates={rels.get('creates', 0)}, "
+                f"removes={rels.get('removes', 0)}, references={rels.get('references', 0)})")
+
+    # Check crew_markers
+    c.execute("SELECT COUNT(*) FROM crew_markers")
+    cm = c.fetchone()[0]
+    c.execute("SELECT COUNT(*) FROM marker_crew_sources")
+    mcs = c.fetchone()[0]
+    report.info(section, f"{cm} crew marker definitions, {mcs} crew source links")
+
+    # Markers with crew definitions but no model references
+    c.execute("""SELECT m.name FROM markers m
+                 WHERE EXISTS (SELECT 1 FROM marker_crew_sources WHERE marker_id=m.id)
+                 AND NOT EXISTS (SELECT 1 FROM marker_model_sources WHERE marker_id=m.id)""")
+    no_model_refs = [r[0] for r in c.fetchall()]
+    if no_model_refs:
+        report.warn(section, f"{len(no_model_refs)} markers defined on crew cards but no model references",
+                   no_model_refs)
+
+    # --- TOKENS ---
+    c.execute("SELECT COUNT(*) FROM tokens")
+    total_tokens = c.fetchone()[0]
+    c.execute("SELECT COUNT(*) FROM tokens WHERE type IS NOT NULL")
+    basic = c.fetchone()[0]
+    crew_specific = total_tokens - basic
+    report.info(section, f"{total_tokens} tokens in global registry ({basic} basic, {crew_specific} crew-specific)")
+
+    # Check token_model_sources
+    c.execute("SELECT COUNT(*) FROM token_model_sources")
+    tms = c.fetchone()[0]
+    report.info(section, f"{tms} token-model references")
+
+    # Check token_crew_sources
+    c.execute("SELECT COUNT(*) FROM token_crew_sources")
+    tcs = c.fetchone()[0]
+    c.execute("SELECT COUNT(DISTINCT token_id) FROM token_crew_sources")
+    tcs_unique = c.fetchone()[0]
+    report.info(section, f"{tcs} token-crew source links ({tcs_unique} distinct tokens)")
+
+    # Tokens with rules_text
+    c.execute("SELECT COUNT(*) FROM tokens WHERE rules_text IS NOT NULL")
+    with_rules = c.fetchone()[0]
+    if with_rules == total_tokens:
+        report.info(section, "All tokens have rules_text")
+    else:
+        c.execute("SELECT name FROM tokens WHERE rules_text IS NULL ORDER BY name")
+        missing = [r[0] for r in c.fetchall()]
+        report.warn(section, f"{len(missing)} tokens without rules_text", missing)
+
+
 def main():
     parser = argparse.ArgumentParser(description="M4E Database Final Audit")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show all details")
     parser.add_argument("--export", help="Export report to JSON file")
     args = parser.parse_args()
-    
+
     conn = sqlite3.connect(DB_PATH)
     conn.execute("PRAGMA foreign_keys=ON")
-    
+
     report = AuditReport()
-    
+
     audit_structural(conn, report, args.verbose)
     audit_statistical(conn, report, args.verbose)
     audit_consistency(conn, report, args.verbose)
@@ -695,6 +784,7 @@ def main():
     audit_duplicates(conn, report, args.verbose)
     audit_upgrades(conn, report, args.verbose)
     audit_cross_table(conn, report, args.verbose)
+    audit_markers_and_tokens(conn, report, args.verbose)
     
     report.print_report(args.verbose)
     

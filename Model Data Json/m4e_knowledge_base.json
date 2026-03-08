@@ -1,15 +1,15 @@
 {
   "_meta": {
     "description": "Malifaux 4th Edition complete game data — models, crew cards, upgrades, rules, FAQ, and Gaining Grounds",
-    "generated": "2026-03-02",
+    "generated": "2026-03-07",
     "counts": {
       "models": 798,
       "crew_cards": 130,
       "upgrades": 70,
-      "markers": 0,
-      "tokens": 18,
+      "markers": 24,
+      "tokens": 73,
       "rules_sections": 29,
-      "faq_entries": 44,
+      "faq_entries": 45,
       "strategies": 4,
       "schemes": 15
     }
@@ -7315,7 +7315,7 @@
       ]
     },
     {
-      "name": "Leger De Main",
+      "name": "Leger de Main",
       "faction": "Arcanists",
       "model_limit": 1,
       "cost": "6",
@@ -11477,7 +11477,7 @@
       ]
     },
     {
-      "name": "Alphonse Leblanc",
+      "name": "Alphonse LeBlanc",
       "faction": "Bayou",
       "station": "Henchman",
       "model_limit": 1,
@@ -13514,7 +13514,7 @@
       ]
     },
     {
-      "name": "Francois Lacroix",
+      "name": "Francois LaCroix",
       "faction": "Bayou",
       "station": "Henchman",
       "model_limit": 1,
@@ -15420,7 +15420,7 @@
       ]
     },
     {
-      "name": "Lacroix Raider",
+      "name": "LaCroix Raider",
       "faction": "Bayou",
       "station": "Minion",
       "model_limit": 3,
@@ -16212,7 +16212,7 @@
       ]
     },
     {
-      "name": "Mctavish",
+      "name": "McTavish",
       "faction": "Bayou",
       "model_limit": 1,
       "cost": "8",
@@ -16449,7 +16449,7 @@
       ]
     },
     {
-      "name": "Merris Lacroix",
+      "name": "Merris LaCroix",
       "faction": "Bayou",
       "model_limit": 1,
       "cost": "7",
@@ -17561,7 +17561,7 @@
       ]
     },
     {
-      "name": "Ophelia Lacroix",
+      "name": "Ophelia LaCroix",
       "title": "Overloaded",
       "faction": "Bayou",
       "station": "Master",
@@ -17709,7 +17709,7 @@
       ]
     },
     {
-      "name": "Ophelia Lacroix",
+      "name": "Ophelia LaCroix",
       "title": "Red Cage Raider",
       "faction": "Bayou",
       "station": "Master",
@@ -18432,7 +18432,7 @@
       ]
     },
     {
-      "name": "Rami Lacroix",
+      "name": "Rami LaCroix",
       "faction": "Bayou",
       "model_limit": 1,
       "cost": "6",
@@ -18550,7 +18550,7 @@
       ]
     },
     {
-      "name": "Raphael Lacroix",
+      "name": "Raphael LaCroix",
       "faction": "Bayou",
       "model_limit": 1,
       "cost": "8",
@@ -18899,7 +18899,7 @@
       ]
     },
     {
-      "name": "Sammy Lacroix",
+      "name": "Sammy LaCroix",
       "faction": "Bayou",
       "station": "Totem",
       "model_limit": 1,
@@ -19948,7 +19948,7 @@
       ]
     },
     {
-      "name": "Sparks Leblanc",
+      "name": "Sparks LeBlanc",
       "faction": "Bayou",
       "station": "Henchman",
       "model_limit": 1,
@@ -24093,7 +24093,7 @@
       ]
     },
     {
-      "name": "Young Lacroix",
+      "name": "Young LaCroix",
       "faction": "Bayou",
       "station": "Totem",
       "model_limit": 1,
@@ -27393,7 +27393,7 @@
       ]
     },
     {
-      "name": "Desper Laraux",
+      "name": "Desper LaRaux",
       "faction": "Explorer's Society",
       "station": "Henchman",
       "model_limit": 1,
@@ -28360,7 +28360,7 @@
       ]
     },
     {
-      "name": "Gibson Dewalt",
+      "name": "Gibson DeWalt",
       "faction": "Explorer's Society",
       "station": "Henchman",
       "model_limit": 1,
@@ -30747,7 +30747,7 @@
       ]
     },
     {
-      "name": "Lucas Mccabe",
+      "name": "Lucas McCabe",
       "title": "Dismounted Hunter",
       "faction": "Explorer's Society",
       "station": "Master",
@@ -30886,7 +30886,7 @@
       ]
     },
     {
-      "name": "Lucas Mccabe",
+      "name": "Lucas McCabe",
       "title": "Relic Hunter",
       "faction": "Explorer's Society",
       "station": "Master",
@@ -31025,7 +31025,7 @@
       ]
     },
     {
-      "name": "Lucas Mccabe",
+      "name": "Lucas McCabe",
       "title": "Tomb Delver",
       "faction": "Explorer's Society",
       "station": "Master",
@@ -31588,7 +31588,7 @@
           "triggers": [
             {
               "name": "Off On a Tangent",
-              "suit": "",
+              "suit": "X",
               "timing": "after_succeeding",
               "text": "Move the target up to 4\".",
               "is_mandatory": false,
@@ -31654,7 +31654,7 @@
           "triggers": [
             {
               "name": "Race the Tide",
-              "suit": "",
+              "suit": "X",
               "timing": "after_succeeding",
               "text": "Once per activation. Target gains a Fast token.",
               "is_mandatory": false,
@@ -44771,7 +44771,7 @@
       ]
     },
     {
-      "name": "Pistolero De Latigo",
+      "name": "Pistolero de Latigo",
       "faction": "Guild",
       "station": "Minion",
       "model_limit": 3,
@@ -74198,7 +74198,7 @@
       ]
     },
     {
-      "name": "Dr. Mcmourning",
+      "name": "Dr. McMourning",
       "title": "Insanitary",
       "faction": "Resurrectionists",
       "station": "Master",
@@ -74354,7 +74354,7 @@
       ]
     },
     {
-      "name": "Dr. Mcmourning",
+      "name": "Dr. McMourning",
       "title": "Malpractitioner",
       "faction": "Resurrectionists",
       "station": "Master",
@@ -80034,16 +80034,8 @@
           "effects": "",
           "action_cost": "",
           "restrictions": "",
-          "special_conditions": "This model may remove a Remains marker within 3\" to",
+          "special_conditions": "This model may remove a Remains marker within 3\" to add +(c) to its Skl.",
           "triggers": [
-            {
-              "name": "Skl",
-              "suit": "(c)",
-              "timing": "after_succeeding",
-              "text": ".",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            },
             {
               "name": "Study Opponent",
               "suit": "(t)",
@@ -81094,19 +81086,11 @@
           "damage": "-",
           "is_signature": true,
           "soulstone_cost": 0,
-          "effects": "",
-          "action_cost": "",
+          "effects": "Place this model within range.",
+          "action_cost": "This model may drain a (soulstone) to increase the Rg of this action by 4\".",
           "restrictions": "",
           "special_conditions": "",
           "triggers": [
-            {
-              "name": "Rg",
-              "suit": "(soulstone)",
-              "timing": "after_succeeding",
-              "text": "of this action by 4\". Place this model within range.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            },
             {
               "name": "Horn of Goat",
               "suit": "(r)",
@@ -83342,16 +83326,8 @@
           "effects": "",
           "action_cost": "",
           "restrictions": "",
-          "special_conditions": "",
+          "special_conditions": "This action receives +1(c) to its Skl if the target is at a lower elevation.",
           "triggers": [
-            {
-              "name": "Skl",
-              "suit": "(c)",
-              "timing": "after_succeeding",
-              "text": "if the target is at a lower elevation.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            },
             {
               "name": "Coordinated Defense",
               "suit": "(m)",
@@ -87491,19 +87467,11 @@
           "damage": "-",
           "is_signature": false,
           "soulstone_cost": 0,
-          "effects": "",
+          "effects": "Move the target up to 4\", ignoring vertical distance.",
           "action_cost": "",
           "restrictions": "",
-          "special_conditions": "This action may target friendly models and receives",
+          "special_conditions": "This action may target friendly models and receives +1 (r) to its Skl if the target is at a lower elevation.",
           "triggers": [
-            {
-              "name": "Skl",
-              "suit": "(r)",
-              "timing": "after_succeeding",
-              "text": "if the target is at a lower elevation. Move the target up to 4\", ignoring vertical distance.",
-              "is_mandatory": false,
-              "soulstone_cost": 0
-            },
             {
               "name": "Gateway to the Beyond",
               "suit": "(r)",
@@ -94678,6 +94646,17 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Ice Pillar",
+          "height": "Ht 5",
+          "text": "Ht 5, blocking, impassable. Models within 2\" of this marker suffer -1 to their duel totals during their activation.",
+          "terrain_traits": [
+            "blocking",
+            "impassable"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Hunger",
@@ -95152,6 +95131,12 @@
           "special_conditions": ""
         }
       ],
+      "markers": [
+        {
+          "name": "Decoy",
+          "text": "When a friendly Performer within 3\" is dealt damage, it may be placed into base contact with this marker to reduce the damage by 1, then remove this marker."
+        }
+      ],
       "tokens": [
         {
           "name": "Backtrack",
@@ -95197,6 +95182,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": "Friendly Scheme or Decoy marker only."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Decoy",
+          "text": "When a friendly Performer within 3\" is dealt damage, it may be placed into base contact with this marker to reduce the damage by 1, then remove this marker."
         }
       ],
       "tokens": [
@@ -95408,6 +95399,17 @@
           "special_conditions": ""
         }
       ],
+      "markers": [
+        {
+          "name": "Ice Pillar",
+          "height": "Ht 5",
+          "text": "Ht 5, blocking, impassable. Models within 2\" of this marker suffer -1 to their duel totals during their activation.",
+          "terrain_traits": [
+            "blocking",
+            "impassable"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Hunger",
@@ -95591,6 +95593,16 @@
           "special_conditions": "Target a friendly Tide marker."
         }
       ],
+      "markers": [
+        {
+          "name": "Tide",
+          "text": "severe, concealing.",
+          "terrain_traits": [
+            "concealing",
+            "severe"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Staggered)",
@@ -95693,6 +95705,16 @@
           "granted_to": "Friendly unique Swampfiend models",
           "name": "Foreseen Doom",
           "text": "After an enemy model fails an attack targeting this model, this model may drain a (soulstone) to deal 2 irreducible damage to the attacker."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Bog",
+          "size": "50mm",
+          "text": "50mm severe. When an enemy model activates within 1\" of this marker, it must discard a card or gain a Stunned token.",
+          "terrain_traits": [
+            "severe"
+          ]
         }
       ],
       "tokens": [
@@ -95810,6 +95832,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pyrotechnic",
+          "text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile: (r) BOOM!: Models within (pulse)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage. (m) Surprise!: Models within (pulse)2\" gain a Glowy token. (t) Whoa: Models within (pulse)2\" gain an Insight token. (c) Toxic Smoke: Models within (pulse)2\" gain a Poison token."
         }
       ],
       "tokens": [
@@ -95965,6 +95993,16 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Bog",
+          "size": "50mm",
+          "text": "50mm severe. When an enemy model activates within 1\" of this marker, it must discard a card or gain a Stunned token.",
+          "terrain_traits": [
+            "severe"
+          ]
         }
       ],
       "tokens": [
@@ -96266,6 +96304,16 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Tide",
+          "text": "severe, concealing.",
+          "terrain_traits": [
+            "concealing",
+            "severe"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Staggered)",
@@ -96329,6 +96377,12 @@
               "soulstone_cost": 0
             }
           ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pyrotechnic",
+          "text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile: (r) BOOM!: Models within (pulse)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage. (m) Surprise!: Models within (pulse)2\" gain a Glowy token. (t) Whoa: Models within (pulse)2\" gain an Insight token. (c) Toxic Smoke: Models within (pulse)2\" gain a Poison token."
         }
       ],
       "tokens": [
@@ -96450,6 +96504,15 @@
           "special_conditions": "Target a piece of terrain that is at least partially in the enemy deployment zone."
         }
       ],
+      "markers": [
+        {
+          "name": "Shadow Door",
+          "text": "blocking. Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+          "terrain_traits": [
+            "blocking"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Focused",
@@ -96503,6 +96566,15 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": "Target a piece of terrain that is at least partially in the enemy deployment zone."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Shadow Door",
+          "text": "blocking. Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+          "terrain_traits": [
+            "blocking"
+          ]
         }
       ],
       "tokens": [
@@ -96598,6 +96670,16 @@
           "special_conditions": ""
         }
       ],
+      "markers": [
+        {
+          "name": "Lost Technology",
+          "height": "Ht 2",
+          "text": "Ht 2, blocking. Enemy models within 3\" of this marker that declare a non-Walk action must pass a TN 10 Df duel or the action fails.",
+          "terrain_traits": [
+            "blocking"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Distracted",
@@ -96655,6 +96737,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": "Target a friendly Lamp marker. Name a friendly non-master model killed this game."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Lamp",
+          "text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (+) to Df duels."
         }
       ],
       "tokens": [
@@ -96874,6 +96962,16 @@
           "special_conditions": "This action may target friendly models. If the target has a Parasite token, increase this action’s Skl by +2."
         }
       ],
+      "markers": [
+        {
+          "name": "Web",
+          "size": "50mm",
+          "text": "50mm, severe. Models in base contact with a Web marker may not be moved by other models friendly to them.",
+          "terrain_traits": [
+            "severe"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Hazardous)",
@@ -97030,6 +97128,12 @@
           "special_conditions": "Target a friendly Lamp marker within range."
         }
       ],
+      "markers": [
+        {
+          "name": "Lamp",
+          "text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (+) to Df duels."
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Hazardous)",
@@ -97093,6 +97197,15 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Shadow Door",
+          "text": "blocking. Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+          "terrain_traits": [
+            "blocking"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Entranced",
@@ -97152,6 +97265,15 @@
           "special_conditions": "Comes Together” Target a Strategy marker."
         }
       ],
+      "markers": [
+        {
+          "name": "Shadow Door",
+          "text": "blocking. Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+          "terrain_traits": [
+            "blocking"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Entranced",
@@ -97205,6 +97327,16 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Web",
+          "size": "50mm",
+          "text": "50mm, severe. Models in base contact with a Web marker may not be moved by other models friendly to them.",
+          "terrain_traits": [
+            "severe"
           ]
         }
       ],
@@ -97263,6 +97395,12 @@
           "special_conditions": ""
         }
       ],
+      "markers": [
+        {
+          "name": "Assault",
+          "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Hazardous)",
@@ -97316,6 +97454,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Assault",
+          "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
         }
       ],
       "tokens": [
@@ -97511,6 +97655,16 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Inferno",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning).",
+          "terrain_traits": [
+            "hazardous"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Concealment)",
@@ -97576,6 +97730,16 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": "Target a climbable terrain piece of Ht 2 or more."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Inferno",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning).",
+          "terrain_traits": [
+            "hazardous"
+          ]
         }
       ],
       "tokens": [
@@ -97707,6 +97871,16 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Inferno",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning).",
+          "terrain_traits": [
+            "hazardous"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Binding)",
@@ -97770,6 +97944,12 @@
           "special_conditions": ""
         }
       ],
+      "markers": [
+        {
+          "name": "Assault",
+          "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Hazardous)",
@@ -97823,6 +98003,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Assault",
+          "text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment."
         }
       ],
       "tokens": [
@@ -97887,6 +98073,16 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Inferno",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning).",
+          "terrain_traits": [
+            "hazardous"
           ]
         }
       ],
@@ -98237,6 +98433,13 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pylon",
+          "size": "40mm",
+          "text": "40mm, ht 2, blocking, impassable. When this marker is removed, enemy models within (pulse)2\" must pass a TN 12 Wp duel or gain a Stunned token."
         }
       ],
       "tokens": [
@@ -98798,6 +99001,18 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Underbrush",
+          "size": "50mm",
+          "text": "50mm, concealing, dense, severe.",
+          "terrain_traits": [
+            "concealing",
+            "dense",
+            "severe"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Adversary",
@@ -98852,6 +99067,21 @@
               "soulstone_cost": 0
             }
           ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Shadow Lair",
+          "size": "50mm",
+          "text": "50mm, hazardous (Fright).",
+          "terrain_traits": [
+            "hazardous"
+          ]
+        },
+        {
+          "name": "Under Your Bed",
+          "size": "50mm",
+          "text": "50mm. All friendly Nightmare models in play may draw range and LoS for attack and Interact actions from this marker. After an action is taken in this way, enemy models within (pulse)1\" gain a Fright token and then remove this marker."
         }
       ],
       "tokens": [
@@ -99004,6 +99234,16 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Shadow Lair",
+          "size": "50mm",
+          "text": "50mm, hazardous (Fright).",
+          "terrain_traits": [
+            "hazardous"
           ]
         }
       ],
@@ -99202,6 +99442,18 @@
           "granted_to": "Friendly Fae models",
           "name": "Renewed Growth",
           "text": "Once per activation. After successfully resolving an attack targeting an enemy, this model may discard a card to make an Underbrush marker into base contact with the target."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Underbrush",
+          "size": "50mm",
+          "text": "50mm, concealing, dense, severe.",
+          "terrain_traits": [
+            "concealing",
+            "dense",
+            "severe"
+          ]
         }
       ],
       "tokens": [
@@ -99461,6 +99713,12 @@
           "special_conditions": "This action ignores LoS. Target an Echo marker within range."
         }
       ],
+      "markers": [
+        {
+          "name": "Echo",
+          "text": "When a friendly Obliteration model is killed within 10\" of this marker, it may drain a (soulstone). If it does, it does not infuse a (soulstone) for being killed and, after the model is removed, this crew may summon a model of the same name within 1\" of this marker with a Flicker token and 2 health. Then remove this marker."
+        }
+      ],
       "tokens": [
         {
           "name": "Aura (Concealment)",
@@ -99558,6 +99816,18 @@
           "granted_to": "Friendly unique Infamous models",
           "name": "Walk the Plank",
           "text": "After resolving an enemy attack action that targeted this model, this model may drain a (soulstone). If it does so, move the attacker up to 4\". Then, this model gains a Hastened token."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Piano",
+          "size": "40mm",
+          "height": "Ht 3",
+          "text": "40mm Ht 3, blocking, impassable. Enemy models within 1\" must discard a card as a cost to declare the Interact action.",
+          "terrain_traits": [
+            "blocking",
+            "impassable"
+          ]
         }
       ],
       "tokens": [
@@ -99706,6 +99976,18 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Piano",
+          "size": "40mm",
+          "height": "Ht 3",
+          "text": "40mm Ht 3, blocking, impassable. Enemy models within 1\" must discard a card as a cost to declare the Interact action.",
+          "terrain_traits": [
+            "blocking",
+            "impassable"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Burning",
@@ -99817,6 +100099,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Echo",
+          "text": "When a friendly Obliteration model is killed within 10\" of this marker, it may drain a (soulstone). If it does, it does not infuse a (soulstone) for being killed and, after the model is removed, this crew may summon a model of the same name within 1\" of this marker with a Flicker token and 2 health. Then remove this marker."
         }
       ],
       "tokens": [
@@ -100390,6 +100678,16 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Pyre",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning). Before a friendly Revenant model within 1\" of this marker performs an opposed duel, it may remove this marker to receive a (+).",
+          "terrain_traits": [
+            "hazardous"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Burning",
@@ -100457,6 +100755,16 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pyre",
+          "size": "50mm",
+          "text": "50mm, hazardous (Burning). Before a friendly Revenant model within 1\" of this marker performs an opposed duel, it may remove this marker to receive a (+).",
+          "terrain_traits": [
+            "hazardous"
           ]
         }
       ],
@@ -101289,6 +101597,16 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Scrap",
+          "text": "severe, hazardous.",
+          "terrain_traits": [
+            "hazardous",
+            "severe"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Bolstered",
@@ -101398,6 +101716,12 @@
               "soulstone_cost": 0
             }
           ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Rift",
+          "text": "A friendly Oni within 1\" of this marker may remove this marker after succeeding in an attack to make that attack deal +1 damage."
         }
       ],
       "tokens": [
@@ -101510,6 +101834,12 @@
           "action_cost": "",
           "restrictions": "",
           "special_conditions": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "Rift",
+          "text": "A friendly Oni within 1\" of this marker may remove this marker after succeeding in an attack to make that attack deal +1 damage."
         }
       ],
       "tokens": [
@@ -101633,6 +101963,16 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Scrap",
+          "text": "severe, hazardous.",
+          "terrain_traits": [
+            "hazardous",
+            "severe"
           ]
         }
       ],
@@ -101999,6 +102339,15 @@
           ]
         }
       ],
+      "markers": [
+        {
+          "name": "Shadow",
+          "text": "concealing.",
+          "terrain_traits": [
+            "concealing"
+          ]
+        }
+      ],
       "tokens": [
         {
           "name": "Adaptable",
@@ -102055,6 +102404,15 @@
               "is_mandatory": false,
               "soulstone_cost": 0
             }
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Shadow",
+          "text": "concealing.",
+          "terrain_traits": [
+            "concealing"
           ]
         }
       ],
@@ -102545,7 +102903,7 @@
     },
     {
       "name": "No One Left Behind",
-      "upgrade_type": "Hermanos De Armas",
+      "upgrade_type": "Hermanos de Armas",
       "keyword": "Family",
       "faction": "Guild",
       "limitations": "-",
@@ -102617,7 +102975,7 @@
     },
     {
       "name": "Through and Through",
-      "upgrade_type": "Hermanos De Armas",
+      "upgrade_type": "Hermanos de Armas",
       "keyword": "Family",
       "faction": "Guild",
       "limitations": "-",
@@ -102639,7 +102997,7 @@
     },
     {
       "name": "Up the Pace",
-      "upgrade_type": "Hermanos De Armas",
+      "upgrade_type": "Hermanos de Armas",
       "keyword": "Family",
       "faction": "Guild",
       "limitations": "-",
@@ -103841,10 +104199,514 @@
       ]
     }
   ],
-  "markers": [],
+  "markers": [
+    {
+      "name": "Assault",
+      "category": "keyword_specific",
+      "rules_text": "When a friendly Cavalier model declares an attack targeting an enemy within 1\" of this marker, it may remove this marker. If it does, the attack ignores cover and concealment.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Bog",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "When an enemy model activates within 1\" of this marker, it must discard a card or gain a Stunned token.",
+      "terrain_traits": [
+        "severe"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Crawling Hex",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Decoy",
+      "category": "keyword_specific",
+      "rules_text": "When a friendly Performer within 3\" is dealt damage, it may be placed into base contact with this marker to reduce the damage by 1, then remove this marker.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Smuggler's Path",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Echo",
+      "category": "keyword_specific",
+      "rules_text": "When a friendly Obliteration model is killed within 10\" of this marker, it may drain a (soulstone). If it does, it does not infuse a (soulstone) for being killed and, after the model is removed, this crew may summon a model of the same name within 1\" of this marker with a Flicker token and 2 health. Then remove this marker.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Ice Pillar",
+      "category": "keyword_specific",
+      "default_height": "Ht 5",
+      "rules_text": "Models within 2\" of this marker suffer -1 to their duel totals during their activation.",
+      "terrain_traits": [
+        "blocking",
+        "impassable"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Blood and Hunger",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Winter’s Wrath",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Inferno",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "50mm, hazardous (Burning).",
+      "terrain_traits": [
+        "hazardous"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Lamp",
+      "category": "keyword_specific",
+      "rules_text": "Friendly models with Life and/or Death tokens within 6\" of this marker receive a (+) to Df duels.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Lost Technology",
+      "category": "keyword_specific",
+      "default_height": "Ht 2",
+      "rules_text": "Enemy models within 3\" of this marker that declare a non-Walk action must pass a TN 10 Df duel or the action fails.",
+      "terrain_traits": [
+        "blocking"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Piano",
+      "category": "keyword_specific",
+      "default_size": "40mm",
+      "default_height": "Ht 3",
+      "rules_text": "Enemy models within 1\" must discard a card as a cost to declare the Interact action.",
+      "terrain_traits": [
+        "blocking",
+        "impassable"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Cheese It!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Drop the Pianos!",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Pylon",
+      "category": "keyword_specific",
+      "default_size": "40mm",
+      "rules_text": "ht 2, blocking, impassable. When this marker is removed, enemy models within (pulse)2\" must pass a TN 12 Wp duel or gain a Stunned token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Pyre",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "Before a friendly Revenant model within 1\" of this marker performs an opposed duel, it may remove this marker to receive a (+).",
+      "terrain_traits": [
+        "hazardous"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Pyrotechnic",
+      "category": "keyword_specific",
+      "rules_text": "Friendly models may not ignore this marker. During the end phase, apply the following to all friendly Pyrotechnic markers depending on the suit of the top card of your discard pile: (r) BOOM!: Models within (pulse)2\" of one or more Pyrotechnic markers must pass a TN 14 Sp duel or be dealt 2 damage. (m) Surprise!: Models within (pulse)2\" gain a Glowy token. (t) Whoa: Models within (pulse)2\" gain an Insight token. (c) Toxic Smoke: Models within (pulse)2\" gain a Poison token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Fireworks Show",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Wise Words of Wisdom",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Rift",
+      "category": "keyword_specific",
+      "rules_text": "A friendly Oni within 1\" of this marker may remove this marker after succeeding in an attack to make that attack deal +1 damage.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Scrap",
+      "category": "keyword_specific",
+      "rules_text": "severe, hazardous.",
+      "terrain_traits": [
+        "hazardous",
+        "severe"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Shadow",
+      "category": "keyword_specific",
+      "rules_text": "concealing.",
+      "terrain_traits": [
+        "concealing"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Smoke and Shadows",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Shadow Door",
+      "category": "keyword_specific",
+      "rules_text": "Friendly DUA models that start a move within 2\" of this marker may ignore models and terrain while moving.",
+      "terrain_traits": [
+        "blocking"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Antique Dealer",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Cursed Relics",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Shadow of Doubt",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Smother the Light",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Shadow Lair",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "50mm, hazardous (Fright).",
+      "terrain_traits": [
+        "hazardous"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Oneirophobia",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Tide",
+      "category": "keyword_specific",
+      "rules_text": "severe, concealing.",
+      "terrain_traits": [
+        "concealing",
+        "severe"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Under Your Bed",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": ". All friendly Nightmare models in play may draw range and LoS for attack and Interact actions from this marker. After an action is taken in this way, enemy models within (pulse)1\" gain a Fright token and then remove this marker.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Underbrush",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "50mm, concealing, dense, severe.",
+      "terrain_traits": [
+        "concealing",
+        "dense",
+        "severe"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Into Thorns",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Stifling Thicket",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Web",
+      "category": "keyword_specific",
+      "default_size": "50mm",
+      "rules_text": "Models in base contact with a Web marker may not be moved by other models friendly to them.",
+      "terrain_traits": [
+        "severe"
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Remains",
+      "category": "universal"
+    },
+    {
+      "name": "Scheme",
+      "category": "universal"
+    },
+    {
+      "name": "Strategy",
+      "category": "universal"
+    }
+  ],
   "tokens": [
     {
+      "name": "Abandoned",
+      "rules_text": "During the end phase, if this model does not have more models (other than itself) it considers friendly within 3\" of it than models it considers enemy, this model is dealt 2 irreducible damage. Then, if this token did not damage this model, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Adaptable",
+      "rules_text": "Before performing a duel, this model may remove this token to add a suit of its choice to its duel total.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Arms Race",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Courtroom Drama",
+          "faction": "Guild"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Rust-Eaten Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Salvage & Logistics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Smoke and Shadows",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Somethin’s A’foot",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Vigilante Justice",
+          "faction": "Guild"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
       "name": "Adversary",
+      "type": "debuff",
+      "timing": "end_phase",
+      "rules_text": "Friendly models receive a (+) to attack actions targeting this model. During the end phase, remove this token.",
       "model_sources": [
         {
           "model_name": "Amai",
@@ -103934,13 +104796,13 @@
           "model_name": "Francisco Ortega",
           "source_type": "trigger",
           "source_name": "Balanced Sword > Dead Before You Draw",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Francisco Ortega",
           "source_type": "trigger",
           "source_name": "Balanced Sword > Dead Before You Draw",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Gokudo",
@@ -104090,13 +104952,13 @@
           "model_name": "Malisaurus Rex",
           "source_type": "trigger",
           "source_name": "Massive Jaws > Smell Weakness",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Malisaurus Rex",
           "source_type": "trigger",
           "source_name": "Massive Jaws > Smell Weakness",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Malisaurus Rex",
@@ -104120,13 +104982,13 @@
           "model_name": "Marcus",
           "source_type": "trigger",
           "source_name": "Ferocious Claws > Smell Weakness",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Marcus",
           "source_type": "trigger",
           "source_name": "Ferocious Claws > Smell Weakness",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Marcus",
@@ -104174,18 +105036,12 @@
           "model_name": "Perdita Ortega",
           "source_type": "trigger",
           "source_name": "Bullet Bending > Dead Before You Draw",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Perdita Ortega",
           "source_type": "trigger",
           "source_name": "Bullet Bending > Dead Before You Draw",
-          "applies_or_references": "applies"
-        },
-        {
-          "model_name": "Perdita Ortega",
-          "source_type": "trigger",
-          "source_name": "Harrying Shot > Dead Before You Draw",
           "applies_or_references": "references"
         },
         {
@@ -104193,6 +105049,12 @@
           "source_type": "trigger",
           "source_name": "Harrying Shot > Dead Before You Draw",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Perdita Ortega",
+          "source_type": "trigger",
+          "source_name": "Harrying Shot > Dead Before You Draw",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Perdita Ortega",
@@ -104201,7 +105063,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Pistolero De Latigo",
+          "model_name": "Pistolero de Latigo",
           "source_type": "action_effect",
           "source_name": "Rusty Pistol",
           "applies_or_references": "applies"
@@ -104210,13 +105072,13 @@
           "model_name": "Rougarou",
           "source_type": "trigger",
           "source_name": "Ferocious Claws > Smell Weakness",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Rougarou",
           "source_type": "trigger",
           "source_name": "Ferocious Claws > Smell Weakness",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Santiago Ortega",
@@ -104308,10 +105170,397 @@
           "source_name": "Harsh Teaching > Ancestral Curse",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Adaptive Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "Elite Equipment",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Guided Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Hunter’s Guile",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Into Thorns",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Pigs of Fire",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Spiritual Anchor",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Stifling Thicket",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Sturdy Critters",
+          "faction": "Bayou"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        },
+        {
+          "name": "Vengeful Spirits",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Aetheric Surge",
+      "rules_text": "This model receives +2 Skl and a suit of its choice when declaring attack actions.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Analyzed",
+      "rules_text": "This model may not reduce damage with its abilities. Remove this token during the end phase.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Carefully Laid Plans",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Looted Parts",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Binding)",
+      "rules_text": "Enemy models within 6\" may not empower duels. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Sins Unforgiven",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Wailing Doom",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Concealment)",
+      "rules_text": "The area within 2\" of this model is concealing terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Courtroom Drama",
+          "faction": "Guild"
+        },
+        {
+          "name": "Elite Equipment",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Hunter’s Guile",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Madness and Malice",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Morning Edition",
+          "faction": "Guild"
+        },
+        {
+          "name": "Tabloid Press",
+          "faction": "Guild"
+        },
+        {
+          "name": "Urban Legend",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Vigilante Justice",
+          "faction": "Guild"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Fire)",
+      "rules_text": "The area within 2\" of this model is hazardous (Burning) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Limit Test",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Fumes)",
+      "rules_text": "Enemy models within 3\" receive a (-) to attack actions that target friendly models. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Hazardous)",
+      "rules_text": "The area within 2\" of this model is hazardous terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Contagion’s Kiss",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Eyes in the Walls",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Flush With Cash",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Industry Leader",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Sins Unforgiven",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Wailing Doom",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Negligent)",
+      "rules_text": "Enemy models within 2\" of this model that declare a non-Walk action must pass a TN 10 Wp duel or the action fails. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Courtroom Drama",
+          "faction": "Guild"
+        },
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Vigilante Justice",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Poison)",
+      "rules_text": "The area within 2\" of this model is hazardous (Poison) terrain. Friendly models may choose to be unaffected by this terrain. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Flow Like Moonshine",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Aura (Staggered)",
+      "rules_text": "When an enemy model within 2\" of this model activates, it must discard a card or gain a Staggered token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Backtrack",
+      "rules_text": "When performing a duel, this model may remove this token before any player cheats fate. If it does so, all cards in the conflict are discarded without effect and the duel is performed again with the same modifiers. This token may not be used if there are any jokers in the conflict.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Smuggler's Path",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "rules_text": "When this model would be killed, it may discard a card and remove this token to heal 2.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Dustbound Oath",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Balm",
+      "rules_text": "During the end phase, this model heals 1. Then, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Blight",
+      "rules_text": "This model suffers a (-) to Wp duels generated by Plague models. During the end phase, enemy models within (pulse)1\" gain a Blight token, then if there are no other models within 1\" with a Blight token, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Contagion’s Kiss",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Eyes in the Walls",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Bog Spirit",
+      "rules_text": "After this model is killed, the crew that applied this token may summon a Will o’ the Wisp with 3 health into base contact.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        }
       ]
     },
     {
       "name": "Bolstered",
+      "type": "buff",
+      "timing": "end_phase",
+      "rules_text": "This model receives +1 to its Df and Wp. During the end phase, remove this token. Canceled by Injured.",
       "model_sources": [
         {
           "model_name": "Adze",
@@ -104553,10 +105802,113 @@
           "source_name": "Witch’s Brew",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Bigger Hat Than You",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Crawling Hex",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Devoted to the Brew",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Excessive Violence",
+          "faction": "Guild"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Into Thorns",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        },
+        {
+          "name": "Repair Bay",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Snatch ’N Run",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Stifling Thicket",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Bounty",
+      "rules_text": "When this model is killed, the crew that applied this token draws a card.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Law’s Reach",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Brilliance",
+      "rules_text": "When this model cheats fate, the crew that applied this token may remove it to deal 1 damage to this model or heal it 2.",
+      "defined_on_crew_cards": [
+        {
+          "name": "House Always Wins",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Roll the Dice",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Broodling",
+      "rules_text": "After this model is killed, summon a friendly Terror Tot into base contact.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        }
       ]
     },
     {
       "name": "Burning",
+      "type": "debuff",
+      "timing": "end_phase",
+      "rules_text": "During the end phase deal 1 damage to this model and enemy models in base contact with it. Then remove this token.",
       "model_sources": [
         {
           "model_name": "Amanjaku",
@@ -105071,12 +106423,6 @@
         {
           "model_name": "Kaeris",
           "source_type": "ability",
-          "source_name": "Burning Man’s Gift",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Kaeris",
-          "source_type": "ability",
           "source_name": "Flame is Promised to Me",
           "applies_or_references": "removes"
         },
@@ -105180,19 +106526,13 @@
           "model_name": "Mechanized Porkchop",
           "source_type": "trigger",
           "source_name": "Snort Steam > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Mechanized Porkchop",
-          "source_type": "trigger",
-          "source_name": "Snort Steam > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Mechanized Porkchop",
-          "source_type": "trigger",
-          "source_name": "Snort Steam > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Mechanized Porkchop",
+          "source_type": "trigger",
+          "source_name": "Snort Steam > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Mecharachnid",
@@ -105207,34 +106547,28 @@
           "applies_or_references": "references"
         },
         {
-          "model_name": "Merris Lacroix",
+          "model_name": "Merris LaCroix",
           "source_type": "ability",
           "source_name": "Demise (Flashover)",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Merris Lacroix",
+          "model_name": "Merris LaCroix",
           "source_type": "action_effect",
           "source_name": "Flaming Bottle",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Merris Lacroix",
-          "source_type": "trigger",
-          "source_name": "“Up We Go!” > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Merris Lacroix",
-          "source_type": "trigger",
-          "source_name": "“Up We Go!” > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Merris Lacroix",
+          "model_name": "Merris LaCroix",
           "source_type": "trigger",
           "source_name": "“Up We Go!” > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Merris LaCroix",
+          "source_type": "trigger",
+          "source_name": "“Up We Go!” > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Misaki Katanaka",
@@ -105297,7 +106631,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Ophelia Lacroix",
+          "model_name": "Ophelia LaCroix",
           "source_type": "trigger",
           "source_name": "The Boss’ Boomstick > Fire!",
           "applies_or_references": "applies"
@@ -105330,13 +106664,13 @@
           "model_name": "Pere Ravage",
           "source_type": "action_effect",
           "source_name": "Burn Stick",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Pere Ravage",
           "source_type": "action_effect",
           "source_name": "Burn Stick",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Pere Ravage",
@@ -105354,19 +106688,13 @@
           "model_name": "Piglet",
           "source_type": "trigger",
           "source_name": "Nipped > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Piglet",
-          "source_type": "trigger",
-          "source_name": "Nipped > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Piglet",
-          "source_type": "trigger",
-          "source_name": "Nipped > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Piglet",
+          "source_type": "trigger",
+          "source_name": "Nipped > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Popcorn Turner",
@@ -105417,34 +106745,22 @@
           "applies_or_references": "references"
         },
         {
-          "model_name": "Raphael Lacroix",
-          "source_type": "trigger",
-          "source_name": "Heavy Firearm > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Raphael Lacroix",
-          "source_type": "trigger",
-          "source_name": "Heavy Firearm > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Raphael Lacroix",
+          "model_name": "Raphael LaCroix",
           "source_type": "trigger",
           "source_name": "Heavy Firearm > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Raphael LaCroix",
+          "source_type": "trigger",
+          "source_name": "Heavy Firearm > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Reva Cortinas",
           "source_type": "trigger",
           "source_name": "Ethereal Reaping > Ring of Fire",
           "applies_or_references": "applies"
-        },
-        {
-          "model_name": "Reva Cortinas",
-          "source_type": "trigger",
-          "source_name": "Spark in the Night > Engulfing Flame",
-          "applies_or_references": "references"
         },
         {
           "model_name": "Reva Cortinas",
@@ -105480,19 +106796,13 @@
           "model_name": "Samael Hopkins",
           "source_type": "trigger",
           "source_name": "Heavy Firearm > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Samael Hopkins",
-          "source_type": "trigger",
-          "source_name": "Heavy Firearm > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Samael Hopkins",
-          "source_type": "trigger",
-          "source_name": "Heavy Firearm > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Samael Hopkins",
+          "source_type": "trigger",
+          "source_name": "Heavy Firearm > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Samael Hopkins",
@@ -105501,7 +106811,7 @@
           "applies_or_references": "references"
         },
         {
-          "model_name": "Sammy Lacroix",
+          "model_name": "Sammy LaCroix",
           "source_type": "trigger",
           "source_name": "Cauldron > To the Flame",
           "applies_or_references": "applies"
@@ -105570,7 +106880,7 @@
           "model_name": "Sonnia Criid",
           "source_type": "trigger",
           "source_name": "Witch Bane > Smolder",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Sonnia Criid",
@@ -105579,9 +106889,9 @@
           "applies_or_references": "references"
         },
         {
-          "model_name": "Sonnia Criid",
+          "model_name": "Squealer",
           "source_type": "trigger",
-          "source_name": "Witch Bane > Smolder",
+          "source_name": "Projected Squeal > Smolder",
           "applies_or_references": "applies"
         },
         {
@@ -105589,18 +106899,6 @@
           "source_type": "trigger",
           "source_name": "Projected Squeal > Smolder",
           "applies_or_references": "references"
-        },
-        {
-          "model_name": "Squealer",
-          "source_type": "trigger",
-          "source_name": "Projected Squeal > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Squealer",
-          "source_type": "trigger",
-          "source_name": "Projected Squeal > Smolder",
-          "applies_or_references": "applies"
         },
         {
           "model_name": "Squish and Squash",
@@ -105660,19 +106958,13 @@
           "model_name": "Thalarian Queller",
           "source_type": "trigger",
           "source_name": "War Staff > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Thalarian Queller",
-          "source_type": "trigger",
-          "source_name": "War Staff > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Thalarian Queller",
-          "source_type": "trigger",
-          "source_name": "War Staff > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Thalarian Queller",
+          "source_type": "trigger",
+          "source_name": "War Staff > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "The Firestarter",
@@ -105774,19 +107066,13 @@
           "model_name": "Ulix Turner",
           "source_type": "trigger",
           "source_name": "Hellfire Shot > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Ulix Turner",
-          "source_type": "trigger",
-          "source_name": "Hellfire Shot > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Ulix Turner",
-          "source_type": "trigger",
-          "source_name": "Hellfire Shot > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Ulix Turner",
+          "source_type": "trigger",
+          "source_name": "Hellfire Shot > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Ulix Turner",
@@ -105834,19 +107120,13 @@
           "model_name": "Witchling Stalker",
           "source_type": "trigger",
           "source_name": "Broken Runic Blade > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Witchling Stalker",
-          "source_type": "trigger",
-          "source_name": "Broken Runic Blade > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Witchling Stalker",
-          "source_type": "trigger",
-          "source_name": "Broken Runic Blade > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Witchling Stalker",
+          "source_type": "trigger",
+          "source_name": "Broken Runic Blade > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Witchling Stalker",
@@ -105864,19 +107144,13 @@
           "model_name": "Witchling Thrall",
           "source_type": "trigger",
           "source_name": "Massive Fists > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Witchling Thrall",
-          "source_type": "trigger",
-          "source_name": "Massive Fists > Smolder",
-          "applies_or_references": "references"
-        },
-        {
-          "model_name": "Witchling Thrall",
-          "source_type": "trigger",
-          "source_name": "Massive Fists > Smolder",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Witchling Thrall",
+          "source_type": "trigger",
+          "source_name": "Massive Fists > Smolder",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Wrastler",
@@ -105896,10 +107170,225 @@
           "source_name": "Simmering Wrath > Enflame",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Arms Race",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Burning Man’s Prayer",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Carefully Laid Plans",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Cheese It!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Devoted to the Brew",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Drop the Pianos!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Excessive Violence",
+          "faction": "Guild"
+        },
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flow Like Moonshine",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Limit Test",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Looted Parts",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Pigs of Fire",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Shadow of the Noose",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Smoke and Shadows",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Smuggler's Path",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Somethin’s A’foot",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Sturdy Critters",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "The Barrows Gang",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Challenged",
+      "rules_text": "This model must discard a card to target any model other than the one that applied this token. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Cheese It!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Chi",
+      "rules_text": "Before performing a duel, this model may remove this token to receive +1 to its duel total.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Convert",
+      "rules_text": "The Dmg stat of this model’s attack actions is reduced by 1.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        }
       ]
     },
     {
       "name": "Craven",
+      "type": "debuff",
+      "timing": "end_activation",
+      "rules_text": "This model cannot declare the Interact action and is ignored for strategies and schemes. When this model ends its activation, remove this token.",
       "model_sources": [
         {
           "model_name": "Asset 17",
@@ -106057,10 +107546,65 @@
           "source_name": "Eyes in the Woods",
           "applies_or_references": "references"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Crawling Hex",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Drop the Pianos!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Follow Tradition",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        },
+        {
+          "name": "On Tour",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Death",
+      "rules_text": "When this model succeeds in an attack action that deals damage, it may remove this token. If it does so, the target must either discard a card, drain a (soulstone), or be killed.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        }
       ]
     },
     {
       "name": "Distracted",
+      "type": "debuff",
+      "timing": "when_triggered",
+      "rules_text": "When this model targets a friendly model, it must remove this token and suffer a (-) to that action's duel. Canceled by Focused.",
       "model_sources": [
         {
           "model_name": "Artemis",
@@ -106236,10 +107780,181 @@
           "source_name": "High Pressure Dispenser > Sloshed",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Devoted to the Brew",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Elite Equipment",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Flow Like Moonshine",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Follow Tradition",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "House Always Wins",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Hunter’s Guile",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Roll the Dice",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Drift",
+      "rules_text": "When this model activates, it may remove this token to place into base contact with a friendly Tide marker within 5\".",
+      "defined_on_crew_cards": [
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Entranced",
+      "rules_text": "This model’s actions that target a friendly model cannot be cheated. After this model resolves an action targeting a friendly model, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Cheese It!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Cunning Patience",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Drop the Pianos!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Excessive Violence",
+          "faction": "Guild"
+        },
+        {
+          "name": "Fireworks Show",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Flush With Cash",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Industry Leader",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Madness and Malice",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        },
+        {
+          "name": "Morning Edition",
+          "faction": "Guild"
+        },
+        {
+          "name": "On Tour",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Shadow of Doubt",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Silent Control",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Smother the Light",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Smuggler's Path",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Tabloid Press",
+          "faction": "Guild"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Urban Legend",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Wise Words of Wisdom",
+          "faction": "Bayou"
+        }
       ]
     },
     {
       "name": "Exposed",
+      "rules_text": "This model cannot gain cover. During the end phase, remove this token. Canceled by Hidden.",
       "model_sources": [
         {
           "model_name": "Cornelius Basse",
@@ -106265,10 +107980,38 @@
           "source_name": "“I Know All the Hideouts”",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Dustbound Oath",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Law’s Reach",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Familia",
+      "rules_text": "When a friendly model within 6\" is dealt damage, this model may remove this token to reduce that damage by 1.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        }
       ]
     },
     {
       "name": "Fast",
+      "type": "buff",
+      "timing": "end_activation",
+      "rules_text": "Increase this model’s action limit by 1 (to a maximum of 3). When this model ends its activation, remove this token. Canceled by Slow.",
+      "cancels": "Slow",
       "model_sources": [
         {
           "model_name": "Allison Dade",
@@ -106319,7 +108062,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Gibson Dewalt",
+          "model_name": "Gibson DeWalt",
           "source_type": "trigger",
           "source_name": "Artefactor’s Wrench > Chromatic Aberration",
           "applies_or_references": "applies"
@@ -106420,10 +108163,133 @@
           "source_name": "Ninjutsu > Assassinate",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Morning Edition",
+          "faction": "Guild"
+        },
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Shadow of Doubt",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Shadow of the Noose",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Smoke and Shadows",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Smother the Light",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Tabloid Press",
+          "faction": "Guild"
+        },
+        {
+          "name": "Tempered Steel",
+          "faction": "Guild"
+        },
+        {
+          "name": "The Barrows Gang",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
+      ]
+    },
+    {
+      "name": "Flicker",
+      "rules_text": "During the end phase, kill this model. This token cannot be removed.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Oneirophobia",
+          "faction": "Neverborn"
+        }
       ]
     },
     {
       "name": "Focused",
+      "type": "buff",
+      "timing": "on_use",
+      "rules_text": "Before performing a duel, this model may remove this token to receive a (+) to the duel. Canceled by Distracted.",
       "model_sources": [
         {
           "model_name": "Amina Naidu",
@@ -106480,7 +108346,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "trigger",
           "source_name": "Plastic Surgery > Preparations",
           "applies_or_references": "applies"
@@ -106653,10 +108519,185 @@
           "source_name": "Blacken the Skies > Inspiration",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Antique Dealer",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Cunning Patience",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Cursed Relics",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "House Always Wins",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Roll the Dice",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Silent Control",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Study the Stars",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Union Dues",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Fragile Ego",
+      "rules_text": "After another enemy model is chosen to activate, if this model has not activated this turn, the crew that applied this token may remove it to force this model to activate instead.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Fright",
+      "rules_text": "This model considers its (fortitude) abilities blank. After a friendly model succeeds in a (magic) action targeting this model, it may choose to receive one additional raise; if it does, remove this token after resolving the action.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Oneirophobia",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Frozen Solid",
+      "rules_text": "This model may not be moved by enemy effects. After either this model suffers damage or an enemy model targets this model with the Interact action, remove this token (this model may target itself with the Interact action).",
+      "defined_on_crew_cards": [
+        {
+          "name": "Frostbitten Prophecy",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Offering Endures",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Glowy",
+      "rules_text": "Attacks that target this model are unaffected by concealing terrain. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Fireworks Show",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Wise Words of Wisdom",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Glutted",
+      "rules_text": "When this model ends its activation, it may remove this token to heal 1.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Pigs of Fire",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Sturdy Critters",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Graft",
+      "rules_text": "During the end phase, this model may remove this token to heal 2.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Greedy",
+      "rules_text": "When this model would discard an upgrade, it may instead remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        }
       ]
     },
     {
       "name": "Hastened",
+      "type": "buff",
+      "timing": "end_activation",
+      "rules_text": "This model receives +2 Sp. When this model ends its activation, remove this token. Canceled by Staggered.",
       "model_sources": [
         {
           "model_name": "Abyssal Anchor",
@@ -106766,10 +108807,69 @@
           "source_name": "Obscene Ritual > The Stars Are Right",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Adaptive Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Burning Man’s Prayer",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Cheese It!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coronation",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Drop the Pianos!",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Guided Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Limit Test",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Rising Tide",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Tempered Steel",
+          "faction": "Guild"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        }
       ]
     },
     {
       "name": "Hidden",
+      "rules_text": "This model gains cover. During the end phase, remove this token. Canceled by Exposed.",
       "model_sources": [
         {
           "model_name": "Bernadette Basse",
@@ -106849,10 +108949,69 @@
           "source_name": "Trench Jump > Foxhole",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Dustbound Oath",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Law’s Reach",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Hunger",
+      "rules_text": "When this model ends its activation, it must deal 1 damage to another of its allies within 1\" to remove this token, or deal 1 damage to itself.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Blood and Hunger",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Winter’s Wrath",
+          "faction": "Arcanists"
+        }
       ]
     },
     {
       "name": "Impact",
+      "type": "buff",
+      "timing": "on_use",
+      "rules_text": "When this model succeeds in an attack action that deals damage, it must remove this token to deal +1 damage.",
       "model_sources": [
         {
           "model_name": "Bucket Bot",
@@ -106903,7 +109062,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Francois Lacroix",
+          "model_name": "Francois LaCroix",
           "source_type": "ability",
           "source_name": "Slingin’ Six Irons",
           "applies_or_references": "references"
@@ -106957,13 +109116,13 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Lacroix Raider",
+          "model_name": "LaCroix Raider",
           "source_type": "action_effect",
           "source_name": "Improvised Ammo",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Lacroix Raider",
+          "model_name": "LaCroix Raider",
           "source_type": "trigger",
           "source_name": "Refurbished Shotgun > Risky Maneuver",
           "applies_or_references": "references"
@@ -106987,7 +109146,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Merris Lacroix",
+          "model_name": "Merris LaCroix",
           "source_type": "trigger",
           "source_name": "Flaming Bottle > Hop, Friends!",
           "applies_or_references": "references"
@@ -107011,13 +109170,13 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Ophelia Lacroix",
+          "model_name": "Ophelia LaCroix",
           "source_type": "ability",
           "source_name": "Quick Draw",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Ophelia Lacroix",
+          "model_name": "Ophelia LaCroix",
           "source_type": "trigger",
           "source_name": "The Boss’ Boomstick > Aim!",
           "applies_or_references": "applies"
@@ -107050,16 +109209,16 @@
           "model_name": "Rosie Hill",
           "source_type": "ability",
           "source_name": "Kinetic Absorption",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Rosie Hill",
           "source_type": "ability",
           "source_name": "Kinetic Absorption",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
-          "model_name": "Sammy Lacroix",
+          "model_name": "Sammy LaCroix",
           "source_type": "ability",
           "source_name": "Piggy Market",
           "applies_or_references": "applies"
@@ -107095,27 +109254,140 @@
           "applies_or_references": "references"
         },
         {
-          "model_name": "Young Lacroix",
+          "model_name": "Young LaCroix",
           "source_type": "action_effect",
           "source_name": "Slung-shot",
           "applies_or_references": "applies"
+        }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Arms Race",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Bigger Hat Than You",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Repair Bay",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Shadow of the Noose",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Snatch ’N Run",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Somethin’s A’foot",
+          "faction": "Bayou"
+        },
+        {
+          "name": "The Barrows Gang",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        },
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Improvised Part",
+      "rules_text": "This model may declare tactical actions printed on the stat cards of non-master allies within 6\" as if they were printed on this model’s stat card. After declaring such an action, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        }
+      ]
+    },
+    {
+      "name": "Incurable",
+      "rules_text": "This model cannot heal. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
         }
       ]
     },
     {
       "name": "Injured",
+      "type": "debuff",
+      "timing": "end_phase",
+      "rules_text": "This model suffers -1 to its Df and Wp. During the end phase, remove this token. Canceled by Bolstered.",
       "model_sources": [
         {
           "model_name": "Abomination",
           "source_type": "trigger",
           "source_name": "Strange Appendages > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Abomination",
           "source_type": "trigger",
           "source_name": "Strange Appendages > Severe Injury",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Abomination",
@@ -107151,13 +109423,13 @@
           "model_name": "Ashes and Dust",
           "source_type": "trigger",
           "source_name": "Suffocating Dust > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Ashes and Dust",
           "source_type": "trigger",
           "source_name": "Suffocating Dust > Severe Injury",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Ashes and Dust",
@@ -107229,13 +109501,13 @@
           "model_name": "Desolation Engine",
           "source_type": "trigger",
           "source_name": "Desolate Warping > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Desolation Engine",
           "source_type": "trigger",
           "source_name": "Desolate Warping > Severe Injury",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Disease Containment Unit",
@@ -107379,13 +109651,13 @@
           "model_name": "Marlena Webster",
           "source_type": "trigger",
           "source_name": "Energy Drain > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Marlena Webster",
           "source_type": "trigger",
           "source_name": "Energy Drain > Severe Injury",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Marlena Webster",
@@ -107469,18 +109741,12 @@
           "model_name": "Rusty Alyce",
           "source_type": "trigger",
           "source_name": "Clockwork Seeker > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Rusty Alyce",
           "source_type": "trigger",
           "source_name": "Clockwork Seeker > Severe Injury",
-          "applies_or_references": "applies"
-        },
-        {
-          "model_name": "Scavenger",
-          "source_type": "trigger",
-          "source_name": "Compact Shotgun > Severe Injury",
           "applies_or_references": "references"
         },
         {
@@ -107488,6 +109754,12 @@
           "source_type": "trigger",
           "source_name": "Compact Shotgun > Severe Injury",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Scavenger",
+          "source_type": "trigger",
+          "source_name": "Compact Shotgun > Severe Injury",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Scavenger",
@@ -107535,16 +109807,16 @@
           "model_name": "Soul Battery",
           "source_type": "trigger",
           "source_name": "Energy Drain > Severe Injury",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Soul Battery",
           "source_type": "trigger",
           "source_name": "Energy Drain > Severe Injury",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "trigger",
           "source_name": "Heavy Wrench > Spin Around Real Fast",
           "applies_or_references": "applies"
@@ -107663,10 +109935,321 @@
           "source_name": "Cruel Sickle > Maim",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Carefully Laid Plans",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Coronation",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Excessive Violence",
+          "faction": "Guild"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Into Thorns",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Laid to Rest",
+          "faction": "Guild"
+        },
+        {
+          "name": "Looted Parts",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        },
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Rising Tide",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Rust-Eaten Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Salvage & Logistics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Spiritual Anchor",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Stifling Thicket",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Union Dues",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Vengeful Spirits",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Insight",
+      "rules_text": "Before performing a duel, this model may remove this token to look at the top card of its fate deck and may discard it.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Boosted Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Boosted Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Cunning Patience",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Devoted to the Brew",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Fireworks Show",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Flow Like Moonshine",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Follow Tradition",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Frostbitten Prophecy",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Hand Signals",
+          "faction": "Guild"
+        },
+        {
+          "name": "Heavy Salvo",
+          "faction": "Guild"
+        },
+        {
+          "name": "House Always Wins",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Roll the Dice",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Silent Control",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "The Offering Endures",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Wise Words of Wisdom",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Instinct",
+      "rules_text": "When this model succeeds in an attack action, it may remove this token to receive an additional raise.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Adaptive Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Guided Evolution",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Interesting Parts",
+      "rules_text": "This model is affected by the enemy crew card as if it were a unique model allied to the enemy leader, but it may not affect or use power bars. This model considers enemy non- Scheme, non-Strategy markers to be friendly.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        }
+      ]
+    },
+    {
+      "name": "Life",
+      "rules_text": "When this model suffers damage, it may remove this token. If it does so, it may not be reduced to below 1 health.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "New Blood",
+      "rules_text": "This model gains the Family keyword.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Numb",
+      "rules_text": "This model loses its Don’t Turn Your Back ability (if any) and does not prevent friendly models from declaring the Interact action due to: ■ Being engaged with this model. ■ This model being in base contact with a marker. ■ Leaving this model’s engagement range. During the end phase, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Frostbitten Prophecy",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Offering Endures",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Paranoia",
+      "rules_text": "When this token is removed, the crew that applied it may move this model up to 4\" and then make a Scheme marker into base contact with it, after resolving the current action (if any). During the end phase, this model must either discard a card or remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Parasite",
+      "rules_text": "When this model is killed, the crew that applied this token infuses a (soulstone).",
+      "defined_on_crew_cards": [
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Perforated",
+      "rules_text": "After this model resolves the Walk or Charge action, deal 1 damage to it per inch it moved (to a maximum of 3). Other models may target this model with the Interact action to remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Arms Race",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Somethin’s A’foot",
+          "faction": "Bayou"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        }
       ]
     },
     {
       "name": "Poison",
+      "type": "debuff",
+      "timing": "never",
+      "rules_text": "During the end phase, deal 1 irreducible damage to this model.",
       "model_sources": [
         {
           "model_name": "Adze",
@@ -107762,25 +110345,19 @@
           "model_name": "Corpse Curator",
           "source_type": "action_effect",
           "source_name": "Ancient Injectors",
-          "applies_or_references": "removes"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Corpse Curator",
           "source_type": "action_effect",
           "source_name": "Ancient Injectors",
-          "applies_or_references": "applies"
+          "applies_or_references": "removes"
         },
         {
           "model_name": "Corpse Curator",
           "source_type": "ability",
           "source_name": "Catalyst",
           "applies_or_references": "references"
-        },
-        {
-          "model_name": "Dapperling",
-          "source_type": "action_effect",
-          "source_name": "Fungal Bloom",
-          "applies_or_references": "applies"
         },
         {
           "model_name": "Dapperling",
@@ -107795,37 +110372,37 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "ability",
           "source_name": "Catalyst",
           "applies_or_references": "references"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "action_effect",
           "source_name": "Cobble Together",
           "applies_or_references": "removes"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "ability",
           "source_name": "Organ Donor",
           "applies_or_references": "references"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "action_effect",
           "source_name": "Rusty Tools",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "trigger",
           "source_name": "Rusty Tools > Transfusion",
           "applies_or_references": "removes"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "action_effect",
           "source_name": "Vial of Goo",
           "applies_or_references": "applies"
@@ -108252,12 +110829,6 @@
         },
         {
           "model_name": "Whiskey Gamin",
-          "source_type": "action_effect",
-          "source_name": "Froth Over",
-          "applies_or_references": "applies"
-        },
-        {
-          "model_name": "Whiskey Gamin",
           "source_type": "trigger",
           "source_name": "Moonshine Dispenser > Drink Up",
           "applies_or_references": "applies"
@@ -108298,10 +110869,131 @@
           "source_name": "Spare Parts",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Crawling Hex",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Devoted to the Brew",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Fireworks Show",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Flow Like Moonshine",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Study the Stars",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Wise Words of Wisdom",
+          "faction": "Bayou"
+        }
+      ]
+    },
+    {
+      "name": "Promoted",
+      "rules_text": "If this model is non-unique it receives +1 Skl when declaring attack actions.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Excessive Violence",
+          "faction": "Guild"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        }
+      ]
+    },
+    {
+      "name": "Reload",
+      "rules_text": "After a model in this model’s LoS ends its activation, this model may remove this token to declare a (gun) targeting that model. If it does so, no other models in this crew may use a Reload token until after another model activates.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "Elite Equipment",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Hunter’s Guile",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Replica",
+      "rules_text": "After this model discards an upgrade, it may remove this token to attach the discarded upgrade.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Antique Dealer",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Cursed Relics",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Shame",
+      "rules_text": "This model cannot be targeted by the actions of other enemy models. When this model ends its activation, it may choose to deal 1 damage to itself to remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Flush With Cash",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Industry Leader",
+          "faction": "Explorer's Society"
+        }
       ]
     },
     {
       "name": "Shielded",
+      "type": "buff",
+      "timing": "on_use",
+      "rules_text": "When this model is dealt non-irreducible damage, it must remove this token to reduce that damage by 1. This token may reduce damage to 0.",
       "model_sources": [
         {
           "model_name": "Abyssal Anchor",
@@ -108418,7 +111110,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "ability",
           "source_name": "Precise",
           "applies_or_references": "references"
@@ -108619,13 +111311,13 @@
           "model_name": "Mah Tucket",
           "source_type": "ability",
           "source_name": "Perfectly Good Still",
-          "applies_or_references": "removes"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Mah Tucket",
           "source_type": "ability",
           "source_name": "Perfectly Good Still",
-          "applies_or_references": "applies"
+          "applies_or_references": "removes"
         },
         {
           "model_name": "Mah Tucket",
@@ -108910,31 +111602,31 @@
           "applies_or_references": "removes"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "trigger",
           "source_name": "Heavy Wrench > Defensive Reflexes",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "ability",
           "source_name": "Loaded With Explosives",
           "applies_or_references": "removes"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "trigger",
           "source_name": "Planned Obsolescence > Defensive Reflexes",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "action_effect",
           "source_name": "“Now Yer a Robot”",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Sparks Leblanc",
+          "model_name": "Sparks LeBlanc",
           "source_type": "trigger",
           "source_name": "“Now Yer a Robot” > Twist the Truth",
           "applies_or_references": "applies"
@@ -109197,10 +111889,150 @@
           "source_name": "Hand of the Ancestors",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Adaptive Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Blood and Hunger",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Carefully Laid Plans",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Coronation",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Follow Tradition",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Guided Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Looted Parts",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "On Tour",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Rising Tide",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Study the Stars",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Tempered Steel",
+          "faction": "Guild"
+        },
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        },
+        {
+          "name": "Union Dues",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Winter’s Wrath",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Sin",
+      "rules_text": "This model must deal 1 irreducible damage to an enemy model within 6\" to declare non-general actions. When this model ends its activation, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "On Tour",
+          "faction": "Neverborn"
+        }
       ]
     },
     {
       "name": "Slow",
+      "type": "debuff",
+      "timing": "end_activation",
+      "rules_text": "Reduce this model’s action limit by 1 (to a minimum of 1). When this model ends its activation, remove this token. Canceled by Fast.",
+      "cancels": "Fast",
       "model_sources": [
         {
           "model_name": "Abyssal Anchor",
@@ -109374,13 +112206,13 @@
           "model_name": "Bête Noire",
           "source_type": "trigger",
           "source_name": "Paired Knives > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Bête Noire",
           "source_type": "trigger",
           "source_name": "Paired Knives > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Candy",
@@ -109464,13 +112296,13 @@
           "model_name": "Dead Dandy",
           "source_type": "trigger",
           "source_name": "Treacherous Strike > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Dead Dandy",
           "source_type": "trigger",
           "source_name": "Treacherous Strike > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Dead Rider",
@@ -109491,7 +112323,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Dr. Mcmourning",
+          "model_name": "Dr. McMourning",
           "source_type": "trigger",
           "source_name": "Scalpel > Severed Hand Prank",
           "applies_or_references": "applies"
@@ -109584,13 +112416,13 @@
           "model_name": "Hand of Janus",
           "source_type": "trigger",
           "source_name": "Janus’ Wrath > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Hand of Janus",
           "source_type": "trigger",
           "source_name": "Janus’ Wrath > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Hanged",
@@ -109656,13 +112488,13 @@
           "model_name": "Ice Golem",
           "source_type": "trigger",
           "source_name": "Frozen Smash > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Ice Golem",
           "source_type": "trigger",
           "source_name": "Frozen Smash > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Ice Golem",
@@ -109791,13 +112623,13 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Lucas Mccabe",
+          "model_name": "Lucas McCabe",
           "source_type": "action_effect",
           "source_name": "Netgun",
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Lucas Mccabe",
+          "model_name": "Lucas McCabe",
           "source_type": "action_effect",
           "source_name": "Treasure Trove",
           "applies_or_references": "applies"
@@ -109806,13 +112638,13 @@
           "model_name": "Lucius Mattheson",
           "source_type": "trigger",
           "source_name": "Backstab > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Lucius Mattheson",
           "source_type": "trigger",
           "source_name": "Backstab > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Lucius Mattheson",
@@ -110022,13 +112854,13 @@
           "model_name": "Rasputina",
           "source_type": "trigger",
           "source_name": "Winter’s Strike > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Rasputina",
           "source_type": "trigger",
           "source_name": "Winter’s Strike > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Rat Catcher",
@@ -110178,13 +113010,13 @@
           "model_name": "Tara",
           "source_type": "trigger",
           "source_name": "Soulstone Sword > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Tara",
           "source_type": "trigger",
           "source_name": "Soulstone Sword > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Teddy",
@@ -110256,13 +113088,13 @@
           "model_name": "The Strange Lady",
           "source_type": "trigger",
           "source_name": "Whispers in the Dark > Mutilate",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "The Strange Lady",
           "source_type": "trigger",
           "source_name": "Whispers in the Dark > Mutilate",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Thirty-Three",
@@ -110342,10 +113174,349 @@
           "source_name": "Gnashing Bite > Grab On",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Antique Dealer",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Blood and Hunger",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Burning Man’s Prayer",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Contagion’s Kiss",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Coronation",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Courtroom Drama",
+          "faction": "Guild"
+        },
+        {
+          "name": "Cunning Patience",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Cursed Relics",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Eyes in the Walls",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flush With Cash",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Frostbitten Prophecy",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "House Always Wins",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Industry Leader",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Limit Test",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Madness and Malice",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        },
+        {
+          "name": "Morning Edition",
+          "faction": "Guild"
+        },
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Oneirophobia",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Parade of the Dead",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Pigs of Fire",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Pitborne",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Repeat Until Perfect",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Roll the Dice",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Rust-Eaten Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Salvage & Logistics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Scorch the Heavens",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Shadow of Doubt",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Silent Control",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Sins Unforgiven",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Smother the Light",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Smuggler's Path",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Spiritual Anchor",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Sturdy Critters",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Tabloid Press",
+          "faction": "Guild"
+        },
+        {
+          "name": "Take Back the Night",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Teach Them Fear",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "The Offering Endures",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Union Dues",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Urban Legend",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Vengeful Spirits",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Vigilante Justice",
+          "faction": "Guild"
+        },
+        {
+          "name": "Wailing Doom",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Winter’s Wrath",
+          "faction": "Arcanists"
+        }
+      ]
+    },
+    {
+      "name": "Spiritual Chains",
+      "rules_text": "When this model flips, cheats, or discards the black joker, it is dealt 2 damage and then this token is removed.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Spiritual Anchor",
+          "faction": "Resurrectionists"
+        }
       ]
     },
     {
       "name": "Staggered",
+      "type": "debuff",
+      "timing": "end_activation",
+      "rules_text": "This model suffers -2 Sp and cannot be moved by other enemy models. When this model ends its activation, remove this token. Canceled by Hastened.",
       "model_sources": [
         {
           "model_name": "Ancient Construct",
@@ -110363,13 +113534,13 @@
           "model_name": "Ashen Echo",
           "source_type": "trigger",
           "source_name": "Mouth Full o’ Embers > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Ashen Echo",
           "source_type": "trigger",
           "source_name": "Mouth Full o’ Embers > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Ashen Echo",
@@ -110411,13 +113582,13 @@
           "model_name": "Blessed of December",
           "source_type": "trigger",
           "source_name": "Vicious Claws > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Blessed of December",
           "source_type": "trigger",
           "source_name": "Vicious Claws > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Botanist",
@@ -110441,13 +113612,13 @@
           "model_name": "Ceddra",
           "source_type": "trigger",
           "source_name": "Wicked Bite > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Ceddra",
           "source_type": "trigger",
           "source_name": "Wicked Bite > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Charles Hoffman",
@@ -110783,13 +113954,13 @@
           "model_name": "Rasputina",
           "source_type": "trigger",
           "source_name": "Freezing Strikes > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Rasputina",
           "source_type": "trigger",
           "source_name": "Freezing Strikes > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Rasputina",
@@ -110861,13 +114032,13 @@
           "model_name": "Silent One",
           "source_type": "trigger",
           "source_name": "Ice Blast > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Silent One",
           "source_type": "trigger",
           "source_name": "Ice Blast > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Sir Vantes",
@@ -110885,13 +114056,13 @@
           "model_name": "Sir Vantes",
           "source_type": "trigger",
           "source_name": "Knight’s Folly > Stumble",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Sir Vantes",
           "source_type": "trigger",
           "source_name": "Knight’s Folly > Stumble",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Slate Ridge Mauler",
@@ -111001,10 +114172,163 @@
           "source_name": "Wicked Stitching > Stagger",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Adaptive Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Bigger Hat Than You",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Blood and Hunger",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Bound by Blood",
+          "faction": "Guild"
+        },
+        {
+          "name": "Bounty Hunt",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Brackish Bully",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Carefully Laid Plans",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Coordinated Effort",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Dustbound Oath",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Follow Tradition",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Guided Evolution",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Law’s Reach",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Looted Parts",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Repair Bay",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Rust-Eaten Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Salvage & Logistics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Shadow of the Noose",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Sins Unforgiven",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Snatch ’N Run",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Tempered Steel",
+          "faction": "Guild"
+        },
+        {
+          "name": "The Barrows Gang",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "The Last Sunrise",
+          "faction": "Guild"
+        },
+        {
+          "name": "Tides of Meridion",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        },
+        {
+          "name": "Union Dues",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Wailing Doom",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Winter’s Wrath",
+          "faction": "Arcanists"
+        }
       ]
     },
     {
       "name": "Stunned",
+      "type": "debuff",
+      "timing": "end_activation",
+      "rules_text": "This model cannot declare triggers, and it counts all (aura) symbols on its card as blank. When this model ends its activation, remove this token.",
       "model_sources": [
         {
           "model_name": "Adze",
@@ -111106,13 +114430,13 @@
           "model_name": "Cavern Nephilim",
           "source_type": "trigger",
           "source_name": "Tear Apart > Paralyzed",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Cavern Nephilim",
           "source_type": "trigger",
           "source_name": "Tear Apart > Paralyzed",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Charles Hoffman",
@@ -111166,18 +114490,12 @@
           "model_name": "Giant Leech",
           "source_type": "trigger",
           "source_name": "Bloodsuck > Paralyzed",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Giant Leech",
           "source_type": "trigger",
           "source_name": "Bloodsuck > Paralyzed",
-          "applies_or_references": "applies"
-        },
-        {
-          "model_name": "Grave Golem",
-          "source_type": "trigger",
-          "source_name": "Huge Fist > Paralyzed",
           "applies_or_references": "references"
         },
         {
@@ -111185,6 +114503,12 @@
           "source_type": "trigger",
           "source_name": "Huge Fist > Paralyzed",
           "applies_or_references": "applies"
+        },
+        {
+          "model_name": "Grave Golem",
+          "source_type": "trigger",
+          "source_name": "Huge Fist > Paralyzed",
+          "applies_or_references": "references"
         },
         {
           "model_name": "Gremlin Crier",
@@ -111274,16 +114598,16 @@
           "model_name": "Leech King",
           "source_type": "trigger",
           "source_name": "Bloodletting > Paralyzed",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Leech King",
           "source_type": "trigger",
           "source_name": "Bloodletting > Paralyzed",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
-          "model_name": "Leger De Main",
+          "model_name": "Leger de Main",
           "source_type": "trigger",
           "source_name": "Disillusion > Showmanship",
           "applies_or_references": "applies"
@@ -111295,7 +114619,7 @@
           "applies_or_references": "applies"
         },
         {
-          "model_name": "Mctavish",
+          "model_name": "McTavish",
           "source_type": "trigger",
           "source_name": "Gator Scramble > Without Warning",
           "applies_or_references": "applies"
@@ -111574,13 +114898,13 @@
           "model_name": "Zoraida",
           "source_type": "action_effect",
           "source_name": "Bumps and Boils",
-          "applies_or_references": "references"
+          "applies_or_references": "applies"
         },
         {
           "model_name": "Zoraida",
           "source_type": "action_effect",
           "source_name": "Bumps and Boils",
-          "applies_or_references": "applies"
+          "applies_or_references": "references"
         },
         {
           "model_name": "Zoraida",
@@ -111600,10 +114924,131 @@
           "source_name": "Witch’s Needle > Stunning Strike",
           "applies_or_references": "applies"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Bigger Hat Than You",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Contagion’s Kiss",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Crawling Hex",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Dustbound Oath",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Eyes in the Walls",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Flush With Cash",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Industry Leader",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Law’s Reach",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Marshborn Malice",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Smoke and Shadows",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Snatch ’N Run",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Study the Stars",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Tempered Steel",
+          "faction": "Guild"
+        },
+        {
+          "name": "Ultimate Creation",
+          "faction": "Guild"
+        },
+        {
+          "name": "Wilting Tsubaki",
+          "faction": "Ten Thunders"
+        }
       ]
     },
     {
       "name": "Summon",
+      "type": "penalty",
+      "timing": "permanent",
+      "rules_text": "This model may not declare the Interact action. This model does not infuse a (soulstone) for its crew when it is killed. This token cannot be removed.",
       "model_sources": [
         {
           "model_name": "Arcane Fate",
@@ -111827,6 +115272,292 @@
           "source_name": "Death-Touched Crossbow > Exorcism",
           "applies_or_references": "references"
         }
+      ],
+      "defined_on_crew_cards": [
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Aggressive Legislation",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Audacious Assault",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Beyond Time",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Bigger Hat Than You",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Breathe the Aether",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Burning Man’s Prayer",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Clear Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Close Oversight",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Clouded Mind",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Contagion’s Kiss",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Dark Thoughts",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Embrace Technology",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Entangled Spirits",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Entrance Examination",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Eternal Pilgrimage",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Eyes in the Walls",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Feasting Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Fire Shield the Faithful",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Fleeting Moments",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Flickering Grasp",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Freikorps Tactics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Grave Peril",
+          "faction": "Guild"
+        },
+        {
+          "name": "Guardian Spirit",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Hivemind",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Hunger’s Reach",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Inevitability of Death",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Legendary Figures",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Limit Test",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Loyalty Revitalized",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Lucid Dreaming",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Madness and Malice",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Misery Business",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Mobilize the Watch",
+          "faction": "Guild"
+        },
+        {
+          "name": "Mortuary Access",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Oneirophobia",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Pigs of Fire",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Power Unleashed",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Pursuit of Knowledge",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Riders of Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Rust-Eaten Fate",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Salvage & Logistics",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Secrets of the Red Library",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Shadow of Doubt",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Silent Control",
+          "faction": "Ten Thunders"
+        },
+        {
+          "name": "Sins Unforgiven",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Smother the Light",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Spirit Ascendant",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Spiritual Anchor",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Starving Tirade",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Stolen Lab Equipment",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Sturdy Critters",
+          "faction": "Bayou"
+        },
+        {
+          "name": "Take the Stage",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "The Formless Mantra",
+          "faction": "Arcanists"
+        },
+        {
+          "name": "Trash Heap",
+          "faction": "Outcasts"
+        },
+        {
+          "name": "Urban Legend",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Vengeful Spirits",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Wailing Doom",
+          "faction": "Resurrectionists"
+        },
+        {
+          "name": "Whim of the Hive",
+          "faction": "Explorer's Society"
+        }
+      ]
+    },
+    {
+      "name": "Suppressed",
+      "rules_text": "When this model declares a (magic) action, it must drain a (soulstone) or the action fails. After this model resolves a (magic) action, remove this token.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Empowering Tome",
+          "faction": "Guild"
+        },
+        {
+          "name": "Engulfing Flames",
+          "faction": "Guild"
+        },
+        {
+          "name": "Into Thorns",
+          "faction": "Neverborn"
+        },
+        {
+          "name": "Stifling Thicket",
+          "faction": "Neverborn"
+        }
+      ]
+    },
+    {
+      "name": "Voyage",
+      "rules_text": "When this model would be moved by an enemy effect, it may remove this token. If it does so, this model controls the move.",
+      "defined_on_crew_cards": [
+        {
+          "name": "Age of Inspiration",
+          "faction": "Explorer's Society"
+        },
+        {
+          "name": "Footnotes of Madness",
+          "faction": "Explorer's Society"
+        }
       ]
     }
   ],
@@ -111903,8 +115634,8 @@
       "masters": [
         "Mah Tucket, Mecha-Meemaw",
         "Mah Tucket, Metal Magpie",
-        "Ophelia Lacroix, Overloaded",
-        "Ophelia Lacroix, Red Cage Raider",
+        "Ophelia LaCroix, Overloaded",
+        "Ophelia LaCroix, Red Cage Raider",
         "Som’er Teeth Jones, Bayou Boss",
         "Som’er Teeth Jones, Loot Monger",
         "The Brewmaster, Moonshiner",
@@ -111919,17 +115650,17 @@
         "Zoraida, Swamp Hag"
       ],
       "henchmen": [
-        "Alphonse Leblanc",
+        "Alphonse LeBlanc",
         "Aunty Mel",
         "Bad Juju",
         "Bo Peep",
         "Fingers Leong",
-        "Francois Lacroix",
+        "Francois LaCroix",
         "Gluttony",
         "Lenny Jones",
         "Old Major",
         "Popcorn Turner",
-        "Sparks Leblanc",
+        "Sparks LeBlanc",
         "Trixiebelle",
         "Uncle Bogg"
       ],
@@ -111944,13 +115675,13 @@
         "Mirewing",
         "Olivia Bernard",
         "Penelope",
-        "Sammy Lacroix",
+        "Sammy LaCroix",
         "Skeeter",
         "Spit Hog",
         "The Little Lass",
         "The Sow",
         "Voodoo Doll",
-        "Young Lacroix"
+        "Young LaCroix"
       ],
       "keywords": [
         "Angler",
@@ -111978,9 +115709,9 @@
         "Jedza, The Wanderer",
         "Lord Cooper, Huntmaster",
         "Lord Cooper, Manhunter",
-        "Lucas Mccabe, Dismounted Hunter",
-        "Lucas Mccabe, Relic Hunter",
-        "Lucas Mccabe, Tomb Delver",
+        "Lucas McCabe, Dismounted Hunter",
+        "Lucas McCabe, Relic Hunter",
+        "Lucas McCabe, Tomb Delver",
         "Maxine Agassiz, Monomaniacal",
         "Maxine Agassiz, The Renowned",
         "Nexus, Heart of the Hive",
@@ -111990,9 +115721,9 @@
       ],
       "henchmen": [
         "Corvis Rook",
-        "Desper Laraux",
+        "Desper LaRaux",
         "Dr. Meredith Stanley",
-        "Gibson Dewalt",
+        "Gibson DeWalt",
         "Harata Ngaatoro",
         "Jin Baccara",
         "Kett",
@@ -112242,8 +115973,8 @@
     "Resurrectionists": {
       "total_models": 106,
       "masters": [
-        "Dr. Mcmourning, Insanitary",
-        "Dr. Mcmourning, Malpractitioner",
+        "Dr. McMourning, Insanitary",
+        "Dr. McMourning, Malpractitioner",
         "Jack Daw, Ensouled",
         "Jack Daw, Spirit of Betrayal",
         "Kirai Ankoku, Envoy of the Court",
@@ -112829,6 +116560,13 @@
       "answer": "Yes. Absolute Zero ends Step C.3 (Taking Actions) of the activation phase and forces the model into Step C.4 (End Activation). It may no longer use any portion of its action limit, but there is nothing preventing models from resolving actions outside of Step C.3 (or outside of the activation phase altogether!)"
     },
     {
+      "id": "5.2a",
+      "section": "SPECIFIC ABILITIES, ACTIONS, AND TRIGGERS",
+      "section_number": 5,
+      "question": "Can a model target a model with the Stealth ability if it is not within 6\" of the model with Stealth, but is drawing range from an object that is within 6\" of the model with Stealth?",
+      "answer": "Yes. Only the object range is being drawn from needs to be within 6\" of the model with Stealth."
+    },
+    {
       "id": "6.1",
       "section": "ARCANISTS",
       "section_number": 6,
@@ -112936,7 +116674,7 @@
       "name": "Informants",
       "suit": "(r)",
       "max_vp": 5,
-      "setup": "After deployment zones are chosen, make five Strategy markers: One centered on the centerpoint. Two centered on the centerline, each 10\" to the left and right of the centerpoint, respectively. Starting with the attacker, each player alternates making one Strategy marker in the center of one table quarter completely on their side of the board.",
+      "setup": "After deployment zones are chosen, make five Strategy markers: • One centered on the centerpoint. • Two centered on the centerline, each 10\" to the left and right of the centerpoint, respectively. • Starting with the attacker, each player alternates making one Strategy marker in the center of one table quarter completely on their side of the board.",
       "rules": "A crew controls a Strategy marker if it has more models without Summon tokens within 2\" of the marker than any opponent does.",
       "scoring": "At the end of every turn, the crew controlling the most Strategy markers gains 1 VP. In the case of a tie, both crews gain 1 VP. Then the crew that has scored the least total VP from this strategy this game selects up to two Strategy markers and places them within 3\" of their location, not in base contact with any model(s) or within 8\" of any other Strategy marker(s).",
       "additional_vp": "Double any victory points gained from this strategy on turn 4."
@@ -112957,7 +116695,7 @@
       "suit": "(c)",
       "max_vp": 5,
       "setup": "After deployment zones are chosen, starting with the attacker, each player makes one Strategy marker completely on the enemy table half.",
-      "rules": "After a model is killed by the enemy crew, the enemy makes a Strategy marker within 3\" of the killed model. A model may target a friendly Strategy marker with the Interact action to remove the marker and put it onto that crew's crew card. Models may move on top of Strategy markers.",
+      "rules": "After a model is killed by the enemy crew, the enemy makes a Strategy marker within 3\" of the killed model. A model may target a friendly Strategy marker with the Interact action to remove the marker and put it onto that crew’s crew card. Models may move on top of Strategy markers.",
       "scoring": "At the end of every turn, the crew with the most Strategy markers on its crew card gains 1 VP. In the case of a tie, both crews gain 1 VP. All crews then remove all Strategy markers from their crew cards.",
       "additional_vp": "Once per crew per game, at the end of any friendly activation, this crew may select a piece of terrain within 6\" of the enemy deployment zone and remove a number of friendly Scheme markers equal to the turn number from within 1\" of it to gain 1 VP."
     }
@@ -113008,7 +116746,7 @@
       "name": "Ensnare",
       "max_vp": 2,
       "reveal": "You may reveal this scheme when an enemy model ends its activation.",
-      "scoring": "When this scheme is revealed, remove two friendly Scheme markers from within 2\" of a single unique enemy model to gain 1 VP.",
+      "scoring": "When this scheme is revealed, remove two friendly Scheme markers from within 2\" a single unique enemy model to gain 1 VP.",
       "additional_vp": "When this scheme is revealed, if the enemy unique model is engaged by a model of lower cost, gain 1 additional VP.",
       "next_available_schemes": [
         "Reshape the Land",
@@ -113049,7 +116787,7 @@
       "name": "Harness the Leyline",
       "max_vp": 2,
       "reveal": "You may reveal this scheme at the end of any turn.",
-      "scoring": "When this scheme is revealed, remove two friendly Scheme markers on the centerline not within 6\" of another marker used to score this scheme and that do not have any enemy models within 2\" to gain 1 VP.",
+      "scoring": "When this scheme is revealed, remove two friendly Scheme markers on the centerline not within 6” of another marker used to score this scheme and that do not have any enemy models within 2\" to gain 1 VP.",
       "additional_vp": "Remove one additional qualifying marker to gain 1 additional VP.",
       "next_available_schemes": [
         "Assassinate",
@@ -113089,8 +116827,8 @@
       "max_vp": 2,
       "selection": "When this scheme is selected, secretly choose a unique enemy model.",
       "reveal": "You may reveal this scheme at the end of any turn.",
-      "scoring": "When this scheme is revealed, if there are two or more friendly minions within 2\" of the chosen model, gain 1 VP.",
-      "additional_vp": "When this scheme is revealed, remove a friendly Scheme marker from within 1\" of the chosen model to gain 1 additional VP.",
+      "scoring": "When this scheme is revealed, if there are two or more friendly minions within 2” of the chosen model, gain 1 VP.",
+      "additional_vp": "When this scheme is revealed, remove a friendly Scheme marker from within 1” of the chosen model to gain 1 additional VP.",
       "next_available_schemes": [
         "Harness the Leyline",
         "Assassinate",
@@ -113129,7 +116867,7 @@
       "name": "Scout the Rooftops",
       "max_vp": 2,
       "reveal": "You may reveal this scheme at the end of any turn.",
-      "scoring": "Scheme markers are qualifying for this scheme if they: Are not within 6\" of your deployment zone; Do not have an enemy model at the same elevation within 2\"; Are at elevation 2 or higher. When this scheme is revealed, remove one qualifying Scheme marker from two different terrain pieces to gain 1 VP (two Scheme markers total).",
+      "scoring": "Scheme markers are qualifying for this scheme if they: •Are not within 6\" of your deployment zone. •Do not have an enemy model at the same elevation within 2\". •Are at elevation 2 or higher. When this scheme is revealed, remove one qualifying Scheme marker from two different terrain pieces to gain 1 VP (two Scheme markers total).",
       "additional_vp": "When this scheme is revealed, select one additional qualifying Scheme marker that is completely on the enemy table half and remove it to gain 1 VP. Note that this Scheme marker may be on the same terrain piece as one of the other qualifying Scheme markers.",
       "next_available_schemes": [
         "Detonate Charges",

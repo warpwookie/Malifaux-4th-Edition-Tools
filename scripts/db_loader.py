@@ -22,16 +22,32 @@ SCRIPT_DIR = Path(__file__).parent.parent
 SCHEMA_PATH = SCRIPT_DIR / "schema" / "schema.sql"
 REFERENCE_PATH = SCRIPT_DIR / "reference" / "reference_data.json"
 
-# Load known token names from reference data for allowlist-based matching.
-# This prevents phantom tokens like "Blood" from "New Blood token" text.
+# Load reference data for allowlist-based matching.
 _KNOWN_TOKENS = set()
+_KNOWN_MARKERS = set()
+_TOKEN_METADATA = {}    # {name: {type, timing, cancels}}
+_MARKER_CATEGORIES = {} # {name: category}
 try:
     with open(REFERENCE_PATH, encoding="utf-8") as _f:
         _ref = json.load(_f)
-    _KNOWN_TOKENS = set(_ref.get("tokens", {}).get("basic", {}).keys())
+    _tokens_ref = _ref.get("tokens", {})
+    _KNOWN_TOKENS = set(_tokens_ref.get("basic", {}).keys())
+    # Store metadata for basic tokens
+    for name, meta in _tokens_ref.get("basic", {}).items():
+        _TOKEN_METADATA[name] = {
+            "type": meta.get("type"),
+            "timing": meta.get("timing"),
+            "cancels": meta.get("cancels"),
+        }
     # Also include tokens from cancellation pairs (e.g., Hidden, Exposed)
-    for pair in _ref.get("tokens", {}).get("cancellation_pairs", []):
+    for pair in _tokens_ref.get("cancellation_pairs", []):
         _KNOWN_TOKENS.update(pair)
+    # Load known marker names (universal + keyword_specific)
+    _markers_ref = _ref.get("markers", {})
+    for category in ("universal", "keyword_specific"):
+        for name in _markers_ref.get(category, []):
+            _KNOWN_MARKERS.add(name)
+            _MARKER_CATEGORIES[name] = category
 except (FileNotFoundError, json.JSONDecodeError):
     pass
 
@@ -40,11 +56,26 @@ def init_db(db_path: str) -> sqlite3.Connection:
     """Initialize database with schema if needed."""
     conn = sqlite3.connect(db_path)
     conn.execute("PRAGMA foreign_keys=ON")
-    
+
     # Apply schema
     with open(SCHEMA_PATH, encoding="utf-8") as f:
         conn.executescript(f.read())
-    
+
+    # Seed basic token metadata from reference data
+    c = conn.cursor()
+    for name, meta in _TOKEN_METADATA.items():
+        c.execute("INSERT OR IGNORE INTO tokens (name) VALUES (?)", (name,))
+        c.execute("""UPDATE tokens SET type=?, timing=?, cancels=?
+                     WHERE name=? AND type IS NULL""",
+                  (meta["type"], meta["timing"], meta["cancels"], name))
+
+    # Seed marker categories from reference data
+    for name, category in _MARKER_CATEGORIES.items():
+        c.execute("INSERT OR IGNORE INTO markers (name) VALUES (?)", (name,))
+        c.execute("""UPDATE markers SET category=? WHERE name=? AND category IS NULL""",
+                  (category, name))
+
+    conn.commit()
     return conn
 
 
@@ -201,27 +232,35 @@ def _update_token_references(c: sqlite3.Cursor, model_id: int, card: dict):
                      VALUES (?,?,?,?,?)""",
                   (token_id, model_id, source_type, source_name, applies_or_references))
     
+    seen = set()  # (token_name, source_type, source_name, relationship) dedup
+
     def scan_text(text: str, source_type: str, source_name: str):
         if not text:
             return
         # Standard pattern
         for m in token_pattern.finditer(text):
-            token_name = m.group(1)
+            token_name = _canon.get(m.group(1).lower(), m.group(1))
             # Determine if applying or referencing
             context = text[max(0, m.start()-20):m.end()+10].lower()
             if any(w in context for w in ["gains", "gain", "receive", "apply"]):
-                register_token(token_name, source_type, source_name, "applies")
+                rel = "applies"
             elif any(w in context for w in ["remove", "removing", "lose"]):
-                register_token(token_name, source_type, source_name, "removes")
+                rel = "removes"
             else:
-                register_token(token_name, source_type, source_name, "references")
-        
+                rel = "references"
+            key = (token_name, source_type, source_name, rel)
+            if key not in seen:
+                seen.add(key)
+                register_token(token_name, source_type, source_name, rel)
+
         # "X or Y token" pattern
         for m in or_pattern.finditer(text):
-            t1 = m.group(1)
-            # t2 already caught by standard pattern
-            register_token(t1, source_type, source_name, "applies")
-    
+            t1 = _canon.get(m.group(1).lower(), m.group(1))
+            key = (t1, source_type, source_name, "applies")
+            if key not in seen:
+                seen.add(key)
+                register_token(t1, source_type, source_name, "applies")
+
     # Scan abilities
     for ab in card.get("abilities", []):
         scan_text(ab.get("text", ""), "ability", ab.get("name", ""))
@@ -235,46 +274,62 @@ def _update_token_references(c: sqlite3.Cursor, model_id: int, card: dict):
 
 
 def _update_marker_references(c: sqlite3.Cursor, model_id: int, card: dict):
-    """Scan card text for marker references and update marker_model_sources."""
+    """Scan card text for marker references and update marker_model_sources.
+
+    Uses _KNOWN_MARKERS allowlist (from reference_data.json) to prevent phantom
+    markers, parallel to _update_token_references().
+    """
+    if not _KNOWN_MARKERS:
+        return  # No reference data loaded, skip marker extraction
+
+    # Build regex from known marker names (longest first for greedy matching)
+    # Allow optional trailing "s" on name (e.g., "Pyrotechnics marker" → "Pyrotechnic")
+    names_alt = "|".join(re.escape(m) for m in sorted(_KNOWN_MARKERS, key=len, reverse=True))
+    marker_pattern = re.compile(r'\b(' + names_alt + r')s?\s+markers?\b', re.IGNORECASE)
+
     # Remove existing references for this model
     c.execute("DELETE FROM marker_model_sources WHERE model_id=?", (model_id,))
 
-    # Get known marker names (sorted longest first for greedy matching)
-    c.execute("SELECT id, name FROM markers ORDER BY length(name) DESC")
-    known_markers = [(row[0], row[1]) for row in c.fetchall()]
-    if not known_markers:
-        return
-
-    marker_patterns = []
-    for marker_id, marker_name in known_markers:
-        pattern = re.compile(
-            r'\b' + re.escape(marker_name) + r'\s+markers?\b',
-            re.IGNORECASE
-        )
-        marker_patterns.append((marker_id, marker_name, pattern))
+    # Map lowercase -> canonical casing for consistent DB entries
+    _canon = {m.lower(): m for m in _KNOWN_MARKERS}
 
     create_words = {"make", "makes", "making", "made", "summon", "summons",
                     "place", "places", "placed", "create", "creates"}
     remove_words = {"remove", "removes", "removed", "removing", "discard", "discards",
                     "destroy", "destroys"}
 
+    def register_marker(marker_name: str, source_type: str, source_name: str,
+                        relationship: str = "references"):
+        # Use canonical casing from reference data
+        marker_name = _canon.get(marker_name.lower(), marker_name)
+        # Ensure marker exists in registry
+        c.execute("INSERT OR IGNORE INTO markers (name) VALUES (?)", (marker_name,))
+        c.execute("SELECT id FROM markers WHERE name=?", (marker_name,))
+        marker_id = c.fetchone()[0]
+        c.execute("""INSERT INTO marker_model_sources
+                     (marker_id, model_id, source_type, source_name, relationship)
+                     VALUES (?,?,?,?,?)""",
+                  (marker_id, model_id, source_type, source_name, relationship))
+
+    seen = set()  # (marker_name, source_type, source_name, relationship) dedup
+
     def scan_text(text: str, source_type: str, source_name: str):
         if not text:
             return
-        for marker_id, marker_name, pattern in marker_patterns:
-            for match in pattern.finditer(text):
-                start = max(0, match.start() - 30)
-                context = text[start:match.end() + 10].lower()
-                if any(w in context for w in create_words):
-                    relationship = "creates"
-                elif any(w in context for w in remove_words):
-                    relationship = "removes"
-                else:
-                    relationship = "references"
-                c.execute("""INSERT INTO marker_model_sources
-                    (marker_id, model_id, source_type, source_name, relationship)
-                    VALUES (?,?,?,?,?)""",
-                    (marker_id, model_id, source_type, source_name, relationship))
+        for m in marker_pattern.finditer(text):
+            marker_name = _canon.get(m.group(1).lower(), m.group(1))
+            start = max(0, m.start() - 30)
+            context = text[start:m.end() + 10].lower()
+            if any(w in context for w in create_words):
+                rel = "creates"
+            elif any(w in context for w in remove_words):
+                rel = "removes"
+            else:
+                rel = "references"
+            key = (marker_name, source_type, source_name, rel)
+            if key not in seen:
+                seen.add(key)
+                register_marker(marker_name, source_type, source_name, rel)
 
     # Scan abilities
     for ab in card.get("abilities", []):
@@ -367,11 +422,12 @@ def load_crew_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
 
         # Also upsert into global markers registry
         traits_csv = ", ".join(sorted(traits)) if traits else None
-        c.execute("INSERT OR IGNORE INTO markers (name, category, default_size, default_height, "
-                  "terrain_traits_csv, rules_text) VALUES (?,?,?,?,?,?)",
-                  (marker["name"], "keyword_specific",
-                   marker.get("size", "30mm"), marker.get("height", "Ht 0"),
-                   traits_csv, marker.get("text")))
+        rules_text = marker.get("rules_text") or marker.get("text")
+        c.execute("INSERT OR IGNORE INTO markers (name) VALUES (?)", (marker["name"],))
+        c.execute("""UPDATE markers SET category=?, default_size=?, default_height=?,
+                     terrain_traits_csv=?, rules_text=? WHERE name=?""",
+                  ("keyword_specific", marker.get("size"), marker.get("height"),
+                   traits_csv, rules_text, marker["name"]))
         c.execute("SELECT id FROM markers WHERE name=?", (marker["name"],))
         global_marker_id = c.fetchone()[0]
         for trait in traits:
@@ -380,10 +436,20 @@ def load_crew_card(conn: sqlite3.Connection, card: dict, replace: bool = False) 
         c.execute("INSERT OR IGNORE INTO marker_crew_sources (marker_id, crew_card_id) VALUES (?,?)",
                   (global_marker_id, crew_id))
 
-    # Tokens
+    # Tokens (per-card storage + upsert into global tokens registry)
     for token in card.get("tokens", []):
         c.execute("INSERT INTO crew_tokens (crew_card_id, name, text) VALUES (?,?,?)",
                   (crew_id, token["name"], token["text"]))
+
+        # Upsert into global tokens registry
+        c.execute("INSERT OR IGNORE INTO tokens (name) VALUES (?)", (token["name"],))
+        # Update rules_text if not already set (basic tokens keep reference_data values)
+        c.execute("""UPDATE tokens SET rules_text=? WHERE name=? AND rules_text IS NULL""",
+                  (token["text"], token["name"]))
+        c.execute("SELECT id FROM tokens WHERE name=?", (token["name"],))
+        global_token_id = c.fetchone()[0]
+        c.execute("INSERT OR IGNORE INTO token_crew_sources (token_id, crew_card_id) VALUES (?,?)",
+                  (global_token_id, crew_id))
 
     conn.commit()
     return {"status": status, "crew_card_id": crew_id, "name": name}

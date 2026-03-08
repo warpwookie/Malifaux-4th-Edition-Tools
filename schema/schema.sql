@@ -159,22 +159,6 @@ CREATE TABLE IF NOT EXISTS crew_keyword_action_triggers (
     FOREIGN KEY (crew_action_id) REFERENCES crew_keyword_actions(id) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS crew_markers (
-    id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    crew_card_id    INTEGER NOT NULL,
-    name            TEXT NOT NULL,
-    size            TEXT,
-    height          TEXT,
-    text            TEXT,
-    FOREIGN KEY (crew_card_id) REFERENCES crew_cards(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS crew_marker_terrain_traits (
-    marker_id   INTEGER NOT NULL,
-    trait        TEXT NOT NULL,
-    FOREIGN KEY (marker_id) REFERENCES crew_markers(id) ON DELETE CASCADE
-);
-
 CREATE TABLE IF NOT EXISTS crew_tokens (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     crew_card_id    INTEGER NOT NULL,
@@ -196,6 +180,14 @@ CREATE TABLE IF NOT EXISTS tokens (
     cancels     TEXT                                     -- Name of token this cancels (e.g., Slow cancels Fast)
 );
 
+CREATE TABLE IF NOT EXISTS token_crew_sources (
+    token_id        INTEGER NOT NULL,
+    crew_card_id    INTEGER NOT NULL,
+    FOREIGN KEY (token_id) REFERENCES tokens(id) ON DELETE CASCADE,
+    FOREIGN KEY (crew_card_id) REFERENCES crew_cards(id) ON DELETE CASCADE,
+    UNIQUE(token_id, crew_card_id)
+);
+
 CREATE TABLE IF NOT EXISTS token_model_sources (
     token_id    INTEGER NOT NULL,
     model_id    INTEGER NOT NULL,
@@ -203,30 +195,41 @@ CREATE TABLE IF NOT EXISTS token_model_sources (
     source_name TEXT NOT NULL,                           -- Name of the ability/action/trigger
     applies_or_references TEXT DEFAULT 'applies',        -- "applies", "removes", "references"
     FOREIGN KEY (token_id) REFERENCES tokens(id) ON DELETE CASCADE,
-    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE
+    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE,
+    UNIQUE(token_id, model_id, source_type, source_name, applies_or_references)
 );
 
+
 -- ============================================================
--- MARKER REFERENCE (global registry)
+-- MARKER REFERENCE (global registry, parallels tokens)
 -- ============================================================
 
 CREATE TABLE IF NOT EXISTS markers (
-    id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    name            TEXT UNIQUE NOT NULL,                    -- "Ice Pillar", "Scheme", "Piano"
-    category        TEXT NOT NULL,                           -- "universal" or "keyword_specific"
-    subcategory     TEXT,                                    -- "scheme"/"remains"/"strategy" (universal only)
-    default_size    TEXT DEFAULT '30mm',                     -- "30mm", "40mm", "50mm"
-    default_height  TEXT DEFAULT 'Ht 0',                    -- "Ht 0", "Ht 3", etc.
-    terrain_traits_csv TEXT,                                 -- Denormalized quick-ref: "blocking, impassable"
-    rules_text      TEXT,                                    -- Canonical marker rules/effects
-    keyword         TEXT                                     -- Owning keyword (null for universal)
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    name                TEXT UNIQUE NOT NULL,
+    category            TEXT,                                -- "universal", "keyword_specific"
+    default_size        TEXT,                                -- e.g., "30mm", "40mm", "50mm"
+    default_height      TEXT,                                -- e.g., "Ht 0", "Ht 1", "Ht 5"
+    terrain_traits_csv  TEXT,                                -- Comma-separated trait list (denormalized)
+    rules_text          TEXT                                 -- Marker description/rules from crew card
 );
 
 CREATE TABLE IF NOT EXISTS marker_terrain_traits (
     marker_id   INTEGER NOT NULL,
-    trait        TEXT NOT NULL,                              -- "blocking", "concealing", "destructible", etc.
+    trait        TEXT NOT NULL,
     FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
     UNIQUE(marker_id, trait)
+);
+
+CREATE TABLE IF NOT EXISTS marker_model_sources (
+    marker_id       INTEGER NOT NULL,
+    model_id        INTEGER NOT NULL,
+    source_type     TEXT NOT NULL,                           -- "ability", "action_effect", "trigger"
+    source_name     TEXT NOT NULL,                           -- Name of the ability/action/trigger
+    relationship    TEXT DEFAULT 'references',               -- "creates", "removes", "references"
+    FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
+    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE,
+    UNIQUE(marker_id, model_id, source_type, source_name, relationship)
 );
 
 CREATE TABLE IF NOT EXISTS marker_crew_sources (
@@ -237,30 +240,21 @@ CREATE TABLE IF NOT EXISTS marker_crew_sources (
     UNIQUE(marker_id, crew_card_id)
 );
 
-CREATE TABLE IF NOT EXISTS marker_model_sources (
-    marker_id       INTEGER NOT NULL,
-    model_id        INTEGER NOT NULL,
-    source_type     TEXT NOT NULL,                           -- "ability", "action_effect", "trigger"
-    source_name     TEXT NOT NULL,                           -- Name of the ability/action/trigger
-    relationship    TEXT DEFAULT 'references',               -- "creates", "removes", "references"
-    FOREIGN KEY (marker_id) REFERENCES markers(id) ON DELETE CASCADE,
-    FOREIGN KEY (model_id) REFERENCES models(id) ON DELETE CASCADE
+CREATE TABLE IF NOT EXISTS crew_markers (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    crew_card_id    INTEGER NOT NULL,
+    name            TEXT NOT NULL,
+    size            TEXT,                                    -- e.g., "30mm"
+    height          TEXT,                                    -- e.g., "Ht 0"
+    text            TEXT NOT NULL,                           -- Marker rules text
+    FOREIGN KEY (crew_card_id) REFERENCES crew_cards(id) ON DELETE CASCADE
 );
 
--- ============================================================
--- PARSE AUDIT LOG
--- ============================================================
-
-CREATE TABLE IF NOT EXISTS parse_log (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    source_pdf  TEXT NOT NULL,
-    model_name  TEXT,
-    timestamp   TEXT NOT NULL,                           -- ISO datetime
-    status      TEXT NOT NULL,                           -- "success", "validation_failed", "human_review", "error"
-    hard_rule_violations TEXT,                           -- JSON array of violations
-    soft_rule_flags TEXT,                                -- JSON array of flags
-    hallucination_flags TEXT,                            -- JSON array of suspected hallucinations
-    notes       TEXT
+CREATE TABLE IF NOT EXISTS crew_marker_terrain_traits (
+    marker_id   INTEGER NOT NULL,
+    trait        TEXT NOT NULL,
+    FOREIGN KEY (marker_id) REFERENCES crew_markers(id) ON DELETE CASCADE,
+    UNIQUE(marker_id, trait)
 );
 
 -- ============================================================
@@ -388,15 +382,14 @@ CREATE INDEX IF NOT EXISTS idx_actions_model ON actions(model_id);
 CREATE INDEX IF NOT EXISTS idx_triggers_action ON triggers(action_id);
 CREATE INDEX IF NOT EXISTS idx_abilities_model ON abilities(model_id);
 CREATE INDEX IF NOT EXISTS idx_model_factions_faction ON model_factions(faction);
-CREATE INDEX IF NOT EXISTS idx_parse_log_status ON parse_log(status);
 CREATE INDEX IF NOT EXISTS idx_upgrades_faction ON upgrades(faction);
 CREATE INDEX IF NOT EXISTS idx_upgrades_keyword ON upgrades(keyword);
 CREATE INDEX IF NOT EXISTS idx_upgrade_actions_upgrade ON upgrade_actions(upgrade_id);
 CREATE INDEX IF NOT EXISTS idx_upgrade_action_triggers_action ON upgrade_action_triggers(action_id);
-CREATE INDEX IF NOT EXISTS idx_markers_name ON markers(name);
-CREATE INDEX IF NOT EXISTS idx_markers_keyword ON markers(keyword);
-CREATE INDEX IF NOT EXISTS idx_marker_crew_sources_marker ON marker_crew_sources(marker_id);
-CREATE INDEX IF NOT EXISTS idx_marker_model_sources_marker ON marker_model_sources(marker_id);
-CREATE INDEX IF NOT EXISTS idx_marker_model_sources_model ON marker_model_sources(model_id);
 CREATE INDEX IF NOT EXISTS idx_faq_section ON faq_entries(section);
 CREATE INDEX IF NOT EXISTS idx_schemes_name ON schemes(name);
+CREATE INDEX IF NOT EXISTS idx_token_crew_sources_token ON token_crew_sources(token_id);
+CREATE INDEX IF NOT EXISTS idx_markers_category ON markers(category);
+CREATE INDEX IF NOT EXISTS idx_marker_model_sources_marker ON marker_model_sources(marker_id);
+CREATE INDEX IF NOT EXISTS idx_marker_model_sources_model ON marker_model_sources(model_id);
+CREATE INDEX IF NOT EXISTS idx_crew_markers_crew ON crew_markers(crew_card_id);

@@ -199,6 +199,37 @@
     "universal",
     "keyword_specific"
   ],
+  "markers": {
+    "universal": [
+      "Scheme",
+      "Strategy",
+      "Remains"
+    ],
+    "keyword_specific": [
+      "Assault",
+      "Bog",
+      "Decoy",
+      "Echo",
+      "Ice Pillar",
+      "Inferno",
+      "Lamp",
+      "Lost Technology",
+      "Piano",
+      "Pylon",
+      "Pyre",
+      "Pyrotechnic",
+      "Rift",
+      "Scrap",
+      "Shadow",
+      "Shadow Door",
+      "Shadow Lair",
+      "Tide",
+      "Under Your Bed",
+      "Underbrush",
+      "Web"
+    ],
+    "_note": "Marker names that appear before 'Marker(s)' in card text. Crew card definitions provide sizes, heights, and terrain traits."
+  },
   "icon_map": {
     "suits": {
       "r": "(r)",

@@ -233,7 +233,7 @@ def export_upgrades(conn: sqlite3.Connection) -> list[dict]:
 
 
 def export_token_registry(conn: sqlite3.Connection) -> list[dict]:
-    """Export the global token registry with model sources."""
+    """Export the global token registry with model and crew card sources."""
     c = conn.cursor()
     c.execute("SELECT * FROM tokens ORDER BY name")
     tokens = []
@@ -253,6 +253,14 @@ def export_token_registry(conn: sqlite3.Connection) -> list[dict]:
             sources.append(src)
         if sources:
             clean["model_sources"] = sources
+
+        # Get crew card sources (which crew cards define this token)
+        c.execute("""SELECT cc.name, cc.faction FROM token_crew_sources tcs
+            JOIN crew_cards cc ON tcs.crew_card_id = cc.id
+            WHERE tcs.token_id=? ORDER BY cc.name""", (tid,))
+        crew_sources = [{"name": r["name"], "faction": r["faction"]} for r in c.fetchall()]
+        if crew_sources:
+            clean["defined_on_crew_cards"] = crew_sources
 
         tokens.append(clean)
     return tokens

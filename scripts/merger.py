@@ -120,8 +120,9 @@ def merge_crew_card(front: dict, back: dict, source_pdf: str = None) -> dict:
     Merge crew card front and back extractions.
 
     Front provides: name, associated_master, associated_title, faction,
-                    keyword_abilities, keyword_actions, markers
-    Back provides:  tokens (name + full rules text)
+                    keyword_abilities, keyword_actions
+    Back provides:  markers (name, size, height, terrain_traits, rules_text),
+                    tokens (name + full rules text)
     """
     warnings = []
 
@@ -138,7 +139,7 @@ def merge_crew_card(front: dict, back: dict, source_pdf: str = None) -> dict:
         "faction": front.get("faction"),
         "keyword_abilities": front.get("keyword_abilities", []),
         "keyword_actions": front.get("keyword_actions", []),
-        "markers": front.get("markers", []),
+        "markers": back.get("markers", []) or front.get("markers", []),
         "crew_tracker": front.get("crew_tracker"),
         "tokens": back.get("tokens", []),
         "source_pdf": source_pdf,

@@ -549,10 +549,12 @@ def _smart_title_case(text):
     - Apostrophes: "WINTER'S TEETH" → "Winter's Teeth" (not "Winter'S")
     - Hyphens: "DEATH-TOUCHED" → "Death-Touched" (capitalize after hyphen)
     - Small words: "ARBITER OF THE UNDEAD" → "Arbiter of the Undead"
+    - Internal capitals: "LaCROIX" → "LaCroix", "McMOURNING" → "McMourning"
+      (PDF text layer preserves lowercase letters even in all-caps display fonts)
     """
     small_words = {"a", "an", "and", "as", "at", "but", "by", "for", "in",
                    "nor", "of", "on", "or", "so", "the", "to", "up", "yet",
-                   "aka", "that"}
+                   "aka", "that", "de"}
     words = text.split()
     result = []
     for i, word in enumerate(words):
@@ -560,13 +562,44 @@ def _smart_title_case(text):
         if i > 0 and lower.strip("\"'(\u2018\u2019\u201c\u201d") in small_words:
             result.append(lower)
         else:
-            # Handle hyphens: capitalize each part
-            parts = lower.split("-")
+            # Handle hyphens: process each part
+            parts = word.split("-")
             capped_parts = []
             for p in parts:
-                capped_parts.append(_capitalize_first_letter(p))
+                capped_parts.append(_title_case_word(p))
             result.append("-".join(capped_parts))
     return " ".join(result)
+
+
+def _title_case_word(word):
+    """Title-case a single word, preserving internal capitalization from PDF text.
+
+    When a PDF uses an all-caps display font, lowercase letters in the underlying
+    text are intentional (e.g., "LaCROIX" has a real lowercase 'a'). This function
+    detects such patterns and preserves the prefix before title-casing the suffix:
+      "LaCROIX" → "LaCroix", "McMOURNING" → "McMourning", "DeWALT" → "DeWalt"
+    """
+    # Check if the word has internal lowercase letters (after first char)
+    alpha_chars = [(i, c) for i, c in enumerate(word) if c.isalpha()]
+    has_internal_lower = any(c.islower() for _, c in alpha_chars[1:])
+
+    if has_internal_lower:
+        # Find the lowercase→uppercase transition boundary
+        # e.g., "La|CROIX": preserve "La", title-case "CROIX"→"Croix"
+        saw_lower = False
+        for i, ch in enumerate(word):
+            if ch.islower():
+                saw_lower = True
+            elif saw_lower and ch.isupper():
+                # Boundary found: preserve prefix, title-case suffix
+                prefix = word[:i]
+                suffix = word[i:]
+                return prefix + _capitalize_first_letter(suffix.lower())
+        # No clear boundary — return word as-is (already has intentional case)
+        return word
+    else:
+        # Standard title case: "OPHELIA" → "Ophelia"
+        return _capitalize_first_letter(word.lower())
 
 
 def _capitalize_first_letter(s):
@@ -1352,7 +1385,12 @@ def _classify_action_line(line_spans, has_active_trigger=False):
 
     # Trigger: has a trigger symbol (suit or soulstone) AND a BoldItalic trigger name
     # The symbol may not be first (tab spans precede it)
-    if has_trigger_symbol and has_bold_italic and first["x0"] >= 9:
+    # BUT: exclude preamble lines where BoldItalic is a stat column name (Skl, Rg, etc.)
+    # — these are lines like "add +1(c) to its **Skl**" that are not triggers
+    STAT_COLUMN_NAMES = {"Skl", "Rg", "Rst", "TN", "Dmg"}
+    bold_italic_texts = {s["text"].strip().rstrip(":") for s in line_spans if s["font"] == FONT_TRIGGER}
+    is_stat_ref_preamble = bold_italic_texts and bold_italic_texts.issubset(STAT_COLUMN_NAMES)
+    if has_trigger_symbol and has_bold_italic and first["x0"] >= 9 and not is_stat_ref_preamble:
         return "trigger"
 
     # Trigger with non-suit symbol: single-char ExtraBold (like "X") followed by
@@ -1541,6 +1579,12 @@ def _parse_trigger_line(line_spans):
                 if code in SYMBOL_MAP:
                     suit_parts.append(SYMBOL_MAP[code])
             suit = "".join(suit_parts)
+            idx = i + 1
+            break
+        # "X" trigger marker: single-char ExtraBold "X" acts as a suit/built-in marker
+        if (s["font"] == FONT_ABILITY_NAME and s["text"].strip() == "X"
+                and s["size"] < 8.5):
+            suit = "X"
             idx = i + 1
             break
 
@@ -2260,8 +2304,61 @@ def _parse_crew_body(body_spans, notes):
     return keyword_abilities, keyword_actions, markers
 
 
+def _parse_marker_text(raw_text):
+    """Parse marker definition text into structured fields.
+
+    Marker text format: "[size,] [Ht N,] [trait1, trait2, ...]. [rules text]"
+    Examples:
+        "Ht 5, blocking, impassable. Models within 2\" ..."
+        "50mm, concealing, dense, severe."
+        "50mm, hazardous (Burning)."
+    """
+    import re as _re
+    text = raw_text.strip()
+    size = None
+    height = None
+    terrain_traits = []
+
+    VALID_TRAITS = {"blocking", "concealing", "dense", "destructible",
+                    "hazardous", "impassable", "severe"}
+
+    # Extract size (e.g., "30mm", "40mm", "50mm")
+    size_match = _re.match(r'(\d+mm)\b', text)
+    if size_match:
+        size = size_match.group(1)
+        text = text[size_match.end():].lstrip(", ")
+
+    # Extract height (e.g., "Ht 5", "Ht 0")
+    ht_match = _re.match(r'(Ht\s*\d+)\b', text)
+    if ht_match:
+        height = ht_match.group(1)
+        text = text[ht_match.end():].lstrip(", ")
+
+    # Extract terrain traits from comma-separated prefix
+    # Traits may include parenthetical (e.g., "hazardous (Burning)")
+    while text:
+        # Try to match a known trait at the start
+        trait_match = _re.match(r'(\w+)(?:\s*\([^)]*\))?', text)
+        if trait_match and trait_match.group(1).lower() in VALID_TRAITS:
+            terrain_traits.append(trait_match.group(1).lower())
+            text = text[trait_match.end():].lstrip(", ")
+            # If we hit a period, the traits section is done
+            if text.startswith("."):
+                text = text[1:].strip()
+                break
+        else:
+            break
+
+    return {
+        "size": size,
+        "height": height,
+        "terrain_traits": terrain_traits,
+        "rules_text": text if text else None,
+    }
+
+
 def _extract_crew_back(page_spans):
-    """Extract crew card back page: name verification and token definitions."""
+    """Extract crew card back page: name verification, marker and token definitions."""
     notes = []
 
     # 1. CARD NAME — verify it matches front
@@ -2275,41 +2372,92 @@ def _extract_crew_back(page_spans):
         raw = " ".join(s["text"].strip() for s in name_spans)
         back_name = _smart_title_case(raw)
 
-    # 2. TOKENS — find "Tokens" header, then parse name:text pairs
-    tokens = []
-    token_header_y = None
+    # 2. Find section headers: "Markers" and "Tokens" (both ExtraBold >= 9pt)
+    #    Store y1 as start boundary (content below header) and y0 as end boundary
+    #    (content above next header)
+    marker_header_y1 = None   # content starts after this y
+    token_header_y0 = None    # marker content ends before this y
+    token_header_y1 = None    # token content starts after this y
 
     for s in page_spans:
-        if (s["font"] == FONT_ABILITY_NAME
-            and s["text"].strip().lower() == "tokens"
-            and s["size"] >= 9.0):
-            token_header_y = s["y1"]
-            break
+        if s["font"] == FONT_ABILITY_NAME and s["size"] >= 9.0:
+            header = s["text"].strip().lower()
+            if header == "markers" and marker_header_y1 is None:
+                marker_header_y1 = s["y1"]
+            elif header == "tokens" and token_header_y0 is None:
+                token_header_y0 = s["y0"]
+                token_header_y1 = s["y1"]
 
-    if token_header_y is not None:
-        # All spans below "Tokens" header and above footer
+    # 3. MARKERS — parse between "Markers" header and "Tokens" header (or footer)
+    markers = []
+    if marker_header_y1 is not None:
+        # Marker spans: below Markers header, above Tokens header (or footer)
+        marker_end_y = token_header_y0 if token_header_y0 is not None else 320
+        marker_spans = [s for s in page_spans
+                        if s["y0"] > marker_header_y1 and s["y0"] < marker_end_y]
+
+        if marker_spans:
+            lines = _group_into_lines(marker_spans, tolerance=2.0)
+            current_marker = None
+
+            for line_spans in lines:
+                has_name = any(
+                    s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":")
+                    for s in line_spans
+                )
+                if has_name:
+                    if current_marker:
+                        current_marker["text"] = current_marker["text"].strip()
+                        parsed = _parse_marker_text(current_marker["text"])
+                        current_marker.update(parsed)
+                        markers.append(current_marker)
+
+                    name_text = ""
+                    name_idx = 0
+                    for idx, s in enumerate(line_spans):
+                        if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
+                            name_text = s["text"].strip().rstrip(":")
+                            name_idx = idx
+                            break
+
+                    # Normalize: strip trailing " Marker" from name
+                    # (e.g., "Pyre Marker" → "Pyre" to match text references)
+                    import re as _re
+                    name_text = _re.sub(r'\s+[Mm]arkers?$', '', name_text)
+
+                    remaining = line_spans[name_idx + 1:]
+                    text = _spans_to_text(remaining)
+                    current_marker = {"name": name_text, "text": text}
+                elif current_marker:
+                    text = _spans_to_text(line_spans)
+                    current_marker["text"] += " " + text
+
+            if current_marker:
+                current_marker["text"] = current_marker["text"].strip()
+                parsed = _parse_marker_text(current_marker["text"])
+                current_marker.update(parsed)
+                markers.append(current_marker)
+
+    # 4. TOKENS — parse below "Tokens" header
+    tokens = []
+    if token_header_y1 is not None:
         token_spans = [s for s in page_spans
-                       if s["y0"] > token_header_y and s["y0"] < 320]
+                       if s["y0"] > token_header_y1 and s["y0"] < 320]
 
         if token_spans:
             lines = _group_into_lines(token_spans, tolerance=2.0)
             current_token = None
 
             for line_spans in lines:
-                # Check for new token definition (ExtraBold name ending with ":")
-                has_token_name = False
-                for s in line_spans:
-                    if s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":"):
-                        has_token_name = True
-                        break
-
+                has_token_name = any(
+                    s["font"] == FONT_ABILITY_NAME and s["text"].strip().endswith(":")
+                    for s in line_spans
+                )
                 if has_token_name:
-                    # Save previous token
                     if current_token:
                         current_token["text"] = current_token["text"].strip()
                         tokens.append(current_token)
 
-                    # Find name and remaining text
                     name_text = ""
                     name_idx = 0
                     for idx, s in enumerate(line_spans):
@@ -2320,17 +2468,11 @@ def _extract_crew_back(page_spans):
 
                     remaining = line_spans[name_idx + 1:]
                     text = _spans_to_text(remaining)
-
-                    current_token = {
-                        "name": name_text,
-                        "text": text,
-                    }
+                    current_token = {"name": name_text, "text": text}
                 elif current_token:
-                    # Continuation of current token text
                     text = _spans_to_text(line_spans)
                     current_token["text"] += " " + text
 
-            # Don't forget last token
             if current_token:
                 current_token["text"] = current_token["text"].strip()
                 tokens.append(current_token)
@@ -2338,6 +2480,7 @@ def _extract_crew_back(page_spans):
     back = {
         "card_type": "crew_card",
         "name": back_name,
+        "markers": markers,
         "tokens": tokens,
         "extraction_notes": notes,
     }
